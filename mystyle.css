@@ -1,0 +1,67 @@
+html {
+	/*background-color: white;*/
+	/*color: black;*/
+	/*line-height: 1.5;*/
+    /*font-family: serif;*/
+    /*font-size: 20px;*/
+}
+body {
+/*      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+*/      padding-top: 0px;
+/*      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+*/}
+h1, h2, strong em {
+  color: #9E291A;
+}
+h1 {
+  /*text-align: center;*/
+  padding-top: 1.5em;
+  /*padding-bottom: 0.5em;*/
+}
+.naslov {
+  text-align: center;
+  padding-bottom: 5em;
+}
+.naslov h1 {
+  font-size: 4em;
+}
+.zgled {
+	color: #266633;
+}
+a {
+	color: #478AD6;
+  text-decoration: none;
+}
+.domacanaloga {
+	color: #7D4DC9;
+}
+.proof {
+	color: #808080;
+}
+.kazalo > ul {
+    list-style: none;
+    font-weight: bold;
+    padding-left: 0;
+}
+.kazalo ul ul li{
+  list-style: none;
+  font-weight: normal;
+}
+.kazalo ul ul ul li{
+  display: inline;
+  font-weight: normal;
+  /*font-style: italic;*/
+  /*font-size: 90%;*/
+}
+.trditev p {
+  border:1px solid black;
+  padding: 1em;
+}
+}

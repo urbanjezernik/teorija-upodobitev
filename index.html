@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="generator" content="pandoc">
+    <meta name="description" content="">
+    <meta name="author" content="Urban Jezernik">
+
+    <title>Teorija upodobitev</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">.sidebar ul{padding-left: 10px;}</style>
+    <link rel="stylesheet" href="mystyle.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  </head>
+
+  <body>
+    
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <div class="col-sm-7 col-md-7 mx-auto p-4">
+
+<div class="naslov">
+<h1>Teorija upodobitev</h1>
+
+<strong> Urban Jezernik <br>
+Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
+
+Zadnja posodobitev: 02. 06. 2022
+</div>
+
+<div class="kazalo">
+  <h3>Kazalo</h3>
+<ul>
+<li><a href="#kratek-opis-predmeta" id="toc-kratek-opis-predmeta">Kratek
+opis predmeta</a></li>
+<li><a href="#literatura" id="toc-literatura">Literatura</a></li>
+<li><a href="#temelji-teorije-upodobitev"
+id="toc-temelji-teorije-upodobitev">Temelji teorije upodobitev</a>
+<ul>
+<li><a href="#osnovni-pojmi" id="toc-osnovni-pojmi">Osnovni pojmi</a>
+<ul>
+<li><a href="#upodobitve-grup" id="toc-upodobitve-grup">Upodobitve
+grup</a></li>
+<li><a href="#kategorija-upodobitev"
+id="toc-kategorija-upodobitev">Kategorija upodobitev</a></li>
+<li><a href="#izomorfnost-upodobitev"
+id="toc-izomorfnost-upodobitev">Izomorfnost upodobitev</a></li>
+</ul></li>
+<li><a href="#fundamentalne-konstrukcije"
+id="toc-fundamentalne-konstrukcije">Fundamentalne konstrukcije</a>
+<ul>
+<li><a href="#podupodobitve"
+id="toc-podupodobitve">Podupodobitve</a></li>
+<li><a href="#jedro-slika-kvocient" id="toc-jedro-slika-kvocient">Jedro,
+slika, kvocient</a></li>
+<li><a href="#direktna-vsota" id="toc-direktna-vsota">Direktna
+vsota</a></li>
+<li><a href="#tenzorski-produkt" id="toc-tenzorski-produkt">Tenzorski
+produkt</a></li>
+<li><a href="#dual" id="toc-dual">Dual</a></li>
+<li><a href="#skalarji" id="toc-skalarji">Skalarji</a></li>
+<li><a href="#restrikcija" id="toc-restrikcija">Restrikcija</a></li>
+<li><a href="#indukcija" id="toc-indukcija">Indukcija</a></li>
+<li><a href="#adjunkcija-restrikcije-in-indukcije"
+id="toc-adjunkcija-restrikcije-in-indukcije">Adjunkcija restrikcije in
+indukcije</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#upodobitev-pod-mikroskopom"
+id="toc-upodobitev-pod-mikroskopom">Upodobitev pod mikroskopom</a>
+<ul>
+<li><a href="#razstavljanje-upodobitve"
+id="toc-razstavljanje-upodobitve">Razstavljanje upodobitve</a>
+<ul>
+<li><a href="#nerazcepnost-in-polenostavnost"
+id="toc-nerazcepnost-in-polenostavnost">Nerazcepnost in
+polenostavnost</a></li>
+<li><a href="#dekompozicijska-vrsta"
+id="toc-dekompozicijska-vrsta">Dekompozicijska vrsta</a></li>
+<li><a href="#spletične-med-nerazcepnimi-upodobitvami"
+id="toc-spletične-med-nerazcepnimi-upodobitvami">Spletične med
+nerazcepnimi upodobitvami</a></li>
+<li><a href="#večkratnosti-in-izotipične-komponente"
+id="toc-večkratnosti-in-izotipične-komponente">Večkratnosti in
+izotipične komponente</a></li>
+</ul></li>
+<li><a href="#matrični-koeficienti"
+id="toc-matrični-koeficienti">Matrični koeficienti</a>
+<ul>
+<li><a href="#neodvisnost-koeficientov"
+id="toc-neodvisnost-koeficientov">Neodvisnost koeficientov</a></li>
+<li><a href="#povezava-z-regularno-upodobitvijo"
+id="toc-povezava-z-regularno-upodobitvijo">Povezava z regularno
+upodobitvijo</a></li>
+<li><a href="#karakterji" id="toc-karakterji">Karakterji</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#upodobitve-končnih-grup"
+id="toc-upodobitve-končnih-grup">Upodobitve končnih grup</a></li>
+<li><a href="#upodobitve-kompaktnih-grup"
+id="toc-upodobitve-kompaktnih-grup">Upodobitve kompaktnih grup</a></li>
+</ul>
+</div>
+
+<h3 class="unnumbered" id="kratek-opis-predmeta">Kratek opis
+predmeta</h3>
+<h3 class="unnumbered" id="literatura">Literatura</h3>
+<ul>
+<li><p><span>E. Kowalski, <span><em>An Introduction to the
+Representation Theory of Groups</em></span>, American Mathematical
+Society, 2014.</span></p></li>
+</ul>
+<h1 id="temelji-teorije-upodobitev">Temelji teorije upodobitev</h1>
+<p>V tem poglavju bomo vzpostavili temelje teorije upodobitev. Spoznali
+bomo koncept upodobitve in si ogledali mnogo primerov. Premislili bomo,
+kako upodobitve med sabo primerjamo in kako iz danih upodobitev
+sestavimo nove.</p>
+<h2 id="osnovni-pojmi">Osnovni pojmi</h2>
+<h3 id="upodobitve-grup">Upodobitve grup</h3>
+<p>Naj bo <span class="math inline">\(G\)</span> grupa in <span
+class="math inline">\(V\)</span> vektorski prostor nad poljem <span
+class="math inline">\(F\)</span>. Upodobitev grupe <span
+class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(V\)</span> je delovanje <span
+class="math inline">\(G\)</span> na množici <span
+class="math inline">\(V\)</span>, ki upošteva dodatno strukturo množice
+<span class="math inline">\(V\)</span>, namreč to, da je vektorski
+prostor. Natančneje, <span><strong><em>upodobitev</em></strong></span>
+(rekli bomo tudi <span><strong><em>linearno
+delovanje</em></strong></span>) grupe <span
+class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(V\)</span> je homomorfizem grup <span
+class="math display">\[\rho \colon G \to
+\mathop{\mathrm{GL}}(V).\]</span> Pri tem razsežnosti prostora <span
+class="math inline">\(V\)</span> rečemo <span><strong><em>stopnja
+upodobitve</em></strong></span> in jo označimo z <span
+class="math inline">\(\deg(\rho)\)</span>. Ko v prostoru <span
+class="math inline">\(V\)</span> izberemo bazo in torej izomorfizem
+<span class="math inline">\(V \cong F^{\deg(\rho)}\)</span>, lahko
+upodobitev <span class="math inline">\(\rho\)</span> enakovredno
+zapišemo kot homomorfizem <span class="math display">\[\rho \colon G \to
+\textstyle \mathop{\mathrm{GL}}_{\deg(\rho)}(F)\]</span> iz grupe <span
+class="math inline">\(G\)</span> v obrnljive matrike razsežnosti <span
+class="math inline">\(\deg(\rho)\)</span> nad <span
+class="math inline">\(F\)</span>.</p>
+<p>Za element <span class="math inline">\(g \in G\)</span> in vektor
+<span class="math inline">\(v \in V\)</span> rezultat delovanja elementa
+<span class="math inline">\(g\)</span> na vektorju <span
+class="math inline">\(v\)</span>, se pravi <span
+class="math inline">\(\rho(g)(v)\)</span>, včasih pišemo krajše kot
+<span class="math inline">\(g \cdot v\)</span> ali kar <span
+class="math inline">\(gv\)</span>.</p>
+<div class="zgled">
+<p><strong>Zgled 1.1</strong>. </p>
+<ul>
+<li><p>Opazujmo grupo celih števil <span
+class="math inline">\(\mathbb{Z}\)</span> in vektorski prostor <span
+class="math inline">\(\mathbb{C}\)</span> nad poljem kompleksnih števil.
+Za vsak parameter <span class="math inline">\(\alpha \in
+\mathbb{C}\)</span> imamo upodobitev <span class="math display">\[\chi_a
+\colon \mathbb{Z}\to \mathop{\mathrm{GL}}(\mathbb{C}) = \mathbb{C}^*,
+\quad
+            x \mapsto e^{\alpha x}.\]</span></p></li>
+<li><p>Opazujmo grupo ostankov <span
+class="math inline">\(\mathbb{Z}/q\mathbb{Z}\)</span> za poljubno
+naravno število <span class="math inline">\(q\)</span>. Za vsak
+parameter <span class="math inline">\(m \in
+\mathbb{Z}/q\mathbb{Z}\)</span> imamo upodobitev <span
+class="math display">\[\chi_m \colon \mathbb{Z}/q\mathbb{Z}\to
+\mathop{\mathrm{GL}}(\mathbb{C}) = \mathbb{C}^*, \quad
+            x \mapsto e^{2 \pi i mx/q}.\]</span></p></li>
+<li><p>Naj bo <span class="math inline">\(G\)</span> grupa in <span
+class="math inline">\(V\)</span> vektorski prostor nad poljem <span
+class="math inline">\(F\)</span>. <span><strong><em>Trivialna
+upodobitev</em></strong></span> grupe <span
+class="math inline">\(G\)</span> je homomorfizem <span
+class="math display">\[\rho \colon G \to \mathop{\mathrm{GL}}(V), \quad
+            g \mapsto \mathop{\mathrm{id}}_V.\]</span> Kadar je
+vektorski prostor <span class="math inline">\(V\)</span> razsežnosti
+<span class="math inline">\(1\)</span>, trivialno upodobitev in
+vektorski prostor sam označimo kot <span
+class="math inline">\(\mathbf{1}\)</span>, v primerih višje razsežnosti
+pa ju označimo kot <span class="math inline">\(\mathbf{1}^{\dim
+V}\)</span>.</p></li>
+<li><p>Naj bo <span class="math inline">\(V\)</span> vektorski prostor
+in naj bo <span class="math inline">\(G\)</span> poljubna podgrupa grupe
+<span class="math inline">\(\mathop{\mathrm{GL}}(V)\)</span>. Tedaj je
+naravna vložitev <span class="math inline">\(G \to
+\mathop{\mathrm{GL}}(V)\)</span> upodobitev grupe <span
+class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(V\)</span>.</p>
+<p>Za konkreten zgled lahko vzamemo <span class="math inline">\(V =
+\mathbb{C}^2\)</span> in <span class="math inline">\(G = \langle \left(
+\begin{smallmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{smallmatrix} \right)
+\rangle \leq \mathop{\mathrm{GL}}(\mathbb{C}^2)\)</span>. Na ta način
+dobimo upodobitev grupe <span class="math inline">\(G \cong
+\mathbb{Z}\)</span> na prostoru <span
+class="math inline">\(\mathbb{C}^2\)</span>. Na istem prostoru lahko
+vzamemo tudi <span class="math inline">\(G = \langle
+        \left( \begin{smallmatrix} 1 &amp; 1 \\ 0 &amp; 1
+\end{smallmatrix} \right), \left( \begin{smallmatrix} 1 &amp; 0 \\ 0
+&amp; -1 \end{smallmatrix} \right) \rangle \leq
+\mathop{\mathrm{GL}}(\mathbb{C}^2)\)</span>. Na ta način dobimo
+upodobitev neskončne diedrske grupe <span class="math inline">\(G \cong
+D_\infty\)</span> na prostoru <span
+class="math inline">\(\mathbb{C}^2\)</span>.</p></li>
+<li><p>Naj bo <span class="math inline">\(G\)</span> poljubna grupa,
+opremljena z delovanjem na neki množici <span
+class="math inline">\(X\)</span>. Naj bo <span
+class="math inline">\(F[X]\)</span> vektorski prostor z bazo <span
+class="math inline">\(\{ e_x \}_{x \in X}\)</span>. Grupa <span
+class="math inline">\(G\)</span> deluje na <span
+class="math inline">\(F[X]\)</span> s homomorfizmom <span
+class="math display">\[\pi \colon G \to \mathop{\mathrm{GL}}(F[X]),
+\quad
+            g \mapsto \left( e_x \mapsto e_{g.x} \right),\]</span> kjer
+je <span class="math inline">\(x \in X\)</span>. To delovanje imenujemo
+<span><strong><em>permutacijska upodobitev</em></strong></span> grupe
+<span class="math inline">\(G\)</span> na <span
+class="math inline">\(F[X]\)</span>.</p>
+<p>Za konkreten zgled lahko vzamemo <span class="math inline">\(G =
+S_n\)</span>, ki naravno deluje na množici <span class="math inline">\(X
+= \{ 1, 2, \dots, n \}\)</span>. Na ta način dobimo permutacijsko
+upodobitev grupe <span class="math inline">\(S_n\)</span> na prostoru
+<span class="math inline">\(F[\{ 1, 2, \dots, n \}]\)</span> razsežnosti
+<span class="math inline">\(n\)</span>.</p></li>
+<li><p>Naj bo <span class="math inline">\(G\)</span> grupa in <span
+class="math inline">\(F\)</span> polje. Grupa <span
+class="math inline">\(G\)</span> vselej deluje na sebi s Cayleyjevim
+delovanjem. Prirejeni permutacijski upodobitvi grupe <span
+class="math inline">\(G\)</span> na <span
+class="math inline">\(F[G]\)</span><a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a> rečemo
+<span><strong><em>Cayleyjeva upodobitev</em></strong></span> grupe <span
+class="math inline">\(G\)</span> nad <span
+class="math inline">\(F\)</span>. To delovanje označimo z <span
+class="math inline">\(\pi_{\mathop{\mathrm{Cay}}}\)</span>.</p></li>
+<li><p>Naj bo <span class="math inline">\(G\)</span> grupa in <span
+class="math inline">\(F\)</span> polje. Naj bo <span
+class="math inline">\(\hom(G,F)\)</span> množica vseh funkcij iz množice
+<span class="math inline">\(G\)</span> v <span
+class="math inline">\(F\)</span>. Te funkcije lahko po točkah seštevamo
+in množimo s skalarji, na ta način je <span
+class="math inline">\(\hom(G,F)\)</span> vektorski prostor. Grupa <span
+class="math inline">\(G\)</span> deluje na <span
+class="math inline">\(\hom(G,F)\)</span> s homomorfizmom <span
+class="math display">\[\rho_{\hom} \colon G \to
+\mathop{\mathrm{GL}}(\hom(G,F)), \quad
+            g \mapsto \left( f \mapsto \left( x \mapsto f(xg) \right)
+\right),\]</span> kjer je <span class="math inline">\(f \in \hom(G,F), \
+x \in G\)</span>. To delovanje izhaja iz (desnega) delovanja grupe <span
+class="math inline">\(G\)</span> na sebi in ga zato imenujemo
+<span><strong><em>(desna) regularna upodobitev</em></strong></span>
+grupe <span class="math inline">\(G\)</span> nad <span
+class="math inline">\(F\)</span>.</p></li>
+<li></li>
+</ul>
+</div>
+<p>Upodobitev <span class="math inline">\(\rho\)</span> grupe <span
+class="math inline">\(G\)</span> pohvalimo s pridevnikom
+<span><strong><em>zvesta</em></strong></span>, kadar je injektivna, se
+pravi <span class="math inline">\(\ker \rho = 1\)</span>. Trivialna
+upodobitev netrivialne grupe ni zvesta, sta pa vselej zvesti Cayleyjeva
+in desna regularna upodobitev.</p>
+<h3 id="kategorija-upodobitev">Kategorija upodobitev</h3>
+<p>Naj bo <span class="math inline">\(G\)</span> grupa. Opazujmo neki
+njeni upodobitvi <span class="math inline">\(\rho_1\)</span> in <span
+class="math inline">\(\rho_2\)</span> nad vektorskima prostoroma <span
+class="math inline">\(V_1\)</span> in <span
+class="math inline">\(V_2\)</span>, obema nad poljem <span
+class="math inline">\(F\)</span>. Ti dve upodobitvi lahko
+<em>primerjamo</em> med sabo, in sicer tako, da hkrati primerjamo
+vektorska prostora in delovanji grupe <span
+class="math inline">\(G\)</span> na teh dveh prostorih.</p>
+<p>Natančneje, <span><strong><em>spletična</em></strong></span><a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a> med upodobitvama <span
+class="math inline">\(\rho_1\)</span> in <span
+class="math inline">\(\rho_2\)</span> je linearna preslikava <span
+class="math inline">\(\Phi \colon V_1 \to V_2\)</span>, za katero za
+vsak <span class="math inline">\(g \in G\)</span> in <span
+class="math inline">\(v \in V_1\)</span> velja<a href="#fn3"
+class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
+<span class="math display">\[\Phi(\rho_1(g) \cdot v) = \rho_2(g) \cdot
+\Phi(v).\]</span></p>
+<div class="zgled">
+<p><strong>Zgled 1.2</strong>. Opazujmo grupo <span
+class="math inline">\(\mathbb{Z}\)</span> in dve njeni upodobitvi, ki
+smo jih že videli. Prva naj bo upodobitev <span
+class="math display">\[\rho \colon \mathbb{Z}\to
+\mathop{\mathrm{GL}}(\mathbb{C}^2), \quad
+    x \mapsto \left( \begin{smallmatrix} 1 &amp; 1 \\ 0 &amp; 1
+\end{smallmatrix} \right)^x,\]</span> druga pa naj bo kar trivialna
+upodobitev <span class="math inline">\(\mathbf{1}\)</span> na prostoru
+<span class="math inline">\(\mathbb{C}\)</span>. Predpišimo linearno
+preslikavo <span class="math inline">\(\Phi \colon \mathbb{C}\to
+\mathbb{C}^2\)</span> v standardni bazi z matriko <span
+class="math inline">\(\left( \begin{smallmatrix} 1 \\ 0
+\end{smallmatrix} \right)\)</span>. Tedaj za vsak vektor <span
+class="math inline">\(v \in \mathbb{C}\)</span> in vsako število <span
+class="math inline">\(x \in \mathbb{Z}\)</span> velja <span
+class="math display">\[\Phi(x \cdot v)
+    = \left( \begin{smallmatrix} xv \\ 0 \end{smallmatrix} \right)
+    = x \cdot \left( \begin{smallmatrix} v \\ 0 \end{smallmatrix}
+\right)
+    = x \cdot \Phi(v),\]</span> zato je <span
+class="math inline">\(\Phi\)</span> spletična med <span
+class="math inline">\(\mathbf{1}\)</span> in <span
+class="math inline">\(\rho\)</span>.</p>
+</div>
+<p>Množica vseh spletičen med <span
+class="math inline">\(\rho_1\)</span> in <span
+class="math inline">\(\rho_2\)</span> je podmnožica množice linearnih
+preslikav <span class="math inline">\(\hom(V_1, V_2)\)</span>, za katero
+uporabimo oznako <span class="math inline">\(\hom_G(\rho_1,
+\rho_2)\)</span> ali kar <span class="math inline">\(\hom_G(V_1,
+V_2)\)</span>.</p>
+<p>Za dano upodobitev <span class="math inline">\(\rho\)</span> grupe
+<span class="math inline">\(G\)</span> na vektorskem prostoru <span
+class="math inline">\(V\)</span> je identična preslikava <span
+class="math inline">\(\mathop{\mathrm{id}}_V\)</span> seveda spletična
+med <span class="math inline">\(\rho\)</span> in <span
+class="math inline">\(\rho\)</span>. Prav tako lahko vsaki dve spletični
+<span class="math inline">\(\Phi_1\)</span> med <span
+class="math inline">\(\rho_1\)</span> in <span
+class="math inline">\(\rho_2\)</span> ter <span
+class="math inline">\(\Phi_2\)</span> med <span
+class="math inline">\(\rho_2\)</span> in <span
+class="math inline">\(\rho_3\)</span> skomponiramo do spletične <span
+class="math inline">\(\Phi_2 \circ \Phi_1\)</span> med <span
+class="math inline">\(\rho_1\)</span> in <span
+class="math inline">\(\rho_3\)</span>. Množica vseh upodobitev dane
+grupe <span class="math inline">\(G\)</span> nad poljem <span
+class="math inline">\(F\)</span> torej tvoji
+<span><strong><em>kategorijo upodobitev</em></strong></span>, katere
+objekti so upodobitve grupe <span class="math inline">\(G\)</span> nad
+<span class="math inline">\(F\)</span>, morfizmi pa so spletične med
+upodobitvami. To kategorijo označimo z <span
+class="math inline">\(\mathop{\mathrm{Rep}}_G\)</span>.</p>
+<h3 id="izomorfnost-upodobitev">Izomorfnost upodobitev</h3>
+<p>Naj bo <span class="math inline">\(G\)</span> grupa in <span
+class="math inline">\(F\)</span> polje. Kadar je spletična <span
+class="math inline">\(\Phi \colon V_1 \to V_2\)</span> med <span
+class="math inline">\(\rho_1\)</span> in <span
+class="math inline">\(\rho_2\)</span> obrnljiva kot linearna preslikava,
+je tudi njen inverz <span class="math inline">\(\Phi^{-1}\)</span>
+spletična med <span class="math inline">\(\rho_2\)</span> in <span
+class="math inline">\(\rho_1\)</span>. V tem primeru spletični <span
+class="math inline">\(\Phi\)</span> rečemo
+<span><strong><em>izomorfizem</em></strong></span> upodobitev <span
+class="math inline">\(\rho_1\)</span> in <span
+class="math inline">\(\rho_2\)</span>.</p>
+<div class="zgled">
+<p><strong>Zgled 1.3</strong>. Opazujmo ciklično grupo <span
+class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> za poljuben <span
+class="math inline">\(n &gt; 1\)</span>. Ta grupa naravno deluje na
+množici <span class="math inline">\(\Omega = \{ 1, 2, \dots, n
+\}\)</span>,<a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a> od koder izhaja permutacijska
+upodobitev <span class="math display">\[\pi \colon
+\mathbb{Z}/n\mathbb{Z}\to
+\mathop{\mathrm{GL}}(\mathbb{C}[\Omega]).\]</span> Grupa <span
+class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> ima tudi
+Cayleyjevo upodobitev, <span
+class="math display">\[\pi_{\mathop{\mathrm{Cay}}} \colon
+\mathbb{Z}/n\mathbb{Z}\to
+\mathop{\mathrm{GL}}(\mathbb{C}[\mathbb{Z}/n\mathbb{Z}]).\]</span> Ti
+dve upodobitvi sta izomorfni. Vektorska prostora lahko namreč naravno
+primerjamo z bijektivno linearno preslikavo <span
+class="math display">\[\Phi \colon \mathbb{C}[\Omega] \to
+\mathbb{C}[\mathbb{Z}/n\mathbb{Z}], \quad    
+        e_i \mapsto e_{\bar i},\]</span> kjer je <span
+class="math inline">\(i \in \Omega\)</span>. Preslikava <span
+class="math inline">\(\Phi\)</span> je spletična, saj za vsak <span
+class="math inline">\(\bar x \in \mathbb{Z}/n\mathbb{Z}\)</span> in
+<span class="math inline">\(i \in \Omega\)</span> velja <span
+class="math display">\[\Phi(\bar x \cdot e_i)
+        = \Phi(e_{x + i})
+        = e_{\overline{x + i}}
+        = \bar x \cdot e_{\bar i}
+        = \bar x \cdot \Phi(e_i).\]</span> V to kratko zgodbo lahko
+vključimo še desno regularno upodobitev <span
+class="math display">\[\rho_{\hom} \colon \mathbb{Z}/n\mathbb{Z}\to
+\mathop{\mathrm{GL}}(\hom(\mathbb{Z}/n\mathbb{Z},\mathbb{C})).\]</span>
+Vektorski prostor <span
+class="math inline">\(\hom(\mathbb{Z}/n\mathbb{Z}, \mathbb{C})\)</span>
+lahko na naraven način opremimo z bazo iz karakterističnih funkcij <span
+class="math display">\[1_{\bar x} \colon \mathbb{Z}/n\mathbb{Z}\to
+\mathbb{C}, \quad
+        \bar y \mapsto \begin{cases}
+            1 &amp; \bar y = \bar x, \\
+            0 &amp; \text{sicer}
+        \end{cases}\]</span> za <span class="math inline">\(\bar x \in
+\mathbb{Z}/n\mathbb{Z}\)</span>. Predpišimo linearno preslikavo<a
+href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a> <span
+class="math display">\[\Phi^\prime \colon
+\mathbb{C}[\mathbb{Z}/n\mathbb{Z}] \to \hom(\mathbb{Z}/n\mathbb{Z},
+\mathbb{C}), \quad
+        e_{\bar x} \mapsto 1_{- \bar x}.\]</span> Jasno je <span
+class="math inline">\(\Phi^\prime\)</span> bijektivna. Preverimo še, da
+je res spletična. Za vsaka <span class="math inline">\(\bar x, \bar y
+\in \mathbb{Z}/n\mathbb{Z}\)</span> velja <span
+class="math display">\[\Phi^\prime(\bar x \cdot e_{\bar y})
+        = \Phi^\prime(e_{\overline{x + y}})
+        = 1_{- \overline{x + y}}.\]</span> Po drugi strani za vsak <span
+class="math inline">\(\bar z \in \mathbb{Z}/n\mathbb{Z}\)</span> velja
+<span class="math display">\[\left( \bar x \cdot \Phi^\prime(e_{\bar y})
+\right) (\bar z)
+        = \left( \bar x \cdot 1_{- \bar y} \right) (\bar z)
+        = 1_{- \bar y}(\bar z + \bar x)
+        = \begin{cases}
+            1 &amp; \bar z = - \overline{x + y} \\
+            0 &amp; \text{sicer}.
+        \end{cases}\]</span> Torej je res <span
+class="math inline">\(\Phi^\prime(\bar x \cdot e_{\bar y}) = \bar x
+\cdot \Phi^\prime(e_{\bar y})\)</span>. S tem je <span
+class="math inline">\(\Phi^\prime\)</span> izomorfizem med Cayleyjevo
+upodobitvijo in desno regularno upodobitvijo.</p>
+</div>
+<p>Eden pomembnih ciljev teorije upodobitev je razumeti vse upodobitve
+dane grupe do izomorfizma natančno. Kasneje bomo spoznali, kako lahko to
+v določenih<a href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a> primerih <em>precej dobro</em>
+uresničimo.</p>
+<h2 id="fundamentalne-konstrukcije">Fundamentalne konstrukcije</h2>
+<p>Naj bo <span class="math inline">\(\rho\)</span> upodobitev grupe
+<span class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(V\)</span> nad poljem <span
+class="math inline">\(F\)</span>. Premislili bomo, kako lahko prostor,
+grupo ali polje modificiramo na različne načine in tako dobimo neko
+drugo, novo upodobitev, oziroma kako lahko dano upodobitev vidimo kot
+rezultat kakšne od teh fundamentalnih konstrukcij.</p>
+<h3 id="podupodobitve">Podupodobitve</h3>
+<p>Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo
+<span class="math inline">\(\rho \colon G \to
+\mathop{\mathrm{GL}}(V)\)</span>. Denimo, da obstaja vektorski
+podprostor <span class="math inline">\(W \leq V\)</span>, ki je
+<em>invarianten</em> za delovanje grupe <span
+class="math inline">\(G\)</span>, se pravi <span class="math inline">\(g
+\cdot w \in W\)</span> za vsak <span class="math inline">\(g \in
+G\)</span>, <span class="math inline">\(w \in W\)</span>. V tem primeru
+upodobitev <span class="math inline">\(\rho\)</span> inducira upodobitev
+<span class="math inline">\(\tilde \rho \colon G \to
+\mathop{\mathrm{GL}}(W)\)</span> in vložitev vektorskih prostorov <span
+class="math inline">\(\iota \colon W \to V\)</span> je spletična.
+Upodobitvi <span class="math inline">\(\tilde \rho\)</span> rečemo
+<span><strong><em>podupodobitev</em></strong></span> upodobitve <span
+class="math inline">\(\rho\)</span>.</p>
+<div class="zgled">
+<p><strong>Zgled 1.4</strong>. </p>
+<ul>
+<li><p>Naj bo <span class="math inline">\(G\)</span> grupa in <span
+class="math inline">\(\rho\)</span> njena upodobitev na prostoru <span
+class="math inline">\(V\)</span>. Opazujmo množico vseh fiksnih
+vektorjev te upodobitve, <span class="math display">\[V^G = \{ v \in V
+\mid \forall g \in G \colon \ g \cdot v = v \}.\]</span> Množica <span
+class="math inline">\(V^G\)</span> je vektorski podprostor prostora
+<span class="math inline">\(V\)</span>, ki je invarianten za delovanje
+grupe <span class="math inline">\(G\)</span>. Torej je <span
+class="math inline">\(\tilde \rho \colon G \to
+\mathop{\mathrm{GL}}(V^G)\)</span> podupodobitev upodobitve <span
+class="math inline">\(\rho\)</span>. Na prostoru <span
+class="math inline">\(V^G\)</span> po definiciji grupa <span
+class="math inline">\(G\)</span> deluje trivialno, torej je <span
+class="math inline">\(\tilde \rho\)</span> izomorfna trivialni
+upodobitvi <span class="math inline">\(\mathbf{1}^{\dim
+V^G}\)</span>.</p>
+<div class="domacanaloga">
+<p><strong>Domača naloga 1.1</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa in <span
+class="math inline">\(F\)</span> polje. Določi upodobitvi <span
+class="math inline">\(F[G]^G\)</span> in <span
+class="math inline">\(\hom(G,F)^G\)</span>.</p>
+</div>
+<p>Prostor <span class="math inline">\(V^G\)</span> lahko razumemo še na
+naslednji alternativen način, ki nam bo prišel zelo prav v nadaljevanju.
+Iz vsakega vektorja <span class="math inline">\(v \in V^G\)</span>
+izhaja injektivna spletična <span class="math display">\[\Phi_v \colon
+\mathbf{1} \to V, \quad
+        x \mapsto x v\]</span> med <span
+class="math inline">\(\mathbf{1}\)</span> in <span
+class="math inline">\(\rho\)</span>. S tem je določena preslikava <span
+class="math inline">\(V^G \to \hom_G(\mathbf{1}, V)\)</span>. Ta
+preslikava ima jasen inverz, ki spletični <span
+class="math inline">\(\Phi \in \hom_G(\mathbf{1}, V)\)</span> priredi
+<span class="math inline">\(\Phi(1)\)</span>. Na ta način lahko
+identificiramo prostor <span class="math inline">\(V^G\)</span> z
+množico spletičen <span class="math inline">\(\hom_G(\mathbf{1},
+V)\)</span>.</p></li>
+<li><p>Naj bo <span class="math inline">\(G\)</span> grupa in <span
+class="math inline">\(\rho\)</span> njena upodobitev na prostoru <span
+class="math inline">\(V\)</span>. Predpostavimo, da obstaja vektor <span
+class="math inline">\(v \in V\)</span>, ki je lastni vektor vsake
+linearne preslikave <span class="math inline">\(\rho(g)\)</span> za
+<span class="math inline">\(g \in G\)</span>.</p>
+<p>Torej za vsak <span class="math inline">\(g \in G\)</span> obstaja
+<span class="math inline">\(\chi(g) \in F\)</span>, da je <span
+class="math inline">\(\rho(g) \cdot v = \chi(g) v\)</span>. Na ta način
+dobimo funkcijo <span class="math inline">\(\chi \colon G \to
+F\)</span>, se pravi element prostora <span
+class="math inline">\(\hom(G,F)\)</span>. Ta funkcija ni čisto poljubna;
+ker je <span class="math inline">\(\rho\)</span> upodobitev, je <span
+class="math inline">\(\chi\)</span> nujno
+<span><em>homomorfizem</em></span> iz grupe <span
+class="math inline">\(G\)</span> v grupo <span
+class="math inline">\(F^*\)</span>. Torej je <span
+class="math inline">\(\chi\)</span> pravzaprav upodobitev grupe <span
+class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(F\)</span> razsežnosti <span
+class="math inline">\(1\)</span>.<a href="#fn7" class="footnote-ref"
+id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+<p>Zdaj kot v zadnjem zgledu s predpisom <span
+class="math display">\[\Phi \colon F \to V, \quad
+        x \mapsto xv\]</span> dobimo injektivno spletično med <span
+class="math inline">\(\chi\)</span> in <span
+class="math inline">\(\rho\)</span>, torej lahko vidimo <span
+class="math inline">\(\chi\)</span> kot enorazsežno podupodobitev
+upodobitve <span class="math inline">\(\rho\)</span>. Hkrati lahko iz te
+spletične obnovimo podatek o skupnem lastnem vektorju <span
+class="math inline">\(v\)</span> in upodobitvi <span
+class="math inline">\(\chi\)</span>.<a href="#fn8" class="footnote-ref"
+id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+<p>Torej smo vzpostavili bijektivno korespondenco med množico
+enorazsežnih podupodobitev upodobitve <span
+class="math inline">\(\rho\)</span> in skupnimi lastnimi vektorji vseh
+preslikav <span class="math inline">\(\rho(g)\)</span> za <span
+class="math inline">\(g \in G\)</span>.</p>
+<p>Poseben primer te korespondence je zadnji zgled. Množico enorazsežnih
+trivialnih podupodobitev upodobitve <span
+class="math inline">\(\rho\)</span> lahko identificiramo z množico
+neničelnih spletičen <span class="math inline">\(\hom_G(\mathbf{1}, V)
+\backslash \{ x \mapsto 0 \}\)</span>, ta pa ustreza skupnim lastnim
+vektorjem <span class="math inline">\(\rho(g)\)</span> za <span
+class="math inline">\(g \in G\)</span> z lastno vrednostjo <span
+class="math inline">\(1\)</span>, kar je ravno množica <span
+class="math inline">\(V^G \backslash \{ 0 \}\)</span>.</p></li>
+<li><p>Naj bo <span class="math inline">\(G\)</span> grupa in <span
+class="math inline">\(F\)</span> polje. Opazujmo Cayleyjevo upodobitev
+<span class="math inline">\(\pi_{\mathop{\mathrm{Cay}}}\)</span> na
+<span class="math inline">\(F[G]\)</span> in desno regularno upodobitev
+<span class="math inline">\(\rho_{\hom}\)</span> na <span
+class="math inline">\(\hom(G,F)\)</span>. Trdimo, da je <span
+class="math inline">\(\pi_{\mathop{\mathrm{Cay}}}\)</span> podupodobitev
+upodobitve <span class="math inline">\(\rho_{\hom}\)</span>.</p>
+<p>V ta namen predpišimo linearno preslikavo<a href="#fn9"
+class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>
+<span class="math display">\[\Phi \colon F[G] \to \hom(G,F), \quad
+        e_g \mapsto 1_{g^{-1}}\]</span> za <span class="math inline">\(g
+\in G\)</span>. Jasno je <span class="math inline">\(\Phi\)</span>
+injektivna preslikava. Hkrati za vse <span class="math inline">\(g,h,x
+\in G\)</span> velja <span
+class="math display">\[\Phi(\pi_{\mathop{\mathrm{Cay}}}(g) \cdot e_h)
+        = \Phi(e_{gh})
+        = 1_{h^{-1} g^{-1}}\]</span> in <span
+class="math display">\[\left( \rho_{\hom}(g) \cdot \Phi(e_h) \right)(x)
+        = 1_{h^{-1}}(xg)
+        = 1_{g^{-1} h^{-1}}(x),\]</span> zato je <span
+class="math inline">\(\Phi\)</span> tudi spletična.</p>
+<p>Kadar je grupa <span class="math inline">\(G\)</span>
+<em>končna</em>, sta prostora <span class="math inline">\(F[G]\)</span>
+in <span class="math inline">\(\hom(G,F)\)</span> enake razsežnosti,
+zato sta v tem primeru upodobitvi <span
+class="math inline">\(\pi_{\mathop{\mathrm{Cay}}}\)</span> in <span
+class="math inline">\(\rho_{\hom}\)</span> izomorfni. Kadar je grupa
+<span class="math inline">\(G\)</span> <em>neskončna</em>, pa preslikava
+<span class="math inline">\(\Phi\)</span> vsekakor ni bijektivna.<a
+href="#fn10" class="footnote-ref" id="fnref10"
+role="doc-noteref"><sup>10</sup></a> V tem primeru upodobitvi nista
+izomorfni.<a href="#fn11" class="footnote-ref" id="fnref11"
+role="doc-noteref"><sup>11</sup></a></p></li>
+</ul>
+</div>
+<div class="domacanaloga">
+<p><strong>Domača naloga 1.2</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa z upodobitvijo <span
+class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span>. Naj bo <span
+class="math inline">\(N\)</span> podgrupa edinka v <span
+class="math inline">\(G\)</span>. Premisli, da množica fiksnih točk
+<span class="math display">\[V^N = \{ v \in V \mid \forall n \in N
+\colon \ \rho(n) \cdot v = v \}\]</span> tvori podupodobitev upodobitve
+<span class="math inline">\(\rho\)</span>, ki jo lahko identificiraš z
+množico <span class="math inline">\(\hom_N(\mathbf{1}, V)\)</span>.</p>
+</div>
+<h3 id="jedro-slika-kvocient">Jedro, slika, kvocient</h3>
+<p>Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo
+<span class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span>. Ogledali smo si že, kako za vsak <span
+class="math inline">\(G\)</span>-invarianten podprostor <span
+class="math inline">\(W \leq V\)</span> dobimo podupodobitev upodobitve
+<span class="math inline">\(\rho\)</span>. Sorodno lahko za vsak <span
+class="math inline">\(G\)</span>-invarianten podprostor <span
+class="math inline">\(W \leq V\)</span> tvorimo
+<span><strong><em>kvocient</em></strong></span> <span
+class="math inline">\(V/W\)</span>, na njem linearno deluje grupa <span
+class="math inline">\(G\)</span> s predpisom <span
+class="math display">\[G \to \mathop{\mathrm{GL}}(V/W), \quad
+    g \mapsto \left( v + W \mapsto \rho(g) \cdot v + W \right)\]</span>
+za <span class="math inline">\(v \in V\)</span>.</p>
+<p>Na vse do zdaj omenjene konstrukcije lahko gledamo na skupen način,
+in sicer s pomočjo spletične <span class="math inline">\(\Phi\)</span>,
+ki vlaga prostor <span class="math inline">\(W\)</span> v <span
+class="math inline">\(V\)</span>. Ni težko preveriti, da so standardne
+konstrukcije, ki jih lahko uporabimo na spletičnah vektorskih prostorov,
+na naraven način opremljene z linearnim delovanjem grupe <span
+class="math inline">\(G\)</span>.</p>
+<div class="trditev">
+<p><strong>Trditev 1.1</strong>. Naj bo <span
+class="math inline">\(\Phi\)</span> spletična upodobitev grupe <span
+class="math inline">\(G\)</span>. Tedaj prostori <span
+class="math inline">\(\ker \Phi\)</span>, <span
+class="math inline">\(\mathop{\mathrm{im}}\Phi\)</span>, <span
+class="math inline">\(\mathrm{coker} \; \Phi\)</span> podedujejo
+linearno delovanje grupe <span class="math inline">\(G\)</span>.</p>
+</div>
+<div class="zgled">
+<p><strong>Zgled 1.5</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa in <span
+class="math inline">\(\rho\)</span> njena upodobitev na prostoru <span
+class="math inline">\(V\)</span>. Podprostor prostora <span
+class="math inline">\(V\)</span>, na katerem grupa <span
+class="math inline">\(G\)</span> deluje trivialno, je vselej <span
+class="math inline">\(G\)</span>-invarianten. Največji tak podprostor je
+ravno prostor vseh fiksnih vektorjev <span
+class="math inline">\(V^G\)</span>. Videli smo že, da lahko ta prostor
+identifiricamo z množico spletičen <span
+class="math inline">\(\hom_G(\mathbf{1}, V)\)</span>.</p>
+<p>Oglejmo si sedaj še dual zgodnje konstrukcije. Naj bo <span
+class="math inline">\(V_1 = \langle \rho(g) \cdot v - v \mid v \in V, \
+g \in G \rangle\)</span>. Prostor <span
+class="math inline">\(V_1\)</span> je <span
+class="math inline">\(G\)</span>-invarianten podprostor prostora <span
+class="math inline">\(V\)</span>, zato kvocient <span
+class="math inline">\(V/V_1\)</span> podeduje linearno delovanje grupe
+<span class="math inline">\(G\)</span>. Po konstrukciji je to delovanje
+trivialno in prostor <span class="math inline">\(V/V_1\)</span> je
+največji kvocient prostora <span class="math inline">\(V\)</span>, na
+katerem grupa <span class="math inline">\(G\)</span> deluje trivialno.
+Kvocient <span class="math inline">\(V/V_1\)</span> označimo z <span
+class="math inline">\(V_G\)</span> in mu pravimo
+<span><strong><em>prostor koinvariant</em></strong></span> upodobitve
+<span class="math inline">\(\rho\)</span>.</p>
+<p>Prostor koinvariant je po konstrukciji dualen prostoru fiksnih
+vektorjev, zato lahko nanj prenesemo tudi interpretacijo s spletičnami.
+Opazujmo množico <span class="math inline">\(\hom_G(V,
+\mathbf{1})\)</span>. Spletične iz te množice so ravno homomorfizmi
+<span class="math inline">\(\lambda \colon V \to F\)</span> z lastnostjo
+<span class="math inline">\(\lambda(\rho(g) \cdot v) =
+\lambda(v)\)</span> za vsaka <span class="math inline">\(v \in V, \ g
+\in G\)</span>, kar je ekvivalentno pogoju <span
+class="math inline">\(\lambda(V_1) = 0\)</span>. Vsako tako spletično
+lahko zato interpretiramo kot linearno preslikavo iz <span
+class="math inline">\(V/V_1 = V_G\)</span> v <span
+class="math inline">\(F\)</span>. Na ta način je vzpostavljena
+bijektivna korespondenca med množico spletičen <span
+class="math inline">\(\hom_G(V,\mathbf{1})\)</span> in množico linearnih
+preslikav <span class="math inline">\(\hom_F(V_G, F)\)</span>, slednja
+množica pa je ravno dual <span class="math inline">\(V_G^*\)</span>
+prostora koinvariant <span class="math inline">\(V_G\)</span>.</p>
+</div>
+<h3 id="direktna-vsota">Direktna vsota</h3>
+<p>Naj ima grupa <span class="math inline">\(G\)</span> družino
+upodobitev <span class="math inline">\(\{ \rho_i \}_{i \in I}\)</span>
+na vektorskih prostorih <span class="math inline">\(\{ V_i \}_{i \in
+I}\)</span>. Tedaj lahko tvorimo direktno vsoto vektorskih prostorov
+<span class="math inline">\(\bigoplus_{i \in I} V_i\)</span>, ki je
+opremljena z linearnim delovanjem <span
+class="math display">\[\bigoplus_{i \in I} \rho_i \colon G \to
+\mathop{\mathrm{GL}}(\bigoplus_{i \in I} V_i), \quad
+  g \mapsto \left( \sum_{i \in I} v_i \mapsto \sum_{i \in I} \rho_i(g)
+\cdot v_i \right).\]</span> Na ta način dobimo
+<span><strong><em>direktno vsoto</em></strong></span> upodobitev <span
+class="math inline">\(\bigoplus_{i \in I} \rho_i\)</span>. Pri tem je
+vsaka od upodobitev <span class="math inline">\(\rho_i\)</span>
+podupodobitev te direktne vsote.</p>
+<div class="zgled">
+<p><strong>Zgled 1.6</strong>. Opazujmo permutacijsko upodobitev
+simetrične grupe <span class="math inline">\(S_3\)</span> na prostoru
+<span class="math inline">\(\mathbb{R}[\{ 1,2,3 \}] =
+\mathbb{R}^3\)</span>. Delovanje grupe <span
+class="math inline">\(S_3\)</span> ohranja vektor <span
+class="math inline">\(e_1 + e_2 + e_3\)</span>, zato ima ta upodobitev
+trivialno enorazsežno podupodobitev, dano s podprostorom <span
+class="math inline">\(\langle e_1 + e_2 + e_3 \rangle\)</span>. Eden od
+komplementov tega podprostora je <span class="math inline">\(\langle e_1
+- e_2, e_2 - e_3 \rangle\)</span>, ki je hkrati <span
+class="math inline">\(S_3\)</span>-invariaten podprostor.<a href="#fn12"
+class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>
+Če označimo <span class="math inline">\(u_1 = e_1 - e_2\)</span> in
+<span class="math inline">\(u_2 = e_2 - e_3\)</span>, lahko slednjo
+upodobitev opišemo s homomorfizmom <span class="math display">\[\rho
+\colon S_3 \to \mathop{\mathrm{GL}}(\langle u_1, u_2 \rangle), \quad
+        (1 \ 2) \mapsto \begin{pmatrix}
+            -1 &amp; 1 \\ 0 &amp; 1
+        \end{pmatrix}, \quad
+        (1 \ 2 \ 3) \mapsto \begin{pmatrix}
+            0 &amp; -1 \\ 1 &amp; -1
+        \end{pmatrix}.\]</span> Permutacijska upodobitev <span
+class="math inline">\(S_3\)</span> je zato direktna vsota enorazsežne
+podupodobitve <span class="math inline">\(\mathbf{1}\)</span> in
+dvorazsežne podupodobitve <span class="math inline">\(\rho\)</span>.</p>
+<p>Premislimo, da upodobitve <span class="math inline">\(\rho\)</span>
+<em>ne</em> moremo zapisati kot direktne vsote svojih pravih
+podupodobitev. V ta namen opazujmo njene morebitne enorazsežne
+podupodobitve. Premislili smo že, da te ustrezajo skupnim lastnim
+vektorjem vseh preslikav <span class="math inline">\(\rho(x)\)</span> za
+<span class="math inline">\(x \in S_3\)</span>. Lastna vektorja <span
+class="math inline">\(\rho((1 \ 2))\)</span> sta <span
+class="math inline">\(u_1\)</span> in <span class="math inline">\(u_1 +
+2 u_2\)</span>. Noben od teh dveh vektorjev ni hkrati lastni vektor
+<span class="math inline">\(\rho((1 \ 2 \ 3))\)</span>. Torej je
+upodobitev <span class="math inline">\(\rho\)</span> stopnje <span
+class="math inline">\(2\)</span>, hkrati pa nima enorazsežnih
+podupodobitev in je torej ne moremo nadalje razstaviti.</p>
+</div>
+<p>Direktna vsota je najbolj preprost način, kako lahko iz danih
+upodobitev sestavimo novo upodobitev. V nadaljevanju bomo zato veliko
+časa posvetili obratnemu problemu: dano upodobitev bomo kot v zadnjem
+zgledu skušali razstaviti na direktno vsoto čim bolj enostavnih
+podupodobitev.</p>
+<h3 id="tenzorski-produkt">Tenzorski produkt</h3>
+<p>Naj ima grupa <span class="math inline">\(G\)</span> upodobitvi <span
+class="math inline">\(\rho_1\)</span> in <span
+class="math inline">\(\rho_2\)</span> na prostorih <span
+class="math inline">\(V_1\)</span> in <span
+class="math inline">\(V_2\)</span>. Tedaj lahko tvorimo
+<span><strong><em>tenzorski produkt</em></strong></span> vektorskih
+prostorov <span class="math inline">\(V_1 \otimes V_2\)</span>, ki je
+naravno opremljen z linearnim delovanjem <span
+class="math display">\[\rho_1 \otimes \rho_2 \colon G \to
+\mathop{\mathrm{GL}}(V_1 \otimes V_2), \quad
+    g \mapsto \left( v_1 \otimes v_2 \mapsto \rho_1(g) v_1 \otimes
+\rho_2(g) v_2 \right).\]</span></p>
+<div class="zgled">
+<p><strong>Zgled 1.7</strong>. Opazujmo simetrično grupo <span
+class="math inline">\(S_3\)</span>. Ogledali smo si že njeno
+permutacijsko upodobitev na prostoru <span
+class="math inline">\(\mathbb{R}^3\)</span>, ki smo jo razstavili na
+direktno vsoto trivialne upodobitve <span
+class="math inline">\(\mathbf{1}\)</span> in dvorazsežne upodobitve
+<span class="math inline">\(\rho\)</span>. Poleg teh dveh ima grupa
+<span class="math inline">\(S_3\)</span> še eno zanimivo upodobitev, ki
+izračuna predznak dane permutacije, se pravi <span
+class="math display">\[\mathop{\mathrm{sgn}}\colon S_3 \to
+\mathop{\mathrm{GL}}(\mathbb{R}) = \mathbb{R}^*, \quad
+    \sigma \mapsto \mathop{\mathrm{sgn}}(\sigma).\]</span> To je
+netrivialna enorazsežna upodobitev.</p>
+<p>Tvorimo tenzorski produkt upodobitev <span
+class="math inline">\(\rho\)</span> in <span
+class="math inline">\(\mathop{\mathrm{sgn}}\)</span>. Dobimo upodobitev
+na vektorskem prostoru <span class="math inline">\(\mathbb{R}\otimes
+\mathbb{R}^2\)</span>, ki ga lahko naravno identificiramo s prostorom
+<span class="math inline">\(\mathbb{R}^2\)</span>. V tem smislu je
+upodobitev <span class="math inline">\(\mathop{\mathrm{sgn}}\otimes
+\rho\)</span> izomorfna dvorazsežni upodobitvi <span
+class="math display">\[S_3 \to \mathop{\mathrm{GL}}(\mathbb{R}^2), \quad
+    \sigma \mapsto \left( v \mapsto \mathop{\mathrm{sgn}}(\sigma) \cdot
+\rho(\sigma) \cdot v \right).\]</span></p>
+<div class="domacanaloga">
+<p><strong>Domača naloga 1.3</strong>. Dokaži, da sta upodobitvi <span
+class="math inline">\(\rho\)</span> in <span
+class="math inline">\(\mathop{\mathrm{sgn}}\otimes \rho\)</span>
+izomorfni.</p>
+</div>
+</div>
+<p>Naj ima grupa <span class="math inline">\(G\)</span> upodobitev na
+prostoru <span class="math inline">\(V\)</span>. Tedaj lahko tvorimo
+<span><strong><em>tenzorske potence</em></strong></span> <span
+class="math inline">\(V^{\otimes n}\)</span> za <span
+class="math inline">\(n \in \mathbb{N}_0\)</span>. Vsaka od teh tvori
+upodobitev grupe <span class="math inline">\(G\)</span>. Na prostoru
+<span class="math inline">\(V^{\otimes n}\)</span> deluje simetrična
+grupa <span class="math inline">\(S_n\)</span>, in sicer na dva načina.
+Prvi način izhaja iz permutacijske upodobitve grupe <span
+class="math inline">\(S_n\)</span>, in sicer dobimo delovanje <span
+class="math display">\[\pi \colon S_n \to
+\mathop{\mathrm{GL}}(V^{\otimes n}), \quad
+    \sigma \mapsto \left( v_1 \otimes v_2 \otimes \cdots \otimes v_n
+\mapsto  v_{\sigma(1)} \otimes v_{\sigma(2)} \otimes \cdots \otimes
+v_{\sigma(n)} \right).\]</span> Drugi način delovanja grupe <span
+class="math inline">\(S_n\)</span> na tenzorski potenci pa je <span
+class="math inline">\(\mathop{\mathrm{sgn}}\otimes \pi\)</span>, pri
+katerem delovanje <span class="math inline">\(\pi\)</span> še utežimo s
+predznakom delujoče permutacije. Prostor koinvariant upodobitve <span
+class="math inline">\(\pi\)</span> je <span
+class="math display">\[{\textstyle \mathop{\mathrm{Sym}}^n(V)} =
+    \frac{V^{\otimes n}}{
+        \left\langle v_1 \otimes v_2 \otimes \cdots \otimes v_n
+-  v_{\sigma(1)} \otimes v_{\sigma(2)} \otimes \cdots \otimes
+v_{\sigma(n)} \mid v_i \in V, \ \sigma \in S_n \right\rangle
+    },\]</span> imenujemo ga <span><strong><em>simetrična
+potenca</em></strong></span> upodobitve <span
+class="math inline">\(G\)</span> na <span
+class="math inline">\(V\)</span>. Analogno prostor koinvariant
+upodobitve <span class="math inline">\(\mathop{\mathrm{sgn}}\otimes
+\pi\)</span> označimo z <span
+class="math inline">\(\bigwedge^n(V)\)</span> in imenujemo
+<span><strong><em>alternirajoča potenca</em></strong></span>. Obe
+potenci sta seveda upodobitvi grupe <span
+class="math inline">\(G\)</span>. Vse potence hkrati zajamemo z
+direktnima vsotama <span class="math display">\[\textstyle
+\mathop{\mathrm{Sym}}(V) = \bigoplus_{n \in \mathbb{N}_0}
+\mathop{\mathrm{Sym}}^n(V)
+    \quad \text{in} \quad
+    \bigwedge V = \bigoplus_{n \in \mathbb{N}_0}
+\textstyle\bigwedge^n(V).\]</span></p>
+<div class="domacanaloga">
+<p><strong>Domača naloga 1.4</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa s kompleksno upodobitvijo <span
+class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span> razsežnosti <span
+class="math inline">\(\deg(\rho) &lt; \infty\)</span>. Dokaži, da je
+upodobitev <span class="math inline">\(G\)</span> na alternirajoči
+potenci <span class="math inline">\(\bigwedge^{\deg(\rho)} V\)</span>
+izomorfna enorazsežni upodobitvi <span class="math inline">\(G \to
+\mathbb{C}^*, \ g \mapsto \det(\rho(g))\)</span>.</p>
+</div>
+<h3 id="dual">Dual</h3>
+<p>Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo
+<span class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span> nad poljem <span
+class="math inline">\(F\)</span>. Tvorimo lahko <span><strong><em>dualen
+prostor</em></strong></span> <span class="math inline">\(V^* = \hom(V,
+F)\)</span>, ki je naravno opremljen z linearnim delovanjem <span
+class="math display">\[\rho^* \colon G \to \mathop{\mathrm{GL}}(V^*),
+\quad
+    g \mapsto \left( \lambda \mapsto \left( v \mapsto
+\lambda(\rho(g^{-1}) \cdot v) \right) \right)\]</span> za <span
+class="math inline">\(\lambda \in V^*, \ v \in V\)</span>. Na ta način
+dobimo <span><strong><em>dualno upodobitev</em></strong></span> <span
+class="math inline">\(\rho^*\)</span> upodobitve <span
+class="math inline">\(\rho\)</span>.</p>
+<p>Za funkcional <span class="math inline">\(\lambda \in V^*\)</span> in
+vektor <span class="math inline">\(v \in V\)</span> včasih uporabimo
+oznako <span class="math inline">\(\langle \lambda, v \rangle\)</span>
+za aplikacijo <span class="math inline">\(\lambda(v)\)</span>. S to
+oznako lahko zapišemo definicijo dualne upodobitve kot <span
+class="math display">\[\langle \rho^*(g) \cdot \lambda, v \rangle =
+\langle \lambda, \rho(g^{-1}) \cdot v \rangle.\]</span></p>
+<div class="zgled">
+<p><strong>Zgled 1.8</strong>. Opazujmo grupo <span
+class="math inline">\(\mathbb{Z}\)</span> in za parameter <span
+class="math inline">\(a \in \mathbb{C}\)</span> njeno upodobitev <span
+class="math display">\[\chi_a \colon \mathbb{Z}\to
+\mathop{\mathrm{GL}}(\mathbb{C}), \quad
+    x \mapsto e^{ax}.\]</span> Za dualno upodobitev <span
+class="math inline">\(\chi_a^*\)</span>, funkcional <span
+class="math inline">\(\lambda \in \mathbb{C}^*\)</span> in vektor <span
+class="math inline">\(z \in \mathbb{C}\)</span> velja <span
+class="math display">\[\langle \chi_a^*(x) \cdot \lambda, z \rangle =
+    \langle \lambda, \chi_a(-x) \cdot z \rangle =
+    \lambda(e^{-ax} \cdot z).\]</span> Funkcionali v dualnem prostoru
+<span class="math inline">\(\mathbb{C}^*\)</span> so skalarna množenja s
+kompleksnimi števili. Če funkcionalu <span
+class="math inline">\(\lambda\)</span> ustreza število <span
+class="math inline">\(l \in \mathbb{C}\)</span>, dobimo torej <span
+class="math display">\[\chi_a^*(x) \cdot l = e^{-ax} \cdot l.\]</span>
+Dualna upodobitev <span class="math inline">\(\chi_a^*\)</span> je torej
+enorazsežna upodobitev, ki je izomorfna upodobitvi <span
+class="math inline">\(\chi_{-a}\)</span>.</p>
+</div>
+<div class="domacanaloga">
+<p><strong>Domača naloga 1.5</strong>. </p>
+<ul>
+<li><p>Naj bosta <span class="math inline">\(\rho_1, \rho_2\)</span>
+upodobitvi grupe <span class="math inline">\(G\)</span>. Dokaži, da je
+<span class="math display">\[\left( \rho_1 \oplus \rho_2 \right)^* \cong
+\rho_1^* \oplus \rho_2^*
+        \quad \text{in} \quad
+        \left( \rho_1 \otimes \rho_2 \right)^* \cong \rho_1^* \otimes
+\rho_2^*.\]</span></p></li>
+<li><p>Naj bo <span class="math inline">\(\rho\)</span> upodobitev grupe
+<span class="math inline">\(G\)</span> z <span
+class="math inline">\(\deg(\rho) &lt; \infty\)</span>. Tedaj je <span
+class="math inline">\(\left( \rho^* \right)^* \cong
+\rho\)</span>.</p></li>
+</ul>
+</div>
+<p>Naj bo zdaj <span class="math inline">\(G\)</span> grupa z dvema
+upodobitvama <span class="math inline">\(\rho\)</span> in <span
+class="math inline">\(\sigma\)</span> na prostorih <span
+class="math inline">\(V\)</span> in <span
+class="math inline">\(W\)</span>. <span><strong><em>Prostor linearnih
+preslikav</em></strong></span> <span
+class="math inline">\(\hom(V,W)\)</span> je naravno opremljen z
+linearnim delovanjem <span class="math display">\[\hom(\rho, \sigma)
+\colon G \to \mathop{\mathrm{GL}}(\hom(V,W)), \quad
+    g \mapsto \left( \Phi \mapsto \left( v \mapsto \sigma(g) \cdot \Phi
+\cdot \rho(g^{-1}) \cdot v \right) \right).\]</span> Invariante tega
+delovanja sestojijo iz linearnih preslikav, ki so invariantne glede na
+predpisano delovanje grupe <span class="math inline">\(G\)</span>, se
+pravi ravno iz spletičen med <span class="math inline">\(\rho\)</span>
+in <span class="math inline">\(\sigma\)</span>. S simboli je torej <span
+class="math inline">\(\hom(V,W)^G = \hom_G(V,W)\)</span>.</p>
+<div class="trditev">
+<p><strong>Trditev 1.2</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa z upodobitvama <span
+class="math inline">\(\rho\)</span> in <span
+class="math inline">\(\sigma\)</span>. Predpostavimo, da je <span
+class="math inline">\(\deg(\sigma) &lt; \infty\)</span>. Tedaj je <span
+class="math inline">\(\hom(\rho, \sigma) \cong \rho^* \otimes
+\sigma\)</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Naj bo <span class="math inline">\(\rho\)</span>
+upodobitev na prostoru <span class="math inline">\(V\)</span> in <span
+class="math inline">\(\sigma\)</span> upodobitev na prostoru <span
+class="math inline">\(W\)</span>. Izomorfizem med vektorskima prostoroma
+<span class="math inline">\(V^* \otimes W\)</span> in <span
+class="math inline">\(\hom(V,W)\)</span> podaja linearna preslikava
+<span class="math display">\[V^* \otimes W \to \hom(V,W), \quad
+    \lambda \otimes w \mapsto \left( v \mapsto \lambda(v) \cdot w
+\right).\]</span> Ni težko preveriti, da je ta preslikava
+spletična. ◻</p>
+</div>
+<h3 id="skalarji">Skalarji</h3>
+<p>Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo
+<span class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span> nad poljem <span
+class="math inline">\(F\)</span>. Naj bo <span
+class="math inline">\(E\)</span> razširitev polja <span
+class="math inline">\(F\)</span>. Tedaj je prostor <span
+class="math inline">\(E \otimes V\)</span> naravno opremljen z linearnim
+delovanjem <span class="math display">\[E \otimes \rho \colon G \to
+\mathop{\mathrm{GL}}(E \otimes V), \quad
+    g \mapsto \left( e \otimes v \mapsto e  \otimes \rho(g) \cdot v
+\right).\]</span> Ta postopek konstrukcije prostora <span
+class="math inline">\(E \otimes V\)</span> imenujemo
+<span><strong><em>razširitev skalarjev</em></strong></span>. Dano
+upodobitev lahko razširimo do ugodnejših skalarjev<a href="#fn13"
+class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>,
+lahko pa tudi dano upodobitev nad velikim poljem <span
+class="math inline">\(E\)</span> gledamo kot razširitev skalarjev neke
+upodobitve nad preprostejšim poljem <span
+class="math inline">\(F\)</span>.<a href="#fn14" class="footnote-ref"
+id="fnref14" role="doc-noteref"><sup>14</sup></a> V tem slednjem primeru
+rečemo, da je dana upodobitev <span><strong><em>definirana nad
+poljem</em></strong></span> <span class="math inline">\(F\)</span>.
+Včasih nam uspe najti celo preprost <em>podkolobar</em> polja <span
+class="math inline">\(F\)</span>, nad katerim je definirana dana
+upodobitev.</p>
+<div class="zgled">
+<p><strong>Zgled 1.9</strong>. Opazujmo grupo <span
+class="math inline">\(S_3\)</span> in njeno permutacijsko upodobitev na
+realnem prostoru <span class="math inline">\(\mathbb{R}[\{ 1, 2, 3
+\}]\)</span>. Poznamo že njeno dvorazsežno upodobitev <span
+class="math inline">\(\rho\)</span> na podprostoru <span
+class="math inline">\(\langle e_1 - e_2, e_2 - e_3 \rangle\)</span>, ki
+<em>nima</em> enorazsežnih podupodobitev. Ta je definirana z matrikami,
+ki imajo zgolj celoštevilske koeficiente. Upodobitev <span
+class="math inline">\(\rho\)</span> je zato definirana nad
+<em>kolobarjem</em> <span class="math inline">\(\mathbb{Z}\)</span>. To
+upodobitev lahko zato <em>projiciramo</em> s homomorfizmom kolobarjev
+<span class="math inline">\(\mathbb{Z}\to
+\mathbb{Z}/p\mathbb{Z}\)</span> za poljubno praštevilo <span
+class="math inline">\(p\)</span> do upodobitve <span
+class="math display">\[S_3 \to
+\mathop{\mathrm{GL}}_2(\mathbb{Z}/p\mathbb{Z}), \quad
+    (1 \ 2) \mapsto \begin{pmatrix}
+        -1 &amp; 1 \\ 0 &amp; 1
+    \end{pmatrix}, \quad
+    (1 \ 2 \ 3) \mapsto \begin{pmatrix}
+        0 &amp; -1 \\ 1 &amp; -1
+    \end{pmatrix},\]</span> ki je definirana nad <em>končnim</em> poljem
+<span class="math inline">\(\mathbb{Z}/p\mathbb{Z}\)</span>. Pri <span
+class="math inline">\(p = 3\)</span> ima ta projicirana upodobitev
+enorazsežen invarianten podprostor <span class="math inline">\(\langle
+e_1 + e_2 + e_3 \rangle\)</span>. Projekcije nam lahko torej dano
+upodobitev dodatno razstavijo.</p>
+</div>
+<p>Kadar imamo opravka s konkretnim poljem <span
+class="math inline">\(F\)</span>, lahko dano upodobitev modificiramo
+tudi z <span><strong><em>avtomorfizmi polja</em></strong></span>. Te si
+najlažje predstavljamo po izbiri baze vektorskega prostora. Če je <span
+class="math inline">\(\sigma \in \mathop{\mathrm{Aut}}(F)\)</span>,
+dobimo iz dane upodobitve <span class="math inline">\(\rho \colon G \to
+\mathop{\mathrm{GL}}_n(F)\)</span> modificirano upodobitev <span
+class="math display">\[\rho^\sigma \colon G \to
+\mathop{\mathrm{GL}}_n(F), \quad
+    g \mapsto \rho(g)^\sigma,\]</span> pri kateri vsak člen matrike
+<span class="math inline">\(\rho(g)\)</span> preslikamo z avtomorfizmom
+<span class="math inline">\(\sigma\)</span>.</p>
+<div class="zgled">
+<p><strong>Zgled 1.10</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa s kompleksno upodobitvijo <span
+class="math inline">\(\rho\)</span>. Kompleksno konjugiranje je
+avtomorfizem polja <span class="math inline">\(\mathbb{C}\)</span>, zato
+lahko s konjugiranjem členov matrik tvorimo
+<span><strong><em>konjugirano upodobitev</em></strong></span> <span
+class="math inline">\(\overline{\rho}\)</span>.</p>
+</div>
+<h3 id="restrikcija">Restrikcija</h3>
+<p>Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo
+<span class="math inline">\(\rho \colon G \to
+\mathop{\mathrm{GL}}(V)\)</span>. Kadar je na voljo še ena grupa <span
+class="math inline">\(H\)</span> s homomorfizmom <span
+class="math inline">\(\phi \colon H \to G\)</span>, lahko upodobitev
+<span class="math inline">\(\rho\)</span> sklopimo s <span
+class="math inline">\(\phi\)</span> in dobimo upodobitev <span
+class="math inline">\(\rho \circ \phi\)</span> grupe <span
+class="math inline">\(H\)</span> na prostoru <span
+class="math inline">\(V\)</span>. Temu postopku pridobivanja upodobitev
+grupe <span class="math inline">\(H\)</span> iz upodobitev grupe <span
+class="math inline">\(G\)</span> pravimo
+<span><strong><em>restrikcija</em></strong></span>, pri tem pa novo
+upodobitev <span class="math inline">\(\rho \circ \phi\)</span> označimo
+kot <span
+class="math inline">\(\mathop{\mathrm{Res}}^G_H(\rho)\)</span>.
+Predstavljamo si, da smo upodobitev <span
+class="math inline">\(\rho\)</span> <em>potegnili nazaj</em> vzdolž
+homomorfizma <span class="math inline">\(\phi\)</span>. Restrikcija je
+funktor iz kategorije <span
+class="math inline">\(\mathop{\mathrm{Rep}}_G\)</span> v kategorijo
+<span class="math inline">\(\mathop{\mathrm{Rep}}_H\)</span>.</p>
+<div class="zgled">
+<p><strong>Zgled 1.11</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa s podgrupo edinko <span
+class="math inline">\(N\)</span>. Tvorimo kvocientni homomorfizem <span
+class="math inline">\(\phi \colon G \to G/N\)</span>. Vsaki upodobitvi
+grupe <span class="math inline">\(G/N\)</span> lahko z restrikcijo
+priredimo upodobitev grupe <span class="math inline">\(G\)</span>. Vsaka
+taka pridobljena upodobitev grupe <span class="math inline">\(G\)</span>
+vsebuje podgrupo <span class="math inline">\(N\)</span> v svojem jedru.
+Na ta način dobimo bijektivno korespondenco med upodobitvami grupe <span
+class="math inline">\(G/N\)</span> in upodobitvami grupe <span
+class="math inline">\(G\)</span>, ki so trivialne na <span
+class="math inline">\(N\)</span>.</p>
+<p>Običajno ni res, da je vsaka upodobitev grupe <span
+class="math inline">\(G\)</span> trivialna na <span
+class="math inline">\(N\)</span>, se pa to lahko zgodi v kakšnih
+posebnih primerih. Na primer, <em>enorazsežne</em> upodobitve grupe
+<span class="math inline">\(G\)</span> nad poljem <span
+class="math inline">\(F\)</span> so homomorfizmi iz <span
+class="math inline">\(G\)</span> v <span
+class="math inline">\(F^*\)</span>, kar ravno ustreza homomorfizmom iz
+abelove grupe <span class="math inline">\(G/[G,G]\)</span> v <span
+class="math inline">\(F^*\)</span>. Vsaka enorazsežna upodobitev grupe
+<span class="math inline">\(G\)</span> je torej trivialna na <span
+class="math inline">\([G,G]\)</span>.</p>
+<p>Za konkreten primer si oglejmo simetrično grupo <span
+class="math inline">\(S_n\)</span>. Njene kompleksne enorazsežne
+upodobitve ustrezajo homomorfizmom <span class="math inline">\(S_n \to
+\mathbb{C}^*\)</span>. Ker je <span class="math inline">\([S_n, S_n] =
+A_n\)</span>, opazujemo torej homomorfizme <span
+class="math inline">\(S_n/A_n \cong \mathbb{Z}/2\mathbb{Z}\to
+\mathbb{C}^*\)</span>. Na voljo sta le dva taka homomorfizma: trivialen
+in netrivialen (ki preslika generator grupe <span
+class="math inline">\(\mathbb{Z}/2\mathbb{Z}\)</span> v <span
+class="math inline">\(-1 \in \mathbb{C}^*\)</span>). Prvi ustreza
+trivialni upodobitvi <span class="math inline">\(\mathbf{1}\)</span>,
+drugi pa ustreza predznačni upodobitvi <span
+class="math inline">\(\mathop{\mathrm{sgn}}\)</span>.</p>
+</div>
+<p>Kadar imamo na voljo tri grupe, povezane s homomorfizmoma <span
+class="math inline">\(\phi_2 \colon H_2 \to H_1\)</span> in <span
+class="math inline">\(\phi_1 \colon H_1 \to G\)</span>, lahko
+restrikcijo izvedemo dvakrat zaporedoma. Upodobitvi <span
+class="math inline">\(\rho\)</span> v <span
+class="math inline">\(\mathop{\mathrm{Rep}}_G\)</span> tako priredimo
+upodobitev <span
+class="math inline">\(\mathop{\mathrm{Res}}^{H_1}_{H_2}(\mathop{\mathrm{Res}}^G_{H_1}(\rho))\)</span>
+v <span class="math inline">\(\mathop{\mathrm{Rep}}_{H_2}\)</span>. Od
+grupe <span class="math inline">\(H_2\)</span> do <span
+class="math inline">\(G\)</span> imamo neposredno povezavo prek
+homomorfizma <span class="math inline">\(\phi_1 \circ \phi_2\)</span>, s
+čimer dobimo upodobitev <span
+class="math inline">\(\mathop{\mathrm{Res}}^G_{H_2}(\rho)\)</span>. Ni
+težko preveriti, da sta dobljeni upodobitvi izomorfni. Tej lastnosti
+restrikcije pravimo
+<span><strong><em>tranzitivnost</em></strong></span>.</p>
+<h3 id="indukcija">Indukcija</h3>
+<p>Naj bo kot zgoraj <span class="math inline">\(G\)</span> grupa in
+<span class="math inline">\(H\)</span> še ena grupa s homomorfizmom
+<span class="math inline">\(\phi \colon H \to G\)</span>.
+<span><strong><em>Indukcija</em></strong></span> je postopek, ki s
+pomočjo homomorfizma <span class="math inline">\(\phi\)</span>
+upodobitvi <span class="math inline">\(\rho\)</span> grupe <span
+class="math inline">\(H\)</span> priredi upodobitev grupe <span
+class="math inline">\(G\)</span>. Indukcija torej deluje ravno v obratno
+smer kot restrikcija in nam omogoča, da upodobitev <span
+class="math inline">\(\rho\)</span> <em>potisnemo naprej</em> vzdolž
+homomorfizma <span class="math inline">\(\phi\)</span>. Ta postopek je
+nekoliko bolj zapleten kot restrikcija.</p>
+<p>Začnimo z upodobitvijo <span class="math inline">\(\rho \colon H \to
+\mathop{\mathrm{GL}}(V)\)</span>. Konstruirali bomo prostor, na katerem
+deluje grupa <span class="math inline">\(G\)</span>. Odskočna deska za
+to bo regularna upodobitev grupe <span class="math inline">\(G\)</span>,
+katere vektorski prostor je prostor funkcij <span
+class="math inline">\(\hom(G,F)\)</span>. Ta prostor razširimo s
+prostorom <span class="math inline">\(V\)</span> do prostora funkcij
+<span class="math display">\[\hom(G,V) = \{ f \mid f \colon G \to V
+\},\]</span> na katerem linearno deluje grupa <span
+class="math inline">\(G\)</span> z analogom regularne upodobitve, in
+sicer kot <span class="math display">\[g \cdot f = \left( x \mapsto
+f(xg) \right)\]</span> za <span class="math inline">\(g \in G, \ f \in
+\hom(G,V)\)</span>. Po drugi strani na tej množici deluje tudi grupa
+<span class="math inline">\(H\)</span>, in sicer na dva načina: prvič
+prek homomorfizma <span class="math inline">\(\phi\)</span> in pravkar
+opisanega delovanja grupe <span class="math inline">\(G\)</span>, drugič
+pa prek svojega delovanja <span class="math inline">\(\rho\)</span> na
+prostoru <span class="math inline">\(V\)</span>. Ko ti dve delovanji
+združimo, dobimo delovanje grupe <span class="math inline">\(H\)</span>
+na prostoru funkcij <span class="math inline">\(\hom(G,V)\)</span> s
+predpisom <span class="math display">\[h \cdot f = \left( x \mapsto
+\rho(h) \cdot f \left( \phi(h^{-1}) \cdot x \right) \right)\]</span> za
+<span class="math inline">\(h \in H, \ f \in \hom(G,V)\)</span>.<a
+href="#fn15" class="footnote-ref" id="fnref15"
+role="doc-noteref"><sup>15</sup></a> Opazujmo invariantni podprostor
+<span class="math display">\[\hom(G, V)^H =
+    \left\{ f \in \hom(G,V) \mid \forall h \in H, x \in G. \ \rho(h)
+\cdot f(x) = f \left(\phi(h) \cdot x\right)\right\}.\]</span> Ker grupa
+<span class="math inline">\(G\)</span> deluje na <span
+class="math inline">\(\hom(G,V)\)</span> prek množenja z <em>desne</em>,
+pogoj pripadnosti invariantam <span
+class="math inline">\(\hom(G,V)^H\)</span> pa je izražen prek množenja z
+<em>leve</em>, je podprostor <span
+class="math inline">\(\hom(G,V)^H\)</span> avtomatično <span
+class="math inline">\(G\)</span>-invarianten. S tem smo dobili
+upodobitev grupe <span class="math inline">\(G\)</span> na prostoru
+<span class="math inline">\(\hom(G,V)^H\)</span>. To je želena
+<span><strong><em>inducirana upodobitev</em></strong></span>. Zanjo
+uporabimo oznako <span
+class="math inline">\(\mathop{\mathrm{Ind}}^G_H(\rho)\)</span>.</p>
+<div class="zgled">
+<p><strong>Zgled 1.12</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa z vložitvijo <span
+class="math inline">\(\phi \colon 1 \to G\)</span> trivialne podgrupe.
+Vsaka upodobitev trivialne grupe nad poljem <span
+class="math inline">\(F\)</span> je trivialna. Iz enorazsežne trivialne
+upodobitve <span class="math inline">\(\mathbf{1}\)</span> dobimo
+prostor funkcij <span class="math inline">\(\hom(G,F)\)</span>, na
+katerem grupa <span class="math inline">\(G\)</span> deluje z regularno
+upodobitvijo. Inducirana upodobitev je v tem primeru torej kar
+regularna, se pravi <span
+class="math inline">\(\mathop{\mathrm{Ind}}^G_1(\mathbf{1}) =
+\rho_{\hom}\)</span>.</p>
+</div>
+<p>Inducirano upodobitev <span
+class="math inline">\(\mathop{\mathrm{Ind}}^G_H(\rho) =
+\hom(G,V)^H\)</span> smo konstruirali z invariantami grupe <span
+class="math inline">\(H\)</span>. To pomeni, da vektorji v tem prostoru
+niso poljubne funkcije v <span class="math inline">\(\hom(G,V)\)</span>,
+temveč zadoščajo določenim restriktivnim pogojem. Te funkcije so
+določene z vrednostmi, ki jih zavzamejo na predstavnikih desnih odsekov
+<span class="math inline">\(\mathop{\mathrm{im}}\phi \backslash
+G\)</span>,<a href="#fn16" class="footnote-ref" id="fnref16"
+role="doc-noteref"><sup>16</sup></a> in te vrednosti pripadajo
+podprostoru <span class="math inline">\(V^{\ker \phi}\)</span>.<a
+href="#fn17" class="footnote-ref" id="fnref17"
+role="doc-noteref"><sup>17</sup></a></p>
+<div class="zgled">
+<p><strong>Zgled 1.13</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa z upodobitvijo <span
+class="math inline">\(\rho\)</span> in naj bo <span
+class="math inline">\(\phi = \mathop{\mathrm{id}}_G\)</span>. Tedaj je
+vsaka funkcija <span class="math inline">\(f \in \hom(G,V)^G\)</span>
+določena že z vrednostjo <span class="math inline">\(f(1)\)</span>.
+Dodatnih restrikcij za to vrednost ni, zato dobimo izomorfizem
+vektorskih prostorov <span class="math display">\[\hom(G,V)^G \to V,
+\quad
+        f \mapsto f(1),\]</span> ki je spletična glede na regularno
+delovanje <span class="math inline">\(G\)</span> na <span
+class="math inline">\(\hom(G,V)\)</span>. S tem imamo torej izomorfizem
+upodobitev <span class="math inline">\(\mathop{\mathrm{Ind}}^G_G(\rho)
+\cong \rho\)</span>.</p>
+</div>
+<div class="domacanaloga">
+<p><strong>Domača naloga 1.6</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa z upodobitvijo <span
+class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span> in naj bo <span
+class="math inline">\(\phi \colon G \to G/N\)</span> kvocientna
+projekcija za neko podgrupo edinko <span
+class="math inline">\(N\)</span> v <span
+class="math inline">\(G\)</span>. Dokaži, da je <span
+class="math inline">\(\mathop{\mathrm{Ind}}^{G/N}_G(\rho)\)</span>
+izomorfna upodobitvi <span class="math inline">\(G/N\)</span> na
+prostoru <span class="math inline">\(V^N\)</span>, ki izhaja iz
+upodobitve <span class="math inline">\(\rho\)</span>.</p>
+</div>
+<p>Najpomembnejši primer indukcije, čeravno ne tudi najbolj preprost, je
+<span><strong><em>indukcija iz podgrupe končnega
+indeksa</em></strong></span>. Naj bo <span
+class="math inline">\(G\)</span> grupa s podgrupo <span
+class="math inline">\(H\)</span> in naj bo <span
+class="math inline">\(\phi\)</span> vložitev <span
+class="math inline">\(H\)</span> v <span
+class="math inline">\(G\)</span>. Predpostavimo, da je <span
+class="math inline">\(|G:H| &lt; \infty\)</span>. Naj bo <span
+class="math inline">\(\rho\)</span> upodobitev grupe <span
+class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(V\)</span>. Premislimo, kako izgleda upodobitev
+<span
+class="math inline">\(\mathop{\mathrm{Ind}}^G_H(\rho)\)</span>.</p>
+<p>Naj bo <span class="math inline">\(R\)</span> neka izbrana množica
+predstavnikov desnih odsekov <span class="math inline">\(H\)</span> v
+<span class="math inline">\(G\)</span>. Vsaka funkcija <span
+class="math inline">\(f \in \hom(G,V)^H\)</span> je določena z
+vrednostmi <span class="math inline">\(f(r)\)</span> za <span
+class="math inline">\(r \in R\)</span> in dodatnih restrikcij za te
+vrednosti ni, zato dobimo izomorfizem vektorskih prostorov<a
+href="#fn18" class="footnote-ref" id="fnref18"
+role="doc-noteref"><sup>18</sup></a> <span class="math display">\[\Phi
+\colon \hom(G,V)^H \to \hom(R,V), \quad
+        f \mapsto \left( r \mapsto f(r) \right).\]</span> Da dobimo
+spletično, moramo posplošitev regularnega delovanja <span
+class="math inline">\(G\)</span> na <span
+class="math inline">\(\hom(G,V)\)</span> prenesti prek linearnega
+izomorfizma <span class="math inline">\(\Phi\)</span> na desno stran. V
+ta namen naj bo <span class="math inline">\(v \in V\)</span> in <span
+class="math inline">\(f \in \hom(G,V)^H\)</span> z lastnostjo <span
+class="math inline">\(f(r_0) = v\)</span> in <span
+class="math inline">\(f(r) = 0\)</span> za <span class="math inline">\(r
+\in R \backslash \{ r_0 \}\)</span>. Za vsak <span
+class="math inline">\(g \in G\)</span> mora tako veljati <span
+class="math display">\[g \cdot \left( r \mapsto \begin{cases} v &amp; r
+= r_0 \\ 0 &amp; r \neq r_0 \end{cases} \right) =
+        \Phi \left( g \cdot f \right) =
+        \Phi \left( x \mapsto f(xg) \right).\]</span> Za <span
+class="math inline">\(x \in R\)</span> z lastnostjo <span
+class="math inline">\(xg \in Hr_0\)</span>, se pravi <span
+class="math inline">\(x = h r_0 g^{-1}\)</span> za nek <span
+class="math inline">\(h \in H\)</span>, velja <span
+class="math inline">\(f(xg) = f(hr_0) = \rho(h) \cdot v\)</span>. Seveda
+je <span class="math inline">\(|R \cap H r g^{-1}| = 1\)</span>, torej
+obstaja natanko en tak <span class="math inline">\(x\)</span>. Za <span
+class="math inline">\(x \in R\)</span> z lastnostjo <span
+class="math inline">\(xg \notin Hr_0\)</span> pa velja <span
+class="math inline">\(f(xg) = 0\)</span>. S tem je <span
+class="math display">\[g \cdot \left( r \mapsto \begin{cases} v &amp; r
+= r_0 \\ 0 &amp; r \neq r_0 \end{cases} \right) =
+        \left( r \mapsto \begin{cases} \rho(h) \cdot v &amp; r = h r_0
+g^{-1} \text{ za nek $h \in H$} \\ 0 &amp; r \notin H r_0 g^{-1}
+\end{cases} \right).\]</span> Da bo preslikava <span
+class="math inline">\(\Phi\)</span> spletična, moramo na <span
+class="math inline">\(\hom(R,V)\)</span> torej uvesti tako delovanje
+grupe <span class="math inline">\(G\)</span>, ki dan vektor <span
+class="math inline">\(v\)</span> pri vnosu <span
+class="math inline">\(r_0 \in R\)</span> preslika tako, da najprej
+izračuna odsek elementa <span class="math inline">\(r_0 g^{-1}\)</span>
+po <span class="math inline">\(H\)</span>, ta element zapiše kot <span
+class="math inline">\(r_0 g^{-1} = h^{-1} r\)</span> za <span
+class="math inline">\(h \in H, \ r \in R\)</span>, nato pa na vektor
+<span class="math inline">\(v\)</span> deluje z <span
+class="math inline">\(\rho(h)\)</span> in ga hkrati prestavi k vnosu
+<span class="math inline">\(r\)</span>.</p>
+<p>Opisan postopek si lahko nekoliko lažje predstavljamo tako, da
+množico <span class="math inline">\(\hom(R,V)\)</span> identificiramo z
+direktno vsoto <span class="math inline">\(\bigoplus_{r \in R} V
+r\)</span>, kjer je <span class="math inline">\(Vr\)</span> kopija
+vektorskega prostora <span class="math inline">\(V\)</span> pri
+komponenti <span class="math inline">\(r\)</span>. Element <span
+class="math inline">\(g \in G\)</span> deluje na vektorju <span
+class="math inline">\(v r_0 \in Vr_0\)</span> kot <span
+class="math inline">\(g^{-1}\)</span> z desne. V teh domačih oznakah
+izračunamo <span class="math display">\[g \cdot v r_0 = v r_0 g^{-1} = v
+h^{-1} r = (h \cdot v) r = (\rho(h) \cdot v) r,\]</span> kar ravno
+ustreza bolj zakompliciranemu zapisu zgoraj.</p>
+<p>Poseben primer opisane indukcije dobimo z enorazsežnimi upodobitvami
+grupe <span class="math inline">\(H\)</span>. Vsak homomorfizem <span
+class="math inline">\(\rho \colon H \to F^*\)</span> porodi prostor
+<span class="math inline">\(\hom(G,F)^H\)</span> razsežnosti <span
+class="math inline">\(|G:H|\)</span>, ki je podprostor prostora funkcij
+<span class="math inline">\(\hom(G,F)\)</span> in na katerem torej grupa
+<span class="math inline">\(G\)</span> deluje z regularno upodobitvjo.
+Inducirana upodobitev je v tem primeru podupodobitev regularne
+upodobitve <span class="math inline">\(\rho_{\hom}\)</span>. Na ta način
+lahko dobimo mnogo različnih upodobitev grupe <span
+class="math inline">\(G\)</span>.</p>
+<div class="zgled">
+<p><strong>Zgled 1.14</strong>. Opazujmo grupo <span
+class="math inline">\(S_n\)</span> in njeno podgrupo <span
+class="math inline">\(A_n\)</span> indeksa <span
+class="math inline">\(2\)</span>. Za <span class="math inline">\(n \geq
+5\)</span> je grupa <span class="math inline">\(A_n\)</span> enostavna,
+zato je <span class="math inline">\(A_n = [A_n, A_n]\)</span> in ni
+netrivialnih enorazsežnih upodobitev. Oglejmo si inducirano upodobitev
+<span
+class="math inline">\(\mathop{\mathrm{Ind}}^{S_n}_{A_n}(\mathbf{1})\)</span>.
+A priori vemo, da je to dvorazsežna upodobitev. Za množico predstavnikov
+odsekov vzamemo <span class="math inline">\(R = \{ (), (1 \ 2)
+\}\)</span>. V domačih oznakah je vektorski prostor upodobitve enak
+<span class="math inline">\(F ()\oplus F (1 \ 2)\)</span>, na katerem
+deluje grupa <span class="math inline">\(S_n\)</span> s predpisom <span
+class="math display">\[g \cdot x \sigma = x \sigma g^{-1} =
+\begin{cases}
+            x \sigma   &amp; g \in A_n \\
+            x \left((1 \ 2)\sigma\right)    &amp; g \notin A_n
+        \end{cases}\]</span> za <span class="math inline">\(g \in S_n, \
+x \in F, \ \sigma \in R\)</span>. To delovanje lahko zapišemo še
+enostavneje. Vektorski prostor identificiramo z dvorazsežnim prostorom
+<span class="math inline">\(F^2\)</span>, delovanje pa opišemo kot <span
+class="math display">\[g \cdot \begin{pmatrix}
+            x \\ y
+        \end{pmatrix} =
+        \begin{cases}
+            \begin{pmatrix}
+                x \\ y
+            \end{pmatrix} &amp; g \in A_n \\
+            \begin{pmatrix}
+                y \\ x
+            \end{pmatrix} &amp; g \notin A_n
+        \end{cases}\]</span> za <span class="math inline">\(x,y \in F, \
+g \in S_n\)</span>. Alternirajoča grupa <span
+class="math inline">\(A_n\)</span> je v jedru te upodobitve, ki zato
+izhaja iz kvocienta <span class="math inline">\(S_n/A_n \cong
+\mathbb{Z}/2\mathbb{Z}\)</span>. Opisana upodobitev je natanko
+permutacijska upodobitev grupe <span
+class="math inline">\(\mathbb{Z}/2\mathbb{Z}\)</span> na prostoru <span
+class="math inline">\(F[\{ 1, 2 \}]\)</span>, inducirana upodobitev pa
+je ravno restrikcija te upodobitve vzdolž kvocientne projekcije <span
+class="math inline">\(S_n \to S_n/A_n\)</span>. Inducirano upodobitev
+lahko zapišemo kot vsoto dveh enorazsežnih podupodobitev. Prva je
+podupodobitev z diagonalnim prostorom <span class="math inline">\(\{
+(x,x) \mid x \in F \} \leq F^2\)</span>, ta je izomorfna trivialni
+upodobitvi <span class="math inline">\(\mathbf{1}\)</span>. Druga pa je
+podupodobitev z antidiagonalnim prostorom <span class="math inline">\(\{
+(x, -x) \mid x \in F \} \leq F^2\)</span>. Ta ni trivialna, saj element
+<span class="math inline">\((1 \ 2)\)</span> deluje na <span
+class="math inline">\((1, -1)\)</span> kot množenje z <span
+class="math inline">\(-1 \in F\)</span>. Ta podupodobitev je zato
+izomorfna predznačni upodobitvi <span
+class="math inline">\(\mathop{\mathrm{sgn}}\)</span>. Nazadnje je torej
+<span
+class="math inline">\(\mathop{\mathrm{Ind}}^{S_n}_{A_n}(\mathbf{1})
+\cong \mathbf{1} \oplus \mathop{\mathrm{sgn}}\)</span>.</p>
+</div>
+<p>Naj bosta <span class="math inline">\(G,H\)</span> grupi s
+homomorfizmom <span class="math inline">\(\phi \colon H \to G\)</span>.
+Ni težko preveriti, da indukcija naravno presene spletično med dvema
+upodobitvama grupe <span class="math inline">\(H\)</span> v spletično
+med induciranima upodobitvama. Indukcija je torej funktor iz kategorije
+<span class="math inline">\(\mathop{\mathrm{Rep}}_H\)</span> v
+kategorijo <span
+class="math inline">\(\mathop{\mathrm{Rep}}_G\)</span>.</p>
+<p>Kadar imamo na voljo tri grupe, povezane s homomorfizmoma <span
+class="math inline">\(\phi_2 \colon H_2 \to H_1\)</span> in <span
+class="math inline">\(\phi_1 \colon H_1 \to G\)</span>, lahko indukcijo
+izvedemo dvakrat zaporedoma. Upodobitvi <span
+class="math inline">\(\rho\)</span> v <span
+class="math inline">\(\mathop{\mathrm{Rep}}_{H_2}\)</span> tako
+priredimo upodobitev <span
+class="math inline">\(\mathop{\mathrm{Ind}}^{G}_{H_1}(\mathop{\mathrm{Ind}}^{H_1}_{H_2}(\rho))\)</span>
+v <span class="math inline">\(\mathop{\mathrm{Rep}}_{G}\)</span>. Od
+grupe <span class="math inline">\(H_2\)</span> do <span
+class="math inline">\(G\)</span> imamo neposredno povezavo prek
+homomorfizma <span class="math inline">\(\phi_1 \circ \phi_2\)</span>, s
+čimer dobimo upodobitev <span
+class="math inline">\(\mathop{\mathrm{Ind}}^G_{H_2}(\rho)\)</span>. Ni
+težko preveriti, da sta dobljeni upodobitvi izomorfni. Tej lastnosti
+indukcije pravimo
+<span><strong><em>tranzitivnost</em></strong></span>.</p>
+<div class="domacanaloga">
+<p><strong>Domača naloga 1.7</strong>. Dokaži tranzitivnost
+indukcije.</p>
+</div>
+<p>S tranzitivnostjo indukcije lahko vsako indukcijo vzdolž homomorfizma
+<span class="math inline">\(\phi \colon H \to G\)</span> razdelimo na
+tri korake: najprej induciramo vzdolž kvocientne projekcije <span
+class="math inline">\(H \to H/\ker \phi\)</span>, nato vzdolž
+izomorfizma <span class="math inline">\(H/\ker \phi \to
+\mathop{\mathrm{im}}\phi\)</span> in nazadnje vzdolž vložitve <span
+class="math inline">\(\mathop{\mathrm{im}}\phi \to G\)</span>. Vsako od
+teh posameznih indukcij razumemo precej dobro in zato lahko to znanje
+uporabimo pri razumevanju indukcije vzdolž <span
+class="math inline">\(\phi\)</span>. Na primer, iz povedanega in
+razmiselekov o preprostejših indukcijah, ki smo jih že naredili, sledi,
+da je razsežnost inducirane upodobitve <span
+class="math inline">\(\rho\)</span> grupe <span
+class="math inline">\(H\)</span> na prostoru <span
+class="math inline">\(V\)</span> enaka <span
+class="math display">\[\deg(\mathop{\mathrm{Ind}}^G_H(\rho)) =
+    |G:\mathop{\mathrm{im}}\phi| \cdot \dim(V^{\ker \phi}).\]</span></p>
+<h3 id="adjunkcija-restrikcije-in-indukcije">Adjunkcija restrikcije in
+indukcije</h3>
+<p>Indukcija in restrikcija vsekakor nista inverzna funktorja. Na
+primer, če je <span class="math inline">\(H \leq G\)</span> in <span
+class="math inline">\(\phi\)</span> vložitev, potem za upodobitev <span
+class="math inline">\(\rho\)</span> v <span
+class="math inline">\(\mathop{\mathrm{Rep}}_G\)</span> velja <span
+class="math inline">\(\deg(\mathop{\mathrm{Res}}^G_H(\rho)) =
+\deg(\rho)\)</span> in zato <span
+class="math inline">\(\deg(\mathop{\mathrm{Ind}}^G_H(\mathop{\mathrm{Res}}^G_H(\rho)))
+= |G:H| \cdot \deg(\rho)\)</span>, kar je lahko mnogo večje od <span
+class="math inline">\(\deg(\rho)\)</span>. Sta pa funktorja restrikcije
+in indukcije vendarle tesno povezana. Tvorita namreč
+<span><strong><em>adjungiran par</em></strong></span> funktorjev.<a
+href="#fn19" class="footnote-ref" id="fnref19"
+role="doc-noteref"><sup>19</sup></a></p>
+<div class="trditev">
+<p><strong>Trditev 1.3</strong>. Naj bosta <span
+class="math inline">\(G,H\)</span> grupi s homomorfizmom <span
+class="math inline">\(\phi \colon H \to G\)</span>. Za vsako upodobitev
+<span class="math inline">\(\rho\)</span> v <span
+class="math inline">\(\mathop{\mathrm{Rep}}_G\)</span> in upodobitev
+<span class="math inline">\(\sigma\)</span> v <span
+class="math inline">\(\mathop{\mathrm{Rep}}_H\)</span> velja <span
+class="math display">\[\hom_H(\mathop{\mathrm{Res}}^G_H(\rho), \sigma)
+\cong
+        \hom_G(\rho, \mathop{\mathrm{Ind}}^G_H(\sigma)).\]</span></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Naj bo <span class="math inline">\(\rho\)</span>
+upodobitev na prostoru <span class="math inline">\(V\)</span> in <span
+class="math inline">\(\sigma\)</span> upodobitev na prostoru <span
+class="math inline">\(W\)</span>. Naj bo <span
+class="math inline">\(\Phi \in \hom_H(\mathop{\mathrm{Res}}^G_H(\rho),
+\sigma) = \hom_H(V, W)\)</span>. Sestavimo pripadajočo spletično <span
+class="math inline">\(\Psi \in \hom_G(\rho,
+\mathop{\mathrm{Ind}}^G_H(\sigma)) = \hom_G(V, \hom(G,W)^H)\)</span>. Za
+vektor <span class="math inline">\(v \in V\)</span> definirajmo <span
+class="math display">\[\Psi(v) = \left( x \mapsto \Phi(\rho(x) \cdot v)
+\right) \in \hom(G,W).\]</span> Ni težko (je pa sitno) preveriti, da
+opisano prirejanje vzpostavi izomorfizem med prostoroma spletičen <span
+class="math inline">\(\hom_H(V,W)\)</span> in <span
+class="math inline">\(\hom_G(V,\hom(G,W)^H)\)</span>. ◻</p>
+</div>
+<div class="zgled">
+<p><strong>Zgled 1.15</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa s podgrupo <span
+class="math inline">\(H\)</span> končnega indeksa. Grupa <span
+class="math inline">\(G\)</span> deluje na množici desnih odsekov <span
+class="math inline">\(H \backslash G\)</span> s homomorfizmom <span
+class="math display">\[G \to \mathop{\mathrm{Sym}}(H \backslash G),
+\quad
+    g \mapsto \left( Hx \mapsto Hxg^{-1} \right).\]</span> Iz tega
+delovanja izhaja permutacijska upodobitev <span
+class="math inline">\(\pi\)</span> grupe <span
+class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(F[H \backslash G]\)</span>. Po konstrukciji je
+<span class="math inline">\(\pi \cong
+\mathop{\mathrm{Ind}}^G_H(\mathbf{1})\)</span>. Iz adjunkcije med
+restrikcijo in indukcijo za trivialni upodobitvi grup <span
+class="math inline">\(G\)</span> in <span
+class="math inline">\(H\)</span> od tod izpeljemo izomorfizem <span
+class="math display">\[\hom_H(\mathbf{1}, \mathbf{1}) \cong
+\hom_G(\mathbf{1}, \pi) \cong F[H \backslash G]^G.\]</span> Prostor
+<span class="math inline">\(\hom_H(\mathbf{1}, \mathbf{1}) =
+\hom(F,F)\)</span> sestoji zgolj iz skalarnih množenj in je torej
+enorazsežen. Zato je enorazsežen tudi prostor invariant <span
+class="math inline">\(F[H \backslash G]^G\)</span>. Vektor, ki ga
+razpenja, lahko dobimo kot sliko <span
+class="math inline">\(\mathop{\mathrm{id}}_F \in \hom_H(\mathbf{1},
+\mathbf{1})\)</span>. Tej spletični po adjunkciji ustreza spletična
+<span class="math display">\[\Psi \colon F \to F[H \backslash G], \quad
+    1 \mapsto \sum_{Hx \in H \backslash G} e_{Hx},\]</span> od koder
+sledi <span class="math display">\[F[H \backslash G]^G = \left\langle
+\sum_{Hx \in H \backslash G} e_{Hx} \right\rangle.\]</span></p>
+</div>
+<div class="domacanaloga">
+<p><strong>Domača naloga 1.8</strong>. Naj bosta <span
+class="math inline">\(G,H\)</span> grupi s homomorfizmom <span
+class="math inline">\(\phi \colon H \to G\)</span>. Za vsako upodobitev
+<span class="math inline">\(\rho\)</span> v <span
+class="math inline">\(\mathop{\mathrm{Rep}}_G\)</span> in upodobitev
+<span class="math inline">\(\sigma\)</span> v <span
+class="math inline">\(\mathop{\mathrm{Rep}}_H\)</span> velja <span
+class="math display">\[\mathop{\mathrm{Ind}}^G_H(\mathop{\mathrm{Res}}^G_H(\rho)
+\otimes \sigma) \cong
+        \rho \otimes \mathop{\mathrm{Ind}}^G_H(\sigma).
+        \vspace{-\baselineskip}\]</span></p>
+</div>
+<div class="domacanaloga">
+<p><strong>Domača naloga 1.9</strong>. Premisli, kako se restrikcija in
+indukcija ujameta z dualom, direktno vsoto in tenzorskim produktom.</p>
+</div>
+<h1 id="upodobitev-pod-mikroskopom">Upodobitev pod mikroskopom</h1>
+<p>V tem poglavju bomo pribili upodobitev dane grupe in se ji tesno
+približali, kot da bi jo pogledali pod mikroskopom. Pri tem bomo najprej
+uzrli osnovne kose, iz katerih je sestavljena upodobitev. Ti osnovni
+kosi ustrezajo celicam, ki jih vidimo pod mikroskopom. Za tem se bomo
+približali še sestavi teh osnovnih kosov: vsak je dan s homomorfizmom v
+matrike, zato bomo raziskali koeficiente te matrike. Ti ustrezajo
+organelom, ki jih v celici vidimo pod mikroskopom. Nazadnje bomo
+premislili, da so te upodobitvene celice dovolj diferencirane med sabo,
+da za njihovo identifikacijo zadošča poznavanje le nekaterih njihovih
+organelov.</p>
+<h2 id="razstavljanje-upodobitve">Razstavljanje upodobitve</h2>
+<h3 id="nerazcepnost-in-polenostavnost">Nerazcepnost in
+polenostavnost</h3>
+<p>Pogosto nas bo zanimalo, če lahko dano upodobitev <span
+class="math inline">\(\rho\)</span> grupe <span
+class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(V\)</span> zapišemo kot direktno vsoto nekih
+podupodobitev in na ta način upodobitev <span
+class="math inline">\(\rho\)</span> <em>razstavimo</em> na preprostejše
+upodobitve, podobno kot razstavimo števila na praštevila. To vprašanje
+se naravno pojavi, kadar ima dana upodobitev <span
+class="math inline">\(\rho\)</span> neko podupodobitev <span
+class="math inline">\(\tilde\rho\)</span> na podprostoru <span
+class="math inline">\(W \leq V\)</span>. Seveda lahko vselej najdemo
+vektorski prostor <span class="math inline">\(U \leq V\)</span>, za
+katerega je <span class="math inline">\(V = U \oplus W\)</span>,
+vsekakor pa ni jasno, če lahko najdemo tak podprostor <span
+class="math inline">\(U\)</span>, ki je celo <span
+class="math inline">\(G\)</span>-invarianten. V tem primeru rečemo, da
+smo našli <span><strong><em>komplementirano
+podupodobitev</em></strong></span> podupodobitve <span
+class="math inline">\(\tilde\rho\)</span>.<a href="#fn20"
+class="footnote-ref" id="fnref20"
+role="doc-noteref"><sup>20</sup></a></p>
+<div class="zgled">
+<p><strong>Zgled 2.1</strong>. </p>
+<ul>
+<li><p>Opazujmo permutacijsko upodobitev simetrične grupe <span
+class="math inline">\(S_3\)</span> na prostoru <span
+class="math inline">\(\mathbb{R}[\{ 1,2,3 \}] = \mathbb{R}^3\)</span>.
+Delovanje grupe <span class="math inline">\(S_3\)</span> ohranja vektor
+<span class="math inline">\(e_1 + e_2 + e_3\)</span>, zato ima ta
+upodobitev trivialno enorazsežno podupodobitev, dano s podprostorom
+<span class="math inline">\(\langle e_1 + e_2 + e_3 \rangle\)</span>.
+Eden od komplementov tega podprostora je <span
+class="math inline">\(\langle e_1 - e_2, e_2 - e_3 \rangle\)</span>, ki
+je hkrati <span class="math inline">\(S_3\)</span>-invariaten
+podprostor.<a href="#fn21" class="footnote-ref" id="fnref21"
+role="doc-noteref"><sup>21</sup></a> Permutacijska upodobitev <span
+class="math inline">\(S_3\)</span> je zato direktna vsota enorazsežne in
+dvorazsežne podupodobitve.</p></li>
+<li><p>Naj grupa <span class="math inline">\(\mathbb{R}\)</span> deluje
+na realnem prostoru <span class="math inline">\(\mathbb{R}^2\)</span> s
+homomorfizmom <span class="math display">\[\rho \colon \mathbb{R}\to
+\mathop{\mathrm{GL}}_2(\mathbb{R}), \quad
+        x \mapsto
+        \begin{pmatrix}
+        1 &amp; x \\ 0 &amp; 1
+    \end{pmatrix}.\]</span> Oglejmo si enorazsežne podupodobitve.
+Premislili smo že, da te ustrezajo skupnim lastnim vektorjem vseh
+preslikav <span class="math inline">\(\rho(x)\)</span> za <span
+class="math inline">\(x \in \mathbb{R}\)</span>. Pri <span
+class="math inline">\(x = 1\)</span> imamo linearno preslikavo <span
+class="math inline">\(\rho(1)\)</span> z enim samim lastnim vektorjem,
+in sicer <span class="math inline">\(e_1 \in \mathbb{R}^2\)</span>.
+Hkrati je <span class="math inline">\(e_1\)</span> lastni vektor vseh
+preslikav <span class="math inline">\(\rho(x)\)</span> za <span
+class="math inline">\(x \in \mathbb{R}\)</span>. Torej ima <span
+class="math inline">\(\rho\)</span> <em>eno samo</em> enorazsežno
+podupodobitev, in sicer je to <span
+class="math inline">\(\mathbb{R}\cdot e_1 \leq \mathbb{R}^2\)</span>. Ta
+vektorski podprostor ima mnogo komplementov v <span
+class="math inline">\(\mathbb{R}^2\)</span>, noben od teh pa ni hkrati
+enorazsežna podupodobitev <span
+class="math inline">\(\rho\)</span>.</p></li>
+</ul>
+</div>
+<p>Nima torej vsaka podupodobitev komplementirane podupodobitve. Ni
+težko preveriti, da obstoj takih komplementov vselej izhaja iz
+projekcijskih<a href="#fn22" class="footnote-ref" id="fnref22"
+role="doc-noteref"><sup>22</sup></a> spletičen.</p>
+<div class="trditev">
+<p><strong>Trditev 2.1</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa z upodobitvijo <span
+class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span> in naj bo <span
+class="math inline">\(\tilde \rho\)</span> njena podupodobitev na
+prostoru <span class="math inline">\(W \leq V\)</span>. Tedaj ima <span
+class="math inline">\(\tilde \rho\)</span> komplementirano
+podupodobitev, če in samo če obstaja spletična <span
+class="math inline">\(\Phi \in \hom_G(V,V)\)</span>, ki je projekcija na
+<span class="math inline">\(W\)</span>. V tem primeru je <span
+class="math inline">\(\ker \Phi\)</span> komplementirana upodobitev.</p>
+</div>
+<p>Vrnimo se k začetni ideji o <em>razstavljanju</em> dane upodobitve.
+Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo <span
+class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V \neq 0\)</span>. Kadar <em>ne</em> obstaja noben
+<span class="math inline">\(G\)</span>-invarianten podprostor prostora
+<span class="math inline">\(V\)</span> (razen prostorov <span
+class="math inline">\(0\)</span> in <span
+class="math inline">\(V\)</span>), tedaj rečemo, da je upodobitev <span
+class="math inline">\(\rho\)</span>
+<span><strong><em>nerazcepna</em></strong></span>.<a href="#fn23"
+class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a> V
+tem primeru upodobitve seveda ne moremo razstaviti na enostavnejše.</p>
+<p>Preverimo, da so nerazcepne upodobitve dane grupe med sabo
+<em>neprimerljive</em>, tudi če so enake razsežnosti. Zatorej si jih
+lahko predstavljamo kot neodvisne osnovne kose kategorije upodobitev
+dane grupe.<a href="#fn24" class="footnote-ref" id="fnref24"
+role="doc-noteref"><sup>24</sup></a></p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span><strong>Lema.</strong></span> <span>
+(Schurova lema)</span> Naj bo <span class="math inline">\(G\)</span>
+grupa z upodobitvijo <span class="math inline">\(\rho\)</span> in
+nerazcepno upodobitvijo <span class="math inline">\(\pi\)</span>. Tedaj
+je vsaka spletična v <span class="math inline">\(\hom_G(\pi,
+\rho)\)</span> bodisi injektivna bodisi ničelna in vsaka spletična v
+<span class="math inline">\(\hom_G(\rho, \pi)\)</span> je bodisi
+surjektivna bodisi ničelna. V posebnem je vsaka spletična med dvema
+nerazcepnima upodobitvama grupe <span class="math inline">\(G\)</span>
+bodisi izomorfizem bodisi ničelna.</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Naj bo <span class="math inline">\(\Phi \in
+\hom_G(\pi, \rho)\)</span>. Tedaj je <span class="math inline">\(\ker
+\Phi\)</span> podupodobitev <span class="math inline">\(\pi\)</span>,
+zato je po nerazcepnosti bodisi <span class="math inline">\(\ker \Phi =
+0\)</span> bodisi <span class="math inline">\(\Phi = 0\)</span>. Prvi
+primer ustreza možnosti, da je <span class="math inline">\(\Phi\)</span>
+injektivna, v drugem primeru pa je <span
+class="math inline">\(\Phi\)</span> ničelna. Soroden razmislek dokaže
+trditev o spletičnah v <span class="math inline">\(\hom_G(\rho,
+\pi)\)</span>. ◻</p>
+</div>
+<p>Kadar lahko dano upodobitev <span class="math inline">\(\rho\)</span>
+zapišemo kot direktno vsoto nerazcepnih upodobitev <span
+class="math inline">\(\bigoplus_{i \in I} \rho_i\)</span>, tedaj rečemo,
+da je <span class="math inline">\(\rho\)</span>
+<span><strong><em>polenostavna</em></strong></span> upodobitev. Če so
+pri tem vse podupodobitve <span class="math inline">\(\rho_i\)</span>
+izomorfne med sabo, tedaj rečemo, da je <span
+class="math inline">\(\rho\)</span>
+<span><strong><em>izotipična</em></strong></span> upodobitev.</p>
+<div class="zgled">
+<p><strong>Zgled 2.2</strong>. Opazumo permutacijsko upodobitev grupe
+<span class="math inline">\(S_3\)</span> na prostoru <span
+class="math inline">\(\mathbb{R}^3\)</span>. Ta upodobitev je direktna
+vsote trivialne enorazsežne upodobitve na prostoru <span
+class="math inline">\(\langle e_1 + e_2 + e_3 \rangle\)</span> in
+dvorazsežne upodobitve na prostoru <span class="math inline">\(\langle
+e_1 - e_2, e_2 - e_3 \rangle\)</span>. Če označimo <span
+class="math inline">\(u_1 = e_1 - e_2\)</span> in <span
+class="math inline">\(u_2 = e_2 - e_3\)</span>, lahko slednjo upodobitev
+opišemo s homomorfizmom <span class="math display">\[\rho \colon S_3 \to
+\mathop{\mathrm{GL}}(\langle u_1, u_2 \rangle), \quad
+    (1 \ 2) \mapsto \begin{pmatrix}
+        -1 &amp; 1 \\ 0 &amp; 1
+    \end{pmatrix}, \quad
+    (1 \ 2 \ 3) \mapsto \begin{pmatrix}
+        0 &amp; -1 \\ 1 &amp; -1
+    \end{pmatrix}.\]</span> Lastna vektorja <span
+class="math inline">\(\rho((1 \ 2))\)</span> sta <span
+class="math inline">\(u_1\)</span> in <span class="math inline">\(u_1 +
+2 u_2\)</span>. Noben od teh dveh vektorjev ni hkrati lastni vektor
+<span class="math inline">\(\rho((1 \ 2 \ 3))\)</span>. Torej je
+upodobitev <span class="math inline">\(\rho\)</span> stopnje <span
+class="math inline">\(2\)</span>, hkrati pa nima enorazsežnih
+podupodobitev, torej je nerazcepna. Permutacijsko upodobitev <span
+class="math inline">\(S_3\)</span> na <span
+class="math inline">\(\mathbb{R}^3\)</span> smo s tem zapisali kot
+direktno vsoto nerazcepnih upodobitev, torej je ta upodobitev
+polenostavna. Ni pa izotipična, saj sta nerazcepna sumanda med sabo
+seveda neizomorfna.</p>
+</div>
+<p>V predzadnjem zgledu smo videli, da <em>niso</em> vse upodobitve
+polenostavne in da torej ne moremo razstaviti vseh upodobitev na
+nerazcepne.<a href="#fn25" class="footnote-ref" id="fnref25"
+role="doc-noteref"><sup>25</sup></a> Polenostavnost dane upodobitve je
+tesno povezana z obstojem komplementiranih podupodobitev.</p>
+<div class="trditev">
+<p><strong>Trditev 2.2</strong>. Upodobitev grupe <span
+class="math inline">\(G\)</span> je polenostavna, če in samo če ima
+vsaka njena podupodobitev komplementirano podupodobitev.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span class="math inline">\((\Rightarrow)\)</span>:
+Naj bo najprej <span class="math inline">\(\rho \colon G \to
+\mathop{\mathrm{GL}}(V)\)</span> polenostavna upodobitev, pri kateri je
+<span class="math inline">\(V = \bigoplus_{i \in I} V_i\)</span> in
+upodobitve <span class="math inline">\(G\)</span> na podprostorih <span
+class="math inline">\(V_i\)</span> so nerazcepne. Naj bo <span
+class="math inline">\(W \leq V\)</span> poljuben <span
+class="math inline">\(G\)</span>-invarianten podprostor. Po Zornovi lemi
+obstaja maksimalen <span class="math inline">\(G\)</span>-invarianten
+podprostor <span class="math inline">\(U \leq V\)</span> z lastnostjo
+<span class="math inline">\(U \cap W = 0\)</span>. Izberimo poljuben
+<span class="math inline">\(i \in I\)</span>. Presek <span
+class="math inline">\((U \oplus W) \cap V_i\)</span> je <span
+class="math inline">\(G\)</span>-invarianten podprostor prostora <span
+class="math inline">\(V_i\)</span>, zato je po nerazcepnosti bodisi
+trivialen bodisi enak <span class="math inline">\(V_i\)</span>. Če bi
+bil trivialen, bi lahko <span class="math inline">\(U\)</span> povečali
+do prostora <span class="math inline">\(U \oplus V_i\)</span>, kar je v
+nasprotju z maksimalnostjo izbire <span
+class="math inline">\(U\)</span>. Zatorej je <span
+class="math inline">\((U \oplus W) \cap V_i = V_i\)</span> in tako <span
+class="math inline">\((U \oplus W) \geq V_i\)</span>. Ker je bil <span
+class="math inline">\(i\)</span> poljuben, od tod sledi <span
+class="math inline">\(U \oplus W = V\)</span>. Podupodobitev <span
+class="math inline">\(W\)</span> ima torej komplementirano podupodobitev
+<span class="math inline">\(U\)</span>. <span
+class="math inline">\(\checkmark\kern-0.7em\checkmark\)</span></p>
+<p><span class="math inline">\((\Leftarrow)\)</span>: Naj bo <span
+class="math inline">\(\rho \colon G \to \mathop{\mathrm{GL}}(V)\)</span>
+upodobitev, v kateri je vsaka podupodobitev komplementirana. Dokazati
+želimo, da je <span class="math inline">\(\rho\)</span> polenostavna.
+Uporabili bomo naslednjo pomožno trditev, ki je ni težko preveriti.</p>
+<div class="domacanaloga">
+<p><strong>Domača naloga 2.1</strong>. Naj bo <span
+class="math inline">\(\rho\)</span> upodobitev, v kateri je vsaka
+podupodobitev komplementirana. Tedaj ima <span
+class="math inline">\(\rho\)</span> nerazcepno podupodobitev.</p>
+</div>
+<p>Naj bo <span class="math inline">\(W\)</span> vsota vseh <span
+class="math inline">\(G\)</span>-invariantnih podprostorov v <span
+class="math inline">\(V\)</span>, ki so nerazcepne upodobitve, se pravi
+<span class="math inline">\(W = \sum_{i \in I} V_i\)</span>, a ta vsota
+ni nujno direktna. Po pomožni trditvi je <span class="math inline">\(W
+\neq 0\)</span>. Po predpostavki je <span
+class="math inline">\(W\)</span> komplementirana z <span
+class="math inline">\(G\)</span>-invariantnim podprostorom <span
+class="math inline">\(U\)</span>. Po pomožni trditvi ima tudi <span
+class="math inline">\(U\)</span> nerazcepno podupodobitev, zato je ta
+vsebovana v <span class="math inline">\(W\)</span>, kar implicira <span
+class="math inline">\(W = V\)</span>. Dokažimo zdaj še, da je <span
+class="math inline">\(W\)</span> <em>direktna</em> vsota podprostorov
+<span class="math inline">\(V_i\)</span>. V ta namen naj bo <span
+class="math inline">\(J\)</span> maksimalna podmnožica indeksne množice
+<span class="math inline">\(I\)</span>, za katero je <span
+class="math inline">\(\sum_{j \in J} V_j\)</span> direktna vsota. Taka
+podmnožica obstaj po Zornovi lemi. Označimo <span
+class="math inline">\(\tilde V = \bigoplus_{j \in J} V_j\)</span>. Če
+velja <span class="math inline">\(\tilde V \neq V\)</span>, potem mora
+za nek <span class="math inline">\(i \in I \backslash J\)</span> po
+nerazcepnosti veljati <span class="math inline">\(V_i \cap \tilde
+V\)</span>, kar pa je v nasprotju z maksimalnostjo množice <span
+class="math inline">\(J\)</span>. Tako je res <span
+class="math inline">\(\tilde V = V\)</span> in upodobitev <span
+class="math inline">\(V\)</span> je polenostavna. <span
+class="math inline">\(\checkmark\kern-0.7em\checkmark\)</span> ◻</p>
+</div>
+<p>Z uporabo zadnjega kriterija lahko dokažemo, da je polenostavnost
+zaprta za osnovne konstrukcije z upodobitvami.</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th
+style="text-align: left;"><p><span><strong>Posledica.</strong></span></p>
+<p>Podupodobitve, kvocienti in direktne vsote polenostavnih upodobitev
+dane grupe so polenostavne.</p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Preverimo le zaprtost za podupodobitve. Naj bo <span
+class="math inline">\(\rho\)</span> polenostavna upodobitev grupe <span
+class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(V\)</span> in naj bo <span class="math inline">\(W
+\leq V\)</span> podupodobitev. Naj bo <span class="math inline">\(U \leq
+W\)</span> poljubna podupodobitev upodobitve na <span
+class="math inline">\(W\)</span>. Po polenostavnosti obstaja
+komplementirana podupodobitev <span class="math inline">\(\tilde U \leq
+V\)</span> upodobitve <span class="math inline">\(U \leq V\)</span>.
+Tedaj je <span class="math inline">\(\tilde U \cap W\)</span>
+podupodobitev, ki je komplementirana podupodobitvi <span
+class="math inline">\(U\)</span> v <span
+class="math inline">\(W\)</span>. ◻</p>
+</div>
+<h3 id="dekompozicijska-vrsta">Dekompozicijska vrsta</h3>
+<p>- Theorem 2.7.1 (Jordan-Holder-Noether theorem)</p>
+<h3 id="spletične-med-nerazcepnimi-upodobitvami">Spletične med
+nerazcepnimi upodobitvami</h3>
+<p>- (Schurs Lemma, version II). - Corollary 2.7.17 (Abelian groups and
+central character).</p>
+<h3 id="večkratnosti-in-izotipične-komponente">Večkratnosti in
+izotipične komponente</h3>
+<p>- multiplicities and isotypical components</p>
+<h2 id="matrični-koeficienti">Matrični koeficienti</h2>
+<h3 id="neodvisnost-koeficientov">Neodvisnost koeficientov</h3>
+<p>- Theorem 2.7.24 (Burnsides irreducibility criterion) - matrix
+coefficients, linear independence,</p>
+<h3 id="povezava-z-regularno-upodobitvijo">Povezava z regularno
+upodobitvijo</h3>
+<p>-Corollary 2.7.30 (Matrix coefficients as subrepresentations of the
+regular representation). - Proposition 2.7.34 (Isotypic component of the
+regular representation).</p>
+<h3 id="karakterji">Karakterji</h3>
+<p>- characters of finite dimensional representations</p>
+<p>- (?, najbrž ne) some clifford theory</p>
+<h1 id="upodobitve-končnih-grup">Upodobitve končnih grup</h1>
+<p>- Maschke (projektor) - dekompozicija regularne upodobitve -
+nerazcepne upodobitve končnih abelovih grup - število karakterjev -
+ortogonalnost karakterjev - večkratnosti - kje najti upodobitve -
+projektorji na izo komponente - malo harmonične analize - abelove grupe,
+Dirichletov izrek - tabela karakterjev - <span
+class="math inline">\(\mathop{\mathrm{GL}}_2(\mathcal{F}_p)\)</span> -
+simetrične grupe (!!!) - burnside two primes theorem (najbrž izpustimo,
+brez veze)</p>
+<h1 id="upodobitve-kompaktnih-grup">Upodobitve kompaktnih grup</h1>
+<p>- topološke grupe (zvezne upodobitve) - unitarne na hilbertovih
+prostorih (končne smo že, <span class="math inline">\(SU_2\)</span>) -
+upodobitve <span class="math inline">\(S^1\)</span> (vse, Fourier) -
+<span class="math inline">\(SU_2(\mathbb{C})\)</span> (samo končno
+razsežne), Peter-Weyl na tem primeru (samo izrek, da smo s tem pokrili
+vse unitarne upodobitve), na tej točki zaključimo MSc predmet in cela
+teorija kompaktnih grup se lahko naredi za PhD predmet kot nadgradnja
+tega do sem.</p>
+<section class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Prostor <span
+class="math inline">\(F[G]\)</span> je vektorski prostor nad <span
+class="math inline">\(F\)</span>, generiran z množico <span
+class="math inline">\(G\)</span>. Običajno mu pravimo
+<span><strong><em>grupna algebra</em></strong></span>, saj ta prostor na
+naraven način podeduje operacijo množenja iz grupe <span
+class="math inline">\(G\)</span>.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Angleško <em>intertwiner</em>.<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>Z opustitvijo eksplicitnih oznak za
+delovanja lahko ta pogoj pišemo krajše kot <span
+class="math inline">\(\Phi(gv) = g\Phi(v)\)</span>.<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>Generator <span
+class="math inline">\(\bar 1 = 1 + n\mathbb{Z}\in
+\mathbb{Z}/n\mathbb{Z}\)</span> deluje kot cikel <span
+class="math inline">\((1 \ 2 \ \cdots \ n)\)</span>.<a href="#fnref4"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>Pozor, karakteristična funkcija je
+zasidrana pri <span><em>inverzu</em></span> elementa <span
+class="math inline">\(\bar x\)</span> v <span
+class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span>.<a href="#fnref5"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p>Na primer, <em>precej dobro</em> bomo
+opisali upodobitve poljubne končne grupe nad poljem kompleksnih
+števil.<a href="#fnref6" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn7" role="doc-endnote"><p>Kadar je <span
+class="math inline">\(\chi(g) = 1\)</span> za vsak <span
+class="math inline">\(g \in G\)</span>, je ta upodobitev izomorfna <span
+class="math inline">\(\mathbf{1}\)</span>. Kadar je <span
+class="math inline">\(\chi(g) \neq 1\)</span> za vsaj kak <span
+class="math inline">\(g \in G\)</span>, pa ta upodobitev <em>ni</em>
+trivialna.<a href="#fnref7" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn8" role="doc-endnote"><p>Namreč, <span class="math inline">\(v
+= \Phi(1)\)</span> in <span class="math inline">\(\chi(g) = \rho(g)
+\cdot 1\)</span>.<a href="#fnref8" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn9" role="doc-endnote"><p>Poseben primer te preslikave smo
+videli za grupo <span
+class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span>, kjer smo
+premislili, da je celo bijektivna.<a href="#fnref9"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10" role="doc-endnote"><p>Slika <span
+class="math inline">\(\mathop{\mathrm{im}}\Phi\)</span> namreč sestoji
+iz funkcij, ki so neničelne le v končno mnogo elementih grupe <span
+class="math inline">\(G\)</span>.<a href="#fnref10"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11" role="doc-endnote"><p>To sledi na primer iz dejstva, da
+prostora <span class="math inline">\(F[G]^G\)</span> in <span
+class="math inline">\(\hom(G,F)^G\)</span> nista izomorfna.<a
+href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12" role="doc-endnote"><p>Velja na primer <span
+class="math inline">\((1 \ 3 \ 2) \cdot (e_1 - e_2) = e_3 - e_1 = -(e_1
+- e_2) - (e_2 - e_3)\)</span>.<a href="#fnref12" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn13" role="doc-endnote"><p>Na primer polja kompleksnih
+števil.<a href="#fnref13" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn14" role="doc-endnote"><p>Na primer <span
+class="math inline">\(E = \mathbb{C}\)</span> in <span
+class="math inline">\(F = \mathbb{Q}\)</span>.<a href="#fnref14"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn15" role="doc-endnote"><p>Delovanje <span
+class="math inline">\(H\)</span> na <span
+class="math inline">\(\hom(G,V)\)</span> je konstruirano analogno
+delovanju grupe na prostoru linearnih preslikav.<a href="#fnref15"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn16" role="doc-endnote"><p>Če je <span
+class="math inline">\(R\)</span> množica predstavnikov desnih odsekov
+<span class="math inline">\(\mathop{\mathrm{im}}\phi\)</span> v <span
+class="math inline">\(G\)</span> in če že poznamo vrednosti <span
+class="math inline">\(f \in \hom(G,V)\)</span> na množici <span
+class="math inline">\(R\)</span>, potem lahko vsako drugo vrednost <span
+class="math inline">\(f\)</span> izračunamo kot <span
+class="math inline">\(f(x \cdot r) = \rho(y) \cdot f(r)\)</span> za
+<span class="math inline">\(x = \phi(y) \in
+\mathop{\mathrm{im}}\phi\)</span>.<a href="#fnref16"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn17" role="doc-endnote"><p>Če je <span class="math inline">\(f
+\in \hom(G,V)^H\)</span>, potem pogoj <span
+class="math inline">\(H\)</span>-invariantnosti uporabimo z elementi
+<span class="math inline">\(h \in \ker \phi\)</span> in dobimo <span
+class="math inline">\(\rho(h) \cdot f(x) = f(x)\)</span>, torej je <span
+class="math inline">\(f \in V^h\)</span>.<a href="#fnref17"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn18" role="doc-endnote"><p>Množico funkcij <span
+class="math inline">\(\hom(R,V)\)</span> lahko vidimo kot direktno vsoto
+prostorov <span class="math inline">\(V\)</span>, indeksirano z množico
+<span class="math inline">\(R\)</span>.<a href="#fnref18"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn19" role="doc-endnote"><p>V nadaljevanju bomo spoznali
+presenetljivo uporabnost tega navidez naključnega dejstva.<a
+href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn20" role="doc-endnote"><p>Če komplementirana podupodobitev
+obstaja, potem je enolično določena (do izomorfizma upodobitev), saj je
+izomorfna kvocientu <span
+class="math inline">\(\rho/\tilde\rho\)</span>.<a href="#fnref20"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn21" role="doc-endnote"><p>Velja na primer <span
+class="math inline">\((1 \ 3 \ 2) \cdot (e_1 - e_2) = e_3 - e_1 = -(e_1
+- e_2) - (e_2 - e_3)\)</span>.<a href="#fnref21" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn22" role="doc-endnote"><p>Linearna preslikava <span
+class="math inline">\(A \colon X \to X\)</span> je projekcija na
+podprostor <span class="math inline">\(Y \leq X\)</span>, če je <span
+class="math inline">\(A^2 = A\)</span> in <span
+class="math inline">\(\mathop{\mathrm{im}}A = Y\)</span>.<a
+href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn23" role="doc-endnote"><p>Rečemo tudi, da je <span
+class="math inline">\(V\)</span>
+<span><strong><em>enostavna</em></strong></span> upodobitev.<a
+href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn24" role="doc-endnote"><p>Po analogiji s faktorizacijo števil
+si nerazcepne upodobitve lahko predstavljamo kot praštevila.<a
+href="#fnref24" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn25" role="doc-endnote"><p>V nadaljevanju bomo pokazali, da so
+upodobitve končnih grup nad poljem kompleksnih števil vselej
+poenostavne.<a href="#fnref25" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
+        
+        /* ajust the height when click the toc
+           the code is from https://github.com/twbs/bootstrap/issues/1768
+        */
+        var shiftWindow = function() { scrollBy(0, -50) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+        
+        /*add Bootstrap styles to tables*/
+        var tables = document.getElementsByTagName("table");
+        for(var i = 0; i < tables.length; ++i){
+            tables[i].className += "table table-bordered table-hover";
+        }
+    </script>
+  </body>
+</html>
