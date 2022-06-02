@@ -92,11 +92,14 @@ id="toc-upodobitev-pod-mikroskopom">Upodobitev pod mikroskopom</a>
 <li><a href="#razstavljanje-upodobitve"
 id="toc-razstavljanje-upodobitve">Razstavljanje upodobitve</a>
 <ul>
-<li><a href="#nerazcepnost-in-polenostavnost"
-id="toc-nerazcepnost-in-polenostavnost">Nerazcepnost in
-polenostavnost</a></li>
-<li><a href="#dekompozicijska-vrsta"
-id="toc-dekompozicijska-vrsta">Dekompozicijska vrsta</a></li>
+<li><a href="#nerazcepnost" id="toc-nerazcepnost">Nerazcepnost</a></li>
+<li><a href="#komplementarna-podupodobitev"
+id="toc-komplementarna-podupodobitev">Komplementarna
+podupodobitev</a></li>
+<li><a href="#polenostavnost"
+id="toc-polenostavnost">Polenostavnost</a></li>
+<li><a href="#kompozicijska-vrsta"
+id="toc-kompozicijska-vrsta">Kompozicijska vrsta</a></li>
 <li><a href="#spletične-med-nerazcepnimi-upodobitvami"
 id="toc-spletične-med-nerazcepnimi-upodobitvami">Spletične med
 nerazcepnimi upodobitvami</a></li>
@@ -129,6 +132,8 @@ predmeta</h3>
 <li><p><span>E. Kowalski, <span><em>An Introduction to the
 Representation Theory of Groups</em></span>, American Mathematical
 Society, 2014.</span></p></li>
+<li><p><span>W. Fulton, J. Harris, <span><em>Representation Theory: A
+First Course</em></span>, Springer GTM 129, 2004.</span></p></li>
 </ul>
 <h1 id="temelji-teorije-upodobitev">Temelji teorije upodobitev</h1>
 <p>V tem poglavju bomo vzpostavili temelje teorije upodobitev. Spoznali
@@ -1498,50 +1503,60 @@ premislili, da so te upodobitvene celice dovolj diferencirane med sabo,
 da za njihovo identifikacijo zadošča poznavanje le nekaterih njihovih
 organelov.</p>
 <h2 id="razstavljanje-upodobitve">Razstavljanje upodobitve</h2>
-<h3 id="nerazcepnost-in-polenostavnost">Nerazcepnost in
-polenostavnost</h3>
-<p>Pogosto nas bo zanimalo, če lahko dano upodobitev <span
+<p>Pogosto nas zanima, ali lahko dano upodobitev <span
 class="math inline">\(\rho\)</span> grupe <span
 class="math inline">\(G\)</span> na prostoru <span
 class="math inline">\(V\)</span> zapišemo kot direktno vsoto nekih
 podupodobitev in na ta način upodobitev <span
 class="math inline">\(\rho\)</span> <em>razstavimo</em> na preprostejše
-upodobitve, podobno kot razstavimo števila na praštevila. To vprašanje
-se naravno pojavi, kadar ima dana upodobitev <span
-class="math inline">\(\rho\)</span> neko podupodobitev <span
+upodobitve, podobno kot razstavimo števila na manjše faktorje.</p>
+<h3 id="nerazcepnost">Nerazcepnost</h3>
+<p>Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo
+<span class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V \neq 0\)</span>. Kadar <em>ne</em> obstaja noben
+<span class="math inline">\(G\)</span>-invarianten podprostor prostora
+<span class="math inline">\(V\)</span> (razen prostorov <span
+class="math inline">\(0\)</span> in <span
+class="math inline">\(V\)</span>), tedaj rečemo, da je upodobitev <span
+class="math inline">\(\rho\)</span>
+<span><strong><em>nerazcepna</em></strong></span>.<a href="#fn20"
+class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a> V
+tem primeru upodobitve seveda ne moremo razstaviti na enostavnejše v
+smislu direktne vsote.</p>
+<div class="zgled">
+<p><strong>Zgled 2.1</strong>. Opazujmo permutacijsko upodobitev
+simetrične grupe <span class="math inline">\(S_3\)</span> na prostoru
+<span class="math inline">\(\mathbb{R}[\{ 1,2,3 \}] =
+\mathbb{R}^3\)</span>. Premislili smo že, da je ta upodobitev direktna
+vsota enorazsežne podupodobitve <span
+class="math inline">\(\mathbf{1}\)</span> in dvorazsežne podupodobitve
+<span class="math inline">\(\rho\)</span>, pri čemer slednja nima nobene
+enorazsežne podupodobitve. S tem je permutacijska upodobitev
+razstavljena kot direktna vsota dveh nerazcepnih upodobitev.</p>
+</div>
+<h3 id="komplementarna-podupodobitev">Komplementarna podupodobitev</h3>
+<p>Predpostavimo zdaj, da ima dana upodobitev <span
+class="math inline">\(\rho\)</span> grupe <span
+class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(V\)</span> neko podupodobitev <span
 class="math inline">\(\tilde\rho\)</span> na podprostoru <span
 class="math inline">\(W \leq V\)</span>. Seveda lahko vselej najdemo
 vektorski prostor <span class="math inline">\(U \leq V\)</span>, za
 katerega je <span class="math inline">\(V = U \oplus W\)</span>,
 vsekakor pa ni jasno, če lahko najdemo tak podprostor <span
 class="math inline">\(U\)</span>, ki je celo <span
-class="math inline">\(G\)</span>-invarianten. V tem primeru rečemo, da
-smo našli <span><strong><em>komplementirano
+class="math inline">\(G\)</span>-invarianten. Kadar je temu tako,
+rečemo, da smo našli <span><strong><em>komplementarno
 podupodobitev</em></strong></span> podupodobitve <span
-class="math inline">\(\tilde\rho\)</span>.<a href="#fn20"
-class="footnote-ref" id="fnref20"
-role="doc-noteref"><sup>20</sup></a></p>
+class="math inline">\(\tilde\rho\)</span>.<a href="#fn21"
+class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>
+Ni vsaka podupodobitev komplementirana.</p>
 <div class="zgled">
-<p><strong>Zgled 2.1</strong>. </p>
-<ul>
-<li><p>Opazujmo permutacijsko upodobitev simetrične grupe <span
-class="math inline">\(S_3\)</span> na prostoru <span
-class="math inline">\(\mathbb{R}[\{ 1,2,3 \}] = \mathbb{R}^3\)</span>.
-Delovanje grupe <span class="math inline">\(S_3\)</span> ohranja vektor
-<span class="math inline">\(e_1 + e_2 + e_3\)</span>, zato ima ta
-upodobitev trivialno enorazsežno podupodobitev, dano s podprostorom
-<span class="math inline">\(\langle e_1 + e_2 + e_3 \rangle\)</span>.
-Eden od komplementov tega podprostora je <span
-class="math inline">\(\langle e_1 - e_2, e_2 - e_3 \rangle\)</span>, ki
-je hkrati <span class="math inline">\(S_3\)</span>-invariaten
-podprostor.<a href="#fn21" class="footnote-ref" id="fnref21"
-role="doc-noteref"><sup>21</sup></a> Permutacijska upodobitev <span
-class="math inline">\(S_3\)</span> je zato direktna vsota enorazsežne in
-dvorazsežne podupodobitve.</p></li>
-<li><p>Naj grupa <span class="math inline">\(\mathbb{R}\)</span> deluje
-na realnem prostoru <span class="math inline">\(\mathbb{R}^2\)</span> s
-homomorfizmom <span class="math display">\[\rho \colon \mathbb{R}\to
-{\textstyle \mathop{\mathrm{GL}}_2(\mathbb{R})}, \quad
+<p><strong>Zgled 2.2</strong>. Naj grupa <span
+class="math inline">\(\mathbb{R}\)</span> deluje na realnem prostoru
+<span class="math inline">\(\mathbb{R}^2\)</span> s homomorfizmom <span
+class="math display">\[\rho \colon \mathbb{R}\to {\textstyle
+\mathop{\mathrm{GL}}_2(\mathbb{R})}, \quad
         x \mapsto
         \begin{pmatrix}
         1 &amp; x \\ 0 &amp; 1
@@ -1560,13 +1575,10 @@ podupodobitev, in sicer je to <span
 class="math inline">\(\mathbb{R}\cdot e_1 \leq \mathbb{R}^2\)</span>. Ta
 vektorski podprostor ima mnogo komplementov v <span
 class="math inline">\(\mathbb{R}^2\)</span>, noben od teh pa ni hkrati
-enorazsežna podupodobitev <span
-class="math inline">\(\rho\)</span>.</p></li>
-</ul>
+enorazsežna podupodobitev <span class="math inline">\(\rho\)</span>.</p>
 </div>
-<p>Nima torej vsaka podupodobitev komplementirane podupodobitve. Ni
-težko preveriti, da obstoj takih komplementov vselej izhaja iz
-projekcijskih<a href="#fn22" class="footnote-ref" id="fnref22"
+<p>Ni težko preveriti, da obstoj komplementirane podupodobitve vselej
+izhaja iz projekcijskih<a href="#fn22" class="footnote-ref" id="fnref22"
 role="doc-noteref"><sup>22</sup></a> spletičen.</p>
 <div class="trditev">
 <p><strong>Trditev 2.1</strong>. Naj bo <span
@@ -1581,23 +1593,11 @@ class="math inline">\(\Phi \in \hom_G(V,V)\)</span>, ki je projekcija na
 <span class="math inline">\(W\)</span>. V tem primeru je <span
 class="math inline">\(\ker \Phi\)</span> komplementirana upodobitev.</p>
 </div>
-<p>Vrnimo se k začetni ideji o <em>razstavljanju</em> dane upodobitve.
-Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo <span
-class="math inline">\(\rho\)</span> na prostoru <span
-class="math inline">\(V \neq 0\)</span>. Kadar <em>ne</em> obstaja noben
-<span class="math inline">\(G\)</span>-invarianten podprostor prostora
-<span class="math inline">\(V\)</span> (razen prostorov <span
-class="math inline">\(0\)</span> in <span
-class="math inline">\(V\)</span>), tedaj rečemo, da je upodobitev <span
-class="math inline">\(\rho\)</span>
-<span><strong><em>nerazcepna</em></strong></span>.<a href="#fn23"
-class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a> V
-tem primeru upodobitve seveda ne moremo razstaviti na enostavnejše.</p>
 <p>Preverimo, da so nerazcepne upodobitve dane grupe med sabo
 <em>neprimerljive</em>, tudi če so enake razsežnosti. Zatorej si jih
 lahko predstavljamo kot neodvisne osnovne kose kategorije upodobitev
-dane grupe.<a href="#fn24" class="footnote-ref" id="fnref24"
-role="doc-noteref"><sup>24</sup></a></p>
+dane grupe.<a href="#fn23" class="footnote-ref" id="fnref23"
+role="doc-noteref"><sup>23</sup></a></p>
 <div class="lema">
 <p><strong>Lema 2.1</strong> (Schurova lema). Naj bo <span
 class="math inline">\(G\)</span> grupa z upodobitvijo <span
@@ -1622,51 +1622,26 @@ class="math inline">\(\Phi\)</span> ničelna. Soroden razmislek dokaže
 trditev o spletičnah v <span class="math inline">\(\hom_G(\rho,
 \pi)\)</span>. ◻</p>
 </div>
-<p>Kadar lahko dano upodobitev <span class="math inline">\(\rho\)</span>
-zapišemo kot direktno vsoto nerazcepnih upodobitev <span
+<h3 id="polenostavnost">Polenostavnost</h3>
+<p>Vrnimo se k začetni ideji o <em>razstavljanju</em> dane upodobitve.
+Kadar lahko dano upodobitev <span class="math inline">\(\rho\)</span>
+zapišemo kot direktno vsoto <em>nerazcepnih</em> upodobitev <span
 class="math inline">\(\bigoplus_{i \in I} \rho_i\)</span>, tedaj rečemo,
 da je <span class="math inline">\(\rho\)</span>
 <span><strong><em>polenostavna</em></strong></span> upodobitev. Če so
 pri tem vse podupodobitve <span class="math inline">\(\rho_i\)</span>
-izomorfne med sabo, tedaj rečemo, da je <span
-class="math inline">\(\rho\)</span>
-<span><strong><em>izotipična</em></strong></span> upodobitev.</p>
+izomorfne med sabo, upodobitev <span class="math inline">\(\rho\)</span>
+imenujemo <span><strong><em>izotipična</em></strong></span>
+upodobitev.</p>
 <div class="zgled">
-<p><strong>Zgled 2.2</strong>. Opazumo permutacijsko upodobitev grupe
-<span class="math inline">\(S_3\)</span> na prostoru <span
-class="math inline">\(\mathbb{R}^3\)</span>. Ta upodobitev je direktna
-vsote trivialne enorazsežne upodobitve na prostoru <span
-class="math inline">\(\langle e_1 + e_2 + e_3 \rangle\)</span> in
-dvorazsežne upodobitve na prostoru <span class="math inline">\(\langle
-e_1 - e_2, e_2 - e_3 \rangle\)</span>. Če označimo <span
-class="math inline">\(u_1 = e_1 - e_2\)</span> in <span
-class="math inline">\(u_2 = e_2 - e_3\)</span>, lahko slednjo upodobitev
-opišemo s homomorfizmom <span class="math display">\[\rho \colon S_3 \to
-\mathop{\mathrm{GL}}(\langle u_1, u_2 \rangle), \quad
-    (1 \ 2) \mapsto \begin{pmatrix}
-        -1 &amp; 1 \\ 0 &amp; 1
-    \end{pmatrix}, \quad
-    (1 \ 2 \ 3) \mapsto \begin{pmatrix}
-        0 &amp; -1 \\ 1 &amp; -1
-    \end{pmatrix}.\]</span> Lastna vektorja <span
-class="math inline">\(\rho((1 \ 2))\)</span> sta <span
-class="math inline">\(u_1\)</span> in <span class="math inline">\(u_1 +
-2 u_2\)</span>. Noben od teh dveh vektorjev ni hkrati lastni vektor
-<span class="math inline">\(\rho((1 \ 2 \ 3))\)</span>. Torej je
-upodobitev <span class="math inline">\(\rho\)</span> stopnje <span
-class="math inline">\(2\)</span>, hkrati pa nima enorazsežnih
-podupodobitev, torej je nerazcepna. Permutacijsko upodobitev <span
+<p><strong>Zgled 2.3</strong>. Permutacijska upodobitev grupe <span
 class="math inline">\(S_3\)</span> na <span
-class="math inline">\(\mathbb{R}^3\)</span> smo s tem zapisali kot
-direktno vsoto nerazcepnih upodobitev, torej je ta upodobitev
-polenostavna. Ni pa izotipična, saj sta nerazcepna sumanda med sabo
-seveda neizomorfna.</p>
+class="math inline">\(\mathbb{R}^3\)</span> je polenostavna.</p>
 </div>
-<p>V predzadnjem zgledu smo videli, da <em>niso</em> vse upodobitve
-polenostavne in da torej ne moremo razstaviti vseh upodobitev na
-nerazcepne.<a href="#fn25" class="footnote-ref" id="fnref25"
-role="doc-noteref"><sup>25</sup></a> Polenostavnost dane upodobitve je
-tesno povezana z obstojem komplementiranih podupodobitev.</p>
+<p>Vseh upodobitev žal ne moremo razstaviti na direktno vsoto
+nerazcepnih.<a href="#fn24" class="footnote-ref" id="fnref24"
+role="doc-noteref"><sup>24</sup></a> Polenostavnost dane upodobitve je
+namreč tesno povezana z obstojem komplementiranih podupodobitev.</p>
 <div class="trditev">
 <p><strong>Trditev 2.2</strong>. Upodobitev grupe <span
 class="math inline">\(G\)</span> je polenostavna, če in samo če ima
@@ -1739,6 +1714,15 @@ class="math inline">\(\tilde V = V\)</span> in upodobitev <span
 class="math inline">\(V\)</span> je polenostavna. <span
 class="math inline">\(\checkmark\kern-0.7em\checkmark\)</span> ◻</p>
 </div>
+<div class="zgled">
+<p><strong>Zgled 2.4</strong>. Eničnozgornjetrikotna upodobitev grupe
+<span class="math inline">\(\mathbb{R}\)</span> na <span
+class="math inline">\(\mathbb{R}^2\)</span> <em>ni</em> nerazcepna,
+hkrati pa njena podupodobitev <span
+class="math inline">\(\mathbb{R}\cdot e_1 \cong \mathbf{1}\)</span>
+<em>ni</em> komplementirana. Ta upodobitev zatorej <em>ni</em>
+polenostavna.</p>
+</div>
 <p>Z uporabo zadnjega kriterija lahko dokažemo, da je polenostavnost
 zaprta za osnovne konstrukcije z upodobitvami.</p>
 <div class="posledica">
@@ -1760,15 +1744,42 @@ podupodobitev, ki je komplementirana podupodobitvi <span
 class="math inline">\(U\)</span> v <span
 class="math inline">\(W\)</span>. ◻</p>
 </div>
-<h3 id="dekompozicijska-vrsta">Dekompozicijska vrsta</h3>
-<p>- Theorem 2.7.1 (Jordan-Holder-Noether theorem)</p>
+<h3 id="kompozicijska-vrsta">Kompozicijska vrsta</h3>
+<p>Vsake upodobitve ne moremo razstaviti kot direktno vsoto nerazcepnih
+upodobitev. Kljub temu pa je res, da lahko vsako upodobitev (na končno
+razsežnem prostoru) razstavimo na nerazcepne upodobitve, le da moramo
+pri tem poseči po nekoliko zahtevnejšem načinu razstavljanja.</p>
+<p>Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo na
+prostoru <span class="math inline">\(V\)</span>. Predpostavimo, da
+obstaja zaporedje <span class="math inline">\(G\)</span>-invariantnih
+podprostorov <span class="math display">\[0 = V_0 \leq V_1 \leq V_2 \leq
+\cdots \leq V_n = V,\]</span> pri čemer so vsi zaporedni kvocienti <span
+class="math inline">\(V_i/V_{i-1}\)</span> za <span
+class="math inline">\(1 \leq i \leq n\)</span>, gledani kot upodobitve
+grupe <span class="math inline">\(G\)</span>, <em>nerazcepni</em>. Tako
+zaporedje imenujemo <span><strong><em>kompozicijska
+vrsta</em></strong></span> upodobitve na prostoru <span
+class="math inline">\(V\)</span>. Kvocienti <span
+class="math inline">\(V_i/V_{i-1}\)</span> se pri tem imenujejo
+<span><strong><em>kompozicijski faktorji</em></strong></span>.</p>
+<div class="izrek">
+<p><strong>Izrek 2.1</strong> (Jordan-Hölder-Noether). Vsaka upodobitev
+na končno razsežnem prostoru ima kompozicijsko vrsto. Vsaki dve
+kompozicijski vrsti imata enako število členov in do permutacije
+natančno enake kompozicijske faktorje.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> ◻</p>
+</div>
 <h3 id="spletične-med-nerazcepnimi-upodobitvami">Spletične med
 nerazcepnimi upodobitvami</h3>
 <p>- (Schurs Lemma, version II). - Corollary 2.7.17 (Abelian groups and
 central character).</p>
 <h3 id="večkratnosti-in-izotipične-komponente">Večkratnosti in
 izotipične komponente</h3>
-<p>- multiplicities and isotypical components</p>
+<p>- multiplicities and isotypical components - primer nerazcepnih
+upodobitev <span class="math inline">\(SU_2\)</span>, mogoče tudi
+Clebsch-Gordan koeficienti?</p>
 <h2 id="matrični-koeficienti">Matrični koeficienti</h2>
 <h3 id="neodvisnost-koeficientov">Neodvisnost koeficientov</h3>
 <p>- Theorem 2.7.24 (Burnsides irreducibility criterion) - matrix
@@ -1789,7 +1800,7 @@ projektorji na izo komponente - malo harmonične analize - abelove grupe,
 Dirichletov izrek - tabela karakterjev - <span
 class="math inline">\(\mathop{\mathrm{GL}}_2(\mathcal{F}_p)\)</span> -
 simetrične grupe (!!!) - burnside two primes theorem (najbrž izpustimo,
-brez veze)</p>
+brez veze) - mixing in simetrične grupe?</p>
 <h1 id="upodobitve-kompaktnih-grup">Upodobitve kompaktnih grup</h1>
 <p>- topološke grupe (zvezne upodobitve) - unitarne na hilbertovih
 prostorih (končne smo že, <span class="math inline">\(SU_2\)</span>) -
@@ -1798,7 +1809,8 @@ upodobitve <span class="math inline">\(S^1\)</span> (vse, Fourier) -
 razsežne), Peter-Weyl na tem primeru (samo izrek, da smo s tem pokrili
 vse unitarne upodobitve), na tej točki zaključimo MSc predmet in cela
 teorija kompaktnih grup se lahko naredi za PhD predmet kot nadgradnja
-tega do sem.</p>
+tega do sem. - lastnost <span class="math inline">\((T)\)</span>, dodaj
+referenco na TGP in expanderje</p>
 <section class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
@@ -1899,32 +1911,30 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn19" role="doc-endnote"><p>V nadaljevanju bomo spoznali
 presenetljivo uporabnost tega navidez naključnega dejstva.<a
 href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn20" role="doc-endnote"><p>Če komplementirana podupodobitev
+<li id="fn20" role="doc-endnote"><p>Rečemo tudi, da je <span
+class="math inline">\(V\)</span>
+<span><strong><em>enostavna</em></strong></span> upodobitev. Te
+terminologija izhaja iz alternativne obravnave upodobitev kot
+<em>modulov nad grupnimi algebrami</em>.<a href="#fnref20"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn21" role="doc-endnote"><p>Če komplementarna podupodobitev
 obstaja, potem je enolično določena (do izomorfizma upodobitev), saj je
 izomorfna kvocientu <span
-class="math inline">\(\rho/\tilde\rho\)</span>.<a href="#fnref20"
+class="math inline">\(\rho/\tilde\rho\)</span>.<a href="#fnref21"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn21" role="doc-endnote"><p>Velja na primer <span
-class="math inline">\((1 \ 3 \ 2) \cdot (e_1 - e_2) = e_3 - e_1 = -(e_1
-- e_2) - (e_2 - e_3)\)</span>.<a href="#fnref21" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
 <li id="fn22" role="doc-endnote"><p>Linearna preslikava <span
 class="math inline">\(A \colon X \to X\)</span> je projekcija na
 podprostor <span class="math inline">\(Y \leq X\)</span>, če je <span
 class="math inline">\(A^2 = A\)</span> in <span
 class="math inline">\(\mathop{\mathrm{im}}A = Y\)</span>.<a
 href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn23" role="doc-endnote"><p>Rečemo tudi, da je <span
-class="math inline">\(V\)</span>
-<span><strong><em>enostavna</em></strong></span> upodobitev.<a
-href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn24" role="doc-endnote"><p>Po analogiji s faktorizacijo števil
+<li id="fn23" role="doc-endnote"><p>Po analogiji s faktorizacijo števil
 si nerazcepne upodobitve lahko predstavljamo kot praštevila.<a
-href="#fnref24" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn25" role="doc-endnote"><p>V nadaljevanju bomo pokazali, da so
-upodobitve končnih grup nad poljem kompleksnih števil vselej
-poenostavne.<a href="#fnref25" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
+href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn24" role="doc-endnote"><p>V nadaljevanju bomo pokazali, da so
+upodobitve <em>končnih</em> grup nad poljem karakteristike <span
+class="math inline">\(0\)</span> vselej poenostavne.<a href="#fnref24"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
         </div>

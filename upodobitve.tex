@@ -219,7 +219,7 @@
   {\color{rdeca}\LARGE\bf}{\thesection}{1em}{}
 \renewcommand{\thesubsection}{}
 \titleformat{\subsection}
-  {\color{rdeca}\Large\bf}{}{1em}{}
+  {\Large\bf}{}{1em}{}
 
 
 \usetikzlibrary{calc,math}
@@ -236,19 +236,18 @@
 
 \maketitle
 
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 \tableofcontents
 
 \newpage
 
 \subsection*{Kratek opis predmeta}
 
-\todo{Vključi kakšno pesmico?}
-
 \subsection*{Literatura}
 
 \begin{itemize}
 \item {\literatura E. Kowalski, {\em An Introduction to the Representation Theory of Groups}, American Mathematical Society, 2014.} 
+\item {\literatura W. Fulton, J. Harris, {\em Representation Theory: A First Course}, Springer GTM 129, 2004.}
 \end{itemize}
 
 \chapter{Temelji teorije upodobitev}
@@ -871,15 +870,24 @@ V tem poglavju bomo pribili upodobitev dane grupe in se ji tesno približali, ko
 
 \section{Razstavljanje upodobitve}
 
-\subsection{Nerazcepnost in polenostavnost}
+Pogosto nas zanima, ali lahko dano upodobitev $\rho$ grupe $G$ na prostoru $V$ zapišemo kot direktno vsoto nekih podupodobitev in na ta način upodobitev $\rho$ \emph{razstavimo} na preprostejše upodobitve, podobno kot razstavimo števila na manjše faktorje. 
 
-Pogosto nas bo zanimalo, če lahko dano upodobitev $\rho$ grupe $G$ na prostoru $V$ zapišemo kot direktno vsoto nekih podupodobitev in na ta način upodobitev $\rho$ \emph{razstavimo} na preprostejše upodobitve, podobno kot razstavimo števila na praštevila. To vprašanje se naravno pojavi, kadar ima dana upodobitev $\rho$ neko podupodobitev $\tilde\rho$ na podprostoru $W \leq V$. Seveda lahko vselej najdemo vektorski prostor $U \leq V$, za katerega je $V = U \oplus W$, vsekakor pa ni jasno, če lahko najdemo tak podprostor $U$, ki je celo $G$-invarianten. V tem primeru rečemo, da smo našli {\definicija komplementirano podupodobitev} podupodobitve $\tilde\rho$.\footnote{Če komplementirana podupodobitev obstaja, potem je enolično določena (do izomorfizma upodobitev), saj je izomorfna kvocientu $\rho/\tilde\rho$.}
+\subsection{Nerazcepnost}
 
-\begin{zgled} \leavevmode
-\begin{itemize}
-    \item Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Delovanje grupe $S_3$ ohranja vektor $e_1 + e_2 + e_3$, zato ima ta upodobitev trivialno enorazsežno podupodobitev, dano s podprostorom $\langle e_1 + e_2 + e_3 \rangle$. Eden od komplementov tega podprostora je $\langle e_1 - e_2, e_2 - e_3 \rangle$, ki je hkrati $S_3$-invariaten podprostor.\footnote{Velja na primer $(1 \ 3 \ 2) \cdot (e_1 - e_2) = e_3 - e_1 = -(e_1 - e_2) - (e_2 - e_3)$.} Permutacijska upodobitev $S_3$ je zato direktna vsota enorazsežne in dvorazsežne podupodobitve.
+Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V \neq 0$. Kadar \emph{ne} obstaja noben $G$-invarianten podprostor prostora $V$ (razen prostorov $0$ in $V$), tedaj rečemo, da je upodobitev $\rho$ {\definicija nerazcepna}.\footnote{Rečemo tudi, da je $V$ {\definicija enostavna} upodobitev. Te terminologija izhaja iz alternativne obravnave upodobitev kot \emph{modulov nad grupnimi algebrami}.} V tem primeru upodobitve seveda ne moremo razstaviti na enostavnejše v smislu direktne vsote.
 
-    \item Naj grupa $\RR$ deluje na realnem prostoru $\RR^2$ s homomorfizmom
+\begin{zgled}
+Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Premislili smo že, da je ta upodobitev direktna vsota enorazsežne podupodobitve $\11$ in dvorazsežne podupodobitve $\rho$, pri čemer slednja nima nobene enorazsežne podupodobitve. S tem je permutacijska upodobitev razstavljena kot direktna vsota dveh nerazcepnih upodobitev.
+\end{zgled}
+
+\todo{$SU_2$ zgled nerazcepnih upodobitev? Ne, za to moramo najprej razumeti izotipične komponente. Mogoče lahko tukaj samo povemo za te upodobitve in napovemo, da bomo to dokazali s pomočjo razvite teorije.}
+
+\subsection{Komplementarna podupodobitev}
+
+Predpostavimo zdaj, da ima dana upodobitev $\rho$ grupe $G$ na prostoru $V$ neko podupodobitev $\tilde\rho$ na podprostoru $W \leq V$. Seveda lahko vselej najdemo vektorski prostor $U \leq V$, za katerega je $V = U \oplus W$, vsekakor pa ni jasno, če lahko najdemo tak podprostor $U$, ki je celo $G$-invarianten. Kadar je temu tako, rečemo, da smo našli {\definicija komplementarno podupodobitev} podupodobitve $\tilde\rho$.\footnote{Če komplementarna podupodobitev obstaja, potem je enolično določena (do izomorfizma upodobitev), saj je izomorfna kvocientu $\rho/\tilde\rho$.} Ni vsaka podupodobitev komplementirana.
+
+\begin{zgled}
+Naj grupa $\RR$ deluje na realnem prostoru $\RR^2$ s homomorfizmom
     \[
         \rho \colon \RR \to {\textstyle \GL_2(\RR)}, \quad
         x \mapsto 
@@ -888,16 +896,13 @@ Pogosto nas bo zanimalo, če lahko dano upodobitev $\rho$ grupe $G$ na prostoru 
     \end{pmatrix}.
 \]
 Oglejmo si enorazsežne podupodobitve. Premislili smo že, da te ustrezajo skupnim lastnim vektorjem vseh preslikav $\rho(x)$ za $x \in \RR$. Pri $x = 1$ imamo linearno preslikavo $\rho(1)$ z enim samim lastnim vektorjem, in sicer $e_1 \in \RR^2$. Hkrati je $e_1$ lastni vektor vseh preslikav $\rho(x)$ za $x \in \RR$. Torej ima $\rho$ \emph{eno samo} enorazsežno podupodobitev, in sicer je to $\RR \cdot e_1 \leq \RR^2$. Ta vektorski podprostor ima mnogo komplementov v $\RR^2$, noben od teh pa ni hkrati enorazsežna podupodobitev $\rho$.
-\end{itemize}
 \end{zgled}
 
-Nima torej vsaka podupodobitev komplementirane podupodobitve. Ni težko preveriti, da obstoj takih komplementov vselej izhaja iz projekcijskih\footnote{Linearna preslikava $A \colon X \to X$ je projekcija na podprostor $Y \leq X$, če je $A^2 = A$ in $\image A = Y$.} spletičen.
+Ni težko preveriti, da obstoj komplementirane podupodobitve vselej izhaja iz projekcijskih\footnote{Linearna preslikava $A \colon X \to X$ je projekcija na podprostor $Y \leq X$, če je $A^2 = A$ in $\image A = Y$.} spletičen.
 
 \begin{trditev}
 Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\tilde \rho$ njena podupodobitev na prostoru $W \leq V$. Tedaj ima $\tilde \rho$ komplementirano podupodobitev, če in samo če obstaja spletična $\Phi \in \hom_G(V,V)$, ki je projekcija na $W$. V tem primeru je $\ker \Phi$ komplementirana upodobitev.
 \end{trditev}
-
-Vrnimo se k začetni ideji o \emph{razstavljanju} dane upodobitve. Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V \neq 0$. Kadar \emph{ne} obstaja noben $G$-invarianten podprostor prostora $V$ (razen prostorov $0$ in $V$), tedaj rečemo, da je upodobitev $\rho$ {\definicija nerazcepna}.\footnote{Rečemo tudi, da je $V$ {\definicija enostavna} upodobitev.} V tem primeru upodobitve seveda ne moremo razstaviti na enostavnejše.
 
 Preverimo, da so nerazcepne upodobitve dane grupe med sabo \emph{neprimerljive}, tudi če so enake razsežnosti. Zatorej si jih lahko predstavljamo kot neodvisne osnovne kose kategorije upodobitev dane grupe.\footnote{Po analogiji s faktorizacijo števil si nerazcepne upodobitve lahko predstavljamo kot praštevila.} 
 
@@ -908,23 +913,15 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$. Tedaj j
 Naj bo $\Phi \in \hom_G(\pi, \rho)$. Tedaj je $\ker \Phi$ podupodobitev $\pi$, zato je po nerazcepnosti bodisi $\ker \Phi = 0$ bodisi $\Phi = 0$. Prvi primer ustreza možnosti, da je $\Phi$ injektivna, v drugem primeru pa je $\Phi$ ničelna. Soroden razmislek dokaže trditev o spletičnah v $\hom_G(\rho, \pi)$. 
 \end{dokaz}
 
-Kadar lahko dano upodobitev $\rho$ zapišemo kot direktno vsoto nerazcepnih upodobitev $\bigoplus_{i \in I} \rho_i$, tedaj rečemo, da je $\rho$ {\definicija polenostavna} upodobitev. Če so pri tem vse podupodobitve $\rho_i$ izomorfne med sabo, tedaj rečemo, da je $\rho$ {\definicija izotipična} upodobitev.
+\subsection{Polenostavnost}
+
+Vrnimo se k začetni ideji o \emph{razstavljanju} dane upodobitve. Kadar lahko dano upodobitev $\rho$ zapišemo kot direktno vsoto \emph{nerazcepnih} upodobitev $\bigoplus_{i \in I} \rho_i$, tedaj rečemo, da je $\rho$ {\definicija polenostavna} upodobitev. Če so pri tem vse podupodobitve $\rho_i$ izomorfne med sabo, upodobitev $\rho$ imenujemo {\definicija izotipična} upodobitev.
 
 \begin{zgled}
-Opazumo permutacijsko upodobitev grupe $S_3$ na prostoru $\RR^3$. Ta upodobitev je direktna vsote trivialne enorazsežne upodobitve na prostoru $\langle e_1 + e_2 + e_3 \rangle$ in dvorazsežne upodobitve na prostoru $\langle e_1 - e_2, e_2 - e_3 \rangle$. Če označimo $u_1 = e_1 - e_2$ in $u_2 = e_2 - e_3$, lahko slednjo upodobitev opišemo s homomorfizmom
-\[
-    \rho \colon S_3 \to \GL(\langle u_1, u_2 \rangle), \quad
-    (1 \ 2) \mapsto \begin{pmatrix} 
-        -1 & 1 \\ 0 & 1 
-    \end{pmatrix}, \quad
-    (1 \ 2 \ 3) \mapsto \begin{pmatrix} 
-        0 & -1 \\ 1 & -1
-    \end{pmatrix}.
-\]
-Lastna vektorja $\rho((1 \ 2))$ sta $u_1$ in $u_1 + 2 u_2$. Noben od teh dveh vektorjev ni hkrati lastni vektor $\rho((1 \ 2 \ 3))$. Torej je upodobitev $\rho$ stopnje $2$, hkrati pa nima enorazsežnih podupodobitev, torej je nerazcepna. Permutacijsko upodobitev $S_3$ na $\RR^3$ smo s tem zapisali kot direktno vsoto nerazcepnih upodobitev, torej je ta upodobitev polenostavna. Ni pa izotipična, saj sta nerazcepna sumanda med sabo seveda neizomorfna.
+Permutacijska upodobitev grupe $S_3$ na $\RR^3$ je polenostavna.
 \end{zgled}
 
-V predzadnjem zgledu smo videli, da \emph{niso} vse upodobitve polenostavne in da torej ne moremo razstaviti vseh upodobitev na nerazcepne.\footnote{V nadaljevanju bomo pokazali, da so upodobitve končnih grup nad poljem kompleksnih števil vselej poenostavne.} Polenostavnost dane upodobitve je tesno povezana z obstojem komplementiranih podupodobitev.
+Vseh upodobitev žal ne moremo razstaviti na direktno vsoto nerazcepnih.\footnote{V nadaljevanju bomo pokazali, da so upodobitve \emph{končnih} grup nad poljem karakteristike $0$ vselej poenostavne.} Polenostavnost dane upodobitve je namreč tesno povezana z obstojem komplementiranih podupodobitev.
 
 \begin{trditev}
 Upodobitev grupe $G$ je polenostavna, če in samo če ima vsaka njena podupodobitev komplementirano podupodobitev.
@@ -941,6 +938,10 @@ Naj bo $\rho$ upodobitev, v kateri je vsaka podupodobitev komplementirana. Tedaj
 Naj bo $W$ vsota vseh $G$-invariantnih podprostorov v $V$, ki so nerazcepne upodobitve, se pravi $W = \sum_{i \in I} V_i$, a ta vsota ni nujno direktna. Po pomožni trditvi je $W \neq 0$. Po predpostavki je $W$ komplementirana z $G$-invariantnim podprostorom $U$. Po pomožni trditvi ima tudi $U$ nerazcepno podupodobitev, zato je ta vsebovana v $W$, kar implicira $W = V$. Dokažimo zdaj še, da je $W$ \emph{direktna} vsota podprostorov $V_i$. V ta namen naj bo $J$ maksimalna podmnožica indeksne množice $I$, za katero je $\sum_{j \in J} V_j$ direktna vsota. Taka podmnožica obstaj po Zornovi lemi. Označimo $\tilde V = \bigoplus_{j \in J} V_j$. Če velja $\tilde V \neq V$, potem mora za nek $i \in I \backslash J$ po nerazcepnosti veljati $V_i \cap \tilde V$, kar pa je v nasprotju z maksimalnostjo množice $J$. Tako je res $\tilde V = V$ in upodobitev $V$ je polenostavna. \kljuka
 \end{dokaz}
 
+\begin{zgled}
+    Eničnozgornjetrikotna upodobitev grupe $\RR$ na $\RR^2$ \emph{ni} nerazcepna, hkrati pa njena podupodobitev $\RR \cdot e_1 \cong \11$ \emph{ni} komplementirana. Ta upodobitev zatorej \emph{ni} polenostavna.
+\end{zgled}
+
 Z uporabo zadnjega kriterija lahko dokažemo, da je polenostavnost zaprta za osnovne konstrukcije z upodobitvami.
 
 \begin{posledica}
@@ -950,18 +951,33 @@ Podupodobitve, kvocienti in direktne vsote polenostavnih upodobitev dane grupe s
 Preverimo le zaprtost za podupodobitve. Naj bo $\rho$ polenostavna upodobitev grupe $G$ na prostoru $V$ in naj bo $W \leq V$ podupodobitev. Naj bo $U \leq W$ poljubna podupodobitev upodobitve na $W$. Po polenostavnosti obstaja komplementirana podupodobitev $\tilde U \leq V$ upodobitve $U \leq V$. Tedaj je $\tilde U \cap W$ podupodobitev, ki je komplementirana podupodobitvi $U$ v $W$.
 \end{dokaz}
 
-\subsection{Dekompozicijska vrsta}
+\subsection{Kompozicijska vrsta}
 
-- Theorem 2.7.1 (Jordan-Holder-Noether theorem)
+Vsake upodobitve ne moremo razstaviti kot direktno vsoto nerazcepnih upodobitev. Kljub temu pa je res, da lahko vsako upodobitev (na končno razsežnem prostoru) razstavimo na nerazcepne upodobitve, le da moramo pri tem poseči po nekoliko zahtevnejšem načinu razstavljanja.
+
+Naj bo $G$ grupa z upodobitvijo na prostoru $V$. Predpostavimo, da obstaja zaporedje $G$-invariantnih podprostorov
+\[
+    0 = V_0 \leq V_1 \leq V_2 \leq \cdots \leq V_n = V,
+\]
+pri čemer so vsi zaporedni kvocienti $V_i/V_{i-1}$ za $1 \leq i \leq n$, gledani kot upodobitve grupe $G$, \emph{nerazcepni}. Tako zaporedje imenujemo {\definicija kompozicijska vrsta} upodobitve na prostoru $V$. Kvocienti $V_i/V_{i-1}$ se pri tem imenujejo {\definicija kompozicijski faktorji}.
+
+\begin{izrek}[Jordan-Hölder-Noether]
+Vsaka upodobitev na končno razsežnem prostoru ima kompozicijsko vrsto. Vsaki dve kompozicijski vrsti imata enako število členov in do permutacije natančno enake kompozicijske faktorje.
+\end{izrek}
+\begin{dokaz}
+\todo{}
+\end{dokaz}
 
 \subsection{Spletične med nerazcepnimi upodobitvami}
 
+\todo{Tole lahko delno združimo s Schurovo lemo, delno pa dodamo v polenostavnost.}
 -  (Schurs Lemma, version II). 
 - Corollary 2.7.17 (Abelian groups and central character).
 
 \subsection{Večkratnosti in izotipične komponente}
 
 - multiplicities and isotypical components
+- primer nerazcepnih upodobitev $SU_2$, mogoče tudi Clebsch-Gordan koeficienti?
 
 \section{Matrični koeficienti}
 
@@ -1000,6 +1016,7 @@ Preverimo le zaprtost za podupodobitve. Naj bo $\rho$ polenostavna upodobitev gr
 - $\GL_2(\FF_p)$
 - simetrične grupe (!!!)
 - burnside two primes theorem (najbrž izpustimo, brez veze)
+- mixing in simetrične grupe?
 
 
 \chapter{Upodobitve kompaktnih grup}
@@ -1010,6 +1027,7 @@ Preverimo le zaprtost za podupodobitve. Naj bo $\rho$ polenostavna upodobitev gr
 - unitarne na hilbertovih prostorih (končne smo že, $SU_2$)
 - upodobitve $S^1$ (vse, Fourier)
 - $SU_2(\CC)$ (samo končno razsežne), Peter-Weyl na tem primeru (samo izrek, da smo s tem pokrili vse unitarne upodobitve), na tej točki zaključimo MSc predmet in cela teorija kompaktnih grup se lahko naredi za PhD predmet kot nadgradnja tega do sem.
+- lastnost $(T)$, dodaj referenco na TGP in expanderje
 
 
 \end{document}
