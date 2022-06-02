@@ -1,23 +1,7 @@
-html {
-	/*background-color: white;*/
-	/*color: black;*/
-	/*line-height: 1.5;*/
-    /*font-family: serif;*/
-    /*font-size: 20px;*/
-}
 body {
-/*      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-*/      padding-top: 0px;
-/*      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-*/}
-h1, h2, strong em {
+  padding-top: 0px;
+}
+  h1, h2, strong em {
   color: #9E291A;
 }
 h1 {
@@ -60,8 +44,7 @@ a {
   /*font-style: italic;*/
   /*font-size: 90%;*/
 }
-.trditev p {
+.izrek p, .trditev p, .lema p, .posledica p {
   border:1px solid black;
   padding: 1em;
-}
 }
