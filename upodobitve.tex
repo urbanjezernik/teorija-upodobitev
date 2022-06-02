@@ -287,7 +287,7 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
         \item Naj bo $G$ grupa in $V$ vektorski prostor nad poljem $F$. {\definicija Trivialna upodobitev} grupe $G$ je homomorfizem
         \[
             \rho \colon G \to \GL(V), \quad
-            g \mapsto \id_V.
+            g \mapsto \textstyle \id_V.
         \]
         Kadar je vektorski prostor $V$ razsežnosti $1$, trivialno upodobitev in vektorski prostor sam označimo kot $\11$, v primerih višje razsežnosti pa ju označimo kot $\11^{\dim V}$.
         \item Naj bo $V$ vektorski prostor in naj bo $G$ poljubna podgrupa grupe $\GL(V)$. Tedaj je naravna vložitev $G \to \GL(V)$ upodobitev grupe $G$ na prostoru $V$. 
@@ -666,7 +666,7 @@ Ta postopek konstrukcije prostora $E \otimes V$ imenujemo {\definicija razširit
 \begin{zgled}
 Opazujmo grupo $S_3$ in njeno permutacijsko upodobitev na realnem prostoru $\RR[\{ 1, 2, 3 \}]$. Poznamo že njeno dvorazsežno upodobitev $\rho$ na podprostoru $\langle e_1 - e_2, e_2 - e_3 \rangle$, ki \emph{nima} enorazsežnih podupodobitev. Ta je definirana z matrikami, ki imajo zgolj celoštevilske koeficiente. Upodobitev $\rho$ je zato definirana nad \emph{kolobarjem} $\ZZ$. To upodobitev lahko zato \emph{projiciramo} s homomorfizmom kolobarjev $\ZZ \to \ZZ/p\ZZ$ za poljubno praštevilo $p$ do upodobitve
 \[
-    S_3 \to \GL_2(\ZZ/p\ZZ), \quad
+    S_3 \to {\textstyle \GL_2(\ZZ/p\ZZ)}, \quad
     (1 \ 2) \mapsto \begin{pmatrix} 
         -1 & 1 \\ 0 & 1 
     \end{pmatrix}, \quad
@@ -679,7 +679,7 @@ ki je definirana nad \emph{končnim} poljem $\ZZ/p\ZZ$. Pri $p = 3$ ima ta proji
 
 Kadar imamo opravka s konkretnim poljem $F$, lahko dano upodobitev modificiramo tudi z {\definicija avtomorfizmi polja}. Te si najlažje predstavljamo po izbiri baze vektorskega prostora. Če je $\sigma \in \Aut(F)$, dobimo iz dane upodobitve  $\rho \colon G \to \GL_n(F)$ modificirano upodobitev
 \[
-    \rho^\sigma \colon G \to \GL_n(F), \quad
+    \rho^\sigma \colon G \to {\textstyle \GL_n(F)}, \quad
     g \mapsto \rho(g)^\sigma,
 \]
 pri kateri vsak člen matrike $\rho(g)$ preslikamo z avtomorfizmom $\sigma$.
@@ -809,7 +809,7 @@ Kadar imamo na voljo tri grupe, povezane s homomorfizmoma $\phi_2 \colon H_2 \to
 
 S tranzitivnostjo indukcije lahko vsako indukcijo vzdolž homomorfizma $\phi \colon H \to G$ razdelimo na tri korake: najprej induciramo vzdolž kvocientne projekcije $H \to H/\ker \phi$, nato vzdolž izomorfizma $H/\ker \phi \to \image \phi$ in nazadnje vzdolž vložitve $\image \phi \to G$. Vsako od teh posameznih indukcij razumemo precej dobro in zato lahko to znanje uporabimo pri razumevanju indukcije vzdolž $\phi$. Na primer, iz povedanega in razmiselekov o preprostejših indukcijah, ki smo jih že naredili, sledi, da je razsežnost inducirane upodobitve $\rho$ grupe $H$ na prostoru $V$ enaka
 \[
-    \deg(\Ind^G_H(\rho)) = 
+    \textstyle \deg(\Ind^G_H(\rho)) = 
     |G:\image \phi| \cdot \dim(V^{\ker \phi}).
 \]
 
@@ -820,7 +820,7 @@ Indukcija in restrikcija vsekakor nista inverzna funktorja. Na primer, če je $H
 \begin{trditev}
     Naj bosta $G,H$ grupi s homomorfizmom $\phi \colon H \to G$. Za vsako upodobitev $\rho$ v $\Rep_G$ in upodobitev $\sigma$ v $\Rep_H$ velja
     \[
-        \hom_H(\Res^G_H(\rho), \sigma) \cong 
+        \textstyle \hom_H(\Res^G_H(\rho), \sigma) \cong 
         \hom_G(\rho, \Ind^G_H(\sigma)).
     \]
 \end{trditev}
@@ -856,9 +856,8 @@ od koder sledi
 \begin{domacanaloga}
     Naj bosta $G,H$ grupi s homomorfizmom $\phi \colon H \to G$. Za vsako upodobitev $\rho$ v $\Rep_G$ in upodobitev $\sigma$ v $\Rep_H$ velja
     \[
-        \Ind^G_H(\Res^G_H(\rho) \otimes \sigma) \cong
+        \textstyle \Ind^G_H(\Res^G_H(\rho) \otimes \sigma) \cong
         \rho \otimes \Ind^G_H(\sigma).
-        \vspace{-\baselineskip}
     \]
 \end{domacanaloga}
 
@@ -882,7 +881,7 @@ Pogosto nas bo zanimalo, če lahko dano upodobitev $\rho$ grupe $G$ na prostoru 
 
     \item Naj grupa $\RR$ deluje na realnem prostoru $\RR^2$ s homomorfizmom
     \[
-        \rho \colon \RR \to \GL_2(\RR), \quad
+        \rho \colon \RR \to {\textstyle \GL_2(\RR)}, \quad
         x \mapsto 
         \begin{pmatrix} 
         1 & x \\ 0 & 1 
