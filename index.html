@@ -46,7 +46,7 @@
 <strong> Urban Jezernik <br>
 Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-Zadnja posodobitev: 02. 06. 2022
+Zadnja posodobitev: 03. 06. 2022
 </div>
 
 <div class="kazalo">
@@ -1763,6 +1763,21 @@ vrsta</em></strong></span> upodobitve na prostoru <span
 class="math inline">\(V\)</span>. Kvocienti <span
 class="math inline">\(V_i/V_{i-1}\)</span> se pri tem imenujejo
 <span><strong><em>kompozicijski faktorji</em></strong></span>.</p>
+<div class="zgled">
+<p><strong>Zgled 2.5</strong>. Naj bo <span
+class="math inline">\(\rho\)</span> eničnozgornjetrikotna upodobitev
+grupe <span class="math inline">\(\mathbb{R}\)</span> na <span
+class="math inline">\(V = \mathbb{R}^2\)</span>. Ta upodobitev ima
+podupodobitev <span class="math inline">\(V_1 = \mathbb{R}\cdot
+e_1\)</span>. Kvocient <span class="math inline">\(V/V_1\)</span> je
+enorazsežen in na njem grupa <span
+class="math inline">\(\mathbb{R}\)</span> deluje trivialno. Dobimo torej
+kompozicijsko vrsto <span class="math display">\[0 = V_0 \leq V_1 \leq
+V,\]</span> katere kompozicijska faktorja sta kot upodobitvi izomorfna
+<span class="math inline">\(\mathbf{1}\)</span>. Sama upodobitev grupe
+<span class="math inline">\(\mathbb{R}\)</span> na <span
+class="math inline">\(V\)</span> pa seveda ni trivialna.</p>
+</div>
 <div class="izrek">
 <p><strong>Izrek 2.1</strong> (Jordan-Hölder-Noether). Vsaka upodobitev
 na končno razsežnem prostoru ima kompozicijsko vrsto. Vsaki dve
@@ -1770,7 +1785,137 @@ kompozicijski vrsti imata enako število členov in do permutacije
 natančno enake kompozicijske faktorje.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> ◻</p>
+<p><em>Proof.</em> Naj grupa deluje linearno na končno razsežnem
+prostoru <span class="math inline">\(V\)</span>. Da kompozicijska vrsta
+res obstaja, ni težko preveriti. Najprej izberemo neko nerazcepno
+podupodobitev <span class="math inline">\(V_1\)</span>. Če je <span
+class="math inline">\(V_1 &lt; V\)</span>, potem izberemo podupodobitev
+<span class="math inline">\(V_2\)</span>, ki vsebuje <span
+class="math inline">\(V_1\)</span> in je med vsemi takimi minimalne
+razsežnosti. S tem je <span class="math inline">\(V_2/V_1\)</span>
+nerazcepna. Induktivno nadaljujemo z grajenjem kompozicijske vrste. Ker
+je <span class="math inline">\(V\)</span> končno razsežen, se ta
+postopek ustavi.</p>
+<p>Premislimo še, kako lahko vsaki dve kompozicijski vrsti povežemo med
+sabo. Opazujmo dve taki vrsti, <span class="math display">\[0 = V_0 \leq
+V_1 \leq \cdots \leq V_n = V
+    \quad \text{in} \quad
+    0 = W_0 \leq W_1 \leq \cdots \leq W_m = V.\]</span> S pomočjo druge
+vrste bomo skušali <em>pofiniti</em> prvo vrsto in obratno.<a
+href="#fn25" class="footnote-ref" id="fnref25"
+role="doc-noteref"><sup>25</sup></a> Za <span class="math inline">\(0
+\leq i &lt; n\)</span> in <span class="math inline">\(0 \leq j \leq
+m\)</span> naj bo <span class="math display">\[V_{i,j} = V_i + (V_{i+1}
+\cap W_j),\]</span> S tem dobimo verigo <span class="math display">\[V_i
+= V_{i,0} \leq V_{i,1} \leq \cdots V_{i,m} = V_{i+1}\]</span> med <span
+class="math inline">\(V_i\)</span> in <span
+class="math inline">\(V_{i+1}\)</span>. Ker je kvocient <span
+class="math inline">\(V_{i+1}/V_i\)</span> nerazcepen in je vsak <span
+class="math inline">\(V_{i,j}\)</span> podupodobitev, mora za natanko en
+indeks <span class="math inline">\(j\)</span> veljati <span
+class="math inline">\(V_i = V_{i,j}\)</span> in <span
+class="math inline">\(V_{i+1} = V_{i,j+1}\)</span>. Kompozicijski faktor
+<span class="math inline">\(V_{i+1}/V_i\)</span> je tedaj izomorfen
+kvocientu <span class="math display">\[\frac{V_i + (V_{i+1} \cap
+W_{j+1})}{V_i + (V_{i+1} \cap W_j)}.\]</span> Zgodbo zdaj ponovimo še za
+drugo verigo. Pofinimo jo s pomočjo prve, definiramo <span
+class="math inline">\(W_{j,i} = W_j + (W_{j+1} \cap V_i)\)</span>.
+Kvocient <span class="math inline">\(W_{j+1}/W_j\)</span> je enak <span
+class="math display">\[\frac{W_j + (W_{j+1} \cap V_{i+1})}{W_j +
+(W_{j+1} \cap V_i)}.\]</span></p>
+<div class="domacanaloga">
+<p><strong>Domača naloga 2.2</strong>. Prepričaj se, da velja <span
+class="math display">\[\frac{V_i + (V_{i+1} \cap W_{j+1})}{V_i +
+(V_{i+1} \cap W_j)}
+    \cong
+    \frac{W_j + (W_{j+1} \cap V_{i+1})}{W_j + (W_{j+1} \cap
+V_i)}.\]</span></p>
+</div>
+<p>S tem smo za vsak <span class="math inline">\(0 \leq i &lt;
+n\)</span> našli natanko določen <span class="math inline">\(j\)</span>,
+da je <span class="math inline">\(V_{i+1}/V_i \cong
+W_{j+1}/W_j\)</span>. Premislimo še, da je to prirejanje injektivno.
+Indeks <span class="math inline">\(j\)</span> je enolično določen s
+pogojem, da je <span class="math inline">\(V_{i,j+1}/V_{i,j} \neq
+0\)</span>, kar je po gornjem izomorfizmu enakovredno pogoju <span
+class="math inline">\(W_{j,i+1}/W_{j,i} \neq 0\)</span>. Ker je <span
+class="math inline">\(W_{j+1}/W_j\)</span> nerazcepen, je slednji pogoj
+lahko izpolnjen le za <em>en</em> indeks <span
+class="math inline">\(i\)</span>. ◻</p>
+</div>
+<p>Po izreku je za dano upodobitev <span
+class="math inline">\(\rho\)</span> in nerazcepno upodobitev <span
+class="math inline">\(\pi\)</span> število kompozicijskih faktorjev, ki
+so izomorfni <span class="math inline">\(\pi\)</span>, neodvisno od
+kompozicijske vrste. Temu številu pravimo
+<span><strong><em>večkratnost</em></strong></span> <span
+class="math inline">\(\pi\)</span> v <span
+class="math inline">\(\rho\)</span> in ga označimo z <span
+class="math inline">\(\mathop{\mathrm{mult}}_{\pi}(\rho)\)</span>. Kadar
+je dana upodobitev <em>polenostavna</em>, je do izomorfizma natančno
+enolično določena s svojimi večkratnostmi.</p>
+<div class="zgled">
+<p><strong>Zgled 2.6</strong>. </p>
+<ul>
+<li><p>Za eničnozgornjetrikotno upodobitev <span
+class="math inline">\(\rho\)</span> grupe <span
+class="math inline">\(\mathbb{R}\)</span> na <span
+class="math inline">\(\mathbb{R}^2\)</span> je <span
+class="math inline">\(\mathop{\mathrm{mult}}_{\mathbf{1}}(\rho) =
+2\)</span>. Ker ta upodobitev ni trivialna, ne more biti polenostavna,
+saj bi sicer bila izomorfna <span
+class="math inline">\(\mathbf{1}^2\)</span>.</p></li>
+<li><p>Opazujmo permutacijsko upodobitev <span
+class="math inline">\(\pi\)</span> grupe <span
+class="math inline">\(S_3\)</span> na <span
+class="math inline">\(\mathbb{R}^3\)</span>. To upodobitev smo že
+razstavili na direktno vsoto <span class="math inline">\(\mathbf{1}
+\oplus \rho\)</span>, kjer je <span class="math inline">\(\rho\)</span>
+dvorazsežna nerazcepna upodobitev na podprostoru <span
+class="math inline">\(\langle u_1 = e_1 - e_2, u_2 = e_2 - e_3
+\rangle\)</span>. Premislili smo, kako lahko to upodobitev projiciramo
+do upodobitve <span class="math inline">\(\tilde \rho\)</span> grupe
+<span class="math inline">\(S_3\)</span> na prostoru <span
+class="math inline">\((\mathbb{Z}/3\mathbb{Z})^2\)</span> nad končnim
+poljem <span class="math inline">\(\mathbb{Z}/3\mathbb{Z}\)</span>.</p>
+<p>Upodobitev <span class="math inline">\(\tilde \rho\)</span>
+<em>ni</em> nerazcepna, saj ima invarianten podprostor <span
+class="math inline">\(\langle u_1 - u_2 = e_1 + e_2 + e_3
+\rangle\)</span>. Na tem podprostoru grupa <span
+class="math inline">\(S_3\)</span> deluje trivialno. V kvocientu <span
+class="math inline">\((\mathbb{Z}/3\mathbb{Z})^2/\langle u_1 - u_2
+\rangle \cong \mathbb{Z}/3\mathbb{Z}\)</span> generatorja <span
+class="math inline">\((1\ 2)\)</span> in <span class="math inline">\((1
+\ 2 \ 3)\)</span> grupe <span class="math inline">\(S_3\)</span>
+preslikata odsek vektorja <span class="math inline">\(u_1\)</span> v
+odsek <span class="math inline">\(-u_1\)</span> oziroma <span
+class="math inline">\(u_1\)</span>. V tem prepoznamo predznačno
+upodobitev, interpretirano kot homomorfizem <span
+class="math inline">\(\mathop{\mathrm{sgn}}\colon S_3 \to
+\mathop{\mathrm{GL}}_1(\mathbb{Z}/3\mathbb{Z}) \cong \{ 1, -1
+\}\)</span>. Nad poljem <span
+class="math inline">\(\mathbb{Z}/3\mathbb{Z}\)</span> za permutacijsko
+upodobitev <span class="math inline">\(\pi\)</span> tako velja <span
+class="math inline">\(\mathop{\mathrm{mult}}_{\mathbf{1}}(\pi) =
+2\)</span> in <span
+class="math inline">\(\mathop{\mathrm{mult}}_{\mathop{\mathrm{sgn}}}(\pi)
+= 1\)</span>.</p>
+<p>Premislimo, da upodobitev <span class="math inline">\(\pi\)</span>
+nad <span class="math inline">\(\mathbb{Z}/3\mathbb{Z}\)</span>
+<em>ni</em> polenostavna. Če bi namreč bila, bi po zgornjem morala biti
+izmorfna direktni vsoti <span class="math inline">\(\mathbf{1} \oplus
+\mathbf{1} \oplus \mathop{\mathrm{sgn}}\)</span>. Prostor <span
+class="math inline">\((\mathbb{Z}/3\mathbb{Z})^3\)</span> bi zatorej
+imel bazo, v kateri bi matriki za <span class="math inline">\(\pi((1 \
+2))\)</span> in <span class="math inline">\(\pi((1 \ 2 \ 3))\)</span>
+bili hkrati diagonalni. Ti dve matriki bi zato komutirali, kar pomeni,
+da bi morali komutirati tudi linearni preslikavi <span
+class="math inline">\(\pi((1 \ 2))\)</span> in <span
+class="math inline">\(\pi((1 \ 2 \ 3))\)</span>. Temu pa ni tako, saj na
+primer velja <span class="math inline">\(\pi((1 \ 2 \ 3)(1 \ 2)) e_1 =
+e_3\)</span> in <span class="math inline">\(\pi((1 \ 2)(1 \ 2 \ 3)) e_1
+= e_1\)</span>.</p></li>
+</ul>
 </div>
 <h3 id="spletične-med-nerazcepnimi-upodobitvami">Spletične med
 nerazcepnimi upodobitvami</h3>
@@ -1936,6 +2081,11 @@ href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 upodobitve <em>končnih</em> grup nad poljem karakteristike <span
 class="math inline">\(0\)</span> vselej poenostavne.<a href="#fnref24"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn25" role="doc-endnote"><p>Ta argument je soroden premisleku o
+obstoju Hirschove dolžine v policikličnih grupah iz <a
+href="https://ucilnica2122.fmf.uni-lj.si/course/view.php?id=309">(Teorija
+grup)</a>.<a href="#fnref25" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
         </div>
