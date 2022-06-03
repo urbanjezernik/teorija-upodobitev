@@ -309,7 +309,6 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
             g \mapsto \left( f \mapsto \left( x \mapsto f(xg) \right) \right),
         \]
         kjer je $f \in \hom(G,F), \ x \in G$. To delovanje izhaja iz (desnega) delovanja grupe $G$ na sebi in ga zato imenujemo {\definicija (desna) regularna upodobitev} grupe $G$ nad $F$.
-        \item \todo{$SU_2$}
     \end{itemize}
 \end{zgled}
 
@@ -881,8 +880,6 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V \neq 0$. Kadar \emph{ne} o
 Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Premislili smo že, da je ta upodobitev direktna vsota enorazsežne podupodobitve $\11$ in dvorazsežne podupodobitve $\rho$, pri čemer slednja nima nobene enorazsežne podupodobitve. S tem je permutacijska upodobitev razstavljena kot direktna vsota dveh nerazcepnih upodobitev.
 \end{zgled}
 
-\todo{$SU_2$ zgled nerazcepnih upodobitev? Ne, za to moramo najprej razumeti izotipične komponente. Mogoče lahko tukaj samo povemo za te upodobitve in napovemo, da bomo to dokazali s pomočjo razvite teorije.}
-
 \subsection{Komplementarna podupodobitev}
 
 Predpostavimo zdaj, da ima dana upodobitev $\rho$ grupe $G$ na prostoru $V$ neko podupodobitev $\tilde\rho$ na podprostoru $W \leq V$. Seveda lahko vselej najdemo vektorski prostor $U \leq V$, za katerega je $V = U \oplus W$, vsekakor pa ni jasno, če lahko najdemo tak podprostor $U$, ki je celo $G$-invarianten. Kadar je temu tako, rečemo, da smo našli {\definicija komplementarno podupodobitev} podupodobitve $\tilde\rho$.\footnote{Če komplementarna podupodobitev obstaja, potem je enolično določena (do izomorfizma upodobitev), saj je izomorfna kvocientu $\rho/\tilde\rho$.} Ni vsaka podupodobitev komplementirana.
@@ -913,6 +910,10 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$. Tedaj j
 \begin{dokaz}
 Naj bo $\Phi \in \hom_G(\pi, \rho)$. Tedaj je $\ker \Phi$ podupodobitev $\pi$, zato je po nerazcepnosti bodisi $\ker \Phi = 0$ bodisi $\Phi = 0$. Prvi primer ustreza možnosti, da je $\Phi$ injektivna, v drugem primeru pa je $\Phi$ ničelna. Soroden razmislek dokaže trditev o spletičnah v $\hom_G(\rho, \pi)$. 
 \end{dokaz}
+
+\todo[inline]{(Schurs Lemma, version II).}
+
+\todo[inline]{Zgled: Corollary 2.7.17 (Abelian groups and central character).}
 
 \subsection{Polenostavnost}
 
@@ -1025,40 +1026,55 @@ Po izreku je za dano upodobitev $\rho$ in nerazcepno upodobitev $\pi$ število k
 \end{itemize}
 \end{zgled}
 
-\subsection{Spletične med nerazcepnimi upodobitvami}
 
-\todo{Tole lahko delno združimo s Schurovo lemo, delno pa dodamo v polenostavnost.}
--  (Schurs Lemma, version II). 
-- Corollary 2.7.17 (Abelian groups and central character).
+\subsection{Izotipične komponente}
 
-\subsection{Večkratnosti in izotipične komponente}
+\todo[inline]{[Proposition 2.7.9]}
 
-- multiplicities and isotypical components
-- primer nerazcepnih upodobitev $SU_2$, mogoče tudi Clebsch-Gordan koeficienti?
+\subsection{Razširjeni zgled $\SL_2(\CC)$}
+
+\todo[inline]{
+- naštejemo upodobitve $SL_2$
+- dokažemo, da so nerazcepne (potrebujemo izotipične komponente)
+- dokažemo Clebsch-Gordan
+- pokažemo povezavo z $sl_2$ (lahko eksplicitno opišemo vse nerazcepne, pokažemo kako so bijektivno (!) povezane z racionalnimi (algebraičnimi) upodobitvami $SL_2$)
+- zvezne upodobitve $SL_2$: te plus konjugiranke (samo rezultat)
+- abstraktne upodobitve ???
+}
 
 \section{Matrični koeficienti}
 
+\todo[inline]{
+- povezava med zgornje bločno trikotno matriko in bločno (polenostavnost) [Example 2.7.8.]
+}
+
 \subsection{Neodvisnost koeficientov}
 
+\todo[inline]{
 - Theorem 2.7.24 (Burnsides irreducibility criterion)
 - matrix coefficients, linear independence, 
+}
 
 \subsection{Povezava z regularno upodobitvijo}
 
+\todo[inline]{
 -Corollary 2.7.30 (Matrix coefficients as subrepresentations of the regular representation).
 - Proposition 2.7.34 (Isotypic component of the regular representation). 
+}
 
 \subsection{Karakterji}
 
+\todo[inline]{
 - characters of finite dimensional representations
-
 - (?, najbrž ne) some clifford theory
+}
 
 \todo[inline]{Theorem 2.6.7 Baumslag-Solitar grupa je končno prezentirana, ni pa linearna (ampak za to bi potrebovali končno prezentirane grupe ...) Ta dokaz bi lahko dodali v del o RASTi, kjer že imamo vse potrebno razvito! Dodaj referenco o obstoju grupe, ki nima upodobitve, tukaj. Po tem lahko še omenimo rezultat Lubotzky o random grupah.}
 
 
 \chapter{Upodobitve končnih grup}
 
+\todo[inline]{
 - Maschke (projektor)
 - dekompozicija regularne upodobitve
 - nerazcepne upodobitve končnih abelovih grup
@@ -1074,17 +1090,33 @@ Po izreku je za dano upodobitev $\rho$ in nerazcepno upodobitev $\pi$ število k
 - simetrične grupe (!!!)
 - burnside two primes theorem (najbrž izpustimo, brez veze)
 - mixing in simetrične grupe?
-
+}
 
 \chapter{Upodobitve kompaktnih grup}
 
-\todo{$SU_2$ bi lahko pokazali že prej, kot zgled upodobitev neskončne grupe. kako težko je dokazati nerazcepnost?}
-
+\todo[inline]{
 - topološke grupe (zvezne upodobitve)
 - unitarne na hilbertovih prostorih (končne smo že, $SU_2$)
-- upodobitve $S^1$ (vse, Fourier)
-- $SU_2(\CC)$ (samo končno razsežne), Peter-Weyl na tem primeru (samo izrek, da smo s tem pokrili vse unitarne upodobitve), na tej točki zaključimo MSc predmet in cela teorija kompaktnih grup se lahko naredi za PhD predmet kot nadgradnja tega do sem.
-- lastnost $(T)$, dodaj referenco na TGP in expanderje
+}
 
+\subsection{Razširjeni zgled $S^1$}
+
+\todo[inline]{
+    fourier
+}
+
+\subsection{Razširjeni zgled $SU_2(\CC)$}
+
+\todo[inline]{
+- lahko bi geometrijsko iz $sl_2$, ampak pokažemo alternativen pristop, ker je kompaktna
+- naštejemo upodobitve, so nerazcepne: isti dokaz kot za $SL_2$ bolj ali manj deluje tudi tukaj
+- Clebsch-Gordan je trivialen iz karakterjev
+- dokažemo, da so to vse zvezne nerazcepne: rabimo karakterje
+- Peter-Weyl na tem primeru (samo izrek, da smo s tem pokrili vse unitarne upodobitve)
+}
+
+\todo[inline]{
+- ? lastnost $(T)$, dodaj referenco na TGP in expanderje
+}
 
 \end{document}
