@@ -70,6 +70,7 @@
 \DeclareMathOperator\Res{Res}
 \DeclareMathOperator\Ind{Ind}
 \DeclareMathOperator\Rep{Rep}
+\DeclareMathOperator\mult{mult}
 
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\GL{GL}
@@ -961,12 +962,68 @@ Naj bo $G$ grupa z upodobitvijo na prostoru $V$. Predpostavimo, da obstaja zapor
 \]
 pri čemer so vsi zaporedni kvocienti $V_i/V_{i-1}$ za $1 \leq i \leq n$, gledani kot upodobitve grupe $G$, \emph{nerazcepni}. Tako zaporedje imenujemo {\definicija kompozicijska vrsta} upodobitve na prostoru $V$. Kvocienti $V_i/V_{i-1}$ se pri tem imenujejo {\definicija kompozicijski faktorji}.
 
+\begin{zgled}
+Naj bo $\rho$ eničnozgornjetrikotna upodobitev grupe $\RR$ na $V = \RR^2$. Ta upodobitev ima podupodobitev $V_1 = \RR \cdot e_1$. Kvocient $V/V_1$ je enorazsežen in na njem grupa $\RR$ deluje trivialno. Dobimo torej kompozicijsko vrsto
+\[
+    0 = V_0 \leq V_1 \leq V,
+\]
+katere kompozicijska faktorja sta kot upodobitvi izomorfna $\11$. Sama upodobitev grupe $\RR$ na $V$ pa seveda ni trivialna.
+\end{zgled}
+
 \begin{izrek}[Jordan-Hölder-Noether]
 Vsaka upodobitev na končno razsežnem prostoru ima kompozicijsko vrsto. Vsaki dve kompozicijski vrsti imata enako število členov in do permutacije natančno enake kompozicijske faktorje.
 \end{izrek}
 \begin{dokaz}
-\todo{}
+Naj grupa deluje linearno na končno razsežnem prostoru $V$. Da kompozicijska vrsta res obstaja, ni težko preveriti. Najprej izberemo neko nerazcepno podupodobitev $V_1$. Če je $V_1 < V$, potem izberemo podupodobitev $V_2$, ki vsebuje $V_1$ in je med vsemi takimi minimalne razsežnosti. S tem je $V_2/V_1$ nerazcepna. Induktivno nadaljujemo z grajenjem kompozicijske vrste. Ker je $V$ končno razsežen, se ta postopek ustavi.
+
+Premislimo še, kako lahko vsaki dve kompozicijski vrsti povežemo med sabo. Opazujmo dve taki vrsti,
+\[
+    0 = V_0 \leq V_1 \leq \cdots \leq V_n = V 
+    \quad \text{in} \quad
+    0 = W_0 \leq W_1 \leq \cdots \leq W_m = V.
+\]
+S pomočjo druge vrste bomo skušali \emph{pofiniti} prvo vrsto in obratno.\footnote{Ta argument je soroden premisleku o obstoju Hirschove dolžine v policikličnih grupah iz \href{https://ucilnica2122.fmf.uni-lj.si/course/view.php?id=309}{(Teorija grup)}.} Za $0 \leq i < n$ in $0 \leq j \leq m$ naj bo
+\[
+    V_{i,j} = V_i + (V_{i+1} \cap W_j),
+\]
+S tem dobimo verigo
+\[
+    V_i = V_{i,0} \leq V_{i,1} \leq \cdots V_{i,m} = V_{i+1}
+\]
+med $V_i$ in $V_{i+1}$. Ker je kvocient $V_{i+1}/V_i$ nerazcepen in je vsak $V_{i,j}$ podupodobitev, mora za natanko en indeks $j$ veljati $V_i = V_{i,j}$ in $V_{i+1} = V_{i,j+1}$. Kompozicijski faktor $V_{i+1}/V_i$ je tedaj izomorfen kvocientu
+\[
+    \frac{V_i + (V_{i+1} \cap W_{j+1})}{V_i + (V_{i+1} \cap W_j)}.
+\]
+Zgodbo zdaj ponovimo še za drugo verigo. Pofinimo jo s pomočjo prve, definiramo $W_{j,i} = W_j + (W_{j+1} \cap V_i)$. Kvocient $W_{j+1}/W_j$ je enak
+\[
+    \frac{W_j + (W_{j+1} \cap V_{i+1})}{W_j + (W_{j+1} \cap V_i)}.
+\]
+
+\begin{domacanaloga}
+Prepričaj se, da velja
+\[
+    \frac{V_i + (V_{i+1} \cap W_{j+1})}{V_i + (V_{i+1} \cap W_j)}
+    \cong
+    \frac{W_j + (W_{j+1} \cap V_{i+1})}{W_j + (W_{j+1} \cap V_i)}.
+\]
+\end{domacanaloga}
+
+S tem smo za vsak $0 \leq i < n$ našli natanko določen $j$, da je $V_{i+1}/V_i \cong W_{j+1}/W_j$. Premislimo še, da je to prirejanje injektivno. Indeks $j$ je enolično določen s pogojem, da je $V_{i,j+1}/V_{i,j} \neq 0$, kar je po gornjem izomorfizmu enakovredno pogoju $W_{j,i+1}/W_{j,i} \neq 0$. Ker je $W_{j+1}/W_j$ nerazcepen, je slednji pogoj lahko izpolnjen le za \emph{en} indeks $i$.
 \end{dokaz}
+
+Po izreku je za dano upodobitev $\rho$ in nerazcepno upodobitev $\pi$ število kompozicijskih faktorjev, ki so izomorfni $\pi$, neodvisno od kompozicijske vrste. Temu številu pravimo {\definicija večkratnost} $\pi$ v $\rho$ in ga označimo z $\mult_{\pi}(\rho)$. Kadar je dana upodobitev \emph{polenostavna}, je do izomorfizma natančno enolično določena s svojimi večkratnostmi.
+
+\begin{zgled} \leavevmode
+\begin{itemize}
+    \item Za eničnozgornjetrikotno upodobitev $\rho$ grupe $\RR$ na $\RR^2$ je $\mult_{\11}(\rho) = 2$. Ker ta upodobitev ni trivialna, ne more biti polenostavna, saj bi sicer bila izomorfna $\11^2$.
+
+    \item Opazujmo permutacijsko upodobitev $\pi$ grupe $S_3$ na $\RR^3$. To upodobitev smo že razstavili na direktno vsoto $\11 \oplus \rho$, kjer je $\rho$ dvorazsežna nerazcepna upodobitev na podprostoru $\langle u_1 = e_1 - e_2, u_2 = e_2 - e_3 \rangle$. Premislili smo, kako lahko to upodobitev projiciramo do upodobitve $\tilde \rho$ grupe $S_3$ na prostoru $(\ZZ/3\ZZ)^2$ nad končnim poljem $\ZZ/3\ZZ$. 
+
+    Upodobitev $\tilde \rho$ \emph{ni} nerazcepna, saj ima invarianten podprostor $\langle u_1 - u_2 = e_1 + e_2 + e_3 \rangle$. Na tem podprostoru grupa $S_3$ deluje trivialno. V kvocientu $(\ZZ/3\ZZ)^2/\langle u_1 - u_2 \rangle \cong \ZZ/3\ZZ$ generatorja $(1\ 2)$ in $(1 \ 2 \ 3)$ grupe $S_3$ preslikata odsek vektorja $u_1$ v odsek $-u_1$ oziroma $u_1$. V tem prepoznamo predznačno upodobitev, interpretirano kot homomorfizem $\sgn \colon S_3 \to \GL_1(\ZZ/3\ZZ) \cong \{ 1, -1 \}$. Nad poljem $\ZZ/3\ZZ$ za permutacijsko upodobitev $\pi$ tako velja $\mult_{\11}(\pi) = 2$ in $\mult_{\sgn}(\pi) = 1$.
+
+    Premislimo, da upodobitev $\pi$ nad $\ZZ/3\ZZ$ \emph{ni} polenostavna. Če bi namreč bila, bi po zgornjem morala biti izmorfna direktni vsoti $\11 \oplus \11 \oplus \sgn$. Prostor $(\ZZ/3\ZZ)^3$ bi zatorej imel bazo, v kateri bi matriki za $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$ bili hkrati diagonalni. Ti dve matriki bi zato komutirali, kar pomeni, da bi morali komutirati tudi linearni preslikavi $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$. Temu pa ni tako, saj na primer velja $\pi((1 \ 2 \ 3)(1 \ 2)) e_1 = e_3$ in $\pi((1 \ 2)(1 \ 2 \ 3)) e_1 = e_1$.
+\end{itemize}
+\end{zgled}
 
 \subsection{Spletične med nerazcepnimi upodobitvami}
 
