@@ -46,7 +46,7 @@
 <strong> Urban Jezernik <br>
 Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-Zadnja posodobitev: 03. 06. 2022
+Zadnja posodobitev: 04. 06. 2022
 </div>
 
 <div class="kazalo">
@@ -2097,5 +2097,14 @@ role="doc-backlink">↩︎</a></p></li>
             tables[i].className += "table table-bordered table-hover";
         }
     </script> -->
+    <script>
+      var proofClasses = document.getElementsByClassName("proof");
+
+      for (var i = 0; i < proofClasses.length; i++) {
+        var html = proofClasses[i].innerHTML;
+        html = html.replace(/Proof./g,"Dokaz.");        
+        proofClasses[i].innerHTML = html;
+        }
+    </script>
   </body>
 </html>
