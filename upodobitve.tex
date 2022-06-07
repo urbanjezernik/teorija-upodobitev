@@ -880,6 +880,30 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V \neq 0$. Kadar \emph{ne} o
 Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Premislili smo že, da je ta upodobitev direktna vsota enorazsežne podupodobitve $\11$ in dvorazsežne podupodobitve $\rho$, pri čemer slednja nima nobene enorazsežne podupodobitve. S tem je permutacijska upodobitev razstavljena kot direktna vsota dveh nerazcepnih upodobitev.
 \end{zgled}
 
+Preverimo, da so nerazcepne upodobitve dane grupe med sabo \emph{neprimerljive}, tudi če so enake razsežnosti. Zatorej si jih lahko predstavljamo kot neodvisne osnovne kose kategorije upodobitev dane grupe.\footnote{Po analogiji s faktorizacijo števil si nerazcepne upodobitve lahko predstavljamo kot praštevila.} 
+
+\begin{lema}[Schurova lema]
+Naj bo $G$ grupa z upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$. Tedaj je vsaka spletična v $\hom_G(\pi, \rho)$ bodisi injektivna bodisi ničelna in vsaka spletična v $\hom_G(\rho, \pi)$ je bodisi surjektivna bodisi ničelna. V posebnem je vsaka spletična med dvema nerazcepnima upodobitvama grupe $G$ bodisi izomorfizem bodisi ničelna.
+\end{lema}
+\begin{dokaz}
+Naj bo $\Phi \in \hom_G(\pi, \rho)$. Tedaj je $\ker \Phi$ podupodobitev $\pi$, zato je po nerazcepnosti bodisi $\ker \Phi = 0$ bodisi $\Phi = 0$. Prvi primer ustreza možnosti, da je $\Phi$ injektivna, v drugem primeru pa je $\Phi$ ničelna. Soroden razmislek dokaže trditev o spletičnah v $\hom_G(\rho, \pi)$. 
+\end{dokaz}
+
+Nad algebraično zaprtimi polji lahko to neprimerljivost raztegnemo do ene same upodobitve: osnovni kosi nimajo netrivialnih simetrij.
+
+\begin{posledica}
+Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad \emph{algebraično zaprtim poljem}. Tedaj množica $\hom_G(\pi, \pi)$ sestoji le iz skalarnih večkratnikov identitete.
+\end{posledica}
+\begin{dokaz}
+Naj bo $0 \neq \Phi \in \hom_G(\pi, \pi)$. Ker je polje algebraično zaprto, ima linearna preslikava $\Phi$ vsaj kakšno lastno vrednost, recimo $\lambda$. Preslikava $\Phi - \lambda \cdot \id \in \hom_G(\pi, \pi)$ zato ni injektivna, s čimer mora biti po Schurovi lemi ničelna, se pravi $\Phi = \lambda \cdot \id$.
+\end{dokaz}
+
+\begin{zgled}
+Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad poljem kompleksnih števil. Spletične $\hom_G(\pi, \pi) = \hom(\pi, \pi)^G$ so endomorfizmi vektorskega prostora, ki so $G$-invariatni, se pravi komutirajo z delovanjem grupe $G$. Zglede takih endomorfizmov lahko dobimo iz delovanj centralnih elementov grupe $G$; za vsak $z \in Z(G)$ je $\pi(z) \in \hom_G(\pi, \pi)$. Po Schurovi lemi je zato $\pi(z) = \omega(z) \cdot \id$ za nek skalar $\omega(z)$. Ker je $\pi$ homomorfizem, je $\omega \colon Z(G) \to \CC^*$ enorazsežna upodobitev centra grupe $G$. Tej upodobitvi rečemo {\definicija centralni karakter} upodobitve $\pi$.
+
+Še posebej zanimiv je primer, ko je $G$ \emph{abelova} grupa. Takrat za vsako nerazcepno upodobitev $\pi$ končne razsežnosti nad poljem $\CC$ velja $\pi(g) = \omega(g) \cdot \id$ za \emph{vsak} $g \in G$.  Vsak enorazsežen podprostor je zato avtomatično podupodobitev. Ker je $\pi$ nerazcepna, od tod sklepamo $\deg(\pi) = 1$ in s tem $\pi = \omega$. Upodobitev $\pi$ je tako \emph{enorazsežna}.
+\end{zgled}
+
 \subsection{Komplementarna podupodobitev}
 
 Predpostavimo zdaj, da ima dana upodobitev $\rho$ grupe $G$ na prostoru $V$ neko podupodobitev $\tilde\rho$ na podprostoru $W \leq V$. Seveda lahko vselej najdemo vektorski prostor $U \leq V$, za katerega je $V = U \oplus W$, vsekakor pa ni jasno, če lahko najdemo tak podprostor $U$, ki je celo $G$-invarianten. Kadar je temu tako, rečemo, da smo našli {\definicija komplementarno podupodobitev} podupodobitve $\tilde\rho$.\footnote{Če komplementarna podupodobitev obstaja, potem je enolično določena (do izomorfizma upodobitev), saj je izomorfna kvocientu $\rho/\tilde\rho$.} Ni vsaka podupodobitev komplementirana.
@@ -902,18 +926,6 @@ Ni težko preveriti, da obstoj komplementirane podupodobitve vselej izhaja iz pr
 Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\tilde \rho$ njena podupodobitev na prostoru $W \leq V$. Tedaj ima $\tilde \rho$ komplementirano podupodobitev, če in samo če obstaja spletična $\Phi \in \hom_G(V,V)$, ki je projekcija na $W$. V tem primeru je $\ker \Phi$ komplementirana upodobitev.
 \end{trditev}
 
-Preverimo, da so nerazcepne upodobitve dane grupe med sabo \emph{neprimerljive}, tudi če so enake razsežnosti. Zatorej si jih lahko predstavljamo kot neodvisne osnovne kose kategorije upodobitev dane grupe.\footnote{Po analogiji s faktorizacijo števil si nerazcepne upodobitve lahko predstavljamo kot praštevila.} 
-
-\begin{lema}[Schurova lema]
-Naj bo $G$ grupa z upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$. Tedaj je vsaka spletična v $\hom_G(\pi, \rho)$ bodisi injektivna bodisi ničelna in vsaka spletična v $\hom_G(\rho, \pi)$ je bodisi surjektivna bodisi ničelna. V posebnem je vsaka spletična med dvema nerazcepnima upodobitvama grupe $G$ bodisi izomorfizem bodisi ničelna.
-\end{lema}
-\begin{dokaz}
-Naj bo $\Phi \in \hom_G(\pi, \rho)$. Tedaj je $\ker \Phi$ podupodobitev $\pi$, zato je po nerazcepnosti bodisi $\ker \Phi = 0$ bodisi $\Phi = 0$. Prvi primer ustreza možnosti, da je $\Phi$ injektivna, v drugem primeru pa je $\Phi$ ničelna. Soroden razmislek dokaže trditev o spletičnah v $\hom_G(\rho, \pi)$. 
-\end{dokaz}
-
-\todo[inline]{(Schurs Lemma, version II).}
-
-\todo[inline]{Zgled: Corollary 2.7.17 (Abelian groups and central character).}
 
 \subsection{Polenostavnost}
 
@@ -1034,12 +1046,15 @@ Po izreku je za dano upodobitev $\rho$ in nerazcepno upodobitev $\pi$ število k
 \subsection{Razširjeni zgled $\SL_2(\CC)$}
 
 \todo[inline]{
+- obravnavamo kot Liejevo grupo
+- pokažemo povezavo z $sl_2$ (lahko eksplicitno opišemo vse nerazcepne, pokažemo kako so bijektivno (!) povezane z gladkimi upodobitvami $SL_2$, glej Fulton-Harris)
 - naštejemo upodobitve $SL_2$
 - dokažemo, da so nerazcepne (potrebujemo izotipične komponente)
-- dokažemo Clebsch-Gordan
-- pokažemo povezavo z $sl_2$ (lahko eksplicitno opišemo vse nerazcepne, pokažemo kako so bijektivno (!) povezane z racionalnimi (algebraičnimi) upodobitvami $SL_2$)
+- diferencial teh upodobitev nam da upodobitve $sl_2$
+- dokažemo, da so to vse upodobitve $sl_2$ (Fulton-Harris)
 - zvezne upodobitve $SL_2$: te plus konjugiranke (samo rezultat)
-- abstraktne upodobitve ???
+- abstraktne upodobitve: divji avtomorfizmi $\CC$
+- dokažemo Clebsch-Gordan (najbrž izpustimo ...)
 }
 
 \section{Matrični koeficienti}
