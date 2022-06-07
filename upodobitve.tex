@@ -892,7 +892,7 @@ Naj bo $\Phi \in \hom_G(\pi, \rho)$. Tedaj je $\ker \Phi$ podupodobitev $\pi$, z
 Nad algebraično zaprtimi polji lahko to neprimerljivost raztegnemo do ene same upodobitve: osnovni kosi nimajo netrivialnih simetrij.
 
 \begin{posledica}
-Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad \emph{algebraično zaprtim poljem}. Tedaj množica $\hom_G(\pi, \pi)$ sestoji le iz skalarnih večkratnikov identitete.
+Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad \emph{algebraično zaprtim poljem}. Tedaj je $\dim \hom_G(\pi, \pi) = 1$. Povedano še drugače: množica $\hom_G(\pi, \pi)$ sestoji le iz skalarnih večkratnikov identitete.
 \end{posledica}
 \begin{dokaz}
 Naj bo $0 \neq \Phi \in \hom_G(\pi, \pi)$. Ker je polje algebraično zaprto, ima linearna preslikava $\Phi$ vsaj kakšno lastno vrednost, recimo $\lambda$. Preslikava $\Phi - \lambda \cdot \id \in \hom_G(\pi, \pi)$ zato ni injektivna, s čimer mora biti po Schurovi lemi ničelna, se pravi $\Phi = \lambda \cdot \id$.
@@ -903,6 +903,10 @@ Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad poljem
 
 Še posebej zanimiv je primer, ko je $G$ \emph{abelova} grupa. Takrat za vsako nerazcepno upodobitev $\pi$ končne razsežnosti nad poljem $\CC$ velja $\pi(g) = \omega(g) \cdot \id$ za \emph{vsak} $g \in G$.  Vsak enorazsežen podprostor je zato avtomatično podupodobitev. Ker je $\pi$ nerazcepna, od tod sklepamo $\deg(\pi) = 1$ in s tem $\pi = \omega$. Upodobitev $\pi$ je tako \emph{enorazsežna}.
 \end{zgled}
+
+\begin{domacanaloga}
+Podaj konkreten primer abelove grupe in njene nerazcepne upodobitve razsežnosti $>1$ nad poljem $\QQ$.
+\end{domacanaloga}
 
 \subsection{Komplementarna podupodobitev}
 
@@ -925,7 +929,6 @@ Ni težko preveriti, da obstoj komplementirane podupodobitve vselej izhaja iz pr
 \begin{trditev}
 Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\tilde \rho$ njena podupodobitev na prostoru $W \leq V$. Tedaj ima $\tilde \rho$ komplementirano podupodobitev, če in samo če obstaja spletična $\Phi \in \hom_G(V,V)$, ki je projekcija na $W$. V tem primeru je $\ker \Phi$ komplementirana upodobitev.
 \end{trditev}
-
 
 \subsection{Polenostavnost}
 
@@ -964,6 +967,16 @@ Podupodobitve, kvocienti in direktne vsote polenostavnih upodobitev dane grupe s
 \begin{dokaz}
 Preverimo le zaprtost za podupodobitve. Naj bo $\rho$ polenostavna upodobitev grupe $G$ na prostoru $V$ in naj bo $W \leq V$ podupodobitev. Naj bo $U \leq W$ poljubna podupodobitev upodobitve na $W$. Po polenostavnosti obstaja komplementirana podupodobitev $\tilde U \leq V$ upodobitve $U \leq V$. Tedaj je $\tilde U \cap W$ podupodobitev, ki je komplementirana podupodobitvi $U$ v $W$.
 \end{dokaz}
+
+Nazadnje lahko s pomočjo projekcijskih spletičen naredimo še en korak naprej pri razumevanju simetrij upodobitev. Premislili smo že, da so osnovni kosi brez netrivialnih simetrij. V primeru polenostavnih upodobitev drži tudi obratno.
+
+\begin{posledica}
+Naj bo $G$ grupa s \emph{polenostavno} upodobitvijo $\rho$ končne razsežnosti nad \emph{algebraično zaprtim poljem}. Če je $\dim \hom_G(\rho, \rho) = 1$, potem je $\rho$ nerazcepna.
+\end{posledica}
+\begin{dokaz}
+Naj $\rho$ upodablja grupo $G$ na prostoru $V$. Naj bo $W \leq V$ nerazcepna podupodobitev in naj bo $U$ njena komplementirana podupodobitev. Naj bo $\Phi \colon V \to V$ pripadajoča projekcija na podprostor $W$ z jedrom $U$. Ker je $\Phi \in \hom_G(\rho, \rho)$, iz predpostavke sledi, da je $\Phi$ skalarni večkratnik identitete. To je mogoče le v primeru, ko je $V = W$ in $U = 0$, torej je $\rho$ nerazcepna. 
+\end{dokaz}
+
 
 \subsection{Kompozicijska vrsta}
 

@@ -1576,9 +1576,10 @@ ene same upodobitve: osnovni kosi nimajo netrivialnih simetrij.</p>
 <p><strong>Posledica 2.1</strong>. Naj bo <span
 class="math inline">\(G\)</span> grupa z nerazcepno upodobitvijo <span
 class="math inline">\(\pi\)</span> končne razsežnosti nad
-<em>algebraično zaprtim poljem</em>. Tedaj množica <span
-class="math inline">\(\hom_G(\pi, \pi)\)</span> sestoji le iz skalarnih
-večkratnikov identitete.</p>
+<em>algebraično zaprtim poljem</em>. Tedaj je <span
+class="math inline">\(\dim \hom_G(\pi, \pi) = 1\)</span>. Povedano še
+drugače: množica <span class="math inline">\(\hom_G(\pi, \pi)\)</span>
+sestoji le iz skalarnih večkratnikov identitete.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Naj bo <span class="math inline">\(0 \neq \Phi \in
@@ -1624,6 +1625,12 @@ class="math inline">\(\pi\)</span> nerazcepna, od tod sklepamo <span
 class="math inline">\(\deg(\pi) = 1\)</span> in s tem <span
 class="math inline">\(\pi = \omega\)</span>. Upodobitev <span
 class="math inline">\(\pi\)</span> je tako <em>enorazsežna</em>.</p>
+</div>
+<div class="domacanaloga">
+<p><strong>Domača naloga 2.1</strong>. Podaj konkreten primer abelove
+grupe in njene nerazcepne upodobitve razsežnosti <span
+class="math inline">\(&gt;1\)</span> nad poljem <span
+class="math inline">\(\mathbb{Q}\)</span>.</p>
 </div>
 <h3 id="komplementarna-podupodobitev">Komplementarna podupodobitev</h3>
 <p>Predpostavimo zdaj, da ima dana upodobitev <span
@@ -1743,7 +1750,7 @@ upodobitev, v kateri je vsaka podupodobitev komplementirana. Dokazati
 želimo, da je <span class="math inline">\(\rho\)</span> polenostavna.
 Uporabili bomo naslednjo pomožno trditev, ki je ni težko preveriti.</p>
 <div class="domacanaloga">
-<p><strong>Domača naloga 2.1</strong>. Naj bo <span
+<p><strong>Domača naloga 2.2</strong>. Naj bo <span
 class="math inline">\(\rho\)</span> upodobitev, v kateri je vsaka
 podupodobitev komplementirana. Tedaj ima <span
 class="math inline">\(\rho\)</span> nerazcepno podupodobitev.</p>
@@ -1805,6 +1812,35 @@ Tedaj je <span class="math inline">\(\tilde U \cap W\)</span>
 podupodobitev, ki je komplementirana podupodobitvi <span
 class="math inline">\(U\)</span> v <span
 class="math inline">\(W\)</span>. ◻</p>
+</div>
+<p>Nazadnje lahko s pomočjo projekcijskih spletičen naredimo še en korak
+naprej pri razumevanju simetrij upodobitev. Premislili smo že, da so
+osnovni kosi brez netrivialnih simetrij. V primeru polenostavnih
+upodobitev drži tudi obratno.</p>
+<div class="posledica">
+<p><strong>Posledica 2.3</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa s <em>polenostavno</em>
+upodobitvijo <span class="math inline">\(\rho\)</span> končne
+razsežnosti nad <em>algebraično zaprtim poljem</em>. Če je <span
+class="math inline">\(\dim \hom_G(\rho, \rho) = 1\)</span>, potem je
+<span class="math inline">\(\rho\)</span> nerazcepna.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Naj <span class="math inline">\(\rho\)</span>
+upodablja grupo <span class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(V\)</span>. Naj bo <span class="math inline">\(W
+\leq V\)</span> nerazcepna podupodobitev in naj bo <span
+class="math inline">\(U\)</span> njena komplementirana podupodobitev.
+Naj bo <span class="math inline">\(\Phi \colon V \to V\)</span>
+pripadajoča projekcija na podprostor <span
+class="math inline">\(W\)</span> z jedrom <span
+class="math inline">\(U\)</span>. Ker je <span
+class="math inline">\(\Phi \in \hom_G(\rho, \rho)\)</span>, iz
+predpostavke sledi, da je <span class="math inline">\(\Phi\)</span>
+skalarni večkratnik identitete. To je mogoče le v primeru, ko je <span
+class="math inline">\(V = W\)</span> in <span class="math inline">\(U =
+0\)</span>, torej je <span class="math inline">\(\rho\)</span>
+nerazcepna. ◻</p>
 </div>
 <h3 id="kompozicijska-vrsta">Kompozicijska vrsta</h3>
 <p>Vsake upodobitve ne moremo razstaviti kot direktno vsoto nerazcepnih
@@ -1885,7 +1921,7 @@ Kvocient <span class="math inline">\(W_{j+1}/W_j\)</span> je enak <span
 class="math display">\[\frac{W_j + (W_{j+1} \cap V_{i+1})}{W_j +
 (W_{j+1} \cap V_i)}.\]</span></p>
 <div class="domacanaloga">
-<p><strong>Domača naloga 2.2</strong>. Prepričaj se, da velja <span
+<p><strong>Domača naloga 2.3</strong>. Prepričaj se, da velja <span
 class="math display">\[\frac{V_i + (V_{i+1} \cap W_{j+1})}{V_i +
 (V_{i+1} \cap W_j)}
     \cong
