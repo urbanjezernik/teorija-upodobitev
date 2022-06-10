@@ -420,8 +420,23 @@ Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$ nad poljem $F$. Premislili bo
 
 Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL(V)$. Denimo, da obstaja vektorski podprostor $W \leq V$, ki je \emph{invarianten} za delovanje grupe $G$, se pravi $g \cdot w \in W$ za vsak $g \in G$, $w \in W$. V tem primeru upodobitev $\rho$ inducira upodobitev $\tilde \rho \colon G \to \GL(W)$ in vložitev vektorskih prostorov $\iota \colon W \to V$ je spletična. Upodobitvi $\tilde \rho$ rečemo {\definicija podupodobitev} upodobitve $\rho$.
 
-\begin{zgled} \todo{Tule bi morali podati kakšen bolj osnoven, konkreten primer.}
+\begin{zgled} \leavevmode
 \begin{itemize}
+    \item Naj bo $n$ naravno število. Opazujmo permutacijsko delovanje grupe $\ZZ/n\ZZ$ na množici $\Omega = \{ 1, 2, \dots, n \}$, ki porodi permutacijsko upodobitev na prostoru $\CC[\Omega]$ z baznimi vektorji $e_i$ za $i \in \Omega$. Naj bo še $e_0 = e_n$.
+    
+    Naj bo $\zeta \in \CC$ primitiven $n$-ti koren enote. Za $j \in \Omega$ naj bo
+    \[
+        f_j = \sum_{i \in \Omega} \zeta^{ij} e_i \in \CC[\Omega].
+    \]
+    Za vsak $\bar x \in \ZZ/n\ZZ$ velja
+    \[
+        \bar x \cdot f_j =
+        \sum_{i \in \Omega} \zeta^{ij} e_{\overline{x + i}} =
+        \sum_{i \in \Omega} \zeta^{(i - \bar x)j} e_{i} =
+        \zeta^{-\bar x j} \cdot f_j,
+    \]
+    zato je vsak podprostor $\CC \cdot f_j \leq \CC[\Omega]$ invarianten za delovanje grupe $\ZZ/n\ZZ$ in podupodobitev na tem podprostoru $\CC \cdot f_j$ je očividno izomorfna upodobitvi $\chi_{-j}$ grupe $\ZZ/n\ZZ$. Na ta način smo sestavili $n$ podupodobitev permutacijske in s tem regularne upodobitve ciklične grupe moči $n$.
+
     \item Naj bo $G$ grupa in $\rho$ njena upodobitev na prostoru $V$. Opazujmo množico vseh fiksnih vektorjev te upodobitve,
     \[
         V^G = \{ v \in V \mid \forall g \in G \colon \ g \cdot v = v \}.
@@ -501,10 +516,14 @@ Na vse do zdaj omenjene konstrukcije lahko gledamo na skupen način, in sicer s 
 Naj bo $\Phi$ spletična upodobitev grupe $G$. Tedaj prostori $\ker \Phi$, $\image \Phi$, $\mathrm{coker} \; \Phi$ podedujejo linearno delovanje grupe $G$.
 \end{trditev}
 
-\begin{zgled} \todo{Tule bi morali podati kakšen bolj osnoven, konkreten primer.}
+\begin{zgled}
 Naj bo $G$ grupa in $\rho$ njena upodobitev na prostoru $V$. Podprostor prostora $V$, na katerem grupa $G$ deluje trivialno, je vselej $G$-invarianten. Največji tak podprostor je ravno prostor vseh fiksnih vektorjev $V^G$. Videli smo že, da lahko ta prostor identifiricamo z množico spletičen $\hom_G(\11, V)$.
     
 Oglejmo si sedaj še dual zgodnje konstrukcije. Naj bo $V_1 = \langle \rho(g) \cdot v - v \mid v \in V, \ g \in G \rangle$. Prostor $V_1$ je $G$-invarianten podprostor prostora $V$, zato kvocient $V/V_1$ podeduje linearno delovanje grupe $G$. Po konstrukciji je to delovanje trivialno in prostor $V/V_1$ je največji kvocient prostora $V$, na katerem grupa $G$ deluje trivialno. Kvocient $V/V_1$ označimo z $V_G$ in mu pravimo {\definicija prostor koinvariant} upodobitve $\rho$.
+
+\begin{domacanaloga}
+    Izračunaj prostor koinvariant regularne upodobitve ciklične grupe $\ZZ/n\ZZ$.
+\end{domacanaloga}
 
 Prostor koinvariant je po konstrukciji dualen prostoru fiksnih vektorjev, zato lahko nanj prenesemo tudi interpretacijo s spletičnami. Opazujmo množico $\hom_G(V, \11)$. Spletične iz te množice so ravno homomorfizmi $\lambda \colon V \to F$ z lastnostjo $\lambda(\rho(g) \cdot v) = \lambda(v)$ za vsaka $v \in V, \ g \in G$, kar je ekvivalentno pogoju $\lambda(V_1) = 0$. Vsako tako spletično lahko zato interpretiramo kot linearno preslikavo iz $V/V_1 = V_G$ v $F$. Na ta način je vzpostavljena bijektivna korespondenca med množico spletičen $\hom_G(V,\11)$ in množico linearnih preslikav $\hom_F(V_G, F)$, slednja množica pa je ravno dual $V_G^*$ prostora koinvariant $V_G$.
 \end{zgled}
@@ -518,8 +537,15 @@ Naj ima grupa $G$ družino upodobitev $\{ \rho_i \}_{i \in I}$ na vektorskih pro
 \]
 Na ta način dobimo {\definicija direktno vsoto} upodobitev $\bigoplus_{i \in I} \rho_i$. Pri tem je vsaka od upodobitev $\rho_i$ podupodobitev te direktne vsote.
 
-\begin{zgled}
-    Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Delovanje grupe $S_3$ ohranja vektor $e_1 + e_2 + e_3$, zato ima ta upodobitev trivialno enorazsežno podupodobitev, dano s podprostorom $\langle e_1 + e_2 + e_3 \rangle$. Eden od komplementov tega podprostora je $\langle e_1 - e_2, e_2 - e_3 \rangle$, ki je hkrati $S_3$-invariaten podprostor.\footnote{Velja na primer $(1 \ 3 \ 2) \cdot (e_1 - e_2) = e_3 - e_1 = -(e_1 - e_2) - (e_2 - e_3)$.} Če označimo $u_1 = e_1 - e_2$ in $u_2 = e_2 - e_3$, lahko slednjo upodobitev opišemo s homomorfizmom
+\begin{zgled} \leavevmode
+\begin{itemize}
+    \item Opazujmo permutacijsko upodobitev $\pi$ grupe $\ZZ/n\ZZ$ na prostoru $\CC[\Omega]$, kjer je $\Omega = \{ 1, 2, \dots, n \}$. Premislili smo že, da ima ta upodobitev $n$ podupodobitev. Za vsak $j \in \Omega$ imamo upodobitev na podprostoru $\CC \cdot f_j$, ki je izomorfna upodobitvi $\chi_{-j}$. Ker je množica vektorjev $\{ f_j \mid j \in \Omega \}$ linearno neodvisna,\footnote{Prehodna matrika iz baze $e_i$ v bazo $f_j$ je ravno Vandermondova matrika.} lahko permutacijsko upodobitev torej zapišemo kot direktno vsoto $\pi = \bigoplus_{j \in \Omega} \chi_j$.
+    
+    \begin{domacanaloga}
+        Prepričaj se, da so upodobitve $\chi_j$ za $j \in \Omega$ grupe $\ZZ/n\ZZ$ med sabo paroma neizomorfne.
+    \end{domacanaloga}
+
+    \item Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Delovanje grupe $S_3$ ohranja vektor $e_1 + e_2 + e_3$, zato ima ta upodobitev trivialno enorazsežno podupodobitev, dano s podprostorom $\langle e_1 + e_2 + e_3 \rangle$. Eden od komplementov tega podprostora je $\langle e_1 - e_2, e_2 - e_3 \rangle$, ki je hkrati $S_3$-invariaten podprostor.\footnote{Velja na primer $(1 \ 3 \ 2) \cdot (e_1 - e_2) = e_3 - e_1 = -(e_1 - e_2) - (e_2 - e_3)$.} Če označimo $u_1 = e_1 - e_2$ in $u_2 = e_2 - e_3$, lahko slednjo upodobitev opišemo s homomorfizmom
     \[
         \rho \colon S_3 \to \GL(\langle u_1, u_2 \rangle), \quad
         (1 \ 2) \mapsto \begin{pmatrix} 
@@ -532,6 +558,7 @@ Na ta način dobimo {\definicija direktno vsoto} upodobitev $\bigoplus_{i \in I}
     Permutacijska upodobitev $S_3$ je zato direktna vsota enorazsežne podupodobitve $\11$ in dvorazsežne podupodobitve $\rho$. 
     
     Premislimo, da upodobitve $\rho$ \emph{ne} moremo zapisati kot direktne vsote svojih pravih podupodobitev. V ta namen opazujmo njene morebitne enorazsežne podupodobitve. Premislili smo že, da te ustrezajo skupnim lastnim vektorjem vseh preslikav $\rho(x)$ za $x \in S_3$. Lastna vektorja $\rho((1 \ 2))$ sta $u_1$ in $u_1 + 2 u_2$. Noben od teh dveh vektorjev ni hkrati lastni vektor $\rho((1 \ 2 \ 3))$. Torej je upodobitev $\rho$ stopnje $2$, hkrati pa nima enorazsežnih podupodobitev in je torej ne moremo nadalje razstaviti.
+\end{itemize}
 \end{zgled}
 
 Direktna vsota je najbolj preprost način, kako lahko iz danih upodobitev sestavimo novo upodobitev. V nadaljevanju bomo zato veliko časa posvetili obratnemu problemu: dano upodobitev bomo kot v zadnjem zgledu skušali razstaviti na direktno vsoto čim bolj enostavnih podupodobitev.
