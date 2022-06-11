@@ -71,6 +71,7 @@
 \DeclareMathOperator\Ind{Ind}
 \DeclareMathOperator\Rep{Rep}
 \DeclareMathOperator\mult{mult}
+\DeclareMathOperator\Izotip{Izotip}
 
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\GL{GL}
@@ -963,8 +964,11 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\tilde \rho$ n
 
 Vrnimo se k začetni ideji o \emph{razstavljanju} dane upodobitve. Kadar lahko dano upodobitev $\rho$ zapišemo kot direktno vsoto \emph{nerazcepnih} upodobitev $\bigoplus_{i \in I} \rho_i$, tedaj rečemo, da je $\rho$ {\definicija polenostavna} upodobitev. Če so pri tem vse podupodobitve $\rho_i$ izomorfne med sabo, upodobitev $\rho$ imenujemo {\definicija izotipična} upodobitev.
 
-\begin{zgled}
-Permutacijska upodobitev grupe $S_3$ na $\RR^3$ je polenostavna.
+\begin{zgled} \leavevmode
+    \begin{itemize}
+        \item Permutacijska upodobitev grupe $S_3$ na $\RR^3$ je polenostavna.
+        \item Regularna upodobitev ciklične grupe $\ZZ/n\ZZ$ nad $\CC$ je polenostavna.
+    \end{itemize}
 \end{zgled}
 
 Vseh upodobitev žal ne moremo razstaviti na direktno vsoto nerazcepnih.\footnote{V nadaljevanju bomo pokazali, da so upodobitve \emph{končnih} grup nad poljem karakteristike $0$ vselej poenostavne.} Polenostavnost dane upodobitve je namreč tesno povezana z obstojem komplementiranih podupodobitev.
@@ -1066,7 +1070,20 @@ Prepričaj se, da velja
 S tem smo za vsak $0 \leq i < n$ našli natanko določen $j$, da je $V_{i+1}/V_i \cong W_{j+1}/W_j$. Premislimo še, da je to prirejanje injektivno. Indeks $j$ je enolično določen s pogojem, da je $V_{i,j+1}/V_{i,j} \neq 0$, kar je po gornjem izomorfizmu enakovredno pogoju $W_{j,i+1}/W_{j,i} \neq 0$. Ker je $W_{j+1}/W_j$ nerazcepen, je slednji pogoj lahko izpolnjen le za \emph{en} indeks $i$.
 \end{dokaz}
 
-Po izreku je za dano upodobitev $\rho$ in nerazcepno upodobitev $\pi$ število kompozicijskih faktorjev, ki so izomorfni $\pi$, neodvisno od kompozicijske vrste. Temu številu pravimo {\definicija večkratnost} $\pi$ v $\rho$ in ga označimo z $\mult_{\pi}(\rho)$. Kadar je dana upodobitev \emph{polenostavna}, je do izomorfizma natančno enolično določena s svojimi večkratnostmi.
+Iz izreka sledi, da lahko za vsako upodobitev $\rho$ grupe $G$ na končno razsežnem prostoru najdemo bazo prostora, v kateri imajo vse matrike $\rho(g)$ za $g \in G$ \emph{bločnozgornjetrikotno} obliko. Po drugi strani je upodobitev polenostavna, kadar lahko najdemo bazo prostora, v kateri imajo vse matrike \emph{bločno} obliko.
+
+\subsection{Izotipične komponente}
+
+Po zadnjem izreku je za dano upodobitev $\rho$ in nerazcepno upodobitev $\pi$ število kompozicijskih faktorjev, ki so izomorfni $\pi$, neodvisno od kompozicijske vrste. Temu številu pravimo {\definicija večkratnost} $\pi$ v $\rho$ in ga označimo z $\mult_{\pi}(\rho)$. 
+
+Kadar je dana upodobitev \emph{polenostavna}, je do izomorfizma natančno enolično določena s svojimi večkratnostmi. Če je $\rho = \bigoplus_{i \in I} \rho_i$, potem je
+\[
+    \hom_G(\pi, \rho) = \bigoplus_{i \in I} \hom_G(\pi, \rho_i).
+\]
+Po Schurovi lemi je vsak od zadnjih prostorov spletičen bodisi trivialen bodisi enorazsežen. Večkratnost $\pi$ v $\rho$ lahko zatorej izračunamo kot
+\[
+    \mult_{\pi}(\rho) = \dim \hom_G(\pi, \rho).
+\]
 
 \begin{zgled} \leavevmode
 \begin{itemize}
@@ -1080,12 +1097,34 @@ Po izreku je za dano upodobitev $\rho$ in nerazcepno upodobitev $\pi$ število k
 \end{itemize}
 \end{zgled}
 
+Čeravno so kompozicijski faktorji upodobitve enolično določeni do permutacije natančno, pa \emph{ni} res, da so enolično določeni tudi členi kompozicijske vrste, niti kadar je dana upodobitev polenostavna. Lahko se namreč zgodi, da neka nerazcepna podupodobitev nastopa z večkratnostjo vsaj $2$.\footnote{Na primer, kadar je upodobitev trivialna, se pravi $V = \11^k$ za nek $k > 1$, lahko izberemo poljubno bazo prostora $V$ in prek nje dobimo nek drug izomorfizem $V \cong \11^k$.} 
 
-\subsection{Izotipične komponente}
+Oglejmo si tako situacijo še podrobneje. Naj bo $G$ grupa s polenostavno upodobitvijo $\rho = \bigoplus_{i \in I} \rho_i$ na prostoru $V = \bigoplus_{i \in I} V_i$, kjer je vsak $\rho_i$ nerazcepna podupodobitev. Naj bo $\pi$ neka nerazcepna upodobitev na prostoru $W$, ki se pojavi v $\rho$, se pravi $\mult_{\pi}(\rho) > 0$. Naj bo
+\[
+    \Izotip_{\pi}(\rho) = \bigoplus_{i \in I \colon \ \rho_i \cong \pi} V_i
+\]
+zbor vseh podprostorov, na katerih $G$ deluje kot s $\pi$. Ta prostor imenujemo {\definicija $\pi$-izotipična komponenta} upodobitve $\rho$.  Po konstrukciji je ta sicer odvisna od izbrane dekompozicije upodobitve $\rho$, a premislimo, da je ta odvisnost le navidezna.
 
-\todo[inline]{[Proposition 2.7.9]}
+\begin{trditev}
+Naj bo $G$ grupa s polenostavno upodobitvijo $\rho$. Za vsako nerazcepno upodobitev $\pi$ grupe $G$ je $\pi$-izotipična komponenta $\Izotip_{\pi}(\rho)$ neodvisna od izbire dekompozicije $\rho$, ki opazi njeno polenostavnost. 
+\end{trditev}
+\begin{dokaz}
+Premislimo, da je $\Izotip_{\pi}(\rho)$ enaka vsoti (ne nujno direktni) vseh $G$-invariantih podprostorov prostora $V$ upodobitve $\rho$, ki so kot upodobitev izomorfni $\pi$. Ta opis $\pi$-izotipične komponente je neodvisen od izbire polenostavne dekompozicije $\rho$.
 
+Naj bo $W$ omenjena vsota podprostorov, ki so kot upodobitev izomorfni $\pi$. Seveda je $\Izotip_{\pi}(\rho) \leq W$. Dokažimo, da velja tudi obratna neenakost. Naj bo $U$ direktna vsota tistih prostorov $V_i$, ki kot upodobitev \emph{niso} izomorfni $\pi$. Velja $V = \Izotip_{\pi}(\rho) \oplus U$. Opazujmo projekcijo $p \colon V \to U$ z jedrom $\Izotip_{\pi}(\rho)$. Naj bo $Z \leq W$ podprostor, ki je kot upodobitev izomorfen $\pi$. Zožitev $p|_Z$ je spletična v $\hom_G(Z, U)$, ki je po Schurovi lemi ničeln prostor. Torej je $p(Z) = 0$ in s tem $Z \leq \Izotip_{\pi}(\rho)$. Ker je bil $Z$ poljuben, smo s tem dokazali $W \leq \Izotip_{\pi}(\rho)$.
+\end{dokaz}
 
+\begin{zgled} \leavevmode
+\begin{itemize}
+\item Naj bo $G$ grupa s polenostavno upodobitvijo $\rho = \bigoplus_{i \in I} \rho_i$ na prostoru $V = \bigoplus_{i \in I} V_i$, v kateri vsaka nerazcepna podupodobitev nastopa z večkratnostjo $1$. Upodobitve $\rho_i$ so torej paroma neizomorfne. Izotipične komponente so torej kar enake podprostorom $V_i$. Ker so te komponente neodvisne od izbire dekompozicije, so torej podprostori $V_i$ polenostavne dekompozicije enolično določeni.
+
+Naj bo $W \leq V$ nek $G$-invarianten podprostor. Upodobitev $G$ na tem podprostoru je tudi polenostavna. Vsaka njena nerazcepna podupodobitev je hkrati podupodobitev $\rho$, zato po enoličnosti podprostorov $V_i$ sestoji iz nekaterih teh podprostorov. Prostor $W$ je zato enak $\bigoplus_{i \in J} V_i$ za neko podmnožico $J \subseteq I$.
+
+Za konkreten zgled lahko vzamemo ciklično grupo $\ZZ/n\ZZ$ in njeno regularno upodobitev, ki smo jo razcepili na direktno vsoto upodobitev $\bigoplus_{j \in \{ 1,2,\dots,n \}} \chi_j$. Po zadnjem komentarju je vsaka podupodobitev regularne upodobitve torej enaka direktni vsoti nekaterih od upodobitev $\chi_j$.
+
+\item \todo{Kako izgleda $\Izotip_{\pi}(\rho)$, če je $\pi$ enodim?Example 2.7.10}
+\end{itemize}
+\end{zgled}
 
 
 \section{Matrični koeficienti}

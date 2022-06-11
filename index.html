@@ -46,7 +46,7 @@
 <strong> Urban Jezernik <br>
 Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-Zadnja posodobitev: 10. 06. 2022
+Zadnja posodobitev: 11. 06. 2022
 </div>
 
 <div class="kazalo">
@@ -1801,9 +1801,15 @@ izomorfne med sabo, upodobitev <span class="math inline">\(\rho\)</span>
 imenujemo <span><strong><em>izotipična</em></strong></span>
 upodobitev.</p>
 <div class="zgled">
-<p><strong>Zgled 2.4</strong>. Permutacijska upodobitev grupe <span
+<p><strong>Zgled 2.4</strong>. </p>
+<ul>
+<li><p>Permutacijska upodobitev grupe <span
 class="math inline">\(S_3\)</span> na <span
-class="math inline">\(\mathbb{R}^3\)</span> je polenostavna.</p>
+class="math inline">\(\mathbb{R}^3\)</span> je polenostavna.</p></li>
+<li><p>Regularna upodobitev ciklične grupe <span
+class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> nad <span
+class="math inline">\(\mathbb{C}\)</span> je polenostavna.</p></li>
+</ul>
 </div>
 <p>Vseh upodobitev žal ne moremo razstaviti na direktno vsoto
 nerazcepnih.<a href="#fn25" class="footnote-ref" id="fnref25"
@@ -2038,7 +2044,16 @@ class="math inline">\(W_{j+1}/W_j\)</span> nerazcepen, je slednji pogoj
 lahko izpolnjen le za <em>en</em> indeks <span
 class="math inline">\(i\)</span>. ◻</p>
 </div>
-<p>Po izreku je za dano upodobitev <span
+<p>Iz izreka sledi, da lahko za vsako upodobitev <span
+class="math inline">\(\rho\)</span> grupe <span
+class="math inline">\(G\)</span> na končno razsežnem prostoru najdemo
+bazo prostora, v kateri imajo vse matrike <span
+class="math inline">\(\rho(g)\)</span> za <span class="math inline">\(g
+\in G\)</span> <em>bločnozgornjetrikotno</em> obliko. Po drugi strani je
+upodobitev polenostavna, kadar lahko najdemo bazo prostora, v kateri
+imajo vse matrike <em>bločno</em> obliko.</p>
+<h3 id="izotipične-komponente">Izotipične komponente</h3>
+<p>Po zadnjem izreku je za dano upodobitev <span
 class="math inline">\(\rho\)</span> in nerazcepno upodobitev <span
 class="math inline">\(\pi\)</span> število kompozicijskih faktorjev, ki
 so izomorfni <span class="math inline">\(\pi\)</span>, neodvisno od
@@ -2046,9 +2061,17 @@ kompozicijske vrste. Temu številu pravimo
 <span><strong><em>večkratnost</em></strong></span> <span
 class="math inline">\(\pi\)</span> v <span
 class="math inline">\(\rho\)</span> in ga označimo z <span
-class="math inline">\(\mathop{\mathrm{mult}}_{\pi}(\rho)\)</span>. Kadar
-je dana upodobitev <em>polenostavna</em>, je do izomorfizma natančno
-enolično določena s svojimi večkratnostmi.</p>
+class="math inline">\(\mathop{\mathrm{mult}}_{\pi}(\rho)\)</span>.</p>
+<p>Kadar je dana upodobitev <em>polenostavna</em>, je do izomorfizma
+natančno enolično določena s svojimi večkratnostmi. Če je <span
+class="math inline">\(\rho = \bigoplus_{i \in I} \rho_i\)</span>, potem
+je <span class="math display">\[\hom_G(\pi, \rho) = \bigoplus_{i \in I}
+\hom_G(\pi, \rho_i).\]</span> Po Schurovi lemi je vsak od zadnjih
+prostorov spletičen bodisi trivialen bodisi enorazsežen. Večkratnost
+<span class="math inline">\(\pi\)</span> v <span
+class="math inline">\(\rho\)</span> lahko zatorej izračunamo kot <span
+class="math display">\[\mathop{\mathrm{mult}}_{\pi}(\rho) = \dim
+\hom_G(\pi, \rho).\]</span></p>
 <div class="zgled">
 <p><strong>Zgled 2.7</strong>. </p>
 <ul>
@@ -2112,7 +2135,114 @@ e_3\)</span> in <span class="math inline">\(\pi((1 \ 2)(1 \ 2 \ 3)) e_1
 = e_1\)</span>.</p></li>
 </ul>
 </div>
-<h3 id="izotipične-komponente">Izotipične komponente</h3>
+<p>Čeravno so kompozicijski faktorji upodobitve enolično določeni do
+permutacije natančno, pa <em>ni</em> res, da so enolično določeni tudi
+členi kompozicijske vrste, niti kadar je dana upodobitev polenostavna.
+Lahko se namreč zgodi, da neka nerazcepna podupodobitev nastopa z
+večkratnostjo vsaj <span class="math inline">\(2\)</span>.<a
+href="#fn27" class="footnote-ref" id="fnref27"
+role="doc-noteref"><sup>27</sup></a></p>
+<p>Oglejmo si tako situacijo še podrobneje. Naj bo <span
+class="math inline">\(G\)</span> grupa s polenostavno upodobitvijo <span
+class="math inline">\(\rho = \bigoplus_{i \in I} \rho_i\)</span> na
+prostoru <span class="math inline">\(V = \bigoplus_{i \in I}
+V_i\)</span>, kjer je vsak <span class="math inline">\(\rho_i\)</span>
+nerazcepna podupodobitev. Naj bo <span
+class="math inline">\(\pi\)</span> neka nerazcepna upodobitev na
+prostoru <span class="math inline">\(W\)</span>, ki se pojavi v <span
+class="math inline">\(\rho\)</span>, se pravi <span
+class="math inline">\(\mathop{\mathrm{mult}}_{\pi}(\rho) &gt;
+0\)</span>. Naj bo <span
+class="math display">\[\mathop{\mathrm{Izotip}}_{\pi}(\rho) =
+\bigoplus_{i \in I \colon \ \rho_i \cong \pi} V_i\]</span> zbor vseh
+podprostorov, na katerih <span class="math inline">\(G\)</span> deluje
+kot s <span class="math inline">\(\pi\)</span>. Ta prostor imenujemo
+<span><strong><em><span class="math inline">\(\pi\)</span>-izotipična
+komponenta</em></strong></span> upodobitve <span
+class="math inline">\(\rho\)</span>. Po konstrukciji je ta sicer odvisna
+od izbrane dekompozicije upodobitve <span
+class="math inline">\(\rho\)</span>, a premislimo, da je ta odvisnost le
+navidezna.</p>
+<div class="trditev">
+<p><strong>Trditev 2.3</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa s polenostavno upodobitvijo <span
+class="math inline">\(\rho\)</span>. Za vsako nerazcepno upodobitev
+<span class="math inline">\(\pi\)</span> grupe <span
+class="math inline">\(G\)</span> je <span
+class="math inline">\(\pi\)</span>-izotipična komponenta <span
+class="math inline">\(\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>
+neodvisna od izbire dekompozicije <span
+class="math inline">\(\rho\)</span>, ki opazi njeno polenostavnost.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Premislimo, da je <span
+class="math inline">\(\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>
+enaka vsoti (ne nujno direktni) vseh <span
+class="math inline">\(G\)</span>-invariantih podprostorov prostora <span
+class="math inline">\(V\)</span> upodobitve <span
+class="math inline">\(\rho\)</span>, ki so kot upodobitev izomorfni
+<span class="math inline">\(\pi\)</span>. Ta opis <span
+class="math inline">\(\pi\)</span>-izotipične komponente je neodvisen od
+izbire polenostavne dekompozicije <span
+class="math inline">\(\rho\)</span>.</p>
+<p>Naj bo <span class="math inline">\(W\)</span> omenjena vsota
+podprostorov, ki so kot upodobitev izomorfni <span
+class="math inline">\(\pi\)</span>. Seveda je <span
+class="math inline">\(\mathop{\mathrm{Izotip}}_{\pi}(\rho) \leq
+W\)</span>. Dokažimo, da velja tudi obratna neenakost. Naj bo <span
+class="math inline">\(U\)</span> direktna vsota tistih prostorov <span
+class="math inline">\(V_i\)</span>, ki kot upodobitev <em>niso</em>
+izomorfni <span class="math inline">\(\pi\)</span>. Velja <span
+class="math inline">\(V = \mathop{\mathrm{Izotip}}_{\pi}(\rho) \oplus
+U\)</span>. Opazujmo projekcijo <span class="math inline">\(p \colon V
+\to U\)</span> z jedrom <span
+class="math inline">\(\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>. Naj
+bo <span class="math inline">\(Z \leq W\)</span> podprostor, ki je kot
+upodobitev izomorfen <span class="math inline">\(\pi\)</span>. Zožitev
+<span class="math inline">\(p|_Z\)</span> je spletična v <span
+class="math inline">\(\hom_G(Z, U)\)</span>, ki je po Schurovi lemi
+ničeln prostor. Torej je <span class="math inline">\(p(Z) = 0\)</span>
+in s tem <span class="math inline">\(Z \leq
+\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>. Ker je bil <span
+class="math inline">\(Z\)</span> poljuben, smo s tem dokazali <span
+class="math inline">\(W \leq
+\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>. ◻</p>
+</div>
+<div class="zgled">
+<p><strong>Zgled 2.8</strong>. </p>
+<ul>
+<li><p>Naj bo <span class="math inline">\(G\)</span> grupa s
+polenostavno upodobitvijo <span class="math inline">\(\rho =
+\bigoplus_{i \in I} \rho_i\)</span> na prostoru <span
+class="math inline">\(V = \bigoplus_{i \in I} V_i\)</span>, v kateri
+vsaka nerazcepna podupodobitev nastopa z večkratnostjo <span
+class="math inline">\(1\)</span>. Upodobitve <span
+class="math inline">\(\rho_i\)</span> so torej paroma neizomorfne.
+Izotipične komponente so torej kar enake podprostorom <span
+class="math inline">\(V_i\)</span>. Ker so te komponente neodvisne od
+izbire dekompozicije, so torej podprostori <span
+class="math inline">\(V_i\)</span> polenostavne dekompozicije enolično
+določeni.</p>
+<p>Naj bo <span class="math inline">\(W \leq V\)</span> nek <span
+class="math inline">\(G\)</span>-invarianten podprostor. Upodobitev
+<span class="math inline">\(G\)</span> na tem podprostoru je tudi
+polenostavna. Vsaka njena nerazcepna podupodobitev je hkrati
+podupodobitev <span class="math inline">\(\rho\)</span>, zato po
+enoličnosti podprostorov <span class="math inline">\(V_i\)</span>
+sestoji iz nekaterih teh podprostorov. Prostor <span
+class="math inline">\(W\)</span> je zato enak <span
+class="math inline">\(\bigoplus_{i \in J} V_i\)</span> za neko
+podmnožico <span class="math inline">\(J \subseteq I\)</span>.</p>
+<p>Za konkreten zgled lahko vzamemo ciklično grupo <span
+class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> in njeno regularno
+upodobitev, ki smo jo razcepili na direktno vsoto upodobitev <span
+class="math inline">\(\bigoplus_{j \in \{ 1,2,\dots,n \}}
+\chi_j\)</span>. Po zadnjem komentarju je vsaka podupodobitev regularne
+upodobitve torej enaka direktni vsoti nekaterih od upodobitev <span
+class="math inline">\(\chi_j\)</span>.</p></li>
+<li></li>
+</ul>
+</div>
 <h2 id="matrični-koeficienti">Matrični koeficienti</h2>
 <h3 id="neodvisnost-koeficientov">Neodvisnost koeficientov</h3>
 <h3 id="povezava-z-regularno-upodobitvijo">Povezava z regularno
@@ -2276,6 +2406,13 @@ obstoju Hirschove dolžine v policikličnih grupah iz <a
 href="https://ucilnica2122.fmf.uni-lj.si/course/view.php?id=309">(Teorija
 grup)</a>.<a href="#fnref26" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
+<li id="fn27" role="doc-endnote"><p>Na primer, kadar je upodobitev
+trivialna, se pravi <span class="math inline">\(V =
+\mathbf{1}^k\)</span> za nek <span class="math inline">\(k &gt;
+1\)</span>, lahko izberemo poljubno bazo prostora <span
+class="math inline">\(V\)</span> in prek nje dobimo nek drug izomorfizem
+<span class="math inline">\(V \cong \mathbf{1}^k\)</span>.<a
+href="#fnref27" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
         </div>
