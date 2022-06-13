@@ -93,7 +93,8 @@
 \def\vprasanje{\color{oranzna}}
 \def\literatura{\color{modra}}
 \def\vaje{{\literatura ($\to$ vaje)}}
-\def\kljuka{$\checkmark\kern-0.7em\checkmark$}
+% \def\kljuka{$\checkmark\kern-0.7em\checkmark$}
+\def\kljuka{$\checkmark$}
 
 \theoremstyle{definition}
 
@@ -1074,7 +1075,7 @@ Iz izreka sledi, da lahko za vsako upodobitev $\rho$ grupe $G$ na končno razse�
 
 \subsection{Izotipične komponente}
 
-Po zadnjem izreku je za dano upodobitev $\rho$ in nerazcepno upodobitev $\pi$ število kompozicijskih faktorjev, ki so izomorfni $\pi$, neodvisno od kompozicijske vrste. Temu številu pravimo {\definicija večkratnost} $\pi$ v $\rho$ in ga označimo z $\mult_{\pi}(\rho)$. 
+Po zadnjem izreku je za dano upodobitev $\rho$ in nerazcepno upodobitev $\pi$ število kompozicijskih faktorjev, ki so izomorfni $\pi$, neodvisno od kompozicijske vrste. Temu številu pravimo {\definicija večkratnost} $\pi$ v $\rho$ in ga označimo z $\mult_{\rho}(\pi)$. 
 
 Kadar je dana upodobitev \emph{polenostavna}, je do izomorfizma natančno enolično določena s svojimi večkratnostmi. Če je $\rho = \bigoplus_{i \in I} \rho_i$, potem je
 \[
@@ -1082,16 +1083,16 @@ Kadar je dana upodobitev \emph{polenostavna}, je do izomorfizma natančno enoli�
 \]
 Po Schurovi lemi je (nad algebraično zaprtim poljem) vsak od zadnjih prostorov spletičen bodisi trivialen bodisi enorazsežen. Večkratnost $\pi$ v $\rho$ lahko zatorej izračunamo kot
 \[
-    \mult_{\pi}(\rho) = \dim \hom_G(\pi, \rho).
+    \mult_{\rho}(\pi) = \dim \hom_G(\pi, \rho).
 \]
 
 \begin{zgled} \leavevmode
 \begin{itemize}
-    \item Za eničnozgornjetrikotno upodobitev $\rho$ grupe $\RR$ na $\RR^2$ je $\mult_{\11}(\rho) = 2$. Ker ta upodobitev ni trivialna, ne more biti polenostavna, saj bi sicer bila izomorfna $\11^2$.
+    \item Za eničnozgornjetrikotno upodobitev $\rho$ grupe $\RR$ na $\RR^2$ je $\mult_{\rho}(\11) = 2$. Ker ta upodobitev ni trivialna, ne more biti polenostavna, saj bi sicer bila izomorfna $\11^2$.
 
     \item Opazujmo permutacijsko upodobitev $\pi$ grupe $S_3$ na $\RR^3$. To upodobitev smo že razstavili na direktno vsoto $\11 \oplus \rho$, kjer je $\rho$ dvorazsežna nerazcepna upodobitev na podprostoru $\langle u_1 = e_1 - e_2, u_2 = e_2 - e_3 \rangle$. Premislili smo, kako lahko to upodobitev projiciramo do upodobitve $\tilde \rho$ grupe $S_3$ na prostoru $(\ZZ/3\ZZ)^2$ nad končnim poljem $\ZZ/3\ZZ$. 
 
-    Upodobitev $\tilde \rho$ \emph{ni} nerazcepna, saj ima invarianten podprostor $\langle u_1 - u_2 = e_1 + e_2 + e_3 \rangle$. Na tem podprostoru grupa $S_3$ deluje trivialno. V kvocientu $(\ZZ/3\ZZ)^2/\langle u_1 - u_2 \rangle \cong \ZZ/3\ZZ$ generatorja $(1\ 2)$ in $(1 \ 2 \ 3)$ grupe $S_3$ preslikata odsek vektorja $u_1$ v odsek $-u_1$ oziroma $u_1$. V tem prepoznamo predznačno upodobitev, interpretirano kot homomorfizem $\sgn \colon S_3 \to \GL_1(\ZZ/3\ZZ) \cong \{ 1, -1 \}$. Nad poljem $\ZZ/3\ZZ$ za permutacijsko upodobitev $\pi$ tako velja $\mult_{\11}(\pi) = 2$ in $\mult_{\sgn}(\pi) = 1$.
+    Upodobitev $\tilde \rho$ \emph{ni} nerazcepna, saj ima invarianten podprostor $\langle u_1 - u_2 = e_1 + e_2 + e_3 \rangle$. Na tem podprostoru grupa $S_3$ deluje trivialno. V kvocientu $(\ZZ/3\ZZ)^2/\langle u_1 - u_2 \rangle \cong \ZZ/3\ZZ$ generatorja $(1\ 2)$ in $(1 \ 2 \ 3)$ grupe $S_3$ preslikata odsek vektorja $u_1$ v odsek $-u_1$ oziroma $u_1$. V tem prepoznamo predznačno upodobitev, interpretirano kot homomorfizem $\sgn \colon S_3 \to \GL_1(\ZZ/3\ZZ) \cong \{ 1, -1 \}$. Nad poljem $\ZZ/3\ZZ$ za permutacijsko upodobitev $\pi$ tako velja $\mult_{\pi}(\11) = 2$ in $\mult_{\pi}(\sgn) = 1$.
 
     Premislimo, da upodobitev $\pi$ nad $\ZZ/3\ZZ$ \emph{ni} polenostavna. Če bi namreč bila, bi po zgornjem morala biti izmorfna direktni vsoti $\11 \oplus \11 \oplus \sgn$. Prostor $(\ZZ/3\ZZ)^3$ bi zatorej imel bazo, v kateri bi matriki za $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$ bili hkrati diagonalni. Ti dve matriki bi zato komutirali, kar pomeni, da bi morali komutirati tudi linearni preslikavi $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$. Temu pa ni tako, saj na primer velja $\pi((1 \ 2 \ 3)(1 \ 2)) e_1 = e_3$ in $\pi((1 \ 2)(1 \ 2 \ 3)) e_1 = e_1$.
 \end{itemize}
@@ -1099,23 +1100,55 @@ Po Schurovi lemi je (nad algebraično zaprtim poljem) vsak od zadnjih prostorov 
 
 Čeravno so kompozicijski faktorji upodobitve enolično določeni do permutacije natančno, pa \emph{ni} res, da so enolično določeni tudi členi kompozicijske vrste, niti kadar je dana upodobitev polenostavna. Lahko se namreč zgodi, da neka nerazcepna podupodobitev nastopa z večkratnostjo vsaj $2$.\footnote{Na primer, kadar je upodobitev trivialna, se pravi $V = \11^k$ za nek $k > 1$, lahko izberemo poljubno bazo prostora $V$ in prek nje dobimo nek drug izomorfizem $V \cong \11^k$.} 
 
-Oglejmo si tako situacijo še podrobneje. Naj bo $G$ grupa s polenostavno upodobitvijo $\rho = \bigoplus_{i \in I} \rho_i$ na prostoru $V = \bigoplus_{i \in I} V_i$, kjer je vsak $\rho_i$ nerazcepna podupodobitev. Naj bo $\pi$ neka nerazcepna upodobitev na prostoru $W$, ki se pojavi v $\rho$, se pravi $\mult_{\pi}(\rho) > 0$. Naj bo
+Oglejmo si tako situacijo še podrobneje. Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$. Naj bo $\pi$ neka \emph{nerazcepna} upodobitev grupe $G$. Opazujmo vse $G$-invariantne podprostore v $V$, ki so kot upodobitve izomorfni $\pi$. Vsota (ne nujno direktna) vseh teh podprostorov
 \[
-    \Izotip_{\pi}(\rho) = \bigoplus_{i \in I \colon \ \rho_i \cong \pi} V_i
+    \Izotip_{\rho}(\pi) = \sum_{W \leq V, \ W \cong \pi} W
 \]
-zbor vseh podprostorov, na katerih $G$ deluje kot s $\pi$. Ta prostor imenujemo {\definicija $\pi$-izotipična komponenta} upodobitve $\rho$.  Po konstrukciji je ta sicer odvisna od izbrane dekompozicije upodobitve $\rho$, a premislimo, da je ta odvisnost le navidezna.
+je {\definicija $\pi$-izotipična komponenta} upodobitve $\rho$. Ta je sicer definirana za vsako upodobitev, a jo je za polenostavne upodobitve še posebej lahko določiti.
 
 \begin{trditev}
-Naj bo $G$ grupa s polenostavno upodobitvijo $\rho$. Za vsako nerazcepno upodobitev $\pi$ grupe $G$ je $\pi$-izotipična komponenta $\Izotip_{\pi}(\rho)$ neodvisna od izbire dekompozicije $\rho$, ki opazi njeno polenostavnost. 
+Naj bo $G$ grupa s polenostavno upodobitvijo $\rho = \bigoplus_{i \in I} \rho_i$ na prostoru $V = \bigoplus_{i \in I} V_i$, kjer je vsak $\rho_i$ nerazcepna podupodobitev. Za vsako nerazcepno upodobitev $\pi$ grupe $G$ je
+\[
+    \Izotip_{\rho}(\pi) = \bigoplus_{i \in I \colon \ \rho_i \cong \pi} V_i.
+\]
+\end{trditev}
+\begin{dokaz}    
+Naj bo $W$ direktna vsota podprostorov $V_i$, ki so kot upodobitev izomorfni $\pi$. Seveda je $W \leq \Izotip_{\rho}(\pi)$. Dokažimo, da velja tudi obratna neenakost. Naj bo $U$ direktna vsota tistih prostorov $V_i$, ki kot upodobitev \emph{niso} izomorfni $\pi$. Velja $V = W \oplus U$. Opazujmo projekcijo $p \colon V \to U$ z jedrom $W$. Naj bo $Z \leq \Izotip_{\rho}(\pi)$ podprostor, ki je kot upodobitev izomorfen $\pi$. Zožitev $p|_Z$ je spletična v $\hom_G(Z, U)$, ki je po Schurovi lemi ničeln prostor. Torej je $p(Z) = 0$ in s tem $Z \leq W$. Ker je bil $Z$ poljuben, smo s tem dokazali $\Izotip_{\rho}(\pi) \leq W$.
+\end{dokaz}
+
+Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in nerazcepno upodobitvijo $\pi$ na prostoru $W$. Vsak $G$-invarianten podprostor v $V$, ki je kot upodobitev izomorfen $\pi$, lahko dobimo kot sliko prostora $W$ z neko spletično v $\hom_G(\pi, \rho)$.\footnote{Vsaka neničelna spletična v $\hom_G(\pi, \rho)$ je namreč injektivna.} Vsoto vseh takih $G$-invariatnih podprostorov lahko torej zajamemo kot sliko linearne preslikave
+\[
+    \Sigma_{\pi, \rho} \colon \hom_G(\pi, \rho) \otimes W \to V, \quad
+    \Phi \otimes w \mapsto \Phi(w).
+\]
+S tem je $\image \Sigma_{\pi, \rho} = \Izotip_{\rho}{\pi}$. Grupa $G$ deluje na $\hom_G(\pi, \sigma) = \hom(W,V)^G$ trivialno, na $W$ pa prek $\pi$. Na ta način je $\Sigma_{\pi, \rho}$ celo spletična upodobitev.
+
+\begin{trditev}
+Naj bo $G$ grupa z upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem. Predpostavimo, da je $\dim \hom_G(\pi, \rho) < \infty$. Tedaj je $\Sigma_{\pi, \rho}$ injektivna. 
 \end{trditev}
 \begin{dokaz}
-Premislimo, da je $\Izotip_{\pi}(\rho)$ enaka vsoti (ne nujno direktni) vseh $G$-invariantih podprostorov prostora $V$ upodobitve $\rho$, ki so kot upodobitev izomorfni $\pi$. Ta opis $\pi$-izotipične komponente je neodvisen od izbire polenostavne dekompozicije $\rho$.
+Naj bo $\{ \Phi_i \}_{i \in I}$ baza prostora $\hom_G(\pi, \rho)$. Premislimo, da prostori $\image \Phi_i$ tvorijo notranjo direktno vsoto v $V$. Injektivnost $\Sigma_{\pi, \rho}$ od tod neposredno sledi.
 
-Naj bo $W$ omenjena vsota podprostorov, ki so kot upodobitev izomorfni $\pi$. Seveda je $\Izotip_{\pi}(\rho) \leq W$. Dokažimo, da velja tudi obratna neenakost. Naj bo $U$ direktna vsota tistih prostorov $V_i$, ki kot upodobitev \emph{niso} izomorfni $\pi$. Velja $V = \Izotip_{\pi}(\rho) \oplus U$. Opazujmo projekcijo $p \colon V \to U$ z jedrom $\Izotip_{\pi}(\rho)$. Naj bo $Z \leq W$ podprostor, ki je kot upodobitev izomorfen $\pi$. Zožitev $p|_Z$ je spletična v $\hom_G(Z, U)$, ki je po Schurovi lemi ničeln prostor. Torej je $p(Z) = 0$ in s tem $Z \leq \Izotip_{\pi}(\rho)$. Ker je bil $Z$ poljuben, smo s tem dokazali $W \leq \Izotip_{\pi}(\rho)$.
+Dokazujemo s protislovjem. Naj bo $J \subseteq I$ množica najmanjše moči, za katero prostori $\image \Phi_j$ za $j \in J$ \emph{ne} tvorijo direktne vsote. Obstaja torej $k \in J$, da je
+\[
+    \image \Phi_k \cap \sum_{j \in J \backslash \{ k \}} \image \Phi_j \neq 0.
+\]
+Po nerazcepnosti $\pi$ je spletična $\Phi_k$ injektivna, zato je $\image \Phi_k$ nujno vsebovana v vsoti $\sum_{j \in J \backslash \{ k \}} \image \Phi_j$. Po minimalnosti $J$ je zadnja vsota direktna, zato je 
+\[
+    \Phi_k \in \hom_G(W, \bigoplus_{j \in J \backslash \{ k \}} \image \Phi_j).
+\]
+Slednji prostor je direktna vsota prostorov $\hom_G(W, \image \Phi_j)$. Po Schurovi lemi je vsak od teh bodisi ničeln bodisi enorazsežen. V neničelnem primeru je seveda $\hom_G(W, \image \Phi_j)$ generiran s spletično $\Phi_j$. Od tod sledi, da je $\Phi_k$ linearna kombinacija spletičen $\Phi_j$ za $j \in J \backslash \{ k \}$. To je protislovno z dejstvom, da je $\{ \Phi_i \}_{i \in I}$ baza prostora $\hom_G(\pi, \rho)$.
+\end{dokaz}
+
+\begin{posledica}
+Naj bo $G$ grupa s končnorazsežno upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem. Izotipična komponenta $\Izotip_{\rho}(\pi)$ je polenostavna, $\pi$-izotipična in vsebuje $\pi$ z večkratnostjo $\dim \hom_G(\pi, \rho)$.
+\end{posledica}
+\begin{dokaz}
+Iz injektivnosti $\Sigma_{\pi, \rho}$ sledi $\Izotip_{\rho}(\pi) \cong \hom_G(\pi, \sigma) \otimes W$. Ker grupa $G$ deluje trivialno na $\hom_G(\pi, \sigma)$, je prostor $\hom_G(\pi, \sigma) \otimes W$ kot upodobitev izomorfen direktni vsoti $\dim \hom_G(\pi, \sigma)$ kopij prostora $W$, na katerem $G$ deluje s $\pi$.
 \end{dokaz}
 
 \begin{domacanaloga}
-Naj bo $G$ grupa s polenostavno upodobitvijo $\rho$ na prostoru $V$. Premisli, da je $V$ direktna vsota izotipičnih komponent, ki pripadajo paroma neizomorfnim nerazcepnim upodobitvam.
+Naj bo $G$ grupa s končnorazsežno upodobitvijo $\rho$ na prostoru $V$. Premisli, da se izotipične komponente, ki pripadajo paroma neizomorfnim nerazcepnim upodobitvam, sekajo trivialno.
 \end{domacanaloga}
 
 \begin{zgled} \leavevmode
@@ -1126,9 +1159,9 @@ Naj bo $W \leq V$ nek $G$-invarianten podprostor. Upodobitev $G$ na tem podprost
 
 Za konkreten zgled lahko vzamemo ciklično grupo $\ZZ/n\ZZ$ in njeno regularno upodobitev, ki smo jo razcepili na direktno vsoto upodobitev $\bigoplus_{j \in \{ 1,2,\dots,n \}} \chi_j$. Po zadnjem komentarju je vsaka podupodobitev regularne upodobitve torej enaka direktni vsoti nekaterih od upodobitev $\chi_j$.
 
-\item Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\pi$ neka njena enorazsežna upodobitev. Taka upodobitev je seveda nerazcepna. Vektor $v \in V$ pripada izotipični komponenti $\Izotip_{\pi}(\rho)$, če in samo če grupa $G$ na prostoru $\langle v \rangle$ deluje kot s $\pi$, se pravi
+\item Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\pi$ neka njena enorazsežna upodobitev. Taka upodobitev je seveda nerazcepna. Vektor $v \in V$ pripada izotipični komponenti $\Izotip_{\rho}(\pi)$, če in samo če grupa $G$ na prostoru $\langle v \rangle$ deluje kot s $\pi$, se pravi
 \[
-    \Izotip_{\pi}(\rho) = \left\{ v \in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v \right\}.
+    \Izotip_{\rho}(\pi) = \left\{ v \in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v \right\}.
 \]
 
 Kadar je grupa $G$ abelova, je vsaka njena nerazcepna upodobitev nad algebraično zaprtim poljem enorazsežna. Vsaka polenostavna upodobitev take grupe je zato direktna vsota podprostorov, na katerih grupa deluje s skalarnimi množenji prek svojih enorazsežnih upodobitev.
@@ -1138,16 +1171,37 @@ Kadar je grupa $G$ abelova, je vsaka njena nerazcepna upodobitev nad algebraičn
 
 \section{Matrični koeficienti}
 
-Do zdaj smo upodobitve obravnavali z bolj konceptualnega stališča. 
+Vsaka upodobitev dane grupe je homomorfizem v grupo obrnljivih matrik $\GL(V)$. Do sedaj smo na upodobitve gledali z bolj konceptualnega stališča: govorili smo o strukturi prostora $V$ in o njegovi morebitni dekompoziciji na nerazcepne upodobitve. Zdaj si bomo z vsako od teh umazali roke in jo pogledali še podrobneje. 
+
+Predpostavimo, da je prostor $V$ končnorazsežen. Izberimo bazo prostora $V$ in s tem izomorfizem $V \cong F^n$ za nek $n$, tako da je upodobitev dana s homomorfizmom $\rho \colon G \to \GL_n(F)$. Vsak tak homomorfizem je \emph{po komponentah} podan s svojimi {\definicija matričnimi koeficienti}; to so funkcije
+\[
+    f_{i,j} \colon G \to F, \quad
+    g \mapsto \langle e_i^*, \rho(g) \cdot e_j \rangle = \rho(g)_{i,j}
+\]
+za $i,j \in \{ 1, 2, \dots, n \}$.\footnote{O matričnih koeficientih upodobitve $\rho$ lahko abstraktneje govorimo tudi brez izbire baze prostora. Za vsak vektor $v \in V$ in kovektor $\lambda \in V^*$ definiramo $f_{v, \lambda} \colon G \to F$, $g \mapsto \langle \lambda, \rho(g) \cdot v \rangle$. Kadar je prostor $V$ končnorazsežen, lahko vsak vektor razvijemo po izbrani bazi in vsak kovektor po dualni bazi, s čimer abstraktni matrični koeficient razvijemo po običajnih matričnih koeficientih.}
 
 \subsection{Neodvisnost koeficientov}
 
-\todo[inline]{
-- Theorem 2.7.24 (Burnsides irreducibility criterion)
-- matrix coefficients, linear independence, 
-}
+Matrične koeficiente lahko vidimo kot elemente vektorskega prostora funkcij $\hom(G,F)$ iz $G$ v $F$. Še več, 
+
+
+
+Naslednji izrek pove, da lahko na podlagi \emph{linearnih} lastnosti teh matričnih koeficientov prepoznamo nerazcepne upodobitve.
+
+\begin{izrek}[Burnsideov izrek o nerazcepnosti]
+Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL_n(F)$ nad algebraično zaprtim poljem $F$. Tedaj je $\rho$ nerazcepna, če in samo če so matrični koeficienti $\{ f_{i,j} \mid 1 \leq i,j \leq \deg(\rho) \}$ neodvisni kot vektorji v $\hom(G,F)$.
+\end{izrek}
+\begin{dokaz}
+$(\Leftarrow):$ Če je upodobitev $\rho$ razcepna, potem jo lahko po morebitni zamenjavi baze zapišemo v bločnozgornjetrikotni obliki, pri čemer je člen v spodnjem levem kotu vselej enak $0$. Ta matrični koeficient lahko razvijemo po koeficientih $f_{i,j}$, od koder dobimo netrivialno linearno odvisnost teh koeficientov. \kljuka
+
+$(\Rightarrow):$ 
+- razpenjajo izotipično komponento
+- jih je $n^2$
+- dimenzija izotipične komponente je tudi $n^2$
+\end{dokaz}
 
 \subsection{Povezava z regularno upodobitvijo}
+
 
 \todo[inline]{
 -Corollary 2.7.30 (Matrix coefficients as subrepresentations of the regular representation).

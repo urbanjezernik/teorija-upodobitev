@@ -1847,7 +1847,7 @@ class="math inline">\(i\)</span> poljuben, od tod sledi <span
 class="math inline">\(U \oplus W = V\)</span>. Podupodobitev <span
 class="math inline">\(W\)</span> ima torej komplementirano podupodobitev
 <span class="math inline">\(U\)</span>. <span
-class="math inline">\(\checkmark\kern-0.7em\checkmark\)</span></p>
+class="math inline">\(\checkmark\)</span></p>
 <p><span class="math inline">\((\Leftarrow)\)</span>: Naj bo <span
 class="math inline">\(\rho \colon G \to \mathop{\mathrm{GL}}(V)\)</span>
 upodobitev, v kateri je vsaka podupodobitev komplementirana. Dokazati
@@ -1885,7 +1885,7 @@ V\)</span>, kar pa je v nasprotju z maksimalnostjo množice <span
 class="math inline">\(J\)</span>. Tako je res <span
 class="math inline">\(\tilde V = V\)</span> in upodobitev <span
 class="math inline">\(V\)</span> je polenostavna. <span
-class="math inline">\(\checkmark\kern-0.7em\checkmark\)</span> ◻</p>
+class="math inline">\(\checkmark\)</span> ◻</p>
 </div>
 <div class="zgled">
 <p><strong>Zgled 2.5</strong>. Eničnozgornjetrikotna upodobitev grupe
@@ -2061,7 +2061,7 @@ kompozicijske vrste. Temu številu pravimo
 <span><strong><em>večkratnost</em></strong></span> <span
 class="math inline">\(\pi\)</span> v <span
 class="math inline">\(\rho\)</span> in ga označimo z <span
-class="math inline">\(\mathop{\mathrm{mult}}_{\pi}(\rho)\)</span>.</p>
+class="math inline">\(\mathop{\mathrm{mult}}_{\rho}(\pi)\)</span>.</p>
 <p>Kadar je dana upodobitev <em>polenostavna</em>, je do izomorfizma
 natančno enolično določena s svojimi večkratnostmi. Če je <span
 class="math inline">\(\rho = \bigoplus_{i \in I} \rho_i\)</span>, potem
@@ -2070,7 +2070,7 @@ je <span class="math display">\[\hom_G(\pi, \rho) = \bigoplus_{i \in I}
 zaprtim poljem) vsak od zadnjih prostorov spletičen bodisi trivialen
 bodisi enorazsežen. Večkratnost <span class="math inline">\(\pi\)</span>
 v <span class="math inline">\(\rho\)</span> lahko zatorej izračunamo kot
-<span class="math display">\[\mathop{\mathrm{mult}}_{\pi}(\rho) = \dim
+<span class="math display">\[\mathop{\mathrm{mult}}_{\rho}(\pi) = \dim
 \hom_G(\pi, \rho).\]</span></p>
 <div class="zgled">
 <p><strong>Zgled 2.7</strong>. </p>
@@ -2079,7 +2079,7 @@ v <span class="math inline">\(\rho\)</span> lahko zatorej izračunamo kot
 class="math inline">\(\rho\)</span> grupe <span
 class="math inline">\(\mathbb{R}\)</span> na <span
 class="math inline">\(\mathbb{R}^2\)</span> je <span
-class="math inline">\(\mathop{\mathrm{mult}}_{\mathbf{1}}(\rho) =
+class="math inline">\(\mathop{\mathrm{mult}}_{\rho}(\mathbf{1}) =
 2\)</span>. Ker ta upodobitev ni trivialna, ne more biti polenostavna,
 saj bi sicer bila izomorfna <span
 class="math inline">\(\mathbf{1}^2\)</span>.</p></li>
@@ -2114,9 +2114,9 @@ class="math inline">\(\mathop{\mathrm{sgn}}\colon S_3 \to
 \}\)</span>. Nad poljem <span
 class="math inline">\(\mathbb{Z}/3\mathbb{Z}\)</span> za permutacijsko
 upodobitev <span class="math inline">\(\pi\)</span> tako velja <span
-class="math inline">\(\mathop{\mathrm{mult}}_{\mathbf{1}}(\pi) =
+class="math inline">\(\mathop{\mathrm{mult}}_{\pi}(\mathbf{1}) =
 2\)</span> in <span
-class="math inline">\(\mathop{\mathrm{mult}}_{\mathop{\mathrm{sgn}}}(\pi)
+class="math inline">\(\mathop{\mathrm{mult}}_{\pi}(\mathop{\mathrm{sgn}})
 = 1\)</span>.</p>
 <p>Premislimo, da upodobitev <span class="math inline">\(\pi\)</span>
 nad <span class="math inline">\(\mathbb{Z}/3\mathbb{Z}\)</span>
@@ -2143,78 +2143,158 @@ večkratnostjo vsaj <span class="math inline">\(2\)</span>.<a
 href="#fn27" class="footnote-ref" id="fnref27"
 role="doc-noteref"><sup>27</sup></a></p>
 <p>Oglejmo si tako situacijo še podrobneje. Naj bo <span
+class="math inline">\(G\)</span> grupa z upodobitvijo <span
+class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span>. Naj bo <span
+class="math inline">\(\pi\)</span> neka <em>nerazcepna</em> upodobitev
+grupe <span class="math inline">\(G\)</span>. Opazujmo vse <span
+class="math inline">\(G\)</span>-invariantne podprostore v <span
+class="math inline">\(V\)</span>, ki so kot upodobitve izomorfni <span
+class="math inline">\(\pi\)</span>. Vsota (ne nujno direktna) vseh teh
+podprostorov <span
+class="math display">\[\mathop{\mathrm{Izotip}}_{\rho}(\pi) = \sum_{W
+\leq V, \ W \cong \pi} W\]</span> je <span><strong><em><span
+class="math inline">\(\pi\)</span>-izotipična
+komponenta</em></strong></span> upodobitve <span
+class="math inline">\(\rho\)</span>. Ta je sicer definirana za vsako
+upodobitev, a jo je za polenostavne upodobitve še posebej lahko
+določiti.</p>
+<div class="trditev">
+<p><strong>Trditev 2.3</strong>. Naj bo <span
 class="math inline">\(G\)</span> grupa s polenostavno upodobitvijo <span
 class="math inline">\(\rho = \bigoplus_{i \in I} \rho_i\)</span> na
 prostoru <span class="math inline">\(V = \bigoplus_{i \in I}
 V_i\)</span>, kjer je vsak <span class="math inline">\(\rho_i\)</span>
-nerazcepna podupodobitev. Naj bo <span
-class="math inline">\(\pi\)</span> neka nerazcepna upodobitev na
-prostoru <span class="math inline">\(W\)</span>, ki se pojavi v <span
-class="math inline">\(\rho\)</span>, se pravi <span
-class="math inline">\(\mathop{\mathrm{mult}}_{\pi}(\rho) &gt;
-0\)</span>. Naj bo <span
-class="math display">\[\mathop{\mathrm{Izotip}}_{\pi}(\rho) =
-\bigoplus_{i \in I \colon \ \rho_i \cong \pi} V_i\]</span> zbor vseh
-podprostorov, na katerih <span class="math inline">\(G\)</span> deluje
-kot s <span class="math inline">\(\pi\)</span>. Ta prostor imenujemo
-<span><strong><em><span class="math inline">\(\pi\)</span>-izotipična
-komponenta</em></strong></span> upodobitve <span
-class="math inline">\(\rho\)</span>. Po konstrukciji je ta sicer odvisna
-od izbrane dekompozicije upodobitve <span
-class="math inline">\(\rho\)</span>, a premislimo, da je ta odvisnost le
-navidezna.</p>
-<div class="trditev">
-<p><strong>Trditev 2.3</strong>. Naj bo <span
-class="math inline">\(G\)</span> grupa s polenostavno upodobitvijo <span
-class="math inline">\(\rho\)</span>. Za vsako nerazcepno upodobitev
-<span class="math inline">\(\pi\)</span> grupe <span
+nerazcepna podupodobitev. Za vsako nerazcepno upodobitev <span
+class="math inline">\(\pi\)</span> grupe <span
 class="math inline">\(G\)</span> je <span
-class="math inline">\(\pi\)</span>-izotipična komponenta <span
-class="math inline">\(\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>
-neodvisna od izbire dekompozicije <span
-class="math inline">\(\rho\)</span>, ki opazi njeno polenostavnost.</p>
+class="math display">\[\mathop{\mathrm{Izotip}}_{\rho}(\pi) =
+\bigoplus_{i \in I \colon \ \rho_i \cong \pi} V_i.\]</span></p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Premislimo, da je <span
-class="math inline">\(\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>
-enaka vsoti (ne nujno direktni) vseh <span
-class="math inline">\(G\)</span>-invariantih podprostorov prostora <span
-class="math inline">\(V\)</span> upodobitve <span
-class="math inline">\(\rho\)</span>, ki so kot upodobitev izomorfni
-<span class="math inline">\(\pi\)</span>. Ta opis <span
-class="math inline">\(\pi\)</span>-izotipične komponente je neodvisen od
-izbire polenostavne dekompozicije <span
-class="math inline">\(\rho\)</span>.</p>
-<p>Naj bo <span class="math inline">\(W\)</span> omenjena vsota
-podprostorov, ki so kot upodobitev izomorfni <span
-class="math inline">\(\pi\)</span>. Seveda je <span
-class="math inline">\(\mathop{\mathrm{Izotip}}_{\pi}(\rho) \leq
-W\)</span>. Dokažimo, da velja tudi obratna neenakost. Naj bo <span
-class="math inline">\(U\)</span> direktna vsota tistih prostorov <span
+<p><em>Proof.</em> Naj bo <span class="math inline">\(W\)</span>
+direktna vsota podprostorov <span class="math inline">\(V_i\)</span>, ki
+so kot upodobitev izomorfni <span class="math inline">\(\pi\)</span>.
+Seveda je <span class="math inline">\(W \leq
+\mathop{\mathrm{Izotip}}_{\rho}(\pi)\)</span>. Dokažimo, da velja tudi
+obratna neenakost. Naj bo <span class="math inline">\(U\)</span>
+direktna vsota tistih prostorov <span
 class="math inline">\(V_i\)</span>, ki kot upodobitev <em>niso</em>
 izomorfni <span class="math inline">\(\pi\)</span>. Velja <span
-class="math inline">\(V = \mathop{\mathrm{Izotip}}_{\pi}(\rho) \oplus
-U\)</span>. Opazujmo projekcijo <span class="math inline">\(p \colon V
-\to U\)</span> z jedrom <span
-class="math inline">\(\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>. Naj
-bo <span class="math inline">\(Z \leq W\)</span> podprostor, ki je kot
+class="math inline">\(V = W \oplus U\)</span>. Opazujmo projekcijo <span
+class="math inline">\(p \colon V \to U\)</span> z jedrom <span
+class="math inline">\(W\)</span>. Naj bo <span class="math inline">\(Z
+\leq \mathop{\mathrm{Izotip}}_{\rho}(\pi)\)</span> podprostor, ki je kot
 upodobitev izomorfen <span class="math inline">\(\pi\)</span>. Zožitev
 <span class="math inline">\(p|_Z\)</span> je spletična v <span
 class="math inline">\(\hom_G(Z, U)\)</span>, ki je po Schurovi lemi
 ničeln prostor. Torej je <span class="math inline">\(p(Z) = 0\)</span>
-in s tem <span class="math inline">\(Z \leq
-\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>. Ker je bil <span
+in s tem <span class="math inline">\(Z \leq W\)</span>. Ker je bil <span
 class="math inline">\(Z\)</span> poljuben, smo s tem dokazali <span
-class="math inline">\(W \leq
-\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>. ◻</p>
+class="math inline">\(\mathop{\mathrm{Izotip}}_{\rho}(\pi) \leq
+W\)</span>. ◻</p>
+</div>
+<p>Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo
+<span class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span> in nerazcepno upodobitvijo <span
+class="math inline">\(\pi\)</span> na prostoru <span
+class="math inline">\(W\)</span>. Vsak <span
+class="math inline">\(G\)</span>-invarianten podprostor v <span
+class="math inline">\(V\)</span>, ki je kot upodobitev izomorfen <span
+class="math inline">\(\pi\)</span>, lahko dobimo kot sliko prostora
+<span class="math inline">\(W\)</span> z neko spletično v <span
+class="math inline">\(\hom_G(\pi, \rho)\)</span>.<a href="#fn28"
+class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>
+Vsoto vseh takih <span class="math inline">\(G\)</span>-invariatnih
+podprostorov lahko torej zajamemo kot sliko linearne preslikave <span
+class="math display">\[\Sigma_{\pi, \rho} \colon \hom_G(\pi, \rho)
+\otimes W \to V, \quad
+    \Phi \otimes w \mapsto \Phi(w).\]</span> S tem je <span
+class="math inline">\(\mathop{\mathrm{im}}\Sigma_{\pi, \rho} =
+\mathop{\mathrm{Izotip}}_{\rho}{\pi}\)</span>. Grupa <span
+class="math inline">\(G\)</span> deluje na <span
+class="math inline">\(\hom_G(\pi, \sigma) = \hom(W,V)^G\)</span>
+trivialno, na <span class="math inline">\(W\)</span> pa prek <span
+class="math inline">\(\pi\)</span>. Na ta način je <span
+class="math inline">\(\Sigma_{\pi, \rho}\)</span> celo spletična
+upodobitev.</p>
+<div class="trditev">
+<p><strong>Trditev 2.4</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa z upodobitvijo <span
+class="math inline">\(\rho\)</span> in nerazcepno upodobitvijo <span
+class="math inline">\(\pi\)</span> nad algebraično zaprtim poljem.
+Predpostavimo, da je <span class="math inline">\(\dim \hom_G(\pi, \rho)
+&lt; \infty\)</span>. Tedaj je <span class="math inline">\(\Sigma_{\pi,
+\rho}\)</span> injektivna.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Naj bo <span class="math inline">\(\{ \Phi_i \}_{i
+\in I}\)</span> baza prostora <span class="math inline">\(\hom_G(\pi,
+\rho)\)</span>. Premislimo, da prostori <span
+class="math inline">\(\mathop{\mathrm{im}}\Phi_i\)</span> tvorijo
+notranjo direktno vsoto v <span class="math inline">\(V\)</span>.
+Injektivnost <span class="math inline">\(\Sigma_{\pi, \rho}\)</span> od
+tod neposredno sledi.</p>
+<p>Dokazujemo s protislovjem. Naj bo <span class="math inline">\(J
+\subseteq I\)</span> množica najmanjše moči, za katero prostori <span
+class="math inline">\(\mathop{\mathrm{im}}\Phi_j\)</span> za <span
+class="math inline">\(j \in J\)</span> <em>ne</em> tvorijo direktne
+vsote. Obstaja torej <span class="math inline">\(k \in J\)</span>, da je
+<span class="math display">\[\mathop{\mathrm{im}}\Phi_k \cap \sum_{j \in
+J \backslash \{ k \}} \mathop{\mathrm{im}}\Phi_j \neq 0.\]</span> Po
+nerazcepnosti <span class="math inline">\(\pi\)</span> je spletična
+<span class="math inline">\(\Phi_k\)</span> injektivna, zato je <span
+class="math inline">\(\mathop{\mathrm{im}}\Phi_k\)</span> nujno
+vsebovana v vsoti <span class="math inline">\(\sum_{j \in J \backslash
+\{ k \}} \mathop{\mathrm{im}}\Phi_j\)</span>. Po minimalnosti <span
+class="math inline">\(J\)</span> je zadnja vsota direktna, zato je <span
+class="math display">\[\Phi_k \in \hom_G(W, \bigoplus_{j \in J
+\backslash \{ k \}} \mathop{\mathrm{im}}\Phi_j).\]</span> Slednji
+prostor je direktna vsota prostorov <span
+class="math inline">\(\hom_G(W, \mathop{\mathrm{im}}\Phi_j)\)</span>. Po
+Schurovi lemi je vsak od teh bodisi ničeln bodisi enorazsežen. V
+neničelnem primeru je seveda <span class="math inline">\(\hom_G(W,
+\mathop{\mathrm{im}}\Phi_j)\)</span> generiran s spletično <span
+class="math inline">\(\Phi_j\)</span>. Od tod sledi, da je <span
+class="math inline">\(\Phi_k\)</span> linearna kombinacija spletičen
+<span class="math inline">\(\Phi_j\)</span> za <span
+class="math inline">\(j \in J \backslash \{ k \}\)</span>. To je
+protislovno z dejstvom, da je <span class="math inline">\(\{ \Phi_i
+\}_{i \in I}\)</span> baza prostora <span
+class="math inline">\(\hom_G(\pi, \rho)\)</span>. ◻</p>
+</div>
+<div class="posledica">
+<p><strong>Posledica 2.4</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa s končnorazsežno upodobitvijo
+<span class="math inline">\(\rho\)</span> in nerazcepno upodobitvijo
+<span class="math inline">\(\pi\)</span> nad algebraično zaprtim poljem.
+Izotipična komponenta <span
+class="math inline">\(\mathop{\mathrm{Izotip}}_{\rho}(\pi)\)</span> je
+polenostavna, <span class="math inline">\(\pi\)</span>-izotipična in
+vsebuje <span class="math inline">\(\pi\)</span> z večkratnostjo <span
+class="math inline">\(\dim \hom_G(\pi, \rho)\)</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Iz injektivnosti <span
+class="math inline">\(\Sigma_{\pi, \rho}\)</span> sledi <span
+class="math inline">\(\mathop{\mathrm{Izotip}}_{\rho}(\pi) \cong
+\hom_G(\pi, \sigma) \otimes W\)</span>. Ker grupa <span
+class="math inline">\(G\)</span> deluje trivialno na <span
+class="math inline">\(\hom_G(\pi, \sigma)\)</span>, je prostor <span
+class="math inline">\(\hom_G(\pi, \sigma) \otimes W\)</span> kot
+upodobitev izomorfen direktni vsoti <span class="math inline">\(\dim
+\hom_G(\pi, \sigma)\)</span> kopij prostora <span
+class="math inline">\(W\)</span>, na katerem <span
+class="math inline">\(G\)</span> deluje s <span
+class="math inline">\(\pi\)</span>. ◻</p>
 </div>
 <div class="domacanaloga">
 <p><strong>Domača naloga 2.4</strong>. Naj bo <span
-class="math inline">\(G\)</span> grupa s polenostavno upodobitvijo <span
-class="math inline">\(\rho\)</span> na prostoru <span
-class="math inline">\(V\)</span>. Premisli, da je <span
-class="math inline">\(V\)</span> direktna vsota izotipičnih komponent,
-ki pripadajo paroma neizomorfnim nerazcepnim upodobitvam.</p>
+class="math inline">\(G\)</span> grupa s končnorazsežno upodobitvijo
+<span class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span>. Premisli, da se izotipične komponente,
+ki pripadajo paroma neizomorfnim nerazcepnim upodobitvam, sekajo
+trivialno.</p>
 </div>
 <div class="zgled">
 <p><strong>Zgled 2.8</strong>. </p>
@@ -2255,11 +2335,11 @@ class="math inline">\(\pi\)</span> neka njena enorazsežna upodobitev.
 Taka upodobitev je seveda nerazcepna. Vektor <span
 class="math inline">\(v \in V\)</span> pripada izotipični komponenti
 <span
-class="math inline">\(\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>, če
+class="math inline">\(\mathop{\mathrm{Izotip}}_{\rho}(\pi)\)</span>, če
 in samo če grupa <span class="math inline">\(G\)</span> na prostoru
 <span class="math inline">\(\langle v \rangle\)</span> deluje kot s
 <span class="math inline">\(\pi\)</span>, se pravi <span
-class="math display">\[\mathop{\mathrm{Izotip}}_{\pi}(\rho) = \left\{ v
+class="math display">\[\mathop{\mathrm{Izotip}}_{\rho}(\pi) = \left\{ v
 \in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v
 \right\}.\]</span></p>
 <p>Kadar je grupa <span class="math inline">\(G\)</span> abelova, je
@@ -2270,9 +2350,59 @@ svojih enorazsežnih upodobitev.</p></li>
 </ul>
 </div>
 <h2 id="matrični-koeficienti">Matrični koeficienti</h2>
-<p>Do zdaj smo upodobitve obravnavali z bolj konceptualnega
-stališča.</p>
+<p>Vsaka upodobitev dane grupe je homomorfizem v grupo obrnljivih matrik
+<span class="math inline">\(\mathop{\mathrm{GL}}(V)\)</span>. Do sedaj
+smo na upodobitve gledali z bolj konceptualnega stališča: govorili smo o
+strukturi prostora <span class="math inline">\(V\)</span> in o njegovi
+morebitni dekompoziciji na nerazcepne upodobitve. Zdaj si bomo z vsako
+od teh umazali roke in jo pogledali še podrobneje.</p>
+<p>Predpostavimo, da je prostor <span class="math inline">\(V\)</span>
+končnorazsežen. Izberimo bazo prostora <span
+class="math inline">\(V\)</span> in s tem izomorfizem <span
+class="math inline">\(V \cong F^n\)</span> za nek <span
+class="math inline">\(n\)</span>, tako da je upodobitev dana s
+homomorfizmom <span class="math inline">\(\rho \colon G \to
+\mathop{\mathrm{GL}}_n(F)\)</span>. Vsak tak homomorfizem je <em>po
+komponentah</em> podan s svojimi <span><strong><em>matričnimi
+koeficienti</em></strong></span>; to so funkcije <span
+class="math display">\[f_{i,j} \colon G \to F, \quad
+    g \mapsto \langle e_i^*, \rho(g) \cdot e_j \rangle =
+\rho(g)_{i,j}\]</span> za <span class="math inline">\(i,j \in \{ 1, 2,
+\dots, n \}\)</span>.<a href="#fn29" class="footnote-ref" id="fnref29"
+role="doc-noteref"><sup>29</sup></a></p>
 <h3 id="neodvisnost-koeficientov">Neodvisnost koeficientov</h3>
+<p>Matrične koeficiente lahko vidimo kot elemente vektorskega prostora
+funkcij <span class="math inline">\(\hom(G,F)\)</span> iz <span
+class="math inline">\(G\)</span> v <span
+class="math inline">\(F\)</span>. Še več,</p>
+<p>Naslednji izrek pove, da lahko na podlagi <em>linearnih</em>
+lastnosti teh matričnih koeficientov prepoznamo nerazcepne
+upodobitve.</p>
+<div class="izrek">
+<p><strong>Izrek 2.2</strong> (Burnsideov izrek o nerazcepnosti). Naj bo
+<span class="math inline">\(G\)</span> grupa z upodobitvijo <span
+class="math inline">\(\rho \colon G \to
+\mathop{\mathrm{GL}}_n(F)\)</span> nad algebraično zaprtim poljem <span
+class="math inline">\(F\)</span>. Tedaj je <span
+class="math inline">\(\rho\)</span> nerazcepna, če in samo če so
+matrični koeficienti <span class="math inline">\(\{ f_{i,j} \mid 1 \leq
+i,j \leq \deg(\rho) \}\)</span> neodvisni kot vektorji v <span
+class="math inline">\(\hom(G,F)\)</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span class="math inline">\((\Leftarrow):\)</span> Če
+je upodobitev <span class="math inline">\(\rho\)</span> razcepna, potem
+jo lahko po morebitni zamenjavi baze zapišemo v bločnozgornjetrikotni
+obliki, pri čemer je člen v spodnjem levem kotu vselej enak <span
+class="math inline">\(0\)</span>. Ta matrični koeficient lahko razvijemo
+po koeficientih <span class="math inline">\(f_{i,j}\)</span>, od koder
+dobimo netrivialno linearno odvisnost teh koeficientov. <span
+class="math inline">\(\checkmark\)</span></p>
+<p><span class="math inline">\((\Rightarrow):\)</span> - razpenjajo
+izotipično komponento - jih je <span class="math inline">\(n^2\)</span>
+- dimenzija izotipične komponente je tudi <span
+class="math inline">\(n^2\)</span> ◻</p>
+</div>
 <h3 id="povezava-z-regularno-upodobitvijo">Povezava z regularno
 upodobitvijo</h3>
 <h3 id="karakterji">Karakterji</h3>
@@ -2441,6 +2571,22 @@ trivialna, se pravi <span class="math inline">\(V =
 class="math inline">\(V\)</span> in prek nje dobimo nek drug izomorfizem
 <span class="math inline">\(V \cong \mathbf{1}^k\)</span>.<a
 href="#fnref27" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn28" role="doc-endnote"><p>Vsaka neničelna spletična v <span
+class="math inline">\(\hom_G(\pi, \rho)\)</span> je namreč injektivna.<a
+href="#fnref28" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn29" role="doc-endnote"><p>O matričnih koeficientih upodobitve
+<span class="math inline">\(\rho\)</span> lahko abstraktneje govorimo
+tudi brez izbire baze prostora. Za vsak vektor <span
+class="math inline">\(v \in V\)</span> in kovektor <span
+class="math inline">\(\lambda \in V^*\)</span> definiramo <span
+class="math inline">\(f_{v, \lambda} \colon G \to F\)</span>, <span
+class="math inline">\(g \mapsto \langle \lambda, \rho(g) \cdot v
+\rangle\)</span>. Kadar je prostor <span
+class="math inline">\(V\)</span> končnorazsežen, lahko vsak vektor
+razvijemo po izbrani bazi in vsak kovektor po dualni bazi, s čimer
+abstraktni matrični koeficient razvijemo po običajnih matričnih
+koeficientih.<a href="#fnref29" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
         </div>
