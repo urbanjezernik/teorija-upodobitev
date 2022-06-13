@@ -1203,7 +1203,7 @@ zato je $g \cdot f_{v, \lambda} = f_{\pi(g) \cdot v, \lambda} \in \MK(\pi)$.
 Matrični koeficienti upodobitve $\pi$ nam torej dajejo podupodobitev na prostoru $\MK(\pi)$ znotraj regularne upodobitve $\rho_{\hom}$ na $\hom(G,F)$. Ni presenetljivo, da je ta podupodobitev v resnici tesno povezana s $\pi$.
 
 \begin{izrek}
-Naj bo $G$ grupa s končnorazsežno nerazcepno upodobitvijo $\pi$. Tedaj je
+Naj bo $G$ grupa s končnorazsežno nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem. Tedaj je
 \[
     \MK(\pi) = \Izotip_{\rho_{\hom}}(\pi)
 \]
@@ -1228,6 +1228,17 @@ prostora $\Izotip_{\rho_{\hom}}(\pi)$. V izbranih bazah torej matrični koeficie
 \end{dokaz}
 
 V posebnem smo tekom dokaza zadnje trditve izpeljali, da so po izbiri baze matrični koeficienti končnorazsežne nerazcepne upodobitve $\pi$ vselej linearno neodvisni.\footnote{Temu dejstvu včasih pravimo \emph{Burnsideov izrek o neracepnosti}.} Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodbitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
+
+Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve \emph{končno mnogo} nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam podari svoje matrične koeficiente $\MK(\pi_i)$. Ti so enakim izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med sabo. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$. Vsi ti koeficienti so pravzaprav elementi prostora funkcij $\hom(G,F)$, zato lahko v primeru, ko je grupa končna, od tod izpeljemo neenakost
+\[
+    \sum_{i \in I} \deg(\pi_i)^2 \leq \dim \hom(G,F) = |G|.
+\]
+
+\begin{posledica}
+Končna grupa ima nad algebraično zaprtim poljem le končno mnogo nerazcepnih upodobitev. Vsaka od njih je stopnje kvečjemu $\sqrt{|G|}$.
+\end{posledica}
+
+Več o upodobitvah končnih grup si bomo pogledali nekoliko kasneje.
 
 \subsection{Karakterji}
 
