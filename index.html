@@ -107,9 +107,9 @@ id="toc-izotipične-komponente">Izotipične komponente</a></li>
 <li><a href="#matrični-koeficienti"
 id="toc-matrični-koeficienti">Matrični koeficienti</a>
 <ul>
-<li><a href="#koeficienti-in-regularna-upodobitev"
-id="toc-koeficienti-in-regularna-upodobitev">Koeficienti in regularna
-upodobitev</a></li>
+<li><a href="#matrični-koeficienti-in-regularna-upodobitev"
+id="toc-matrični-koeficienti-in-regularna-upodobitev">Matrični
+koeficienti in regularna upodobitev</a></li>
 <li><a href="#karakterji" id="toc-karakterji">Karakterji</a></li>
 </ul></li>
 </ul></li>
@@ -2367,41 +2367,109 @@ koeficienti</em></strong></span>; to so funkcije <span
 class="math display">\[f_{i,j} \colon G \to F, \quad
     g \mapsto \langle e_i^*, \rho(g) \cdot e_j \rangle =
 \rho(g)_{i,j}\]</span> za <span class="math inline">\(i,j \in \{ 1, 2,
-\dots, n \}\)</span>.<a href="#fn29" class="footnote-ref" id="fnref29"
-role="doc-noteref"><sup>29</sup></a></p>
-<h3 id="koeficienti-in-regularna-upodobitev">Koeficienti in regularna
-upodobitev</h3>
+\dots, n \}\)</span>.</p>
+<p>O matričnih koeficientih upodobitve <span
+class="math inline">\(\rho\)</span> lahko abstraktneje govorimo tudi
+brez izbire baze prostora. Za vsak vektor <span class="math inline">\(v
+\in V\)</span> in kovektor <span class="math inline">\(\lambda \in
+V^*\)</span> definiramo <span class="math inline">\(f_{v, \lambda}
+\colon G \to F\)</span>, <span class="math inline">\(g \mapsto \langle
+\lambda, \rho(g) \cdot v \rangle\)</span>. To so
+<span><strong><em>posplošeni matrični koeficienti</em></strong></span>.
+Kadar je prostor <span class="math inline">\(V\)</span> končnorazsežen,
+lahko vsak vektor razvijemo po izbrani bazi in vsak kovektor po dualni
+bazi, s čimer posplošeni matrični koeficient razvijemo po običajnih
+matričnih koeficientih.</p>
+<h3 id="matrični-koeficienti-in-regularna-upodobitev">Matrični
+koeficienti in regularna upodobitev</h3>
 <p>Matrične koeficiente lahko vidimo kot elemente vektorskega prostora
 funkcij <span class="math inline">\(\hom(G,F)\)</span> iz <span
 class="math inline">\(G\)</span> v <span
-class="math inline">\(F\)</span>.</p>
-<p>Na podlagi <em>linearnih</em> lastnosti teh matričnih koeficientov
-lahko prepoznamo nerazcepne upodobitve.</p>
-<div class="posledica">
-<p><strong>Posledica 2.5</strong> (Burnsideov izrek o nerazcepnosti).
-Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo <span
-class="math inline">\(\rho \colon G \to
-\mathop{\mathrm{GL}}_n(F)\)</span> nad algebraično zaprtim poljem <span
-class="math inline">\(F\)</span>. Tedaj je <span
-class="math inline">\(\rho\)</span> nerazcepna, če in samo če so
-matrični koeficienti <span class="math inline">\(\{ f_{i,j} \mid 1 \leq
-i,j \leq \deg(\rho) \}\)</span> neodvisni kot vektorji v <span
-class="math inline">\(\hom(G,F)\)</span>.</p>
+class="math inline">\(F\)</span>. Na tem prostoru deluje grupa <span
+class="math inline">\(G\)</span> z regularno upodobitvijo <span
+class="math inline">\(\rho_{\hom}\)</span>. Naj bo <span
+class="math inline">\(\mathop{\mathrm{MK}}(\pi) \leq \hom(G,F)\)</span>
+podprostor, ki ga razpenjajo matrični koeficienti neke končnorazsežne
+nerazcepne upodobitve <span class="math inline">\(\pi\)</span>.<a
+href="#fn29" class="footnote-ref" id="fnref29"
+role="doc-noteref"><sup>29</sup></a></p>
+<div class="trditev">
+<p><strong>Trditev 2.5</strong>. <span
+class="math inline">\(\mathop{\mathrm{MK}}(\pi)\)</span> je <span
+class="math inline">\(G\)</span>-invarianten podprostor.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> <span class="math inline">\((\Leftarrow):\)</span> Če
-je upodobitev <span class="math inline">\(\rho\)</span> razcepna, potem
-jo lahko po morebitni zamenjavi baze zapišemo v bločnozgornjetrikotni
-obliki, pri čemer je člen v spodnjem levem kotu vselej enak <span
-class="math inline">\(0\)</span>. Ta matrični koeficient lahko razvijemo
-po koeficientih <span class="math inline">\(f_{i,j}\)</span>, od koder
-dobimo netrivialno linearno odvisnost teh koeficientov. <span
-class="math inline">\(\checkmark\)</span></p>
-<p><span class="math inline">\((\Rightarrow):\)</span> - razpenjajo
-izotipično komponento - jih je <span class="math inline">\(n^2\)</span>
-- dimenzija izotipične komponente je tudi <span
-class="math inline">\(n^2\)</span> ◻</p>
+<p><em>Proof.</em> Naj bo <span class="math inline">\(g \in G\)</span>
+in <span class="math inline">\(f_{v, \lambda}\)</span> posplošen
+matrični koeficient. Velja <span class="math display">\[g \cdot f_{v,
+\lambda} \colon x \mapsto f_{v, \lambda}(xg) =
+    \langle \lambda, \pi(xg) \cdot v \rangle =
+    f_{\pi(g) \cdot v, \lambda}(x),\]</span> zato je <span
+class="math inline">\(g \cdot f_{v, \lambda} = f_{\pi(g) \cdot v,
+\lambda} \in \mathop{\mathrm{MK}}(\pi)\)</span>. ◻</p>
 </div>
+<p>Matrični koeficienti upodobitve <span
+class="math inline">\(\pi\)</span> nam torej dajejo podupodobitev na
+prostoru <span class="math inline">\(\mathop{\mathrm{MK}}(\pi)\)</span>
+znotraj regularne upodobitve <span
+class="math inline">\(\rho_{\hom}\)</span> na <span
+class="math inline">\(\hom(G,F)\)</span>. Ni presenetljivo, da je ta
+podupodobitev v resnici tesno povezana s <span
+class="math inline">\(\pi\)</span>.</p>
+<div class="izrek">
+<p><strong>Izrek 2.2</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa s končnorazsežno nerazcepno
+upodobitvijo <span class="math inline">\(\pi\)</span>. Tedaj je <span
+class="math display">\[\mathop{\mathrm{MK}}(\pi) =
+\mathop{\mathrm{Izotip}}_{\rho_{\hom}}(\pi)\]</span> in večkratnost
+<span class="math inline">\(\pi\)</span> v slednji upodobitvi je enaka
+<span class="math inline">\(\deg(\pi)\)</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Naj bo <span class="math inline">\(\pi\)</span>
+upodobitev na prostoru <span class="math inline">\(W\)</span>. Spomnimo
+se, da <span class="math inline">\(\pi\)</span>-izotipična komponenta v
+<span class="math inline">\(\rho_{\hom}\)</span> sestoji iz vektorjev
+oblike <span class="math inline">\(\Phi(w)\)</span> za <span
+class="math inline">\(\Phi \in \hom_G(\pi, \rho_{\hom})\)</span> in
+<span class="math inline">\(w \in W\)</span>. Regularno upodobitev
+predstavimo kot inducirano upodobitev <span
+class="math inline">\(\rho_{\hom} =
+\mathop{\mathrm{Ind}}^G_1(\mathbf{1})\)</span>. Po adjunkciji med
+restrikcijo in indukcijo je <span class="math display">\[\hom_G(\pi,
+\rho_{\hom}) \cong \hom_1(\mathop{\mathrm{Res}}^G_1(\pi), \mathbf{1})
+    = \hom(\mathbf{1}^{\deg(\pi)}, \mathbf{1}).\]</span> Standardna
+dualna baza <span class="math inline">\(\{ e_i^* \mid 1 \leq i \leq
+\deg(\pi) \}\)</span> v zadnjem vektorskem prostoru nam po tej
+adjunkciji porodi bazo <span class="math display">\[\Phi_i \colon W \to
+\hom(G,F), \quad
+    w \mapsto \left( g \mapsto \langle e_i^*, \pi(g) \cdot w \rangle
+\right) = f_{e_i^*, w}(x)\]</span> za <span class="math inline">\(1 \leq
+i \leq \deg(\pi)\)</span> prostora spletičen <span
+class="math inline">\(\hom_G(\pi, \rho_{\hom})\)</span>. Ko te bazne
+spletične evalviramo na neki izbrani bazi <span class="math inline">\(\{
+f_j \mid 1 \leq j \leq \deg(\pi) \}\)</span> prostora <span
+class="math inline">\(W\)</span>, dobimo bazo<a href="#fn30"
+class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>
+<span class="math display">\[\Phi_i(f_j) = f_{i,j}\]</span> prostora
+<span
+class="math inline">\(\mathop{\mathrm{Izotip}}_{\rho_{\hom}}(\pi)\)</span>.
+V izbranih bazah torej matrični koeficienti tvorijo bazo za <span
+class="math inline">\(\pi\)</span>-izotipično komponento regularne
+upodobitve. Večkratnost <span class="math inline">\(\pi\)</span> v njej
+je enaka <span class="math inline">\(\dim \hom_G(\pi, \rho_{\hom}) =
+\deg(\pi)\)</span>. ◻</p>
+</div>
+<p>V posebnem smo tekom dokaza zadnje trditve izpeljali, da so po izbiri
+baze matrični koeficienti končnorazsežne nerazcepne upodobitve <span
+class="math inline">\(\pi\)</span> vselej linearno neodvisni.<a
+href="#fn31" class="footnote-ref" id="fnref31"
+role="doc-noteref"><sup>31</sup></a> Vseh je ravno <span
+class="math inline">\(\deg(\pi)^2\)</span> in znotraj regularne
+upodbitve tvorijo podupodobitev <span
+class="math inline">\(\mathop{\mathrm{MK}}(\pi)\)</span>, ki sestoji iz
+<span class="math inline">\(\deg(\pi)\)</span> mnogo kopij upodobitve
+<span class="math inline">\(\pi\)</span>.</p>
 <h3 id="karakterji">Karakterji</h3>
 <h1 id="upodobitve-končnih-grup">Upodobitve končnih grup</h1>
 <h2 id="polenostavnost-in-regularna-upodobitev">Polenostavnost in
@@ -2571,19 +2639,20 @@ href="#fnref27" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn28" role="doc-endnote"><p>Vsaka neničelna spletična v <span
 class="math inline">\(\hom_G(\pi, \rho)\)</span> je namreč injektivna.<a
 href="#fnref28" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn29" role="doc-endnote"><p>O matričnih koeficientih upodobitve
-<span class="math inline">\(\rho\)</span> lahko abstraktneje govorimo
-tudi brez izbire baze prostora. Za vsak vektor <span
-class="math inline">\(v \in V\)</span> in kovektor <span
-class="math inline">\(\lambda \in V^*\)</span> definiramo <span
-class="math inline">\(f_{v, \lambda} \colon G \to F\)</span>, <span
-class="math inline">\(g \mapsto \langle \lambda, \rho(g) \cdot v
-\rangle\)</span>. Kadar je prostor <span
-class="math inline">\(V\)</span> končnorazsežen, lahko vsak vektor
-razvijemo po izbrani bazi in vsak kovektor po dualni bazi, s čimer
-abstraktni matrični koeficient razvijemo po običajnih matričnih
-koeficientih.<a href="#fnref29" class="footnote-back"
+<li id="fn29" role="doc-endnote"><p>Prostor <span
+class="math inline">\(\mathop{\mathrm{MK}}(\pi)\)</span> je enak
+prostoru, ki ga razpenjajo posplošeni matrični koeficienti upodobitve
+<span class="math inline">\(\pi\)</span>, zato je neodvisen od izbire
+baze.<a href="#fnref29" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
+<li id="fn30" role="doc-endnote"><p>Preslikava <span
+class="math inline">\(\Sigma_{\pi, \rho_{\hom}}\)</span> je injektivna,
+ker je <span class="math inline">\(\dim \hom_G(\pi, \rho_{\hom}) =
+\deg(\pi) &lt; \infty\)</span>.<a href="#fnref30" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn31" role="doc-endnote"><p>Temu dejstvu včasih pravimo
+<em>Burnsideov izrek o neracepnosti</em>.<a href="#fnref31"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
         </div>

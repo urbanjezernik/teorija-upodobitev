@@ -72,6 +72,7 @@
 \DeclareMathOperator\Rep{Rep}
 \DeclareMathOperator\mult{mult}
 \DeclareMathOperator\Izotip{Izotip}
+\DeclareMathOperator\MK{MK}
 
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\GL{GL}
@@ -1178,35 +1179,55 @@ Predpostavimo, da je prostor $V$ končnorazsežen. Izberimo bazo prostora $V$ in
     f_{i,j} \colon G \to F, \quad
     g \mapsto \langle e_i^*, \rho(g) \cdot e_j \rangle = \rho(g)_{i,j}
 \]
-za $i,j \in \{ 1, 2, \dots, n \}$.\footnote{O matričnih koeficientih upodobitve $\rho$ lahko abstraktneje govorimo tudi brez izbire baze prostora. Za vsak vektor $v \in V$ in kovektor $\lambda \in V^*$ definiramo $f_{v, \lambda} \colon G \to F$, $g \mapsto \langle \lambda, \rho(g) \cdot v \rangle$. Kadar je prostor $V$ končnorazsežen, lahko vsak vektor razvijemo po izbrani bazi in vsak kovektor po dualni bazi, s čimer abstraktni matrični koeficient razvijemo po običajnih matričnih koeficientih.}
+za $i,j \in \{ 1, 2, \dots, n \}$. 
 
-\subsection{Koeficienti in regularna upodobitev}
+O matričnih koeficientih upodobitve $\rho$ lahko abstraktneje govorimo tudi brez izbire baze prostora. Za vsak vektor $v \in V$ in kovektor $\lambda \in V^*$ definiramo $f_{v, \lambda} \colon G \to F$, $g \mapsto \langle \lambda, \rho(g) \cdot v \rangle$. To so {\definicija posplošeni matrični koeficienti}. Kadar je prostor $V$ končnorazsežen, lahko vsak vektor razvijemo po izbrani bazi in vsak kovektor po dualni bazi, s čimer posplošeni matrični koeficient razvijemo po običajnih matričnih koeficientih.
 
-Matrične koeficiente lahko vidimo kot elemente vektorskega prostora funkcij $\hom(G,F)$ iz $G$ v $F$.
+\subsection{Matrični koeficienti in regularna upodobitev}
 
-\todo[inline]{
-    - tvorijo podupodobitev regularne
-    - to podupodobitev prepoznamo z adjunkcijo in izotipično komponento
-    - posledica: koeficienti so neodvisni
+Matrične koeficiente lahko vidimo kot elemente vektorskega prostora funkcij $\hom(G,F)$ iz $G$ v $F$. Na tem prostoru deluje grupa $G$ z regularno upodobitvijo $\rho_{\hom}$. Naj bo $\MK(\pi) \leq \hom(G,F)$ podprostor, ki ga razpenjajo matrični koeficienti neke končnorazsežne nerazcepne upodobitve $\pi$.\footnote{Prostor $\MK(\pi)$ je enak prostoru, ki ga razpenjajo posplošeni matrični koeficienti upodobitve $\pi$, zato je neodvisen od izbire baze.}
 
--Corollary 2.7.30 (Matrix coefficients as subrepresentations of the regular representation).
-- Proposition 2.7.34 (Isotypic component of the regular representation). 
-}
-
-
-Na podlagi \emph{linearnih} lastnosti teh matričnih koeficientov lahko prepoznamo nerazcepne upodobitve.
-
-\begin{posledica}[Burnsideov izrek o nerazcepnosti]
-Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL_n(F)$ nad algebraično zaprtim poljem $F$. Tedaj je $\rho$ nerazcepna, če in samo če so matrični koeficienti $\{ f_{i,j} \mid 1 \leq i,j \leq \deg(\rho) \}$ neodvisni kot vektorji v $\hom(G,F)$.
-\end{posledica}
+\begin{trditev}
+$\MK(\pi)$ je $G$-invarianten podprostor.
+\end{trditev}
 \begin{dokaz}
-$(\Leftarrow):$ Če je upodobitev $\rho$ razcepna, potem jo lahko po morebitni zamenjavi baze zapišemo v bločnozgornjetrikotni obliki, pri čemer je člen v spodnjem levem kotu vselej enak $0$. Ta matrični koeficient lahko razvijemo po koeficientih $f_{i,j}$, od koder dobimo netrivialno linearno odvisnost teh koeficientov. \kljuka
-
-$(\Rightarrow):$ 
-- razpenjajo izotipično komponento
-- jih je $n^2$
-- dimenzija izotipične komponente je tudi $n^2$
+Naj bo $g \in G$ in $f_{v, \lambda}$ posplošen matrični koeficient. Velja
+\[
+    g \cdot f_{v, \lambda} \colon x \mapsto f_{v, \lambda}(xg) =
+    \langle \lambda, \pi(xg) \cdot v \rangle =
+    f_{\pi(g) \cdot v, \lambda}(x),
+\]
+zato je $g \cdot f_{v, \lambda} = f_{\pi(g) \cdot v, \lambda} \in \MK(\pi)$.
 \end{dokaz}
+
+Matrični koeficienti upodobitve $\pi$ nam torej dajejo podupodobitev na prostoru $\MK(\pi)$ znotraj regularne upodobitve $\rho_{\hom}$ na $\hom(G,F)$. Ni presenetljivo, da je ta podupodobitev v resnici tesno povezana s $\pi$.
+
+\begin{izrek}
+Naj bo $G$ grupa s končnorazsežno nerazcepno upodobitvijo $\pi$. Tedaj je
+\[
+    \MK(\pi) = \Izotip_{\rho_{\hom}}(\pi)
+\]
+in večkratnost $\pi$ v slednji upodobitvi je enaka $\deg(\pi)$.
+\end{izrek}
+\begin{dokaz}
+Naj bo $\pi$ upodobitev na prostoru $W$. Spomnimo se, da $\pi$-izotipična komponenta v $\rho_{\hom}$ sestoji iz vektorjev oblike $\Phi(w)$ za $\Phi \in \hom_G(\pi, \rho_{\hom})$ in $w \in W$. Regularno upodobitev predstavimo kot inducirano upodobitev $\rho_{\hom} = \Ind^G_1(\11)$. Po adjunkciji med restrikcijo in indukcijo je
+\[
+    \hom_G(\pi, \rho_{\hom}) \cong \hom_1(\Res^G_1(\pi), \11)
+    = \hom(\11^{\deg(\pi)}, \11).
+\]
+Standardna dualna baza $\{ e_i^* \mid 1 \leq i \leq \deg(\pi) \}$ v zadnjem vektorskem prostoru nam po tej adjunkciji porodi bazo
+\[
+    \Phi_i \colon W \to \hom(G,F), \quad
+    w \mapsto \left( g \mapsto \langle e_i^*, \pi(g) \cdot w \rangle \right) = f_{e_i^*, w}(x)
+\]
+za $1 \leq i \leq \deg(\pi)$ prostora spletičen $\hom_G(\pi, \rho_{\hom})$. Ko te bazne spletične evalviramo na neki izbrani bazi $\{ f_j \mid 1 \leq j \leq \deg(\pi) \}$ prostora $W$, dobimo bazo\footnote{Preslikava $\Sigma_{\pi, \rho_{\hom}}$ je injektivna, ker je $\dim \hom_G(\pi, \rho_{\hom}) = \deg(\pi) < \infty$.}
+\[
+    \Phi_i(f_j) = f_{i,j}
+\]
+prostora $\Izotip_{\rho_{\hom}}(\pi)$. V izbranih bazah torej matrični koeficienti tvorijo bazo za $\pi$-izotipično komponento regularne upodobitve. Večkratnost $\pi$ v njej je enaka $\dim \hom_G(\pi, \rho_{\hom}) = \deg(\pi)$.
+\end{dokaz}
+
+V posebnem smo tekom dokaza zadnje trditve izpeljali, da so po izbiri baze matrični koeficienti končnorazsežne nerazcepne upodobitve $\pi$ vselej linearno neodvisni.\footnote{Temu dejstvu včasih pravimo \emph{Burnsideov izrek o neracepnosti}.} Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodbitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
 
 \subsection{Karakterji}
 
