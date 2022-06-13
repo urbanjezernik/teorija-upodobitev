@@ -1141,7 +1141,7 @@ Slednji prostor je direktna vsota prostorov $\hom_G(W, \image \Phi_j)$. Po Schur
 \end{dokaz}
 
 \begin{posledica}
-Naj bo $G$ grupa s končnorazsežno upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem. Izotipična komponenta $\Izotip_{\rho}(\pi)$ je polenostavna, $\pi$-izotipična in vsebuje $\pi$ z večkratnostjo $\dim \hom_G(\pi, \rho)$.
+Naj bo $G$ grupa z upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem. Predpostavimo, da je $\hom_G(\pi, \rho) < \infty$. Izotipična komponenta $\Izotip_{\rho}(\pi)$ je polenostavna, $\pi$-izotipična in vsebuje $\pi$ z večkratnostjo $\dim \hom_G(\pi, \rho)$.
 \end{posledica}
 \begin{dokaz}
 Iz injektivnosti $\Sigma_{\pi, \rho}$ sledi $\Izotip_{\rho}(\pi) \cong \hom_G(\pi, \sigma) \otimes W$. Ker grupa $G$ deluje trivialno na $\hom_G(\pi, \sigma)$, je prostor $\hom_G(\pi, \sigma) \otimes W$ kot upodobitev izomorfen direktni vsoti $\dim \hom_G(\pi, \sigma)$ kopij prostora $W$, na katerem $G$ deluje s $\pi$.
@@ -1180,17 +1180,25 @@ Predpostavimo, da je prostor $V$ končnorazsežen. Izberimo bazo prostora $V$ in
 \]
 za $i,j \in \{ 1, 2, \dots, n \}$.\footnote{O matričnih koeficientih upodobitve $\rho$ lahko abstraktneje govorimo tudi brez izbire baze prostora. Za vsak vektor $v \in V$ in kovektor $\lambda \in V^*$ definiramo $f_{v, \lambda} \colon G \to F$, $g \mapsto \langle \lambda, \rho(g) \cdot v \rangle$. Kadar je prostor $V$ končnorazsežen, lahko vsak vektor razvijemo po izbrani bazi in vsak kovektor po dualni bazi, s čimer abstraktni matrični koeficient razvijemo po običajnih matričnih koeficientih.}
 
-\subsection{Neodvisnost koeficientov}
+\subsection{Koeficienti in regularna upodobitev}
 
-Matrične koeficiente lahko vidimo kot elemente vektorskega prostora funkcij $\hom(G,F)$ iz $G$ v $F$. Še več, 
+Matrične koeficiente lahko vidimo kot elemente vektorskega prostora funkcij $\hom(G,F)$ iz $G$ v $F$.
+
+\todo[inline]{
+    - tvorijo podupodobitev regularne
+    - to podupodobitev prepoznamo z adjunkcijo in izotipično komponento
+    - posledica: koeficienti so neodvisni
+
+-Corollary 2.7.30 (Matrix coefficients as subrepresentations of the regular representation).
+- Proposition 2.7.34 (Isotypic component of the regular representation). 
+}
 
 
+Na podlagi \emph{linearnih} lastnosti teh matričnih koeficientov lahko prepoznamo nerazcepne upodobitve.
 
-Naslednji izrek pove, da lahko na podlagi \emph{linearnih} lastnosti teh matričnih koeficientov prepoznamo nerazcepne upodobitve.
-
-\begin{izrek}[Burnsideov izrek o nerazcepnosti]
+\begin{posledica}[Burnsideov izrek o nerazcepnosti]
 Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL_n(F)$ nad algebraično zaprtim poljem $F$. Tedaj je $\rho$ nerazcepna, če in samo če so matrični koeficienti $\{ f_{i,j} \mid 1 \leq i,j \leq \deg(\rho) \}$ neodvisni kot vektorji v $\hom(G,F)$.
-\end{izrek}
+\end{posledica}
 \begin{dokaz}
 $(\Leftarrow):$ Če je upodobitev $\rho$ razcepna, potem jo lahko po morebitni zamenjavi baze zapišemo v bločnozgornjetrikotni obliki, pri čemer je člen v spodnjem levem kotu vselej enak $0$. Ta matrični koeficient lahko razvijemo po koeficientih $f_{i,j}$, od koder dobimo netrivialno linearno odvisnost teh koeficientov. \kljuka
 
@@ -1199,14 +1207,6 @@ $(\Rightarrow):$
 - jih je $n^2$
 - dimenzija izotipične komponente je tudi $n^2$
 \end{dokaz}
-
-\subsection{Povezava z regularno upodobitvijo}
-
-
-\todo[inline]{
--Corollary 2.7.30 (Matrix coefficients as subrepresentations of the regular representation).
-- Proposition 2.7.34 (Isotypic component of the regular representation). 
-}
 
 \subsection{Karakterji}
 
