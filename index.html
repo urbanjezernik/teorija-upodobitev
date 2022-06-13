@@ -46,7 +46,7 @@
 <strong> Urban Jezernik <br>
 Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-Zadnja posodobitev: 11. 06. 2022
+Zadnja posodobitev: 13. 06. 2022
 </div>
 
 <div class="kazalo">
@@ -2049,9 +2049,9 @@ class="math inline">\(\rho\)</span> grupe <span
 class="math inline">\(G\)</span> na končno razsežnem prostoru najdemo
 bazo prostora, v kateri imajo vse matrike <span
 class="math inline">\(\rho(g)\)</span> za <span class="math inline">\(g
-\in G\)</span> <em>bločnozgornjetrikotno</em> obliko. Po drugi strani je
-upodobitev polenostavna, kadar lahko najdemo bazo prostora, v kateri
-imajo vse matrike <em>bločno</em> obliko.</p>
+\in G\)</span> <em>bločnozgornjetrikotno</em> obliko. Po drugi strani
+lahko za <em>polenostavno</em> upodobitev najdemo bazo prostora, v
+kateri imajo vse matrike <em>bločnodiagonalno</em> obliko.</p>
 <h3 id="izotipične-komponente">Izotipične komponente</h3>
 <p>Po zadnjem izreku je za dano upodobitev <span
 class="math inline">\(\rho\)</span> in nerazcepno upodobitev <span
@@ -2066,11 +2066,11 @@ class="math inline">\(\mathop{\mathrm{mult}}_{\pi}(\rho)\)</span>.</p>
 natančno enolično določena s svojimi večkratnostmi. Če je <span
 class="math inline">\(\rho = \bigoplus_{i \in I} \rho_i\)</span>, potem
 je <span class="math display">\[\hom_G(\pi, \rho) = \bigoplus_{i \in I}
-\hom_G(\pi, \rho_i).\]</span> Po Schurovi lemi je vsak od zadnjih
-prostorov spletičen bodisi trivialen bodisi enorazsežen. Večkratnost
-<span class="math inline">\(\pi\)</span> v <span
-class="math inline">\(\rho\)</span> lahko zatorej izračunamo kot <span
-class="math display">\[\mathop{\mathrm{mult}}_{\pi}(\rho) = \dim
+\hom_G(\pi, \rho_i).\]</span> Po Schurovi lemi je (nad algebraično
+zaprtim poljem) vsak od zadnjih prostorov spletičen bodisi trivialen
+bodisi enorazsežen. Večkratnost <span class="math inline">\(\pi\)</span>
+v <span class="math inline">\(\rho\)</span> lahko zatorej izračunamo kot
+<span class="math display">\[\mathop{\mathrm{mult}}_{\pi}(\rho) = \dim
 \hom_G(\pi, \rho).\]</span></p>
 <div class="zgled">
 <p><strong>Zgled 2.7</strong>. </p>
@@ -2208,6 +2208,14 @@ class="math inline">\(Z\)</span> poljuben, smo s tem dokazali <span
 class="math inline">\(W \leq
 \mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>. ◻</p>
 </div>
+<div class="domacanaloga">
+<p><strong>Domača naloga 2.4</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa s polenostavno upodobitvijo <span
+class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span>. Premisli, da je <span
+class="math inline">\(V\)</span> direktna vsota izotipičnih komponent,
+ki pripadajo paroma neizomorfnim nerazcepnim upodobitvam.</p>
+</div>
 <div class="zgled">
 <p><strong>Zgled 2.8</strong>. </p>
 <ul>
@@ -2240,10 +2248,30 @@ class="math inline">\(\bigoplus_{j \in \{ 1,2,\dots,n \}}
 \chi_j\)</span>. Po zadnjem komentarju je vsaka podupodobitev regularne
 upodobitve torej enaka direktni vsoti nekaterih od upodobitev <span
 class="math inline">\(\chi_j\)</span>.</p></li>
-<li></li>
+<li><p>Naj bo <span class="math inline">\(G\)</span> grupa z
+upodobitvijo <span class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span> in naj bo <span
+class="math inline">\(\pi\)</span> neka njena enorazsežna upodobitev.
+Taka upodobitev je seveda nerazcepna. Vektor <span
+class="math inline">\(v \in V\)</span> pripada izotipični komponenti
+<span
+class="math inline">\(\mathop{\mathrm{Izotip}}_{\pi}(\rho)\)</span>, če
+in samo če grupa <span class="math inline">\(G\)</span> na prostoru
+<span class="math inline">\(\langle v \rangle\)</span> deluje kot s
+<span class="math inline">\(\pi\)</span>, se pravi <span
+class="math display">\[\mathop{\mathrm{Izotip}}_{\pi}(\rho) = \left\{ v
+\in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v
+\right\}.\]</span></p>
+<p>Kadar je grupa <span class="math inline">\(G\)</span> abelova, je
+vsaka njena nerazcepna upodobitev nad algebraično zaprtim poljem
+enorazsežna. Vsaka polenostavna upodobitev take grupe je zato direktna
+vsota podprostorov, na katerih grupa deluje s skalarnimi množenji prek
+svojih enorazsežnih upodobitev.</p></li>
 </ul>
 </div>
 <h2 id="matrični-koeficienti">Matrični koeficienti</h2>
+<p>Do zdaj smo upodobitve obravnavali z bolj konceptualnega
+stališča.</p>
 <h3 id="neodvisnost-koeficientov">Neodvisnost koeficientov</h3>
 <h3 id="povezava-z-regularno-upodobitvijo">Povezava z regularno
 upodobitvijo</h3>

@@ -1070,7 +1070,7 @@ Prepričaj se, da velja
 S tem smo za vsak $0 \leq i < n$ našli natanko določen $j$, da je $V_{i+1}/V_i \cong W_{j+1}/W_j$. Premislimo še, da je to prirejanje injektivno. Indeks $j$ je enolično določen s pogojem, da je $V_{i,j+1}/V_{i,j} \neq 0$, kar je po gornjem izomorfizmu enakovredno pogoju $W_{j,i+1}/W_{j,i} \neq 0$. Ker je $W_{j+1}/W_j$ nerazcepen, je slednji pogoj lahko izpolnjen le za \emph{en} indeks $i$.
 \end{dokaz}
 
-Iz izreka sledi, da lahko za vsako upodobitev $\rho$ grupe $G$ na končno razsežnem prostoru najdemo bazo prostora, v kateri imajo vse matrike $\rho(g)$ za $g \in G$ \emph{bločnozgornjetrikotno} obliko. Po drugi strani je upodobitev polenostavna, kadar lahko najdemo bazo prostora, v kateri imajo vse matrike \emph{bločno} obliko.
+Iz izreka sledi, da lahko za vsako upodobitev $\rho$ grupe $G$ na končno razsežnem prostoru najdemo bazo prostora, v kateri imajo vse matrike $\rho(g)$ za $g \in G$ \emph{bločnozgornjetrikotno} obliko. Po drugi strani lahko za \emph{polenostavno} upodobitev najdemo bazo prostora, v kateri imajo vse matrike \emph{bločnodiagonalno} obliko.
 
 \subsection{Izotipične komponente}
 
@@ -1080,7 +1080,7 @@ Kadar je dana upodobitev \emph{polenostavna}, je do izomorfizma natančno enoli�
 \[
     \hom_G(\pi, \rho) = \bigoplus_{i \in I} \hom_G(\pi, \rho_i).
 \]
-Po Schurovi lemi je vsak od zadnjih prostorov spletičen bodisi trivialen bodisi enorazsežen. Večkratnost $\pi$ v $\rho$ lahko zatorej izračunamo kot
+Po Schurovi lemi je (nad algebraično zaprtim poljem) vsak od zadnjih prostorov spletičen bodisi trivialen bodisi enorazsežen. Večkratnost $\pi$ v $\rho$ lahko zatorej izračunamo kot
 \[
     \mult_{\pi}(\rho) = \dim \hom_G(\pi, \rho).
 \]
@@ -1114,6 +1114,10 @@ Premislimo, da je $\Izotip_{\pi}(\rho)$ enaka vsoti (ne nujno direktni) vseh $G$
 Naj bo $W$ omenjena vsota podprostorov, ki so kot upodobitev izomorfni $\pi$. Seveda je $\Izotip_{\pi}(\rho) \leq W$. Dokažimo, da velja tudi obratna neenakost. Naj bo $U$ direktna vsota tistih prostorov $V_i$, ki kot upodobitev \emph{niso} izomorfni $\pi$. Velja $V = \Izotip_{\pi}(\rho) \oplus U$. Opazujmo projekcijo $p \colon V \to U$ z jedrom $\Izotip_{\pi}(\rho)$. Naj bo $Z \leq W$ podprostor, ki je kot upodobitev izomorfen $\pi$. Zožitev $p|_Z$ je spletična v $\hom_G(Z, U)$, ki je po Schurovi lemi ničeln prostor. Torej je $p(Z) = 0$ in s tem $Z \leq \Izotip_{\pi}(\rho)$. Ker je bil $Z$ poljuben, smo s tem dokazali $W \leq \Izotip_{\pi}(\rho)$.
 \end{dokaz}
 
+\begin{domacanaloga}
+Naj bo $G$ grupa s polenostavno upodobitvijo $\rho$ na prostoru $V$. Premisli, da je $V$ direktna vsota izotipičnih komponent, ki pripadajo paroma neizomorfnim nerazcepnim upodobitvam.
+\end{domacanaloga}
+
 \begin{zgled} \leavevmode
 \begin{itemize}
 \item Naj bo $G$ grupa s polenostavno upodobitvijo $\rho = \bigoplus_{i \in I} \rho_i$ na prostoru $V = \bigoplus_{i \in I} V_i$, v kateri vsaka nerazcepna podupodobitev nastopa z večkratnostjo $1$. Upodobitve $\rho_i$ so torej paroma neizomorfne. Izotipične komponente so torej kar enake podprostorom $V_i$. Ker so te komponente neodvisne od izbire dekompozicije, so torej podprostori $V_i$ polenostavne dekompozicije enolično določeni.
@@ -1122,16 +1126,19 @@ Naj bo $W \leq V$ nek $G$-invarianten podprostor. Upodobitev $G$ na tem podprost
 
 Za konkreten zgled lahko vzamemo ciklično grupo $\ZZ/n\ZZ$ in njeno regularno upodobitev, ki smo jo razcepili na direktno vsoto upodobitev $\bigoplus_{j \in \{ 1,2,\dots,n \}} \chi_j$. Po zadnjem komentarju je vsaka podupodobitev regularne upodobitve torej enaka direktni vsoti nekaterih od upodobitev $\chi_j$.
 
-\item \todo{Kako izgleda $\Izotip_{\pi}(\rho)$, če je $\pi$ enodim?Example 2.7.10}
+\item Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\pi$ neka njena enorazsežna upodobitev. Taka upodobitev je seveda nerazcepna. Vektor $v \in V$ pripada izotipični komponenti $\Izotip_{\pi}(\rho)$, če in samo če grupa $G$ na prostoru $\langle v \rangle$ deluje kot s $\pi$, se pravi
+\[
+    \Izotip_{\pi}(\rho) = \left\{ v \in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v \right\}.
+\]
+
+Kadar je grupa $G$ abelova, je vsaka njena nerazcepna upodobitev nad algebraično zaprtim poljem enorazsežna. Vsaka polenostavna upodobitev take grupe je zato direktna vsota podprostorov, na katerih grupa deluje s skalarnimi množenji prek svojih enorazsežnih upodobitev.
 \end{itemize}
 \end{zgled}
 
 
 \section{Matrični koeficienti}
 
-\todo[inline]{
-- povezava med zgornje bločno trikotno matriko in bločno (polenostavnost) [Example 2.7.8.]
-}
+Do zdaj smo upodobitve obravnavali z bolj konceptualnega stališča. 
 
 \subsection{Neodvisnost koeficientov}
 
