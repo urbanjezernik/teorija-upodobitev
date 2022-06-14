@@ -116,21 +116,18 @@ koeficienti in regularna upodobitev</a></li>
 <li><a href="#upodobitve-končnih-grup"
 id="toc-upodobitve-končnih-grup">Upodobitve končnih grup</a>
 <ul>
-<li><a href="#polenostavnost-in-regularna-upodobitev"
-id="toc-polenostavnost-in-regularna-upodobitev">Polenostavnost in
-regularna upodobitev</a></li>
+<li><a href="#polenostavnost-1"
+id="toc-polenostavnost-1">Polenostavnost</a></li>
 <li><a href="#karakterji-1" id="toc-karakterji-1">Karakterji</a></li>
-<li><a href="#konkretni-primeri" id="toc-konkretni-primeri">Konkretni
-primeri</a>
+<li><a href="#razširjeni-zgledi" id="toc-razširjeni-zgledi">Razširjeni
+zgledi</a>
 <ul>
 <li><a href="#abelove-grupe" id="toc-abelove-grupe">Abelove
 grupe</a></li>
-<li><a href="#razširjeni-zgled-mathopmathrmgl_2mathbbf_p"
-id="toc-razširjeni-zgled-mathopmathrmgl_2mathbbf_p">Razširjeni zgled
-<span
-class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbb{F}_p)\)</span></a></li>
-<li><a href="#razširjeni-zgled-s_n"
-id="toc-razširjeni-zgled-s_n">Razširjeni zgled <span
+<li><a href="#mathopmathrmgl_2mathbff_p"
+id="toc-mathopmathrmgl_2mathbff_p"><span
+class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span></a></li>
+<li><a href="#s_n" id="toc-s_n"><span
 class="math inline">\(S_n\)</span></a></li>
 </ul></li>
 </ul></li>
@@ -144,26 +141,24 @@ id="toc-ozaljšane-upodobitve">Ozaljšane upodobitve</a>
 upodobitve</a></li>
 <li><a href="#unitarne-upodobitve" id="toc-unitarne-upodobitve">Unitarne
 upodobitve</a></li>
-<li><a href="#razširjeni-zgled-s1"
-id="toc-razširjeni-zgled-s1">Razširjeni zgled <span
+<li><a href="#s1" id="toc-s1"><span
 class="math inline">\(S^1\)</span></a></li>
 </ul></li>
-<li><a href="#liejeve-grupe-in-mreže"
-id="toc-liejeve-grupe-in-mreže">Liejeve grupe in mreže</a>
+<li><a href="#liejeve-grupe" id="toc-liejeve-grupe">Liejeve grupe</a>
 <ul>
-<li><a href="#razširjeni-zgled-mathopmathrmsl_2mathbbc"
-id="toc-razširjeni-zgled-mathopmathrmsl_2mathbbc">Razširjeni zgled <span
-class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbb{C})\)</span></a></li>
-<li><a href="#mreža-mathopmathrmsl_2mathbbz"
-id="toc-mreža-mathopmathrmsl_2mathbbz">Mreža <span
-class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbb{Z})\)</span></a></li>
+<li><a href="#mathopmathrmsl_2mathbfc"
+id="toc-mathopmathrmsl_2mathbfc"><span
+class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span></a></li>
+<li><a href="#mathopmathrmsl_2mathbfz"
+id="toc-mathopmathrmsl_2mathbfz"><span
+class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span></a></li>
 </ul></li>
 <li><a href="#kompaktne-grupe" id="toc-kompaktne-grupe">Kompaktne
 grupe</a>
 <ul>
-<li><a href="#razširjeni-zgled-su_2mathbbc"
-id="toc-razširjeni-zgled-su_2mathbbc">Razširjeni zgled <span
-class="math inline">\(SU_2(\mathbb{C})\)</span></a></li>
+<li><a href="#mathopmathrmsu_2mathbfc"
+id="toc-mathopmathrmsu_2mathbfc"><span
+class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span></a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -223,20 +218,23 @@ class="math inline">\(gv\)</span>.</p>
 <p><strong>Zgled 1.1</strong>. </p>
 <ul>
 <li><p>Opazujmo grupo celih števil <span
-class="math inline">\(\mathbb{Z}\)</span> in vektorski prostor <span
-class="math inline">\(\mathbb{C}\)</span> nad poljem kompleksnih števil.
-Za vsak parameter <span class="math inline">\(\alpha \in
-\mathbb{C}\)</span> imamo upodobitev <span class="math display">\[\chi_a
-\colon \mathbb{Z}\to \mathop{\mathrm{GL}}(\mathbb{C}) = \mathbb{C}^*,
+class="math inline">\(\mathbf{Z}\)</span> in vektorski prostor <span
+class="math inline">\(\mathbf{C}\)</span> nad poljem kompleksnih števil.
+Eksponentna funkcija podaja upodobitev <span class="math display">\[\chi
+\colon \mathbf{Z}\to \mathop{\mathrm{GL}}(\mathbf{C}) = \mathbf{C}^*,
 \quad
+            x \mapsto e^x.\]</span> Splošneje imamo za vsak parameter
+<span class="math inline">\(\alpha \in \mathbf{C}\)</span> upodobitev
+<span class="math display">\[\chi_{\alpha} \colon \mathbf{Z}\to
+\mathop{\mathrm{GL}}(\mathbf{C}) = \mathbf{C}^*, \quad
             x \mapsto e^{\alpha x}.\]</span></p></li>
 <li><p>Opazujmo grupo ostankov <span
-class="math inline">\(\mathbb{Z}/q\mathbb{Z}\)</span> za poljubno
+class="math inline">\(\mathbf{Z}/q\mathbf{Z}\)</span> za poljubno
 naravno število <span class="math inline">\(q\)</span>. Za vsak
 parameter <span class="math inline">\(m \in
-\mathbb{Z}/q\mathbb{Z}\)</span> imamo upodobitev <span
-class="math display">\[\chi_m \colon \mathbb{Z}/q\mathbb{Z}\to
-\mathop{\mathrm{GL}}(\mathbb{C}) = \mathbb{C}^*, \quad
+\mathbf{Z}/q\mathbf{Z}\)</span> imamo upodobitev <span
+class="math display">\[\chi_m \colon \mathbf{Z}/q\mathbf{Z}\to
+\mathop{\mathrm{GL}}(\mathbf{C}) = \mathbf{C}^*, \quad
             x \mapsto e^{2 \pi i mx/q}.\]</span></p></li>
 <li><p>Naj bo <span class="math inline">\(G\)</span> grupa in <span
 class="math inline">\(V\)</span> vektorski prostor nad poljem <span
@@ -259,20 +257,20 @@ naravna vložitev <span class="math inline">\(G \to
 class="math inline">\(G\)</span> na prostoru <span
 class="math inline">\(V\)</span>.</p>
 <p>Za konkreten zgled lahko vzamemo <span class="math inline">\(V =
-\mathbb{C}^2\)</span> in <span class="math inline">\(G = \langle \left(
+\mathbf{C}^2\)</span> in <span class="math inline">\(G = \langle \left(
 \begin{smallmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{smallmatrix} \right)
-\rangle \leq \mathop{\mathrm{GL}}(\mathbb{C}^2)\)</span>. Na ta način
+\rangle \leq \mathop{\mathrm{GL}}(\mathbf{C}^2)\)</span>. Na ta način
 dobimo upodobitev grupe <span class="math inline">\(G \cong
-\mathbb{Z}\)</span> na prostoru <span
-class="math inline">\(\mathbb{C}^2\)</span>. Na istem prostoru lahko
+\mathbf{Z}\)</span> na prostoru <span
+class="math inline">\(\mathbf{C}^2\)</span>. Na istem prostoru lahko
 vzamemo tudi <span class="math inline">\(G = \langle
         \left( \begin{smallmatrix} 1 &amp; 1 \\ 0 &amp; 1
 \end{smallmatrix} \right), \left( \begin{smallmatrix} 1 &amp; 0 \\ 0
 &amp; -1 \end{smallmatrix} \right) \rangle \leq
-\mathop{\mathrm{GL}}(\mathbb{C}^2)\)</span>. Na ta način dobimo
+\mathop{\mathrm{GL}}(\mathbf{C}^2)\)</span>. Na ta način dobimo
 upodobitev neskončne diedrske grupe <span class="math inline">\(G \cong
 D_\infty\)</span> na prostoru <span
-class="math inline">\(\mathbb{C}^2\)</span>.</p></li>
+class="math inline">\(\mathbf{C}^2\)</span>.</p></li>
 <li><p>Naj bo <span class="math inline">\(G\)</span> poljubna grupa,
 opremljena z delovanjem na neki množici <span
 class="math inline">\(X\)</span>. Naj bo <span
@@ -353,20 +351,20 @@ class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
 \Phi(v).\]</span></p>
 <div class="zgled">
 <p><strong>Zgled 1.2</strong>. Opazujmo grupo <span
-class="math inline">\(\mathbb{Z}\)</span> in dve njeni upodobitvi, ki
+class="math inline">\(\mathbf{Z}\)</span> in dve njeni upodobitvi, ki
 smo jih že videli. Prva naj bo upodobitev <span
-class="math display">\[\rho \colon \mathbb{Z}\to
-\mathop{\mathrm{GL}}(\mathbb{C}^2), \quad
+class="math display">\[\rho \colon \mathbf{Z}\to
+\mathop{\mathrm{GL}}(\mathbf{C}^2), \quad
     x \mapsto \left( \begin{smallmatrix} 1 &amp; 1 \\ 0 &amp; 1
 \end{smallmatrix} \right)^x,\]</span> druga pa naj bo kar trivialna
 upodobitev <span class="math inline">\(\mathbf{1}\)</span> na prostoru
-<span class="math inline">\(\mathbb{C}\)</span>. Predpišimo linearno
-preslikavo <span class="math inline">\(\Phi \colon \mathbb{C}\to
-\mathbb{C}^2\)</span> v standardni bazi z matriko <span
+<span class="math inline">\(\mathbf{C}\)</span>. Predpišimo linearno
+preslikavo <span class="math inline">\(\Phi \colon \mathbf{C}\to
+\mathbf{C}^2\)</span> v standardni bazi z matriko <span
 class="math inline">\(\left( \begin{smallmatrix} 1 \\ 0
 \end{smallmatrix} \right)\)</span>. Tedaj za vsak vektor <span
-class="math inline">\(v \in \mathbb{C}\)</span> in vsako število <span
-class="math inline">\(x \in \mathbb{Z}\)</span> velja <span
+class="math inline">\(v \in \mathbf{C}\)</span> in vsako število <span
+class="math inline">\(x \in \mathbf{Z}\)</span> velja <span
 class="math display">\[\Phi(x \cdot v)
     = \left( \begin{smallmatrix} xv \\ 0 \end{smallmatrix} \right)
     = x \cdot \left( \begin{smallmatrix} v \\ 0 \end{smallmatrix}
@@ -420,27 +418,27 @@ class="math inline">\(\rho_1\)</span> in <span
 class="math inline">\(\rho_2\)</span>.</p>
 <div class="zgled">
 <p><strong>Zgled 1.3</strong>. Opazujmo ciklično grupo <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> za poljuben <span
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span> za poljuben <span
 class="math inline">\(n &gt; 1\)</span>. Ta grupa naravno deluje na
 množici <span class="math inline">\(\Omega = \{ 1, 2, \dots, n
 \}\)</span>,<a href="#fn4" class="footnote-ref" id="fnref4"
 role="doc-noteref"><sup>4</sup></a> od koder izhaja permutacijska
 upodobitev <span class="math display">\[\pi \colon
-\mathbb{Z}/n\mathbb{Z}\to
-\mathop{\mathrm{GL}}(\mathbb{C}[\Omega]).\]</span> Grupa <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> ima tudi
+\mathbf{Z}/n\mathbf{Z}\to
+\mathop{\mathrm{GL}}(\mathbf{C}[\Omega]).\]</span> Grupa <span
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span> ima tudi
 Cayleyjevo upodobitev, <span
 class="math display">\[\pi_{\mathop{\mathrm{Cay}}} \colon
-\mathbb{Z}/n\mathbb{Z}\to
-\mathop{\mathrm{GL}}(\mathbb{C}[\mathbb{Z}/n\mathbb{Z}]).\]</span> Ti
+\mathbf{Z}/n\mathbf{Z}\to
+\mathop{\mathrm{GL}}(\mathbf{C}[\mathbf{Z}/n\mathbf{Z}]).\]</span> Ti
 dve upodobitvi sta izomorfni. Vektorska prostora lahko namreč naravno
 primerjamo z bijektivno linearno preslikavo <span
-class="math display">\[\Phi \colon \mathbb{C}[\Omega] \to
-\mathbb{C}[\mathbb{Z}/n\mathbb{Z}], \quad    
+class="math display">\[\Phi \colon \mathbf{C}[\Omega] \to
+\mathbf{C}[\mathbf{Z}/n\mathbf{Z}], \quad    
         e_i \mapsto e_{\bar i},\]</span> kjer je <span
 class="math inline">\(i \in \Omega\)</span>. Preslikava <span
 class="math inline">\(\Phi\)</span> je spletična, saj za vsak <span
-class="math inline">\(\bar x \in \mathbb{Z}/n\mathbb{Z}\)</span> in
+class="math inline">\(\bar x \in \mathbf{Z}/n\mathbf{Z}\)</span> in
 <span class="math inline">\(i \in \Omega\)</span> velja <span
 class="math display">\[\Phi(\bar x \cdot e_i)
         = \Phi(e_{x + i})
@@ -448,31 +446,31 @@ class="math display">\[\Phi(\bar x \cdot e_i)
         = \bar x \cdot e_{\bar i}
         = \bar x \cdot \Phi(e_i).\]</span> V to kratko zgodbo lahko
 vključimo še desno regularno upodobitev <span
-class="math display">\[\rho_{\hom} \colon \mathbb{Z}/n\mathbb{Z}\to
-\mathop{\mathrm{GL}}(\hom(\mathbb{Z}/n\mathbb{Z},\mathbb{C})).\]</span>
+class="math display">\[\rho_{\hom} \colon \mathbf{Z}/n\mathbf{Z}\to
+\mathop{\mathrm{GL}}(\hom(\mathbf{Z}/n\mathbf{Z},\mathbf{C})).\]</span>
 Vektorski prostor <span
-class="math inline">\(\hom(\mathbb{Z}/n\mathbb{Z}, \mathbb{C})\)</span>
+class="math inline">\(\hom(\mathbf{Z}/n\mathbf{Z}, \mathbf{C})\)</span>
 lahko na naraven način opremimo z bazo iz karakterističnih funkcij <span
-class="math display">\[1_{\bar x} \colon \mathbb{Z}/n\mathbb{Z}\to
-\mathbb{C}, \quad
+class="math display">\[1_{\bar x} \colon \mathbf{Z}/n\mathbf{Z}\to
+\mathbf{C}, \quad
         \bar y \mapsto \begin{cases}
             1 &amp; \bar y = \bar x, \\
             0 &amp; \text{sicer}
         \end{cases}\]</span> za <span class="math inline">\(\bar x \in
-\mathbb{Z}/n\mathbb{Z}\)</span>. Predpišimo linearno preslikavo<a
+\mathbf{Z}/n\mathbf{Z}\)</span>. Predpišimo linearno preslikavo<a
 href="#fn5" class="footnote-ref" id="fnref5"
 role="doc-noteref"><sup>5</sup></a> <span
 class="math display">\[\Phi^\prime \colon
-\mathbb{C}[\mathbb{Z}/n\mathbb{Z}] \to \hom(\mathbb{Z}/n\mathbb{Z},
-\mathbb{C}), \quad
+\mathbf{C}[\mathbf{Z}/n\mathbf{Z}] \to \hom(\mathbf{Z}/n\mathbf{Z},
+\mathbf{C}), \quad
         e_{\bar x} \mapsto 1_{- \bar x}.\]</span> Jasno je <span
 class="math inline">\(\Phi^\prime\)</span> bijektivna. Preverimo še, da
 je res spletična. Za vsaka <span class="math inline">\(\bar x, \bar y
-\in \mathbb{Z}/n\mathbb{Z}\)</span> velja <span
+\in \mathbf{Z}/n\mathbf{Z}\)</span> velja <span
 class="math display">\[\Phi^\prime(\bar x \cdot e_{\bar y})
         = \Phi^\prime(e_{\overline{x + y}})
         = 1_{- \overline{x + y}}.\]</span> Po drugi strani za vsak <span
-class="math inline">\(\bar z \in \mathbb{Z}/n\mathbb{Z}\)</span> velja
+class="math inline">\(\bar z \in \mathbf{Z}/n\mathbf{Z}\)</span> velja
 <span class="math display">\[\left( \bar x \cdot \Phi^\prime(e_{\bar y})
 \right) (\bar z)
         = \left( \bar x \cdot 1_{- \bar y} \right) (\bar z)
@@ -520,30 +518,30 @@ class="math inline">\(\rho\)</span>.</p>
 <ul>
 <li><p>Naj bo <span class="math inline">\(n\)</span> naravno število.
 Opazujmo permutacijsko delovanje grupe <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> na množici <span
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span> na množici <span
 class="math inline">\(\Omega = \{ 1, 2, \dots, n \}\)</span>, ki porodi
 permutacijsko upodobitev na prostoru <span
-class="math inline">\(\mathbb{C}[\Omega]\)</span> z baznimi vektorji
+class="math inline">\(\mathbf{C}[\Omega]\)</span> z baznimi vektorji
 <span class="math inline">\(e_i\)</span> za <span
 class="math inline">\(i \in \Omega\)</span>. Naj bo še <span
 class="math inline">\(e_0 = e_n\)</span>.</p>
-<p>Naj bo <span class="math inline">\(\zeta \in \mathbb{C}\)</span>
+<p>Naj bo <span class="math inline">\(\zeta \in \mathbf{C}\)</span>
 primitiven <span class="math inline">\(n\)</span>-ti koren enote. Za
 <span class="math inline">\(j \in \Omega\)</span> naj bo <span
 class="math display">\[f_j = \sum_{i \in \Omega} \zeta^{ij} e_i \in
-\mathbb{C}[\Omega].\]</span> Za vsak <span class="math inline">\(\bar x
-\in \mathbb{Z}/n\mathbb{Z}\)</span> velja <span
+\mathbf{C}[\Omega].\]</span> Za vsak <span class="math inline">\(\bar x
+\in \mathbf{Z}/n\mathbf{Z}\)</span> velja <span
 class="math display">\[\bar x \cdot f_j =
         \sum_{i \in \Omega} \zeta^{ij} e_{\overline{x + i}} =
         \sum_{i \in \Omega} \zeta^{(i - \bar x)j} e_{i} =
         \zeta^{-\bar x j} \cdot f_j,\]</span> zato je vsak podprostor
-<span class="math inline">\(\mathbb{C}\cdot f_j \leq
-\mathbb{C}[\Omega]\)</span> invarianten za delovanje grupe <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> in podupodobitev
-na tem podprostoru <span class="math inline">\(\mathbb{C}\cdot
+<span class="math inline">\(\mathbf{C}\cdot f_j \leq
+\mathbf{C}[\Omega]\)</span> invarianten za delovanje grupe <span
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span> in podupodobitev
+na tem podprostoru <span class="math inline">\(\mathbf{C}\cdot
 f_j\)</span> je očividno izomorfna upodobitvi <span
 class="math inline">\(\chi_{-j}\)</span> grupe <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span>. Na ta način smo
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span>. Na ta način smo
 sestavili <span class="math inline">\(n\)</span> podupodobitev
 permutacijske in s tem regularne upodobitve ciklične grupe moči <span
 class="math inline">\(n\)</span>.</p></li>
@@ -741,7 +739,7 @@ class="math inline">\(V_G\)</span> in mu pravimo
 <div class="domacanaloga">
 <p><strong>Domača naloga 1.3</strong>. Izračunaj prostor koinvariant
 regularne upodobitve ciklične grupe <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span>.</p>
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span>.</p>
 </div>
 <p>Prostor koinvariant je po konstrukciji dualen prostoru fiksnih
 vektorjev, zato lahko nanj prenesemo tudi interpretacijo s spletičnami.
@@ -781,13 +779,13 @@ podupodobitev te direktne vsote.</p>
 <ul>
 <li><p>Opazujmo permutacijsko upodobitev <span
 class="math inline">\(\pi\)</span> grupe <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> na prostoru <span
-class="math inline">\(\mathbb{C}[\Omega]\)</span>, kjer je <span
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span> na prostoru <span
+class="math inline">\(\mathbf{C}[\Omega]\)</span>, kjer je <span
 class="math inline">\(\Omega = \{ 1, 2, \dots, n \}\)</span>. Premislili
 smo že, da ima ta upodobitev <span class="math inline">\(n\)</span>
 podupodobitev. Za vsak <span class="math inline">\(j \in \Omega\)</span>
 imamo upodobitev na podprostoru <span
-class="math inline">\(\mathbb{C}\cdot f_j\)</span>, ki je izomorfna
+class="math inline">\(\mathbf{C}\cdot f_j\)</span>, ki je izomorfna
 upodobitvi <span class="math inline">\(\chi_{-j}\)</span>. Ker je
 množica vektorjev <span class="math inline">\(\{ f_j \mid j \in \Omega
 \}\)</span> linearno neodvisna,<a href="#fn12" class="footnote-ref"
@@ -799,12 +797,12 @@ class="math inline">\(\pi = \bigoplus_{j \in \Omega}
 <p><strong>Domača naloga 1.4</strong>. Prepričaj se, da so upodobitve
 <span class="math inline">\(\chi_j\)</span> za <span
 class="math inline">\(j \in \Omega\)</span> grupe <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> med sabo paroma
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span> med sabo paroma
 neizomorfne.</p>
 </div></li>
 <li><p>Opazujmo permutacijsko upodobitev simetrične grupe <span
 class="math inline">\(S_3\)</span> na prostoru <span
-class="math inline">\(\mathbb{R}[\{ 1,2,3 \}] = \mathbb{R}^3\)</span>.
+class="math inline">\(\mathbf{R}[\{ 1,2,3 \}] = \mathbf{R}^3\)</span>.
 Delovanje grupe <span class="math inline">\(S_3\)</span> ohranja vektor
 <span class="math inline">\(e_1 + e_2 + e_3\)</span>, zato ima ta
 upodobitev trivialno enorazsežno podupodobitev, dano s podprostorom
@@ -864,25 +862,25 @@ class="math display">\[\rho_1 \otimes \rho_2 \colon G \to
 <p><strong>Zgled 1.7</strong>. Opazujmo simetrično grupo <span
 class="math inline">\(S_3\)</span>. Ogledali smo si že njeno
 permutacijsko upodobitev na prostoru <span
-class="math inline">\(\mathbb{R}^3\)</span>, ki smo jo razstavili na
+class="math inline">\(\mathbf{R}^3\)</span>, ki smo jo razstavili na
 direktno vsoto trivialne upodobitve <span
 class="math inline">\(\mathbf{1}\)</span> in dvorazsežne upodobitve
 <span class="math inline">\(\rho\)</span>. Poleg teh dveh ima grupa
 <span class="math inline">\(S_3\)</span> še eno zanimivo upodobitev, ki
 izračuna predznak dane permutacije, se pravi <span
 class="math display">\[\mathop{\mathrm{sgn}}\colon S_3 \to
-\mathop{\mathrm{GL}}(\mathbb{R}) = \mathbb{R}^*, \quad
+\mathop{\mathrm{GL}}(\mathbf{R}) = \mathbf{R}^*, \quad
     \sigma \mapsto \mathop{\mathrm{sgn}}(\sigma).\]</span> To je
 netrivialna enorazsežna upodobitev.</p>
 <p>Tvorimo tenzorski produkt upodobitev <span
 class="math inline">\(\rho\)</span> in <span
 class="math inline">\(\mathop{\mathrm{sgn}}\)</span>. Dobimo upodobitev
-na vektorskem prostoru <span class="math inline">\(\mathbb{R}\otimes
-\mathbb{R}^2\)</span>, ki ga lahko naravno identificiramo s prostorom
-<span class="math inline">\(\mathbb{R}^2\)</span>. V tem smislu je
+na vektorskem prostoru <span class="math inline">\(\mathbf{R}\otimes
+\mathbf{R}^2\)</span>, ki ga lahko naravno identificiramo s prostorom
+<span class="math inline">\(\mathbf{R}^2\)</span>. V tem smislu je
 upodobitev <span class="math inline">\(\mathop{\mathrm{sgn}}\otimes
 \rho\)</span> izomorfna dvorazsežni upodobitvi <span
-class="math display">\[S_3 \to \mathop{\mathrm{GL}}(\mathbb{R}^2), \quad
+class="math display">\[S_3 \to \mathop{\mathrm{GL}}(\mathbf{R}^2), \quad
     \sigma \mapsto \left( v \mapsto \mathop{\mathrm{sgn}}(\sigma) \cdot
 \rho(\sigma) \cdot v \right).\]</span></p>
 <div class="domacanaloga">
@@ -896,7 +894,7 @@ izomorfni.</p>
 prostoru <span class="math inline">\(V\)</span>. Tedaj lahko tvorimo
 <span><strong><em>tenzorske potence</em></strong></span> <span
 class="math inline">\(V^{\otimes n}\)</span> za <span
-class="math inline">\(n \in \mathbb{N}_0\)</span>. Vsaka od teh tvori
+class="math inline">\(n \in \mathbf{N}_0\)</span>. Vsaka od teh tvori
 upodobitev grupe <span class="math inline">\(G\)</span>. Na prostoru
 <span class="math inline">\(V^{\otimes n}\)</span> deluje simetrična
 grupa <span class="math inline">\(S_n\)</span>, in sicer na dva načina.
@@ -928,10 +926,10 @@ class="math inline">\(\bigwedge^n(V)\)</span> in imenujemo
 potenci sta seveda upodobitvi grupe <span
 class="math inline">\(G\)</span>. Vse potence hkrati zajamemo z
 direktnima vsotama <span class="math display">\[\textstyle
-\mathop{\mathrm{Sym}}(V) = \bigoplus_{n \in \mathbb{N}_0}
+\mathop{\mathrm{Sym}}(V) = \bigoplus_{n \in \mathbf{N}_0}
 \mathop{\mathrm{Sym}}^n(V)
     \quad \text{in} \quad
-    \bigwedge V = \bigoplus_{n \in \mathbb{N}_0}
+    \bigwedge V = \bigoplus_{n \in \mathbf{N}_0}
 \textstyle\bigwedge^n(V).\]</span></p>
 <div class="domacanaloga">
 <p><strong>Domača naloga 1.6</strong>. Naj bo <span
@@ -942,7 +940,7 @@ class="math inline">\(\deg(\rho) &lt; \infty\)</span>. Dokaži, da je
 upodobitev <span class="math inline">\(G\)</span> na alternirajoči
 potenci <span class="math inline">\(\bigwedge^{\deg(\rho)} V\)</span>
 izomorfna enorazsežni upodobitvi <span class="math inline">\(G \to
-\mathbb{C}^*, \ g \mapsto \det(\rho(g))\)</span>.</p>
+\mathbf{C}^*, \ g \mapsto \det(\rho(g))\)</span>.</p>
 </div>
 <h3 id="dual">Dual</h3>
 <p>Naj bo <span class="math inline">\(G\)</span> grupa z upodobitvijo
@@ -968,21 +966,21 @@ class="math display">\[\langle \rho^*(g) \cdot \lambda, v \rangle =
 \langle \lambda, \rho(g^{-1}) \cdot v \rangle.\]</span></p>
 <div class="zgled">
 <p><strong>Zgled 1.8</strong>. Opazujmo grupo <span
-class="math inline">\(\mathbb{Z}\)</span> in za parameter <span
-class="math inline">\(a \in \mathbb{C}\)</span> njeno upodobitev <span
-class="math display">\[\chi_a \colon \mathbb{Z}\to
-\mathop{\mathrm{GL}}(\mathbb{C}), \quad
+class="math inline">\(\mathbf{Z}\)</span> in za parameter <span
+class="math inline">\(a \in \mathbf{C}\)</span> njeno upodobitev <span
+class="math display">\[\chi_a \colon \mathbf{Z}\to
+\mathop{\mathrm{GL}}(\mathbf{C}), \quad
     x \mapsto e^{ax}.\]</span> Za dualno upodobitev <span
 class="math inline">\(\chi_a^*\)</span>, funkcional <span
-class="math inline">\(\lambda \in \mathbb{C}^*\)</span> in vektor <span
-class="math inline">\(z \in \mathbb{C}\)</span> velja <span
+class="math inline">\(\lambda \in \mathbf{C}^*\)</span> in vektor <span
+class="math inline">\(z \in \mathbf{C}\)</span> velja <span
 class="math display">\[\langle \chi_a^*(x) \cdot \lambda, z \rangle =
     \langle \lambda, \chi_a(-x) \cdot z \rangle =
     \lambda(e^{-ax} \cdot z).\]</span> Funkcionali v dualnem prostoru
-<span class="math inline">\(\mathbb{C}^*\)</span> so skalarna množenja s
+<span class="math inline">\(\mathbf{C}^*\)</span> so skalarna množenja s
 kompleksnimi števili. Če funkcionalu <span
 class="math inline">\(\lambda\)</span> ustreza število <span
-class="math inline">\(l \in \mathbb{C}\)</span>, dobimo torej <span
+class="math inline">\(l \in \mathbf{C}\)</span>, dobimo torej <span
 class="math display">\[\chi_a^*(x) \cdot l = e^{-ax} \cdot l.\]</span>
 Dualna upodobitev <span class="math inline">\(\chi_a^*\)</span> je torej
 enorazsežna upodobitev, ki je izomorfna upodobitvi <span
@@ -1071,27 +1069,27 @@ upodobitev.</p>
 <div class="zgled">
 <p><strong>Zgled 1.9</strong>. Opazujmo grupo <span
 class="math inline">\(S_3\)</span> in njeno permutacijsko upodobitev na
-realnem prostoru <span class="math inline">\(\mathbb{R}[\{ 1, 2, 3
+realnem prostoru <span class="math inline">\(\mathbf{R}[\{ 1, 2, 3
 \}]\)</span>. Poznamo že njeno dvorazsežno upodobitev <span
 class="math inline">\(\rho\)</span> na podprostoru <span
 class="math inline">\(\langle e_1 - e_2, e_2 - e_3 \rangle\)</span>, ki
 <em>nima</em> enorazsežnih podupodobitev. Ta je definirana z matrikami,
 ki imajo zgolj celoštevilske koeficiente. Upodobitev <span
 class="math inline">\(\rho\)</span> je zato definirana nad
-<em>kolobarjem</em> <span class="math inline">\(\mathbb{Z}\)</span>. To
+<em>kolobarjem</em> <span class="math inline">\(\mathbf{Z}\)</span>. To
 upodobitev lahko zato <em>projiciramo</em> s homomorfizmom kolobarjev
-<span class="math inline">\(\mathbb{Z}\to
-\mathbb{Z}/p\mathbb{Z}\)</span> za poljubno praštevilo <span
+<span class="math inline">\(\mathbf{Z}\to
+\mathbf{Z}/p\mathbf{Z}\)</span> za poljubno praštevilo <span
 class="math inline">\(p\)</span> do upodobitve <span
 class="math display">\[S_3 \to {\textstyle
-\mathop{\mathrm{GL}}_2(\mathbb{Z}/p\mathbb{Z})}, \quad
+\mathop{\mathrm{GL}}_2(\mathbf{Z}/p\mathbf{Z})}, \quad
     (1 \ 2) \mapsto \begin{pmatrix}
         -1 &amp; 1 \\ 0 &amp; 1
     \end{pmatrix}, \quad
     (1 \ 2 \ 3) \mapsto \begin{pmatrix}
         0 &amp; -1 \\ 1 &amp; -1
     \end{pmatrix},\]</span> ki je definirana nad <em>končnim</em> poljem
-<span class="math inline">\(\mathbb{Z}/p\mathbb{Z}\)</span>. Pri <span
+<span class="math inline">\(\mathbf{Z}/p\mathbf{Z}\)</span>. Pri <span
 class="math inline">\(p = 3\)</span> ima ta projicirana upodobitev
 enorazsežen invarianten podprostor <span class="math inline">\(\langle
 e_1 + e_2 + e_3 \rangle\)</span>. Projekcije nam lahko torej dano
@@ -1113,7 +1111,7 @@ class="math display">\[\rho^\sigma \colon G \to {\textstyle
 <p><strong>Zgled 1.10</strong>. Naj bo <span
 class="math inline">\(G\)</span> grupa s kompleksno upodobitvijo <span
 class="math inline">\(\rho\)</span>. Kompleksno konjugiranje je
-avtomorfizem polja <span class="math inline">\(\mathbb{C}\)</span>, zato
+avtomorfizem polja <span class="math inline">\(\mathbf{C}\)</span>, zato
 lahko s konjugiranjem členov matrik tvorimo
 <span><strong><em>konjugirano upodobitev</em></strong></span> <span
 class="math inline">\(\overline{\rho}\)</span>.</p>
@@ -1169,13 +1167,13 @@ class="math inline">\([G,G]\)</span>.</p>
 <p>Za konkreten primer si oglejmo simetrično grupo <span
 class="math inline">\(S_n\)</span>. Njene kompleksne enorazsežne
 upodobitve ustrezajo homomorfizmom <span class="math inline">\(S_n \to
-\mathbb{C}^*\)</span>. Ker je <span class="math inline">\([S_n, S_n] =
+\mathbf{C}^*\)</span>. Ker je <span class="math inline">\([S_n, S_n] =
 A_n\)</span>, opazujemo torej homomorfizme <span
-class="math inline">\(S_n/A_n \cong \mathbb{Z}/2\mathbb{Z}\to
-\mathbb{C}^*\)</span>. Na voljo sta le dva taka homomorfizma: trivialen
+class="math inline">\(S_n/A_n \cong \mathbf{Z}/2\mathbf{Z}\to
+\mathbf{C}^*\)</span>. Na voljo sta le dva taka homomorfizma: trivialen
 in netrivialen (ki preslika generator grupe <span
-class="math inline">\(\mathbb{Z}/2\mathbb{Z}\)</span> v <span
-class="math inline">\(-1 \in \mathbb{C}^*\)</span>). Prvi ustreza
+class="math inline">\(\mathbf{Z}/2\mathbf{Z}\)</span> v <span
+class="math inline">\(-1 \in \mathbf{C}^*\)</span>). Prvi ustreza
 trivialni upodobitvi <span class="math inline">\(\mathbf{1}\)</span>,
 drugi pa ustreza predznačni upodobitvi <span
 class="math inline">\(\mathop{\mathrm{sgn}}\)</span>.</p>
@@ -1433,9 +1431,9 @@ class="math display">\[g \cdot \begin{pmatrix}
 g \in S_n\)</span>. Alternirajoča grupa <span
 class="math inline">\(A_n\)</span> je v jedru te upodobitve, ki zato
 izhaja iz kvocienta <span class="math inline">\(S_n/A_n \cong
-\mathbb{Z}/2\mathbb{Z}\)</span>. Opisana upodobitev je natanko
+\mathbf{Z}/2\mathbf{Z}\)</span>. Opisana upodobitev je natanko
 permutacijska upodobitev grupe <span
-class="math inline">\(\mathbb{Z}/2\mathbb{Z}\)</span> na prostoru <span
+class="math inline">\(\mathbf{Z}/2\mathbf{Z}\)</span> na prostoru <span
 class="math inline">\(F[\{ 1, 2 \}]\)</span>, inducirana upodobitev pa
 je ravno restrikcija te upodobitve vzdolž kvocientne projekcije <span
 class="math inline">\(S_n \to S_n/A_n\)</span>. Inducirano upodobitev
@@ -1629,8 +1627,8 @@ smislu direktne vsote.</p>
 <div class="zgled">
 <p><strong>Zgled 2.1</strong>. Opazujmo permutacijsko upodobitev
 simetrične grupe <span class="math inline">\(S_3\)</span> na prostoru
-<span class="math inline">\(\mathbb{R}[\{ 1,2,3 \}] =
-\mathbb{R}^3\)</span>. Premislili smo že, da je ta upodobitev direktna
+<span class="math inline">\(\mathbf{R}[\{ 1,2,3 \}] =
+\mathbf{R}^3\)</span>. Premislili smo že, da je ta upodobitev direktna
 vsota enorazsežne podupodobitve <span
 class="math inline">\(\mathbf{1}\)</span> in dvorazsežne podupodobitve
 <span class="math inline">\(\rho\)</span>, pri čemer slednja nima nobene
@@ -1707,7 +1705,7 @@ lemi je zato <span class="math inline">\(\pi(z) = \omega(z) \cdot
 \mathop{\mathrm{id}}\)</span> za nek skalar <span
 class="math inline">\(\omega(z)\)</span>. Ker je <span
 class="math inline">\(\pi\)</span> homomorfizem, je <span
-class="math inline">\(\omega \colon Z(G) \to \mathbb{C}^*\)</span>
+class="math inline">\(\omega \colon Z(G) \to \mathbf{C}^*\)</span>
 enorazsežna upodobitev centra grupe <span
 class="math inline">\(G\)</span>. Tej upodobitvi rečemo
 <span><strong><em>centralni karakter</em></strong></span> upodobitve
@@ -1715,7 +1713,7 @@ class="math inline">\(G\)</span>. Tej upodobitvi rečemo
 <p>Še posebej zanimiv je primer, ko je <span
 class="math inline">\(G\)</span> <em>abelova</em> grupa. Takrat za vsako
 nerazcepno upodobitev <span class="math inline">\(\pi\)</span> končne
-razsežnosti nad poljem <span class="math inline">\(\mathbb{C}\)</span>
+razsežnosti nad poljem <span class="math inline">\(\mathbf{C}\)</span>
 velja <span class="math inline">\(\pi(g) = \omega(g) \cdot
 \mathop{\mathrm{id}}\)</span> za <em>vsak</em> <span
 class="math inline">\(g \in G\)</span>. Vsak enorazsežen podprostor je
@@ -1729,7 +1727,7 @@ class="math inline">\(\pi\)</span> je tako <em>enorazsežna</em>.</p>
 <p><strong>Domača naloga 2.1</strong>. Podaj konkreten primer abelove
 grupe in njene nerazcepne upodobitve razsežnosti <span
 class="math inline">\(&gt;1\)</span> nad poljem <span
-class="math inline">\(\mathbb{Q}\)</span>.</p>
+class="math inline">\(\mathbf{Q}\)</span>.</p>
 </div>
 <h3 id="komplementarna-podupodobitev">Komplementarna podupodobitev</h3>
 <p>Predpostavimo zdaj, da ima dana upodobitev <span
@@ -1750,28 +1748,28 @@ class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a>
 Ni vsaka podupodobitev komplementirana.</p>
 <div class="zgled">
 <p><strong>Zgled 2.3</strong>. Naj grupa <span
-class="math inline">\(\mathbb{R}\)</span> deluje na realnem prostoru
-<span class="math inline">\(\mathbb{R}^2\)</span> s homomorfizmom <span
-class="math display">\[\rho \colon \mathbb{R}\to {\textstyle
-\mathop{\mathrm{GL}}_2(\mathbb{R})}, \quad
+class="math inline">\(\mathbf{R}\)</span> deluje na realnem prostoru
+<span class="math inline">\(\mathbf{R}^2\)</span> s homomorfizmom <span
+class="math display">\[\rho \colon \mathbf{R}\to {\textstyle
+\mathop{\mathrm{GL}}_2(\mathbf{R})}, \quad
         x \mapsto
         \begin{pmatrix}
         1 &amp; x \\ 0 &amp; 1
     \end{pmatrix}.\]</span> Oglejmo si enorazsežne podupodobitve.
 Premislili smo že, da te ustrezajo skupnim lastnim vektorjem vseh
 preslikav <span class="math inline">\(\rho(x)\)</span> za <span
-class="math inline">\(x \in \mathbb{R}\)</span>. Pri <span
+class="math inline">\(x \in \mathbf{R}\)</span>. Pri <span
 class="math inline">\(x = 1\)</span> imamo linearno preslikavo <span
 class="math inline">\(\rho(1)\)</span> z enim samim lastnim vektorjem,
-in sicer <span class="math inline">\(e_1 \in \mathbb{R}^2\)</span>.
+in sicer <span class="math inline">\(e_1 \in \mathbf{R}^2\)</span>.
 Hkrati je <span class="math inline">\(e_1\)</span> lastni vektor vseh
 preslikav <span class="math inline">\(\rho(x)\)</span> za <span
-class="math inline">\(x \in \mathbb{R}\)</span>. Torej ima <span
+class="math inline">\(x \in \mathbf{R}\)</span>. Torej ima <span
 class="math inline">\(\rho\)</span> <em>eno samo</em> enorazsežno
 podupodobitev, in sicer je to <span
-class="math inline">\(\mathbb{R}\cdot e_1 \leq \mathbb{R}^2\)</span>. Ta
+class="math inline">\(\mathbf{R}\cdot e_1 \leq \mathbf{R}^2\)</span>. Ta
 vektorski podprostor ima mnogo komplementov v <span
-class="math inline">\(\mathbb{R}^2\)</span>, noben od teh pa ni hkrati
+class="math inline">\(\mathbf{R}^2\)</span>, noben od teh pa ni hkrati
 enorazsežna podupodobitev <span class="math inline">\(\rho\)</span>.</p>
 </div>
 <p>Ni težko preveriti, da obstoj komplementirane podupodobitve vselej
@@ -1806,10 +1804,10 @@ upodobitev.</p>
 <ul>
 <li><p>Permutacijska upodobitev grupe <span
 class="math inline">\(S_3\)</span> na <span
-class="math inline">\(\mathbb{R}^3\)</span> je polenostavna.</p></li>
+class="math inline">\(\mathbf{R}^3\)</span> je polenostavna.</p></li>
 <li><p>Regularna upodobitev ciklične grupe <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> nad <span
-class="math inline">\(\mathbb{C}\)</span> je polenostavna.</p></li>
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span> nad <span
+class="math inline">\(\mathbf{C}\)</span> je polenostavna.</p></li>
 </ul>
 </div>
 <p>Vseh upodobitev žal ne moremo razstaviti na direktno vsoto
@@ -1890,10 +1888,10 @@ class="math inline">\(\checkmark\)</span> ◻</p>
 </div>
 <div class="zgled">
 <p><strong>Zgled 2.5</strong>. Eničnozgornjetrikotna upodobitev grupe
-<span class="math inline">\(\mathbb{R}\)</span> na <span
-class="math inline">\(\mathbb{R}^2\)</span> <em>ni</em> nerazcepna,
+<span class="math inline">\(\mathbf{R}\)</span> na <span
+class="math inline">\(\mathbf{R}^2\)</span> <em>ni</em> nerazcepna,
 hkrati pa njena podupodobitev <span
-class="math inline">\(\mathbb{R}\cdot e_1 \cong \mathbf{1}\)</span>
+class="math inline">\(\mathbf{R}\cdot e_1 \cong \mathbf{1}\)</span>
 <em>ni</em> komplementirana. Ta upodobitev zatorej <em>ni</em>
 polenostavna.</p>
 </div>
@@ -1968,16 +1966,16 @@ class="math inline">\(V_i/V_{i-1}\)</span> se pri tem imenujejo
 <div class="zgled">
 <p><strong>Zgled 2.6</strong>. Naj bo <span
 class="math inline">\(\rho\)</span> eničnozgornjetrikotna upodobitev
-grupe <span class="math inline">\(\mathbb{R}\)</span> na <span
-class="math inline">\(V = \mathbb{R}^2\)</span>. Ta upodobitev ima
-podupodobitev <span class="math inline">\(V_1 = \mathbb{R}\cdot
+grupe <span class="math inline">\(\mathbf{R}\)</span> na <span
+class="math inline">\(V = \mathbf{R}^2\)</span>. Ta upodobitev ima
+podupodobitev <span class="math inline">\(V_1 = \mathbf{R}\cdot
 e_1\)</span>. Kvocient <span class="math inline">\(V/V_1\)</span> je
 enorazsežen in na njem grupa <span
-class="math inline">\(\mathbb{R}\)</span> deluje trivialno. Dobimo torej
+class="math inline">\(\mathbf{R}\)</span> deluje trivialno. Dobimo torej
 kompozicijsko vrsto <span class="math display">\[0 = V_0 \leq V_1 \leq
 V,\]</span> katere kompozicijska faktorja sta kot upodobitvi izomorfna
 <span class="math inline">\(\mathbf{1}\)</span>. Sama upodobitev grupe
-<span class="math inline">\(\mathbb{R}\)</span> na <span
+<span class="math inline">\(\mathbf{R}\)</span> na <span
 class="math inline">\(V\)</span> pa seveda ni trivialna.</p>
 </div>
 <div class="izrek">
@@ -2071,15 +2069,16 @@ je <span class="math display">\[\hom_G(\pi, \rho) = \bigoplus_{i \in I}
 zaprtim poljem) vsak od zadnjih prostorov spletičen bodisi trivialen
 bodisi enorazsežen. Večkratnost <span class="math inline">\(\pi\)</span>
 v <span class="math inline">\(\rho\)</span> lahko zatorej izračunamo kot
-<span class="math display">\[\mathop{\mathrm{mult}}_{\rho}(\pi) = \dim
-\hom_G(\pi, \rho).\]</span></p>
+<span class="math display">\[\displaystyle
+\mathop{\mathrm{mult}}_{\rho}(\pi) = \dim \hom_G(\pi,
+\rho).\]</span></p>
 <div class="zgled">
 <p><strong>Zgled 2.7</strong>. </p>
 <ul>
 <li><p>Za eničnozgornjetrikotno upodobitev <span
 class="math inline">\(\rho\)</span> grupe <span
-class="math inline">\(\mathbb{R}\)</span> na <span
-class="math inline">\(\mathbb{R}^2\)</span> je <span
+class="math inline">\(\mathbf{R}\)</span> na <span
+class="math inline">\(\mathbf{R}^2\)</span> je <span
 class="math inline">\(\mathop{\mathrm{mult}}_{\rho}(\mathbf{1}) =
 2\)</span>. Ker ta upodobitev ni trivialna, ne more biti polenostavna,
 saj bi sicer bila izomorfna <span
@@ -2087,7 +2086,7 @@ class="math inline">\(\mathbf{1}^2\)</span>.</p></li>
 <li><p>Opazujmo permutacijsko upodobitev <span
 class="math inline">\(\pi\)</span> grupe <span
 class="math inline">\(S_3\)</span> na <span
-class="math inline">\(\mathbb{R}^3\)</span>. To upodobitev smo že
+class="math inline">\(\mathbf{R}^3\)</span>. To upodobitev smo že
 razstavili na direktno vsoto <span class="math inline">\(\mathbf{1}
 \oplus \rho\)</span>, kjer je <span class="math inline">\(\rho\)</span>
 dvorazsežna nerazcepna upodobitev na podprostoru <span
@@ -2095,15 +2094,15 @@ class="math inline">\(\langle u_1 = e_1 - e_2, u_2 = e_2 - e_3
 \rangle\)</span>. Premislili smo, kako lahko to upodobitev projiciramo
 do upodobitve <span class="math inline">\(\tilde \rho\)</span> grupe
 <span class="math inline">\(S_3\)</span> na prostoru <span
-class="math inline">\((\mathbb{Z}/3\mathbb{Z})^2\)</span> nad končnim
-poljem <span class="math inline">\(\mathbb{Z}/3\mathbb{Z}\)</span>.</p>
+class="math inline">\((\mathbf{Z}/3\mathbf{Z})^2\)</span> nad končnim
+poljem <span class="math inline">\(\mathbf{Z}/3\mathbf{Z}\)</span>.</p>
 <p>Upodobitev <span class="math inline">\(\tilde \rho\)</span>
 <em>ni</em> nerazcepna, saj ima invarianten podprostor <span
 class="math inline">\(\langle u_1 - u_2 = e_1 + e_2 + e_3
 \rangle\)</span>. Na tem podprostoru grupa <span
 class="math inline">\(S_3\)</span> deluje trivialno. V kvocientu <span
-class="math inline">\((\mathbb{Z}/3\mathbb{Z})^2/\langle u_1 - u_2
-\rangle \cong \mathbb{Z}/3\mathbb{Z}\)</span> generatorja <span
+class="math inline">\((\mathbf{Z}/3\mathbf{Z})^2/\langle u_1 - u_2
+\rangle \cong \mathbf{Z}/3\mathbf{Z}\)</span> generatorja <span
 class="math inline">\((1\ 2)\)</span> in <span class="math inline">\((1
 \ 2 \ 3)\)</span> grupe <span class="math inline">\(S_3\)</span>
 preslikata odsek vektorja <span class="math inline">\(u_1\)</span> v
@@ -2111,20 +2110,20 @@ odsek <span class="math inline">\(-u_1\)</span> oziroma <span
 class="math inline">\(u_1\)</span>. V tem prepoznamo predznačno
 upodobitev, interpretirano kot homomorfizem <span
 class="math inline">\(\mathop{\mathrm{sgn}}\colon S_3 \to
-\mathop{\mathrm{GL}}_1(\mathbb{Z}/3\mathbb{Z}) \cong \{ 1, -1
+\mathop{\mathrm{GL}}_1(\mathbf{Z}/3\mathbf{Z}) \cong \{ 1, -1
 \}\)</span>. Nad poljem <span
-class="math inline">\(\mathbb{Z}/3\mathbb{Z}\)</span> za permutacijsko
+class="math inline">\(\mathbf{Z}/3\mathbf{Z}\)</span> za permutacijsko
 upodobitev <span class="math inline">\(\pi\)</span> tako velja <span
 class="math inline">\(\mathop{\mathrm{mult}}_{\pi}(\mathbf{1}) =
 2\)</span> in <span
 class="math inline">\(\mathop{\mathrm{mult}}_{\pi}(\mathop{\mathrm{sgn}})
 = 1\)</span>.</p>
 <p>Premislimo, da upodobitev <span class="math inline">\(\pi\)</span>
-nad <span class="math inline">\(\mathbb{Z}/3\mathbb{Z}\)</span>
+nad <span class="math inline">\(\mathbf{Z}/3\mathbf{Z}\)</span>
 <em>ni</em> polenostavna. Če bi namreč bila, bi po zgornjem morala biti
 izmorfna direktni vsoti <span class="math inline">\(\mathbf{1} \oplus
 \mathbf{1} \oplus \mathop{\mathrm{sgn}}\)</span>. Prostor <span
-class="math inline">\((\mathbb{Z}/3\mathbb{Z})^3\)</span> bi zatorej
+class="math inline">\((\mathbf{Z}/3\mathbf{Z})^3\)</span> bi zatorej
 imel bazo, v kateri bi matriki za <span class="math inline">\(\pi((1 \
 2))\)</span> in <span class="math inline">\(\pi((1 \ 2 \ 3))\)</span>
 bili hkrati diagonalni. Ti dve matriki bi zato komutirali, kar pomeni,
@@ -2152,9 +2151,9 @@ grupe <span class="math inline">\(G\)</span>. Opazujmo vse <span
 class="math inline">\(G\)</span>-invariantne podprostore v <span
 class="math inline">\(V\)</span>, ki so kot upodobitve izomorfni <span
 class="math inline">\(\pi\)</span>. Vsota (ne nujno direktna) vseh teh
-podprostorov <span
-class="math display">\[\mathop{\mathrm{Izotip}}_{\rho}(\pi) = \sum_{W
-\leq V, \ W \cong \pi} W\]</span> je <span><strong><em><span
+podprostorov <span class="math display">\[\displaystyle
+\mathop{\mathrm{Izotip}}_{\rho}(\pi) = \sum_{W \leq V, \ W \cong \pi}
+W\]</span> je <span><strong><em><span
 class="math inline">\(\pi\)</span>-izotipična
 komponenta</em></strong></span> upodobitve <span
 class="math inline">\(\rho\)</span>. Ta je sicer definirana za vsako
@@ -2169,8 +2168,9 @@ V_i\)</span>, kjer je vsak <span class="math inline">\(\rho_i\)</span>
 nerazcepna podupodobitev. Za vsako nerazcepno upodobitev <span
 class="math inline">\(\pi\)</span> grupe <span
 class="math inline">\(G\)</span> je <span
-class="math display">\[\mathop{\mathrm{Izotip}}_{\rho}(\pi) =
-\bigoplus_{i \in I \colon \ \rho_i \cong \pi} V_i.\]</span></p>
+class="math display">\[\displaystyle
+\mathop{\mathrm{Izotip}}_{\rho}(\pi) = \bigoplus_{i \in I \colon \
+\rho_i \cong \pi} V_i.\]</span></p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Naj bo <span class="math inline">\(W\)</span>
@@ -2324,7 +2324,7 @@ class="math inline">\(W\)</span> je zato enak <span
 class="math inline">\(\bigoplus_{i \in J} V_i\)</span> za neko
 podmnožico <span class="math inline">\(J \subseteq I\)</span>.</p>
 <p>Za konkreten zgled lahko vzamemo ciklično grupo <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span> in njeno regularno
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span> in njeno regularno
 upodobitev, ki smo jo razcepili na direktno vsoto upodobitev <span
 class="math inline">\(\bigoplus_{j \in \{ 1,2,\dots,n \}}
 \chi_j\)</span>. Po zadnjem komentarju je vsaka podupodobitev regularne
@@ -2341,9 +2341,9 @@ class="math inline">\(\mathop{\mathrm{Izotip}}_{\rho}(\pi)\)</span>, če
 in samo če grupa <span class="math inline">\(G\)</span> na prostoru
 <span class="math inline">\(\langle v \rangle\)</span> deluje kot s
 <span class="math inline">\(\pi\)</span>, se pravi <span
-class="math display">\[\mathop{\mathrm{Izotip}}_{\rho}(\pi) = \left\{ v
-\in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v
-\right\}.\]</span></p>
+class="math display">\[\displaystyle
+\mathop{\mathrm{Izotip}}_{\rho}(\pi) = \left\{ v \in V \mid \forall g
+\in G \colon \ \rho(g) \cdot v = \pi(g) v \right\}.\]</span></p>
 <p>Kadar je grupa <span class="math inline">\(G\)</span> abelova, je
 vsaka njena nerazcepna upodobitev nad algebraično zaprtim poljem
 enorazsežna. Vsaka polenostavna upodobitev take grupe je zato direktna
@@ -2424,7 +2424,7 @@ class="math inline">\(\pi\)</span>.</p>
 class="math inline">\(G\)</span> grupa s končnorazsežno nerazcepno
 upodobitvijo <span class="math inline">\(\pi\)</span> nad algebraično
 zaprtim poljem. Tedaj je <span
-class="math display">\[\mathop{\mathrm{MK}}(\pi) =
+class="math display">\[\displaystyle  \mathop{\mathrm{MK}}(\pi) =
 \mathop{\mathrm{Izotip}}_{\rho_{\hom}}(\pi)\]</span> in večkratnost
 <span class="math inline">\(\pi\)</span> v slednji upodobitvi je enaka
 <span class="math inline">\(\deg(\pi)\)</span>.</p>
@@ -2440,8 +2440,9 @@ class="math inline">\(\Phi \in \hom_G(\pi, \rho_{\hom})\)</span> in
 predstavimo kot inducirano upodobitev <span
 class="math inline">\(\rho_{\hom} =
 \mathop{\mathrm{Ind}}^G_1(\mathbf{1})\)</span>. Po adjunkciji med
-restrikcijo in indukcijo je <span class="math display">\[\hom_G(\pi,
-\rho_{\hom}) \cong \hom_1(\mathop{\mathrm{Res}}^G_1(\pi), \mathbf{1})
+restrikcijo in indukcijo je <span class="math display">\[\displaystyle
+\hom_G(\pi, \rho_{\hom}) \cong \hom_1(\mathop{\mathrm{Res}}^G_1(\pi),
+\mathbf{1})
     \cong \hom(\mathbf{1}^{\deg(\pi)}, \mathbf{1}).\]</span> Standardna
 dualna baza <span class="math inline">\(\{ e_i^* \mid 1 \leq i \leq
 \deg(\pi) \}\)</span> v zadnjem vektorskem prostoru nam po tej
@@ -2464,8 +2465,17 @@ upodobitve. Večkratnost <span class="math inline">\(\pi\)</span> v njej
 je enaka <span class="math inline">\(\dim \hom_G(\pi, \rho_{\hom}) =
 \deg(\pi)\)</span>. ◻</p>
 </div>
-<p>V posebnem smo tekom dokaza zadnje trditve izpeljali, da so po izbiri
-baze matrični koeficienti končnorazsežne nerazcepne upodobitve <span
+<p>Izpostavimo pomembno posledico, ki nam pove, da lahko vse nerazcepne
+upodobitve najdemo v regularni.</p>
+<div class="posledica">
+<p><strong>Posledica 2.5</strong>. Naj bo <span
+class="math inline">\(G\)</span> grupa in polje algebraično zaprto.
+Regularna upodobitev grupe <span class="math inline">\(G\)</span>
+vsebuje kot podupodobitev vsako končnorazsežno nerazcepno upodobitev
+grupe <span class="math inline">\(G\)</span>.</p>
+</div>
+<p>V posebnem smo tekom zadnjega dokaza izpeljali, da so po izbiri baze
+matrični koeficienti končnorazsežne nerazcepne upodobitve <span
 class="math inline">\(\pi\)</span> vselej linearno neodvisni.<a
 href="#fn31" class="footnote-ref" id="fnref31"
 role="doc-noteref"><sup>31</sup></a> Vseh je ravno <span
@@ -2489,14 +2499,14 @@ lahko po primerjanju dimenzij zato izpeljemo neenakost <span
 class="math display">\[\sum_{i \in I} \deg(\pi_i)^2 \leq \dim \hom(G,F)
 = |G|.\]</span></p>
 <div class="posledica">
-<p><strong>Posledica 2.5</strong>. Končna grupa ima nad algebraično
+<p><strong>Posledica 2.6</strong>. Končna grupa ima nad algebraično
 zaprtim poljem le končno mnogo nerazcepnih upodobitev. Vsaka od njih je
 stopnje kvečjemu <span class="math inline">\(\sqrt{|G|}\)</span>.</p>
 </div>
 <div class="zgled">
 <p><strong>Zgled 2.9</strong>. Opazujmo grupo <span
 class="math inline">\(S_3\)</span> nad poljem <span
-class="math inline">\(\mathbb{C}\)</span>. Njeno regularno upodobitev
+class="math inline">\(\mathbf{C}\)</span>. Njeno regularno upodobitev
 smo že razstavili na direktno vsoto <span
 class="math inline">\(\mathbf{1} \oplus \rho\)</span>, kjer je <span
 class="math inline">\(\rho\)</span> dvorazsežna nerazcepna upodobitev.
@@ -2538,7 +2548,7 @@ funkcije</em></strong></span>.</p>
 <div class="zgled">
 <p><strong>Zgled 2.10</strong>. Opazujmo grupo <span
 class="math inline">\(S_3\)</span> nad poljem <span
-class="math inline">\(\mathbb{C}\)</span>. Poznamo že vse tri njene
+class="math inline">\(\mathbf{C}\)</span>. Poznamo že vse tri njene
 nerazcepne upodobitve. Določimo karakterje teh nerazcepnih upodobitev.
 Karakterji enorazsežnih upodobitev so kot funkcije kar enaki
 upodobitvam. Za karakter <span
@@ -2741,7 +2751,7 @@ ničelni karakteristiki sledi, da ta enakost velja tudi v kolobarju celih
 števil. S tem je <span class="math inline">\(\rho_1 \cong
 \rho_2\)</span>.</p>
 <div class="posledica">
-<p><strong>Posledica 2.6</strong>. Nad algebraično zaprtim poljem
+<p><strong>Posledica 2.7</strong>. Nad algebraično zaprtim poljem
 ničelne karakteristike je polenostavna upodobitev do izomorfizma
 natančno določena s svojim karakterjem.</p>
 </div>
@@ -2753,30 +2763,26 @@ bi sploh poznali same nerazcepne upodobitve. Na ta način lahko dodobra
 razumemo kategorijo upodobitev dane grupe zgolj z uporabo
 karakterjev.</p>
 <h1 id="upodobitve-končnih-grup">Upodobitve končnih grup</h1>
-<h2 id="polenostavnost-in-regularna-upodobitev">Polenostavnost in
-regularna upodobitev</h2>
+<h2 id="polenostavnost-1">Polenostavnost</h2>
 <h2 id="karakterji-1">Karakterji</h2>
-<h2 id="konkretni-primeri">Konkretni primeri</h2>
+<h2 id="razširjeni-zgledi">Razširjeni zgledi</h2>
 <h3 id="abelove-grupe">Abelove grupe</h3>
-<h3 id="razširjeni-zgled-mathopmathrmgl_2mathbbf_p">Razširjeni zgled
-<span
-class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbb{F}_p)\)</span></h3>
-<h3 id="razširjeni-zgled-s_n">Razširjeni zgled <span
-class="math inline">\(S_n\)</span></h3>
+<h3 id="mathopmathrmgl_2mathbff_p"><span
+class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span></h3>
+<h3 id="s_n"><span class="math inline">\(S_n\)</span></h3>
 <h1 id="upodobitve-linearnih-grup">Upodobitve linearnih grup</h1>
 <h2 id="ozaljšane-upodobitve">Ozaljšane upodobitve</h2>
 <h3 id="zvezne-upodobitve">Zvezne upodobitve</h3>
 <h3 id="unitarne-upodobitve">Unitarne upodobitve</h3>
-<h3 id="razširjeni-zgled-s1">Razširjeni zgled <span
-class="math inline">\(S^1\)</span></h3>
-<h2 id="liejeve-grupe-in-mreže">Liejeve grupe in mreže</h2>
-<h3 id="razširjeni-zgled-mathopmathrmsl_2mathbbc">Razširjeni zgled <span
-class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbb{C})\)</span></h3>
-<h3 id="mreža-mathopmathrmsl_2mathbbz">Mreža <span
-class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbb{Z})\)</span></h3>
+<h3 id="s1"><span class="math inline">\(S^1\)</span></h3>
+<h2 id="liejeve-grupe">Liejeve grupe</h2>
+<h3 id="mathopmathrmsl_2mathbfc"><span
+class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span></h3>
+<h3 id="mathopmathrmsl_2mathbfz"><span
+class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span></h3>
 <h2 id="kompaktne-grupe">Kompaktne grupe</h2>
-<h3 id="razširjeni-zgled-su_2mathbbc">Razširjeni zgled <span
-class="math inline">\(SU_2(\mathbb{C})\)</span></h3>
+<h3 id="mathopmathrmsu_2mathbfc"><span
+class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span></h3>
 <section class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
@@ -2796,14 +2802,14 @@ delovanja lahko ta pogoj pišemo krajše kot <span
 class="math inline">\(\Phi(gv) = g\Phi(v)\)</span>.<a href="#fnref3"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4" role="doc-endnote"><p>Generator <span
-class="math inline">\(\bar 1 = 1 + n\mathbb{Z}\in
-\mathbb{Z}/n\mathbb{Z}\)</span> deluje kot cikel <span
+class="math inline">\(\bar 1 = 1 + n\mathbf{Z}\in
+\mathbf{Z}/n\mathbf{Z}\)</span> deluje kot cikel <span
 class="math inline">\((1 \ 2 \ \cdots \ n)\)</span>.<a href="#fnref4"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5" role="doc-endnote"><p>Pozor, karakteristična funkcija je
 zasidrana pri <span><em>inverzu</em></span> elementa <span
 class="math inline">\(\bar x\)</span> v <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span>.<a href="#fnref5"
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span>.<a href="#fnref5"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6" role="doc-endnote"><p>Na primer, <em>precej dobro</em> bomo
 opisali upodobitve poljubne končne grupe nad poljem kompleksnih
@@ -2823,7 +2829,7 @@ role="doc-backlink">↩︎</a></p></li>
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn9" role="doc-endnote"><p>Poseben primer te preslikave smo
 videli za grupo <span
-class="math inline">\(\mathbb{Z}/n\mathbb{Z}\)</span>, kjer smo
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span>, kjer smo
 premislili, da je celo bijektivna.<a href="#fnref9"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn10" role="doc-endnote"><p>Slika <span
@@ -2847,8 +2853,8 @@ role="doc-backlink">↩︎</a></p></li>
 števil.<a href="#fnref14" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn15" role="doc-endnote"><p>Na primer <span
-class="math inline">\(E = \mathbb{C}\)</span> in <span
-class="math inline">\(F = \mathbb{Q}\)</span>.<a href="#fnref15"
+class="math inline">\(E = \mathbf{C}\)</span> in <span
+class="math inline">\(F = \mathbf{Q}\)</span>.<a href="#fnref15"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn16" role="doc-endnote"><p>Delovanje <span
 class="math inline">\(H\)</span> na <span
@@ -2956,8 +2962,6 @@ href="#fnref33" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
  -->
      <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script>
         /*add Bootstrap styles to tables*/
         var tables = document.getElementsByTagName("table");

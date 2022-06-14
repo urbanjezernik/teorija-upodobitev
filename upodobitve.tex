@@ -48,14 +48,14 @@
 \setlist[description]{leftmargin=\parindent,labelindent=\parindent, font=\normalfont\itshape\textbullet\space}
 
 
-\def\NN{\mathbb{N}}
-\def\ZZ{\mathbb{Z}}
-\def\QQ{\mathbb{Q}}
-\def\RR{\mathbb{R}}
-\def\CC{\mathbb{C}}
+\def\NN{\mathbf{N}}
+\def\ZZ{\mathbf{Z}}
+\def\QQ{\mathbf{Q}}
+\def\RR{\mathbf{R}}
+\def\CC{\mathbf{C}}
 \def\11{\mathbf{1}}
 \def\FF{\mathcal{F}}
-\def\field{\mathbb{F}}
+\def\field{\mathbf{F}}
 \def\GG{\mathcal{G}}
 \def\PP{\mathcal{P}}
 \def\UU{\mathcal{U}}
@@ -75,6 +75,7 @@
 \DeclareMathOperator\MK{MK}
 \DeclareMathOperator\tr{tr}
 \DeclareMathOperator\Irr{Irr}
+\DeclareMathOperator\SU{SU}
 
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\GL{GL}
@@ -281,9 +282,14 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
 
 \begin{zgled} \leavevmode
     \begin{itemize}
-        \item Opazujmo grupo celih števil $\ZZ$ in vektorski prostor $\CC$ nad poljem kompleksnih števil. Za vsak parameter $\alpha \in \CC$ imamo upodobitev
+        \item Opazujmo grupo celih števil $\ZZ$ in vektorski prostor $\CC$ nad poljem kompleksnih števil. Eksponentna funkcija podaja upodobitev
         \[
-            \chi_a \colon \ZZ \to \GL(\CC) = \CC^*, \quad
+            \chi \colon \ZZ \to \GL(\CC) = \CC^*, \quad
+            x \mapsto e^x.
+        \]
+        Splošneje imamo za vsak parameter $\alpha \in \CC$ upodobitev
+        \[
+            \chi_{\alpha} \colon \ZZ \to \GL(\CC) = \CC^*, \quad
             x \mapsto e^{\alpha x}.
         \] 
         \item Opazujmo grupo ostankov $\ZZ/q\ZZ$ za poljubno naravno število $q$. Za vsak parameter $m \in \ZZ/q\ZZ$ imamo upodobitev
@@ -1088,7 +1094,7 @@ Kadar je dana upodobitev \emph{polenostavna}, je do izomorfizma natančno enoli�
 \]
 Po Schurovi lemi je (nad algebraično zaprtim poljem) vsak od zadnjih prostorov spletičen bodisi trivialen bodisi enorazsežen. Večkratnost $\pi$ v $\rho$ lahko zatorej izračunamo kot
 \[
-    \mult_{\rho}(\pi) = \dim \hom_G(\pi, \rho).
+    \displaystyle \mult_{\rho}(\pi) = \dim \hom_G(\pi, \rho).
 \]
 
 \begin{zgled} \leavevmode
@@ -1107,14 +1113,14 @@ Po Schurovi lemi je (nad algebraično zaprtim poljem) vsak od zadnjih prostorov 
 
 Oglejmo si tako situacijo še podrobneje. Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$. Naj bo $\pi$ neka \emph{nerazcepna} upodobitev grupe $G$. Opazujmo vse $G$-invariantne podprostore v $V$, ki so kot upodobitve izomorfni $\pi$. Vsota (ne nujno direktna) vseh teh podprostorov
 \[
-    \Izotip_{\rho}(\pi) = \sum_{W \leq V, \ W \cong \pi} W
+    \displaystyle \Izotip_{\rho}(\pi) = \sum_{W \leq V, \ W \cong \pi} W
 \]
 je {\definicija $\pi$-izotipična komponenta} upodobitve $\rho$. Ta je sicer definirana za vsako upodobitev, a jo je za polenostavne upodobitve še posebej lahko določiti.
 
 \begin{trditev}
 Naj bo $G$ grupa s polenostavno upodobitvijo $\rho = \bigoplus_{i \in I} \rho_i$ na prostoru $V = \bigoplus_{i \in I} V_i$, kjer je vsak $\rho_i$ nerazcepna podupodobitev. Za vsako nerazcepno upodobitev $\pi$ grupe $G$ je
 \[
-    \Izotip_{\rho}(\pi) = \bigoplus_{i \in I \colon \ \rho_i \cong \pi} V_i.
+    \displaystyle \Izotip_{\rho}(\pi) = \bigoplus_{i \in I \colon \ \rho_i \cong \pi} V_i.
 \]
 \end{trditev}
 \begin{dokaz}    
@@ -1166,7 +1172,7 @@ Za konkreten zgled lahko vzamemo ciklično grupo $\ZZ/n\ZZ$ in njeno regularno u
 
 \item Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\pi$ neka njena enorazsežna upodobitev. Taka upodobitev je seveda nerazcepna. Vektor $v \in V$ pripada izotipični komponenti $\Izotip_{\rho}(\pi)$, če in samo če grupa $G$ na prostoru $\langle v \rangle$ deluje kot s $\pi$, se pravi
 \[
-    \Izotip_{\rho}(\pi) = \left\{ v \in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v \right\}.
+    \displaystyle \Izotip_{\rho}(\pi) = \left\{ v \in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v \right\}.
 \]
 
 Kadar je grupa $G$ abelova, je vsaka njena nerazcepna upodobitev nad algebraično zaprtim poljem enorazsežna. Vsaka polenostavna upodobitev take grupe je zato direktna vsota podprostorov, na katerih grupa deluje s skalarnimi množenji prek svojih enorazsežnih upodobitev.
@@ -1209,14 +1215,14 @@ Matrični koeficienti upodobitve $\pi$ nam torej dajejo podupodobitev na prostor
 \begin{izrek}
 Naj bo $G$ grupa s končnorazsežno nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem. Tedaj je
 \[
-    \MK(\pi) = \Izotip_{\rho_{\hom}}(\pi)
+   \displaystyle  \MK(\pi) = \Izotip_{\rho_{\hom}}(\pi)
 \]
 in večkratnost $\pi$ v slednji upodobitvi je enaka $\deg(\pi)$.
 \end{izrek}
 \begin{dokaz}
 Naj bo $\pi$ upodobitev na prostoru $W$. Spomnimo se, da $\pi$-izotipična komponenta v $\rho_{\hom}$ sestoji iz vektorjev oblike $\Phi(w)$ za $\Phi \in \hom_G(\pi, \rho_{\hom})$ in $w \in W$. Regularno upodobitev predstavimo kot inducirano upodobitev $\rho_{\hom} = \Ind^G_1(\11)$. Po adjunkciji med restrikcijo in indukcijo je
 \[
-    \hom_G(\pi, \rho_{\hom}) \cong \hom_1(\Res^G_1(\pi), \11)
+    \displaystyle \hom_G(\pi, \rho_{\hom}) \cong \hom_1(\Res^G_1(\pi), \11)
     \cong \hom(\11^{\deg(\pi)}, \11).
 \]
 Standardna dualna baza $\{ e_i^* \mid 1 \leq i \leq \deg(\pi) \}$ v zadnjem vektorskem prostoru nam po tej adjunkciji porodi bazo
@@ -1231,7 +1237,13 @@ za $1 \leq i \leq \deg(\pi)$ prostora spletičen $\hom_G(\pi, \rho_{\hom})$. Ko 
 prostora $\Izotip_{\rho_{\hom}}(\pi)$. V izbranih bazah torej matrični koeficienti tvorijo bazo za $\pi$-izotipično komponento regularne upodobitve. Večkratnost $\pi$ v njej je enaka $\dim \hom_G(\pi, \rho_{\hom}) = \deg(\pi)$.
 \end{dokaz}
 
-V posebnem smo tekom dokaza zadnje trditve izpeljali, da so po izbiri baze matrični koeficienti končnorazsežne nerazcepne upodobitve $\pi$ vselej linearno neodvisni.\footnote{Temu dejstvu včasih pravimo \emph{Burnsideov izrek o neracepnosti}.} Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodbitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
+Izpostavimo pomembno posledico, ki nam pove, da lahko vse nerazcepne upodobitve najdemo v regularni.
+
+\begin{posledica}
+Naj bo $G$ grupa in polje algebraično zaprto. Regularna upodobitev grupe $G$ vsebuje kot podupodobitev vsako končnorazsežno nerazcepno upodobitev grupe $G$.
+\end{posledica}
+
+V posebnem smo tekom zadnjega dokaza izpeljali, da so po izbiri baze matrični koeficienti končnorazsežne nerazcepne upodobitve $\pi$ vselej linearno neodvisni.\footnote{Temu dejstvu včasih pravimo \emph{Burnsideov izrek o neracepnosti}.} Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodbitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
 
 Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve \emph{končno mnogo} paroma neizomorfnih nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam po izbiri baze podari svoje matrične koeficiente. Ti razpenjajo prostore, ki so enakim izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med sabo. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$. 
 
@@ -1357,17 +1369,15 @@ Nad algebraično zaprtim poljem ničelne karakteristike je polenostavna upodobit
 
 Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitve, ki so sicer mnogo bolj kompleksni objekti kot le funkcije na grupi, natančno določene. V nadaljevanju bomo videli, da lahko včasih eksplicitno izračunamo vse nerazcepne karakterje, brez da bi sploh poznali same nerazcepne upodobitve. Na ta način lahko dodobra razumemo kategorijo upodobitev dane grupe zgolj z uporabo karakterjev.
 
-\todo{Zgled: tabla karakterjev za $S_3$ nad $\CC$, karakterji $SL_2$}
-
 \chapter{Upodobitve končnih grup}
 
-\section{Polenostavnost in regularna upodobitev}
+\section{Polenostavnost}
 \section{Karakterji}
-\section{Konkretni primeri}
+\section{Razširjeni zgledi}
 
 \subsection{Abelove grupe}
-\subsection{Razširjeni zgled $\GL_2(\field_p)$}
-\subsection{Razširjeni zgled $S_n$}
+\subsection{$\GL_2(\field_p)$}
+\subsection{$S_n$}
 
 \todo[inline]{
 - Maschke (projektor)
@@ -1399,16 +1409,16 @@ Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitv
 - unitarne na hilbertovih prostorih (končne smo že, $SU_2$)
 }
 
-\subsection{Razširjeni zgled $S^1$}
+\subsection{$S^1$}
 
 \todo[inline]{
     fourier
 }
 
-\section{Liejeve grupe in mreže}
+\section{Liejeve grupe}
 
-\subsection{Razširjeni zgled $\SL_2(\CC)$}
-\subsection{Mreža $\SL_2(\ZZ)$}
+\subsection{$\SL_2(\CC)$}
+\subsection{$\SL_2(\ZZ)$}
 
 \todo[inline]{
 - obravnavamo kot Liejevo grupo
@@ -1430,7 +1440,7 @@ Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitv
 
 \section{Kompaktne grupe}
 
-\subsection{Razširjeni zgled $SU_2(\CC)$}
+\subsection{$\SU_2(\CC)$}
 
 \todo[inline]{
 - lahko bi geometrijsko iz $sl_2$, ampak pokažemo alternativen pristop, ker je kompaktna
