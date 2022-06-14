@@ -94,22 +94,13 @@ $body$
      <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-<!--     <script>
-        //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
-        
-        /* ajust the height when click the toc
-           the code is from https://github.com/twbs/bootstrap/issues/1768
-        */
-        var shiftWindow = function() { scrollBy(0, -50) };
-        window.addEventListener("hashchange", shiftWindow);
-        function load() { if (window.location.hash) shiftWindow(); }
-        
+    <script>
         /*add Bootstrap styles to tables*/
         var tables = document.getElementsByTagName("table");
         for(var i = 0; i < tables.length; ++i){
-            tables[i].className += "table table-bordered table-hover";
+            tables[i].className += "table table-striped";
         }
-    </script> -->
+    </script>
     <script>
       var proofClasses = document.getElementsByClassName("proof");
 

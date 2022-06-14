@@ -2493,6 +2493,21 @@ class="math display">\[\sum_{i \in I} \deg(\pi_i)^2 \leq \dim \hom(G,F)
 zaprtim poljem le končno mnogo nerazcepnih upodobitev. Vsaka od njih je
 stopnje kvečjemu <span class="math inline">\(\sqrt{|G|}\)</span>.</p>
 </div>
+<div class="zgled">
+<p><strong>Zgled 2.9</strong>. Opazujmo grupo <span
+class="math inline">\(S_3\)</span> nad poljem <span
+class="math inline">\(\mathbb{C}\)</span>. Njeno regularno upodobitev
+smo že razstavili na direktno vsoto <span
+class="math inline">\(\mathbf{1} \oplus \rho\)</span>, kjer je <span
+class="math inline">\(\rho\)</span> dvorazsežna nerazcepna upodobitev.
+Poleg tega poznamo še enorazsežno predznačno upodobitev <span
+class="math inline">\(\mathop{\mathrm{sgn}}\)</span>. Vsota kvadratov
+stopenj teh treh upodobitev je <span class="math inline">\(1^2 + 1^2 +
+2^2 = 6\)</span>, kar je ravno enako moči grupe <span
+class="math inline">\(S_3\)</span>. Od tod sledi, da so te tri
+<em>vse</em> nerazcepne upodobitve grupe <span
+class="math inline">\(S_3\)</span>.</p>
+</div>
 <p>Več o upodobitvah končnih grup si bomo pogledali nekoliko
 kasneje.</p>
 <h3 id="karakterji">Karakterji</h3>
@@ -2512,6 +2527,89 @@ f_{i,i}(g).\]</span> To funkcijo imenujemo
 class="math inline">\(\rho\)</span>. Kadar je upodobitev <span
 class="math inline">\(\rho\)</span> nerazcepna, tudi njenemu karakterju
 dodamo pridevnik <em>nerazcepen</em>.</p>
+<p>Karakter je neodvisen od izbire baze, zato za vsaka <span
+class="math inline">\(x, g \in G\)</span> velja <span
+class="math inline">\(\chi_{\rho}(x g x^{-1}) = \chi_{\rho}(g)\)</span>.
+Karakterji so torej funkcije na <span class="math inline">\(G\)</span>,
+ki so konstantne na konjugiranostnih razredih.<a href="#fn33"
+class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>
+Takim funkcijam pravimo <span><strong><em>razredne
+funkcije</em></strong></span>.</p>
+<div class="zgled">
+<p><strong>Zgled 2.10</strong>. Opazujmo grupo <span
+class="math inline">\(S_3\)</span> nad poljem <span
+class="math inline">\(\mathbb{C}\)</span>. Poznamo že vse tri njene
+nerazcepne upodobitve. Določimo karakterje teh nerazcepnih upodobitev.
+Karakterji enorazsežnih upodobitev so kot funkcije kar enaki
+upodobitvam. Za karakter <span
+class="math inline">\(\chi_{\rho}\)</span> velja <span
+class="math display">\[() \mapsto \mathop{\mathrm{tr}}\begin{pmatrix}
+        1 &amp; 0 \\ 0 &amp; 1
+    \end{pmatrix} = 2, \quad
+    (1 \ 2) \mapsto \mathop{\mathrm{tr}}\begin{pmatrix}
+        -1 &amp; 1 \\ 0 &amp; 1
+    \end{pmatrix} = 0, \quad
+    (1 \ 2 \ 3) \mapsto \mathop{\mathrm{tr}}\begin{pmatrix}
+        0 &amp; -1 \\ 1 &amp; -1
+    \end{pmatrix} = -1.\]</span> V grupi <span
+class="math inline">\(S_3\)</span> je vsak element konjugiran enemu od
+<span class="math inline">\(()\)</span>, <span class="math inline">\((1
+\ 2)\)</span> ali <span class="math inline">\((1 \ 2 \ 3)\)</span>. S
+tem so torej vse vrednosti karakterja <span
+class="math inline">\(\chi_{\rho}\)</span> določene.</p>
+<p>Vse podatke o vrednostih karakterjev dane grupe ponavadi zložimo v
+<span><strong><em>tabelo karakterjev</em></strong></span>. Stolpce
+indeksiramo s predstavniki konjugiranostnih razredov, vrstice pa z
+nerazcepnimi karakterji. Vrednosti v tabeli so vrednosti karakterjev v
+konjugiranostnih razredih.</p>
+<table>
+<caption>Tabela karakterjev <span
+class="math inline">\(S_3\)</span></caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span
+class="math inline">\(()\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((1 \
+2)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((1 \ 2 \
+3)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(\chi_{\mathbf{1}}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(\chi_{\mathop{\mathrm{sgn}}}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(-1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(\chi_{\rho}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(-1\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Že samo imenovanje karakterjev odzvanja, da to niso poljubne funkcije
 v <span class="math inline">\(\hom(G,F)\)</span>, temveč da v nekem
 smislu zajemajo srž upodobitve.</p>
@@ -2535,15 +2633,14 @@ class="math inline">\(G\)</span> grupa s končnorazsežnimi upodobitvami
 <span class="math inline">\(\rho\)</span>, <span
 class="math inline">\(\rho_1\)</span>, <span
 class="math inline">\(\rho_2\)</span>. Tedaj za vse <span
-class="math inline">\(x, g \in G\)</span> velja <span
-class="math display">\[\chi_{\rho}(x^{-1} g x) = \chi_{\rho}(g), \quad
-\chi_{\rho^*}(g) = \chi_{\rho}(g^{-1})\]</span> in <span
+class="math inline">\(g \in G\)</span> velja <span
 class="math display">\[\chi_{\rho}(1) = \deg(\rho), \quad
     \chi_{\rho_1 \oplus \rho_2} = \chi_{\rho_1} + \chi_{\rho_2}, \quad
-    \chi_{\rho_1 \otimes \rho_2} = \chi_{\rho_1} \cdot
-\chi_{\rho_2}.\]</span> Za podgrupo <span class="math inline">\(H \leq
-G\)</span> in poljuben <span class="math inline">\(h \in H\)</span>
-velja <span
+    \chi_{\rho_1 \otimes \rho_2} = \chi_{\rho_1} \cdot \chi_{\rho_2},
+\quad
+    \chi_{\rho^*}(g) = \chi_{\rho}(g^{-1}).\]</span> Za podgrupo <span
+class="math inline">\(H \leq G\)</span> in poljuben <span
+class="math inline">\(h \in H\)</span> velja <span
 class="math display">\[\chi_{\mathop{\mathrm{Res}}^G_H(\rho)}(h) =
 \chi_{\rho}(h).\]</span> Kadar je <span class="math inline">\(H \leq
 G\)</span> končnega indeksa in <span class="math inline">\(\rho\)</span>
@@ -2592,7 +2689,7 @@ predstavnikih <span class="math inline">\(r_0 \in R\)</span>, dobimo
 želeno formulo za induciran karakter. ◻</p>
 </div>
 <div class="zgled">
-<p><strong>Zgled 2.9</strong>. Naj bo <span
+<p><strong>Zgled 2.11</strong>. Naj bo <span
 class="math inline">\(G\)</span> končna grupa. V tem primeru je
 regularna upodobitev <span class="math inline">\(\rho_{\hom}\)</span>
 končnorazsežna. Določimo njen karakter najprej na roke. V regularni
@@ -2634,17 +2731,15 @@ class="math display">\[\displaystyle \chi_{\rho} = \sum_{\pi \in
 svojimi nerazcepnimi komponentami in njihovimi večkratnostmi. Če je
 torej <span class="math inline">\(\chi_{\rho_1} = \chi_{\rho_2}\)</span>
 za polenostavni upodobitvi <span class="math inline">\(\rho_1\)</span>,
-<span class="math inline">\(\rho_2\)</span>, potem od tod sledi enakost
-<span class="math inline">\(\mathop{\mathrm{mult}}_{\rho_1}(\pi_1) \cdot
-\chi_{\pi_1} = \mathop{\mathrm{mult}}_{\rho_2}(\pi_2) \cdot
-\chi_{\pi_2}\)</span> za vsaki nerazcepni upodobitvi <span
-class="math inline">\(\pi_1\)</span>, <span
-class="math inline">\(\pi_2\)</span>. Iz neodvisnosti nerazcepnih
-karakterjev in predpostavke o ničelni karakteristiki polja sklepamo
-<span class="math inline">\(\pi_1 = \pi_2\)</span> in <span
-class="math inline">\(\mathop{\mathrm{mult}}_{\rho_1}(\pi_1) =
-\mathop{\mathrm{mult}}_{\rho_2}(\pi_2)\)</span>, zato je <span
-class="math inline">\(\rho_1 \cong \rho_2\)</span>.</p>
+<span class="math inline">\(\rho_2\)</span>, potem od tod iz
+neodvisnosti nerazcepnih karakterjev sledi enakost <span
+class="math inline">\(\mathop{\mathrm{mult}}_{\rho_1}(\pi) =
+\mathop{\mathrm{mult}}_{\rho_2}(\pi)\)</span> za vsako nerazcepno
+upodobitev <span class="math inline">\(\pi\)</span>. To je enakost v
+polju <span class="math inline">\(F\)</span>, od koder po predpostavki o
+ničelni karakteristiki sledi, da ta enakost velja tudi v kolobarju celih
+števil. S tem je <span class="math inline">\(\rho_1 \cong
+\rho_2\)</span>.</p>
 <div class="posledica">
 <p><strong>Posledica 2.6</strong>. Nad algebraično zaprtim poljem
 ničelne karakteristike je polenostavna upodobitev do izomorfizma
@@ -2842,6 +2937,12 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn32" role="doc-endnote"><p>V resnici je sled do skalarja
 natančno <em>edina</em> taka funkcija.<a href="#fnref32"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn33" role="doc-endnote"><p><span><strong><em>Konjugiranostni
+razred</em></strong></span> elementa <span class="math inline">\(g \in
+G\)</span> je množica <span class="math inline">\(\{ x g x^{-1} \mid x
+\in G \}\)</span>. Grupa <span class="math inline">\(G\)</span> je
+disjunktna unija konjugiranostnih razredov svojih elementov.<a
+href="#fnref33" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
         </div>
@@ -2857,22 +2958,13 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
      <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-<!--     <script>
-        //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
-        
-        /* ajust the height when click the toc
-           the code is from https://github.com/twbs/bootstrap/issues/1768
-        */
-        var shiftWindow = function() { scrollBy(0, -50) };
-        window.addEventListener("hashchange", shiftWindow);
-        function load() { if (window.location.hash) shiftWindow(); }
-        
+    <script>
         /*add Bootstrap styles to tables*/
         var tables = document.getElementsByTagName("table");
         for(var i = 0; i < tables.length; ++i){
-            tables[i].className += "table table-bordered table-hover";
+            tables[i].className += "table table-striped";
         }
-    </script> -->
+    </script>
     <script>
       var proofClasses = document.getElementsByClassName("proof");
 

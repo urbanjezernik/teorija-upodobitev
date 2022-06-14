@@ -1244,6 +1244,10 @@ Matrični koeficienti so elementi prostora funkcij $\hom(G,F)$. V primeru, ko je
 Končna grupa ima nad algebraično zaprtim poljem le končno mnogo nerazcepnih upodobitev. Vsaka od njih je stopnje kvečjemu $\sqrt{|G|}$.
 \end{posledica}
 
+\begin{zgled}
+    Opazujmo grupo $S_3$ nad poljem $\CC$. Njeno regularno upodobitev smo že razstavili na direktno vsoto $\11 \oplus \rho$, kjer je $\rho$ dvorazsežna nerazcepna upodobitev. Poleg tega poznamo še enorazsežno predznačno upodobitev $\sgn$. Vsota kvadratov stopenj teh treh upodobitev je $1^2 + 1^2 + 2^2 = 6$, kar je ravno enako moči grupe $S_3$. Od tod sledi, da so te tri \emph{vse} nerazcepne upodobitve grupe $S_3$.
+\end{zgled}
+
 Več o upodobitvah končnih grup si bomo pogledali nekoliko kasneje.
 
 \subsection{Karakterji}
@@ -1254,6 +1258,37 @@ Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev. Po izbiri baze dob
     g \mapsto \tr(\rho(g)) = \sum_{i = 1}^{\deg(\rho)} f_{i,i}(g).
 \]
 To funkcijo imenujemo {\definicija karakter} upodobitve $\rho$. Kadar je upodobitev $\rho$ nerazcepna, tudi njenemu karakterju dodamo pridevnik \emph{nerazcepen}. 
+
+Karakter je neodvisen od izbire baze, zato za vsaka $x, g \in G$ velja $\chi_{\rho}(x g x^{-1}) = \chi_{\rho}(g)$. Karakterji so torej funkcije na $G$, ki so konstantne na konjugiranostnih razredih.\footnote{{\definicija Konjugiranostni razred} elementa $g \in G$ je množica $\{ x g x^{-1} \mid x \in G \}$. Grupa $G$ je disjunktna unija konjugiranostnih razredov svojih elementov.} Takim funkcijam pravimo {\definicija razredne funkcije}.
+
+\begin{zgled}
+Opazujmo grupo $S_3$ nad poljem $\CC$. Poznamo že vse tri njene nerazcepne upodobitve. Določimo karakterje teh nerazcepnih upodobitev. Karakterji enorazsežnih upodobitev so kot funkcije kar enaki upodobitvam. Za karakter $\chi_{\rho}$ velja
+\[
+    () \mapsto \tr \begin{pmatrix}
+        1 & 0 \\ 0 & 1
+    \end{pmatrix} = 2, \quad
+    (1 \ 2) \mapsto \tr \begin{pmatrix}
+        -1 & 1 \\ 0 & 1
+    \end{pmatrix} = 0, \quad
+    (1 \ 2 \ 3) \mapsto \tr \begin{pmatrix}
+        0 & -1 \\ 1 & -1
+    \end{pmatrix} = -1.
+\]
+V grupi $S_3$ je vsak element konjugiran enemu od $()$, $(1 \ 2)$ ali $(1 \ 2 \ 3)$. S tem so torej vse vrednosti karakterja $\chi_{\rho}$ določene.
+
+Vse podatke o vrednostih karakterjev dane grupe ponavadi zložimo v {\definicija tabelo karakterjev}. Stolpce indeksiramo s predstavniki konjugiranostnih razredov, vrstice pa z nerazcepnimi karakterji. Vrednosti v tabeli so vrednosti karakterjev v konjugiranostnih razredih.
+
+\begin{table}[h!]
+     \centering
+\begin{tabular}{c|ccc}
+     & $()$ & $(1 \ 2)$ & $(1 \ 2 \ 3)$ \\ \hline
+     $\chi_{\11}$ & $1$ & $1$ & $1$ \\
+     $\chi_{\sgn}$ & $1$ & $-1$ & $1$ \\
+     $\chi_{\rho}$ & $2$ & $0$ & $-1$ \\
+\end{tabular}
+\caption{Tabela karakterjev $S_3$}
+\end{table}
+\end{zgled}
 
 Že samo imenovanje karakterjev odzvanja, da to niso poljubne funkcije v $\hom(G,F)$, temveč da v nekem smislu zajemajo srž upodobitve.
 
@@ -1267,16 +1302,12 @@ Ker so matrični koeficienti različnih nerazcepnih upodobitev linearno neodvisn
 Karakterjev fundamentalnih konstrukcij različnih upodobitev ni težko izračunati.
 
 \begin{trditev}
-Naj bo $G$ grupa s končnorazsežnimi upodobitvami $\rho$, $\rho_1$, $\rho_2$. Tedaj za vse $x, g \in G$ velja
-\[
-\chi_{\rho}(x^{-1} g x) = \chi_{\rho}(g), \quad
-\chi_{\rho^*}(g) = \chi_{\rho}(g^{-1})
-\]
-in
+Naj bo $G$ grupa s končnorazsežnimi upodobitvami $\rho$, $\rho_1$, $\rho_2$. Tedaj za vse $g \in G$ velja
 \[
     \chi_{\rho}(1) = \deg(\rho), \quad
     \chi_{\rho_1 \oplus \rho_2} = \chi_{\rho_1} + \chi_{\rho_2}, \quad
-    \chi_{\rho_1 \otimes \rho_2} = \chi_{\rho_1} \cdot \chi_{\rho_2}.
+    \chi_{\rho_1 \otimes \rho_2} = \chi_{\rho_1} \cdot \chi_{\rho_2}, \quad
+    \chi_{\rho^*}(g) = \chi_{\rho}(g^{-1}).
 \]
 Za podgrupo $H \leq G$ in poljuben $h \in H$ velja
 \[
@@ -1318,7 +1349,7 @@ Lastnost karakterjev kot srža upodobitve se prenese na končnorazsežne polenos
 \[
     \displaystyle \chi_{\rho} = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot \chi_{\pi}.
 \]
-Polenostavna upodobitev je enolično določena s svojimi nerazcepnimi komponentami in njihovimi večkratnostmi. Če je torej $\chi_{\rho_1} = \chi_{\rho_2}$ za polenostavni upodobitvi $\rho_1$, $\rho_2$, potem od tod sledi enakost $\mult_{\rho_1}(\pi_1) \cdot \chi_{\pi_1} = \mult_{\rho_2}(\pi_2) \cdot \chi_{\pi_2}$ za vsaki nerazcepni upodobitvi $\pi_1$, $\pi_2$. Iz neodvisnosti nerazcepnih karakterjev in predpostavke o ničelni karakteristiki polja sklepamo $\pi_1 = \pi_2$ in $\mult_{\rho_1}(\pi_1) = \mult_{\rho_2}(\pi_2)$, zato je $\rho_1 \cong \rho_2$.
+Polenostavna upodobitev je enolično določena s svojimi nerazcepnimi komponentami in njihovimi večkratnostmi. Če je torej $\chi_{\rho_1} = \chi_{\rho_2}$ za polenostavni upodobitvi $\rho_1$, $\rho_2$, potem od tod iz neodvisnosti nerazcepnih karakterjev sledi enakost $\mult_{\rho_1}(\pi) = \mult_{\rho_2}(\pi)$ za vsako nerazcepno upodobitev $\pi$. To je enakost v polju $F$, od koder po predpostavki o ničelni karakteristiki sledi, da ta enakost velja tudi v kolobarju celih števil. S tem je $\rho_1 \cong \rho_2$.
 
 \begin{posledica}
 Nad algebraično zaprtim poljem ničelne karakteristike je polenostavna upodobitev do izomorfizma natančno določena s svojim karakterjem.
@@ -1326,7 +1357,7 @@ Nad algebraično zaprtim poljem ničelne karakteristike je polenostavna upodobit
 
 Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitve, ki so sicer mnogo bolj kompleksni objekti kot le funkcije na grupi, natančno določene. V nadaljevanju bomo videli, da lahko včasih eksplicitno izračunamo vse nerazcepne karakterje, brez da bi sploh poznali same nerazcepne upodobitve. Na ta način lahko dodobra razumemo kategorijo upodobitev dane grupe zgolj z uporabo karakterjev.
 
-
+\todo{Zgled: tabla karakterjev za $S_3$ nad $\CC$, karakterji $SL_2$}
 
 \chapter{Upodobitve končnih grup}
 
@@ -1388,7 +1419,7 @@ Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitv
 - dokažemo, da so to vse upodobitve $sl_2$ (Fulton-Harris)
 - zvezne upodobitve $SL_2$: te plus konjugiranke (samo rezultat, glej Example 2.7.41 za karakter)
 - abstraktne upodobitve: divji avtomorfizmi $\CC$
-- dokažemo Clebsch-Gordan (najbrž izpustimo ...)
+- dokažemo Clebsch-Gordan (najbrž izpustimo ..)
 - $SL_2(Z)$? (-> \url{https://math.stackexchange.com/questions/786303/the-presentation-of-sl2-mathbbz}, glej zadnji odgovor, kjer poda prezentacijo, napiši na primer enačbe za raznoterost dvorazsežnih realnih upodobitev) 
 - random groups, model Gromova \url{https://arxiv.org/abs/1810.01529}
 - $SL_n(Z)$? (-> The representation theory of SLn(Z), Andrew Putman, povezano s $p$-adičnimi števili -- Lubotzky)
