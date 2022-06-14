@@ -73,6 +73,8 @@
 \DeclareMathOperator\mult{mult}
 \DeclareMathOperator\Izotip{Izotip}
 \DeclareMathOperator\MK{MK}
+\DeclareMathOperator\tr{tr}
+\DeclareMathOperator\Irr{Irr}
 
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\GL{GL}
@@ -930,6 +932,8 @@ Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad \emph{
 Naj bo $0 \neq \Phi \in \hom_G(\pi, \pi)$. Ker je polje algebraično zaprto, ima linearna preslikava $\Phi$ vsaj kakšno lastno vrednost, recimo $\lambda$. Preslikava $\Phi - \lambda \cdot \id \in \hom_G(\pi, \pi)$ zato ni injektivna, s čimer mora biti po Schurovi lemi ničelna, se pravi $\Phi = \lambda \cdot \id$.
 \end{dokaz}
 
+Množico vseh nerazcepnih upodobitev dane grupe $G$ označimo z $\Irr(G)$.
+
 \begin{zgled}
 Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad poljem kompleksnih števil. Spletične $\hom_G(\pi, \pi) = \hom(\pi, \pi)^G$ so endomorfizmi vektorskega prostora, ki so $G$-invariatni, se pravi komutirajo z delovanjem grupe $G$. Zglede takih endomorfizmov lahko dobimo iz delovanj centralnih elementov grupe $G$; za vsak $z \in Z(G)$ je $\pi(z) \in \hom_G(\pi, \pi)$. Po Schurovi lemi je zato $\pi(z) = \omega(z) \cdot \id$ za nek skalar $\omega(z)$. Ker je $\pi$ homomorfizem, je $\omega \colon Z(G) \to \CC^*$ enorazsežna upodobitev centra grupe $G$. Tej upodobitvi rečemo {\definicija centralni karakter} upodobitve $\pi$.
 
@@ -1213,7 +1217,7 @@ in večkratnost $\pi$ v slednji upodobitvi je enaka $\deg(\pi)$.
 Naj bo $\pi$ upodobitev na prostoru $W$. Spomnimo se, da $\pi$-izotipična komponenta v $\rho_{\hom}$ sestoji iz vektorjev oblike $\Phi(w)$ za $\Phi \in \hom_G(\pi, \rho_{\hom})$ in $w \in W$. Regularno upodobitev predstavimo kot inducirano upodobitev $\rho_{\hom} = \Ind^G_1(\11)$. Po adjunkciji med restrikcijo in indukcijo je
 \[
     \hom_G(\pi, \rho_{\hom}) \cong \hom_1(\Res^G_1(\pi), \11)
-    = \hom(\11^{\deg(\pi)}, \11).
+    \cong \hom(\11^{\deg(\pi)}, \11).
 \]
 Standardna dualna baza $\{ e_i^* \mid 1 \leq i \leq \deg(\pi) \}$ v zadnjem vektorskem prostoru nam po tej adjunkciji porodi bazo
 \[
@@ -1229,7 +1233,9 @@ prostora $\Izotip_{\rho_{\hom}}(\pi)$. V izbranih bazah torej matrični koeficie
 
 V posebnem smo tekom dokaza zadnje trditve izpeljali, da so po izbiri baze matrični koeficienti končnorazsežne nerazcepne upodobitve $\pi$ vselej linearno neodvisni.\footnote{Temu dejstvu včasih pravimo \emph{Burnsideov izrek o neracepnosti}.} Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodbitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
 
-Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve \emph{končno mnogo} nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam podari svoje matrične koeficiente $\MK(\pi_i)$. Ti so enakim izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med sabo. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$. Vsi ti koeficienti so pravzaprav elementi prostora funkcij $\hom(G,F)$, zato lahko v primeru, ko je grupa končna, od tod izpeljemo neenakost
+Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve \emph{končno mnogo} paroma neizomorfnih nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam po izbiri baze podari svoje matrične koeficiente. Ti razpenjajo prostore, ki so enakim izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med sabo. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$. 
+
+Matrični koeficienti so elementi prostora funkcij $\hom(G,F)$. V primeru, ko je grupa končna, lahko po primerjanju dimenzij zato izpeljemo neenakost
 \[
     \sum_{i \in I} \deg(\pi_i)^2 \leq \dim \hom(G,F) = |G|.
 \]
@@ -1242,12 +1248,84 @@ Več o upodobitvah končnih grup si bomo pogledali nekoliko kasneje.
 
 \subsection{Karakterji}
 
-\todo[inline]{
-- characters of finite dimensional representations
-- (?, najbrž ne) some clifford theory
-}
+Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev. Po izbiri baze dobimo matrične koeficiente $f_{i,j}$. Te lahko kombiniramo na različne načine, da dobimo funkcije v $\hom(G,F)$, ki so nazadnje \emph{neodvisne} od izbire baze. Najosnovnejša\footnote{V resnici je sled do skalarja natančno \emph{edina} taka funkcija.} taka funkcija je sled linearnega operatorja, se pravi
+\[
+    \textstyle \chi_{\rho} \colon G \to F, \quad
+    g \mapsto \tr(\rho(g)) = \sum_{i = 1}^{\deg(\rho)} f_{i,i}(g).
+\]
+To funkcijo imenujemo {\definicija karakter} upodobitve $\rho$. Kadar je upodobitev $\rho$ nerazcepna, tudi njenemu karakterju dodamo pridevnik \emph{nerazcepen}. 
 
-\todo[inline]{Theorem 2.6.7 Baumslag-Solitar grupa je končno prezentirana, ni pa linearna (ampak za to bi potrebovali končno prezentirane grupe ...) Ta dokaz bi lahko dodali v del o RASTi, kjer že imamo vse potrebno razvito! Dodaj referenco o obstoju grupe, ki nima upodobitve, tukaj. Po tem lahko še omenimo rezultat Lubotzky o random grupah.}
+Že samo imenovanje karakterjev odzvanja, da to niso poljubne funkcije v $\hom(G,F)$, temveč da v nekem smislu zajemajo srž upodobitve.
+
+\begin{trditev}
+Naj bo $G$ grupa s končnorazsežnima nerazcepnima upodobitvama nad algebraično zaprtim poljem. Ti dve upodobitvi sta izomorfni, če in samo če imata enaka karakterja.
+\end{trditev}
+\begin{dokaz}
+Ker so matrični koeficienti različnih nerazcepnih upodobitev linearno neodvisni med sabo, so tudi njihovi karakterji linearno neodvisni kot elementi prostora $\hom(G,F)$. 
+\end{dokaz}
+
+Karakterjev fundamentalnih konstrukcij različnih upodobitev ni težko izračunati.
+
+\begin{trditev}
+Naj bo $G$ grupa s končnorazsežnimi upodobitvami $\rho$, $\rho_1$, $\rho_2$. Tedaj za vse $x, g \in G$ velja
+\[
+\chi_{\rho}(x^{-1} g x) = \chi_{\rho}(g), \quad
+\chi_{\rho^*}(g) = \chi_{\rho}(g^{-1})
+\]
+in
+\[
+    \chi_{\rho}(1) = \deg(\rho), \quad
+    \chi_{\rho_1 \oplus \rho_2} = \chi_{\rho_1} + \chi_{\rho_2}, \quad
+    \chi_{\rho_1 \otimes \rho_2} = \chi_{\rho_1} \cdot \chi_{\rho_2}.
+\]
+Za podgrupo $H \leq G$ in poljuben $h \in H$ velja
+\[
+    \chi_{\Res^G_H(\rho)}(h) = \chi_{\rho}(h).
+\]
+Kadar je $H \leq G$ končnega indeksa in $\rho$ upodobitev grupe $H$, za poljubno izbiro predstavnikov desnih odsekov $R$ grupe $H$ v $G$ velja
+\[
+    \chi_{\Ind^G_H(\rho)}(g) = \sum_{r \in R \colon r g r^{-1} \in H} \chi_{\rho}(r g r^{-1}).
+\]
+\end{trditev}
+\begin{dokaz}
+Netrivialna je le zadnja enakost o indukciji. Naj $H$ deluje na prostoru $V$ prek $\rho$. Spomnimo se, da lahko induciran prostor identificiramo z direktno vsoto $\bigoplus_{r \in R} V r$, kjer je $Vr$ kopija prostora $V$ pri komponenti $r$. Element $g \in G$ deluje na $v r_0 \in V r_0$ kot
+\[
+    g \cdot v r_0 = \left( \rho(h) \cdot v \right) r,
+\]
+kjer je $r = h r_0 g^{-1}$ za enolično določena $r \in R$, $h \in H$. Prostori $V r$ se torej pri delovanju med sabo permutirajo, poleg tega pa grupa deluje netrivialno še na vsaki komponenti posebej. Za izračun sledi so zato relevantne samo komponente, ki so fiksne pri tej permutaciji. To so komponente $Vr_0$, za katere je $r = r_0$, se pravi komponente z lastnostjo $H r_0 g^{-1} = H r_0$, kar je nazadnje enakovredno pogoju $r_0 g r_0^{-1} \in H$. Za tako komponento $V r_0$ element $g$ deluje na vektorju $v r_0$ kot
+\[
+    g \cdot v r_0 = \left( \rho(r_0 g r_0^{-1}) \cdot v \right) r_0,
+\]
+zato je sled induciranega delovanja $g$ na $V r_0$ enaka $\chi_{\rho}(r_0 g r_0^{-1})$. Ko seštejemo prispevke po vseh relevantnih predstavnikih $r_0 \in R$, dobimo želeno formulo za induciran karakter.
+\end{dokaz}
+
+\begin{zgled}
+    Naj bo $G$ končna grupa. V tem primeru je regularna upodobitev $\rho_{\hom}$ končnorazsežna. Določimo njen karakter najprej na roke. V regularni upodobitvi imamo naravno bazo iz karakterističnih funkcij
+    \[
+        1_{x} \colon G \to F, \quad
+        y \mapsto \begin{cases} 1 & y = x, \\ 0 & \text{sicer.} \end{cases}
+    \]
+    Na vsaki od teh element grupe $g \in G$ deluje kot $\rho_{\hom}(g) \cdot 1_x = 1_{x g^{-1}}$. Grupa $G$ torej permutira karakteristične funkcije. Sled preslikave $\rho_{\hom}(g)$ je zato enaka številu karakterističnih funkcij, ki jih ta preslikava fiksira. To je mogoče le, če je $x = x g^{-1}$, kar pa se zgodi zgolj pri $g = 1$, ko je $\rho_{\hom}(1) = \id$ s sledjo $\dim \hom(G,F) = |G|$. Torej je karakter regularne upodobitve končne grupe enak
+    \[
+        \chi_{\rho_{\hom}} \colon G \to F, \quad
+        g \mapsto \begin{cases} |G| & g = 1, \\ 0 & \text{sicer.} \end{cases}
+    \]
+    
+    Ta karakter bi lahko hitreje izračunali s pomočjo znane identifikacije $\rho_{\hom} \cong \Ind^G_1(\11)$. V tem primeru je $R = G$ in za $g \neq 1$ je vsota v formuli za induciran karakter prazna, torej se evalvira v $0$, za $g = 1$ pa dobimo $\sum_{r \in G} \chi_{\11}(1) = |G|$.
+\end{zgled}
+
+Lastnost karakterjev kot srža upodobitve se prenese na končnorazsežne polenostavne upodobitve, \emph{če je le polje ničelne karakeristike}. Karakter dane polenostavne upodobitve $\rho$ namreč lahko razvijemo kot
+\[
+    \displaystyle \chi_{\rho} = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot \chi_{\pi}.
+\]
+Polenostavna upodobitev je enolično določena s svojimi nerazcepnimi komponentami in njihovimi večkratnostmi. Če je torej $\chi_{\rho_1} = \chi_{\rho_2}$ za polenostavni upodobitvi $\rho_1$, $\rho_2$, potem od tod sledi enakost $\mult_{\rho_1}(\pi_1) \cdot \chi_{\pi_1} = \mult_{\rho_2}(\pi_2) \cdot \chi_{\pi_2}$ za vsaki nerazcepni upodobitvi $\pi_1$, $\pi_2$. Iz neodvisnosti nerazcepnih karakterjev in predpostavke o ničelni karakteristiki polja sklepamo $\pi_1 = \pi_2$ in $\mult_{\rho_1}(\pi_1) = \mult_{\rho_2}(\pi_2)$, zato je $\rho_1 \cong \rho_2$.
+
+\begin{posledica}
+Nad algebraično zaprtim poljem ničelne karakteristike je polenostavna upodobitev do izomorfizma natančno določena s svojim karakterjem.
+\end{posledica}
+
+Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitve, ki so sicer mnogo bolj kompleksni objekti kot le funkcije na grupi, natančno določene. V nadaljevanju bomo videli, da lahko včasih eksplicitno izračunamo vse nerazcepne karakterje, brez da bi sploh poznali same nerazcepne upodobitve. Na ta način lahko dodobra razumemo kategorijo upodobitev dane grupe zgolj z uporabo karakterjev.
+
 
 
 \chapter{Upodobitve končnih grup}
@@ -1308,13 +1386,16 @@ Več o upodobitvah končnih grup si bomo pogledali nekoliko kasneje.
 - dokažemo, da so nerazcepne (potrebujemo izotipične komponente)
 - diferencial teh upodobitev nam da upodobitve $sl_2$
 - dokažemo, da so to vse upodobitve $sl_2$ (Fulton-Harris)
-- zvezne upodobitve $SL_2$: te plus konjugiranke (samo rezultat)
+- zvezne upodobitve $SL_2$: te plus konjugiranke (samo rezultat, glej Example 2.7.41 za karakter)
 - abstraktne upodobitve: divji avtomorfizmi $\CC$
 - dokažemo Clebsch-Gordan (najbrž izpustimo ...)
 - $SL_2(Z)$? (-> \url{https://math.stackexchange.com/questions/786303/the-presentation-of-sl2-mathbbz}, glej zadnji odgovor, kjer poda prezentacijo, napiši na primer enačbe za raznoterost dvorazsežnih realnih upodobitev) 
 - random groups, model Gromova \url{https://arxiv.org/abs/1810.01529}
 - $SL_n(Z)$? (-> The representation theory of SLn(Z), Andrew Putman, povezano s $p$-adičnimi števili -- Lubotzky)
 }
+
+\todo[inline]{Theorem 2.6.7 Baumslag-Solitar grupa je končno prezentirana, ni pa linearna (ampak za to bi potrebovali končno prezentirane grupe ...) Ta dokaz bi lahko dodali v del o RASTi, kjer že imamo vse potrebno razvito! Dodaj referenco o obstoju grupe, ki nima upodobitve, tukaj. Po tem lahko še omenimo rezultat Lubotzky o random grupah.}
+
 
 \section{Kompaktne grupe}
 
