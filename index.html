@@ -46,7 +46,7 @@
 <strong> Urban Jezernik <br>
 Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-Zadnja posodobitev: 14. 06. 2022
+Zadnja posodobitev: 15. 06. 2022
 </div>
 
 <div class="kazalo">
@@ -117,13 +117,35 @@ koeficienti in regularna upodobitev</a></li>
 id="toc-upodobitve-končnih-grup">Upodobitve končnih grup</a>
 <ul>
 <li><a href="#polenostavnost-1"
-id="toc-polenostavnost-1">Polenostavnost</a></li>
-<li><a href="#karakterji-1" id="toc-karakterji-1">Karakterji</a></li>
+id="toc-polenostavnost-1">Polenostavnost</a>
+<ul>
+<li><a href="#maschkejev-izrek" id="toc-maschkejev-izrek">Maschkejev
+izrek</a></li>
+<li><a href="#dekompozicija-regularne-upodobitve"
+id="toc-dekompozicija-regularne-upodobitve">Dekompozicija regularne
+upodobitve</a></li>
+</ul></li>
+<li><a href="#karakterji-1" id="toc-karakterji-1">Karakterji</a>
+<ul>
+<li><a href="#ortogonalnost-matričnih-koeficientov"
+id="toc-ortogonalnost-matričnih-koeficientov">Ortogonalnost matričnih
+koeficientov</a></li>
+<li><a href="#ortonormalnost-karakterjev"
+id="toc-ortonormalnost-karakterjev">Ortonormalnost karakterjev</a></li>
+<li><a href="#upodobitve-v-potencah"
+id="toc-upodobitve-v-potencah">Upodobitve v potencah</a></li>
+<li><a href="#projekcija-na-izotipične-komponente"
+id="toc-projekcija-na-izotipične-komponente">Projekcija na izotipične
+komponente</a></li>
+<li><a href="#harmonična-analiza" id="toc-harmonična-analiza">Harmonična
+analiza</a></li>
+</ul></li>
 <li><a href="#razširjeni-zgledi" id="toc-razširjeni-zgledi">Razširjeni
 zgledi</a>
 <ul>
 <li><a href="#abelove-grupe" id="toc-abelove-grupe">Abelove
 grupe</a></li>
+<li><a href="#gap" id="toc-gap"><code>GAP</code></a></li>
 <li><a href="#mathopmathrmgl_2mathbff_p"
 id="toc-mathopmathrmgl_2mathbff_p"><span
 class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span></a></li>
@@ -2763,10 +2785,36 @@ bi sploh poznali same nerazcepne upodobitve. Na ta način lahko dodobra
 razumemo kategorijo upodobitev dane grupe zgolj z uporabo
 karakterjev.</p>
 <h1 id="upodobitve-končnih-grup">Upodobitve končnih grup</h1>
+<p>V tem poglavju bomo raziskali kategorijo upodobitev končne grupe s
+posebnim poudarkom na situaciji, ko je karakteristika polja tuja moči
+grupe. V tem primeru je, kot bomo videli, vsaka upodobitev polenostavna,
+zato lahko vprežemo karakterje za razumevanje kategorije upodobitev.
+Ogledali si bomo nekaj konkretnih zgledov in podrobneje analizirali dve
+pomembni družini grup: linearne grupe nad končnim poljem in simetrične
+grupe.</p>
 <h2 id="polenostavnost-1">Polenostavnost</h2>
+<h3 id="maschkejev-izrek">Maschkejev izrek</h3>
+<div class="izrek">
+<p><strong>Izrek 3.1</strong> (Maschke). Naj bo <span
+class="math inline">\(G\)</span> končna grupa in <span
+class="math inline">\(F\)</span> polje. Tedaj je vsaka upodobitev <span
+class="math inline">\(G\)</span> nad poljem <span
+class="math inline">\(F\)</span> polenostavna, če in samo če <span
+class="math inline">\(\mathop{\mathrm{char}}(F) \nmid |G|\)</span>.</p>
+</div>
+<h3 id="dekompozicija-regularne-upodobitve">Dekompozicija regularne
+upodobitve</h3>
 <h2 id="karakterji-1">Karakterji</h2>
+<h3 id="ortogonalnost-matričnih-koeficientov">Ortogonalnost matričnih
+koeficientov</h3>
+<h3 id="ortonormalnost-karakterjev">Ortonormalnost karakterjev</h3>
+<h3 id="upodobitve-v-potencah">Upodobitve v potencah</h3>
+<h3 id="projekcija-na-izotipične-komponente">Projekcija na izotipične
+komponente</h3>
+<h3 id="harmonična-analiza">Harmonična analiza</h3>
 <h2 id="razširjeni-zgledi">Razširjeni zgledi</h2>
 <h3 id="abelove-grupe">Abelove grupe</h3>
+<h3 id="gap"><code>GAP</code></h3>
 <h3 id="mathopmathrmgl_2mathbff_p"><span
 class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span></h3>
 <h3 id="s_n"><span class="math inline">\(S_n\)</span></h3>
@@ -2958,9 +3006,8 @@ href="#fnref33" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-<!--     <script src="js/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
- -->
+    <script src="js/jquery.min.js"></script>
+    /* <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> */
      <script src="js/bootstrap.min.js"></script>
     <script>
         /*add Bootstrap styles to tables*/
@@ -2978,5 +3025,6 @@ href="#fnref33" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
         proofClasses[i].innerHTML = html;
         }
     </script>
+
   </body>
 </html>

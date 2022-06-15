@@ -76,6 +76,8 @@
 \DeclareMathOperator\tr{tr}
 \DeclareMathOperator\Irr{Irr}
 \DeclareMathOperator\SU{SU}
+\DeclareMathOperator\characteristic{char}
+\def\GAP{\tt{GAP}}
 
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\GL{GL}
@@ -1371,12 +1373,71 @@ Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitv
 
 \chapter{Upodobitve končnih grup}
 
+V tem poglavju bomo raziskali kategorijo upodobitev končne grupe s posebnim poudarkom na situaciji, ko je karakteristika polja tuja moči grupe. V tem primeru je, kot bomo videli, vsaka upodobitev polenostavna, zato lahko vprežemo karakterje za razumevanje kategorije upodobitev. Ogledali si bomo nekaj konkretnih zgledov in podrobneje analizirali dve pomembni družini grup: linearne grupe nad končnim poljem in simetrične grupe.
+
 \section{Polenostavnost}
+
+\subsection{Maschkejev izrek}
+
+\begin{izrek}[Maschke]
+Naj bo $G$ končna grupa in $F$ polje. Tedaj je vsaka upodobitev $G$ nad poljem $F$ polenostavna, če in samo če $\characteristic(F) \nmid |G|$.
+\end{izrek}
+
+\subsection{Dekompozicija regularne upodobitve}
+
+\todo[inline]{
+- Corollary 4.2.1
+- Zgled: projektor na fiksne točke, Proposition 4.3.1
+- število upodobitev Theorem 4.2.5
+}
+
 \section{Karakterji}
+
+\subsection{Ortogonalnost matričnih koeficientov}
+\subsection{Ortonormalnost karakterjev}
+
+\todo[inline]{
+    - Vključi 4.3.3. Decomposition of class functions
+    - večkratnosti 4.3.5
+    - nerazcepnost}
+
+\subsection{Upodobitve v potencah}
+
+\todo[inline]{
+- vključi kakšen preprost zgled; omeni, da gre za to, da ni treba razstavljati regularne upodobitve; ta zgled lahko potem razširimo z \GAP.
+}
+
+\subsection{Projekcija na izotipične komponente}
+
+\todo{Tule potrebujemo ortogonalnost karakterjev, zato tako pozno ... A to sploh vključimo?}
+
+\subsection{Harmonična analiza}
+
+\todo[inline]{
+    tu je vse nad $\CC$
+    - dekompozicija razrednih funkcij
+    - druga ortogonalnost
+    - frobeniusova formula za komutatorje (tu rabimo izotipične komponente)
+}
+
 \section{Razširjeni zgledi}
 
 \subsection{Abelove grupe}
+
+\todo[inline]{
+    - dualnost, Fourier
+    - Dirichleta izpustimo ...
+}
+
+\subsection{\GAP}
+
+\todo[inline]{
+    - izračunljivost tabele karakterjev Proposition 4.6.2
+    - konkreten zgled, pokaži, kaj vse se da prebrati o grupi iz tega zgleda
+}
+
 \subsection{$\GL_2(\field_p)$}
+
 \subsection{$S_n$}
 
 \todo[inline]{
@@ -1406,7 +1467,7 @@ Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitv
 
 \todo[inline]{
 - topološke grupe (zvezne upodobitve)
-- unitarne na hilbertovih prostorih (končne smo že, $SU_2$)
+- unitarne na hilbertovih prostorih (končne, še enkrat se ozremo na Maschkeja in karakterje v luči tega, $SU_2$)
 }
 
 \subsection{$S^1$}
