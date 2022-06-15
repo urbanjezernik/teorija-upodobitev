@@ -51,3 +51,7 @@ a {
 /* .proof, .zgled, .domacanaloga {
   display: none;
 } */
+.math.display {
+  overflow-x: auto;
+  display: block;
+}
