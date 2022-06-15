@@ -52,6 +52,6 @@ a {
   display: none;
 } */
 .math.display {
-  overflow-x: auto;
+  overflow-x: scroll;
   display: block;
 }
