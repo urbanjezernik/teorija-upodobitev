@@ -1612,8 +1612,8 @@ Preslikava <span class="math inline">\(\Phi - \lambda \cdot
 class="math inline">\(\Phi = \lambda \cdot
 \mathop{\mathrm{id}}\)</span>. ◻</p>
 </div>
-<p>Množico vseh nerazcepnih upodobitev dane grupe <span
-class="math inline">\(G\)</span> označimo z <span
+<p>Množico vseh izomorfnostnih razredov nerazcepnih upodobitev dane
+grupe <span class="math inline">\(G\)</span> označimo z <span
 class="math inline">\(\mathop{\mathrm{Irr}}(G)\)</span>.</p>
 <div class="zgled">
 <p><strong>Zgled 2.2</strong>. Naj bo <span
@@ -2855,13 +2855,67 @@ class="math inline">\(V\)</span>.</p>
 </div>
 <h3 id="dekompozicija-regularne-upodobitve">Dekompozicija regularne
 upodobitve</h3>
+<p>Naj bo <span class="math inline">\(G\)</span> končna grupa in <span
+class="math inline">\(F\)</span> algebraično zaprto polje karakteristike
+tuje <span class="math inline">\(|G|\)</span>. Vsaka nerazcepna
+upodobitev <span class="math inline">\(\pi\)</span> grupe <span
+class="math inline">\(G\)</span> nad <span
+class="math inline">\(F\)</span> je uresničljiva kot podupodobitev
+regularne <span class="math inline">\(\rho_{\hom}\)</span>. Slednja je
+po Maschkejevem izreku polenostavna, zato jo lahko zapišemo kot direktno
+vsoto izotipičnih komponent nerazcepnih upodobitev. Vsaka <span
+class="math inline">\(\pi\)</span>-komponenta pri tem sestoji iz <span
+class="math inline">\(\deg(\pi)\)</span> mnogo kopij upodobitve <span
+class="math inline">\(\pi\)</span>. Izpostavimo in povzemimo.</p>
+<div class="izrek">
+<p><strong>Izrek 3.2</strong>. Naj bo <span
+class="math inline">\(G\)</span> končna grupa in <span
+class="math inline">\(F\)</span> algebraično zaprto polje karakteristike
+tuje <span class="math inline">\(|G|\)</span>. Velja <span
+class="math display">\[\rho_{\hom} \cong \bigoplus_{\pi \in
+\mathop{\mathrm{Irr}}(G)} \underbrace{\pi \oplus \pi \oplus \cdots
+\oplus \pi}_{\deg(\pi)}.\]</span> V posebnem je <span
+class="math display">\[\sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
+\deg(\pi)^2 = |G|.\]</span></p>
+</div>
+<p>Dekompozicijo regularne upodobitve smo dobili iz matričnih
+koeficientov nerazcepnih upodobitev, torej gre za nekakšno
+<em>notranjo</em> dekompozicijo. Obstaja pa tudi <em>zunanja</em>
+dekompozicija, pri kateri iz regularne upodobitve same s pomočjo
+ustreznih projekcijskih spletičen (kot pri dokazu Maschkejevega izreka)
+najdemo izotipične komponente regularne upodobitve. Zaenkrat lahko to
+pojasnemo le za <span
+class="math inline">\(\mathbf{1}\)</span>-izotipično komponento, za
+splošen primer moramo pa prej razviti še malo več teorije.</p>
+<div class="zgled">
+<p><strong>Zgled 3.2</strong>. Naj bo <span
+class="math inline">\(G\)</span> končna grupa z upodobitvijo <span
+class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span> nad algebraično zaprtim poljem
+karakteristike tuje <span class="math inline">\(|G|\)</span>. Ni težko
+preveriti, da je linearna preslikava <span
+class="math display">\[\frac{1}{|G|} \sum_{g \in G} \rho(g)\]</span>
+projekcijska spletična v <span
+class="math inline">\(\hom_G(V,V)\)</span> na <span
+class="math inline">\(\mathbf{1}\)</span>-izotipično komponento v <span
+class="math inline">\(V\)</span>, se pravi na podprostor fiksnih
+vektorjev <span class="math inline">\(V^G\)</span>.</p>
+</div>
 <h2 id="karakterji-1">Karakterji</h2>
 <p>Iz rezultatov zadnjega razdelka sledi, da je nad algebraično zaprtim
 poljem ničelne karakteristike (na primer zelo ugodnim poljem <span
 class="math inline">\(\mathbf{C}\)</span>) kategorija upodobitev dane
 končne grupe popolnoma določena z nerazcepnimi upodobitvami, ki jih
-lahko razumemo s pomočjo karakterjev. V tem razdelku bomo podrobneje
-razvili to teorijo.</p>
+lahko razumemo s pomočjo karakterjev. Vsak karakter nerazcepne
+upodobitve je razredna funkcija, te pa so enolično določene s svojimi
+vrednostmi v predstavnikih konjugiranostnih razredov. Če število
+konjugiranostnih razredov označimo s <span
+class="math inline">\(\mathop{\mathrm{k}}(G)\)</span>, velja torej <span
+class="math display">\[|\mathop{\mathrm{Irr}}(G)| \leq
+\mathop{\mathrm{k}}(G).\]</span> S podrobnejšim študijem karakterjev
+bomo v tem razdelku (med drugim) dokazali, da je zadnja neenakost v
+resnici <em>enakost</em> in da lahko torej samo število nerazcepnih
+upodobitev izračunamo neposredno iz algebraične strukture grupe.</p>
 <h3 id="ortogonalnost-matričnih-koeficientov">Ortogonalnost matričnih
 koeficientov</h3>
 <h3 id="ortonormalnost-karakterjev">Ortonormalnost karakterjev</h3>

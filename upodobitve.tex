@@ -77,7 +77,9 @@
 \DeclareMathOperator\Irr{Irr}
 \DeclareMathOperator\SU{SU}
 \DeclareMathOperator\characteristic{char}
+\DeclareMathOperator\kk{k}
 \def\GAP{\bf{GAP}}
+
 
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\GL{GL}
@@ -949,7 +951,7 @@ Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad \emph{
 Naj bo $0 \neq \Phi \in \hom_G(\pi, \pi)$. Ker je polje algebraično zaprto, ima linearna preslikava $\Phi$ vsaj kakšno lastno vrednost, recimo $\lambda$. Preslikava $\Phi - \lambda \cdot \id \in \hom_G(\pi, \pi)$ zato ni injektivna, s čimer mora biti po Schurovi lemi ničelna, se pravi $\Phi = \lambda \cdot \id$.
 \end{dokaz}
 
-Množico vseh nerazcepnih upodobitev dane grupe $G$ označimo z $\Irr(G)$.
+Množico vseh izomorfnostnih razredov nerazcepnih upodobitev dane grupe $G$ označimo z $\Irr(G)$.
 
 \begin{zgled}
 Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad poljem kompleksnih števil. Spletične $\hom_G(\pi, \pi) = \hom(\pi, \pi)^G$ so endomorfizmi vektorskega prostora, ki so $G$-invariatni, se pravi komutirajo z delovanjem grupe $G$. Zglede takih endomorfizmov lahko dobimo iz delovanj centralnih elementov grupe $G$; za vsak $z \in Z(G)$ je $\pi(z) \in \hom_G(\pi, \pi)$. Po Schurovi lemi je zato $\pi(z) = \omega(z) \cdot \id$ za nek skalar $\omega(z)$. Ker je $\pi$ homomorfizem, je $\omega \colon Z(G) \to \CC^*$ enorazsežna upodobitev centra grupe $G$. Tej upodobitvi rečemo {\definicija centralni karakter} upodobitve $\pi$.
@@ -1449,29 +1451,53 @@ Imejmo netrivialno nerazcepno upodobitev $p$-grupe $G$ na prostoru $V$ nad polje
 
 \subsection{Dekompozicija regularne upodobitve}
 
-\todo[inline]{
-- Corollary 4.2.1
-- Zgled: projektor na fiksne točke, Proposition 4.3.1
-- vsaka nerazcepna upodobitev končne grupe je končnorazsežna!
-- število upodobitev Theorem 4.2.5
-}
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Vsaka nerazcepna upodobitev $\pi$ grupe $G$ nad $F$ je uresničljiva kot podupodobitev regularne $\rho_{\hom}$. Slednja je po Maschkejevem izreku polenostavna, zato jo lahko zapišemo kot direktno vsoto izotipičnih komponent nerazcepnih upodobitev. Vsaka $\pi$-komponenta pri tem sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$. Izpostavimo in povzemimo.
+
+\begin{izrek}
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Velja
+\[
+    \rho_{\hom} \cong \bigoplus_{\pi \in \Irr(G)} \underbrace{\pi \oplus \pi \oplus \cdots \oplus \pi}_{\deg(\pi)}.
+\]
+V posebnem je 
+\[
+    \sum_{\pi \in \Irr(G)} \deg(\pi)^2 = |G|.
+\]
+\end{izrek}
+
+Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz regularne upodobitve same s pomočjo ustreznih projekcijskih spletičen (kot pri dokazu Maschkejevega izreka) najdemo izotipične komponente regularne upodobitve. Zaenkrat lahko to pojasnemo le za $\11$-izotipično komponento, za splošen primer moramo pa prej razviti še malo več teorije.
+
+\begin{zgled}
+Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Ni težko preveriti, da je linearna preslikava
+\[
+    \frac{1}{|G|} \sum_{g \in G} \rho(g)
+\]
+projekcijska spletična v $\hom_G(V,V)$ na $\11$-izotipično komponento v $V$, se pravi na podprostor fiksnih vektorjev $V^G$.
+\end{zgled}
+
 
 \section{Karakterji}
 
-Iz rezultatov zadnjega razdelka sledi, da je nad algebraično zaprtim poljem ničelne karakteristike (na primer zelo ugodnim poljem $\CC$) kategorija upodobitev dane končne grupe popolnoma določena z nerazcepnimi upodobitvami, ki jih lahko razumemo s pomočjo karakterjev. V tem razdelku bomo podrobneje razvili to teorijo.
+Iz rezultatov zadnjega razdelka sledi, da je nad algebraično zaprtim poljem ničelne karakteristike (na primer zelo ugodnim poljem $\CC$) kategorija upodobitev dane končne grupe popolnoma določena z nerazcepnimi upodobitvami, ki jih lahko razumemo s pomočjo karakterjev. Vsak karakter nerazcepne upodobitve je razredna funkcija, te pa so enolično določene s svojimi vrednostmi v predstavnikih konjugiranostnih razredov. Če število konjugiranostnih razredov označimo s $\kk(G)$, velja torej
+\[
+    |\Irr(G)| \leq \kk(G).
+\]
+S podrobnejšim študijem karakterjev bomo v tem razdelku (med drugim) dokazali, da je zadnja neenakost v resnici \emph{enakost} in da lahko torej samo število nerazcepnih upodobitev izračunamo neposredno iz algebraične strukture grupe.
 
 \subsection{Ortogonalnost matričnih koeficientov}
 \subsection{Ortonormalnost karakterjev}
 
 \todo[inline]{
-    - Vključi 4.3.3. Decomposition of class functions
+    - ortonormalnost
+    - Vključi 4.3.3. Decomposition of class functions in dokaz o številu nerazcepnih upodobitev
+    - zgled: $S_4$ iz Fulton-Harris
     - večkratnosti 4.3.5
-    - nerazcepnost}
+    - nerazcepnost
+    }
 
 \subsection{Upodobitve v potencah}
 
 \todo[inline]{
-- vključi kakšen preprost zgled; omeni, da gre za to, da ni treba razstavljati regularne upodobitve; ta zgled lahko potem razširimo z \GAP.
+- vključi kakšen preprost zgled; omeni, da gre za to, da ni treba razstavljati regularne upodobitve; ta zgled lahko potem kasneje razširimo z \GAP.
 }
 
 \subsection{Projekcija na izotipične komponente}
@@ -1489,7 +1515,7 @@ Iz rezultatov zadnjega razdelka sledi, da je nad algebraično zaprtim poljem ni�
 
 \todo[inline]{
     tu je vse nad $\CC$
-    - dekompozicija razrednih funkcij
+    - dekompozicija razrednih funkcij (to je že od prej)
     - druga ortogonalnost
     - frobeniusova formula za komutatorje (tu rabimo izotipične komponente)
 }
@@ -1500,7 +1526,7 @@ Iz rezultatov zadnjega razdelka sledi, da je nad algebraično zaprtim poljem ni�
 
 \todo[inline]{
     - izračunljivost tabele karakterjev Proposition 4.6.2
-    - konkreten zgled, pokaži, kaj vse se da prebrati o grupi iz tega zgleda
+    - konkreten zgled, pokaži, kaj vse se da prebrati o grupi iz tega zgleda, morda $\GL_2(\field_2)$ in $S_5$
 }
 
 \subsection{$\GL_2(\field_p)$}
