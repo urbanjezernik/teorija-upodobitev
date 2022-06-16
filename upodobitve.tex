@@ -77,7 +77,7 @@
 \DeclareMathOperator\Irr{Irr}
 \DeclareMathOperator\SU{SU}
 \DeclareMathOperator\characteristic{char}
-\def\GAP{\tt{GAP}}
+\def\GAP{\bf{GAP}}
 
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\GL{GL}
@@ -237,7 +237,8 @@
 \author{Urban Jezernik}
 
 % za generiranje html dokumenta s stilom mystyle.css uporabi:
-% pandoc upodobitve.tex --toc --metadata date="`date -u "+%d. %m. %Y"`" --template template.html -c mystyle.css -s --mathjax -o index.html
+% pandoc upodobitve.tex --toc --toc-depth=2 --metadata date="`date -u "+%d. %m. %Y"`" --template template.html -c mystyle.css -s --mathjax -o index.html
+
 
 \begin{document}
 
@@ -957,7 +958,7 @@ Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad poljem
 \end{zgled}
 
 \begin{domacanaloga}
-Podaj konkreten primer abelove grupe in njene nerazcepne upodobitve razsežnosti $>1$ nad poljem $\QQ$.
+Poišči kakšno nerazcepno upodobitev ciklične grupe $\ZZ/3\ZZ$ nad poljem $\QQ$, ki \emph{ni} enorazsežna.
 \end{domacanaloga}
 
 \subsection{Komplementarna podupodobitev}
@@ -1223,14 +1224,14 @@ zato je $g \cdot f_{v, \lambda} = f_{\pi(g) \cdot v, \lambda} \in \MK(\pi)$.
 Matrični koeficienti upodobitve $\pi$ nam torej dajejo podupodobitev na prostoru $\MK(\pi)$ znotraj regularne upodobitve $\rho_{\hom}$ na $\hom(G,F)$. Ni presenetljivo, da je ta podupodobitev v resnici tesno povezana s $\pi$.
 
 \begin{izrek}
-Naj bo $G$ grupa s končnorazsežno nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem. Tedaj je
+Naj bo $G$ grupa s končnorazsežno nerazcepno upodobitvijo $\pi$. Tedaj je
 \[
    \displaystyle  \MK(\pi) = \Izotip_{\rho_{\hom}}(\pi)
 \]
-in večkratnost $\pi$ v slednji upodobitvi je enaka $\deg(\pi)$.
+Nad algebraično zaprtim poljem je večkratnost $\pi$ v slednji upodobitvi enaka $\deg(\pi)$.
 \end{izrek}
 \begin{dokaz}
-Naj bo $\pi$ upodobitev na prostoru $W$. Spomnimo se, da $\pi$-izotipična komponenta v $\rho_{\hom}$ sestoji iz vektorjev oblike $\Phi(w)$ za $\Phi \in \hom_G(\pi, \rho_{\hom})$ in $w \in W$. Regularno upodobitev predstavimo kot inducirano upodobitev $\rho_{\hom} = \Ind^G_1(\11)$. Po adjunkciji med restrikcijo in indukcijo je
+Naj bo $\pi$ upodobitev na prostoru $W$. Spomnimo se, da je $\pi$-izotipična komponenta v $\rho_{\hom}$ napeta na vektorje oblike $\Phi(w)$ za $\Phi \in \hom_G(\pi, \rho_{\hom})$ in $w \in W$. Regularno upodobitev predstavimo kot inducirano upodobitev $\rho_{\hom} = \Ind^G_1(\11)$. Po adjunkciji med restrikcijo in indukcijo je
 \[
     \displaystyle \hom_G(\pi, \rho_{\hom}) \cong \hom_1(\Res^G_1(\pi), \11)
     \cong \hom(\11^{\deg(\pi)}, \11).
@@ -1238,9 +1239,9 @@ Naj bo $\pi$ upodobitev na prostoru $W$. Spomnimo se, da $\pi$-izotipična kompo
 Standardna dualna baza $\{ e_i^* \mid 1 \leq i \leq \deg(\pi) \}$ v zadnjem vektorskem prostoru nam po tej adjunkciji porodi bazo
 \[
     \Phi_i \colon W \to \hom(G,F), \quad
-    w \mapsto \left( g \mapsto \langle e_i^*, \pi(g) \cdot w \rangle \right) = f_{e_i^*, w}(x)
+    w \mapsto \left( g \mapsto \langle e_i^*, \pi(g) \cdot w \rangle \right) = f_{e_i^*, w}
 \]
-za $1 \leq i \leq \deg(\pi)$ prostora spletičen $\hom_G(\pi, \rho_{\hom})$. Ko te bazne spletične evalviramo na neki izbrani bazi $\{ f_j \mid 1 \leq j \leq \deg(\pi) \}$ prostora $W$, dobimo bazo\footnote{Preslikava $\Sigma_{\pi, \rho_{\hom}}$ je injektivna, ker je $\dim \hom_G(\pi, \rho_{\hom}) = \deg(\pi) < \infty$.}
+za $1 \leq i \leq \deg(\pi)$ prostora spletičen $\hom_G(\pi, \rho_{\hom})$. Ko te bazne spletične evalviramo na neki izbrani bazi $\{ f_j \mid 1 \leq j \leq \deg(\pi) \}$ prostora $W$, dobimo torej ravno prostor $\MK(\pi)$. Nad algebraično zaprtim poljem te evalvacije tvorijo celo bazo\footnote{Preslikava $\Sigma_{\pi, \rho_{\hom}}$ je injektivna, ker je $\dim \hom_G(\pi, \rho_{\hom}) = \deg(\pi) < \infty$.}
 \[
     \Phi_i(f_j) = f_{i,j}
 \]
@@ -1250,10 +1251,10 @@ prostora $\Izotip_{\rho_{\hom}}(\pi)$. V izbranih bazah torej matrični koeficie
 Izpostavimo pomembno posledico, ki nam pove, da lahko vse nerazcepne upodobitve najdemo v regularni.
 
 \begin{posledica}
-Naj bo $G$ grupa in polje algebraično zaprto. Regularna upodobitev grupe $G$ vsebuje kot podupodobitev vsako končnorazsežno nerazcepno upodobitev grupe $G$.
+Vsaka končnorazsežna nerazcepna upodobitev dane grupe je uresničljiva kot podupodobitev regularne.
 \end{posledica}
 
-V posebnem smo tekom zadnjega dokaza izpeljali, da so po izbiri baze matrični koeficienti končnorazsežne nerazcepne upodobitve $\pi$ vselej linearno neodvisni.\footnote{Temu dejstvu včasih pravimo \emph{Burnsideov izrek o neracepnosti}.} Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodbitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
+V posebnem smo tekom zadnjega dokaza izpeljali, da so po izbiri baze matrični koeficienti končnorazsežne nerazcepne upodobitve nad algebraično zaprtim poljem $\pi$ vselej linearno neodvisni.\footnote{Temu dejstvu včasih pravimo \emph{Burnsideov izrek o neracepnosti}.} Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodbitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
 
 Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve \emph{končno mnogo} paroma neizomorfnih nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam po izbiri baze podari svoje matrične koeficiente. Ti razpenjajo prostore, ki so enakim izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med sabo. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$. 
 
@@ -1263,11 +1264,14 @@ Matrični koeficienti so elementi prostora funkcij $\hom(G,F)$. V primeru, ko je
 \]
 
 \begin{posledica}
-Končna grupa ima nad algebraično zaprtim poljem le končno mnogo nerazcepnih upodobitev. Vsaka od njih je stopnje kvečjemu $\sqrt{|G|}$.
+Končna grupa ima le končno mnogo končnorazsežnih nerazcepnih upodobitev. Nad algebraično zaprtim poljem je vsaka od njih stopnje kvečjemu $\sqrt{|G|}$.
 \end{posledica}
+\begin{dokaz}
+Vsaka končnorazsežna nerazcepna upodobitev je vsebovana v regularni in se zatorej pojavi kot njen kompozicijski faktor. Vseh možnih kompozicijskih faktorjev je končno mnogo, ker je prostor $\hom(G,F)$ končnorazsežen. Drugi del posledice sledi neposredno iz neenakosti pred njo.
+\end{dokaz}
 
 \begin{zgled}
-    Opazujmo grupo $S_3$ nad poljem $\CC$. Njeno regularno upodobitev smo že razstavili na direktno vsoto $\11 \oplus \rho$, kjer je $\rho$ dvorazsežna nerazcepna upodobitev. Poleg tega poznamo še enorazsežno predznačno upodobitev $\sgn$. Vsota kvadratov stopenj teh treh upodobitev je $1^2 + 1^2 + 2^2 = 6$, kar je ravno enako moči grupe $S_3$. Od tod sledi, da so te tri \emph{vse} nerazcepne upodobitve grupe $S_3$.
+    Opazujmo grupo $S_3$ nad poljem $\CC$. Njeno regularno upodobitev smo že razstavili na direktno vsoto $\11 \oplus \rho$, kjer je $\rho$ dvorazsežna nerazcepna upodobitev. Poleg tega poznamo še enorazsežno predznačno upodobitev $\sgn$. Vsota kvadratov stopenj teh treh upodobitev je $1^2 + 1^2 + 2^2 = 6$, kar je ravno enako moči grupe $S_3$. Od tod sledi, da so te tri \emph{vse} končnorazsežne nerazcepne upodobitve grupe $S_3$.
 \end{zgled}
 
 Več o upodobitvah končnih grup si bomo pogledali nekoliko kasneje.
@@ -1284,7 +1288,7 @@ To funkcijo imenujemo {\definicija karakter} upodobitve $\rho$. Kadar je upodobi
 Karakter je neodvisen od izbire baze, zato za vsaka $x, g \in G$ velja $\chi_{\rho}(x g x^{-1}) = \chi_{\rho}(g)$. Karakterji so torej funkcije na $G$, ki so konstantne na konjugiranostnih razredih.\footnote{{\definicija Konjugiranostni razred} elementa $g \in G$ je množica $\{ x g x^{-1} \mid x \in G \}$. Grupa $G$ je disjunktna unija konjugiranostnih razredov svojih elementov.} Takim funkcijam pravimo {\definicija razredne funkcije}.
 
 \begin{zgled}
-Opazujmo grupo $S_3$ nad poljem $\CC$. Poznamo že vse tri njene nerazcepne upodobitve. Določimo karakterje teh nerazcepnih upodobitev. Karakterji enorazsežnih upodobitev so kot funkcije kar enaki upodobitvam. Za karakter $\chi_{\rho}$ velja
+Opazujmo grupo $S_3$ nad poljem $\CC$. Poznamo že vse tri njene končnorazsežne nerazcepne upodobitve. Določimo karakterje teh nerazcepnih upodobitev. Karakterji enorazsežnih upodobitev so kot funkcije kar enaki upodobitvam. Za karakter $\chi_{\rho}$ velja
 \[
     () \mapsto \tr \begin{pmatrix}
         1 & 0 \\ 0 & 1
@@ -1385,21 +1389,76 @@ V tem poglavju bomo raziskali kategorijo upodobitev končne grupe s posebnim pou
 
 \section{Polenostavnost}
 
+\subsection{Nerazcepne upodobitve}
+
+Prepričajmo se najprej, da končne grupe nimajo \emph{prevelikih} nerazcepnih upodobitev.
+
+\begin{trditev}
+Vsaka nerazcepna upodobitev končne grupe je končnorazsežna.
+\end{trditev}
+\begin{dokaz}
+Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$. Izberimo poljuben neničeln vektor $v \in V$. Opazujmo podprostor
+\[
+    W = \langle \rho(g) \cdot v \mid g \in G \rangle
+\]
+prostora $V$. Ker je $G$ končna, je $W$ končnorazsežen. Hkrati je po konstrukciji ta podprostor $G$-invarianten. Vsaka upodobitev končne grupe ima torej končnorazsežno podupodobitev. V posebnem to pomeni, da ni neskončnorazsežne nerazcepne upodobitve.
+\end{dokaz}
+
+Iz trditve in razmislekov v prejšnjem poglavju sledi, da je vsaka nerazcepna upodobitev končne grupe vsebovana v regularni upodobitvi. Nad algebraično zaprtim poljem dodatno velja, da je razsežnosti kvečjemu $\sqrt{|G|}$.
+
 \subsection{Maschkejev izrek}
+
+Spoznali smo že, da niso vse upodobitve polenostavne, niti kadar je grupa končna. Videli smo primer grupe $S_3$ z dvorazsežno upodobitvijo $\rho$, ki je bila definirana nad kolobarjem $\ZZ$ in katere projekcija po modulu $3$ \emph{ni} bila polenostavna. Naslednji izrek razkrije, da je to mogoče le v primeru, ko karakteristika polja deli moč grupe.
 
 \begin{izrek}[Maschke]
 Naj bo $G$ končna grupa in $F$ polje. Tedaj je vsaka upodobitev $G$ nad poljem $F$ polenostavna, če in samo če $\characteristic(F) \nmid |G|$.
 \end{izrek}
+\begin{dokaz}
+$(\Leftarrow):$ Predpostavimo $\characteristic(F) \nmid |G|$. Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$ in naj bo $W$ poljuben $G$-invarianten podprostor. Naj bo $P \in \hom(V,V)$ projektor na $W$. Grupa $G$ deluje na prostoru linearnih preslikav $\hom(V,V)$, fiksne točke tega delovanja so ravno spletične. Projektor $P$ ni nujno spletična, zato njegovo jedro ni nujno $G$-invarianten komplement $W$. Ga pa brez težave popravimo do spletične, in sicer tako, da ga povprečimo\footnote{Ravno za ta postopek povprečenja uporabljamo predpostavko, da je $G$ končna grupa in da v polju $F$ lahko izračunamo $1/|G|$.} do linearne preslikave
+\[
+    Q = \frac{1}{|G|} \sum_{g \in G} g \cdot P.
+\]
+Ni težko preveriti, da je $Q$ spletična v $\hom_G(V,V)$, za katero velja $Q|_W = \id_W$ in $\image Q = W$. Torej je $Q$ projekcijska spletična na $W$. Njeno jedro je zato $G$-invarianten komplement prostora $W$ v $V$. \kljuka
+
+$(\Rightarrow):$ Predpostavimo, da $\characteristic(F) \mid |G|$. Opazujmo regularno upodobitev $\rho_{\hom}$ na prostoru $\hom(G,F)$. Ta prostor ima vselej $G$-invarianten podprostor
+\[
+    \displaystyle \hom_0(G,F) = \left\{ f \in \hom(G,F) \mid \sum_{g \in G} f(g) = 0 \right\}
+\]
+korazsežnosti $1$ v $\hom(G,F)$. Dokažimo, da upodobitev na tem podprostoru \emph{ni} komplementirana in da torej vsaka upodobitev ni polenostavna. 
+
+Zavoljo protislovja predpostavimo, da komplement obstaja. Imamo torej funkcijo $0 \neq \phi \in \hom(G,F)$, za katero velja $\sum_{g \in G} \phi(g) \neq 0$ in prostor $F \cdot \phi$ je $G$-invarianten. Torej obstaja enorazsežna upodobitev $\chi \colon G \to F^*$, da pri vsakem $g \in G$ velja $g \cdot \phi = \chi(g) \cdot \phi$, se pravi $\phi(g) = \chi(g) \cdot \phi(1)$. Od tod sledi 
+\[
+    \sum_{g \in G} \phi(g) = \phi(1) \cdot \sum_{g \in G} \chi(g).
+\]
+Trdimo, da je zadnja vsota vselej ničelna, kar nas privede v protislovje s predpostavko $\sum_{g \in G} \phi(g) \neq 0$. Če je namreč $\chi$ trivialna upodobitev, potem iz predpostavke o karakteristiki izpeljemo
+\[
+    \sum_{g \in G} \chi(g) = |G| = 0.
+\]
+Če pa $\chi$ ni trivialna, potem za nek $x \in G$ velja $\chi(x) \neq 1$ in v tem primeru izračunamo
+\[
+    (\chi(x) - 1) \cdot \sum_{g \in G} \chi(g) = \sum_{g \in G} \chi(xg) - \sum_{g \in G} \chi(g) = 0,
+\]
+kar zopet implicira $\sum_{g \in G} \chi(g) = 0$. \kljuka
+\end{dokaz}
+
+\begin{zgled}
+V ekstremni situaciji, ko je $\characteristic(F) = p > 0$ in $|G| = p^n$ za nek $n \in \NN$, kategorija upodobitev izgleda precej nenavadno. V takih neugodnih razmerah \emph{netrivialnih nerazcepnih upodobitev ni}. Poglejmo si, zakaj je temu tako v primeru $F = \field_p$ za neko praštevilo $p$.\footnote{Splošen primer hitro sledi iz tega posebnega. Če je namreč $F$ karakteristike $p$, ima prapolje $\field_p$. Upodobitev v tem primeru obravnavamo nad tem prapoljem.}
+
+Imejmo netrivialno nerazcepno upodobitev $p$-grupe $G$ na prostoru $V$ nad poljem $\field_p$. Vemo že, da je $V$ nujno končnorazsežen, zato je $|V| = p^k$ za nek $k \in \NN$. Grupa $G$ permutacijsko deluje na množici neničelnih vektorjev $V \backslash \{ 0 \}$. Po lemi o orbiti in stabilizatorju je velikost orbite vsakega neničelnega vektorja enaka indeksu stabilizatorja, ki je po predpostavki o moči grupe nujno potenca praštevila $p$. Ker pa moč $|V \backslash \{ 0 \}|$ ni deljiva s $p$, mora obstajati vektor $0 \neq v \in V$ z orbito moči $1$. Ta vektor je torej fiksen za delovanje grupe $G$ in zato razpenja enorazsežen podprostor $\field_p \cdot v$, ki je kot upodobitev izomorfen $\11$. To je seveda sprto s predpostavko o nerazcepnosti upodobitve $G$ na $V$.
+\end{zgled}
 
 \subsection{Dekompozicija regularne upodobitve}
 
 \todo[inline]{
 - Corollary 4.2.1
 - Zgled: projektor na fiksne točke, Proposition 4.3.1
+- vsaka nerazcepna upodobitev končne grupe je končnorazsežna!
 - število upodobitev Theorem 4.2.5
 }
 
 \section{Karakterji}
+
+Iz rezultatov zadnjega razdelka sledi, da je nad algebraično zaprtim poljem ničelne karakteristike (na primer zelo ugodnim poljem $\CC$) kategorija upodobitev dane končne grupe popolnoma določena z nerazcepnimi upodobitvami, ki jih lahko razumemo s pomočjo karakterjev. V tem razdelku bomo podrobneje razvili to teorijo.
 
 \subsection{Ortogonalnost matričnih koeficientov}
 \subsection{Ortonormalnost karakterjev}
@@ -1417,7 +1476,14 @@ Naj bo $G$ končna grupa in $F$ polje. Tedaj je vsaka upodobitev $G$ nad poljem 
 
 \subsection{Projekcija na izotipične komponente}
 
-\todo{Tule potrebujemo ortogonalnost karakterjev, zato tako pozno ... A to sploh vključimo?}
+\todo{Tule potrebujemo ortogonalnost karakterjev, zato tako pozno ...}
+
+\subsection{Abelove grupe}
+
+\todo[inline]{
+    - dualnost, Fourier
+    - Dirichleta izpustimo ...
+}
 
 \subsection{Harmonična analiza}
 
@@ -1429,13 +1495,6 @@ Naj bo $G$ končna grupa in $F$ polje. Tedaj je vsaka upodobitev $G$ nad poljem 
 }
 
 \section{Razširjeni zgledi}
-
-\subsection{Abelove grupe}
-
-\todo[inline]{
-    - dualnost, Fourier
-    - Dirichleta izpustimo ...
-}
 
 \subsection{\GAP}
 
