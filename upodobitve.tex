@@ -65,6 +65,7 @@
 \def\prenos{\pi}
 \def\sestavi{\sigma}
 \def\razstavi{\rho}
+\def\EE{\mathbf{E}}
 
 \DeclareMathOperator\sgn{sgn}
 \DeclareMathOperator\Res{Res}
@@ -979,7 +980,7 @@ Naj grupa $\RR$ deluje na realnem prostoru $\RR^2$ s homomorfizmom
 Oglejmo si enorazsežne podupodobitve. Premislili smo že, da te ustrezajo skupnim lastnim vektorjem vseh preslikav $\rho(x)$ za $x \in \RR$. Pri $x = 1$ imamo linearno preslikavo $\rho(1)$ z enim samim lastnim vektorjem, in sicer $e_1 \in \RR^2$. Hkrati je $e_1$ lastni vektor vseh preslikav $\rho(x)$ za $x \in \RR$. Torej ima $\rho$ \emph{eno samo} enorazsežno podupodobitev, in sicer je to $\RR \cdot e_1 \leq \RR^2$. Ta vektorski podprostor ima mnogo komplementov v $\RR^2$, noben od teh pa ni hkrati enorazsežna podupodobitev $\rho$.
 \end{zgled}
 
-Ni težko preveriti, da obstoj komplementirane podupodobitve vselej izhaja iz projekcijskih\footnote{Linearna preslikava $A \colon X \to X$ je projekcija na podprostor $Y \leq X$, če je $A^2 = A$ in $\image A = Y$.} spletičen.
+Ni težko preveriti, da obstoj komplementirane podupodobitve vselej izhaja iz {\definicija projekcijskih spletičen}.\footnote{Linearna preslikava $A \colon X \to X$ je projekcija na podprostor $Y \leq X$, če je $A^2 = A$ in $\image A = Y$. Projekcijska spletična je torej spletična, ki je hkrati projekcija na nek podprostor.}
 
 \begin{trditev}
 Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\tilde \rho$ njena podupodobitev na prostoru $W \leq V$. Tedaj ima $\tilde \rho$ komplementirano podupodobitev, če in samo če obstaja spletična $\Phi \in \hom_G(V,V)$, ki je projekcija na $W$. V tem primeru je $\ker \Phi$ komplementirana upodobitev.
@@ -1415,14 +1416,25 @@ Spoznali smo že, da niso vse upodobitve polenostavne, niti kadar je grupa konč
 \begin{izrek}[Maschke]
 Naj bo $G$ končna grupa in $F$ polje. Tedaj je vsaka upodobitev $G$ nad poljem $F$ polenostavna, če in samo če $\characteristic(F) \nmid |G|$.
 \end{izrek}
-\begin{dokaz}
-$(\Leftarrow):$ Predpostavimo $\characteristic(F) \nmid |G|$. Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$ in naj bo $W$ poljuben $G$-invarianten podprostor. Naj bo $P \in \hom(V,V)$ projektor na $W$. Grupa $G$ deluje na prostoru linearnih preslikav $\hom(V,V)$, fiksne točke tega delovanja so ravno spletične. Projektor $P$ ni nujno spletična, zato njegovo jedro ni nujno $G$-invarianten komplement $W$. Ga pa brez težave popravimo do spletične, in sicer tako, da ga povprečimo\footnote{Ravno za ta postopek povprečenja uporabljamo predpostavko, da je $G$ končna grupa in da v polju $F$ lahko izračunamo $1/|G|$.} do linearne preslikave
-\[
-    Q = \frac{1}{|G|} \sum_{g \in G} g \cdot P.
-\]
-Ni težko preveriti, da je $Q$ spletična v $\hom_G(V,V)$, za katero velja $Q|_W = \id_W$ in $\image Q = W$. Torej je $Q$ projekcijska spletična na $W$. Njeno jedro je zato $G$-invarianten komplement prostora $W$ v $V$. \kljuka
 
-$(\Rightarrow):$ Predpostavimo, da $\characteristic(F) \mid |G|$. Opazujmo regularno upodobitev $\rho_{\hom}$ na prostoru $\hom(G,F)$. Ta prostor ima vselej $G$-invarianten podprostor
+Preden dokažemo izrek, pojasnimo, kako in zakaj nam prideta prav končnost grupe $G$ in ustrezna karakteristika polja $F$. Ti dve predpostavki namreč odpirata vrata orodju {\definicija povprečenja po grupi}. Za dano funkcijo $f \in \hom(G,F)$ lahko v tej ugodni situaciji izračunamo njeno povprečno vrednost
+\[
+    \EE_G(f) = \frac{1}{|G|} \sum_{g \in G} f(g) \in F.
+\]
+Te račune povprečij lahko razširimo na izračun povprečne linearne preslikave upodobitve. Za dano upodobitev $\rho$ grupe $G$ na prostoru $V$ lahko v tej ugodni situaciji izračunamo njeno povprečno vrednost
+\[
+    \EE_G(\rho) = \frac{1}{|G|} \sum_{g \in G} \rho(g) \in \hom(V,V).
+\]
+Ni težko preveriti, da je $\EE_G(\rho)$ projekcijska spletična v $\hom_G(V,V)$ na podprostor fiksnih vektorjev $V^G$. 
+
+\begin{dokaz}[Dokaz Maschkejevega izreka]
+$(\Leftarrow):$ Predpostavimo $\characteristic(F) \nmid |G|$. Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$ in naj bo $W$ poljuben $G$-invarianten podprostor. Naj bo $P \in \hom(V,V)$ projektor na $W$. Grupa $G$ deluje na prostoru linearnih preslikav $\hom(V,V)$. Povprečna vrednost tega delovanja je projekcijska spletična na podprostor spletičen $\hom(V,V)^G = \hom_G(V,V)$. Ko to povprečno vrednost uporabimo na projektorju $P$, dobimo torej linearno preslikavo
+\[
+    Q = \frac{1}{|G|} \sum_{g \in G} g \cdot P \in \hom_G(V,V),
+\]
+za katero velja $Q|_W = \id_W$ in $\image Q = W$. Torej je $Q$ projekcijska spletična na $W$. Njeno jedro je zato $G$-invarianten komplement prostora $W$ v $V$. \kljuka
+
+$(\Rightarrow):$ Predpostavimo, da $\characteristic(F) \mid |G|$.\footnote{V tem primeru sicer nimamo dostopa do povprečenja v celoti, lahko pa uporabimo \emph{delno} povprečenje, ki izračuna le vsoto po grupi.} Opazujmo regularno upodobitev $\rho_{\hom}$ na prostoru $\hom(G,F)$. Ta prostor ima vselej $G$-invarianten podprostor
 \[
     \displaystyle \hom_0(G,F) = \left\{ f \in \hom(G,F) \mid \sum_{g \in G} f(g) = 0 \right\}
 \]
@@ -1458,22 +1470,61 @@ Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|
 \[
     \rho_{\hom} \cong \bigoplus_{\pi \in \Irr(G)} \underbrace{\pi \oplus \pi \oplus \cdots \oplus \pi}_{\deg(\pi)}.
 \]
-V posebnem je 
+\end{izrek}
+
+V posebnem iz izreka po primerjavi razsežnosti izpeljemo
 \[
     \sum_{\pi \in \Irr(G)} \deg(\pi)^2 = |G|.
 \]
-\end{izrek}
 
-Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz regularne upodobitve same s pomočjo ustreznih projekcijskih spletičen (kot pri dokazu Maschkejevega izreka) najdemo izotipične komponente regularne upodobitve. Zaenkrat lahko to pojasnemo le za $\11$-izotipično komponento, za splošen primer moramo pa prej razviti še malo več teorije.
+\subsection{Ortogonalnost matričnih koeficientov}
 
-\begin{zgled}
-Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Ni težko preveriti, da je linearna preslikava
+Na prostor funkcij $\hom(G,F)$ uvedimo {\definicija skalarni produkt} s predpisom
 \[
-    \frac{1}{|G|} \sum_{g \in G} \rho(g)
+    \langle f_1, f_2 \rangle = \frac{1}{|G|} \sum_{g \in G} f_1(g) f_2(g^{-1})
 \]
-projekcijska spletična v $\hom_G(V,V)$ na $\11$-izotipično komponento v $V$, se pravi na podprostor fiksnih vektorjev $V^G$.
-\end{zgled}
+za $f_1, f_2 \in \hom(G,F)$. Ker je polje $F$ v splošnem abstraktno, to sicer ni običajen skalarni produkt, je pa to vendarle nedegenerirana simetrična bilinearna forma na $\hom(G,F)$, zato zanjo uporabljamo vso standardno terminologijo iz običajnih skalarnih produktov.
 
+Z uporabo povprečenja na prostoru linearnih preslikav (podobno kot pri dokazu Maschkejevega izreka) bomo nadgradili dekompozicijo regularne upodobitve na \emph{ortogonalno} direktno vsoto.
+
+\begin{trditev}
+Naj bo $G$ končna grupa z neizomorfnima nerazcepnima upodobitvima $\pi_1$, $\pi_2$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Tedaj sta prostora $\MK(\pi_1)$ in $\MK(\pi_2)$ ortogonalna.
+\end{trditev}
+\begin{dokaz}
+Naj upodobitvi $\pi_1$, $\pi_2$ delujeta na prostorih $V_1$, $V_2$. Grupa $G$ deluje na prostoru linearnih preslikav $\hom(V_1, V_2)$. Povprečje tega delovanja je projekcijska spletična na podprostor $\hom(V_1, V_2)^G = \hom_G(V_1, V_2)$, ki je po Schurovi lemi trivialen. Za poljubno linearno preslikavo $A \in \hom(V_1, V_2)$ je torej
+\[
+    \frac{1}{|G|} \sum_{g \in G} g \cdot A = 0.
+\]
+Konkretizirajmo preslikavo $A$. Naj bo $\{ e_i \}_i$ baza prostora $V_1$ in $\{ f_j \}_j$ baza prostora $V_2$. Vzemimo
+\[
+    A_{i,l} \colon V_1 \to V_2, \quad
+    v \mapsto \langle e_i^*, v \rangle f_l.
+\]
+S to izbiro dosežemo enakost
+\[
+    0 = \frac{1}{|G|} \sum_{g \in G} g \cdot A_{i,l}(g^{-1} \cdot e_j) =
+    \frac{1}{|G|} \sum_{g \in G} \langle e_i^*, g^{-1} \cdot e_j \rangle g \cdot f_l =
+    \frac{1}{|G|} \sum_{g \in G} f_{i,j}(g^{-1}) g \cdot f_l.
+\]
+Na zadnjem uporabimo še $f_k^*$, pa dobimo
+\[
+    0 = \frac{1}{|G|} \sum_{g \in G} f_{i,j}(g^{-1}) \langle f_k^*, g \cdot f_l \rangle =
+    \frac{1}{|G|} \sum_{g \in G} f_{i,j}(g^{-1}) f_{k,l}(g),
+\]
+kar je enakovredno $\langle f_{i,j}, f_{k,l} \rangle = 0$, se pravi ortogonalnosti matričnih koeficientov.
+\end{dokaz}
+
+Na soroden način lahko analiziramo skalarne produkte znotraj matričnih koeficientov ene same nerazcepne upodobitve.
+
+\begin{trditev}
+Naj bo $G$ končna grupa z nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Tedaj za vse $1 \leq i,j,k,l \leq \deg(\pi)$ velja
+\[
+    \langle f_{i,j}, f_{k,l} \rangle = \frac{1_{i = l, j = k}}{\deg(\pi)}.
+\]
+\end{trditev}
+\begin{dokaz}
+    \todo{}
+\end{dokaz}
 
 \section{Karakterji}
 
@@ -1483,7 +1534,7 @@ Iz rezultatov zadnjega razdelka sledi, da je nad algebraično zaprtim poljem ni�
 \]
 S podrobnejšim študijem karakterjev bomo v tem razdelku (med drugim) dokazali, da je zadnja neenakost v resnici \emph{enakost} in da lahko torej samo število nerazcepnih upodobitev izračunamo neposredno iz algebraične strukture grupe.
 
-\subsection{Ortogonalnost matričnih koeficientov}
+
 \subsection{Ortonormalnost karakterjev}
 
 \todo[inline]{
@@ -1503,6 +1554,10 @@ S podrobnejšim študijem karakterjev bomo v tem razdelku (med drugim) dokazali,
 \subsection{Projekcija na izotipične komponente}
 
 \todo{Tule potrebujemo ortogonalnost karakterjev, zato tako pozno ...}
+
+Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz regularne upodobitve same s pomočjo ustreznih projekcijskih spletičen (podobno kot pri dokazu Maschkejevega izreka) najdemo izotipične komponente regularne upodobitve. 
+
+Za začetek si poglejmo, kako to deluje za projekcijo na $\11$-izotipično komponento. Splošen primer bomo razvili iz tega posebnega. Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad poljem karakteristike tuje $|G|$. Povprečna vrednost $\EE_G(\rho)$ je projekcijska spletična v $\hom_G(V,V)$ na $\11$-izotipično komponento v $V$, se pravi na podprostor fiksnih vektorjev $V^G$. 
 
 \subsection{Abelove grupe}
 
