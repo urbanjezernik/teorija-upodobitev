@@ -79,6 +79,7 @@
 \DeclareMathOperator\SU{SU}
 \DeclareMathOperator\characteristic{char}
 \DeclareMathOperator\kk{k}
+\DeclareMathOperator\cl{cl}
 \def\GAP{\bf{GAP}}
 
 
@@ -1288,7 +1289,10 @@ Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev. Po izbiri baze dob
 \]
 To funkcijo imenujemo {\definicija karakter} upodobitve $\rho$. Kadar je upodobitev $\rho$ nerazcepna, tudi njenemu karakterju dodamo pridevnik \emph{nerazcepen}. 
 
-Karakter je neodvisen od izbire baze, zato za vsaka $x, g \in G$ velja $\chi_{\rho}(x g x^{-1}) = \chi_{\rho}(g)$. Karakterji so torej funkcije na $G$, ki so konstantne na konjugiranostnih razredih.\footnote{{\definicija Konjugiranostni razred} elementa $g \in G$ je množica $\{ x g x^{-1} \mid x \in G \}$. Grupa $G$ je disjunktna unija konjugiranostnih razredov svojih elementov.} Takim funkcijam pravimo {\definicija razredne funkcije}.
+Karakter je neodvisen od izbire baze, zato za vsaka $x, g \in G$ velja $\chi_{\rho}(x g x^{-1}) = \chi_{\rho}(g)$. Karakterji so torej funkcije na $G$, ki so konstantne na konjugiranostnih razredih.\footnote{{\definicija Konjugiranostni razred} elementa $g \in G$ je množica $\{ x g x^{-1} \mid x \in G \}$. Grupa $G$ je disjunktna unija konjugiranostnih razredov svojih elementov.} Takim funkcijam pravimo {\definicija razredne funkcije} in jih označimo s
+\[
+    \hom_{\cl}(G,F) = \{ f \in \hom(G,F) \mid \forall x, g \in G \colon f(x g x^{-1}) = f(g) \}.
+\]
 
 \begin{zgled}
 Opazujmo grupo $S_3$ nad poljem $\CC$. Poznamo že vse tri njene končnorazsežne nerazcepne upodobitve. Določimo karakterje teh nerazcepnih upodobitev. Karakterji enorazsežnih upodobitev so kot funkcije kar enaki upodobitvam. Za karakter $\chi_{\rho}$ velja
@@ -1417,17 +1421,17 @@ Spoznali smo že, da niso vse upodobitve polenostavne, niti kadar je grupa konč
 Naj bo $G$ končna grupa in $F$ polje. Tedaj je vsaka upodobitev $G$ nad poljem $F$ polenostavna, če in samo če $\characteristic(F) \nmid |G|$.
 \end{izrek}
 
-Preden dokažemo izrek, pojasnimo, kako in zakaj nam prideta prav končnost grupe $G$ in ustrezna karakteristika polja $F$. Ti dve predpostavki namreč odpirata vrata orodju {\definicija povprečenja po grupi}. Za dano funkcijo $f \in \hom(G,F)$ lahko v tej ugodni situaciji izračunamo njeno povprečno vrednost
+Preden dokažemo izrek, pojasnimo, kako in zakaj nam prideta prav končnost grupe $G$ in ustrezna karakteristika polja $F$. Ti dve predpostavki namreč odpirata vrata orodju {\definicija povprečenja po grupi}. Za dano funkcijo $f \in \hom(G,F)$ lahko v tej ugodni situaciji izračunamo njeno povprečno vrednost\footnote{Tukaj uporabljamo verjetnostno oznako za povprečno vrednost. Mislimo si, da enakomerno naključno izberemo element $X$ iz grupe $G$ in v njem izračunamo vrednost $f$. Število $\EE(f)$ je pričakovana vrednost slučajne spremenljivke $f(X)$.}
 \[
-    \EE_G(f) = \frac{1}{|G|} \sum_{g \in G} f(g) \in F.
+    \EE(f) = \frac{1}{|G|} \sum_{g \in G} f(g) \in F.
 \]
 Te račune povprečij lahko razširimo na izračun povprečne linearne preslikave upodobitve. Za dano upodobitev $\rho$ grupe $G$ na prostoru $V$ lahko v tej ugodni situaciji izračunamo njeno povprečno vrednost
 \[
-    \EE_G(\rho) = \frac{1}{|G|} \sum_{g \in G} \rho(g) \in \hom(V,V).
+    \EE(\rho) = \frac{1}{|G|} \sum_{g \in G} \rho(g) \in \hom(V,V).
 \]
 
 \begin{domacanaloga}
-Preveri, da je $\EE_G(\rho) \in \hom_G(V,V)$ projekcijska spletična na podprostor fiksnih vektorjev $V^G$. 
+Preveri, da je $\EE(\rho) \in \hom_G(V,V)$ projekcijska spletična na podprostor fiksnih vektorjev $V^G$. 
 \end{domacanaloga}
 
 \begin{dokaz}[Dokaz Maschkejevega izreka]
@@ -1520,7 +1524,7 @@ kar je enakovredno $\langle f_{i,j}^{\pi_1}, f_{k,l}^{\pi_2} \rangle = 0$, se pr
 Na soroden način lahko analiziramo skalarne produkte znotraj matričnih koeficientov ene same nerazcepne upodobitve.
 
 \begin{trditev}
-Naj bo $G$ končna grupa z nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Tedaj za vse $i,j,k,l$ velja
+Naj bo $G$ končna grupa z nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Po izbiri poljubne baze za matrične koeficiente velja
 \[
     \langle f_{i,j}, f_{k,l} \rangle = 
     \begin{cases}
@@ -1548,14 +1552,45 @@ kar je natanko želeno.
 
 \section{Karakterji}
 
-Iz rezultatov zadnjega razdelka sledi, da je nad algebraično zaprtim poljem ničelne karakteristike (na primer zelo ugodnim poljem $\CC$) kategorija upodobitev dane končne grupe popolnoma določena z nerazcepnimi upodobitvami, ki jih lahko razumemo s pomočjo karakterjev. Vsak karakter nerazcepne upodobitve je razredna funkcija, te pa so enolično določene s svojimi vrednostmi v predstavnikih konjugiranostnih razredov. Če število konjugiranostnih razredov označimo s $\kk(G)$, velja torej
+Iz rezultatov zadnjega razdelka sledi, da je nad algebraično zaprtim poljem ničelne karakteristike (na primer zelo ugodnim poljem $\CC$) kategorija upodobitev dane končne grupe popolnoma določena z nerazcepnimi upodobitvami, ki jih lahko razumemo s pomočjo karakterjev. V tem razdelku bomo podrobneje razvili to teorijo.
+
+\subsection{Ortonormiranost karakterjev}
+
+Iz ortogonalnosti matričnih koeficientov z lahkoto izpeljemo ortonormiranost karakterjev.
+
+\begin{posledica}
+Naj bo $G$ končna grupa z nerazcepnima upodobitvama $\pi_1$, $\pi_2$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Velja
 \[
-    |\Irr(G)| \leq \kk(G).
+    \langle \chi_{\pi_1}, \chi_{\pi_2} \rangle =
+    \begin{cases}
+        1 & \pi_1 \cong \pi_2, \\
+        0 & \text{sicer.}
+    \end{cases}
 \]
-S podrobnejšim študijem karakterjev bomo v tem razdelku (med drugim) dokazali, da je zadnja neenakost v resnici \emph{enakost} in da lahko torej samo število nerazcepnih upodobitev izračunamo neposredno iz algebraične strukture grupe.
+\end{posledica}
+\begin{dokaz}
+Izberemo bazo, izrazimo $\chi_{\pi} = \sum_i f_{i,i}^{\pi}$ in uporabimo zadnji dve trditvi o skalarnih produktih matričnih koeficientov.
+\end{dokaz}
+
+\subsection{Razredne funkcije}
+
+Karakterji niso poljubne funkcije v $\hom(G,F)$, temveč vselej pripadajo prostoru $\hom_{\cl}(G,F)$ razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev tudi linearno nedovisni. S pomočjo ortonormiranosti bomo sedaj dokazali, da tvorijo celo bazo prostora razrednih funkcij.
+
+\begin{trditev}
+Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj karakterji nerazcepnih upodobitev tvorijo bazo prostora $\hom_{\cl}(G,F)$.
+\end{trditev}
+\begin{dokaz}
+\todo{}
+\end{dokaz}
+
+Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavnikih konjugiranostnih razredov. Če {\definicija število konjugiranostnih razredov} označimo s $\kk(G)$, velja torej $\dim \hom_{\cl}(G,F) = \kk(G)$. Ker karakterji tvorijo bazo prostora razrednih funkcij, lahko \emph{število} nerazcepnih upodobitev  torej izračunamo neposredno iz algebraične strukture grupe.
+
+\begin{posledica}
+Za končno grupo $G$ nad algebraično zaprtim poljem karakteristike tuje $|G|$ velja $|\Irr(G)| = \kk(G)$.
+\end{posledica}
 
 
-\subsection{Ortonormalnost karakterjev}
+\todo{Zgled}
 
 \todo[inline]{
     - ortonormalnost
@@ -1577,7 +1612,7 @@ S podrobnejšim študijem karakterjev bomo v tem razdelku (med drugim) dokazali,
 
 Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz regularne upodobitve same s pomočjo ustreznih projekcijskih spletičen (podobno kot pri dokazu Maschkejevega izreka) najdemo izotipične komponente regularne upodobitve. 
 
-Za začetek si poglejmo, kako to deluje za projekcijo na $\11$-izotipično komponento. Splošen primer bomo razvili iz tega posebnega. Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad poljem karakteristike tuje $|G|$. Povprečna vrednost $\EE_G(\rho)$ je projekcijska spletična v $\hom_G(V,V)$ na $\11$-izotipično komponento v $V$, se pravi na podprostor fiksnih vektorjev $V^G$. 
+Za začetek si poglejmo, kako to deluje za projekcijo na $\11$-izotipično komponento. Splošen primer bomo razvili iz tega posebnega. Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad poljem karakteristike tuje $|G|$. Povprečna vrednost $\EE(\rho)$ je projekcijska spletična v $\hom_G(V,V)$ na $\11$-izotipično komponento v $V$, se pravi na podprostor fiksnih vektorjev $V^G$. 
 
 \subsection{Abelove grupe}
 
