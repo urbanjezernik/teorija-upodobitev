@@ -418,7 +418,7 @@ Naj bo $G$ grupa in $F$ polje. Kadar je spletična $\Phi \colon V_1 \to V_2$ med
         = \left( \bar x \cdot 1_{- \bar y} \right) (\bar z)
         = 1_{- \bar y}(\bar z + \bar x)
         = \begin{cases}
-            1 & \bar z = - \overline{x + y} \\
+            1 & \bar z = - \overline{x + y}, \\
             0 & \text{sicer}.
         \end{cases}
     \]
@@ -800,14 +800,14 @@ Naj bo $R$ neka izbrana množica predstavnikov desnih odsekov $H$ v $G$. Vsaka f
     \]
 Da dobimo spletično, moramo posplošitev regularnega delovanja $G$ na $\hom(G,V)$ prenesti prek linearnega izomorfizma $\Phi$ na desno stran. V ta namen naj bo $v \in V$ in $f \in \hom(G,V)^H$ z lastnostjo $f(r_0) = v$ in $f(r) = 0$ za $r \in R \backslash \{ r_0 \}$. Za vsak $g \in G$ mora tako veljati
     \[
-        g \cdot \left( r \mapsto \begin{cases} v & r = r_0 \\ 0 & r \neq r_0 \end{cases} \right) =
+        g \cdot \left( r \mapsto \begin{cases} v & r = r_0, \\ 0 & r \neq r_0 \end{cases} \right) =
         \Phi \left( g \cdot f \right) =
         \Phi \left( x \mapsto f(xg) \right).
     \]
 Za $x \in R$ z lastnostjo $xg \in Hr_0$, se pravi $x = h r_0 g^{-1}$ za nek $h \in H$, velja $f(xg) = f(hr_0) = \rho(h) \cdot v$. Seveda je $|R \cap H r g^{-1}| = 1$, torej obstaja natanko en tak $x$. Za $x \in R$ z lastnostjo $xg \notin Hr_0$ pa velja $f(xg) = 0$. S tem je
     \[
-        g \cdot \left( r \mapsto \begin{cases} v & r = r_0 \\ 0 & r \neq r_0 \end{cases} \right) =
-        \left( r \mapsto \begin{cases} \rho(h) \cdot v & r = h r_0 g^{-1} \text{ za nek $h \in H$} \\ 0 & r \notin H r_0 g^{-1} \end{cases} \right).
+        g \cdot \left( r \mapsto \begin{cases} v & r = r_0, \\ 0 & r \neq r_0 \end{cases} \right) =
+        \left( r \mapsto \begin{cases} \rho(h) \cdot v & r = h r_0 g^{-1} \text{ za nek $h \in H$,} \\ 0 & r \notin H r_0 g^{-1} \end{cases} \right).
     \]
 Da bo preslikava $\Phi$ spletična, moramo na $\hom(R,V)$ torej uvesti tako delovanje grupe $G$, ki dan vektor $v$ pri vnosu $r_0 \in R$ preslika tako, da najprej izračuna odsek elementa $r_0 g^{-1}$ po $H$, ta element zapiše kot $r_0 g^{-1} = h^{-1} r$ za $h \in H, \ r \in R$, nato pa na vektor $v$ deluje z $\rho(h)$ in ga hkrati prestavi k vnosu $r$.
     
@@ -823,7 +823,7 @@ Poseben primer opisane indukcije dobimo z enorazsežnimi upodobitvami grupe $H$.
     Opazujmo grupo $S_n$ in njeno podgrupo $A_n$ indeksa $2$. Za $n \geq 5$ je grupa $A_n$ enostavna, zato je $A_n = [A_n, A_n]$ in ni netrivialnih enorazsežnih upodobitev. Oglejmo si inducirano upodobitev $\Ind^{S_n}_{A_n}(\11)$. A priori vemo, da je to dvorazsežna upodobitev. Za množico predstavnikov odsekov vzamemo $R = \{ (), (1 \ 2) \}$. V domačih oznakah je vektorski prostor upodobitve enak $F ()\oplus F (1 \ 2)$, na katerem deluje grupa $S_n$ s predpisom
     \[
         g \cdot x \sigma = x \sigma g^{-1} = \begin{cases}
-            x \sigma   & g \in A_n \\
+            x \sigma   & g \in A_n, \\
             x \left((1 \ 2)\sigma\right)    & g \notin A_n
         \end{cases}
     \]
@@ -835,7 +835,7 @@ Poseben primer opisane indukcije dobimo z enorazsežnimi upodobitvami grupe $H$.
         \begin{cases}
             \begin{pmatrix}
                 x \\ y
-            \end{pmatrix} & g \in A_n \\
+            \end{pmatrix} & g \in A_n, \\
             \begin{pmatrix}
                 y \\ x
             \end{pmatrix} & g \notin A_n
@@ -1425,7 +1425,10 @@ Te račune povprečij lahko razširimo na izračun povprečne linearne preslikav
 \[
     \EE_G(\rho) = \frac{1}{|G|} \sum_{g \in G} \rho(g) \in \hom(V,V).
 \]
-Ni težko preveriti, da je $\EE_G(\rho)$ projekcijska spletična v $\hom_G(V,V)$ na podprostor fiksnih vektorjev $V^G$. 
+
+\begin{domacanaloga}
+Preveri, da je $\EE_G(\rho) \in \hom_G(V,V)$ projekcijska spletična na podprostor fiksnih vektorjev $V^G$. 
+\end{domacanaloga}
 
 \begin{dokaz}[Dokaz Maschkejevega izreka]
 $(\Leftarrow):$ Predpostavimo $\characteristic(F) \nmid |G|$. Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$ in naj bo $W$ poljuben $G$-invarianten podprostor. Naj bo $P \in \hom(V,V)$ projektor na $W$. Grupa $G$ deluje na prostoru linearnih preslikav $\hom(V,V)$. Povprečna vrednost tega delovanja je projekcijska spletična na podprostor spletičen $\hom(V,V)^G = \hom_G(V,V)$. Ko to povprečno vrednost uporabimo na projektorju $P$, dobimo torej linearno preslikavo
@@ -1504,26 +1507,43 @@ S to izbiro dosežemo enakost
 \[
     0 = \frac{1}{|G|} \sum_{g \in G} g \cdot A_{i,l}(g^{-1} \cdot e_j) =
     \frac{1}{|G|} \sum_{g \in G} \langle e_i^*, g^{-1} \cdot e_j \rangle g \cdot f_l =
-    \frac{1}{|G|} \sum_{g \in G} f_{i,j}(g^{-1}) g \cdot f_l.
+    \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) g \cdot f_l.
 \]
 Na zadnjem uporabimo še $f_k^*$, pa dobimo
 \[
-    0 = \frac{1}{|G|} \sum_{g \in G} f_{i,j}(g^{-1}) \langle f_k^*, g \cdot f_l \rangle =
-    \frac{1}{|G|} \sum_{g \in G} f_{i,j}(g^{-1}) f_{k,l}(g),
+    0 = \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) \langle f_k^*, g \cdot f_l \rangle =
+    \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) f_{k,l}^{\pi_2}(g),
 \]
-kar je enakovredno $\langle f_{i,j}, f_{k,l} \rangle = 0$, se pravi ortogonalnosti matričnih koeficientov.
+kar je enakovredno $\langle f_{i,j}^{\pi_1}, f_{k,l}^{\pi_2} \rangle = 0$, se pravi ortogonalnosti matričnih koeficientov.
 \end{dokaz}
 
 Na soroden način lahko analiziramo skalarne produkte znotraj matričnih koeficientov ene same nerazcepne upodobitve.
 
 \begin{trditev}
-Naj bo $G$ končna grupa z nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Tedaj za vse $1 \leq i,j,k,l \leq \deg(\pi)$ velja
+Naj bo $G$ končna grupa z nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Tedaj za vse $i,j,k,l$ velja
 \[
-    \langle f_{i,j}, f_{k,l} \rangle = \frac{1_{i = l, j = k}}{\deg(\pi)}.
+    \langle f_{i,j}, f_{k,l} \rangle = 
+    \begin{cases}
+        1/\deg(\pi) & (i,j) = (l,k) \\
+        0 & \text{sicer.}
+    \end{cases}
 \]
 \end{trditev}
 \begin{dokaz}
-    \todo{}
+Pristopimo kot pri zadnjem dokazu, pri čemer prostor spletičen $\hom_G(V,V)$ po Schurovi lemi zdaj sestoji le iz skalarnih večkratnikov identitete. Za linearno preslikavo $A \in \hom(V,V)$ je zato
+\[
+    \frac{1}{|G|} \sum_{g \in G} g \cdot A = \lambda_A \cdot \id_V
+\]
+za nek $\lambda_A \in F^*$. Velja $g \cdot A = \pi(g) A \pi(g)^{-1}
+$, zato je $\tr(g \cdot A) = \tr(A)$, od koder izpeljemo
+\[
+    \lambda_A = \frac{\tr(A)}{\deg(\pi)}.
+\]
+Kot v zadnjem dokazu dobljeno uporabimo s preslikavo $A_{i,l}(v) = \langle e_i^*, v \rangle e_l$ za neko izbrano bazo $\{ e_i \}_i$ prostora $V$. Velja $\tr(A_{i,l}) = \langle e_i^*, e_l \rangle = 1_{i = l}$, od koder kot v zadnjem dokazu izpeljemo
+\[
+    \langle f_{i,j}, f_{k,l} \rangle = \langle e_k^*, e_j \rangle \frac{1_{i = l}}{\deg(\pi)} = \frac{1_{i = l, j = k}}{\deg(\pi)},
+\]
+kar je natanko želeno.
 \end{dokaz}
 
 \section{Karakterji}
