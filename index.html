@@ -3037,72 +3037,109 @@ class="math inline">\(\hom(G,F)\)</span>, temveč vselej pripadajo
 prostoru <span
 class="math inline">\(\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>
 razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev
-tudi linearno nedovisni. S pomočjo rezultatov o skalarnih produktih
-matričnih koeficientov bomo sedaj dokazali, da tvorijo celo
-<em>bazo</em> prostora razrednih funkcij.</p>
-<div class="trditev">
-<p><strong>Trditev 3.4</strong>. Naj bo <span
+tudi linearno nedovisni. S pomočjo ortonormiranosti karakterjev bomo
+sedaj dokazali, da tvorijo celo <em>bazo</em> prostora razrednih
+funkcij.</p>
+<div class="izrek">
+<p><strong>Izrek 3.3</strong>. Naj bo <span
 class="math inline">\(G\)</span> grupa in <span
 class="math inline">\(F\)</span> algebraično zaprto polje karakteristike
 tuje <span class="math inline">\(|G|\)</span>. Tedaj karakterji
-nerazcepnih upodobitev tvorijo bazo prostora <span
+nerazcepnih upodobitev tvorijo ortonormirano bazo prostora <span
 class="math inline">\(\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>.</p>
 </div>
 <p>Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to
 povprečenje še <em>utežili</em>. Za dano upodobitev <span
 class="math inline">\(\rho\)</span> grupe <span
-class="math inline">\(G\)</span> in poljubno funkcijo <span
+class="math inline">\(G\)</span> na prostoru <span
+class="math inline">\(V\)</span> in poljubno funkcijo <span
 class="math inline">\(f \in \hom(G,F)\)</span> definiramo
 <span><strong><em>uteženo povprečje</em></strong></span><a href="#fn37"
 class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>
 <span class="math display">\[\mathbf{E}_f(\rho) = \frac{1}{|G|} \sum_{g
-\in G} f(g) \rho(g).\]</span> Za vsak <span class="math inline">\(h \in
-G\)</span> velja <span class="math display">\[\mathbf{E}_f(\rho) \cdot
-\rho(h) = \frac{1}{|G|} \sum_{g \in G} f(g) \rho(gh)
-    = \frac{1}{|G|} \sum_{g \in G} f(g) \rho(h) \rho(h^{-1}gh).\]</span>
-Izpostavimo <span class="math inline">\(\rho(h)\)</span> in na grupi
-<span class="math inline">\(G\)</span> uporabimo notranji avtomorfizem
-<span class="math inline">\(g \mapsto h g h^{-1}\)</span>, pa lahko
-zadnjo vsoto zapišemo kot <span class="math display">\[\rho(h)
-\frac{1}{|G|} \sum_{g \in G} f(hgh^{-1}) \rho(g).\]</span> Kadar je
-<span class="math inline">\(f\)</span> celo razredna funkcija, je zadnja
-vsota ravno enaka <span class="math inline">\(\rho(h) \cdot
-\mathbf{E}_f(\rho)\)</span>. Uteženo povprečje je torej v tem primeru
-<em>spletična</em> v <span class="math inline">\(\hom_G(\rho,
-\rho)\)</span>. Če dodatno predpostavimo, da je <span
-class="math inline">\(\rho\)</span> nerazcepna upodobitev, po Schurovi
-lemi sklepamo, da je <span
-class="math inline">\(\mathbf{E}_f(\rho)\)</span> skalarni večkratnik
-identitete. S tem zaključkom lahko dokažemo zadnjo trditev.</p>
+\in G} f(g) \rho(g) \in \hom(V,V).\]</span></p>
+<div class="zgled">
+<p><strong>Zgled 3.2</strong>. Naj bo <span
+class="math inline">\(\rho_{\hom}\)</span> regularna upodobitev grupe
+<span class="math inline">\(G\)</span> in <span class="math inline">\(f
+\in \hom(G,F)\)</span> funkcija na <span
+class="math inline">\(G\)</span>. Uteženo povprečje <span
+class="math inline">\(\mathbf{E}_f(\rho_{\hom})\)</span> je linearni
+endomorfizem prostora <span class="math inline">\(\hom(G,F)\)</span>.
+Pri tem se karakteristična funkcija identitete <span
+class="math inline">\(1_1\)</span> preslika v <span
+class="math display">\[\mathbf{E}_f(\rho_{\hom}) 1_1
+    = \frac{1}{|G|} \sum_{g \in G} f(g) \rho_{\hom}(g) \cdot 1_1
+    = \frac{1}{|G|} \sum_{g \in G} f(g) 1_{g^{-1}}.\]</span> Označimo
+invertiranje v grupi z <span
+class="math inline">\(\mathop{\mathrm{inv}}\colon G \to G\)</span>,
+<span class="math inline">\(g \mapsto g^{-1}\)</span>. Torej velja <span
+class="math display">\[\mathbf{E}_f(\rho_{\hom}) 1_1
+     = \frac{1}{|G|} \sum_{g \in G} (f \circ \mathop{\mathrm{inv}})(g)
+1_{g},\]</span> s čimer smo funkcijo <span
+class="math inline">\(\mathbf{E}_f(\rho_{\hom}) 1_1\)</span>
+identificirali kot <span class="math inline">\((f \circ
+\mathop{\mathrm{inv}}) / |G|\)</span>.</p>
+</div>
+<div class="lema">
+<p><strong>Lema 3.1</strong>. Naj bo <span
+class="math inline">\(G\)</span> končna grupa in <span
+class="math inline">\(F\)</span> algebraično zaprto polje karakteristike
+tuje <span class="math inline">\(|G|\)</span>. Za vsako nerazcepno
+upodobitev <span class="math inline">\(\pi\)</span> na prostoru <span
+class="math inline">\(V\)</span> in razredno funkcijo <span
+class="math inline">\(f\)</span> je <span
+class="math display">\[\displaystyle \mathbf{E}_f(\pi) =
+    \frac{\langle f, \chi_{\pi} \circ
+\mathop{\mathrm{inv}}\rangle}{\deg(\pi)} \cdot
+\mathop{\mathrm{id}}_V,\]</span> kjer smo označili <span
+class="math inline">\(\mathop{\mathrm{inv}}\colon G \to G\)</span>,
+<span class="math inline">\(g \mapsto g^{-1}\)</span>.</p>
+</div>
 <div class="proof">
-<p><em>Proof.</em> Naj bo <span class="math inline">\(f \in
-\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span> razredna funkcija. Za vsako
-nerazcepno upodobitev <span class="math inline">\(\pi\)</span> grupe
-<span class="math inline">\(G\)</span> izberimo bazo in s tem matrične
-koeficiente <span class="math inline">\(f_{i,j}^{\pi}\)</span>. Tvorimo
-razredno funkcijo <span class="math display">\[f \circ
-\mathop{\mathrm{inv}}\colon G \to F, \quad g \mapsto f(g^{-1})\]</span>
-in z njo uteženo povprečje <span class="math inline">\(\mathbf{E}_{f
-\circ \mathop{\mathrm{inv}}}(\pi)\)</span>. Njeni matrični koeficienti
-so <span class="math display">\[\mathbf{E}_{f \circ
-\mathop{\mathrm{inv}}}(\pi)_{i,j} = \frac{1}{|G|} \sum_{g \in G}
-f(g^{-1}) f_{i,j}^{\pi}(g) = \langle f, f_{i,j}^{\pi} \rangle.\]</span>
-Ker je <span class="math inline">\(\mathbf{E}_{f \circ
-\mathop{\mathrm{inv}}}(\pi)\)</span> skalarni večkratnik identitete, so
-torej vsi skalarni produkti <span class="math inline">\(f\)</span> z
-izvendiagonalnimi členi (<span class="math inline">\(i \neq j)\)</span>
-ničelni, skalarni produkti z diagonalnimi členi (<span
-class="math inline">\(i = j\)</span>) pa so med sabo enaki. Funkcijo
-<span class="math inline">\(f\)</span> lahko zato razvijemo po matričnih
-koeficientih nerazcepnih upodobitev<a href="#fn38" class="footnote-ref"
-id="fnref38" role="doc-noteref"><sup>38</sup></a> kot <span
-class="math display">\[f = \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
-\sum_i \alpha^{\pi} f_{i,i}^{\pi}\]</span> za neke skalarje <span
-class="math inline">\(\alpha^{\pi} \in F\)</span>.<a href="#fn39"
-class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a> S
-tem smo funkcijo <span class="math inline">\(f\)</span> razvili po
-karakterjih <span class="math inline">\(\chi_{\pi}\)</span> s
-koeficienti <span class="math inline">\(\alpha^{\pi}\)</span>. ◻</p>
+<p><em>Proof.</em> Za vsak <span class="math inline">\(h \in G\)</span>
+velja <span class="math display">\[\mathbf{E}_f(\pi) \cdot \pi(h) =
+\frac{1}{|G|} \sum_{g \in G} f(g) \pi(gh)
+    = \frac{1}{|G|} \sum_{g \in G} f(g) \pi(h) \pi(h^{-1}gh).\]</span>
+Izpostavimo <span class="math inline">\(\pi(h)\)</span> in na grupi
+<span class="math inline">\(G\)</span> uporabimo avtomorfizem <span
+class="math inline">\(g \mapsto h g h^{-1}\)</span>, pa lahko zadnjo
+vsoto zapišemo kot <span class="math display">\[\pi(h) \frac{1}{|G|}
+\sum_{g \in G} f(hgh^{-1}) \pi(g).\]</span> Ker je <span
+class="math inline">\(f\)</span> razredna funkcija, je dobljeno ravno
+enako <span class="math inline">\(\pi(h) \cdot
+\mathbf{E}_f(\pi)\)</span>. Uteženo povprečje je torej v tem primeru
+spletična v <span class="math inline">\(\hom_G(\pi, \pi)\)</span>. Po
+Schurovi lemi sklepamo, da je <span
+class="math inline">\(\mathbf{E}_f(\pi)\)</span> skalarni večkratnik
+identitete s sledjo <span
+class="math display">\[\mathop{\mathrm{tr}}\left( \mathbf{E}_f(\pi)
+\right) = \frac{1}{|G|} \sum_{g \in G} f(g) \chi_{\pi}(g) = \langle f,
+\chi_{\pi} \circ \mathop{\mathrm{inv}}\rangle.\]</span> Od tod
+izračunamo relevantni skalar kot <span class="math inline">\(\langle f,
+\chi_{\pi} \circ \mathop{\mathrm{inv}}\rangle/\deg(\pi)\)</span>. ◻</p>
+</div>
+<p>Uteženo opremljeni lahko z lahkoto izpeljemo izrek.</p>
+<div class="proof">
+<p><em>Dokaz izreka.</em> Predpostavimo, da nerazcepni karakterji
+<em>ne</em> razpenjajo prostora razrednih funkcij. Torej obstaja
+funkcija <span class="math inline">\(f \in
+\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>, ki je vsebovana v
+ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak <span
+class="math inline">\(\pi \in \mathop{\mathrm{Irr}}(G)\)</span> velja
+torej <span class="math inline">\(\langle f, \chi_{\pi} \rangle =
+0\)</span>, kar lahko zapišemo tudi kot <span
+class="math inline">\(\langle f \circ \mathop{\mathrm{inv}}, \chi_{\pi}
+\circ \mathop{\mathrm{inv}}\rangle = 0\)</span>. Uteženo povprečje
+vzdolž razredne funkcije <span class="math inline">\(f \circ
+\mathop{\mathrm{inv}}\)</span> je po lemi zato trivialno. Ker to velja
+za vsako nerazcepno upodobitev, mora veljati tudi za regularno
+upodobitev, ki je vsota nerazcepnih upodobitev, se pravi <span
+class="math inline">\(\mathbf{E}_{f \circ
+\mathop{\mathrm{inv}}}(\rho_{\hom}) = 0\)</span>. Po zadnjem zgledu to
+implicira <span class="math inline">\((f \circ \mathop{\mathrm{inv}})
+\circ \mathop{\mathrm{inv}}= 0\)</span>, se pravi <span
+class="math inline">\(f = 0\)</span>. ◻</p>
 </div>
 <p>Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v
 predstavnikih konjugiranostnih razredov. Če <span><strong><em>število
@@ -3353,18 +3390,6 @@ rečemo tudi <span><strong><em>nekomutativna Fourierova
 transformacija</em></strong></span>. Njeno povezavo z običajno teorijo
 Fourierove transformacije bomo spoznali nekoliko kasneje.<a
 href="#fnref37" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn38" role="doc-endnote"><p>Regularna upodobitev je vsota svojih
-izotipičnih komponent, te pa so ravno matrični koeficienti, zato lahko
-vsako funkcijo na <span class="math inline">\(G\)</span> razvijemo po
-matičnih koeficientih.<a href="#fnref38" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn39" role="doc-endnote"><p>Ti skalarji so po enakosti <span
-class="math inline">\(\mathbf{E}_{f \circ
-\mathop{\mathrm{inv}}}(\pi)_{i,i} = \langle f, f_{i,i}^{\pi}
-\rangle\)</span> enaki <span class="math inline">\(\alpha^{\pi} =
-\deg(\pi) \cdot \mathbf{E}_{f \circ
-\mathop{\mathrm{inv}}}(\pi)_{i,i}\)</span>.<a href="#fnref39"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
         </div>
