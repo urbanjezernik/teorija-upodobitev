@@ -47,5 +47,5 @@ a {
 } */
 .math.display {
   overflow-x: scroll;
-  display: block;
+  /* display: block; */
 }
