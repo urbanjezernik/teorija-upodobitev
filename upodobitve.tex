@@ -54,17 +54,8 @@
 \def\RR{\mathbf{R}}
 \def\CC{\mathbf{C}}
 \def\11{\mathbf{1}}
-\def\FF{\mathcal{F}}
 \def\field{\mathbf{F}}
-\def\GG{\mathcal{G}}
-\def\PP{\mathcal{P}}
-\def\UU{\mathcal{U}}
-\def\ZR{\mathsf{ZZR}}
 \DeclareMathOperator\image{im}
-\DeclareMathOperator\Spec{Spec}
-\def\prenos{\pi}
-\def\sestavi{\sigma}
-\def\razstavi{\rho}
 \def\EE{\mathbf{E}}
 
 \DeclareMathOperator\sgn{sgn}
@@ -81,6 +72,7 @@
 \DeclareMathOperator\kk{k}
 \DeclareMathOperator\cl{cl}
 \def\GAP{\bf{GAP}}
+\DeclareMathOperator\inv{inv}
 
 
 \DeclareMathOperator\Aut{Aut}
@@ -234,9 +226,6 @@
 \titleformat{\subsection}
   {\Large\bf}{}{1em}{}
 
-
-\usetikzlibrary{calc,math}
-
 \title{\bf Teorija upodobitev}
 \author{Urban Jezernik}
 
@@ -264,6 +253,7 @@
 \begin{itemize}
 \item {\literatura E. Kowalski, {\em An Introduction to the Representation Theory of Groups}, American Mathematical Society, 2014.} 
 \item {\literatura W. Fulton, J. Harris, {\em Representation Theory: A First Course}, Springer GTM 129, 2004.}
+\item {\literatura J. P. Serre, {\em Linear Representation of Finite Groups}, Springer GTM 42, 1977.}
 \end{itemize}
 
 \chapter{Temelji teorije upodobitev}
@@ -1574,37 +1564,59 @@ Izberemo bazo, izrazimo $\chi_{\pi} = \sum_i f_{i,i}^{\pi}$ in uporabimo zadnji 
 
 \subsection{Razredne funkcije}
 
-Karakterji niso poljubne funkcije v $\hom(G,F)$, temveč vselej pripadajo prostoru $\hom_{\cl}(G,F)$ razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev tudi linearno nedovisni. S pomočjo ortonormiranosti bomo sedaj dokazali, da tvorijo celo bazo prostora razrednih funkcij.
+Karakterji niso poljubne funkcije v $\hom(G,F)$, temveč vselej pripadajo prostoru $\hom_{\cl}(G,F)$ razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev tudi linearno nedovisni. S pomočjo rezultatov o skalarnih produktih matričnih koeficientov bomo sedaj dokazali, da tvorijo celo \emph{bazo} prostora razrednih funkcij. 
 
 \begin{trditev}
-Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj karakterji nerazcepnih upodobitev tvorijo bazo prostora $\hom_{\cl}(G,F)$.
+    Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj karakterji nerazcepnih upodobitev tvorijo bazo prostora $\hom_{\cl}(G,F)$.
 \end{trditev}
+
+Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to povprečenje še \emph{utežili}. Za dano upodobitev $\rho$ grupe $G$ in poljubno funkcijo $f \in \hom(G,F)$ definiramo {\definicija uteženo povprečje}\footnote{Kadar je $F = \CC$, uteženemu povprečenju rečemo tudi {\definicija nekomutativna Fourierova transformacija}. Njeno povezavo z običajno teorijo Fourierove transformacije bomo spoznali nekoliko kasneje.}
+\[
+    \EE_f(\rho) = \frac{1}{|G|} \sum_{g \in G} f(g) \rho(g).
+\]
+Za vsak $h \in G$ velja
+\[
+    \EE_f(\rho) \cdot \rho(h) = \frac{1}{|G|} \sum_{g \in G} f(g) \rho(gh)
+    = \frac{1}{|G|} \sum_{g \in G} f(g) \rho(h) \rho(h^{-1}gh).
+\]
+Izpostavimo $\rho(h)$ in na grupi $G$ uporabimo notranji avtomorfizem $g \mapsto h g h^{-1}$, pa lahko zadnjo vsoto zapišemo kot
+\[
+    \rho(h) \frac{1}{|G|} \sum_{g \in G} f(hgh^{-1}) \rho(g).
+\]
+Kadar je $f$ celo razredna funkcija, je zadnja vsota ravno enaka $\rho(h) \cdot \EE_f(\rho)$. Uteženo povprečje je torej v tem primeru \emph{spletična} v $\hom_G(\rho, \rho)$. Če dodatno predpostavimo, da je $\rho$ nerazcepna upodobitev, po Schurovi lemi sklepamo, da je $\EE_f(\rho)$ skalarni večkratnik identitete. S tem zaključkom lahko dokažemo zadnjo trditev.
+
 \begin{dokaz}
-\todo{}
+Naj bo $f \in \hom_{\cl}(G,F)$ razredna funkcija. Za vsako nerazcepno upodobitev $\pi$ grupe $G$ izberimo bazo in s tem matrične koeficiente $f_{i,j}^{\pi}$. Tvorimo razredno funkcijo
+\[
+    f \circ \inv \colon G \to F, \quad g \mapsto f(g^{-1})
+\]
+in z njo uteženo povprečje $\EE_{f \circ \inv}(\pi)$. Njeni matrični koeficienti so
+\[
+    \EE_{f \circ \inv}(\pi)_{i,j} = \frac{1}{|G|} \sum_{g \in G} f(g^{-1}) f_{i,j}^{\pi}(g) = \langle f, f_{i,j}^{\pi} \rangle.
+\]
+Ker je $\EE_{f \circ \inv}(\pi)$ skalarni večkratnik identitete, so torej vsi skalarni produkti $f$ z izvendiagonalnimi členi ($i \neq j)$ ničelni, skalarni produkti z diagonalnimi členi ($i = j$) pa so med sabo enaki. Funkcijo $f$ lahko zato razvijemo po matričnih koeficientih nerazcepnih upodobitev\footnote{Regularna upodobitev je vsota svojih izotipičnih komponent, te pa so ravno matrični koeficienti, zato lahko vsako funkcijo na $G$ razvijemo po matičnih koeficientih.} kot
+\[
+    f = \sum_{\pi \in \Irr(G)} \sum_i \alpha^{\pi} f_{i,i}^{\pi}
+\]
+za neke skalarje $\alpha^{\pi} \in F$.\footnote{Ti skalarji so po enakosti $\EE_{f \circ \inv}(\pi)_{i,i} = \langle f, f_{i,i}^{\pi} \rangle$ enaki $\alpha^{\pi} = \deg(\pi) \cdot \EE_{f \circ \inv}(\pi)_{i,i}$.} S tem smo funkcijo $f$ razvili po karakterjih $\chi_{\pi}$ s koeficienti $\alpha^{\pi}$. 
 \end{dokaz}
 
-Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavnikih konjugiranostnih razredov. Če {\definicija število konjugiranostnih razredov} označimo s $\kk(G)$, velja torej $\dim \hom_{\cl}(G,F) = \kk(G)$. Ker karakterji tvorijo bazo prostora razrednih funkcij, lahko \emph{število} nerazcepnih upodobitev  torej izračunamo neposredno iz algebraične strukture grupe.
+Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavnikih konjugiranostnih razredov. Če {\definicija število konjugiranostnih razredov} označimo s $\kk(G)$, velja torej $\dim \hom_{\cl}(G,F) = \kk(G)$. Ker karakterji tvorijo bazo prostora razrednih funkcij, lahko \emph{število} nerazcepnih upodobitev torej izračunamo neposredno iz algebraične strukture grupe.
 
 \begin{posledica}
 Za končno grupo $G$ nad algebraično zaprtim poljem karakteristike tuje $|G|$ velja $|\Irr(G)| = \kk(G)$.
 \end{posledica}
 
 
-\todo{Zgled}
+\todo{Zgled: $S_4$}
 
 \todo[inline]{
-    - ortonormalnost
-    - Vključi 4.3.3. Decomposition of class functions in dokaz o številu nerazcepnih upodobitev
-    - zgled: $S_4$ iz Fulton-Harris
     - večkratnosti 4.3.5
     - nerazcepnost
+    - zgled: $S_4$ tabela karakterjev iz Fulton-Harris
     }
 
-\subsection{Upodobitve v potencah}
 
-\todo[inline]{
-- vključi kakšen preprost zgled; omeni, da gre za to, da ni treba razstavljati regularne upodobitve; ta zgled lahko potem kasneje razširimo z \GAP.
-}
 
 \subsection{Projekcija na izotipične komponente}
 
@@ -1637,6 +1649,7 @@ Za začetek si poglejmo, kako to deluje za projekcijo na $\11$-izotipično kompo
 \todo[inline]{
     - izračunljivost tabele karakterjev Proposition 4.6.2
     - konkreten zgled, pokaži, kaj vse se da prebrati o grupi iz tega zgleda, morda $\GL_2(\field_2)$ in $S_5$
+    - upodobitve v potencah: vključi kakšen preprost zgled; omeni, da gre za to, da ni treba razstavljati regularne upodobitve; ta zgled lahko potem kasneje razširimo z \GAP.
 }
 
 \subsection{$\GL_2(\field_p)$}
@@ -1655,7 +1668,7 @@ Za začetek si poglejmo, kako to deluje za projekcijo na $\11$-izotipično kompo
 - malo harmonične analize
 - abelove grupe, Dirichletov izrek
 - tabela karakterjev
-- $\GL_2(\FF_p)$
+- $\GL_2(\field_p)$
 - burnside two primes theorem (najbrž izpustimo, brez veze)
 - simetrične grupe (!!!, napiši tabelo za $S_5$)
 - ? mixing in simetrične grupe (konkreten primer, simetrična grupa $S_5$, matrika sosednosti (katero mešanje?), spletična, lastne vrednosti po komponentah, kako dolgo moramo mešati?)

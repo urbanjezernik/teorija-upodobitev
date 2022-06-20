@@ -46,7 +46,7 @@
 <strong> Urban Jezernik <br>
 Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-Zadnja posodobitev: 17. 06. 2022
+Zadnja posodobitev: 20. 06. 2022
 </div>
 
 <div class="kazalo">
@@ -99,6 +99,8 @@ Representation Theory of Groups</em></span>, American Mathematical
 Society, 2014.</span></p></li>
 <li><p><span>W. Fulton, J. Harris, <span><em>Representation Theory: A
 First Course</em></span>, Springer GTM 129, 2004.</span></p></li>
+<li><p><span>J. P. Serre, <span><em>Linear Representation of Finite
+Groups</em></span>, Springer GTM 42, 1977.</span></p></li>
 </ul>
 <h1 id="temelji-teorije-upodobitev">Temelji teorije upodobitev</h1>
 <p>V tem poglavju bomo vzpostavili temelje teorije upodobitev. Spoznali
@@ -3035,8 +3037,9 @@ class="math inline">\(\hom(G,F)\)</span>, temveč vselej pripadajo
 prostoru <span
 class="math inline">\(\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>
 razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev
-tudi linearno nedovisni. S pomočjo ortonormiranosti bomo sedaj dokazali,
-da tvorijo celo bazo prostora razrednih funkcij.</p>
+tudi linearno nedovisni. S pomočjo rezultatov o skalarnih produktih
+matričnih koeficientov bomo sedaj dokazali, da tvorijo celo
+<em>bazo</em> prostora razrednih funkcij.</p>
 <div class="trditev">
 <p><strong>Trditev 3.4</strong>. Naj bo <span
 class="math inline">\(G\)</span> grupa in <span
@@ -3045,8 +3048,61 @@ tuje <span class="math inline">\(|G|\)</span>. Tedaj karakterji
 nerazcepnih upodobitev tvorijo bazo prostora <span
 class="math inline">\(\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>.</p>
 </div>
+<p>Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to
+povprečenje še <em>utežili</em>. Za dano upodobitev <span
+class="math inline">\(\rho\)</span> grupe <span
+class="math inline">\(G\)</span> in poljubno funkcijo <span
+class="math inline">\(f \in \hom(G,F)\)</span> definiramo
+<span><strong><em>uteženo povprečje</em></strong></span><a href="#fn37"
+class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>
+<span class="math display">\[\mathbf{E}_f(\rho) = \frac{1}{|G|} \sum_{g
+\in G} f(g) \rho(g).\]</span> Za vsak <span class="math inline">\(h \in
+G\)</span> velja <span class="math display">\[\mathbf{E}_f(\rho) \cdot
+\rho(h) = \frac{1}{|G|} \sum_{g \in G} f(g) \rho(gh)
+    = \frac{1}{|G|} \sum_{g \in G} f(g) \rho(h) \rho(h^{-1}gh).\]</span>
+Izpostavimo <span class="math inline">\(\rho(h)\)</span> in na grupi
+<span class="math inline">\(G\)</span> uporabimo notranji avtomorfizem
+<span class="math inline">\(g \mapsto h g h^{-1}\)</span>, pa lahko
+zadnjo vsoto zapišemo kot <span class="math display">\[\rho(h)
+\frac{1}{|G|} \sum_{g \in G} f(hgh^{-1}) \rho(g).\]</span> Kadar je
+<span class="math inline">\(f\)</span> celo razredna funkcija, je zadnja
+vsota ravno enaka <span class="math inline">\(\rho(h) \cdot
+\mathbf{E}_f(\rho)\)</span>. Uteženo povprečje je torej v tem primeru
+<em>spletična</em> v <span class="math inline">\(\hom_G(\rho,
+\rho)\)</span>. Če dodatno predpostavimo, da je <span
+class="math inline">\(\rho\)</span> nerazcepna upodobitev, po Schurovi
+lemi sklepamo, da je <span
+class="math inline">\(\mathbf{E}_f(\rho)\)</span> skalarni večkratnik
+identitete. S tem zaključkom lahko dokažemo zadnjo trditev.</p>
 <div class="proof">
-<p><em>Proof.</em> ◻</p>
+<p><em>Proof.</em> Naj bo <span class="math inline">\(f \in
+\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span> razredna funkcija. Za vsako
+nerazcepno upodobitev <span class="math inline">\(\pi\)</span> grupe
+<span class="math inline">\(G\)</span> izberimo bazo in s tem matrične
+koeficiente <span class="math inline">\(f_{i,j}^{\pi}\)</span>. Tvorimo
+razredno funkcijo <span class="math display">\[f \circ
+\mathop{\mathrm{inv}}\colon G \to F, \quad g \mapsto f(g^{-1})\]</span>
+in z njo uteženo povprečje <span class="math inline">\(\mathbf{E}_{f
+\circ \mathop{\mathrm{inv}}}(\pi)\)</span>. Njeni matrični koeficienti
+so <span class="math display">\[\mathbf{E}_{f \circ
+\mathop{\mathrm{inv}}}(\pi)_{i,j} = \frac{1}{|G|} \sum_{g \in G}
+f(g^{-1}) f_{i,j}^{\pi}(g) = \langle f, f_{i,j}^{\pi} \rangle.\]</span>
+Ker je <span class="math inline">\(\mathbf{E}_{f \circ
+\mathop{\mathrm{inv}}}(\pi)\)</span> skalarni večkratnik identitete, so
+torej vsi skalarni produkti <span class="math inline">\(f\)</span> z
+izvendiagonalnimi členi (<span class="math inline">\(i \neq j)\)</span>
+ničelni, skalarni produkti z diagonalnimi členi (<span
+class="math inline">\(i = j\)</span>) pa so med sabo enaki. Funkcijo
+<span class="math inline">\(f\)</span> lahko zato razvijemo po matričnih
+koeficientih nerazcepnih upodobitev<a href="#fn38" class="footnote-ref"
+id="fnref38" role="doc-noteref"><sup>38</sup></a> kot <span
+class="math display">\[f = \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
+\sum_i \alpha^{\pi} f_{i,i}^{\pi}\]</span> za neke skalarje <span
+class="math inline">\(\alpha^{\pi} \in F\)</span>.<a href="#fn39"
+class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a> S
+tem smo funkcijo <span class="math inline">\(f\)</span> razvili po
+karakterjih <span class="math inline">\(\chi_{\pi}\)</span> s
+koeficienti <span class="math inline">\(\alpha^{\pi}\)</span>. ◻</p>
 </div>
 <p>Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v
 predstavnikih konjugiranostnih razredov. Če <span><strong><em>število
@@ -3063,7 +3119,6 @@ karakteristike tuje <span class="math inline">\(|G|\)</span> velja <span
 class="math inline">\(|\mathop{\mathrm{Irr}}(G)| =
 \mathop{\mathrm{k}}(G)\)</span>.</p>
 </div>
-<h3 id="upodobitve-v-potencah">Upodobitve v potencah</h3>
 <h3 id="projekcija-na-izotipične-komponente">Projekcija na izotipične
 komponente</h3>
 <p>Dekompozicijo regularne upodobitve smo dobili iz matričnih
@@ -3291,6 +3346,24 @@ posebnega. Če je namreč <span class="math inline">\(F\)</span>
 karakteristike <span class="math inline">\(p\)</span>, ima prapolje
 <span class="math inline">\(\mathbf{F}_p\)</span>. Upodobitev v tem
 primeru obravnavamo nad tem prapoljem.<a href="#fnref36"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn37" role="doc-endnote"><p>Kadar je <span
+class="math inline">\(F = \mathbf{C}\)</span>, uteženemu povprečenju
+rečemo tudi <span><strong><em>nekomutativna Fourierova
+transformacija</em></strong></span>. Njeno povezavo z običajno teorijo
+Fourierove transformacije bomo spoznali nekoliko kasneje.<a
+href="#fnref37" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn38" role="doc-endnote"><p>Regularna upodobitev je vsota svojih
+izotipičnih komponent, te pa so ravno matrični koeficienti, zato lahko
+vsako funkcijo na <span class="math inline">\(G\)</span> razvijemo po
+matičnih koeficientih.<a href="#fnref38" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn39" role="doc-endnote"><p>Ti skalarji so po enakosti <span
+class="math inline">\(\mathbf{E}_{f \circ
+\mathop{\mathrm{inv}}}(\pi)_{i,i} = \langle f, f_{i,i}^{\pi}
+\rangle\)</span> enaki <span class="math inline">\(\alpha^{\pi} =
+\deg(\pi) \cdot \mathbf{E}_{f \circ
+\mathop{\mathrm{inv}}}(\pi)_{i,i}\)</span>.<a href="#fnref39"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
