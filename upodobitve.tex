@@ -1099,7 +1099,7 @@ Kadar je dana upodobitev \emph{polenostavna}, je do izomorfizma natančno enoli�
 \]
 Po Schurovi lemi je (nad algebraično zaprtim poljem) vsak od zadnjih prostorov spletičen bodisi trivialen bodisi enorazsežen. Večkratnost $\pi$ v $\rho$ lahko zatorej izračunamo kot
 \[
-    \displaystyle \mult_{\rho}(\pi) = \dim \hom_G(\pi, \rho).
+    \textstyle \mult_{\rho}(\pi) = \dim \hom_G(\pi, \rho).
 \]
 
 \begin{zgled} \leavevmode
@@ -1118,14 +1118,14 @@ Po Schurovi lemi je (nad algebraično zaprtim poljem) vsak od zadnjih prostorov 
 
 Oglejmo si tako situacijo še podrobneje. Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$. Naj bo $\pi$ neka \emph{nerazcepna} upodobitev grupe $G$. Opazujmo vse $G$-invariantne podprostore v $V$, ki so kot upodobitve izomorfni $\pi$. Vsota (ne nujno direktna) vseh teh podprostorov
 \[
-    \displaystyle \Izotip_{\rho}(\pi) = \sum_{W \leq V, \ W \cong \pi} W
+    \textstyle \Izotip_{\rho}(\pi) = \sum_{W \leq V, \ W \cong \pi} W
 \]
 je {\definicija $\pi$-izotipična komponenta} upodobitve $\rho$. Ta je sicer definirana za vsako upodobitev, a jo je za polenostavne upodobitve še posebej lahko določiti.
 
 \begin{trditev}
 Naj bo $G$ grupa s polenostavno upodobitvijo $\rho = \bigoplus_{i \in I} \rho_i$ na prostoru $V = \bigoplus_{i \in I} V_i$, kjer je vsak $\rho_i$ nerazcepna podupodobitev. Za vsako nerazcepno upodobitev $\pi$ grupe $G$ je
 \[
-    \displaystyle \Izotip_{\rho}(\pi) = \bigoplus_{i \in I \colon \ \rho_i \cong \pi} V_i.
+    \textstyle \Izotip_{\rho}(\pi) = \bigoplus_{i \in I \colon \ \rho_i \cong \pi} V_i.
 \]
 \end{trditev}
 \begin{dokaz}    
@@ -1177,7 +1177,7 @@ Za konkreten zgled lahko vzamemo ciklično grupo $\ZZ/n\ZZ$ in njeno regularno u
 
 \item Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\pi$ neka njena enorazsežna upodobitev. Taka upodobitev je seveda nerazcepna. Vektor $v \in V$ pripada izotipični komponenti $\Izotip_{\rho}(\pi)$, če in samo če grupa $G$ na prostoru $\langle v \rangle$ deluje kot s $\pi$, se pravi
 \[
-    \displaystyle \Izotip_{\rho}(\pi) = \left\{ v \in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v \right\}.
+    \textstyle \Izotip_{\rho}(\pi) = \left\{ v \in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v \right\}.
 \]
 
 Kadar je grupa $G$ abelova, je vsaka njena nerazcepna upodobitev nad algebraično zaprtim poljem enorazsežna. Vsaka polenostavna upodobitev take grupe je zato direktna vsota podprostorov, na katerih grupa deluje s skalarnimi množenji prek svojih enorazsežnih upodobitev.
@@ -1220,14 +1220,14 @@ Matrični koeficienti upodobitve $\pi$ nam torej dajejo podupodobitev na prostor
 \begin{izrek}
 Naj bo $G$ grupa s končnorazsežno nerazcepno upodobitvijo $\pi$. Tedaj je
 \[
-   \displaystyle  \MK(\pi) = \Izotip_{\rho_{\hom}}(\pi)
+   \textstyle  \MK(\pi) = \Izotip_{\rho_{\hom}}(\pi)
 \]
 Nad algebraično zaprtim poljem je večkratnost $\pi$ v slednji upodobitvi enaka $\deg(\pi)$.
 \end{izrek}
 \begin{dokaz}
 Naj bo $\pi$ upodobitev na prostoru $W$. Spomnimo se, da je $\pi$-izotipična komponenta v $\rho_{\hom}$ napeta na vektorje oblike $\Phi(w)$ za $\Phi \in \hom_G(\pi, \rho_{\hom})$ in $w \in W$. Regularno upodobitev predstavimo kot inducirano upodobitev $\rho_{\hom} = \Ind^G_1(\11)$. Po adjunkciji med restrikcijo in indukcijo je
 \[
-    \displaystyle \hom_G(\pi, \rho_{\hom}) \cong \hom_1(\Res^G_1(\pi), \11)
+    \textstyle \hom_G(\pi, \rho_{\hom}) \cong \hom_1(\Res^G_1(\pi), \11)
     \cong \hom(\11^{\deg(\pi)}, \11).
 \]
 Standardna dualna baza $\{ e_i^* \mid 1 \leq i \leq \deg(\pi) \}$ v zadnjem vektorskem prostoru nam po tej adjunkciji porodi bazo
@@ -1370,7 +1370,7 @@ zato je sled induciranega delovanja $g$ na $V r_0$ enaka $\chi_{\rho}(r_0 g r_0^
 
 Lastnost karakterjev kot srža upodobitve se prenese na končnorazsežne polenostavne upodobitve, \emph{če je le polje ničelne karakeristike}. Karakter dane polenostavne upodobitve $\rho$ namreč lahko razvijemo kot
 \[
-    \displaystyle \chi_{\rho} = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot \chi_{\pi}.
+    \textstyle \chi_{\rho} = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot \chi_{\pi}.
 \]
 Polenostavna upodobitev je enolično določena s svojimi nerazcepnimi komponentami in njihovimi večkratnostmi. Če je torej $\chi_{\rho_1} = \chi_{\rho_2}$ za polenostavni upodobitvi $\rho_1$, $\rho_2$, potem od tod iz neodvisnosti nerazcepnih karakterjev sledi enakost $\mult_{\rho_1}(\pi) = \mult_{\rho_2}(\pi)$ za vsako nerazcepno upodobitev $\pi$. To je enakost v polju $F$, od koder po predpostavki o ničelni karakteristiki sledi, da ta enakost velja tudi v kolobarju celih števil. S tem je $\rho_1 \cong \rho_2$.
 
@@ -1433,7 +1433,7 @@ za katero velja $Q|_W = \id_W$ in $\image Q = W$. Torej je $Q$ projekcijska sple
 
 $(\Rightarrow):$ Predpostavimo, da $\characteristic(F) \mid |G|$.\footnote{V tem primeru sicer nimamo dostopa do povprečenja v celoti, lahko pa uporabimo \emph{delno} povprečenje, ki izračuna le vsoto po grupi.} Opazujmo regularno upodobitev $\rho_{\hom}$ na prostoru $\hom(G,F)$. Ta prostor ima vselej $G$-invarianten podprostor
 \[
-    \displaystyle \hom_0(G,F) = \left\{ f \in \hom(G,F) \mid \sum_{g \in G} f(g) = 0 \right\}
+    \textstyle \hom_0(G,F) = \left\{ f \in \hom(G,F) \mid \sum_{g \in G} f(g) = 0 \right\}
 \]
 korazsežnosti $1$ v $\hom(G,F)$. Dokažimo, da upodobitev na tem podprostoru \emph{ni} komplementirana in da torej vsaka upodobitev ni polenostavna. 
 
