@@ -3083,7 +3083,7 @@ class="math inline">\(\mathbf{E}_f(\rho_{\hom}) \cdot 1_1 = f \circ
 \mathop{\mathrm{inv}}\)</span>.</p>
 </div>
 <div class="lema">
-<p><strong>Lema 3.1</strong>. Naj bo <span
+<p><strong>Lema 3.1</strong> (o uteženem povprečju). Naj bo <span
 class="math inline">\(G\)</span> končna grupa in <span
 class="math inline">\(F\)</span> algebraično zaprto polje karakteristike
 tuje <span class="math inline">\(|G|\)</span>. Za vsako nerazcepno
@@ -3158,26 +3158,60 @@ karakteristike tuje <span class="math inline">\(|G|\)</span> velja <span
 class="math inline">\(|\mathop{\mathrm{Irr}}(G)| =
 \mathop{\mathrm{k}}(G)\)</span>.</p>
 </div>
-<h3 id="projekcija-na-izotipične-komponente">Projekcija na izotipične
-komponente</h3>
+<h3 id="razstavljanje-upodobitve-1">Razstavljanje upodobitve</h3>
 <p>Dekompozicijo regularne upodobitve smo dobili iz matričnih
 koeficientov nerazcepnih upodobitev, torej gre za nekakšno
 <em>notranjo</em> dekompozicijo. Obstaja pa tudi <em>zunanja</em>
-dekompozicija, pri kateri iz regularne upodobitve same s pomočjo
-ustreznih projekcijskih spletičen (podobno kot pri dokazu Maschkejevega
-izreka) najdemo izotipične komponente regularne upodobitve.</p>
-<p>Za začetek si poglejmo, kako to deluje za projekcijo na <span
-class="math inline">\(\mathbf{1}\)</span>-izotipično komponento. Splošen
-primer bomo razvili iz tega posebnega. Naj bo <span
-class="math inline">\(G\)</span> končna grupa z upodobitvijo <span
+dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih
+projekcijskih spletičen najdemo izotipične komponente upodobitve.</p>
+<p>Take projekcije ni težko najti za <span
+class="math inline">\(\mathbf{1}\)</span>-izotipično komponento. Naj bo
+<span class="math inline">\(G\)</span> končna grupa z upodobitvijo <span
 class="math inline">\(\rho\)</span> na prostoru <span
-class="math inline">\(V\)</span> nad poljem karakteristike tuje <span
-class="math inline">\(|G|\)</span>. Povprečna vrednost <span
-class="math inline">\(\mathbf{E}(\rho)\)</span> je projekcijska
-spletična v <span class="math inline">\(\hom_G(V,V)\)</span> na <span
+class="math inline">\(V\)</span> nad ugodnim poljem. Povprečna vrednost
+upodobitve <span class="math inline">\(\mathbf{E}(\rho)\)</span> je
+projekcijska spletična v <span
+class="math inline">\(\hom_G(V,V)\)</span> na podprostor fiksnih
+vektorjev <span class="math inline">\(V^G\)</span>, se pravi na <span
 class="math inline">\(\mathbf{1}\)</span>-izotipično komponento v <span
-class="math inline">\(V\)</span>, se pravi na podprostor fiksnih
-vektorjev <span class="math inline">\(V^G\)</span>.</p>
+class="math inline">\(V\)</span>. Za splošnejše izotipične komponente
+uporabimo utežena povprečja.</p>
+<div class="trditev">
+<p><strong>Trditev 3.4</strong>. Naj bo <span
+class="math inline">\(G\)</span> končna grupa in <span
+class="math inline">\(F\)</span> algebraično zaprto polje karakteristike
+tuje <span class="math inline">\(|G|\)</span>. Za vsako končnorazsežno
+upodobitev <span class="math inline">\(\rho\)</span> in nerazcepno
+upodobitev <span class="math inline">\(\pi\)</span> je <span
+class="math display">\[\frac{\deg(\pi)}{|G|} \cdot
+\mathbf{E}_{\chi_{\pi} \circ \mathop{\mathrm{inv}}}(\rho)\]</span>
+projektor na <span class="math inline">\(\pi\)</span>-izotipično
+komponento v <span class="math inline">\(\rho\)</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Iz leme o uteženem povprečju izpeljemo, da za vsaki
+nerazcepni upodobitvi <span class="math inline">\(\pi_1\)</span>, <span
+class="math inline">\(\pi_2\)</span> na prostorih <span
+class="math inline">\(V_1\)</span>, <span
+class="math inline">\(V_2\)</span> velja <span
+class="math display">\[\frac{\deg(\pi_1)}{|G|} \cdot
+\mathbf{E}_{\chi_{\pi_1} \circ \mathop{\mathrm{inv}}}(\pi_2) =
+\begin{cases}
+        {\textstyle \mathop{\mathrm{id}}_{V_2}} &amp; \pi_1 \cong \pi_2,
+\\
+        0 &amp; \text{sicer.}
+    \end{cases}\]</span> Ko upodobitev <span
+class="math inline">\(\rho\)</span> razstavimo na direktno vsoto
+nerazcepnih podupodobitev, je linearni endomorfizem <span
+class="math inline">\(\deg(\pi)/|G| \cdot \mathbf{E}_{\chi_{\pi} \circ
+\mathop{\mathrm{inv}}}(\rho)\)</span> torej ničeln na podupodobitvah, ki
+niso izomorfne <span class="math inline">\(\pi\)</span>, in identiteta
+na podupodobitvah, ki so izomorfne <span
+class="math inline">\(\pi\)</span>. Ta endomorfizem je torej projektor
+na direktno vsoto podupodobitev, ki so izomorfne <span
+class="math inline">\(\pi\)</span>, torej ravno na <span
+class="math inline">\(\pi\)</span>-izotipično komponento. ◻</p>
+</div>
 <h3 id="abelove-grupe">Abelove grupe</h3>
 <h3 id="harmonična-analiza">Harmonična analiza</h3>
 <h2 id="razširjeni-zgledi">Razširjeni zgledi</h2>

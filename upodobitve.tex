@@ -1592,7 +1592,7 @@ Označimo invertiranje v grupi z $\inv \colon G \to G$, $g \mapsto g^{-1}$. Tore
 V posebnem pri $x = 1$ dobimo $\EE_f(\rho_{\hom}) \cdot 1_1 = f \circ \inv$. 
 \end{zgled}
 
-\begin{lema}
+\begin{lema}[o uteženem povprečju]
 Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Za vsako nerazcepno upodobitev $\pi$ na prostoru $V$ in razredno funkcijo $f$ je
 \[
     \EE_f(\pi) = 
@@ -1629,24 +1629,38 @@ Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavni
 Za končno grupo $G$ nad algebraično zaprtim poljem karakteristike tuje $|G|$ velja $|\Irr(G)| = \kk(G)$.
 \end{posledica}
 
+\todo{Zgled: $S_4$, razredi za konjugiranje}
 
-\todo{Zgled: $S_4$}
+\subsection{Razstavljanje upodobitve}
 
 \todo[inline]{
-    - večkratnosti 4.3.5
+    - večkratnosti 4.3.5 (nerazcepne podupodobitve)
     - nerazcepnost
     - zgled: $S_4$ tabela karakterjev iz Fulton-Harris
+    - projekcije na izotipične komponente
     }
 
+Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih projekcijskih spletičen najdemo izotipične komponente upodobitve.
 
-
-\subsection{Projekcija na izotipične komponente}
-
-\todo{Tule potrebujemo ortogonalnost karakterjev, zato tako pozno ...}
-
-Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz regularne upodobitve same s pomočjo ustreznih projekcijskih spletičen (podobno kot pri dokazu Maschkejevega izreka) najdemo izotipične komponente regularne upodobitve. 
-
-Za začetek si poglejmo, kako to deluje za projekcijo na $\11$-izotipično komponento. Splošen primer bomo razvili iz tega posebnega. Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad poljem karakteristike tuje $|G|$. Povprečna vrednost $\EE(\rho)$ je projekcijska spletična v $\hom_G(V,V)$ na $\11$-izotipično komponento v $V$, se pravi na podprostor fiksnih vektorjev $V^G$. 
+Take projekcije ni težko najti za $\11$-izotipično komponento. Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad ugodnim poljem. Povprečna vrednost upodobitve $\EE(\rho)$ je projekcijska spletična v $\hom_G(V,V)$ na podprostor fiksnih vektorjev $V^G$, se pravi na $\11$-izotipično komponento v $V$. Za splošnejše izotipične komponente uporabimo utežena povprečja.
+    
+\begin{trditev}
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Za vsako končnorazsežno upodobitev $\rho$ in nerazcepno upodobitev $\pi$ je
+\[
+    \frac{\deg(\pi)}{|G|} \cdot \EE_{\chi_{\pi} \circ \inv}(\rho)
+\]
+projektor na $\pi$-izotipično komponento v $\rho$.
+\end{trditev}
+\begin{dokaz}
+Iz leme o uteženem povprečju izpeljemo, da za vsaki nerazcepni upodobitvi $\pi_1$, $\pi_2$ na prostorih $V_1$, $V_2$ velja
+\[
+    \frac{\deg(\pi_1)}{|G|} \cdot \EE_{\chi_{\pi_1} \circ \inv}(\pi_2) = \begin{cases}
+        {\textstyle \id_{V_2}} & \pi_1 \cong \pi_2, \\
+        0 & \text{sicer.}
+    \end{cases}
+\]
+Ko upodobitev $\rho$ razstavimo na direktno vsoto nerazcepnih podupodobitev, je linearni endomorfizem $\deg(\pi)/|G| \cdot \EE_{\chi_{\pi} \circ \inv}(\rho)$ torej ničeln na podupodobitvah, ki niso izomorfne $\pi$, in identiteta na podupodobitvah, ki so izomorfne $\pi$. Ta endomorfizem je torej projektor na direktno vsoto podupodobitev, ki so izomorfne $\pi$, torej ravno na $\pi$-izotipično komponento.
+\end{dokaz}
 
 \subsection{Abelove grupe}
 
