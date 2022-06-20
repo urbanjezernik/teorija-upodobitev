@@ -47,5 +47,9 @@ a {
 } */
 .math.display {
   overflow-x: scroll;
-  /* display: block; */
+}
+@media (max-width: 1000px) {
+  .math.display {
+    display: block;
+  }
 }
