@@ -1572,47 +1572,49 @@ Karakterji niso poljubne funkcije v $\hom(G,F)$, temveč vselej pripadajo prosto
 
 Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to povprečenje še \emph{utežili}. Za dano upodobitev $\rho$ grupe $G$ na prostoru $V$ in poljubno funkcijo $f \in \hom(G,F)$ definiramo {\definicija uteženo povprečje}\footnote{Kadar je $F = \CC$, uteženemu povprečenju rečemo tudi {\definicija nekomutativna Fourierova transformacija}. Njeno povezavo z običajno teorijo Fourierove transformacije bomo spoznali nekoliko kasneje.}
 \[
-    \EE_f(\rho) = \frac{1}{|G|} \sum_{g \in G} f(g) \rho(g) \in \hom(V,V).
+    \EE_f(\rho) = \sum_{g \in G} f(g) \rho(g) \in \hom(V,V).
 \]
 
 \begin{zgled}
-Naj bo $\rho_{\hom}$ regularna upodobitev grupe $G$ in $f \in \hom(G,F)$ funkcija na $G$. Uteženo povprečje $\EE_f(\rho_{\hom})$ je linearni endomorfizem prostora $\hom(G,F)$. Pri tem se karakteristična funkcija identitete $1_1$ preslika v
+Naj bo $\rho_{\hom}$ regularna upodobitev grupe $G$ in $f \in \hom(G,F)$ funkcija na $G$. Uteženo povprečje $\EE_f(\rho_{\hom})$ je linearni endomorfizem prostora $\hom(G,F)$. Pri tem se karakteristična funkcija $1_x$ za $x \in G$ preslika v
 \[
-    \EE_f(\rho_{\hom}) 1_1 
-    = \frac{1}{|G|} \sum_{g \in G} f(g) \rho_{\hom}(g) \cdot 1_1
-    = \frac{1}{|G|} \sum_{g \in G} f(g) 1_{g^{-1}}.
+    \EE_f(\rho_{\hom}) \cdot 1_x 
+    = \sum_{g \in G} f(g) \rho_{\hom}(g) \cdot 1_x
+    = \sum_{g \in G} f(g) 1_{xg^{-1}}
+    = \sum_{g \in G} f(g^{-1}x) 1_{g}.
 \] 
 Označimo invertiranje v grupi z $\inv \colon G \to G$, $g \mapsto g^{-1}$. Torej velja
 \[
-    \EE_f(\rho_{\hom}) 1_1
-     = \frac{1}{|G|} \sum_{g \in G} (f \circ \inv)(g) 1_{g},
+    \EE_f(\rho_{\hom}) \cdot 1_x
+     = \sum_{g \in G} ((\rho_{\hom}(x) \cdot f) \circ \inv)(g) 1_{g}
+     = (\rho_{\hom}(x) \cdot f) \circ \inv.
 \]
-s čimer smo funkcijo $\EE_f(\rho_{\hom}) 1_1$ identificirali kot $(f \circ \inv) / |G|$.
+V posebnem pri $x = 1$ dobimo $\EE_f(\rho_{\hom}) \cdot 1_1 = f \circ \inv$. 
 \end{zgled}
 
 \begin{lema}
 Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Za vsako nerazcepno upodobitev $\pi$ na prostoru $V$ in razredno funkcijo $f$ je
 \[
-    \displaystyle \EE_f(\pi) = 
-    \frac{\langle f, \chi_{\pi} \circ \inv \rangle}{\deg(\pi)} \cdot \id_V,
+    \EE_f(\pi) = 
+    \frac{|G| \cdot \langle f, \chi_{\pi} \circ \inv \rangle}{\deg(\pi)} \cdot {\textstyle \id_V},
 \]
 kjer smo označili $\inv \colon G \to G$, $g \mapsto g^{-1}$.
 \end{lema}
 \begin{dokaz}
 Za vsak $h \in G$ velja
 \[
-    \EE_f(\pi) \cdot \pi(h) = \frac{1}{|G|} \sum_{g \in G} f(g) \pi(gh)
-    = \frac{1}{|G|} \sum_{g \in G} f(g) \pi(h) \pi(h^{-1}gh).
+    \EE_f(\pi) \cdot \pi(h) =  \sum_{g \in G} f(g) \pi(gh)
+    =  \sum_{g \in G} f(g) \pi(h) \pi(h^{-1}gh).
 \]
 Izpostavimo $\pi(h)$ in na grupi $G$ uporabimo avtomorfizem $g \mapsto h g h^{-1}$, pa lahko zadnjo vsoto zapišemo kot
 \[
-    \pi(h) \frac{1}{|G|} \sum_{g \in G} f(hgh^{-1}) \pi(g).
+    \pi(h)  \sum_{g \in G} f(hgh^{-1}) \pi(g).
 \]
 Ker je $f$ razredna funkcija, je dobljeno ravno enako $\pi(h) \cdot \EE_f(\pi)$. Uteženo povprečje je torej v tem primeru spletična v $\hom_G(\pi, \pi)$. Po Schurovi lemi sklepamo, da je $\EE_f(\pi)$ skalarni večkratnik identitete s sledjo
 \[
-    \tr \left( \EE_f(\pi) \right) = \frac{1}{|G|} \sum_{g \in G} f(g) \chi_{\pi}(g) = \langle f, \chi_{\pi} \circ \inv \rangle.
+    \tr \left( \EE_f(\pi) \right) =  \sum_{g \in G} f(g) \chi_{\pi}(g) = |G| \cdot \langle f, \chi_{\pi} \circ \inv \rangle.
 \]
-Od tod izračunamo relevantni skalar kot $\langle f, \chi_{\pi} \circ \inv \rangle/\deg(\pi)$.
+Od tod izračunamo relevantni skalar kot $|G| \cdot \langle f, \chi_{\pi} \circ \inv \rangle/\deg(\pi)$.
 \end{dokaz}
 
 Uteženo opremljeni lahko z lahkoto izpeljemo izrek.
