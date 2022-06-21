@@ -3227,6 +3227,59 @@ class="math inline">\(4 = 4\)</span>) in produkta dveh tranzpozicij
 class="math inline">\(4 = 2 + 2\)</span>).</p>
 </div>
 <h3 id="razstavljanje-upodobitve-1">Razstavljanje upodobitve</h3>
+<p>S pomočjo ortonormirane baze karakterjev lahko z lahkoto razumemo
+vsako končnorazsežno upodobitev končne grupe nad ugodnim poljem.</p>
+<div class="posledica">
+<p><strong>Posledica 3.3</strong>. Naj bo <span
+class="math inline">\(G\)</span> končna grupa s končnorazsežno
+upodobitvijo <span class="math inline">\(\rho\)</span> nad algebraično
+zaprtim poljem karakteristike <span
+class="math inline">\(0\)</span>.</p>
+<ol>
+<li><p>Za vsako nerazcepno upodobitev <span
+class="math inline">\(\pi\)</span> velja <span
+class="math inline">\(\mathop{\mathrm{mult}}_{\rho}(\pi) = \langle
+\chi_{\rho}, \chi_{\pi} \rangle\)</span>.</p></li>
+<li><p><span class="math inline">\(|| \chi_{\rho} ||^2 = \sum_{\pi \in
+\mathop{\mathrm{Irr}}(G)}
+\mathop{\mathrm{mult}}_{\rho}(\pi)^2\)</span>.</p></li>
+<li><p>Upodobitev <span class="math inline">\(\rho\)</span> je
+nerazcepna, če in samo če <span class="math inline">\(|| \chi_{\rho} ||
+= 1\)</span>.</p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Upodobitev <span class="math inline">\(\rho\)</span>
+je polenostavna, zato lahko njen karakter zapišemo kot <span
+class="math display">\[\chi_{\rho} = \sum_{\pi \in
+\mathop{\mathrm{Irr}}(G)} \mathop{\mathrm{mult}}_{\rho}(\pi) \cdot
+\chi_{\pi}.\]</span> Skalarno pomnožimo s <span
+class="math inline">\(\chi_{\pi}\)</span> in uporabimo ortonormiranost,
+pa dobimo <span class="math inline">\(\mathop{\mathrm{mult}}_{\rho}(\pi)
+= \langle \chi_{\rho}, \chi_{\pi} \rangle\)</span>. Od tod izračunamo
+<span class="math display">\[||\chi_{\rho}||^2 = \langle \chi_{\rho},
+\chi_{\rho} \rangle
+    = \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
+\mathop{\mathrm{mult}}_{\rho}(\pi) \cdot \langle \chi_{\rho}, \chi_{\pi}
+\rangle
+    = \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
+\mathop{\mathrm{mult}}_{\rho}(\pi)^2.\]</span> Nazadnje je <span
+class="math inline">\(||\chi_{\rho}|| = 1\)</span>, če in samo če je za
+natanko eno nerazcepno upodobitev <span
+class="math inline">\(\pi\)</span> njena večkratnost v <span
+class="math inline">\(\rho\)</span> enaka <span
+class="math inline">\(1\)</span>, se pravi če je <span
+class="math inline">\(\rho\)</span> nerazcepna. ◻</p>
+</div>
+<p>Kadar ne poznamo vseh nerazcepnih karakterjev, nam naslednji preprost
+kriterij lahko pomaga najti nove.</p>
+<div class="posledica">
+<p><strong>Posledica 3.4</strong>. Naj bo <span
+class="math inline">\(G\)</span> končna grupa s končnorazsežno
+upodobitvijo <span class="math inline">\(\rho\)</span> nad algebraično
+zaprtim poljem karakteristike <span
+class="math inline">\(0\)</span>.</p>
+</div>
 <p>Dekompozicijo regularne upodobitve smo dobili iz matričnih
 koeficientov nerazcepnih upodobitev, torej gre za nekakšno
 <em>notranjo</em> dekompozicijo. Obstaja pa tudi <em>zunanja</em>

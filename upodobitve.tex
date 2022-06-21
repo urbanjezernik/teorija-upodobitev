@@ -1651,6 +1651,36 @@ V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 
 
 \subsection{Razstavljanje upodobitve}
 
+S pomočjo ortonormirane baze karakterjev lahko z lahkoto razumemo vsako končnorazsežno upodobitev končne grupe nad ugodnim poljem.
+
+\begin{posledica}
+Naj bo $G$ končna grupa s končnorazsežno upodobitvijo $\rho$ nad algebraično zaprtim poljem karakteristike $0$. 
+\begin{enumerate}
+    \item Za vsako nerazcepno upodobitev $\pi$ velja $\mult_{\rho}(\pi) = \langle \chi_{\rho}, \chi_{\pi} \rangle$.
+    \item $|| \chi_{\rho} ||^2 = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi)^2$.
+    \item Upodobitev $\rho$ je nerazcepna, če in samo če $|| \chi_{\rho} || = 1$.
+\end{enumerate}
+\end{posledica}
+\begin{dokaz}
+Upodobitev $\rho$ je polenostavna, zato lahko njen karakter zapišemo kot
+\[
+    \chi_{\rho} = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot \chi_{\pi}.
+\]
+Skalarno pomnožimo s $\chi_{\pi}$ in uporabimo ortonormiranost, pa dobimo $\mult_{\rho}(\pi) = \langle \chi_{\rho}, \chi_{\pi} \rangle$. Od tod izračunamo
+\[
+    ||\chi_{\rho}||^2 = \langle \chi_{\rho}, \chi_{\rho} \rangle 
+    = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot \langle \chi_{\rho}, \chi_{\pi} \rangle 
+    = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi)^2.
+\]
+Nazadnje je $||\chi_{\rho}|| = 1$, če in samo če je za natanko eno nerazcepno upodobitev $\pi$ njena večkratnost v $\rho$ enaka $1$, se pravi če je $\rho$ nerazcepna.
+\end{dokaz}
+
+Kadar ne poznamo vseh nerazcepnih karakterjev, nam naslednji preprost kriterij lahko pomaga najti nove.
+
+\begin{posledica}
+Naj bo $G$ končna grupa s končnorazsežno upodobitvijo $\rho$ nad algebraično zaprtim poljem karakteristike $0$. 
+\end{posledica}
+
 \todo[inline]{
     - večkratnosti 4.3.5 (nerazcepne podupodobitve)
     - nerazcepnost

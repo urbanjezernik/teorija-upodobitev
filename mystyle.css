@@ -38,9 +38,11 @@ a {
   list-style: none;
   font-weight: normal;
 }
-.izrek p, .trditev p, .lema p, .posledica p {
+.izrek, .trditev, .lema, .posledica {
   border:1px solid black;
   padding: 1em;
+  padding-bottom: 0;
+  margin-bottom: 1em;
 }
 /* .proof, .zgled, .domacanaloga {
   display: none;
