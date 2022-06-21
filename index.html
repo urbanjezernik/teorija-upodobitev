@@ -3047,6 +3047,13 @@ class="math inline">\(\chi_{\pi} = \sum_i f_{i,i}^{\pi}\)</span> in
 uporabimo zadnji dve trditvi o skalarnih produktih matričnih
 koeficientov. ◻</p>
 </div>
+<p>V skladu z običajno terminologijo za funkcijo <span
+class="math inline">\(f \in \hom(G,F)\)</span> označimo <span
+class="math inline">\(||f|| = \sqrt{\langle f, f \rangle}\)</span>, to
+je <span><strong><em>norma</em></strong></span> funkcije <span
+class="math inline">\(f\)</span>. Nerazcepni karakterji tvorijo
+ortonormiran sistem vektorjev v <span
+class="math inline">\(\hom(G,F)\)</span>.</p>
 <h3 id="razredne-funkcije">Razredne funkcije</h3>
 <p>Karakterji niso poljubne funkcije v <span
 class="math inline">\(\hom(G,F)\)</span>, temveč vselej pripadajo
@@ -3057,7 +3064,7 @@ tudi linearno nedovisni. S pomočjo ortonormiranosti karakterjev bomo
 sedaj dokazali, da tvorijo celo <em>bazo</em> prostora razrednih
 funkcij.</p>
 <div class="izrek">
-<p><strong>Izrek 3.3</strong>. Naj bo <span
+<p><strong>Izrek 3.3</strong> (o bazi razrednih funkcij). Naj bo <span
 class="math inline">\(G\)</span> grupa in <span
 class="math inline">\(F\)</span> algebraično zaprto polje karakteristike
 tuje <span class="math inline">\(|G|\)</span>. Tedaj karakterji
@@ -3075,13 +3082,34 @@ class="math display">\[\mathbf{E}_f(\rho) = \sum_{g \in G} f(g) \rho(g)
 \in \hom(V,V).\]</span> Kadar je <span class="math inline">\(F =
 \mathbf{C}\)</span>, uteženemu povprečenju rečemo tudi
 <span><strong><em>nekomutativna Fourierova
-transformacija</em></strong></span>. Njeno povezavo s klasično teorijo
-Fourierove transformacije bomo spoznali nekoliko kasneje.</p>
+transformacija</em></strong></span>.</p>
 <div class="zgled">
-<p><strong>Zgled 3.3</strong>. Naj bo <span
-class="math inline">\(\rho_{\hom}\)</span> regularna upodobitev grupe
-<span class="math inline">\(G\)</span> in <span class="math inline">\(f
-\in \hom(G,F)\)</span> funkcija na <span
+<p><strong>Zgled 3.3</strong>. </p>
+<ul>
+<li><p>Naj bo <span class="math inline">\(f\)</span> poljubna periodična
+funkcija na množici <span class="math inline">\(\mathbf{Z}\)</span> s
+periodo <span class="math inline">\(n &gt; 1\)</span> in vrednostmi v
+<span class="math inline">\(\mathbf{C}\)</span>. Funkcijo <span
+class="math inline">\(f\)</span> lahko torej obravnavamo kot funkcijo na
+ciklični grupi <span
+class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span>. Nerazcepne
+kompleksne upodobitve slednje grupe so ravno enorazsežne upodobitve
+<span class="math inline">\(\chi_j(x) = e^{2 \pi i j x / n}\)</span> za
+<span class="math inline">\(j \in \Omega = \{ 1, 2, \dots, n
+\}\)</span>. Nekomutativna Fourierova transformacija funkcije <span
+class="math inline">\(f\)</span> v teh upodobitvah je <span
+class="math display">\[\mathbf{E}_f(\chi_j) = \sum_{x \in
+\mathbf{Z}/n\mathbf{Z}} f(x) e^{2 \pi i j x / n }.\]</span> Vektorju
+<span class="math inline">\((f(1), f(2), \dots, f(n)) \in
+\mathbf{C}^n\)</span> na ta način priredimo vektor <span
+class="math inline">\((\mathbf{E}_f(\chi_1), \mathbf{E}_f(\chi_2),
+\dots, \mathbf{E}_f(\chi_n)) \in \mathbf{C}^n\)</span>. To prirejanje je
+v numerični matematiki znano pod imenom <span><strong><em>diskretna
+Fourierova transformacija</em></strong></span> in je fundamentalno v
+digitalnem procesiranju signalov.</p></li>
+<li><p>Naj bo <span class="math inline">\(\rho_{\hom}\)</span> regularna
+upodobitev grupe <span class="math inline">\(G\)</span> in <span
+class="math inline">\(f \in \hom(G,F)\)</span> funkcija na <span
 class="math inline">\(G\)</span>. Uteženo povprečje <span
 class="math inline">\(\mathbf{E}_f(\rho_{\hom})\)</span> je linearni
 endomorfizem prostora <span class="math inline">\(\hom(G,F)\)</span>.
@@ -3100,7 +3128,8 @@ velja <span class="math display">\[\mathbf{E}_f(\rho_{\hom}) \cdot 1_x
      = (\rho_{\hom}(x) \cdot f) \circ \mathop{\mathrm{inv}}.\]</span> V
 posebnem pri <span class="math inline">\(x = 1\)</span> dobimo <span
 class="math inline">\(\mathbf{E}_f(\rho_{\hom}) \cdot 1_1 = f \circ
-\mathop{\mathrm{inv}}\)</span>.</p>
+\mathop{\mathrm{inv}}\)</span>.</p></li>
+</ul>
 </div>
 <div class="lema">
 <p><strong>Lema 3.1</strong> (o uteženem povprečju). Naj bo <span
@@ -3143,9 +3172,9 @@ izračunamo relevantni skalar kot <span class="math inline">\(|G| \cdot
 </div>
 <p>Uteženo opremljeni lahko z lahkoto izpeljemo izrek.</p>
 <div class="proof">
-<p><em>Dokaz izreka.</em> Predpostavimo, da nerazcepni karakterji
-<em>ne</em> razpenjajo prostora razrednih funkcij. Torej obstaja
-funkcija <span class="math inline">\(f \in
+<p><em>Dokaz izreka o bazi razrednih funkcij.</em> Predpostavimo, da
+nerazcepni karakterji <em>ne</em> razpenjajo prostora razrednih funkcij.
+Torej obstaja funkcija <span class="math inline">\(f \in
 \hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>, ki je vsebovana v
 ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak <span
 class="math inline">\(\pi \in \mathop{\mathrm{Irr}}(G)\)</span> velja
@@ -3205,12 +3234,12 @@ vseh permutacij s tem cikličnim tipom.</p>
 class="math inline">\(n\)</span>. Število vseh particij označimo s <span
 class="math inline">\(p(n)\)</span>. Velja torej <span
 class="math inline">\(p(n) = \mathop{\mathrm{k}}(S_n) =
-|\mathop{\mathrm{Irr}}(S_n)|\)</span>. Eksplicitna formula za to število
-<em>ne</em> obstaja, poznamo pa njeno asimptotsko oceno<a href="#fn38"
-class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a>
-<span class="math display">\[p(n) \sim \frac{1}{4 n \sqrt{3}} e^{\pi
-\sqrt{\frac{2n}{3}}}\]</span> za <span class="math inline">\(n \to
-\infty\)</span>.</p>
+|\mathop{\mathrm{Irr}}(S_n)|\)</span>. Splošna eksplicitna formula za to
+število <em>ne</em> obstaja, poznamo pa njeno asimptotsko oceno<a
+href="#fn38" class="footnote-ref" id="fnref38"
+role="doc-noteref"><sup>38</sup></a> <span class="math display">\[p(n)
+\sim \frac{1}{4 n \sqrt{3}} e^{\pi \sqrt{\frac{2n}{3}}}\]</span> za
+<span class="math inline">\(n \to \infty\)</span>.</p>
 <p>V konkretnem primeru <span class="math inline">\(n = 3\)</span> velja
 <span class="math inline">\(p(3) = 3\)</span>, namreč <span
 class="math inline">\(3 = 3 = 2 + 1 = 1 + 1 + 1\)</span>. Res smo našli

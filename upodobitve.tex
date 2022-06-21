@@ -1566,11 +1566,13 @@ Naj bo $G$ končna grupa z nerazcepnima upodobitvama $\pi_1$, $\pi_2$ nad algebr
 Izberemo bazo, izrazimo $\chi_{\pi} = \sum_i f_{i,i}^{\pi}$ in uporabimo zadnji dve trditvi o skalarnih produktih matričnih koeficientov.
 \end{dokaz}
 
+V skladu z običajno terminologijo za funkcijo $f \in \hom(G,F)$ označimo $||f|| = \sqrt{\langle f, f \rangle}$, to je {\definicija norma} funkcije $f$. Nerazcepni karakterji tvorijo ortonormiran sistem vektorjev v $\hom(G,F)$.
+
 \subsection{Razredne funkcije}
 
 Karakterji niso poljubne funkcije v $\hom(G,F)$, temveč vselej pripadajo prostoru $\hom_{\cl}(G,F)$ razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev tudi linearno nedovisni. S pomočjo ortonormiranosti karakterjev bomo sedaj dokazali, da tvorijo celo \emph{bazo} prostora razrednih funkcij. 
 
-\begin{izrek}
+\begin{izrek}[o bazi razrednih funkcij]
     Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj karakterji nerazcepnih upodobitev tvorijo ortonormirano bazo prostora $\hom_{\cl}(G,F)$.
 \end{izrek}
 
@@ -1578,10 +1580,17 @@ Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to povprečen
 \[
     \EE_f(\rho) = \sum_{g \in G} f(g) \rho(g) \in \hom(V,V).
 \]
-Kadar je $F = \CC$, uteženemu povprečenju rečemo tudi {\definicija nekomutativna Fourierova transformacija}. Njeno povezavo s klasično teorijo Fourierove transformacije bomo spoznali nekoliko kasneje.
+Kadar je $F = \CC$, uteženemu povprečenju rečemo tudi {\definicija nekomutativna Fourierova transformacija}.
 
-\begin{zgled}
-Naj bo $\rho_{\hom}$ regularna upodobitev grupe $G$ in $f \in \hom(G,F)$ funkcija na $G$. Uteženo povprečje $\EE_f(\rho_{\hom})$ je linearni endomorfizem prostora $\hom(G,F)$. Pri tem se karakteristična funkcija $1_x$ za $x \in G$ preslika v
+\begin{zgled} \leavevmode
+\begin{itemize}
+    \item Naj bo $f$ poljubna periodična funkcija na množici $\ZZ$ s periodo $n > 1$ in vrednostmi v $\CC$. Funkcijo $f$ lahko torej obravnavamo kot funkcijo na ciklični grupi $\ZZ/n\ZZ$. Nerazcepne kompleksne upodobitve slednje grupe so ravno enorazsežne upodobitve $\chi_j(x) = e^{2 \pi i j x / n}$ za $j \in \Omega = \{ 1, 2, \dots, n \}$. Nekomutativna Fourierova transformacija funkcije $f$ v teh upodobitvah je
+    \[
+        \EE_f(\chi_j) = \sum_{x \in \ZZ/n\ZZ} f(x) e^{2 \pi i j x / n }.
+    \]
+    Vektorju $(f(1), f(2), \dots, f(n)) \in \CC^n$ na ta način priredimo vektor $(\EE_f(\chi_1), \EE_f(\chi_2), \dots, \EE_f(\chi_n)) \in \CC^n$. To prirejanje je v numerični matematiki znano pod imenom {\definicija diskretna Fourierova transformacija} in je fundamentalno v digitalnem procesiranju signalov.
+
+    \item Naj bo $\rho_{\hom}$ regularna upodobitev grupe $G$ in $f \in \hom(G,F)$ funkcija na $G$. Uteženo povprečje $\EE_f(\rho_{\hom})$ je linearni endomorfizem prostora $\hom(G,F)$. Pri tem se karakteristična funkcija $1_x$ za $x \in G$ preslika v
 \[
     \EE_f(\rho_{\hom}) \cdot 1_x 
     = \sum_{g \in G} f(g) \rho_{\hom}(g) \cdot 1_x
@@ -1595,6 +1604,7 @@ Označimo invertiranje v grupi z $\inv \colon G \to G$, $g \mapsto g^{-1}$. Tore
      = (\rho_{\hom}(x) \cdot f) \circ \inv.
 \]
 V posebnem pri $x = 1$ dobimo $\EE_f(\rho_{\hom}) \cdot 1_1 = f \circ \inv$. 
+\end{itemize}
 \end{zgled}
 
 \begin{lema}[o uteženem povprečju]
@@ -1624,7 +1634,7 @@ Od tod izračunamo relevantni skalar kot $|G| \cdot \langle f, \chi_{\pi} \circ 
 
 Uteženo opremljeni lahko z lahkoto izpeljemo izrek.
 
-\begin{dokaz}[Dokaz izreka]
+\begin{dokaz}[Dokaz izreka o bazi razrednih funkcij]
 Predpostavimo, da nerazcepni karakterji \emph{ne} razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \hom_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $\langle f, \chi_{\pi} \rangle = 0$, kar lahko zapišemo tudi kot $\langle f \circ \inv, \chi_{\pi} \circ \inv \rangle = 0$. Uteženo povprečje vzdolž razredne funkcije $f \circ \inv$ je po lemi zato trivialno. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, ki je vsota nerazcepnih upodobitev, se pravi $\EE_{f \circ \inv}(\rho_{\hom}) = 0$. Po zadnjem zgledu to implicira $(f \circ \inv) \circ \inv = 0$, se pravi $f = 0$. 
 \end{dokaz}
 
@@ -1641,7 +1651,7 @@ Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sig
 Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(k_1, k_2, \dots, k_{\ell})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom.
 \end{domacanaloga}
 
-V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija particije} števila $n$. Število vseh particij označimo s $p(n)$. Velja torej $p(n) = \kk(S_n) = |\Irr(S_n)|$. Eksplicitna formula za to število \emph{ne} obstaja, poznamo pa njeno asimptotsko oceno\footnote{\href{https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF}{G. H. Hardy in S. Ramanujan, \emph{Asymptotic formulae in combinatory analysis}, Proceedings of the London Mathematical Society, Second Series, \textbf{17} (1918) 75--115.}}
+V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija particije} števila $n$. Število vseh particij označimo s $p(n)$. Velja torej $p(n) = \kk(S_n) = |\Irr(S_n)|$. Splošna eksplicitna formula za to število \emph{ne} obstaja, poznamo pa njeno asimptotsko oceno\footnote{\href{https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF}{G. H. Hardy in S. Ramanujan, \emph{Asymptotic formulae in combinatory analysis}, Proceedings of the London Mathematical Society, Second Series, \textbf{17} (1918) 75--115.}}
 \[
     p(n) \sim \frac{1}{4 n \sqrt{3}} e^{\pi \sqrt{\frac{2n}{3}}}
 \]
@@ -1710,6 +1720,7 @@ Ko upodobitev $\rho$ razstavimo na direktno vsoto nerazcepnih podupodobitev, je 
 \todo[inline]{
     - dualnost, Fourier
     - Dirichleta izpustimo ...
+    - Diaconis str 48 (random walks)
 }
 
 \subsection{Harmonična analiza}
