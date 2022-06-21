@@ -1633,7 +1633,21 @@ Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavni
 Za končno grupo $G$ nad algebraično zaprtim poljem karakteristike tuje $|G|$ velja $|\Irr(G)| = \kk(G)$.
 \end{posledica}
 
-\todo{Zgled: $S_4$, razredi za konjugiranje}
+\begin{zgled}
+Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.\footnote{Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.} Recimo, da so dolžine teh ciklov enake $k_1 \geq k_2 \geq \cdots \geq k_{\ell}$. Seveda velja $\sum_{i = 1}^{\ell} k_i = n$. Zaporedju $(k_1, k_2, \dots, k_{\ell})$ pravimo {\definicija ciklični tip} permutacije $\alpha$. 
+
+\begin{domacanaloga}
+Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(k_1, k_2, \dots, k_{\ell})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom.
+\end{domacanaloga}
+
+V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija particije} števila $n$. Število vseh particij označimo s $p(n)$. Velja torej $p(n) = \kk(S_n) = |\Irr(S_n)|$. Eksplicitna formula za to število \emph{ne} obstaja, poznamo pa njeno asimptotsko oceno\footnote{\href{https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF}{G. H. Hardy in S. Ramanujan, \emph{Asymptotic formulae in combinatory analysis}, Proceedings of the London Mathematical Society, Second Series, \textbf{17} (1918) 75--115.}}
+\[
+    p(n) \sim \frac{1}{4 n \sqrt{3}} e^{\pi \sqrt{\frac{2n}{3}}}
+\]
+za $n \to \infty$. 
+
+V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 1$. Res smo našli natanko $3$ nerazcepne upodobitve grupe $S_3$. V primeru $n = 4$ pa velja $p(4) = 5$. Temu ustrezajo konjugiranostni razredi identične permutacije $()$ ($4 = 1 + 1 + 1 + 1$), transpozicije $(1 \ 2)$ ($4 = 2 + 1 + 1$), tricikla $(1 \ 2 \ 3)$ ($4 = 3 + 1$), štiricikla $(1 \ 2 \ 3 \ 4)$ ($4 = 4$) in produkta dveh tranzpozicij $(1 \ 2)(3 \ 4)$ ($4 = 2 + 2$).
+\end{zgled}
 
 \subsection{Razstavljanje upodobitve}
 
@@ -1641,8 +1655,9 @@ Za končno grupo $G$ nad algebraično zaprtim poljem karakteristike tuje $|G|$ v
     - večkratnosti 4.3.5 (nerazcepne podupodobitve)
     - nerazcepnost
     - zgled: $S_4$ tabela karakterjev iz Fulton-Harris
-    - projekcije na izotipične komponente
     }
+
+    \todo{Tu gre bolj za to, da ko imamo enkrat tabelo karakterjev, lahko vsako upodobitev tudi eksplicitno rastavimo na nerazcepne.}
 
 Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih projekcijskih spletičen najdemo izotipične komponente upodobitve.
 
