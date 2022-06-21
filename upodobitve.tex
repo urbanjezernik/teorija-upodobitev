@@ -1474,6 +1474,10 @@ V posebnem iz izreka po primerjavi razsežnosti izpeljemo
     \sum_{\pi \in \Irr(G)} \deg(\pi)^2 = |G|.
 \]
 
+\begin{zgled}
+Opazujmo permutacijsko upodobitev $\pi$ grupe $\ZZ/n\ZZ$ na prostoru $\CC[\Omega]$, kjer je $\Omega = \{ 1, 2, \dots, n \}$. Premislili smo že, da je $\pi$ izomorfna regularni upodobitvi in da jo lahko razstavimo kot direktno vsoto $\pi = \bigoplus_{j \in \Omega} \chi_j$, kjer je $\chi_j \colon \ZZ/n\ZZ \to \CC^*$, $x \mapsto e^{2 \pi i j x / n}$, enorazsežna upodobitev. V posebnem od tod sledi, da so $\{ \chi_j \mid j \in \Omega \}$ \emph{vse} neizomorfne nerazcepne upodobitve ciklične grupe $\ZZ/n\ZZ$.
+\end{zgled}
+
 \subsection{Ortogonalnost matričnih koeficientov}
 
 Na prostor funkcij $\hom(G,F)$ uvedimo {\definicija skalarni produkt} s predpisom
@@ -1610,7 +1614,7 @@ Izpostavimo $\pi(h)$ in na grupi $G$ uporabimo avtomorfizem $g \mapsto h g h^{-1
 \[
     \pi(h)  \sum_{g \in G} f(hgh^{-1}) \pi(g).
 \]
-Ker je $f$ razredna funkcija, je dobljeno ravno enako $\pi(h) \cdot \EE_f(\pi)$. Uteženo povprečje je torej v tem primeru spletična v $\hom_G(\pi, \pi)$. Po Schurovi lemi sklepamo, da je $\EE_f(\pi)$ skalarni večkratnik identitete s sledjo
+Ker je $f$ razredna funkcija, je dobljeno ravno enako $\pi(h) \cdot \EE_f(\pi)$. Uteženo povprečje je torej v tem primeru spletična v $\hom_G(\pi, \pi)$. Po Schurovi lemi sklepamo, da je $\EE_f(\pi)$ skalarni večkratnik identitete, iz leme o uteženem povprečju pa je njegova sled enaka
 \[
     \tr \left( \EE_f(\pi) \right) =  \sum_{g \in G} f(g) \chi_{\pi}(g) = |G| \cdot \langle f, \chi_{\pi} \circ \inv \rangle.
 \]
