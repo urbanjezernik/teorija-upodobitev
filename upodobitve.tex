@@ -1664,15 +1664,15 @@ V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 
 
 \subsection{Kompleksni karakterji in stopnje}
 
-Omenimo še eno lastnost karakterjev upodobitev naj naugodnejšim poljem $\CC$. Njihove vrednosti namreč niso čisto poljubna kompleksna števila, temveč so algebraična cela števila\footnote{{\definicija Algebraično celo število} je kompleksno število, ki je ničla moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih celih števil označimo z $\bar \ZZ$. Ni se težko prepričati, da $\bar \ZZ$ tvori kolobar in da velja $\QQ \cap \bar \ZZ = \ZZ$.} omejene absolutne vrednosti. 
+Omenimo še eno lastnost karakterjev upodobitev naj naugodnejšim poljem $\CC$. Njihove vrednosti namreč niso čisto poljubna kompleksna števila, temveč so algebraična cela števila\footnote{{\definicija Algebraično celo število} je kompleksno število, ki je ničla moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih celih števil označimo z $\bar{\ZZ}$. Ni se težko prepričati, da $\bar{\ZZ}$ tvori kolobar in da velja $\QQ \cap \bar{\ZZ} = \ZZ$.} omejene absolutne vrednosti. 
 
 \begin{trditev}
-Naj bo $G$ končna grupa. Za vsako nerazcepno kompleksno upodobitev $\pi$ in vsak $g \in G$ je $|\chi_{\pi}(g)| \leq \deg(\pi)$ in $\chi_{\pi}(g) \in \bar\ZZ$.
+Naj bo $G$ končna grupa. Za vsako nerazcepno kompleksno upodobitev $\pi$ in vsak $g \in G$ je $|\chi_{\pi}(g)| \leq \deg(\pi)$ in $\chi_{\pi}(g) \in \bar{\ZZ}$.
 \end{trditev}
 \begin{dokaz}
 Če je $g \in G$ in $\pi \in \Irr(G)$, potem je $\pi(g^{|G|}) = \pi(1) = \id$, zato je $\pi(g)$ linearna preslikava končnega reda. Take preslikave so diagonalizabilne.\footnote{Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\pi(g)$.} V posebnem je zato vsaka lastna vrednost $\lambda \in \Eig(\pi(g))$ končnega reda v $\CC^*$. S tem je seveda
 \[
-    \chi_{\pi}(g) = \sum_{\lambda \in \Eig(\pi)} \lambda \in \bar\ZZ
+    \chi_{\pi}(g) = \sum_{\lambda \in \Eig(\pi)} \lambda \in \bar{\ZZ}
     \quad \text{in} \quad
     |\chi_{\pi}(g)| \leq \sum_{\lambda \in \Eig(\pi)} |\lambda| = \deg(\pi).
 \]
@@ -1687,14 +1687,14 @@ S pomočjo te restriktivne lastnosti vrednosti karakterjev lahko izpeljemo pomem
 Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, in sicer je to lema o uteženem povprečju. Ko funkcija, vzdolž katere izvedemo povprečje, slika v kolobar algebraičnih celih števil, lahko lemo o uteženem povprečju zaostrimo na naslednji način.
 
     \begin{lema}
-    Naj bo $G$ končna grupa. Za vsako nerazcepno upodobitev $\pi$ nad $\CC$ in funkcijo $f \in \hom_{\cl}(G, \bar\ZZ)$ je uteženo povprečje $\EE_f(\pi)$ skalarno množenje z algebraičnim celim številom.
+    Naj bo $G$ končna grupa. Za vsako nerazcepno upodobitev $\pi$ nad $\CC$ in funkcijo $f \in \hom_{\cl}(G, \bar{\ZZ})$ je uteženo povprečje $\EE_f(\pi)$ skalarno množenje z algebraičnim celim številom.
     \end{lema}
     \begin{dokaz}
     Vemo že, da je uteženo povprečje $\EE_f(\pi)$ skalarno množenje s številom
     \[
         \frac{|G| \cdot \langle f, \chi_{\pi} \circ \inv \rangle}{\deg(\pi)}.
     \]
-    Preveriti moramo torej, da je to algebraično celo število. Funkcijo $f$ lahko razvijemo kot vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v $\bar\ZZ$. Ker $\bar\ZZ$ tvori kolobar, bo torej trditev dovolj preveriti za primer, ko je $f = 1_{\calC}$ za nek konjugiranostni razred $\calC$ v $G$.
+    Preveriti moramo torej, da je to algebraično celo število. Funkcijo $f$ lahko razvijemo kot vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v $\bar{\ZZ}$. Ker $\bar{\ZZ}$ tvori kolobar, bo torej trditev dovolj preveriti za primer, ko je $f = 1_{\calC}$ za nek konjugiranostni razred $\calC$ v $G$.
     
     Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in pripadajoče uteženo povprečje $\EE_{1_{\calC}}(\rho_{\hom})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, to uteženo povprečje deluje kot $\EE_{1_{\calC}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\EE_{1_{\calC}}(\rho_{\hom})$.
     
@@ -1708,7 +1708,7 @@ Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, 
     \begin{dokaz}[Dokaz izreka o stopnjah upodobitev]
     Naj bo $\pi \in \Irr(G)$. Uporabimo lemo s funkcijo $f = \chi_{\pi} \circ \inv$ in zaključimo
     \[
-        \frac{|G| \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle}{\deg(\pi)} = \frac{|G|}{\deg(\pi)} \in \bar \ZZ \cap \QQ = \ZZ.
+        \frac{|G| \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle}{\deg(\pi)} = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ} \cap \QQ = \ZZ.
     \]
     \end{dokaz}
 
