@@ -3258,6 +3258,112 @@ class="math inline">\(4 = 4\)</span>) in produkta dveh tranzpozicij
 <span class="math inline">\((1 \ 2)(3 \ 4)\)</span> (<span
 class="math inline">\(4 = 2 + 2\)</span>).</p>
 </div>
+<h3 id="kompleksni-karakterji-in-stopnje">Kompleksni karakterji in
+stopnje</h3>
+<p>Omenimo še eno lastnost karakterjev upodobitev naj naugodnejšim
+poljem <span class="math inline">\(\mathbf{C}\)</span>. Njihove
+vrednosti namreč niso čisto poljubna kompleksna števila, temveč so
+algebraična cela števila<a href="#fn39" class="footnote-ref"
+id="fnref39" role="doc-noteref"><sup>39</sup></a> omejene absolutne
+vrednosti.</p>
+<div class="trditev">
+<p><strong>Trditev 3.4</strong>. Naj bo <span
+class="math inline">\(G\)</span> končna grupa. Za vsako nerazcepno
+kompleksno upodobitev <span class="math inline">\(\pi\)</span> in vsak
+<span class="math inline">\(g \in G\)</span> je <span
+class="math inline">\(|\chi_{\pi}(g)| \leq \deg(\pi)\)</span> in <span
+class="math inline">\(\chi_{\pi}(g) \in \bar\mathbf{Z}\)</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Če je <span class="math inline">\(g \in G\)</span> in
+<span class="math inline">\(\pi \in \mathop{\mathrm{Irr}}(G)\)</span>,
+potem je <span class="math inline">\(\pi(g^{|G|}) = \pi(1) =
+\mathop{\mathrm{id}}\)</span>, zato je <span
+class="math inline">\(\pi(g)\)</span> linearna preslikava končnega reda.
+Take preslikave so diagonalizabilne.<a href="#fn40" class="footnote-ref"
+id="fnref40" role="doc-noteref"><sup>40</sup></a> V posebnem je zato
+vsaka lastna vrednost <span class="math inline">\(\lambda \in
+\mathop{\mathrm{Eig}}(\pi(g))\)</span> končnega reda v <span
+class="math inline">\(\mathbf{C}^*\)</span>. S tem je seveda <span
+class="math display">\[\chi_{\pi}(g) = \sum_{\lambda \in
+\mathop{\mathrm{Eig}}(\pi)} \lambda \in \bar\mathbf{Z}
+    \quad \text{in} \quad
+    |\chi_{\pi}(g)| \leq \sum_{\lambda \in \mathop{\mathrm{Eig}}(\pi)}
+|\lambda| = \deg(\pi).\]</span> ◻</p>
+</div>
+<p>S pomočjo te restriktivne lastnosti vrednosti karakterjev lahko
+izpeljemo pomembno lastnost stopenj nerazcepnih kompleksnih
+upodobitev.</p>
+<div class="izrek">
+<p><strong>Izrek 3.4</strong> (o stopnjah upodobitev). Naj bo <span
+class="math inline">\(G\)</span> končna grupa. Stopnja vsake nerazcepne
+kompleksne upodobitve <span class="math inline">\(\pi\)</span> deli
+<span class="math inline">\(|G|\)</span>.</p>
+</div>
+<p>Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek <span
+class="math inline">\(|G|/\deg(\pi)\)</span>, in sicer je to lema o
+uteženem povprečju. Ko funkcija, vzdolž katere izvedemo povprečje, slika
+v kolobar algebraičnih celih števil, lahko lemo o uteženem povprečju
+zaostrimo na naslednji način.</p>
+<div class="lema">
+<p><strong>Lema 3.2</strong>. Naj bo <span
+class="math inline">\(G\)</span> končna grupa. Za vsako nerazcepno
+upodobitev <span class="math inline">\(\pi\)</span> nad <span
+class="math inline">\(\mathbf{C}\)</span> in funkcijo <span
+class="math inline">\(f \in \hom_{\mathop{\mathrm{cl}}}(G,
+\bar\mathbf{Z})\)</span> je uteženo povprečje <span
+class="math inline">\(\mathbf{E}_f(\pi)\)</span> skalarno množenje z
+algebraičnim celim številom.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Vemo že, da je uteženo povprečje <span
+class="math inline">\(\mathbf{E}_f(\pi)\)</span> skalarno množenje s
+številom <span class="math display">\[\frac{|G| \cdot \langle f,
+\chi_{\pi} \circ \mathop{\mathrm{inv}}\rangle}{\deg(\pi)}.\]</span>
+Preveriti moramo torej, da je to algebraično celo število. Funkcijo
+<span class="math inline">\(f\)</span> lahko razvijemo kot vsoto
+karakterističnih funkcij konjugiranostnih razredov s koeficienti v <span
+class="math inline">\(\bar\mathbf{Z}\)</span>. Ker <span
+class="math inline">\(\bar\mathbf{Z}\)</span> tvori kolobar, bo torej
+trditev dovolj preveriti za primer, ko je <span class="math inline">\(f
+= 1_{\mathcal{C}}\)</span> za nek konjugiranostni razred <span
+class="math inline">\(\mathcal{C}\)</span> v <span
+class="math inline">\(G\)</span>.</p>
+<p>Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer
+tako, da opazujemo regularno upodobitev in pripadajoče uteženo povprečje
+<span
+class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom})\)</span>.
+Na vsaki od podupodobitev, ki je izomorfna <span
+class="math inline">\(\pi\)</span>, to uteženo povprečje deluje kot
+<span class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\pi)\)</span>,
+torej kot skalarno množenje z gornjim številom. To število je zato
+lastna vrednost preslikave <span
+class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom})\)</span>.</p>
+<p>Vemo že, da <span
+class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom})\)</span>
+deluje na naravni bazi iz karakterističnih funkcij <span
+class="math inline">\(1_x\)</span> za <span class="math inline">\(x \in
+G\)</span> kot <span
+class="math display">\[\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom}) \cdot
+1_x = (\rho_{\hom}(x) \cdot 1_{\mathcal{C}}) \circ
+\mathop{\mathrm{inv}}\in \hom(G, \{ 0, 1 \}).\]</span> V tej bazi ima
+torej <span
+class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom})\)</span>
+matriko s koeficienti v množici <span class="math inline">\(\{ 0, 1
+\}\)</span>. Karakteristični polinom te matrike ima zato celoštevilske
+koeficiente, torej so lastne vrednosti preslikave <span
+class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom})\)</span>
+algebraična cela števila. ◻</p>
+</div>
+<div class="proof">
+<p><em>Dokaz izreka o stopnjah upodobitev.</em> Naj bo <span
+class="math inline">\(\pi \in \mathop{\mathrm{Irr}}(G)\)</span>.
+Uporabimo lemo s funkcijo <span class="math inline">\(f = \chi_{\pi}
+\circ \mathop{\mathrm{inv}}\)</span> in zaključimo <span
+class="math display">\[\frac{|G| \cdot \langle \chi_{\pi}, \chi_{\pi}
+\rangle}{\deg(\pi)} = \frac{|G|}{\deg(\pi)} \in \bar \mathbf{Z}\cap
+\mathbf{Q}= \mathbf{Z}.\]</span> ◻</p>
+</div>
 <h3 id="razstavljanje-upodobitve-1">Razstavljanje upodobitve</h3>
 <p>S pomočjo ortonormirane baze karakterjev lahko z lahkoto razumemo
 vsako končnorazsežno upodobitev končne grupe nad ugodnim poljem.</p>
@@ -3314,7 +3420,8 @@ Določimo jih.</p>
 koeficientov nerazcepnih upodobitev, torej gre za nekakšno
 <em>notranjo</em> dekompozicijo. Obstaja pa tudi <em>zunanja</em>
 dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih
-projekcijskih spletičen najdemo izotipične komponente upodobitve.</p>
+projekcijskih spletičen najdemo izotipične komponente upodobitve. Za te
+seveda najprej potrebujemo vse nerazcepne karakterje.</p>
 <p>Take projekcije ni težko najti za <span
 class="math inline">\(\mathbf{1}\)</span>-izotipično komponento. Naj bo
 <span class="math inline">\(G\)</span> končna grupa z upodobitvijo <span
@@ -3328,7 +3435,7 @@ class="math inline">\(\mathbf{1}\)</span>-izotipično komponento v <span
 class="math inline">\(V\)</span>. Za splošnejše izotipične komponente
 uporabimo utežena povprečja.</p>
 <div class="trditev">
-<p><strong>Trditev 3.4</strong>. Naj bo <span
+<p><strong>Trditev 3.5</strong>. Naj bo <span
 class="math inline">\(G\)</span> končna grupa in <span
 class="math inline">\(F\)</span> algebraično zaprto polje karakteristike
 tuje <span class="math inline">\(|G|\)</span>. Za vsako končnorazsežno
@@ -3579,6 +3686,19 @@ href="https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirect
 H. Hardy in S. Ramanujan, <em>Asymptotic formulae in combinatory
 analysis</em>, Proceedings of the London Mathematical Society, Second
 Series, <strong>17</strong> (1918) 75–115.</a><a href="#fnref38"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn39" role="doc-endnote"><p><span><strong><em>Algebraično celo
+število</em></strong></span> je kompleksno število, ki je ničla
+moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih
+celih števil označimo z <span class="math inline">\(\bar
+\mathbf{Z}\)</span>. Ni se težko prepričati, da <span
+class="math inline">\(\bar \mathbf{Z}\)</span> tvori kolobar in da velja
+<span class="math inline">\(\mathbf{Q}\cap \bar \mathbf{Z}=
+\mathbf{Z}\)</span>.<a href="#fnref39" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn40" role="doc-endnote"><p>Diagonalizabilnost sledi iz
+obravnave Jordanove normalne forme preslikave <span
+class="math inline">\(\pi(g)\)</span>.<a href="#fnref40"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>

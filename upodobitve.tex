@@ -53,6 +53,7 @@
 \def\QQ{\mathbf{Q}}
 \def\RR{\mathbf{R}}
 \def\CC{\mathbf{C}}
+\def\calC{\mathcal{C}}
 \def\11{\mathbf{1}}
 \def\field{\mathbf{F}}
 \DeclareMathOperator\image{im}
@@ -73,6 +74,7 @@
 \DeclareMathOperator\cl{cl}
 \def\GAP{\bf{GAP}}
 \DeclareMathOperator\inv{inv}
+\DeclareMathOperator\Eig{Eig}
 
 
 \DeclareMathOperator\Aut{Aut}
@@ -1660,6 +1662,58 @@ za $n \to \infty$.
 V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 1$. Res smo našli natanko $3$ nerazcepne upodobitve grupe $S_3$. V primeru $n = 4$ pa velja $p(4) = 5$. Temu ustrezajo konjugiranostni razredi identične permutacije $()$ ($4 = 1 + 1 + 1 + 1$), transpozicije $(1 \ 2)$ ($4 = 2 + 1 + 1$), tricikla $(1 \ 2 \ 3)$ ($4 = 3 + 1$), štiricikla $(1 \ 2 \ 3 \ 4)$ ($4 = 4$) in produkta dveh tranzpozicij $(1 \ 2)(3 \ 4)$ ($4 = 2 + 2$).
 \end{zgled}
 
+\subsection{Kompleksni karakterji in stopnje}
+
+Omenimo še eno lastnost karakterjev upodobitev naj naugodnejšim poljem $\CC$. Njihove vrednosti namreč niso čisto poljubna kompleksna števila, temveč so algebraična cela števila\footnote{{\definicija Algebraično celo število} je kompleksno število, ki je ničla moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih celih števil označimo z $\bar \ZZ$. Ni se težko prepričati, da $\bar \ZZ$ tvori kolobar in da velja $\QQ \cap \bar \ZZ = \ZZ$.} omejene absolutne vrednosti. 
+
+\begin{trditev}
+Naj bo $G$ končna grupa. Za vsako nerazcepno kompleksno upodobitev $\pi$ in vsak $g \in G$ je $|\chi_{\pi}(g)| \leq \deg(\pi)$ in $\chi_{\pi}(g) \in \bar\ZZ$.
+\end{trditev}
+\begin{dokaz}
+Če je $g \in G$ in $\pi \in \Irr(G)$, potem je $\pi(g^{|G|}) = \pi(1) = \id$, zato je $\pi(g)$ linearna preslikava končnega reda. Take preslikave so diagonalizabilne.\footnote{Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\pi(g)$.} V posebnem je zato vsaka lastna vrednost $\lambda \in \Eig(\pi(g))$ končnega reda v $\CC^*$. S tem je seveda
+\[
+    \chi_{\pi}(g) = \sum_{\lambda \in \Eig(\pi)} \lambda \in \bar\ZZ
+    \quad \text{in} \quad
+    |\chi_{\pi}(g)| \leq \sum_{\lambda \in \Eig(\pi)} |\lambda| = \deg(\pi).
+\]
+\end{dokaz}
+
+S pomočjo te restriktivne lastnosti vrednosti karakterjev lahko izpeljemo pomembno lastnost stopenj nerazcepnih kompleksnih upodobitev.
+
+\begin{izrek}[o stopnjah upodobitev]
+    Naj bo $G$ končna grupa. Stopnja vsake nerazcepne kompleksne upodobitve $\pi$ deli $|G|$.
+    \end{izrek}
+
+Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, in sicer je to lema o uteženem povprečju. Ko funkcija, vzdolž katere izvedemo povprečje, slika v kolobar algebraičnih celih števil, lahko lemo o uteženem povprečju zaostrimo na naslednji način.
+
+    \begin{lema}
+    Naj bo $G$ končna grupa. Za vsako nerazcepno upodobitev $\pi$ nad $\CC$ in funkcijo $f \in \hom_{\cl}(G, \bar\ZZ)$ je uteženo povprečje $\EE_f(\pi)$ skalarno množenje z algebraičnim celim številom.
+    \end{lema}
+    \begin{dokaz}
+    Vemo že, da je uteženo povprečje $\EE_f(\pi)$ skalarno množenje s številom
+    \[
+        \frac{|G| \cdot \langle f, \chi_{\pi} \circ \inv \rangle}{\deg(\pi)}.
+    \]
+    Preveriti moramo torej, da je to algebraično celo število. Funkcijo $f$ lahko razvijemo kot vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v $\bar\ZZ$. Ker $\bar\ZZ$ tvori kolobar, bo torej trditev dovolj preveriti za primer, ko je $f = 1_{\calC}$ za nek konjugiranostni razred $\calC$ v $G$.
+    
+    Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in pripadajoče uteženo povprečje $\EE_{1_{\calC}}(\rho_{\hom})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, to uteženo povprečje deluje kot $\EE_{1_{\calC}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\EE_{1_{\calC}}(\rho_{\hom})$.
+    
+    Vemo že, da $\EE_{1_{\calC}}(\rho_{\hom})$ deluje na naravni bazi iz karakterističnih funkcij $1_x$ za $x \in G$ kot
+    \[
+        \EE_{1_{\calC}}(\rho_{\hom}) \cdot 1_x = (\rho_{\hom}(x) \cdot 1_{\calC}) \circ \inv \in \hom(G, \{ 0, 1 \}).
+    \]
+    V tej bazi ima torej $\EE_{1_{\calC}}(\rho_{\hom})$ matriko s koeficienti v množici $\{ 0, 1 \}$. Karakteristični polinom te matrike ima zato celoštevilske koeficiente, torej so lastne vrednosti preslikave $\EE_{1_{\calC}}(\rho_{\hom})$ algebraična cela števila.
+    \end{dokaz}
+    
+    \begin{dokaz}[Dokaz izreka o stopnjah upodobitev]
+    Naj bo $\pi \in \Irr(G)$. Uporabimo lemo s funkcijo $f = \chi_{\pi} \circ \inv$ in zaključimo
+    \[
+        \frac{|G| \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle}{\deg(\pi)} = \frac{|G|}{\deg(\pi)} \in \bar \ZZ \cap \QQ = \ZZ.
+    \]
+    \end{dokaz}
+
+\todo{druga ortogonalnost}
+
 \subsection{Razstavljanje upodobitve}
 
 S pomočjo ortonormirane baze karakterjev lahko z lahkoto razumemo vsako končnorazsežno upodobitev končne grupe nad ugodnim poljem.
@@ -1690,10 +1744,7 @@ Nazadnje je $||\chi_{\rho}|| = 1$, če in samo če je za natanko eno nerazcepno 
 Opazujmo grupo $S_4$ nad poljem $\CC$. Vemo že, da je število nerazcepnih upodobitev enako $5$. Določimo jih. \todo{}
 \end{zgled}
 
-
-    \todo{Tu gre bolj za to, da ko imamo enkrat tabelo karakterjev, lahko vsako upodobitev tudi eksplicitno rastavimo na nerazcepne.}
-
-Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih projekcijskih spletičen najdemo izotipične komponente upodobitve.
+Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih projekcijskih spletičen najdemo izotipične komponente upodobitve. Za te seveda najprej potrebujemo vse nerazcepne karakterje.
 
 Take projekcije ni težko najti za $\11$-izotipično komponento. Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad ugodnim poljem. Povprečna vrednost upodobitve $\EE(\rho)$ je projekcijska spletična v $\hom_G(V,V)$ na podprostor fiksnih vektorjev $V^G$, se pravi na $\11$-izotipično komponento v $V$. Za splošnejše izotipične komponente uporabimo utežena povprečja.
     
@@ -1715,6 +1766,7 @@ Iz leme o uteženem povprečju izpeljemo, da za vsaki nerazcepni upodobitvi $\pi
 Ko upodobitev $\rho$ razstavimo na direktno vsoto nerazcepnih podupodobitev, je linearni endomorfizem $\deg(\pi)/|G| \cdot \EE_{\chi_{\pi} \circ \inv}(\rho)$ torej ničeln na podupodobitvah, ki niso izomorfne $\pi$, in identiteta na podupodobitvah, ki so izomorfne $\pi$. Ta endomorfizem je torej projektor na direktno vsoto podupodobitev, ki so izomorfne $\pi$, torej ravno na $\pi$-izotipično komponento.
 \end{dokaz}
 
+
 \subsection{Abelove grupe}
 
 \todo[inline]{
@@ -1726,9 +1778,6 @@ Ko upodobitev $\rho$ razstavimo na direktno vsoto nerazcepnih podupodobitev, je 
 \subsection{Harmonična analiza}
 
 \todo[inline]{
-    tu je vse nad $\CC$
-    - dekompozicija razrednih funkcij (to je že od prej)
-    - druga ortogonalnost
     - frobeniusova formula za komutatorje (tu rabimo izotipične komponente)
 }
 
