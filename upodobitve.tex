@@ -1802,7 +1802,7 @@ Ko upodobitev $\rho$ razstavimo na direktno vsoto nerazcepnih podupodobitev, je 
 \begin{zgled}
 Naj bo $\rho_{\hom}$ regularna upodobitev grupe $G$. Vemo že, da za vsako funkcijo $f \in \hom(G,F)$ velja $\EE_f(\rho_{\hom}) \cdot 1_1 = f \circ \inv$. Torej je projekcija funkcije $1_1$ na $\pi$-izotipično komponento enaka
 \[
-    \frac{\deg(\pi)}{|G|} \cdot \EE_{\chi_{\pi} \circ \inv}(\rho_{\hom}) = 
+    \frac{\deg(\pi)}{|G|} \cdot \EE_{\chi_{\pi} \circ \inv}(\rho_{\hom}) \cdot 1_1 = 
     \frac{\deg(\pi)}{|G|} \cdot \chi_{\pi}.
 \]
 S tem dobimo razvoj
@@ -1812,6 +1812,58 @@ S tem dobimo razvoj
 ki je le poseben primer druge ortogonalnostne relacije.
 \end{zgled}
 
+\subsection{Harmonična analiza}
+
+Večina rezultatov v zvezi z upodobitvami končnih grup je temeljila na uteženem povprečju. {\definicija Harmonična analiza} v kontekstu končnih grup je teorija, ki se ubada z globljim razumevanjem uteženih povprečij oziroma Fourierove transformacije in z aplikacijami, ki same po sebi niti niso izražene v jeziku teorije upodobitev. V tem razdelku si bomo na primeru pogledali del te zgodbe.
+
+Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, ki so komutatorji\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$.} v $G$, se pravi
+\[
+    K(G) = \{ [x,y] \mid x,y \in G \}.
+\]
+Ta množica v splošnem \emph{ni} podgrupa, zato je teoriji grup vsekakor v interesu, da bi razumela, kdaj dan element $g \in G$ pripada množici $K(G)$. Lahko smo celo bolj natančni in se vprašamo, na koliko načinov lahko $g$ zapišemo kot komutator. V ta namen predpišimo funkcijo
+\[
+    N \colon G \to \NN_0, \quad
+    g \mapsto |\{ (x,y) \in G \times G \mid g = [x,y] \}|.
+\]
+Funkcijo $N$ obravnavajmo kot element prostora $\hom(G,\CC)$. 
+
+Prvi princip harmonične analize je, da lahko vsako \emph{razredno} funkcijo razumemo s pomočjo močnih orodij teorije upodobitev. Da to drži v konkretnem primeru funkcije $N$, se ni težko prepričati. Za vsak $z \in G$ namreč velja $[z x z^{-1}, z y z^{-1}] = z [x,y] z^{-1}$, torej vsak par $(x,y)$ z lastnostjo $[x,y] = g$ porodi par $(z x z^{-1}, z y z^{-1})$ z lastnostjo $[z x z^{-1}, z y z^{-1}] = z g z^{-1}$. S tem je $N(g) = N(z g z^{-1})$.
+
+Drugi princip harmonične analize je, da dano razredno funkcijo zapišemo karseda neodvisno od predstavnikov konjugiranostnih razredov. Našo funkcijo $N$ bomo zato prepisali v malo bolj nenavadno obliko, ki pa nam bo dobro služila v nadaljevanju. Recimo, da za elementa $x,y \in G$ velja $[x,y] = g$. To enakost interpretiramo kot $x^{-1} \cdot y^{-1} x y = g$, torej je $g$ zapisan kot produkt elementa $x^{-1}$ in elementa, ki je konjugiran $x$. Vsakemu takemu paru $(x,y)$ lahko zato priredimo konjugiranostni razred $\conclass = x^G$ in elementa $a = x^{-1} \in \conclass^{-1}$ ter $b = y^{-1} x y \in \conclass$, za katera velja $a \cdot b = g$. S tem smo opisali prirejanje
+\[
+    \{ (x,y) \in G \times G \mid g = [x,y] \} \to 
+    \{ (\conclass, a, b) \mid \conclass = (a^{-1})^G, \ b \in \conclass,\ a \cdot b = g \}.
+\]
+To prirejanje \emph{ni} injektivno. \todo{}
+
+Tretji princip harmonične analize je, da z novim zapisom uporabimo Fourierovo transformacijo, ki jo karseda dokončno izračunamo.
+
+Naj bosta $f_1, f_2 \in \hom(G,F)$ funkciji in $\rho$ upodobitev grupe $G$. Kompozicija uteženih povprečij $\EE_{f_1}(\rho) \cdot \EE_{f_2}(\rho)$ je enaka
+\[
+    \sum_{g_1, g_2 \in G} f_1(g_1) f_2(g_2) \rho(g_1 g_2) =
+    \sum_{g \in G} \left( \sum_{g_1, g_2 \in G \colon g_1 g_2 = g} f_1(g_1) f_2(g_2) \right) \rho(g).
+\]
+Člen v notranji vsoti je {\definicija konvolucija} funkcij $f_1$ in $f_2$, se pravi
+\[
+    (f_1 * f_2)(g) = \sum_{g_1, g_2 \in G \colon g_1 g_2 = g} f_1(g_1) f_2(g_2).
+\]
+Torej velja
+\[
+    \EE_{f_1}(\rho) \cdot \EE_{f_2}(\rho) =
+    \EE_{f_1 * f_2}(\rho)
+\]
+in uteženo povprečje pretvarja konvolucijo funkcij v produkt linearnih preslikav.
+
+Četrti princip harmonične analize je, da iz Fourierove transformacije izvlečemo podatke o začetni funkciji.
+
+
+
+
+\todo[inline]{
+    - frobeniusova formula za komutatorje (tu rabimo izotipične komponente)
+}
+
+
 \subsection{Abelove grupe}
 
 \todo[inline]{
@@ -1820,11 +1872,6 @@ ki je le poseben primer druge ortogonalnostne relacije.
     - Diaconis str 48 (random walks)
 }
 
-\subsection{Harmonična analiza}
-
-\todo[inline]{
-    - frobeniusova formula za komutatorje (tu rabimo izotipične komponente)
-}
 
 \section{Razširjeni zgledi}
 

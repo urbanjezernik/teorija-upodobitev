@@ -3514,14 +3514,91 @@ class="math inline">\(\mathbf{E}_f(\rho_{\hom}) \cdot 1_1 = f \circ
 class="math inline">\(1_1\)</span> na <span
 class="math inline">\(\pi\)</span>-izotipično komponento enaka <span
 class="math display">\[\frac{\deg(\pi)}{|G|} \cdot
-\mathbf{E}_{\chi_{\pi} \circ \mathop{\mathrm{inv}}}(\rho_{\hom}) =
+\mathbf{E}_{\chi_{\pi} \circ \mathop{\mathrm{inv}}}(\rho_{\hom}) \cdot
+1_1 =
     \frac{\deg(\pi)}{|G|} \cdot \chi_{\pi}.\]</span> S tem dobimo razvoj
 <span class="math display">\[1_1 = \frac{1}{|G|} \sum_{\pi \in
 \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1) \cdot \chi_{\pi},\]</span> ki je
 le poseben primer druge ortogonalnostne relacije.</p>
 </div>
-<h3 id="abelove-grupe">Abelove grupe</h3>
 <h3 id="harmonična-analiza">Harmonična analiza</h3>
+<p>Večina rezultatov v zvezi z upodobitvami končnih grup je temeljila na
+uteženem povprečju. <span><strong><em>Harmonična
+analiza</em></strong></span> v kontekstu končnih grup je teorija, ki se
+ubada z globljim razumevanjem uteženih povprečij oziroma Fourierove
+transformacije in z aplikacijami, ki same po sebi niti niso izražene v
+jeziku teorije upodobitev. V tem razdelku si bomo na primeru pogledali
+del te zgodbe.</p>
+<p>Naj bo <span class="math inline">\(G\)</span> končna grupa in <span
+class="math inline">\(K(G)\)</span> njena podmnožica, ki sestoji iz
+elementov, ki so komutatorji<a href="#fn42" class="footnote-ref"
+id="fnref42" role="doc-noteref"><sup>42</sup></a> v <span
+class="math inline">\(G\)</span>, se pravi <span
+class="math display">\[K(G) = \{ [x,y] \mid x,y \in G \}.\]</span> Ta
+množica v splošnem <em>ni</em> podgrupa, zato je teoriji grup vsekakor v
+interesu, da bi razumela, kdaj dan element <span class="math inline">\(g
+\in G\)</span> pripada množici <span
+class="math inline">\(K(G)\)</span>. Lahko smo celo bolj natančni in se
+vprašamo, na koliko načinov lahko <span class="math inline">\(g\)</span>
+zapišemo kot komutator. V ta namen predpišimo funkcijo <span
+class="math display">\[N \colon G \to \mathbf{N}_0, \quad
+    g \mapsto |\{ (x,y) \in G \times G \mid g = [x,y] \}|.\]</span>
+Funkcijo <span class="math inline">\(N\)</span> obravnavajmo kot element
+prostora <span class="math inline">\(\hom(G,\mathbf{C})\)</span>.</p>
+<p>Prvi princip harmonične analize je, da lahko vsako <em>razredno</em>
+funkcijo razumemo s pomočjo močnih orodij teorije upodobitev. Da to drži
+v konkretnem primeru funkcije <span class="math inline">\(N\)</span>, se
+ni težko prepričati. Za vsak <span class="math inline">\(z \in
+G\)</span> namreč velja <span class="math inline">\([z x z^{-1}, z y
+z^{-1}] = z [x,y] z^{-1}\)</span>, torej vsak par <span
+class="math inline">\((x,y)\)</span> z lastnostjo <span
+class="math inline">\([x,y] = g\)</span> porodi par <span
+class="math inline">\((z x z^{-1}, z y z^{-1})\)</span> z lastnostjo
+<span class="math inline">\([z x z^{-1}, z y z^{-1}] = z g
+z^{-1}\)</span>. S tem je <span class="math inline">\(N(g) = N(z g
+z^{-1})\)</span>.</p>
+<p>Drugi princip harmonične analize je, da dano razredno funkcijo
+zapišemo karseda neodvisno od predstavnikov konjugiranostnih razredov.
+Našo funkcijo <span class="math inline">\(N\)</span> bomo zato prepisali
+v malo bolj nenavadno obliko, ki pa nam bo dobro služila v nadaljevanju.
+Recimo, da za elementa <span class="math inline">\(x,y \in G\)</span>
+velja <span class="math inline">\([x,y] = g\)</span>. To enakost
+interpretiramo kot <span class="math inline">\(x^{-1} \cdot y^{-1} x y =
+g\)</span>, torej je <span class="math inline">\(g\)</span> zapisan kot
+produkt elementa <span class="math inline">\(x^{-1}\)</span> in
+elementa, ki je konjugiran <span class="math inline">\(x\)</span>.
+Vsakemu takemu paru <span class="math inline">\((x,y)\)</span> lahko
+zato priredimo konjugiranostni razred <span class="math inline">\(C=
+x^G\)</span> in elementa <span class="math inline">\(a = x^{-1} \in
+C^{-1}\)</span> ter <span class="math inline">\(b = y^{-1} x y \in
+C\)</span>, za katera velja <span class="math inline">\(a \cdot b =
+g\)</span>. S tem smo opisali prirejanje <span class="math display">\[\{
+(x,y) \in G \times G \mid g = [x,y] \} \to
+    \{ (C, a, b) \mid C= (a^{-1})^G, \ b \in C,\ a \cdot b = g
+\}.\]</span> To prirejanje <em>ni</em> injektivno.</p>
+<p>Tretji princip harmonične analize je, da z novim zapisom uporabimo
+Fourierovo transformacijo, ki jo karseda dokončno izračunamo.</p>
+<p>Naj bosta <span class="math inline">\(f_1, f_2 \in \hom(G,F)\)</span>
+funkciji in <span class="math inline">\(\rho\)</span> upodobitev grupe
+<span class="math inline">\(G\)</span>. Kompozicija uteženih povprečij
+<span class="math inline">\(\mathbf{E}_{f_1}(\rho) \cdot
+\mathbf{E}_{f_2}(\rho)\)</span> je enaka <span
+class="math display">\[\sum_{g_1, g_2 \in G} f_1(g_1) f_2(g_2) \rho(g_1
+g_2) =
+    \sum_{g \in G} \left( \sum_{g_1, g_2 \in G \colon g_1 g_2 = g}
+f_1(g_1) f_2(g_2) \right) \rho(g).\]</span> Člen v notranji vsoti je
+<span><strong><em>konvolucija</em></strong></span> funkcij <span
+class="math inline">\(f_1\)</span> in <span
+class="math inline">\(f_2\)</span>, se pravi <span
+class="math display">\[(f_1 * f_2)(g) = \sum_{g_1, g_2 \in G \colon g_1
+g_2 = g} f_1(g_1) f_2(g_2).\]</span> Torej velja <span
+class="math display">\[\mathbf{E}_{f_1}(\rho) \cdot
+\mathbf{E}_{f_2}(\rho) =
+    \mathbf{E}_{f_1 * f_2}(\rho)\]</span> in uteženo povprečje pretvarja
+konvolucijo funkcij v produkt linearnih preslikav.</p>
+<p>Četrti princip harmonične analize je, da iz Fourierove transformacije
+izvlečemo podatke o začetni funkciji.</p>
+<h3 id="abelove-grupe">Abelove grupe</h3>
 <h2 id="razširjeni-zgledi">Razširjeni zgledi</h2>
 <h3 id="gap"><strong><span>GAP</span></strong></h3>
 <h3 id="mathopmathrmgl_2mathbff_p"><span
@@ -3756,6 +3833,11 @@ role="doc-backlink">↩︎</a></p></li>
 obravnave Jordanove normalne forme preslikave <span
 class="math inline">\(\pi(g)\)</span>.<a href="#fnref41"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn42"
+role="doc-endnote"><p><span><strong><em>Komutator</em></strong></span>
+elementov <span class="math inline">\(x,y \in G\)</span> je element
+<span class="math inline">\([x,y] = x^{-1} y^{-1} x y\)</span>.<a
+href="#fnref42" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
         </div>
