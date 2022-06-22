@@ -1666,7 +1666,7 @@ Ker nerazcepni karakterji tvorijo ortonormirano bazo prostora razrednih funkcij,
 \[
     f = \sum_{\pi \in \Irr(G)} \langle f, \chi_{\pi} \rangle \chi_{\pi}.
 \]
-Alternativna baza prostora razrednih funkcij sestoji iz karakterističnih funkcij konjugiranostnih razredov v $G$. Razvoj te baze po karakterjih nam podaja še eno relacijo med karakterji, ki je ortogonalna\footnote{Relaciji sta ortogonalni v smislu tabele karakterjev. Ortonormiranost karakterjev preberemo tako, da fiksiramo vrstice. To drugo relacijo pa preberemo tako, da fiksiramo stolpce.} ortonormiranosti.
+Alternativna baza prostora razrednih funkcij sestoji iz karakterističnih funkcij konjugiranostnih razredov v $G$. Razvoj te baze po karakterjih nam podaja še eno relacijo med karakterji, ki je ortogonalna\footnote{Relaciji sta ortogonalni v smislu tabele karakterjev. Ortonormiranost karakterjev preberemo tako, da fiksiramo vrstice. To drugo relacijo pa preberemo tako, da fiksiramo stolpce. Tej relaciji včasih rečemo {\definicija druga ortogonalnostna relacija}.} ortonormiranosti.
 
 \begin{posledica}
 Naj bo $G$ končna grupa nad algebraično zaprtim poljem karakteristike tuje $|G|$. Za vsaka elementa $g,h \in G$ velja
@@ -1681,7 +1681,7 @@ Naj bo $G$ končna grupa nad algebraično zaprtim poljem karakteristike tuje $|G
 Karakteristično funkcijo $1_{h^G}$ razvijemo po nerazcepnih karakterjih kot
 \[
     1_{h^G} = \sum_{\pi \in \Irr(G)} \langle 1_{h^G}, \chi_{\pi} \rangle \chi_{\pi}
-    = \sum_{\pi \in \Irr(G)} \frac{|h^G|}{|G|} \chi_{\pi}(g^{-1}) \chi_{\pi}
+    = \sum_{\pi \in \Irr(G)} \frac{|h^G|}{|G|} \chi_{\pi}(h^{-1}) \chi_{\pi}
 \]
 in dobljeno evalviramo v elementu $g$.
 \end{dokaz}
@@ -1799,6 +1799,18 @@ Iz leme o uteženem povprečju izpeljemo, da za vsaki nerazcepni upodobitvi $\pi
 Ko upodobitev $\rho$ razstavimo na direktno vsoto nerazcepnih podupodobitev, je linearni endomorfizem $\deg(\pi)/|G| \cdot \EE_{\chi_{\pi} \circ \inv}(\rho)$ torej ničeln na podupodobitvah, ki niso izomorfne $\pi$, in identiteta na podupodobitvah, ki so izomorfne $\pi$. Ta endomorfizem je torej projektor na direktno vsoto podupodobitev, ki so izomorfne $\pi$, torej ravno na $\pi$-izotipično komponento.
 \end{dokaz}
 
+\begin{zgled}
+Naj bo $\rho_{\hom}$ regularna upodobitev grupe $G$. Vemo že, da za vsako funkcijo $f \in \hom(G,F)$ velja $\EE_f(\rho_{\hom}) \cdot 1_1 = f \circ \inv$. Torej je projekcija funkcije $1_1$ na $\pi$-izotipično komponento enaka
+\[
+    \frac{\deg(\pi)}{|G|} \cdot \EE_{\chi_{\pi} \circ \inv}(\rho_{\hom}) = 
+    \frac{\deg(\pi)}{|G|} \cdot \chi_{\pi}.
+\]
+S tem dobimo razvoj
+\[
+    1_1 = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \cdot \chi_{\pi},
+\]
+ki je le poseben primer druge ortogonalnostne relacije.
+\end{zgled}
 
 \subsection{Abelove grupe}
 
