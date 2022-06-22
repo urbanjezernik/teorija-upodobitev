@@ -53,12 +53,12 @@
 \def\QQ{\mathbf{Q}}
 \def\RR{\mathbf{R}}
 \def\CC{\mathbf{C}}
-\def\calC{\mathcal{C}}
+\def\conclass{C}
 \def\11{\mathbf{1}}
-\def\field{\mathbf{F}}
-\DeclareMathOperator\image{im}
+\def\FF{\mathbf{F}}
 \def\EE{\mathbf{E}}
 
+\DeclareMathOperator\image{im}
 \DeclareMathOperator\sgn{sgn}
 \DeclareMathOperator\Res{Res}
 \DeclareMathOperator\Ind{Ind}
@@ -1455,9 +1455,9 @@ kar zopet implicira $\sum_{g \in G} \chi(g) = 0$. \kljuka
 \end{dokaz}
 
 \begin{zgled}
-V ekstremni situaciji, ko je $\characteristic(F) = p > 0$ in $|G| = p^n$ za nek $n \in \NN$, kategorija upodobitev izgleda precej nenavadno. V takih neugodnih razmerah \emph{netrivialnih nerazcepnih upodobitev ni}. Poglejmo si, zakaj je temu tako v primeru $F = \field_p$ za neko praštevilo $p$.\footnote{Splošen primer hitro sledi iz tega posebnega. Če je namreč $F$ karakteristike $p$, ima prapolje $\field_p$. Upodobitev v tem primeru obravnavamo nad tem prapoljem.}
+V ekstremni situaciji, ko je $\characteristic(F) = p > 0$ in $|G| = p^n$ za nek $n \in \NN$, kategorija upodobitev izgleda precej nenavadno. V takih neugodnih razmerah \emph{netrivialnih nerazcepnih upodobitev ni}. Poglejmo si, zakaj je temu tako v primeru $F = \FF_p$ za neko praštevilo $p$.\footnote{Splošen primer hitro sledi iz tega posebnega. Če je namreč $F$ karakteristike $p$, ima prapolje $\FF_p$. Upodobitev v tem primeru obravnavamo nad tem prapoljem.}
 
-Imejmo netrivialno nerazcepno upodobitev $p$-grupe $G$ na prostoru $V$ nad poljem $\field_p$. Vemo že, da je $V$ nujno končnorazsežen, zato je $|V| = p^k$ za nek $k \in \NN$. Grupa $G$ permutacijsko deluje na množici neničelnih vektorjev $V \backslash \{ 0 \}$. Po lemi o orbiti in stabilizatorju je velikost orbite vsakega neničelnega vektorja enaka indeksu stabilizatorja, ki je po predpostavki o moči grupe nujno potenca praštevila $p$. Ker pa moč $|V \backslash \{ 0 \}|$ ni deljiva s $p$, mora obstajati vektor $0 \neq v \in V$ z orbito moči $1$. Ta vektor je torej fiksen za delovanje grupe $G$ in zato razpenja enorazsežen podprostor $\field_p \cdot v$, ki je kot upodobitev izomorfen $\11$. To je seveda sprto s predpostavko o nerazcepnosti upodobitve $G$ na $V$.
+Imejmo netrivialno nerazcepno upodobitev $p$-grupe $G$ na prostoru $V$ nad poljem $\FF_p$. Vemo že, da je $V$ nujno končnorazsežen, zato je $|V| = p^k$ za nek $k \in \NN$. Grupa $G$ permutacijsko deluje na množici neničelnih vektorjev $V \backslash \{ 0 \}$. Po lemi o orbiti in stabilizatorju je velikost orbite vsakega neničelnega vektorja enaka indeksu stabilizatorja, ki je po predpostavki o moči grupe nujno potenca praštevila $p$. Ker pa moč $|V \backslash \{ 0 \}|$ ni deljiva s $p$, mora obstajati vektor $0 \neq v \in V$ z orbito moči $1$. Ta vektor je torej fiksen za delovanje grupe $G$ in zato razpenja enorazsežen podprostor $\FF_p \cdot v$, ki je kot upodobitev izomorfen $\11$. To je seveda sprto s predpostavko o nerazcepnosti upodobitve $G$ na $V$.
 \end{zgled}
 
 \subsection{Dekompozicija regularne upodobitve}
@@ -1578,11 +1578,11 @@ Karakterji niso poljubne funkcije v $\hom(G,F)$, temveč vselej pripadajo prosto
     Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj karakterji nerazcepnih upodobitev tvorijo ortonormirano bazo prostora $\hom_{\cl}(G,F)$.
 \end{izrek}
 
-Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to povprečenje še \emph{utežili}. Za dano upodobitev $\rho$ grupe $G$ na prostoru $V$ in poljubno funkcijo $f \in \hom(G,F)$ definiramo {\definicija uteženo povprečje}
+Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to povprečenje še \emph{utežili}. Za dano funkcijo $f \in \hom(G,F)$ in poljubno upodobitev $\rho$ grupe $G$ na prostoru $V$ definiramo {\definicija uteženo povprečje}
 \[
     \EE_f(\rho) = \sum_{g \in G} f(g) \rho(g) \in \hom(V,V).
 \]
-Kadar je $F = \CC$, uteženemu povprečenju rečemo tudi {\definicija nekomutativna Fourierova transformacija}.
+Kadar je $F = \CC$, uteženemu povprečenju rečemo tudi {\definicija nekomutativna Fourierova transformacija} in uporabljamo oznako $\hat{f}(\rho)$.
 
 \begin{zgled} \leavevmode
 \begin{itemize}
@@ -1662,27 +1662,62 @@ za $n \to \infty$.
 V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 1$. Res smo našli natanko $3$ nerazcepne upodobitve grupe $S_3$. V primeru $n = 4$ pa velja $p(4) = 5$. Temu ustrezajo konjugiranostni razredi identične permutacije $()$ ($4 = 1 + 1 + 1 + 1$), transpozicije $(1 \ 2)$ ($4 = 2 + 1 + 1$), tricikla $(1 \ 2 \ 3)$ ($4 = 3 + 1$), štiricikla $(1 \ 2 \ 3 \ 4)$ ($4 = 4$) in produkta dveh tranzpozicij $(1 \ 2)(3 \ 4)$ ($4 = 2 + 2$).
 \end{zgled}
 
+Ker nerazcepni karakterji tvorijo ortonormirano bazo prostora razrednih funkcij, lahko vsako razredno funkcijo $f \in \hom_{\cl}(G,F)$ razvijemo po tej bazi kot
+\[
+    f = \sum_{\pi \in \Irr(G)} \langle f, \chi_{\pi} \rangle \chi_{\pi}.
+\]
+Alternativna baza prostora razrednih funkcij sestoji iz karakterističnih funkcij konjugiranostnih razredov v $G$. Razvoj te baze po karakterjih nam podaja še eno relacijo med karakterji, ki je ortogonalna\footnote{Relaciji sta ortogonalni v smislu tabele karakterjev. Ortonormiranost karakterjev preberemo tako, da fiksiramo vrstice. To drugo relacijo pa preberemo tako, da fiksiramo stolpce.} ortonormiranosti.
+
+\begin{posledica}
+Naj bo $G$ končna grupa nad algebraično zaprtim poljem karakteristike tuje $|G|$. Za vsaka elementa $g,h \in G$ velja
+\[
+    \sum_{\pi \in \Irr(G)} \chi_{\pi}(g) \chi_{\pi}(h^{-1}) = \begin{cases}
+        \frac{|G|}{|g^G|} & g^G = h^G, \\
+        0 & \text{sicer.}
+    \end{cases}
+\]
+\end{posledica}
+\begin{dokaz}
+Karakteristično funkcijo $1_{h^G}$ razvijemo po nerazcepnih karakterjih kot
+\[
+    1_{h^G} = \sum_{\pi \in \Irr(G)} \langle 1_{h^G}, \chi_{\pi} \rangle \chi_{\pi}
+    = \sum_{\pi \in \Irr(G)} \frac{|h^G|}{|G|} \chi_{\pi}(g^{-1}) \chi_{\pi}
+\]
+in dobljeno evalviramo v elementu $g$.
+\end{dokaz}
+
 \subsection{Kompleksni karakterji in stopnje}
 
 Omenimo še eno lastnost karakterjev upodobitev naj naugodnejšim poljem $\CC$. Njihove vrednosti namreč niso čisto poljubna kompleksna števila, temveč so algebraična cela števila\footnote{{\definicija Algebraično celo število} je kompleksno število, ki je ničla moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih celih števil označimo z $\bar{\ZZ}$. Ni se težko prepričati, da $\bar{\ZZ}$ tvori kolobar in da velja $\QQ \cap \bar{\ZZ} = \ZZ$.} omejene absolutne vrednosti. 
 
 \begin{trditev}
-Naj bo $G$ končna grupa. Za vsako nerazcepno kompleksno upodobitev $\pi$ in vsak $g \in G$ je $|\chi_{\pi}(g)| \leq \deg(\pi)$ in $\chi_{\pi}(g) \in \bar{\ZZ}$.
+Naj bo $G$ končna grupa. Za vsako nerazcepno kompleksno upodobitev $\pi$ in vsak $g \in G$ je
+\[
+    |\chi_{\pi}(g)| \leq \deg(\pi), \quad
+    \chi_{\pi}(g) \in \bar{\ZZ}, \quad
+    \chi_{\pi}(g^{-1}) = \overline{\chi_{\pi}(g)}. 
+\] 
 \end{trditev}
 \begin{dokaz}
 Če je $g \in G$ in $\pi \in \Irr(G)$, potem je $\pi(g^{|G|}) = \pi(1) = \id$, zato je $\pi(g)$ linearna preslikava končnega reda. Take preslikave so diagonalizabilne.\footnote{Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\pi(g)$.} V posebnem je zato vsaka lastna vrednost $\lambda \in \Eig(\pi(g))$ končnega reda v $\CC^*$. S tem je seveda
 \[
-    \chi_{\pi}(g) = \sum_{\lambda \in \Eig(\pi)} \lambda \in \bar{\ZZ}
-    \quad \text{in} \quad
-    |\chi_{\pi}(g)| \leq \sum_{\lambda \in \Eig(\pi)} |\lambda| = \deg(\pi).
+    \chi_{\pi}(g) = \sum_{\lambda \in \Eig(\pi(g))} \lambda \in \bar{\ZZ},
+    \quad
+    |\chi_{\pi}(g)| \leq \sum_{\lambda \in \Eig(\pi(g))} |\lambda| = \deg(\pi)
+\]
+in hkrati
+\[
+    \chi_{\pi}(g^{-1}) = \sum_{\lambda \in \Eig(\pi(g))} \lambda^{-1}
+    = \sum_{\lambda \in \Eig(\pi(g))} \overline{\lambda}
+    = \overline{\chi_{\pi}(g)}.
 \]
 \end{dokaz}
 
 S pomočjo te restriktivne lastnosti vrednosti karakterjev lahko izpeljemo pomembno lastnost stopenj nerazcepnih kompleksnih upodobitev.
 
 \begin{izrek}[o stopnjah upodobitev]
-    Naj bo $G$ končna grupa. Stopnja vsake nerazcepne kompleksne upodobitve $\pi$ deli $|G|$.
-    \end{izrek}
+Stopnja vsake nerazcepne kompleksne upodobitve končne grupe deli moč grupe.
+\end{izrek}
 
 Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, in sicer je to lema o uteženem povprečju. Ko funkcija, vzdolž katere izvedemo povprečje, slika v kolobar algebraičnih celih števil, lahko lemo o uteženem povprečju zaostrimo na naslednji način.
 
@@ -1694,15 +1729,15 @@ Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, 
     \[
         \frac{|G| \cdot \langle f, \chi_{\pi} \circ \inv \rangle}{\deg(\pi)}.
     \]
-    Preveriti moramo torej, da je to algebraično celo število. Funkcijo $f$ lahko razvijemo kot vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v $\bar{\ZZ}$. Ker $\bar{\ZZ}$ tvori kolobar, bo torej trditev dovolj preveriti za primer, ko je $f = 1_{\calC}$ za nek konjugiranostni razred $\calC$ v $G$.
+    Preveriti moramo torej, da je to algebraično celo število. Funkcijo $f$ lahko razvijemo kot vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v $\bar{\ZZ}$. Ker $\bar{\ZZ}$ tvori kolobar, bo torej trditev dovolj preveriti za primer, ko je $f = 1_{\conclass}$ za nek konjugiranostni razred $\conclass$ v $G$.
     
-    Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in pripadajoče uteženo povprečje $\EE_{1_{\calC}}(\rho_{\hom})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, to uteženo povprečje deluje kot $\EE_{1_{\calC}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\EE_{1_{\calC}}(\rho_{\hom})$.
+    Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in pripadajoče uteženo povprečje $\EE_{1_{\conclass}}(\rho_{\hom})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, to uteženo povprečje deluje kot $\EE_{1_{\conclass}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\EE_{1_{\conclass}}(\rho_{\hom})$.
     
-    Vemo že, da $\EE_{1_{\calC}}(\rho_{\hom})$ deluje na naravni bazi iz karakterističnih funkcij $1_x$ za $x \in G$ kot
+    Vemo že, da $\EE_{1_{\conclass}}(\rho_{\hom})$ deluje na naravni bazi iz karakterističnih funkcij $1_x$ za $x \in G$ kot
     \[
-        \EE_{1_{\calC}}(\rho_{\hom}) \cdot 1_x = (\rho_{\hom}(x) \cdot 1_{\calC}) \circ \inv \in \hom(G, \{ 0, 1 \}).
+        \EE_{1_{\conclass}}(\rho_{\hom}) \cdot 1_x = (\rho_{\hom}(x) \cdot 1_{\conclass}) \circ \inv \in \hom(G, \{ 0, 1 \}).
     \]
-    V tej bazi ima torej $\EE_{1_{\calC}}(\rho_{\hom})$ matriko s koeficienti v množici $\{ 0, 1 \}$. Karakteristični polinom te matrike ima zato celoštevilske koeficiente, torej so lastne vrednosti preslikave $\EE_{1_{\calC}}(\rho_{\hom})$ algebraična cela števila.
+    V tej bazi ima torej $\EE_{1_{\conclass}}(\rho_{\hom})$ matriko s koeficienti v množici $\{ 0, 1 \}$. Karakteristični polinom te matrike ima zato celoštevilske koeficiente, torej so lastne vrednosti preslikave $\EE_{1_{\conclass}}(\rho_{\hom})$ algebraična cela števila.
     \end{dokaz}
     
     \begin{dokaz}[Dokaz izreka o stopnjah upodobitev]
@@ -1711,8 +1746,6 @@ Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, 
         \frac{|G| \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle}{\deg(\pi)} = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ} \cap \QQ = \ZZ.
     \]
     \end{dokaz}
-
-\todo{druga ortogonalnost}
 
 \subsection{Razstavljanje upodobitve}
 
@@ -1787,11 +1820,11 @@ Ko upodobitev $\rho$ razstavimo na direktno vsoto nerazcepnih podupodobitev, je 
 
 \todo[inline]{
     - izračunljivost tabele karakterjev Proposition 4.6.2
-    - konkreten zgled, pokaži, kaj vse se da prebrati o grupi iz tega zgleda, morda $\GL_2(\field_2)$ in $S_5$
+    - konkreten zgled, pokaži, kaj vse se da prebrati o grupi iz tega zgleda, morda $\GL_2(\FF_2)$ in $S_5$
     - upodobitve v potencah: vključi kakšen preprost zgled; omeni, da gre za to, da ni treba razstavljati regularne upodobitve; ta zgled lahko potem kasneje razširimo z \GAP.
 }
 
-\subsection{$\GL_2(\field_p)$}
+\subsection{$\GL_2(\FF_p)$}
 
 \subsection{$S_n$}
 
@@ -1807,7 +1840,7 @@ Ko upodobitev $\rho$ razstavimo na direktno vsoto nerazcepnih podupodobitev, je 
 - malo harmonične analize
 - abelove grupe, Dirichletov izrek
 - tabela karakterjev
-- $\GL_2(\field_p)$
+- $\GL_2(\FF_p)$
 - burnside two primes theorem (najbrž izpustimo, brez veze)
 - simetrične grupe (!!!, napiši tabelo za $S_5$)
 - ? mixing in simetrične grupe (konkreten primer, simetrična grupa $S_5$, matrika sosednosti (katero mešanje?), spletična, lastne vrednosti po komponentah, kako dolgo moramo mešati?)

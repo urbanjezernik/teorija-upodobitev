@@ -46,7 +46,7 @@
 <strong> Urban Jezernik <br>
 Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-Zadnja posodobitev: 21. 06. 2022
+Zadnja posodobitev: 22. 06. 2022
 </div>
 
 <div class="kazalo">
@@ -3072,17 +3072,18 @@ nerazcepnih upodobitev tvorijo ortonormirano bazo prostora <span
 class="math inline">\(\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>.</p>
 </div>
 <p>Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to
-povprečenje še <em>utežili</em>. Za dano upodobitev <span
-class="math inline">\(\rho\)</span> grupe <span
+povprečenje še <em>utežili</em>. Za dano funkcijo <span
+class="math inline">\(f \in \hom(G,F)\)</span> in poljubno upodobitev
+<span class="math inline">\(\rho\)</span> grupe <span
 class="math inline">\(G\)</span> na prostoru <span
-class="math inline">\(V\)</span> in poljubno funkcijo <span
-class="math inline">\(f \in \hom(G,F)\)</span> definiramo
-<span><strong><em>uteženo povprečje</em></strong></span> <span
+class="math inline">\(V\)</span> definiramo <span><strong><em>uteženo
+povprečje</em></strong></span> <span
 class="math display">\[\mathbf{E}_f(\rho) = \sum_{g \in G} f(g) \rho(g)
 \in \hom(V,V).\]</span> Kadar je <span class="math inline">\(F =
 \mathbf{C}\)</span>, uteženemu povprečenju rečemo tudi
 <span><strong><em>nekomutativna Fourierova
-transformacija</em></strong></span>.</p>
+transformacija</em></strong></span> in uporabljamo oznako <span
+class="math inline">\(\hat{f}(\rho)\)</span>.</p>
 <div class="zgled">
 <p><strong>Zgled 3.3</strong>. </p>
 <ul>
@@ -3258,21 +3259,53 @@ class="math inline">\(4 = 4\)</span>) in produkta dveh tranzpozicij
 <span class="math inline">\((1 \ 2)(3 \ 4)\)</span> (<span
 class="math inline">\(4 = 2 + 2\)</span>).</p>
 </div>
+<p>Ker nerazcepni karakterji tvorijo ortonormirano bazo prostora
+razrednih funkcij, lahko vsako razredno funkcijo <span
+class="math inline">\(f \in \hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>
+razvijemo po tej bazi kot <span class="math display">\[f = \sum_{\pi \in
+\mathop{\mathrm{Irr}}(G)} \langle f, \chi_{\pi} \rangle
+\chi_{\pi}.\]</span> Alternativna baza prostora razrednih funkcij
+sestoji iz karakterističnih funkcij konjugiranostnih razredov v <span
+class="math inline">\(G\)</span>. Razvoj te baze po karakterjih nam
+podaja še eno relacijo med karakterji, ki je ortogonalna<a href="#fn39"
+class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>
+ortonormiranosti.</p>
+<div class="posledica">
+<p><strong>Posledica 3.3</strong>. Naj bo <span
+class="math inline">\(G\)</span> končna grupa nad algebraično zaprtim
+poljem karakteristike tuje <span class="math inline">\(|G|\)</span>. Za
+vsaka elementa <span class="math inline">\(g,h \in G\)</span> velja
+<span class="math display">\[\sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
+\chi_{\pi}(g) \chi_{\pi}(h^{-1}) = \begin{cases}
+        \frac{|G|}{|g^G|} &amp; g^G = h^G, \\
+        0 &amp; \text{sicer.}
+    \end{cases}\]</span></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Karakteristično funkcijo <span
+class="math inline">\(1_{h^G}\)</span> razvijemo po nerazcepnih
+karakterjih kot <span class="math display">\[1_{h^G} = \sum_{\pi \in
+\mathop{\mathrm{Irr}}(G)} \langle 1_{h^G}, \chi_{\pi} \rangle \chi_{\pi}
+    = \sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \frac{|h^G|}{|G|}
+\chi_{\pi}(g^{-1}) \chi_{\pi}\]</span> in dobljeno evalviramo v elementu
+<span class="math inline">\(g\)</span>. ◻</p>
+</div>
 <h3 id="kompleksni-karakterji-in-stopnje">Kompleksni karakterji in
 stopnje</h3>
 <p>Omenimo še eno lastnost karakterjev upodobitev naj naugodnejšim
 poljem <span class="math inline">\(\mathbf{C}\)</span>. Njihove
 vrednosti namreč niso čisto poljubna kompleksna števila, temveč so
-algebraična cela števila<a href="#fn39" class="footnote-ref"
-id="fnref39" role="doc-noteref"><sup>39</sup></a> omejene absolutne
+algebraična cela števila<a href="#fn40" class="footnote-ref"
+id="fnref40" role="doc-noteref"><sup>40</sup></a> omejene absolutne
 vrednosti.</p>
 <div class="trditev">
 <p><strong>Trditev 3.4</strong>. Naj bo <span
 class="math inline">\(G\)</span> končna grupa. Za vsako nerazcepno
 kompleksno upodobitev <span class="math inline">\(\pi\)</span> in vsak
 <span class="math inline">\(g \in G\)</span> je <span
-class="math inline">\(|\chi_{\pi}(g)| \leq \deg(\pi)\)</span> in <span
-class="math inline">\(\chi_{\pi}(g) \in \bar{\mathbf{Z}}\)</span>.</p>
+class="math display">\[|\chi_{\pi}(g)| \leq \deg(\pi), \quad
+    \chi_{\pi}(g) \in \bar{\mathbf{Z}}, \quad
+    \chi_{\pi}(g^{-1}) = \overline{\chi_{\pi}(g)}.\]</span></p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Če je <span class="math inline">\(g \in G\)</span> in
@@ -3280,25 +3313,28 @@ class="math inline">\(\chi_{\pi}(g) \in \bar{\mathbf{Z}}\)</span>.</p>
 potem je <span class="math inline">\(\pi(g^{|G|}) = \pi(1) =
 \mathop{\mathrm{id}}\)</span>, zato je <span
 class="math inline">\(\pi(g)\)</span> linearna preslikava končnega reda.
-Take preslikave so diagonalizabilne.<a href="#fn40" class="footnote-ref"
-id="fnref40" role="doc-noteref"><sup>40</sup></a> V posebnem je zato
+Take preslikave so diagonalizabilne.<a href="#fn41" class="footnote-ref"
+id="fnref41" role="doc-noteref"><sup>41</sup></a> V posebnem je zato
 vsaka lastna vrednost <span class="math inline">\(\lambda \in
 \mathop{\mathrm{Eig}}(\pi(g))\)</span> končnega reda v <span
 class="math inline">\(\mathbf{C}^*\)</span>. S tem je seveda <span
 class="math display">\[\chi_{\pi}(g) = \sum_{\lambda \in
-\mathop{\mathrm{Eig}}(\pi)} \lambda \in \bar{\mathbf{Z}}
-    \quad \text{in} \quad
-    |\chi_{\pi}(g)| \leq \sum_{\lambda \in \mathop{\mathrm{Eig}}(\pi)}
-|\lambda| = \deg(\pi).\]</span> ◻</p>
+\mathop{\mathrm{Eig}}(\pi(g))} \lambda \in \bar{\mathbf{Z}},
+    \quad
+    |\chi_{\pi}(g)| \leq \sum_{\lambda \in
+\mathop{\mathrm{Eig}}(\pi(g))} |\lambda| = \deg(\pi)\]</span> in hkrati
+<span class="math display">\[\chi_{\pi}(g^{-1}) = \sum_{\lambda \in
+\mathop{\mathrm{Eig}}(\pi(g))} \lambda^{-1}
+    = \sum_{\lambda \in \mathop{\mathrm{Eig}}(\pi(g))}
+\overline{\lambda}
+    = \overline{\chi_{\pi}(g)}.\]</span> ◻</p>
 </div>
 <p>S pomočjo te restriktivne lastnosti vrednosti karakterjev lahko
 izpeljemo pomembno lastnost stopenj nerazcepnih kompleksnih
 upodobitev.</p>
 <div class="izrek">
-<p><strong>Izrek 3.4</strong> (o stopnjah upodobitev). Naj bo <span
-class="math inline">\(G\)</span> končna grupa. Stopnja vsake nerazcepne
-kompleksne upodobitve <span class="math inline">\(\pi\)</span> deli
-<span class="math inline">\(|G|\)</span>.</p>
+<p><strong>Izrek 3.4</strong> (o stopnjah upodobitev). Stopnja vsake
+nerazcepne kompleksne upodobitve končne grupe deli moč grupe.</p>
 </div>
 <p>Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek <span
 class="math inline">\(|G|/\deg(\pi)\)</span>, in sicer je to lema o
@@ -3326,33 +3362,31 @@ karakterističnih funkcij konjugiranostnih razredov s koeficienti v <span
 class="math inline">\(\bar{\mathbf{Z}}\)</span>. Ker <span
 class="math inline">\(\bar{\mathbf{Z}}\)</span> tvori kolobar, bo torej
 trditev dovolj preveriti za primer, ko je <span class="math inline">\(f
-= 1_{\mathcal{C}}\)</span> za nek konjugiranostni razred <span
-class="math inline">\(\mathcal{C}\)</span> v <span
+= 1_{C}\)</span> za nek konjugiranostni razred <span
+class="math inline">\(C\)</span> v <span
 class="math inline">\(G\)</span>.</p>
 <p>Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer
 tako, da opazujemo regularno upodobitev in pripadajoče uteženo povprečje
-<span
-class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom})\)</span>.
-Na vsaki od podupodobitev, ki je izomorfna <span
+<span class="math inline">\(\mathbf{E}_{1_{C}}(\rho_{\hom})\)</span>. Na
+vsaki od podupodobitev, ki je izomorfna <span
 class="math inline">\(\pi\)</span>, to uteženo povprečje deluje kot
-<span class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\pi)\)</span>,
-torej kot skalarno množenje z gornjim številom. To število je zato
-lastna vrednost preslikave <span
-class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom})\)</span>.</p>
+<span class="math inline">\(\mathbf{E}_{1_{C}}(\pi)\)</span>, torej kot
+skalarno množenje z gornjim številom. To število je zato lastna vrednost
+preslikave <span
+class="math inline">\(\mathbf{E}_{1_{C}}(\rho_{\hom})\)</span>.</p>
 <p>Vemo že, da <span
-class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom})\)</span>
-deluje na naravni bazi iz karakterističnih funkcij <span
+class="math inline">\(\mathbf{E}_{1_{C}}(\rho_{\hom})\)</span> deluje na
+naravni bazi iz karakterističnih funkcij <span
 class="math inline">\(1_x\)</span> za <span class="math inline">\(x \in
 G\)</span> kot <span
-class="math display">\[\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom}) \cdot
-1_x = (\rho_{\hom}(x) \cdot 1_{\mathcal{C}}) \circ
-\mathop{\mathrm{inv}}\in \hom(G, \{ 0, 1 \}).\]</span> V tej bazi ima
-torej <span
-class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom})\)</span>
-matriko s koeficienti v množici <span class="math inline">\(\{ 0, 1
-\}\)</span>. Karakteristični polinom te matrike ima zato celoštevilske
-koeficiente, torej so lastne vrednosti preslikave <span
-class="math inline">\(\mathbf{E}_{1_{\mathcal{C}}}(\rho_{\hom})\)</span>
+class="math display">\[\mathbf{E}_{1_{C}}(\rho_{\hom}) \cdot 1_x =
+(\rho_{\hom}(x) \cdot 1_{C}) \circ \mathop{\mathrm{inv}}\in \hom(G, \{
+0, 1 \}).\]</span> V tej bazi ima torej <span
+class="math inline">\(\mathbf{E}_{1_{C}}(\rho_{\hom})\)</span> matriko s
+koeficienti v množici <span class="math inline">\(\{ 0, 1 \}\)</span>.
+Karakteristični polinom te matrike ima zato celoštevilske koeficiente,
+torej so lastne vrednosti preslikave <span
+class="math inline">\(\mathbf{E}_{1_{C}}(\rho_{\hom})\)</span>
 algebraična cela števila. ◻</p>
 </div>
 <div class="proof">
@@ -3368,7 +3402,7 @@ class="math display">\[\frac{|G| \cdot \langle \chi_{\pi}, \chi_{\pi}
 <p>S pomočjo ortonormirane baze karakterjev lahko z lahkoto razumemo
 vsako končnorazsežno upodobitev končne grupe nad ugodnim poljem.</p>
 <div class="posledica">
-<p><strong>Posledica 3.3</strong>. Naj bo <span
+<p><strong>Posledica 3.4</strong>. Naj bo <span
 class="math inline">\(G\)</span> končna grupa s končnorazsežno
 upodobitvijo <span class="math inline">\(\rho\)</span> nad algebraično
 zaprtim poljem karakteristike <span
@@ -3687,18 +3721,23 @@ H. Hardy in S. Ramanujan, <em>Asymptotic formulae in combinatory
 analysis</em>, Proceedings of the London Mathematical Society, Second
 Series, <strong>17</strong> (1918) 75–115.</a><a href="#fnref38"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn39" role="doc-endnote"><p><span><strong><em>Algebraično celo
+<li id="fn39" role="doc-endnote"><p>Relaciji sta ortogonalni v smislu
+tabele karakterjev. Ortonormiranost karakterjev preberemo tako, da
+fiksiramo vrstice. To drugo relacijo pa preberemo tako, da fiksiramo
+stolpce.<a href="#fnref39" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn40" role="doc-endnote"><p><span><strong><em>Algebraično celo
 število</em></strong></span> je kompleksno število, ki je ničla
 moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih
 celih števil označimo z <span
 class="math inline">\(\bar{\mathbf{Z}}\)</span>. Ni se težko prepričati,
 da <span class="math inline">\(\bar{\mathbf{Z}}\)</span> tvori kolobar
 in da velja <span class="math inline">\(\mathbf{Q}\cap \bar{\mathbf{Z}}
-= \mathbf{Z}\)</span>.<a href="#fnref39" class="footnote-back"
+= \mathbf{Z}\)</span>.<a href="#fnref40" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn40" role="doc-endnote"><p>Diagonalizabilnost sledi iz
+<li id="fn41" role="doc-endnote"><p>Diagonalizabilnost sledi iz
 obravnave Jordanove normalne forme preslikave <span
-class="math inline">\(\pi(g)\)</span>.<a href="#fnref40"
+class="math inline">\(\pi(g)\)</span>.<a href="#fnref41"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
