@@ -4,14 +4,14 @@
 \usepackage{amsmath}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{titlesec}
-\usepackage{amssymb,pstricks,pst-plot,pst-math}
+% \usepackage{amssymb}
+\usepackage{pstricks,pst-plot,pst-math}
 \usepackage{pstricks-add}
 \usepackage{graphicx}
 \usepackage{enumerate}
 \usepackage{color}
 \usepackage{fouriernc}
 \usepackage{microtype}
-\usepackage[normalem]{ulem}
 \usepackage{MnSymbol}
 \usepackage{tikz-cd}
 \usetikzlibrary{backgrounds}
@@ -1578,66 +1578,61 @@ Karakterji niso poljubne funkcije v $\hom(G,F)$, temveč vselej pripadajo prosto
     Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj karakterji nerazcepnih upodobitev tvorijo ortonormirano bazo prostora $\hom_{\cl}(G,F)$.
 \end{izrek}
 
-Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to povprečenje še \emph{utežili}. Za dano funkcijo $f \in \hom(G,F)$ in poljubno upodobitev $\rho$ grupe $G$ na prostoru $V$ definiramo {\definicija uteženo povprečje}
+Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to povprečenje še \emph{utežili}. Za dano funkcijo $f \in \hom(G,F)$ definiramo njeno {\definicija nekomutativno Fourierovo transformacijo} $\hat{f}$ kot funkcijo, ki poljubni upodobitvi $\rho$ grupe $G$ na prostoru $V$ priredi
 \[
-    \EE_f(\rho) = \sum_{g \in G} f(g) \rho(g) \in \hom(V,V).
+    \hat{f}(\rho) = \sum_{g \in G} f(g) \rho(g^{-1}) \in \hom(V,V).
 \]
-Kadar je $F = \CC$, uteženemu povprečenju rečemo tudi {\definicija nekomutativna Fourierova transformacija} in uporabljamo oznako $\hat{f}(\rho)$.
+Fourierova transformacija funkciji $f$ torej priredi njeno uteženo povprečje poljubne upodobitve vzdolž $f$, pri čemer se zgleduje po skalarnem produktu na prostoru funkcij $\hom(G,F)$. V primeru, ko je $f$ konstantna funkcija $1/|G|$, z njeno Fourierovo transformacijo najdemo običajno povprečno vrednost upodobitve $\EE(\rho)$.
 
 \begin{zgled} \leavevmode
 \begin{itemize}
     \item Naj bo $f$ poljubna periodična funkcija na množici $\ZZ$ s periodo $n > 1$ in vrednostmi v $\CC$. Funkcijo $f$ lahko torej obravnavamo kot funkcijo na ciklični grupi $\ZZ/n\ZZ$. Nerazcepne kompleksne upodobitve slednje grupe so ravno enorazsežne upodobitve $\chi_j(x) = e^{2 \pi i j x / n}$ za $j \in \Omega = \{ 1, 2, \dots, n \}$. Nekomutativna Fourierova transformacija funkcije $f$ v teh upodobitvah je
     \[
-        \EE_f(\chi_j) = \sum_{x \in \ZZ/n\ZZ} f(x) e^{2 \pi i j x / n }.
+        \hat{f}(\chi_j) = \sum_{x \in \ZZ/n\ZZ} f(x) e^{- 2 \pi i j x / n }.
     \]
-    Vektorju $(f(1), f(2), \dots, f(n)) \in \CC^n$ na ta način priredimo vektor $(\EE_f(\chi_1), \EE_f(\chi_2), \dots, \EE_f(\chi_n)) \in \CC^n$. To prirejanje je v numerični matematiki znano pod imenom {\definicija diskretna Fourierova transformacija} in je fundamentalno v digitalnem procesiranju signalov.
+    Vektorju števil $(f(1), f(2), \dots, f(n)) \in \CC^n$ na ta način priredimo vektor števil $(\hat{f}(\chi_1), \hat{f}(\chi_2), \dots, \hat{f}(\chi_n)) \in \CC^n$. To prirejanje je v numerični matematiki znano pod imenom {\definicija diskretna Fourierova transformacija} in je fundamentalno v digitalnem procesiranju signalov.
 
-    \item Naj bo $\rho_{\hom}$ regularna upodobitev grupe $G$ in $f \in \hom(G,F)$ funkcija na $G$. Uteženo povprečje $\EE_f(\rho_{\hom})$ je linearni endomorfizem prostora $\hom(G,F)$. Pri tem se karakteristična funkcija $1_x$ za $x \in G$ preslika v
+    \item Naj bo $f \in \hom(G,F)$ funkcija na $G$ in $\rho_{\hom}$ regularna upodobitev grupe $G$. Vrednost $\hat{f}(\rho_{\hom})$ je linearni endomorfizem prostora $\hom(G,F)$. Pri tem se karakteristična funkcija $1_x$ za $x \in G$ preslika v
 \[
-    \EE_f(\rho_{\hom}) \cdot 1_x 
-    = \sum_{g \in G} f(g) \rho_{\hom}(g) \cdot 1_x
-    = \sum_{g \in G} f(g) 1_{xg^{-1}}
-    = \sum_{g \in G} f(g^{-1}x) 1_{g}.
+    \hat{f}(\rho_{\hom}) \cdot 1_x 
+    = \sum_{g \in G} f(g) \rho_{\hom}(g^{-1}) \cdot 1_x
+    = \sum_{g \in G} f(g) 1_{xg}
+    = \sum_{g \in G} f(x^{-1}g) 1_{g}.
 \] 
-Označimo invertiranje v grupi z $\inv \colon G \to G$, $g \mapsto g^{-1}$. Torej velja
-\[
-    \EE_f(\rho_{\hom}) \cdot 1_x
-     = \sum_{g \in G} ((\rho_{\hom}(x) \cdot f) \circ \inv)(g) 1_{g}
-     = (\rho_{\hom}(x) \cdot f) \circ \inv.
-\]
-V posebnem pri $x = 1$ dobimo $\EE_f(\rho_{\hom}) \cdot 1_1 = f \circ \inv$. 
+V posebnem pri $x = 1$ dobimo $\hat{f}(\rho_{\hom}) \cdot 1_1 = f$. Funkcijo $f$ lahko torej rekonstruiramo iz vrednosti njene Fourierove transformacije v regularni upodobitvi. 
+
+Regularna upodobitev končne grupe nad ugodnim poljem je direktna vsota nerazcepnih upodobitev grupe, zato je tudi Fourierova transformacija v regularni upodobitvi direktna vsota Fourierovih transformacij v nerazcepnih upodobitvah. Iz zgornjega premisleka sledi, da je vsaka funkcija zatorej enolično določena z vrednostmi svoje Fourierove transformacije v vseh nerazcepnih upodobitvah.
 \end{itemize}
 \end{zgled}
 
-\begin{lema}[o uteženem povprečju]
-Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Za vsako nerazcepno upodobitev $\pi$ na prostoru $V$ in razredno funkcijo $f$ je
+\begin{lema}[o Fourierovi transformaciji razredne funkcije]
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Za vsako \emph{razredno} funkcijo $f$ in nerazcepno upodobitev $\pi$ na prostoru $V$ je 
 \[
-    \EE_f(\pi) = 
-    \frac{|G| \cdot \langle f, \chi_{\pi} \circ \inv \rangle}{\deg(\pi)} \cdot {\textstyle \id_V},
+    \hat{f}(\pi) = 
+    \frac{|G|}{\deg(\pi)} \cdot \langle f, \chi_{\pi} \rangle \cdot {\textstyle \id_V}.
 \]
-kjer smo označili $\inv \colon G \to G$, $g \mapsto g^{-1}$.
 \end{lema}
 \begin{dokaz}
 Za vsak $h \in G$ velja
 \[
-    \EE_f(\pi) \cdot \pi(h) =  \sum_{g \in G} f(g) \pi(gh)
-    =  \sum_{g \in G} f(g) \pi(h) \pi(h^{-1}gh).
+    \hat{f}(\pi) \cdot \pi(h) =  \sum_{g \in G} f(g) \pi(g^{-1}h)
+    =  \sum_{g \in G} f(g) \pi(h) \pi(h^{-1}g^{-1}h).
 \]
 Izpostavimo $\pi(h)$ in na grupi $G$ uporabimo avtomorfizem $g \mapsto h g h^{-1}$, pa lahko zadnjo vsoto zapišemo kot
 \[
-    \pi(h)  \sum_{g \in G} f(hgh^{-1}) \pi(g).
+    \pi(h)  \sum_{g \in G} f(hgh^{-1}) \pi(g^{-1}).
 \]
-Ker je $f$ razredna funkcija, je dobljeno ravno enako $\pi(h) \cdot \EE_f(\pi)$. Uteženo povprečje je torej v tem primeru spletična v $\hom_G(\pi, \pi)$. Po Schurovi lemi sklepamo, da je $\EE_f(\pi)$ skalarni večkratnik identitete, iz leme o uteženem povprečju pa je njegova sled enaka
+Ker je $f$ razredna funkcija, je dobljeno ravno enako $\pi(h) \cdot \hat{f}(\pi)$. Vrednost Fourierove transformacije v $\pi$ je torej spletična v $\hom_G(\pi, \pi)$. Po Schurovi lemi sklepamo, da je $\hat{f}(\pi)$ skalarni večkratnik identitete. Njegova sled je enaka
 \[
-    \tr \left( \EE_f(\pi) \right) =  \sum_{g \in G} f(g) \chi_{\pi}(g) = |G| \cdot \langle f, \chi_{\pi} \circ \inv \rangle.
+    \tr \left( \hat{f}(\pi) \right) =  \sum_{g \in G} f(g) \chi_{\pi}(g^{-1}) = |G| \cdot \langle f, \chi_{\pi} \rangle.
 \]
-Od tod izračunamo relevantni skalar kot $|G| \cdot \langle f, \chi_{\pi} \circ \inv \rangle/\deg(\pi)$.
+Od tod izračunamo relevantni skalar kot $|G| \cdot \langle f, \chi_{\pi} \rangle/\deg(\pi)$.
 \end{dokaz}
 
-Uteženo opremljeni lahko z lahkoto izpeljemo izrek.
+Opremljeni lahko z lahkoto izpeljemo izrek.
 
 \begin{dokaz}[Dokaz izreka o bazi razrednih funkcij]
-Predpostavimo, da nerazcepni karakterji \emph{ne} razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \hom_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $\langle f, \chi_{\pi} \rangle = 0$, kar lahko zapišemo tudi kot $\langle f \circ \inv, \chi_{\pi} \circ \inv \rangle = 0$. Uteženo povprečje vzdolž razredne funkcije $f \circ \inv$ je po lemi zato trivialno. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, ki je vsota nerazcepnih upodobitev, se pravi $\EE_{f \circ \inv}(\rho_{\hom}) = 0$. Po zadnjem zgledu to implicira $(f \circ \inv) \circ \inv = 0$, se pravi $f = 0$. 
+Predpostavimo, da nerazcepni karakterji \emph{ne} razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \hom_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $\langle f, \chi_{\pi} \rangle = 0$. Preslikava $\hat{f}(\pi)$ je po lemi zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, se pravi $\hat{f}(\rho_{\hom}) = 0$. Po zadnjem zgledu to implicira $f = 0$. 
 \end{dokaz}
 
 Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavnikih konjugiranostnih razredov. Če {\definicija število konjugiranostnih razredov} označimo s $\kk(G)$, velja torej $\dim \hom_{\cl}(G,F) = \kk(G)$. Ker karakterji tvorijo bazo prostora razrednih funkcij, lahko \emph{število} nerazcepnih upodobitev torej izračunamo neposredno iz algebraične strukture grupe.
@@ -1719,31 +1714,31 @@ S pomočjo te restriktivne lastnosti vrednosti karakterjev lahko izpeljemo pomem
 Stopnja vsake nerazcepne kompleksne upodobitve končne grupe deli moč grupe.
 \end{izrek}
 
-Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, in sicer je to lema o uteženem povprečju. Ko funkcija, vzdolž katere izvedemo povprečje, slika v kolobar algebraičnih celih števil, lahko lemo o uteženem povprečju zaostrimo na naslednji način.
+Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, in sicer je to lema o Fourierovi transformaciji razredne funkcije. Ko funkcija, vzdolž katere izvedemo transformacijo, slika v kolobar algebraičnih celih števil, lahko lemo o Fourierovi transformaciji razredne funkcije zaostrimo na naslednji način.
 
     \begin{lema}
-    Naj bo $G$ končna grupa. Za vsako nerazcepno upodobitev $\pi$ nad $\CC$ in funkcijo $f \in \hom_{\cl}(G, \bar{\ZZ})$ je uteženo povprečje $\EE_f(\pi)$ skalarno množenje z algebraičnim celim številom.
+    Naj bo $G$ končna grupa. Za vsako funkcijo $f \in \hom_{\cl}(G, \bar{\ZZ})$ in nerazcepno upodobitev $\pi$ nad $\CC$ in je $\hat{f}(\pi)$ skalarno množenje z algebraičnim celim številom.
     \end{lema}
     \begin{dokaz}
-    Vemo že, da je uteženo povprečje $\EE_f(\pi)$ skalarno množenje s številom
+    Vemo že, da je $\hat{f}(\pi)$ skalarno množenje s številom
     \[
-        \frac{|G| \cdot \langle f, \chi_{\pi} \circ \inv \rangle}{\deg(\pi)}.
+        \frac{|G|}{\deg(\pi)} \cdot \langle f, \chi_{\pi} \rangle.
     \]
     Preveriti moramo torej, da je to algebraično celo število. Funkcijo $f$ lahko razvijemo kot vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v $\bar{\ZZ}$. Ker $\bar{\ZZ}$ tvori kolobar, bo torej trditev dovolj preveriti za primer, ko je $f = 1_{\conclass}$ za nek konjugiranostni razred $\conclass$ v $G$.
     
-    Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in pripadajoče uteženo povprečje $\EE_{1_{\conclass}}(\rho_{\hom})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, to uteženo povprečje deluje kot $\EE_{1_{\conclass}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\EE_{1_{\conclass}}(\rho_{\hom})$.
+    Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in s tem linearno preslikavo $\widehat{1_{\conclass}}(\rho_{\hom})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, ta preslikava deluje kot $\widehat{1_{\conclass}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\widehat{1_{\conclass}}(\rho_{\hom})$.
     
-    Vemo že, da $\EE_{1_{\conclass}}(\rho_{\hom})$ deluje na naravni bazi iz karakterističnih funkcij $1_x$ za $x \in G$ kot
+    Vemo že, da $\widehat{1_{\conclass}}(\rho_{\hom})$ deluje na naravni bazi iz karakterističnih funkcij $1_x$ za $x \in G$ kot
     \[
-        \EE_{1_{\conclass}}(\rho_{\hom}) \cdot 1_x = (\rho_{\hom}(x) \cdot 1_{\conclass}) \circ \inv \in \hom(G, \{ 0, 1 \}).
+        \widehat{1_{\conclass}}(\rho_{\hom}) \cdot 1_x = \sum_{g \in G} 1_{\conclass}(x^{-1} g) 1_g \in \hom(G, \{ 0, 1 \}).
     \]
-    V tej bazi ima torej $\EE_{1_{\conclass}}(\rho_{\hom})$ matriko s koeficienti v množici $\{ 0, 1 \}$. Karakteristični polinom te matrike ima zato celoštevilske koeficiente, torej so lastne vrednosti preslikave $\EE_{1_{\conclass}}(\rho_{\hom})$ algebraična cela števila.
+    V tej bazi ima torej $\widehat{1_{\conclass}}(\rho_{\hom})$ matriko s koeficienti v množici $\{ 0, 1 \}$. Karakteristični polinom te matrike ima zato celoštevilske koeficiente, torej so lastne vrednosti preslikave $\widehat{1_{\conclass}}(\rho_{\hom})$ algebraična cela števila.
     \end{dokaz}
     
     \begin{dokaz}[Dokaz izreka o stopnjah upodobitev]
-    Naj bo $\pi \in \Irr(G)$. Uporabimo lemo s funkcijo $f = \chi_{\pi} \circ \inv$ in zaključimo
+    Naj bo $\pi \in \Irr(G)$. Uporabimo lemo s funkcijo $f = \chi_{\pi}$ in zaključimo
     \[
-        \frac{|G| \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle}{\deg(\pi)} = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ} \cap \QQ = \ZZ.
+        \frac{|G|}{\deg(\pi)} \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ} \cap \QQ = \ZZ.
     \]
     \end{dokaz}
 
@@ -1780,34 +1775,35 @@ Vemo že, da imamo natanko dve enorazsežni upodobitvi, in sicer $\11$ in $\sgn$
 \[
     ||\chi_{\pi}||^2 = \frac{1}{4!} \left(  \right)
 \]
+\todo{}
 \end{zgled}
 
 Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih projekcijskih spletičen najdemo izotipične komponente upodobitve. Za te seveda najprej potrebujemo vse nerazcepne karakterje.
 
-Take projekcije ni težko najti za $\11$-izotipično komponento. Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad ugodnim poljem. Povprečna vrednost upodobitve $\EE(\rho)$ je projekcijska spletična v $\hom_G(V,V)$ na podprostor fiksnih vektorjev $V^G$, se pravi na $\11$-izotipično komponento v $V$. Za splošnejše izotipične komponente uporabimo utežena povprečja.
+Take projekcije ni težko najti za $\11$-izotipično komponento. Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad ugodnim poljem. Povprečna vrednost upodobitve $\EE(\rho)$ je projekcijska spletična v $\hom_G(V,V)$ na podprostor fiksnih vektorjev $V^G$, se pravi na $\11$-izotipično komponento v $V$. Za splošnejše izotipične komponente uporabimo utežena povprečja, se pravi Fourierovo transformacijo.
     
 \begin{trditev}
 Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Za vsako končnorazsežno upodobitev $\rho$ in nerazcepno upodobitev $\pi$ je
 \[
-    \frac{\deg(\pi)}{|G|} \cdot \EE_{\chi_{\pi} \circ \inv}(\rho)
+    \frac{\deg(\pi)}{|G|} \cdot \widehat{\chi_{\pi}}(\rho)
 \]
 projektor na $\pi$-izotipično komponento v $\rho$.
 \end{trditev}
 \begin{dokaz}
-Iz leme o uteženem povprečju izpeljemo, da za vsaki nerazcepni upodobitvi $\pi_1$, $\pi_2$ na prostorih $V_1$, $V_2$ velja
+Iz leme o Fourierovi transformaciji razredne funkcije izpeljemo, da za vsaki nerazcepni upodobitvi $\pi_1$, $\pi_2$ na prostorih $V_1$, $V_2$ velja
 \[
-    \frac{\deg(\pi_1)}{|G|} \cdot \EE_{\chi_{\pi_1} \circ \inv}(\pi_2) = \begin{cases}
+    \frac{\deg(\pi_1)}{|G|} \cdot \widehat{\chi_{\pi_1}}(\pi_2) = \begin{cases}
         {\textstyle \id_{V_2}} & \pi_1 \cong \pi_2, \\
         0 & \text{sicer.}
     \end{cases}
 \]
-Ko upodobitev $\rho$ razstavimo na direktno vsoto nerazcepnih podupodobitev, je linearni endomorfizem $\deg(\pi)/|G| \cdot \EE_{\chi_{\pi} \circ \inv}(\rho)$ torej ničeln na podupodobitvah, ki niso izomorfne $\pi$, in identiteta na podupodobitvah, ki so izomorfne $\pi$. Ta endomorfizem je torej projektor na direktno vsoto podupodobitev, ki so izomorfne $\pi$, torej ravno na $\pi$-izotipično komponento.
+Ko upodobitev $\rho$ razstavimo na direktno vsoto nerazcepnih podupodobitev, je linearni endomorfizem $\deg(\pi)/|G| \cdot \widehat{\chi_{\pi}}(\rho)$ torej ničeln na podupodobitvah, ki niso izomorfne $\pi$, in identiteta na podupodobitvah, ki so izomorfne $\pi$. Ta endomorfizem je torej projektor na direktno vsoto podupodobitev, ki so izomorfne $\pi$, torej ravno na $\pi$-izotipično komponento.
 \end{dokaz}
 
 \begin{zgled}
-Naj bo $\rho_{\hom}$ regularna upodobitev grupe $G$. Vemo že, da za vsako funkcijo $f \in \hom(G,F)$ velja $\EE_f(\rho_{\hom}) \cdot 1_1 = f \circ \inv$. Torej je projekcija funkcije $1_1$ na $\pi$-izotipično komponento enaka
+Naj bo $\rho_{\hom}$ regularna upodobitev grupe $G$. Vemo že, da za vsako funkcijo $f \in \hom(G,F)$ velja $\hat{f}(\rho_{\hom}) \cdot 1_1 = f$. Torej je projekcija funkcije $1_1$ na $\pi$-izotipično komponento enaka
 \[
-    \frac{\deg(\pi)}{|G|} \cdot \EE_{\chi_{\pi} \circ \inv}(\rho_{\hom}) \cdot 1_1 = 
+    \frac{\deg(\pi)}{|G|} \cdot \widehat{\chi_{\pi}}(\rho_{\hom}) \cdot 1_1 = 
     \frac{\deg(\pi)}{|G|} \cdot \chi_{\pi}.
 \]
 S tem dobimo razvoj
@@ -1843,21 +1839,21 @@ To prirejanje \emph{ni} injektivno. \todo{}
 
 Tretji princip harmonične analize je, da z novim zapisom uporabimo Fourierovo transformacijo, ki jo karseda dokončno izračunamo.
 
-Naj bosta $f_1, f_2 \in \hom(G,F)$ funkciji in $\rho$ upodobitev grupe $G$. Kompozicija uteženih povprečij $\EE_{f_1}(\rho) \cdot \EE_{f_2}(\rho)$ je enaka
+Naj bosta $f_1, f_2 \in \hom(G,F)$ funkciji in $\rho$ upodobitev grupe $G$. Kompozicija Fourierovih transformacij $\widehat{f_1}(\rho) \cdot \widehat{f_2}(\rho)$ je enaka
 \[
-    \sum_{g_1, g_2 \in G} f_1(g_1) f_2(g_2) \rho(g_1 g_2) =
-    \sum_{g \in G} \left( \sum_{g_1, g_2 \in G \colon g_1 g_2 = g} f_1(g_1) f_2(g_2) \right) \rho(g).
+    \sum_{g_1, g_2 \in G} f_1(g_1) f_2(g_2) \rho(g_1^{-1} g_2^{-1}) =
+    \sum_{g \in G} \left( \sum_{g_1, g_2 \in G \colon g_2 g_1 = g} f_2(g_2) f_1(g_1)  \right) \rho(g^{-1}).
 \]
-Člen v notranji vsoti je {\definicija konvolucija} funkcij $f_1$ in $f_2$, se pravi
+Člen v notranji vsoti je {\definicija konvolucija} funkcij $f_2$ in $f_1$, se pravi
 \[
-    (f_1 * f_2)(g) = \sum_{g_1, g_2 \in G \colon g_1 g_2 = g} f_1(g_1) f_2(g_2).
+    (f_2 * f_1)(g) = \sum_{g_1, g_2 \in G \colon g_2 g_1 = g} f_2(g_2) f_1(g_1).
 \]
 Torej velja
 \[
-    \EE_{f_1}(\rho) \cdot \EE_{f_2}(\rho) =
-    \EE_{f_1 * f_2}(\rho)
+    \widehat{f_1}(\rho) \cdot \widehat{f_2}(\rho) =
+    \widehat{f_2 * f_1}(\rho)
 \]
-in uteženo povprečje pretvarja konvolucijo funkcij v produkt linearnih preslikav.
+in Fourierova transformacija pretvarja konvolucijo funkcij v produkt linearnih preslikav, pri čemer moramo biti pozorni na vrstni red operacij zaradi morebitne nekomutativnosti grupe.
 
 Četrti princip harmonične analize je, da iz Fourierove transformacije izvlečemo podatke o začetni funkciji.
 
