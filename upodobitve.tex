@@ -1659,7 +1659,7 @@ V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija pa
 \]
 za $n \to \infty$. 
 
-V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 1$. Res smo našli natanko $3$ nerazcepne upodobitve grupe $S_3$. V primeru $n = 4$ pa velja $p(4) = 5$. Temu ustrezajo konjugiranostni razredi identične permutacije $()$ ($4 = 1 + 1 + 1 + 1$), transpozicije $(1 \ 2)$ ($4 = 2 + 1 + 1$), tricikla $(1 \ 2 \ 3)$ ($4 = 3 + 1$), štiricikla $(1 \ 2 \ 3 \ 4)$ ($4 = 4$) in produkta dveh tranzpozicij $(1 \ 2)(3 \ 4)$ ($4 = 2 + 2$).
+V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 1$. Res smo našli natanko $3$ nerazcepne upodobitve grupe $S_3$. V primeru $n = 4$ pa velja $p(4) = 5$. Temu ustrezajo konjugiranostni razredi identične permutacije $()$ ($4 = 1 + 1 + 1 + 1$), transpozicije $(1 \ 2)$ ($4 = 2 + 1 + 1$), tricikla $(1 \ 2 \ 3)$ ($4 = 3 + 1$), štiricikla $(1 \ 2 \ 3 \ 4)$ ($4 = 4$) in produkta dveh tranzpozicij $(1 \ 2)(3 \ 4)$ ($4 = 2 + 2$). Ti konjugiranostni razredi so zaporedoma velikosti $1$, $6$, $8$, $6$, $3$.
 \end{zgled}
 
 Ker nerazcepni karakterji tvorijo ortonormirano bazo prostora razrednih funkcij, lahko vsako razredno funkcijo $f \in \hom_{\cl}(G,F)$ razvijemo po tej bazi kot
@@ -1774,7 +1774,12 @@ Nazadnje je $||\chi_{\rho}|| = 1$, če in samo če je za natanko eno nerazcepno 
 \end{dokaz}
 
 \begin{zgled}
-Opazujmo grupo $S_4$ nad poljem $\CC$. Vemo že, da je število nerazcepnih upodobitev enako $5$. Določimo jih. \todo{}
+Opazujmo grupo $S_4$ nad poljem $\CC$. Vemo že, da za predstavnike konjugiranostnih razredov lahko izberemo elemente $1 = ()$, $(1 \ 2)$, $(1 \ 2 \ 3)$, $(1 \ 2 \ 3 \ 4)$ in $(1 \ 2)(3 \ 4)$. S tem je število nerazcepnih upodobitev enako $5$. Določimo jih. 
+
+Vemo že, da imamo natanko dve enorazsežni upodobitvi, in sicer $\11$ in $\sgn$. Naj bo $\pi$ permutacijska upodobitev na prostoru $\CC[\Omega]$, kjer je $\Omega = \{ 1,2,3,4 \}$. V standardni bazi je vsaka matrika te upodobitve permutacijska, zato je vrednost karakterja $\chi_{\pi}$ v permutaciji $\sigma$ ravno število fiksnih točk $\sigma$. V izbranih predstavnikih konjugiranostnih razredov ima torej $\chi_{\pi}$ vrednosti $4, 2, 1, 0, 0$. Od tod izračunamo normo
+\[
+    ||\chi_{\pi}||^2 = \frac{1}{4!} \left(  \right)
+\]
 \end{zgled}
 
 Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih projekcijskih spletičen najdemo izotipične komponente upodobitve. Za te seveda najprej potrebujemo vse nerazcepne karakterje.
@@ -1887,15 +1892,6 @@ in uteženo povprečje pretvarja konvolucijo funkcij v produkt linearnih preslik
 \subsection{$S_n$}
 
 \todo[inline]{
-- Maschke (projektor)
-- dekompozicija regularne upodobitve
-- nerazcepne upodobitve končnih abelovih grup
-- število karakterjev
-- ortogonalnost karakterjev
-- večkratnosti
-- kje najti upodobitve
-- projektorji na izo komponente
-- malo harmonične analize
 - abelove grupe, Dirichletov izrek
 - tabela karakterjev
 - $\GL_2(\FF_p)$
