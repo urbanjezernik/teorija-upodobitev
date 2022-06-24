@@ -46,7 +46,7 @@
 <strong> Urban Jezernik <br>
 Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-Zadnja posodobitev: 23. 06. 2022
+Zadnja posodobitev: 24. 06. 2022
 </div>
 
 <div class="kazalo">
@@ -99,8 +99,11 @@ Representation Theory of Groups</em></span>, American Mathematical
 Society, 2014.</span></p></li>
 <li><p><span>W. Fulton, J. Harris, <span><em>Representation Theory: A
 First Course</em></span>, Springer GTM 129, 2004.</span></p></li>
-<li><p><span>J. P. Serre, <span><em>Linear Representation of Finite
+<li><p><span>J. P. Serre, <span><em>Linear Representations of Finite
 Groups</em></span>, Springer GTM 42, 1977.</span></p></li>
+<li><p><span>P. Diaconis, <span><em>Group representations in probability
+and statistics</em></span>, Lecture notes - monograph series 11, i-192,
+1988.</span></p></li>
 </ul>
 <h1 id="temelji-teorije-upodobitev">Temelji teorije upodobitev</h1>
 <p>V tem poglavju bomo vzpostavili temelje teorije upodobitev. Spoznali
@@ -3540,6 +3543,56 @@ class="math display">\[\frac{\deg(\pi)}{|G|} \cdot
 <span class="math display">\[1_1 = \frac{1}{|G|} \sum_{\pi \in
 \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1) \cdot \chi_{\pi},\]</span> ki je
 le poseben primer druge ortogonalnostne relacije.</p>
+<p>Oglejmo si še karakteristično funkcijo <span
+class="math inline">\(1_x\)</span> za <span class="math inline">\(x \in
+G\)</span>. Njena projekcija na <span
+class="math inline">\(\pi\)</span>-izotipično komponento je <span
+class="math display">\[\frac{\deg(\pi)}{|G|} \cdot
+\widehat{\chi_{\pi}}(\rho_{\hom}) \cdot 1_x =
+    \frac{\deg(\pi)}{|G|} \cdot \left( g \mapsto \chi_{\pi}(x^{-1}g)
+\right),\]</span> s čimer dobimo razvoj <span
+class="math display">\[1_x(g) = \frac{1}{|G|} \sum_{\pi \in
+\mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1) \chi_{\pi}(x^{-1}
+g).\]</span></p>
+<p>Vsako funkcijo <span class="math inline">\(f \in \hom(G,F)\)</span>
+lahko razvijemo po karakterističnih funkcijah kot <span
+class="math inline">\(f = \sum_{x \in G} f(x) 1_x\)</span>. Ker že
+poznamo razvoj vsake od karaterističnih funkcij po <span
+class="math inline">\(\pi\)</span>-izotipičnih komponentah, od tod
+izpeljemo <span class="math display">\[f(g) = \frac{1}{|G|} \sum_{\pi
+\in \mathop{\mathrm{Irr}}(G)} \sum_{x \in G} f(x) \chi_{\pi}(1)
+\mathop{\mathrm{tr}}\left( \pi(x^{-1}) \cdot \pi(g) \right),\]</span>
+kar lahko po upoštevanju linearnosti sledi izrazimo kot <span
+class="math display">\[f(g) = \frac{1}{|G|} \sum_{\pi \in
+\mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1) \mathop{\mathrm{tr}}\left(
+\hat{f}(\pi) \cdot \pi(g) \right).\]</span> Temu razvoju funkcije <span
+class="math inline">\(f\)</span> po <span
+class="math inline">\(\pi\)</span>-izotipičnih komponentah rečemo
+<span><strong><em>Fourierova inverzija</em></strong></span>, saj nam
+ekplicitno pove, kako lahko <span class="math inline">\(f\)</span>
+izračunamo iz njenih Fourierovih transformacij v nerazcepnih
+upodobitvah.</p>
+<p>Fourierova inverzija je nekoliko asimetrična. To lahko popravimo
+tako, da jo uteženo povprečimo z neko drugo funkcijo <span
+class="math inline">\(h \in \hom(G,F)\)</span>. Dobimo <span
+class="math display">\[\sum_{g \in G} f(g) h(g^{-1}) = \frac{1}{|G|}
+\sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \sum_{g \in G} h(g^{-1})
+\chi_{\pi}(1) \mathop{\mathrm{tr}}\left( \hat{f}(\pi) \cdot \pi(g)
+\right),\]</span> kar lahko z enakim argumentom kot prej zapišemo kot
+<span class="math display">\[\langle f, h \rangle = \frac{1}{|G|^2}
+\sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1)
+\mathop{\mathrm{tr}}(\hat{f}(\pi) \cdot \hat{g}(\pi)).\]</span> Če torej
+uvedemo še skalarni produkt Fourierovih transformacij <span
+class="math inline">\(\hat{f}\)</span>, <span
+class="math inline">\(\hat{g}\)</span> s predpisom <span
+class="math display">\[\langle \hat{f}, \hat{g} \rangle =
+    \frac{1}{|G^2|} \sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \deg(\pi)
+\cdot \mathop{\mathrm{tr}}\left( \hat{f}(\pi) \cdot \hat{h}(\pi)
+\right),\]</span> lahko zadnjo enakost zapišemo kot <span
+class="math display">\[\langle f, g \rangle = \langle \hat{f}, \hat{g}
+\rangle.\]</span> Tej enakosti rečem <span><strong><em>Plancherelova
+formula</em></strong></span>, interpetiramo pa jo z rekom, da Fourierova
+transformacija ohranja skalarni produkt.</p>
 </div>
 <h3 id="harmonična-analiza">Harmonična analiza</h3>
 <p>Večina rezultatov v zvezi z upodobitvami končnih grup je temeljila na

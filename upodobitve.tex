@@ -1812,7 +1812,45 @@ S tem dobimo razvoj
     1_1 = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \cdot \chi_{\pi},
 \]
 ki je le poseben primer druge ortogonalnostne relacije.
-\todo{Dodaj projekcije $1_x$, zloži skupaj v projekcijo poljubne funkcije in s tem Fourierove inverzije, dodaj še drugo funkcijo in s tem Plancherelovo formulo (ohranjanje skalarnega produkta).}
+
+Oglejmo si še karakteristično funkcijo $1_x$ za $x \in G$. Njena projekcija na $\pi$-izotipično komponento je
+\[
+    \frac{\deg(\pi)}{|G|} \cdot \widehat{\chi_{\pi}}(\rho_{\hom}) \cdot 1_x = 
+    \frac{\deg(\pi)}{|G|} \cdot \left( g \mapsto \chi_{\pi}(x^{-1}g) \right),
+\]
+s čimer dobimo razvoj
+\[
+    1_x(g) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \chi_{\pi}(x^{-1} g).
+\]
+
+Vsako funkcijo $f \in \hom(G,F)$ lahko razvijemo po karakterističnih funkcijah kot $f = \sum_{x \in G} f(x) 1_x$. Ker že poznamo razvoj vsake od karaterističnih funkcij po $\pi$-izotipičnih komponentah, od tod izpeljemo
+\[
+    f(g) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{x \in G} f(x) \chi_{\pi}(1) \tr \left( \pi(x^{-1}) \cdot \pi(g) \right),
+\]
+kar lahko po upoštevanju linearnosti sledi izrazimo kot 
+\[
+    f(g) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right).
+\]
+Temu razvoju funkcije $f$ po $\pi$-izotipičnih komponentah rečemo {\definicija Fourierova inverzija}, saj nam ekplicitno pove, kako lahko $f$ izračunamo iz njenih Fourierovih transformacij v nerazcepnih upodobitvah.
+
+Fourierova inverzija je nekoliko asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko drugo funkcijo $h \in \hom(G,F)$. Dobimo
+\[
+    \sum_{g \in G} f(g) h(g^{-1}) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{g \in G} h(g^{-1}) \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right),
+\]
+kar lahko z enakim argumentom kot prej zapišemo kot
+\[
+    \langle f, h \rangle = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr(\hat{f}(\pi) \cdot \hat{g}(\pi)).
+\]
+Če torej uvedemo še skalarni produkt Fourierovih transformacij $\hat{f}$, $\hat{g}$ s predpisom
+\[
+    \langle \hat{f}, \hat{g} \rangle = 
+    \frac{1}{|G^2|} \sum_{\pi \in \Irr(G)} \deg(\pi) \cdot \tr \left( \hat{f}(\pi) \cdot \hat{h}(\pi) \right),
+\]
+lahko zadnjo enakost zapišemo kot
+\[
+    \langle f, g \rangle = \langle \hat{f}, \hat{g} \rangle.
+\]
+Tej enakosti rečem {\definicija Plancherelova formula}, interpetiramo pa jo z rekom, da Fourierova transformacija ohranja skalarni produkt.
 \end{zgled}
 
 \subsection{Harmonična analiza}
