@@ -1779,9 +1779,13 @@ Vemo že, da imamo natanko dve enorazsežni upodobitvi, in sicer $\11$ in $\sgn$
 \todo{}
 \end{zgled}
 
+\subsection{Izotipične projekcije}
+
 Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih projekcijskih spletičen najdemo izotipične komponente upodobitve. Za te seveda najprej potrebujemo vse nerazcepne karakterje.
 
-Take projekcije ni težko najti za $\11$-izotipično komponento. Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad ugodnim poljem. Povprečna vrednost upodobitve $\EE(\rho)$ je projekcijska spletična v $\hom_G(V,V)$ na podprostor fiksnih vektorjev $V^G$, se pravi na $\11$-izotipično komponento v $V$. Za splošnejše izotipične komponente uporabimo utežena povprečja, se pravi Fourierovo transformacijo.
+Take projekcije ni težko najti za $\11$-izotipično komponento. Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad ugodnim poljem. Povprečna vrednost upodobitve $\EE(\rho)$ je projekcijska spletična v $\hom_G(V,V)$ na podprostor fiksnih vektorjev $V^G$, se pravi na $\11$-izotipično komponento v $V$. 
+
+Za splošnejše izotipične komponente uporabimo utežena povprečja, se pravi Fourierovo transformacijo.
     
 \begin{trditev}
 Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Za vsako končnorazsežno upodobitev $\rho$ in nerazcepno upodobitev $\pi$ je
@@ -1832,30 +1836,13 @@ kar lahko po upoštevanju linearnosti sledi izrazimo kot
     f(g) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right).
 \]
 Temu razvoju funkcije $f$ po $\pi$-izotipičnih komponentah rečemo {\definicija Fourierova inverzija}, saj nam ekplicitno pove, kako lahko $f$ izračunamo iz njenih Fourierovih transformacij v nerazcepnih upodobitvah.
-
-Fourierova inverzija je nekoliko asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko drugo funkcijo $h \in \hom(G,F)$. Dobimo
-\[
-    \sum_{g \in G} f(g) h(g^{-1}) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{g \in G} h(g^{-1}) \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right),
-\]
-kar lahko z enakim argumentom kot prej zapišemo kot
-\[
-    \langle f, h \rangle = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr(\hat{f}(\pi) \cdot \hat{g}(\pi)).
-\]
-Če torej uvedemo še skalarni produkt Fourierovih transformacij $\hat{f}$, $\hat{g}$ s predpisom
-\[
-    \langle \hat{f}, \hat{g} \rangle = 
-    \frac{1}{|G^2|} \sum_{\pi \in \Irr(G)} \deg(\pi) \cdot \tr \left( \hat{f}(\pi) \cdot \hat{h}(\pi) \right),
-\]
-lahko zadnjo enakost zapišemo kot
-\[
-    \langle f, g \rangle = \langle \hat{f}, \hat{g} \rangle.
-\]
-Tej enakosti rečem {\definicija Plancherelova formula}, interpetiramo pa jo z rekom, da Fourierova transformacija ohranja skalarni produkt.
 \end{zgled}
 
 \subsection{Harmonična analiza}
 
-Večina rezultatov v zvezi z upodobitvami končnih grup je temeljila na uteženem povprečju. {\definicija Harmonična analiza} v kontekstu končnih grup je teorija, ki se ubada z globljim razumevanjem uteženih povprečij oziroma Fourierove transformacije in z aplikacijami, ki same po sebi niti niso izražene v jeziku teorije upodobitev. V tem razdelku si bomo na primeru pogledali del te zgodbe.
+Večina rezultatov v zvezi z upodobitvami končnih grup je temeljila na uteženem povprečju. {\definicija Harmonična analiza} v kontekstu končnih grup je teorija, ki se ubada z globljim razumevanjem uteženih povprečij oziroma Fourierove transformacije in z aplikacijami, ki same po sebi niti niso izražene v jeziku teorije upodobitev. V tem razdelku si bomo na dveh primerih pogledali del te zgodbe. Obakrat bomo vzeli problem, ki a priori nima nobene povezave s teorijo upodobitev, in pokazali, kako ga lahko izrazimo in tudi razrešimo s pomočjo karakterjev. Ne bomo zamudili priložnosti, da vzporedno razvijemo še nekaj dodatnih lastnosti Fourierove transformacije.
+
+\subsubsection{Komutatorji}
 
 Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, ki so komutatorji\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$.} v $G$, se pravi
 \[
@@ -1901,8 +1888,35 @@ in Fourierova transformacija pretvarja konvolucijo funkcij v produkt linearnih p
 
 
 \todo[inline]{
-    - frobeniusova formula za komutatorje (tu rabimo izotipične komponente)
+    - frobeniusova formula za komutatorje
+    - Gowers: podmnožice brez produktov (dokaz Eberhard)
 }
+
+\subsubsection{Podmnožice brez produktov}
+
+Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je podgrupa, če in samo če je zaprta za množenje, se pravi $A \cdot A \subseteq A$. Skrajno diametralno tej strukturi se znajdemo, če predpostavimo, da produkt \emph{nobenih} dveh elementov iz množice $A$ ne pripada $A$, se pravi $A \cdot A \cap A = \emptyset$. V tem primeru rečemo, da je množica $A$ {\definicija brez produktov}. Če smo v teoriji grup malodane obsedeni s strukturiranimi množicami, nas mora vsaj malo tudi zanimati tudi druga skrajnost. Kadar množica $A$ vsebuje kakšno podgrupo, seveda \emph{ni} brez produktov, zato se morajo take množice čim bolj izogniti podgrupam. Osnovno vprašanje v zvezi z množicami brez produktov je, kako velike podmnožice brez produktov dana grupa vsebuje. 
+
+\begin{zgled}
+    Fourierova inverzija je nekoliko asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko drugo funkcijo $h \in \hom(G,F)$. Dobimo
+    \[
+        \sum_{g \in G} f(g) h(g^{-1}) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{g \in G} h(g^{-1}) \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right),
+    \]
+    kar lahko z enakim argumentom kot prej zapišemo kot
+    \[
+        \langle f, h \rangle = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr(\hat{f}(\pi) \cdot \hat{h}(\pi)).
+    \]
+    Če torej uvedemo še skalarni produkt Fourierovih transformacij $\hat{f}$, $\hat{h}$ s predpisom
+    \[
+        \langle \hat{f}, \hat{h} \rangle = 
+        \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \deg(\pi) \cdot \tr \left( \hat{f}(\pi) \cdot \hat{h}(\pi) \right),
+    \]
+    lahko zadnjo enakost zapišemo kot
+    \[
+        \langle f, g \rangle = \langle \hat{f}, \hat{g} \rangle.
+    \]
+    Tej enakosti rečemo {\definicija Plancherelova formula}, interpetiramo pa jo z rekom, da Fourierova transformacija ohranja skalarni produkt.
+    \todo{Nad $\CC$: zapiši s Hilbert-Schmidtovo normo.}
+\end{zgled}
 
 
 \section{Razširjeni zgledi}
