@@ -1479,6 +1479,7 @@ V posebnem iz izreka po primerjavi razsežnosti izpeljemo
 
 \begin{zgled}
 Opazujmo permutacijsko upodobitev $\pi$ grupe $\ZZ/n\ZZ$ na prostoru $\CC[\Omega]$, kjer je $\Omega = \{ 1, 2, \dots, n \}$. Premislili smo že, da je $\pi$ izomorfna regularni upodobitvi in da jo lahko razstavimo kot direktno vsoto $\pi = \bigoplus_{j \in \Omega} \chi_j$, kjer je $\chi_j \colon \ZZ/n\ZZ \to \CC^*$, $x \mapsto e^{2 \pi i j x / n}$, enorazsežna upodobitev. V posebnem od tod sledi, da so $\{ \chi_j \mid j \in \Omega \}$ \emph{vse} neizomorfne nerazcepne upodobitve ciklične grupe $\ZZ/n\ZZ$.
+\todo{upodobitve abelovih grup nasploh: strukturni izrek, produk upodobitev, te so različne med sabo in jih je ravno toliko kot moč grupe}
 \end{zgled}
 
 \subsection{Ortogonalnost matričnih koeficientov}
@@ -1682,67 +1683,6 @@ Karakteristično funkcijo $1_{h^G}$ razvijemo po nerazcepnih karakterjih kot
 in dobljeno evalviramo v elementu $g$.
 \end{dokaz}
 
-\subsection{Kompleksni karakterji in stopnje}
-
-Omenimo še eno lastnost karakterjev upodobitev naj naugodnejšim poljem $\CC$. Njihove vrednosti namreč niso čisto poljubna kompleksna števila, temveč so algebraična cela števila\footnote{{\definicija Algebraično celo število} je kompleksno število, ki je ničla moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih celih števil označimo z $\bar{\ZZ}$. Ni se težko prepričati, da $\bar{\ZZ}$ tvori kolobar in da velja $\QQ \cap \bar{\ZZ} = \ZZ$.} omejene absolutne vrednosti. 
-
-\begin{trditev}
-Naj bo $G$ končna grupa. Za vsako nerazcepno kompleksno upodobitev $\pi$ in vsak $g \in G$ je
-\[
-    |\chi_{\pi}(g)| \leq \deg(\pi), \quad
-    \chi_{\pi}(g) \in \bar{\ZZ}, \quad
-    \chi_{\pi}(g^{-1}) = \overline{\chi_{\pi}(g)}. 
-\] 
-\end{trditev}
-\begin{dokaz}
-Če je $g \in G$ in $\pi \in \Irr(G)$, potem je $\pi(g^{|G|}) = \pi(1) = \id$, zato je $\pi(g)$ linearna preslikava končnega reda. Take preslikave so diagonalizabilne.\footnote{Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\pi(g)$.} V posebnem je zato vsaka lastna vrednost $\lambda \in \Eig(\pi(g))$ končnega reda v $\CC^*$. S tem je seveda
-\[
-    \chi_{\pi}(g) = \sum_{\lambda \in \Eig(\pi(g))} \lambda \in \bar{\ZZ},
-    \quad
-    |\chi_{\pi}(g)| \leq \sum_{\lambda \in \Eig(\pi(g))} |\lambda| = \deg(\pi)
-\]
-in hkrati
-\[
-    \chi_{\pi}(g^{-1}) = \sum_{\lambda \in \Eig(\pi(g))} \lambda^{-1}
-    = \sum_{\lambda \in \Eig(\pi(g))} \overline{\lambda}
-    = \overline{\chi_{\pi}(g)}.
-\]
-\end{dokaz}
-
-S pomočjo te restriktivne lastnosti vrednosti karakterjev lahko izpeljemo pomembno lastnost stopenj nerazcepnih kompleksnih upodobitev.
-
-\begin{izrek}[o stopnjah upodobitev]
-Stopnja vsake nerazcepne kompleksne upodobitve končne grupe deli moč grupe.
-\end{izrek}
-
-Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, in sicer je to lema o Fourierovi transformaciji razredne funkcije. Ko funkcija, vzdolž katere izvedemo transformacijo, slika v kolobar algebraičnih celih števil, lahko lemo o Fourierovi transformaciji razredne funkcije zaostrimo na naslednji način.
-
-    \begin{lema}
-    Naj bo $G$ končna grupa. Za vsako funkcijo $f \in \hom_{\cl}(G, \bar{\ZZ})$ in nerazcepno upodobitev $\pi$ nad $\CC$ in je $\hat{f}(\pi)$ skalarno množenje z algebraičnim celim številom.
-    \end{lema}
-    \begin{dokaz}
-    Vemo že, da je $\hat{f}(\pi)$ skalarno množenje s številom
-    \[
-        \frac{|G|}{\deg(\pi)} \cdot \langle f, \chi_{\pi} \rangle.
-    \]
-    Preveriti moramo torej, da je to algebraično celo število. Funkcijo $f$ lahko razvijemo kot vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v $\bar{\ZZ}$. Ker $\bar{\ZZ}$ tvori kolobar, bo torej trditev dovolj preveriti za primer, ko je $f = 1_{\conclass}$ za nek konjugiranostni razred $\conclass$ v $G$.
-    
-    Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in s tem linearno preslikavo $\widehat{1_{\conclass}}(\rho_{\hom})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, ta preslikava deluje kot $\widehat{1_{\conclass}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\widehat{1_{\conclass}}(\rho_{\hom})$.
-    
-    Vemo že, da $\widehat{1_{\conclass}}(\rho_{\hom})$ deluje na naravni bazi iz karakterističnih funkcij $1_x$ za $x \in G$ kot
-    \[
-        \widehat{1_{\conclass}}(\rho_{\hom}) \cdot 1_x = \sum_{g \in G} 1_{\conclass}(x^{-1} g) 1_g \in \hom(G, \{ 0, 1 \}).
-    \]
-    V tej bazi ima torej $\widehat{1_{\conclass}}(\rho_{\hom})$ matriko s koeficienti v množici $\{ 0, 1 \}$. Karakteristični polinom te matrike ima zato celoštevilske koeficiente, torej so lastne vrednosti preslikave $\widehat{1_{\conclass}}(\rho_{\hom})$ algebraična cela števila.
-    \end{dokaz}
-    
-    \begin{dokaz}[Dokaz izreka o stopnjah upodobitev]
-    Naj bo $\pi \in \Irr(G)$. Uporabimo lemo s funkcijo $f = \chi_{\pi}$ in zaključimo
-    \[
-        \frac{|G|}{\deg(\pi)} \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ} \cap \QQ = \ZZ.
-    \]
-    \end{dokaz}
-
 \subsection{Razstavljanje upodobitve}
 
 S pomočjo ortonormirane baze karakterjev lahko z lahkoto razumemo vsako končnorazsežno upodobitev končne grupe nad ugodnim poljem.
@@ -1778,6 +1718,7 @@ Vemo že, da imamo natanko dve enorazsežni upodobitvi, in sicer $\11$ in $\sgn$
 \]
 \todo{}
 \end{zgled}
+
 
 \subsection{Izotipične projekcije}
 
@@ -1838,33 +1779,96 @@ kar lahko po upoštevanju linearnosti sledi izrazimo kot
 Temu razvoju funkcije $f$ po $\pi$-izotipičnih komponentah rečemo {\definicija Fourierova inverzija}, saj nam ekplicitno pove, kako lahko $f$ izračunamo iz njenih Fourierovih transformacij v nerazcepnih upodobitvah.
 \end{zgled}
 
-\subsection{Harmonična analiza}
+\subsection{Kompleksne upodobitve}
+
+Omenimo še eno lastnost karakterjev upodobitev naj najugodnejšim poljem $\CC$. Njihove vrednosti namreč niso čisto poljubna kompleksna števila, temveč so algebraična cela števila\footnote{{\definicija Algebraično celo število} je kompleksno število, ki je ničla moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih celih števil označimo z $\bar{\ZZ}$. Ni se težko prepričati, da $\bar{\ZZ}$ tvori kolobar in da velja $\QQ \cap \bar{\ZZ} = \ZZ$.} omejene absolutne vrednosti. 
+
+\begin{trditev}
+Naj bo $G$ končna grupa. Za vsako nerazcepno kompleksno upodobitev $\pi$ in vsak $g \in G$ je
+\[
+    |\chi_{\pi}(g)| \leq \deg(\pi), \quad
+    \chi_{\pi}(g) \in \bar{\ZZ}, \quad
+    \chi_{\pi}(g^{-1}) = \overline{\chi_{\pi}(g)}. 
+\] 
+\end{trditev}
+\begin{dokaz}
+Če je $g \in G$ in $\pi \in \Irr(G)$, potem je $\pi(g^{|G|}) = \pi(1) = \id$, zato je $\pi(g)$ linearna preslikava končnega reda. Take preslikave so diagonalizabilne.\footnote{Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\pi(g)$.} V posebnem je zato vsaka lastna vrednost $\lambda \in \Eig(\pi(g))$ končnega reda v $\CC^*$. S tem je seveda
+\[
+    \chi_{\pi}(g) = \sum_{\lambda \in \Eig(\pi(g))} \lambda \in \bar{\ZZ},
+    \quad
+    |\chi_{\pi}(g)| \leq \sum_{\lambda \in \Eig(\pi(g))} |\lambda| = \deg(\pi)
+\]
+in hkrati
+\[
+    \chi_{\pi}(g^{-1}) = \sum_{\lambda \in \Eig(\pi(g))} \lambda^{-1}
+    = \sum_{\lambda \in \Eig(\pi(g))} \overline{\lambda}
+    = \overline{\chi_{\pi}(g)}.
+\]
+\end{dokaz}
+
+S pomočjo te restriktivne lastnosti vrednosti karakterjev lahko izpeljemo pomembno lastnost stopenj nerazcepnih kompleksnih upodobitev.
+
+\begin{izrek}[o stopnjah upodobitev]
+Stopnja vsake nerazcepne kompleksne upodobitve končne grupe deli moč grupe.
+\end{izrek}
+
+Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, in sicer je to lema o Fourierovi transformaciji razredne funkcije. Ko funkcija, vzdolž katere izvedemo transformacijo, slika v kolobar algebraičnih celih števil, lahko lemo o Fourierovi transformaciji razredne funkcije zaostrimo na naslednji način.
+
+    \begin{lema}
+    Naj bo $G$ končna grupa. Za vsako funkcijo $f \in \hom_{\cl}(G, \bar{\ZZ})$ in nerazcepno upodobitev $\pi$ nad $\CC$ in je $\hat{f}(\pi)$ skalarno množenje z algebraičnim celim številom.
+    \end{lema}
+    \begin{dokaz}
+    Vemo že, da je $\hat{f}(\pi)$ skalarno množenje s številom
+    \[
+        \frac{|G|}{\deg(\pi)} \cdot \langle f, \chi_{\pi} \rangle.
+    \]
+    Preveriti moramo torej, da je to algebraično celo število. Funkcijo $f$ lahko razvijemo kot vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v $\bar{\ZZ}$. Ker $\bar{\ZZ}$ tvori kolobar, bo torej trditev dovolj preveriti za primer, ko je $f = 1_{\conclass}$ za nek konjugiranostni razred $\conclass$ v $G$.
+    
+    Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in s tem linearno preslikavo $\widehat{1_{\conclass}}(\rho_{\hom})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, ta preslikava deluje kot $\widehat{1_{\conclass}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\widehat{1_{\conclass}}(\rho_{\hom})$.
+    
+    Vemo že, da $\widehat{1_{\conclass}}(\rho_{\hom})$ deluje na naravni bazi iz karakterističnih funkcij $1_x$ za $x \in G$ kot
+    \[
+        \widehat{1_{\conclass}}(\rho_{\hom}) \cdot 1_x = \sum_{g \in G} 1_{\conclass}(x^{-1} g) 1_g \in \hom(G, \{ 0, 1 \}).
+    \]
+    V tej bazi ima torej $\widehat{1_{\conclass}}(\rho_{\hom})$ matriko s koeficienti v množici $\{ 0, 1 \}$. Karakteristični polinom te matrike ima zato celoštevilske koeficiente, torej so lastne vrednosti preslikave $\widehat{1_{\conclass}}(\rho_{\hom})$ algebraična cela števila.
+    \end{dokaz}
+    
+    \begin{dokaz}[Dokaz izreka o stopnjah upodobitev]
+    Naj bo $\pi \in \Irr(G)$. Uporabimo lemo s funkcijo $f = \chi_{\pi}$ in zaključimo
+    \[
+        \frac{|G|}{\deg(\pi)} \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ} \cap \QQ = \ZZ.
+    \]
+    \end{dokaz}
+
+\todo{Skalarni produkt, unitarizabilnost, omeni Maschkeja nad $\CC$, o HS normi pri Plancherelovi formuli.}
+
+\section{Razširjeni zgledi}
+
+\subsection{\GAP}
+
+\todo[inline]{
+    - izračunljivost tabele karakterjev Proposition 4.6.2
+    - konkreten zgled, pokaži, kaj vse se da prebrati o grupi iz tega zgleda, morda $\GL_2(\FF_2)$ in $S_5$
+    - upodobitve v potencah: vključi kakšen preprost zgled; omeni, da gre za to, da ni treba razstavljati regularne upodobitve; ta zgled lahko potem kasneje razširimo z \GAP.
+}
+
+\subsection{$\GL_2(\FF_p)$}
+
+\subsection{$S_n$}
+
+\todo[inline]{
+- $\GL_2(\FF_p)$
+- simetrične grupe (!!!, napiši tabelo za $S_5$)
+- ? mixing in simetrične grupe (konkreten primer, simetrična grupa $S_5$, matrika sosednosti (katero mešanje?), spletična, lastne vrednosti po komponentah, kako dolgo moramo mešati?)
+}
+
+\section{Aplikacije}
 
 Večina rezultatov v zvezi z upodobitvami končnih grup je temeljila na uteženem povprečju. {\definicija Harmonična analiza} v kontekstu končnih grup je teorija, ki se ubada z globljim razumevanjem uteženih povprečij oziroma Fourierove transformacije in z aplikacijami, ki same po sebi niti niso izražene v jeziku teorije upodobitev. V tem razdelku si bomo na dveh primerih pogledali del te zgodbe. Obakrat bomo vzeli problem, ki a priori nima nobene povezave s teorijo upodobitev, in pokazali, kako ga lahko izrazimo in tudi razrešimo s pomočjo karakterjev. Ne bomo zamudili priložnosti, da vzporedno razvijemo še nekaj dodatnih lastnosti Fourierove transformacije.
 
-\subsubsection{Komutatorji}
+\subsection{Aritmetična zaporedja}
 
-Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, ki so komutatorji\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$.} v $G$, se pravi
-\[
-    K(G) = \{ [x,y] \mid x,y \in G \}.
-\]
-Ta množica v splošnem \emph{ni} podgrupa, zato je teoriji grup vsekakor v interesu, da bi razumela, kdaj dan element $g \in G$ pripada množici $K(G)$. Lahko smo celo bolj natančni in se vprašamo, na koliko načinov lahko $g$ zapišemo kot komutator. V ta namen predpišimo funkcijo
-\[
-    N \colon G \to \NN_0, \quad
-    g \mapsto |\{ (x,y) \in G \times G \mid g = [x,y] \}|.
-\]
-Funkcijo $N$ obravnavajmo kot element prostora $\hom(G,\CC)$. 
-
-Prvi princip harmonične analize je, da lahko vsako \emph{razredno} funkcijo razumemo s pomočjo močnih orodij teorije upodobitev. Da to drži v konkretnem primeru funkcije $N$, se ni težko prepričati. Za vsak $z \in G$ namreč velja $[z x z^{-1}, z y z^{-1}] = z [x,y] z^{-1}$, torej vsak par $(x,y)$ z lastnostjo $[x,y] = g$ porodi par $(z x z^{-1}, z y z^{-1})$ z lastnostjo $[z x z^{-1}, z y z^{-1}] = z g z^{-1}$. S tem je $N(g) = N(z g z^{-1})$.
-
-Drugi princip harmonične analize je, da dano razredno funkcijo zapišemo karseda neodvisno od predstavnikov konjugiranostnih razredov. Našo funkcijo $N$ bomo zato prepisali v malo bolj nenavadno obliko, ki pa nam bo dobro služila v nadaljevanju. Recimo, da za elementa $x,y \in G$ velja $[x,y] = g$. To enakost interpretiramo kot $x^{-1} \cdot y^{-1} x y = g$, torej je $g$ zapisan kot produkt elementa $x^{-1}$ in elementa, ki je konjugiran $x$. Vsakemu takemu paru $(x,y)$ lahko zato priredimo konjugiranostni razred $\conclass = x^G$ in elementa $a = x^{-1} \in \conclass^{-1}$ ter $b = y^{-1} x y \in \conclass$, za katera velja $a \cdot b = g$. S tem smo opisali prirejanje
-\[
-    \{ (x,y) \in G \times G \mid g = [x,y] \} \to 
-    \{ (\conclass, a, b) \mid \conclass = (a^{-1})^G, \ b \in \conclass,\ a \cdot b = g \}.
-\]
-To prirejanje \emph{ni} injektivno. \todo{}
-
-Tretji princip harmonične analize je, da z novim zapisom uporabimo Fourierovo transformacijo, ki jo karseda dokončno izračunamo.
+\todo[inline]{Roth kot primer za abelove grupe (omeni Bloom etc sodobne rezultate)}
 
 Naj bosta $f_1, f_2 \in \hom(G,F)$ funkciji in $\rho$ upodobitev grupe $G$. Kompozicija Fourierovih transformacij $\widehat{f_1}(\rho) \cdot \widehat{f_2}(\rho)$ je enaka
 \[
@@ -1882,19 +1886,13 @@ Torej velja
 \]
 in Fourierova transformacija pretvarja konvolucijo funkcij v produkt linearnih preslikav, pri čemer moramo biti pozorni na vrstni red operacij zaradi morebitne nekomutativnosti grupe.
 
-Četrti princip harmonične analize je, da iz Fourierove transformacije izvlečemo podatke o začetni funkciji.
+\subsection{Podmnožice brez produktov}
 
-
-
-
-\todo[inline]{
-    - frobeniusova formula za komutatorje
-    - Gowers: podmnožice brez produktov (dokaz Eberhard)
-}
-
-\subsubsection{Podmnožice brez produktov}
+\todo[inline]{Gowers kot nekomutativna posplošitev (omeni Babai)}
 
 Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je podgrupa, če in samo če je zaprta za množenje, se pravi $A \cdot A \subseteq A$. Skrajno diametralno tej strukturi se znajdemo, če predpostavimo, da produkt \emph{nobenih} dveh elementov iz množice $A$ ne pripada $A$, se pravi $A \cdot A \cap A = \emptyset$. V tem primeru rečemo, da je množica $A$ {\definicija brez produktov}. Če smo v teoriji grup malodane obsedeni s strukturiranimi množicami, nas mora vsaj malo tudi zanimati tudi druga skrajnost. Kadar množica $A$ vsebuje kakšno podgrupo, seveda \emph{ni} brez produktov, zato se morajo take množice čim bolj izogniti podgrupam. Osnovno vprašanje v zvezi z množicami brez produktov je, kako velike podmnožice brez produktov dana grupa vsebuje. 
+
+\todo{Dodaj zgled iz Eberhard (one-sided mixing) o množici brez produktov v $S_n$.}
 
 \begin{zgled}
     Fourierova inverzija je nekoliko asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko drugo funkcijo $h \in \hom(G,F)$. Dobimo
@@ -1918,37 +1916,40 @@ Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je p
     \todo{Nad $\CC$: zapiši s Hilbert-Schmidtovo normo.}
 \end{zgled}
 
+\subsection{Slučajni sprehodi}
 
-\section{Razširjeni zgledi}
+\todo{Fourier diagonalizira matriko sosednosti (Diaconis, str. 48).}
 
-\subsection{Abelove grupe}
+\subsection{Komutatorji}
 
-\todo[inline]{
-    - dualnost, Fourier
-    - Dirichleta izpustimo ...
-    - Diaconis str 48 (random walks)
-}
+\todo[inline]{??? čisto nekomutativen problem: komutatorji; Frobeniusova formula, omeni LOST Ore domneva}
 
-\subsection{\GAP}
+Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, ki so komutatorji\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$.} v $G$, se pravi
+\[
+    K(G) = \{ [x,y] \mid x,y \in G \}.
+\]
+Ta množica v splošnem \emph{ni} podgrupa, zato je teoriji grup vsekakor v interesu, da bi razumela, kdaj dan element $g \in G$ pripada množici $K(G)$. Lahko smo celo bolj natančni in se vprašamo, na koliko načinov lahko $g$ zapišemo kot komutator. V ta namen predpišimo funkcijo
+\[
+    N \colon G \to \NN_0, \quad
+    g \mapsto |\{ (x,y) \in G \times G \mid g = [x,y] \}|.
+\]
+Funkcijo $N$ obravnavajmo kot element prostora $\hom(G,\CC)$. 
 
-\todo[inline]{
-    - izračunljivost tabele karakterjev Proposition 4.6.2
-    - konkreten zgled, pokaži, kaj vse se da prebrati o grupi iz tega zgleda, morda $\GL_2(\FF_2)$ in $S_5$
-    - upodobitve v potencah: vključi kakšen preprost zgled; omeni, da gre za to, da ni treba razstavljati regularne upodobitve; ta zgled lahko potem kasneje razširimo z \GAP.
-}
+Prvi princip harmonične analize je, da lahko vsako \emph{razredno} funkcijo razumemo s pomočjo močnih orodij teorije upodobitev. Da to drži v konkretnem primeru funkcije $N$, se ni težko prepričati. Za vsak $z \in G$ namreč velja $[z x z^{-1}, z y z^{-1}] = z [x,y] z^{-1}$, torej vsak par $(x,y)$ z lastnostjo $[x,y] = g$ porodi par $(z x z^{-1}, z y z^{-1})$ z lastnostjo $[z x z^{-1}, z y z^{-1}] = z g z^{-1}$. S tem je $N(g) = N(z g z^{-1})$.
 
-\subsection{$\GL_2(\FF_p)$}
+Drugi princip harmonične analize je, da dano razredno funkcijo zapišemo karseda neodvisno od predstavnikov konjugiranostnih razredov. Našo funkcijo $N$ bomo zato prepisali v malo bolj nenavadno obliko, ki pa nam bo dobro služila v nadaljevanju. Recimo, da za elementa $x,y \in G$ velja $[x,y] = g$. To enakost interpretiramo kot $x^{-1} \cdot y^{-1} x y = g$, torej je $g$ zapisan kot produkt elementa $x^{-1}$ in elementa, ki je konjugiran $x$. Vsakemu takemu paru $(x,y)$ lahko zato priredimo konjugiranostni razred $\conclass = x^G$ in elementa $a = x^{-1} \in \conclass^{-1}$ ter $b = y^{-1} x y \in \conclass$, za katera velja $a \cdot b = g$. S tem smo opisali prirejanje
+\[
+    \{ (x,y) \in G \times G \mid g = [x,y] \} \to 
+    \{ (\conclass, a, b) \mid \conclass = (a^{-1})^G, \ b \in \conclass,\ a \cdot b = g \}.
+\]
+To prirejanje \emph{ni} injektivno. \todo{}
 
-\subsection{$S_n$}
+Tretji princip harmonične analize je, da z novim zapisom uporabimo Fourierovo transformacijo, ki jo karseda dokončno izračunamo.
 
-\todo[inline]{
-- abelove grupe, Dirichletov izrek
-- tabela karakterjev
-- $\GL_2(\FF_p)$
-- burnside two primes theorem (najbrž izpustimo, brez veze)
-- simetrične grupe (!!!, napiši tabelo za $S_5$)
-- ? mixing in simetrične grupe (konkreten primer, simetrična grupa $S_5$, matrika sosednosti (katero mešanje?), spletična, lastne vrednosti po komponentah, kako dolgo moramo mešati?)
-}
+Četrti princip harmonične analize je, da iz Fourierove transformacije izvlečemo podatke o začetni funkciji.
+
+
+
 
 \chapter{Upodobitve linearnih grup}
 
