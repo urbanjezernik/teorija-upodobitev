@@ -4111,6 +4111,9 @@ href="#fnref43" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
         var tables = document.getElementsByTagName("table");
         for(var i = 0; i < tables.length; ++i){
             tables[i].className += "table table-striped";
+            old_html = tables[i].outerHTML;
+            new_html = "<div class='table-responsive'>" + old_html + "</div>";
+            tables[i].outerHTML = new_html;
         }
     </script>
     <script>
