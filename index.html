@@ -46,7 +46,7 @@
 <strong> Urban Jezernik <br>
 Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-Zadnja posodobitev: 26. 06. 2022
+Zadnja posodobitev: 27. 06. 2022
 </div>
 
 <div class="kazalo">
@@ -3365,8 +3365,164 @@ karakterja <span class="math inline">\(\chi_{\pi}\)</span> v permutaciji
 konjugiranostnih razredov ima torej <span
 class="math inline">\(\chi_{\pi}\)</span> vrednosti <span
 class="math inline">\(4, 2, 1, 0, 0\)</span>. Od tod izračunamo normo
-<span class="math display">\[||\chi_{\pi}||^2 = \frac{1}{4!}
-\left(  \right)\]</span></p>
+<span class="math display">\[||\chi_{\pi}||^2 = \frac{1}{4!} \left( 1
+\cdot 4^2 + 6 \cdot 2^2 + 8 \cdot 1^2  \right)
+    = 2.\]</span> Upodobitev <span
+class="math inline">\(\chi_{\pi}\)</span> torej <em>ni</em> nerazcepna.
+Velja <span class="math display">\[\langle \chi_{\pi}, \chi_{\mathbf{1}}
+\rangle = \frac{1}{4!} \left( 1 \cdot 4 + 6 \cdot 2 + 8 \cdot 1 \right)
+= 1,\]</span> torej <span class="math inline">\(\pi\)</span> vsebuje
+<span class="math inline">\(\mathbf{1}\)</span> z večkratnostjo <span
+class="math inline">\(1\)</span>, kar je povsem analogno temu, kar smo
+videli pri grupi <span class="math inline">\(S_3\)</span>. Zapišemo
+lahko torej <span class="math inline">\(\pi = \mathbf{1} \oplus
+\rho\)</span> za neko upodobitev <span
+class="math inline">\(\rho\)</span>. Njen karakter ima vrednosti <span
+class="math inline">\(3,1,0,-1,-1\)</span> in s tem normo <span
+class="math display">\[||\chi_{\rho}||^2 = \frac{1}{4!} \left( 1 \cdot
+3^2 + 6 \cdot 1^2 + 6 \cdot (-1)^2 + 3 \cdot (-1)^2 \right) =
+1,\]</span> zato je upodobitev <span class="math inline">\(\rho\)</span>
+nerazcepna.</p>
+<p>Zaenkrat imamo tri nerazcepne upodobitve stopenj <span
+class="math inline">\(1,1,3\)</span>. Iščemo torej še dve nerazcepni
+upodobitvi, katerih vsote kvadratov stopenj so enake <span
+class="math inline">\(24 - (1^2 + 1^2 + 3^2) = 13\)</span>. Stopnji teh
+dveh neznanih upodobitev sta zato nujno enaki <span
+class="math inline">\(2\)</span> in <span
+class="math inline">\(3\)</span>. Ker že imamo eno nerazcepno upodobitev
+stopnje <span class="math inline">\(3\)</span>, lahko iz nje pridelamo
+novo s tenzoriranjem z upodobitvijo stopnje <span
+class="math inline">\(1\)</span>. Dobimo upodobitev <span
+class="math inline">\(\mathop{\mathrm{sgn}}\otimes \rho\)</span>. Njen
+karakter ima vrednosti <span class="math inline">\(3,-1,0,1,-1\)</span>
+in s tem normo <span class="math inline">\(1\)</span>, zato je
+upodobitev <span class="math inline">\(\mathop{\mathrm{sgn}}\otimes
+\rho\)</span> res nerazcepna. Nazadnje nam torej manjka le še ena
+upodobitev stopnje <span class="math inline">\(2\)</span>. Imenujmo jo
+<span class="math inline">\(\tau\)</span>. Čeprav je ne poznamo, lahko
+iz ortonormiranosti karakterjev določimo njen karakter <span
+class="math inline">\(\chi_{\tau}\)</span> kot natanko tisto razredno
+funkcijo, ki je ortogonalna na vse poznane neracepne karakterje in je
+norme <span class="math inline">\(1\)</span>. Na ta način dobimo
+vrednosti <span class="math inline">\(2,0,-1,0,2\)</span>. S tem smo
+nazadnje določili celotno tabelo karakterjev grupe <span
+class="math inline">\(S_4\)</span> nad <span
+class="math inline">\(\mathbf{C}\)</span>.<a href="#fn40"
+class="footnote-ref" id="fnref40"
+role="doc-noteref"><sup>40</sup></a></p>
+<table>
+<caption>Tabela karakterjev <span
+class="math inline">\(S_4\)</span></caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span
+class="math inline">\(()\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((1 \
+2)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((1 \ 2 \
+3)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((1 \ 2 \ 3 \
+4)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((1 \ 2)(3 \
+4)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(\chi_{\mathbf{1}}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(\chi_{\mathop{\mathrm{sgn}}}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(-1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(-1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(\chi_{\tau}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(-1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(\chi_{\rho}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(3\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(-1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(-1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(\chi_{\mathop{\mathrm{sgn}}\otimes
+\rho}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(3\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(-1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(-1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Upodobitve <span class="math inline">\(\tau\)</span> ni težko
+eksplicitno določiti. Vemo, da je stopnje <span
+class="math inline">\(2\)</span>. Njena vrednost <span
+class="math inline">\(\tau((1 \ 2)(3 \ 4))\)</span> je matrika v <span
+class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{C})\)</span> reda
+<span class="math inline">\(2\)</span> s sledjo <span
+class="math inline">\(2\)</span>. Taka matrika je lahko le identiteta.
+Torej je <span class="math inline">\(\tau\)</span> trivialna v
+konjugiranostnem razredu elementa <span class="math inline">\((1 \ 2)(3
+\ 4)\)</span> in je zato pravzaprav restrikcija upodobitve kvocientne
+grupe <span class="math inline">\(S_4/\{ (), (1 \ 2)(3 \ 4), (1 \ 3)(2 \
+4), (1 \ 4)(2 \ 3) \}\)</span>. Slednjo grupo identificiramo kot <span
+class="math inline">\(S_3\)</span> prek epimorfizma <span
+class="math display">\[\psi \colon S_4 \to S_3, \quad
+    (1 \ 2) \mapsto (1 \ 2), \
+    (1 \ 2 \ 3 \ 4) \mapsto (1 \ 3)\]</span> z jedrom <span
+class="math inline">\(\{ (), (1 \ 2)(3 \ 4), (1 \ 3)(2 \ 4), (1 \ 4)(2 \
+3) \}\)</span>. Upodobitev <span class="math inline">\(\tau\)</span>
+torej prepoznamo kot restrikcijo dvorazsežne nerazcepne upodobitve grupe
+<span class="math inline">\(S_3\)</span> vzdolž homomorfizma <span
+class="math inline">\(\psi\)</span>.</p>
 </div>
 <h3 id="izotipične-projekcije">Izotipične projekcije</h3>
 <p>Dekompozicijo regularne upodobitve smo dobili iz matričnih
@@ -3472,8 +3628,8 @@ upodobitvah.</p>
 <p>Omenimo še eno lastnost karakterjev upodobitev naj najugodnejšim
 poljem <span class="math inline">\(\mathbf{C}\)</span>. Njihove
 vrednosti namreč niso čisto poljubna kompleksna števila, temveč so
-algebraična cela števila<a href="#fn40" class="footnote-ref"
-id="fnref40" role="doc-noteref"><sup>40</sup></a> omejene absolutne
+algebraična cela števila<a href="#fn41" class="footnote-ref"
+id="fnref41" role="doc-noteref"><sup>41</sup></a> omejene absolutne
 vrednosti.</p>
 <div class="trditev">
 <p><strong>Trditev 3.5</strong>. Naj bo <span
@@ -3490,8 +3646,8 @@ class="math display">\[|\chi_{\pi}(g)| \leq \deg(\pi), \quad
 potem je <span class="math inline">\(\pi(g^{|G|}) = \pi(1) =
 \mathop{\mathrm{id}}\)</span>, zato je <span
 class="math inline">\(\pi(g)\)</span> linearna preslikava končnega reda.
-Take preslikave so diagonalizabilne.<a href="#fn41" class="footnote-ref"
-id="fnref41" role="doc-noteref"><sup>41</sup></a> V posebnem je zato
+Take preslikave so diagonalizabilne.<a href="#fn42" class="footnote-ref"
+id="fnref42" role="doc-noteref"><sup>42</sup></a> V posebnem je zato
 vsaka lastna vrednost <span class="math inline">\(\lambda \in
 \mathop{\mathrm{Eig}}(\pi(g))\)</span> končnega reda v <span
 class="math inline">\(\mathbf{C}^*\)</span>. S tem je seveda <span
@@ -3657,8 +3813,8 @@ transformacija ohranja skalarni produkt.</p>
 <h3 id="komutatorji">Komutatorji</h3>
 <p>Naj bo <span class="math inline">\(G\)</span> končna grupa in <span
 class="math inline">\(K(G)\)</span> njena podmnožica, ki sestoji iz
-elementov, ki so komutatorji<a href="#fn42" class="footnote-ref"
-id="fnref42" role="doc-noteref"><sup>42</sup></a> v <span
+elementov, ki so komutatorji<a href="#fn43" class="footnote-ref"
+id="fnref43" role="doc-noteref"><sup>43</sup></a> v <span
 class="math inline">\(G\)</span>, se pravi <span
 class="math display">\[K(G) = \{ [x,y] \mid x,y \in G \}.\]</span> Ta
 množica v splošnem <em>ni</em> podgrupa, zato je teoriji grup vsekakor v
@@ -3922,24 +4078,27 @@ fiksiramo vrstice. To drugo relacijo pa preberemo tako, da fiksiramo
 stolpce. Tej relaciji včasih rečemo <span><strong><em>druga
 ortogonalnostna relacija</em></strong></span>.<a href="#fnref39"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn40" role="doc-endnote"><p><span><strong><em>Algebraično celo
+<li id="fn40" role="doc-endnote"><p>Zanimivo je, da smo uspeli določiti
+tabelo karakterjev, brez da bi eksplicitno poznali vse upodobitve.<a
+href="#fnref40" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn41" role="doc-endnote"><p><span><strong><em>Algebraično celo
 število</em></strong></span> je kompleksno število, ki je ničla
 moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih
 celih števil označimo z <span
 class="math inline">\(\bar{\mathbf{Z}}\)</span>. Ni se težko prepričati,
 da <span class="math inline">\(\bar{\mathbf{Z}}\)</span> tvori kolobar
 in da velja <span class="math inline">\(\mathbf{Q}\cap \bar{\mathbf{Z}}
-= \mathbf{Z}\)</span>.<a href="#fnref40" class="footnote-back"
+= \mathbf{Z}\)</span>.<a href="#fnref41" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn41" role="doc-endnote"><p>Diagonalizabilnost sledi iz
+<li id="fn42" role="doc-endnote"><p>Diagonalizabilnost sledi iz
 obravnave Jordanove normalne forme preslikave <span
-class="math inline">\(\pi(g)\)</span>.<a href="#fnref41"
+class="math inline">\(\pi(g)\)</span>.<a href="#fnref42"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn42"
+<li id="fn43"
 role="doc-endnote"><p><span><strong><em>Komutator</em></strong></span>
 elementov <span class="math inline">\(x,y \in G\)</span> je element
 <span class="math inline">\([x,y] = x^{-1} y^{-1} x y\)</span>.<a
-href="#fnref42" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+href="#fnref43" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
         </div>
