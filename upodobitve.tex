@@ -1669,7 +1669,7 @@ Alternativna baza prostora razrednih funkcij sestoji iz karakterističnih funkci
 Naj bo $G$ končna grupa nad algebraično zaprtim poljem karakteristike tuje $|G|$. Za vsaka elementa $g,h \in G$ velja
 \[
     \sum_{\pi \in \Irr(G)} \chi_{\pi}(g) \chi_{\pi}(h^{-1}) = \begin{cases}
-        \frac{|G|}{|g^G|} & g^G = h^G, \\
+        |G|/|g^G| & g^G = h^G, \\
         0 & \text{sicer.}
     \end{cases}
 \]
@@ -1752,7 +1752,7 @@ z jedrom $\{ (), (1 \ 2)(3 \ 4), (1 \ 3)(2 \ 4), (1 \ 4)(2 \ 3) \}$. Upodobitev 
 \end{zgled}
 
 
-\subsection{Izotipične projekcije}
+\subsection{Projekcije na izotipične komponente}
 
 Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih projekcijskih spletičen najdemo izotipične komponente upodobitve. Za te seveda najprej potrebujemo vse nerazcepne karakterje.
 
@@ -1819,7 +1819,7 @@ kar lahko z enakim argumentom kot prej zapišemo kot
 \[
     [ f, h ] = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr(\hat{f}(\pi) \cdot \hat{h}(\pi)).
 \]
-Tej enakosti rečemo {\definicija Parsevalova formula}.
+Tej enakosti rečemo {\definicija Parsevalov izrek}.
 
 \begin{zgled}
 Naj bo $A$ končna abelova grupa. Vemo že, da so vse njene kompleksne upodobitve enorazsežne. V tem primeru so upodobitve kar enake svojim karakterjem. Za dano funkcijo $f \in \hom(A,\CC)$ lahko Fourierovo inverzijo zapišemo kot
@@ -1867,7 +1867,7 @@ Stopnja vsake nerazcepne kompleksne upodobitve končne grupe deli moč grupe.
 Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, in sicer je to lema o Fourierovi transformaciji razredne funkcije. Ko funkcija, vzdolž katere izvedemo transformacijo, slika v kolobar algebraičnih celih števil, lahko lemo o Fourierovi transformaciji razredne funkcije zaostrimo na naslednji način.
 
     \begin{lema}
-    Naj bo $G$ končna grupa. Za vsako funkcijo $f \in \hom_{\cl}(G, \bar{\ZZ})$ in nerazcepno upodobitev $\pi$ nad $\CC$ in je $\hat{f}(\pi)$ skalarno množenje z algebraičnim celim številom.
+    Naj bo $G$ končna grupa. Za vsako funkcijo $f \in \hom_{\cl}(G, \bar{\ZZ})$ in nerazcepno upodobitev $\pi$ nad $\CC$ je $\hat{f}(\pi)$ skalarno množenje z algebraičnim celim številom.
     \end{lema}
     \begin{dokaz}
     Vemo že, da je $\hat{f}(\pi)$ skalarno množenje s številom
@@ -1946,14 +1946,9 @@ Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je p
 
 \todo{Dodaj zgled iz Eberhard (one-sided mixing) o množici brez produktov v $S_n$.}
 
-
-\subsection{Slučajni sprehodi}
-
-\todo{Fourier diagonalizira matriko sosednosti (Diaconis, str. 48).}
-
 \subsection{Komutatorji}
 
-\todo[inline]{??? čisto nekomutativen problem: komutatorji; Frobeniusova formula, omeni LOST Ore domneva}
+\todo[inline]{??? čisto nekomutativen problem: ga izpeljemo spet iz konvolucije identifikatorjev konjugiranostnih razredov, komutatorji; Frobeniusova formula, omeni LOST Ore domneva}
 
 Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, ki so komutatorji\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$.} v $G$, se pravi
 \[
@@ -1979,7 +1974,9 @@ Tretji princip harmonične analize je, da z novim zapisom uporabimo Fourierovo t
 
 Četrti princip harmonične analize je, da iz Fourierove transformacije izvlečemo podatke o začetni funkciji.
 
+\subsection{Slučajni sprehodi}
 
+\todo{Fourier diagonalizira matriko sosednosti (Diaconis, str. 48), kakšen konkreten primer: .}
 
 
 \chapter{Upodobitve linearnih grup}
