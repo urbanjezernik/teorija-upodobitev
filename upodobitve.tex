@@ -1486,7 +1486,7 @@ Opazujmo permutacijsko upodobitev $\pi$ grupe $\ZZ/n\ZZ$ na prostoru $\CC[\Omega
 
 Na prostor funkcij $\hom(G,F)$ uvedimo {\definicija skalarni produkt} s predpisom
 \[
-    \langle f_1, f_2 \rangle = \frac{1}{|G|} \sum_{g \in G} f_1(g) f_2(g^{-1})
+    [ f_1, f_2 ] = \frac{1}{|G|} \sum_{g \in G} f_1(g) f_2(g^{-1})
 \]
 za $f_1, f_2 \in \hom(G,F)$. Ker je polje $F$ v splošnem abstraktno, to sicer ni običajen skalarni produkt, je pa to vendarle nedegenerirana simetrična bilinearna forma na $\hom(G,F)$, zato zanjo uporabljamo vso standardno terminologijo iz običajnih skalarnih produktov.
 
@@ -1503,20 +1503,20 @@ Naj upodobitvi $\pi_1$, $\pi_2$ delujeta na prostorih $V_1$, $V_2$. Grupa $G$ de
 Konkretizirajmo preslikavo $A$. Naj bo $\{ e_i \}_i$ baza prostora $V_1$ in $\{ f_j \}_j$ baza prostora $V_2$. Vzemimo
 \[
     A_{i,l} \colon V_1 \to V_2, \quad
-    v \mapsto \langle e_i^*, v \rangle f_l.
+    v \mapsto [ e_i^*, v ] f_l.
 \]
 S to izbiro dosežemo enakost
 \[
     0 = \frac{1}{|G|} \sum_{g \in G} g \cdot A_{i,l}(g^{-1} \cdot e_j) =
-    \frac{1}{|G|} \sum_{g \in G} \langle e_i^*, g^{-1} \cdot e_j \rangle g \cdot f_l =
+    \frac{1}{|G|} \sum_{g \in G} [ e_i^*, g^{-1} \cdot e_j ] g \cdot f_l =
     \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) g \cdot f_l.
 \]
 Na zadnjem uporabimo še $f_k^*$, pa dobimo
 \[
-    0 = \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) \langle f_k^*, g \cdot f_l \rangle =
+    0 = \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) [ f_k^*, g \cdot f_l ] =
     \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) f_{k,l}^{\pi_2}(g),
 \]
-kar je enakovredno $\langle f_{i,j}^{\pi_1}, f_{k,l}^{\pi_2} \rangle = 0$, se pravi ortogonalnosti matričnih koeficientov.
+kar je enakovredno $[ f_{i,j}^{\pi_1}, f_{k,l}^{\pi_2} ] = 0$, se pravi ortogonalnosti matričnih koeficientov.
 \end{dokaz}
 
 Na soroden način lahko analiziramo skalarne produkte znotraj matričnih koeficientov ene same nerazcepne upodobitve.
@@ -1524,7 +1524,7 @@ Na soroden način lahko analiziramo skalarne produkte znotraj matričnih koefici
 \begin{trditev}
 Naj bo $G$ končna grupa z nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Po izbiri poljubne baze za matrične koeficiente velja
 \[
-    \langle f_{i,j}, f_{k,l} \rangle = 
+    [ f_{i,j}, f_{k,l} ] = 
     \begin{cases}
         1/\deg(\pi) & (i,j) = (l,k) \\
         0 & \text{sicer.}
@@ -1541,9 +1541,9 @@ $, zato je $\tr(g \cdot A) = \tr(A)$, od koder izpeljemo
 \[
     \lambda_A = \frac{\tr(A)}{\deg(\pi)}.
 \]
-Kot v zadnjem dokazu dobljeno uporabimo s preslikavo $A_{i,l}(v) = \langle e_i^*, v \rangle e_l$ za neko izbrano bazo $\{ e_i \}_i$ prostora $V$. Velja $\tr(A_{i,l}) = \langle e_i^*, e_l \rangle = 1_{i = l}$, od koder kot v zadnjem dokazu izpeljemo
+Kot v zadnjem dokazu dobljeno uporabimo s preslikavo $A_{i,l}(v) = [ e_i^*, v ] e_l$ za neko izbrano bazo $\{ e_i \}_i$ prostora $V$. Velja $\tr(A_{i,l}) = [ e_i^*, e_l ] = 1_{i = l}$, od koder kot v zadnjem dokazu izpeljemo
 \[
-    \langle f_{i,j}, f_{k,l} \rangle = \langle e_k^*, e_j \rangle \frac{1_{i = l}}{\deg(\pi)} = \frac{1_{i = l, j = k}}{\deg(\pi)},
+    [ f_{i,j}, f_{k,l} ] = [ e_k^*, e_j ] \frac{1_{i = l}}{\deg(\pi)} = \frac{1_{i = l, j = k}}{\deg(\pi)},
 \]
 kar je natanko želeno.
 \end{dokaz}
@@ -1559,7 +1559,7 @@ Iz ortogonalnosti matričnih koeficientov z lahkoto izpeljemo ortonormiranost ka
 \begin{posledica}
 Naj bo $G$ končna grupa z nerazcepnima upodobitvama $\pi_1$, $\pi_2$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Velja
 \[
-    \langle \chi_{\pi_1}, \chi_{\pi_2} \rangle =
+    [ \chi_{\pi_1}, \chi_{\pi_2} ] =
     \begin{cases}
         1 & \pi_1 \cong \pi_2, \\
         0 & \text{sicer.}
@@ -1570,7 +1570,7 @@ Naj bo $G$ končna grupa z nerazcepnima upodobitvama $\pi_1$, $\pi_2$ nad algebr
 Izberemo bazo, izrazimo $\chi_{\pi} = \sum_i f_{i,i}^{\pi}$ in uporabimo zadnji dve trditvi o skalarnih produktih matričnih koeficientov.
 \end{dokaz}
 
-V skladu z običajno terminologijo za funkcijo $f \in \hom(G,F)$ označimo $||f|| = \sqrt{\langle f, f \rangle}$, to je {\definicija norma} funkcije $f$. Nerazcepni karakterji tvorijo ortonormiran sistem vektorjev v $\hom(G,F)$.
+V skladu z običajno terminologijo za funkcijo $f \in \hom(G,F)$ označimo $||f|| = \sqrt{[ f, f ]}$, to je {\definicija norma} funkcije $f$. Nerazcepni karakterji tvorijo ortonormiran sistem vektorjev v $\hom(G,F)$.
 
 \subsection{Razredne funkcije}
 
@@ -1611,7 +1611,7 @@ Regularna upodobitev končne grupe nad ugodnim poljem je direktna vsota nerazcep
 Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Za vsako \emph{razredno} funkcijo $f$ in nerazcepno upodobitev $\pi$ na prostoru $V$ je 
 \[
     \hat{f}(\pi) = 
-    \frac{|G|}{\deg(\pi)} \cdot \langle f, \chi_{\pi} \rangle \cdot {\textstyle \id_V}.
+    \frac{|G|}{\deg(\pi)} \cdot [ f, \chi_{\pi} ] \cdot {\textstyle \id_V}.
 \]
 \end{lema}
 \begin{dokaz}
@@ -1626,15 +1626,15 @@ Izpostavimo $\pi(h)$ in na grupi $G$ uporabimo avtomorfizem $g \mapsto h g h^{-1
 \]
 Ker je $f$ razredna funkcija, je dobljeno ravno enako $\pi(h) \cdot \hat{f}(\pi)$. Vrednost Fourierove transformacije v $\pi$ je torej spletična v $\hom_G(\pi, \pi)$. Po Schurovi lemi sklepamo, da je $\hat{f}(\pi)$ skalarni večkratnik identitete. Njegova sled je enaka
 \[
-    \tr \left( \hat{f}(\pi) \right) =  \sum_{g \in G} f(g) \chi_{\pi}(g^{-1}) = |G| \cdot \langle f, \chi_{\pi} \rangle.
+    \tr \left( \hat{f}(\pi) \right) =  \sum_{g \in G} f(g) \chi_{\pi}(g^{-1}) = |G| \cdot [ f, \chi_{\pi} ].
 \]
-Od tod izračunamo relevantni skalar kot $|G| \cdot \langle f, \chi_{\pi} \rangle/\deg(\pi)$.
+Od tod izračunamo relevantni skalar kot $|G| \cdot [ f, \chi_{\pi} ]/\deg(\pi)$.
 \end{dokaz}
 
 Opremljeni lahko z lahkoto izpeljemo izrek.
 
 \begin{dokaz}[Dokaz izreka o bazi razrednih funkcij]
-Predpostavimo, da nerazcepni karakterji \emph{ne} razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \hom_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $\langle f, \chi_{\pi} \rangle = 0$. Preslikava $\hat{f}(\pi)$ je po lemi zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, se pravi $\hat{f}(\rho_{\hom}) = 0$. Po zadnjem zgledu to implicira $f = 0$. 
+Predpostavimo, da nerazcepni karakterji \emph{ne} razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \hom_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $[ f, \chi_{\pi} ] = 0$. Preslikava $\hat{f}(\pi)$ je po lemi zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, se pravi $\hat{f}(\rho_{\hom}) = 0$. Po zadnjem zgledu to implicira $f = 0$. 
 \end{dokaz}
 
 Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavnikih konjugiranostnih razredov. Če {\definicija število konjugiranostnih razredov} označimo s $\kk(G)$, velja torej $\dim \hom_{\cl}(G,F) = \kk(G)$. Ker karakterji tvorijo bazo prostora razrednih funkcij, lahko \emph{število} nerazcepnih upodobitev torej izračunamo neposredno iz algebraične strukture grupe.
@@ -1661,7 +1661,7 @@ V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 
 
 Ker nerazcepni karakterji tvorijo ortonormirano bazo prostora razrednih funkcij, lahko vsako razredno funkcijo $f \in \hom_{\cl}(G,F)$ razvijemo po tej bazi kot
 \[
-    f = \sum_{\pi \in \Irr(G)} \langle f, \chi_{\pi} \rangle \chi_{\pi}.
+    f = \sum_{\pi \in \Irr(G)} [ f, \chi_{\pi} ] \chi_{\pi}.
 \]
 Alternativna baza prostora razrednih funkcij sestoji iz karakterističnih funkcij konjugiranostnih razredov v $G$. Razvoj te baze po karakterjih nam podaja še eno relacijo med karakterji, ki je ortogonalna\footnote{Relaciji sta ortogonalni v smislu tabele karakterjev. Ortonormiranost karakterjev preberemo tako, da fiksiramo vrstice. To drugo relacijo pa preberemo tako, da fiksiramo stolpce. Tej relaciji včasih rečemo {\definicija druga ortogonalnostna relacija}.} ortonormiranosti.
 
@@ -1677,7 +1677,7 @@ Naj bo $G$ končna grupa nad algebraično zaprtim poljem karakteristike tuje $|G
 \begin{dokaz}
 Karakteristično funkcijo $1_{h^G}$ razvijemo po nerazcepnih karakterjih kot
 \[
-    1_{h^G} = \sum_{\pi \in \Irr(G)} \langle 1_{h^G}, \chi_{\pi} \rangle \chi_{\pi}
+    1_{h^G} = \sum_{\pi \in \Irr(G)} [ 1_{h^G}, \chi_{\pi} ] \chi_{\pi}
     = \sum_{\pi \in \Irr(G)} \frac{|h^G|}{|G|} \chi_{\pi}(h^{-1}) \chi_{\pi}
 \]
 in dobljeno evalviramo v elementu $g$.
@@ -1690,7 +1690,7 @@ S pomočjo ortonormirane baze karakterjev lahko z lahkoto razumemo vsako končno
 \begin{posledica}
 Naj bo $G$ končna grupa s končnorazsežno upodobitvijo $\rho$ nad algebraično zaprtim poljem karakteristike $0$. 
 \begin{enumerate}
-    \item Za vsako nerazcepno upodobitev $\pi$ velja $\mult_{\rho}(\pi) = \langle \chi_{\rho}, \chi_{\pi} \rangle$.
+    \item Za vsako nerazcepno upodobitev $\pi$ velja $\mult_{\rho}(\pi) = [ \chi_{\rho}, \chi_{\pi} ]$.
     \item $|| \chi_{\rho} ||^2 = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi)^2$.
     \item Upodobitev $\rho$ je nerazcepna, če in samo če $|| \chi_{\rho} || = 1$.
 \end{enumerate}
@@ -1700,10 +1700,10 @@ Upodobitev $\rho$ je polenostavna, zato lahko njen karakter zapišemo kot
 \[
     \chi_{\rho} = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot \chi_{\pi}.
 \]
-Skalarno pomnožimo s $\chi_{\pi}$ in uporabimo ortonormiranost, pa dobimo $\mult_{\rho}(\pi) = \langle \chi_{\rho}, \chi_{\pi} \rangle$. Od tod izračunamo
+Skalarno pomnožimo s $\chi_{\pi}$ in uporabimo ortonormiranost, pa dobimo $\mult_{\rho}(\pi) = [ \chi_{\rho}, \chi_{\pi} ]$. Od tod izračunamo
 \[
-    ||\chi_{\rho}||^2 = \langle \chi_{\rho}, \chi_{\rho} \rangle 
-    = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot \langle \chi_{\rho}, \chi_{\pi} \rangle 
+    ||\chi_{\rho}||^2 = [ \chi_{\rho}, \chi_{\rho} ] 
+    = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot [ \chi_{\rho}, \chi_{\pi} ] 
     = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi)^2.
 \]
 Nazadnje je $||\chi_{\rho}|| = 1$, če in samo če je za natanko eno nerazcepno upodobitev $\pi$ njena večkratnost v $\rho$ enaka $1$, se pravi če je $\rho$ nerazcepna.
@@ -1719,7 +1719,7 @@ Vemo že, da imamo natanko dve enorazsežni upodobitvi, in sicer $\11$ in $\sgn$
 \]
 Upodobitev $\chi_{\pi}$ torej \emph{ni} nerazcepna. Velja
 \[
-    \langle \chi_{\pi}, \chi_{\11} \rangle = \frac{1}{4!} \left( 1 \cdot 4 + 6 \cdot 2 + 8 \cdot 1 \right) = 1,
+    [ \chi_{\pi}, \chi_{\11} ] = \frac{1}{4!} \left( 1 \cdot 4 + 6 \cdot 2 + 8 \cdot 1 \right) = 1,
 \]
 torej $\pi$ vsebuje $\11$ z večkratnostjo $1$, kar je povsem analogno temu, kar smo videli pri grupi $S_3$. Zapišemo lahko torej $\pi = \11 \oplus \rho$ za neko upodobitev $\rho$. Njen karakter ima vrednosti $3,1,0,-1,-1$ in s tem normo
 \[
@@ -1742,7 +1742,7 @@ Zaenkrat imamo tri nerazcepne upodobitve stopenj $1,1,3$. Iščemo torej še dve
 \caption{Tabela karakterjev $S_4$}
 \end{table}
 
-Upodobitve $\tau$ ni težko eksplicitno določiti. Vemo, da je stopnje $2$. Njena vrednost $\tau((1 \ 2)(3 \ 4))$ je matrika v $\GL_2(\CC)$ reda $2$ s sledjo $2$. Taka matrika je lahko le identiteta. Torej je $\tau$ trivialna v konjugiranostnem razredu elementa $(1 \ 2)(3 \ 4)$ in je zato pravzaprav restrikcija upodobitve kvocientne grupe $S_4/\{ (), (1 \ 2)(3 \ 4), (1 \ 3)(2 \ 4), (1 \ 4)(2 \ 3) \}$. Slednjo grupo identificiramo kot $S_3$ prek epimorfizma
+Upodobitve $\tau$ ni težko eksplicitno določiti. Vemo, da je stopnje $2$. Njena vrednost $\tau((1 \ 2)(3 \ 4))$ je matrika v $\GL_2(\CC)$ reda $2$ s sledjo $2$. Taka matrika je lahko le identiteta. Torej je $\tau$ trivialna v konjugiranostnem razredu elementa $(1 \ 2)(3 \ 4)$ in je zato pravzaprav restrikcija upodobitve kvocientne grupe $S_4w$ po edinki, generirani s tem konjugiranostnim razredom. Slednjo kvocientno grupo identificiramo kot $S_3$ prek epimorfizma
 \[
     \psi \colon S_4 \to S_3, \quad
     (1 \ 2) \mapsto (1 \ 2), \
@@ -1799,6 +1799,7 @@ s čimer dobimo razvoj
 \[
     1_x(g) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \chi_{\pi}(x^{-1} g).
 \]
+\end{zgled}
 
 Vsako funkcijo $f \in \hom(G,F)$ lahko razvijemo po karakterističnih funkcijah kot $f = \sum_{x \in G} f(x) 1_x$. Ker že poznamo razvoj vsake od karaterističnih funkcij po $\pi$-izotipičnih komponentah, od tod izpeljemo
 \[
@@ -1809,9 +1810,28 @@ kar lahko po upoštevanju linearnosti sledi izrazimo kot
     f(g) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right).
 \]
 Temu razvoju funkcije $f$ po $\pi$-izotipičnih komponentah rečemo {\definicija Fourierova inverzija}, saj nam ekplicitno pove, kako lahko $f$ izračunamo iz njenih Fourierovih transformacij v nerazcepnih upodobitvah.
+
+Fourierova inverzija je nekoliko asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko drugo funkcijo $h \in \hom(G,F)$. Dobimo
+\[
+    \sum_{g \in G} f(g) h(g^{-1}) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{g \in G} h(g^{-1}) \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right),
+\]
+kar lahko z enakim argumentom kot prej zapišemo kot
+\[
+    [ f, h ] = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr(\hat{f}(\pi) \cdot \hat{h}(\pi)).
+\]
+Tej enakosti rečemo {\definicija Parsevalova formula}.
+
+\begin{zgled}
+Naj bo $A$ končna abelova grupa. Vemo že, da so vse njene kompleksne upodobitve enorazsežne. V tem primeru so upodobitve kar enake svojim karakterjem. Za dano funkcijo $f \in \hom(A,\CC)$ lahko Fourierovo inverzijo zapišemo kot
+\[
+    f = \frac{1}{|A|} \sum_{\chi \in \Irr(A)} \hat{f}(\chi) \cdot \chi,
+\]
+kar je le posledica dejstva $\hat{f}(\chi) = |A| \cdot [ f, \chi ]$.
 \end{zgled}
 
 \subsection{Kompleksne upodobitve}
+
+\todo{Kompleksna števila imajo konjugiranje, tudi prostore nad $\CC$ opremimo s skalarnim produktom, ki je wlog $G$-invarianten po povprečenju.}
 
 Omenimo še eno lastnost karakterjev upodobitev naj najugodnejšim poljem $\CC$. Njihove vrednosti namreč niso čisto poljubna kompleksna števila, temveč so algebraična cela števila\footnote{{\definicija Algebraično celo število} je kompleksno število, ki je ničla moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih celih števil označimo z $\bar{\ZZ}$. Ni se težko prepričati, da $\bar{\ZZ}$ tvori kolobar in da velja $\QQ \cap \bar{\ZZ} = \ZZ$.} omejene absolutne vrednosti. 
 
@@ -1852,7 +1872,7 @@ Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, 
     \begin{dokaz}
     Vemo že, da je $\hat{f}(\pi)$ skalarno množenje s številom
     \[
-        \frac{|G|}{\deg(\pi)} \cdot \langle f, \chi_{\pi} \rangle.
+        \frac{|G|}{\deg(\pi)} \cdot [ f, \chi_{\pi} ].
     \]
     Preveriti moramo torej, da je to algebraično celo število. Funkcijo $f$ lahko razvijemo kot vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v $\bar{\ZZ}$. Ker $\bar{\ZZ}$ tvori kolobar, bo torej trditev dovolj preveriti za primer, ko je $f = 1_{\conclass}$ za nek konjugiranostni razred $\conclass$ v $G$.
     
@@ -1868,11 +1888,11 @@ Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, 
     \begin{dokaz}[Dokaz izreka o stopnjah upodobitev]
     Naj bo $\pi \in \Irr(G)$. Uporabimo lemo s funkcijo $f = \chi_{\pi}$ in zaključimo
     \[
-        \frac{|G|}{\deg(\pi)} \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ} \cap \QQ = \ZZ.
+        \frac{|G|}{\deg(\pi)} \cdot [ \chi_{\pi}, \chi_{\pi} ] = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ} \cap \QQ = \ZZ.
     \]
     \end{dokaz}
 
-\todo{Skalarni produkt, unitarizabilnost, omeni Maschkeja nad $\CC$, o HS normi pri Plancherelovi formuli.}
+\todo{En drug, standarden Skalarni produkt, unitarizabilnost, omeni Maschkeja nad $\CC$, o HS normi pri Plancherelovi formuli.}
 
 \section{Razširjeni zgledi}
 
@@ -1926,27 +1946,6 @@ Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je p
 
 \todo{Dodaj zgled iz Eberhard (one-sided mixing) o množici brez produktov v $S_n$.}
 
-\begin{zgled}
-    Fourierova inverzija je nekoliko asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko drugo funkcijo $h \in \hom(G,F)$. Dobimo
-    \[
-        \sum_{g \in G} f(g) h(g^{-1}) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{g \in G} h(g^{-1}) \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right),
-    \]
-    kar lahko z enakim argumentom kot prej zapišemo kot
-    \[
-        \langle f, h \rangle = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr(\hat{f}(\pi) \cdot \hat{h}(\pi)).
-    \]
-    Če torej uvedemo še skalarni produkt Fourierovih transformacij $\hat{f}$, $\hat{h}$ s predpisom
-    \[
-        \langle \hat{f}, \hat{h} \rangle = 
-        \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \deg(\pi) \cdot \tr \left( \hat{f}(\pi) \cdot \hat{h}(\pi) \right),
-    \]
-    lahko zadnjo enakost zapišemo kot
-    \[
-        \langle f, g \rangle = \langle \hat{f}, \hat{g} \rangle.
-    \]
-    Tej enakosti rečemo {\definicija Plancherelova formula}, interpetiramo pa jo z rekom, da Fourierova transformacija ohranja skalarni produkt.
-    \todo{Nad $\CC$: zapiši s Hilbert-Schmidtovo normo.}
-\end{zgled}
 
 \subsection{Slučajni sprehodi}
 

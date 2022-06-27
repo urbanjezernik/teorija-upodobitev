@@ -2929,8 +2929,8 @@ class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span>.</p>
 koeficientov</h3>
 <p>Na prostor funkcij <span class="math inline">\(\hom(G,F)\)</span>
 uvedimo <span><strong><em>skalarni produkt</em></strong></span> s
-predpisom <span class="math display">\[\langle f_1, f_2 \rangle =
-\frac{1}{|G|} \sum_{g \in G} f_1(g) f_2(g^{-1})\]</span> za <span
+predpisom <span class="math display">\[[ f_1, f_2 ] = \frac{1}{|G|}
+\sum_{g \in G} f_1(g) f_2(g^{-1})\]</span> za <span
 class="math inline">\(f_1, f_2 \in \hom(G,F)\)</span>. Ker je polje
 <span class="math inline">\(F\)</span> v splošnem abstraktno, to sicer
 ni običajen skalarni produkt, je pa to vendarle nedegenerirana
@@ -2970,20 +2970,20 @@ e_i \}_i\)</span> baza prostora <span class="math inline">\(V_1\)</span>
 in <span class="math inline">\(\{ f_j \}_j\)</span> baza prostora <span
 class="math inline">\(V_2\)</span>. Vzemimo <span
 class="math display">\[A_{i,l} \colon V_1 \to V_2, \quad
-    v \mapsto \langle e_i^*, v \rangle f_l.\]</span> S to izbiro
-dosežemo enakost <span class="math display">\[0 = \frac{1}{|G|} \sum_{g
-\in G} g \cdot A_{i,l}(g^{-1} \cdot e_j) =
-    \frac{1}{|G|} \sum_{g \in G} \langle e_i^*, g^{-1} \cdot e_j \rangle
-g \cdot f_l =
+    v \mapsto [ e_i^*, v ] f_l.\]</span> S to izbiro dosežemo enakost
+<span class="math display">\[0 = \frac{1}{|G|} \sum_{g \in G} g \cdot
+A_{i,l}(g^{-1} \cdot e_j) =
+    \frac{1}{|G|} \sum_{g \in G} [ e_i^*, g^{-1} \cdot e_j ] g \cdot f_l
+=
     \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) g \cdot
 f_l.\]</span> Na zadnjem uporabimo še <span
 class="math inline">\(f_k^*\)</span>, pa dobimo <span
 class="math display">\[0 = \frac{1}{|G|} \sum_{g \in G}
-f_{i,j}^{\pi_1}(g^{-1}) \langle f_k^*, g \cdot f_l \rangle =
+f_{i,j}^{\pi_1}(g^{-1}) [ f_k^*, g \cdot f_l ] =
     \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1})
 f_{k,l}^{\pi_2}(g),\]</span> kar je enakovredno <span
-class="math inline">\(\langle f_{i,j}^{\pi_1}, f_{k,l}^{\pi_2} \rangle =
-0\)</span>, se pravi ortogonalnosti matričnih koeficientov. ◻</p>
+class="math inline">\([ f_{i,j}^{\pi_1}, f_{k,l}^{\pi_2} ] = 0\)</span>,
+se pravi ortogonalnosti matričnih koeficientov. ◻</p>
 </div>
 <p>Na soroden način lahko analiziramo skalarne produkte znotraj
 matričnih koeficientov ene same nerazcepne upodobitve.</p>
@@ -2993,7 +2993,7 @@ class="math inline">\(G\)</span> končna grupa z nerazcepno upodobitvijo
 <span class="math inline">\(\pi\)</span> nad algebraično zaprtim poljem
 karakteristike tuje <span class="math inline">\(|G|\)</span>. Po izbiri
 poljubne baze za matrične koeficiente velja <span
-class="math display">\[\langle f_{i,j}, f_{k,l} \rangle =
+class="math display">\[[ f_{i,j}, f_{k,l} ] =
     \begin{cases}
         1/\deg(\pi) &amp; (i,j) = (l,k) \\
         0 &amp; \text{sicer.}
@@ -3013,14 +3013,14 @@ class="math inline">\(g \cdot A = \pi(g) A \pi(g)^{-1}\)</span>, zato je
 class="math display">\[\lambda_A =
 \frac{\mathop{\mathrm{tr}}(A)}{\deg(\pi)}.\]</span> Kot v zadnjem dokazu
 dobljeno uporabimo s preslikavo <span class="math inline">\(A_{i,l}(v) =
-\langle e_i^*, v \rangle e_l\)</span> za neko izbrano bazo <span
+[ e_i^*, v ] e_l\)</span> za neko izbrano bazo <span
 class="math inline">\(\{ e_i \}_i\)</span> prostora <span
 class="math inline">\(V\)</span>. Velja <span
-class="math inline">\(\mathop{\mathrm{tr}}(A_{i,l}) = \langle e_i^*, e_l
-\rangle = 1_{i = l}\)</span>, od koder kot v zadnjem dokazu izpeljemo
-<span class="math display">\[\langle f_{i,j}, f_{k,l} \rangle = \langle
-e_k^*, e_j \rangle \frac{1_{i = l}}{\deg(\pi)} = \frac{1_{i = l, j =
-k}}{\deg(\pi)},\]</span> kar je natanko želeno. ◻</p>
+class="math inline">\(\mathop{\mathrm{tr}}(A_{i,l}) = [ e_i^*, e_l ] =
+1_{i = l}\)</span>, od koder kot v zadnjem dokazu izpeljemo <span
+class="math display">\[[ f_{i,j}, f_{k,l} ] = [ e_k^*, e_j ] \frac{1_{i
+= l}}{\deg(\pi)} = \frac{1_{i = l, j = k}}{\deg(\pi)},\]</span> kar je
+natanko želeno. ◻</p>
 </div>
 <h2 id="karakterji-1">Karakterji</h2>
 <p>Iz rezultatov zadnjega razdelka sledi, da je nad algebraično zaprtim
@@ -3038,8 +3038,7 @@ class="math inline">\(G\)</span> končna grupa z nerazcepnima
 upodobitvama <span class="math inline">\(\pi_1\)</span>, <span
 class="math inline">\(\pi_2\)</span> nad algebraično zaprtim poljem
 karakteristike tuje <span class="math inline">\(|G|\)</span>. Velja
-<span class="math display">\[\langle \chi_{\pi_1}, \chi_{\pi_2} \rangle
-=
+<span class="math display">\[[ \chi_{\pi_1}, \chi_{\pi_2} ] =
     \begin{cases}
         1 &amp; \pi_1 \cong \pi_2, \\
         0 &amp; \text{sicer.}
@@ -3053,8 +3052,8 @@ koeficientov. ◻</p>
 </div>
 <p>V skladu z običajno terminologijo za funkcijo <span
 class="math inline">\(f \in \hom(G,F)\)</span> označimo <span
-class="math inline">\(||f|| = \sqrt{\langle f, f \rangle}\)</span>, to
-je <span><strong><em>norma</em></strong></span> funkcije <span
+class="math inline">\(||f|| = \sqrt{[ f, f ]}\)</span>, to je
+<span><strong><em>norma</em></strong></span> funkcije <span
 class="math inline">\(f\)</span>. Nerazcepni karakterji tvorijo
 ortonormiran sistem vektorjev v <span
 class="math inline">\(\hom(G,F)\)</span>.</p>
@@ -3153,8 +3152,8 @@ karakteristike tuje <span class="math inline">\(|G|\)</span>. Za vsako
 nerazcepno upodobitev <span class="math inline">\(\pi\)</span> na
 prostoru <span class="math inline">\(V\)</span> je <span
 class="math display">\[\hat{f}(\pi) =
-    \frac{|G|}{\deg(\pi)} \cdot \langle f, \chi_{\pi} \rangle \cdot
-{\textstyle \mathop{\mathrm{id}}_V}.\]</span></p>
+    \frac{|G|}{\deg(\pi)} \cdot [ f, \chi_{\pi} ] \cdot {\textstyle
+\mathop{\mathrm{id}}_V}.\]</span></p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Za vsak <span class="math inline">\(h \in G\)</span>
@@ -3174,10 +3173,10 @@ class="math inline">\(\hom_G(\pi, \pi)\)</span>. Po Schurovi lemi
 sklepamo, da je <span class="math inline">\(\hat{f}(\pi)\)</span>
 skalarni večkratnik identitete. Njegova sled je enaka <span
 class="math display">\[\mathop{\mathrm{tr}}\left( \hat{f}(\pi) \right)
-=  \sum_{g \in G} f(g) \chi_{\pi}(g^{-1}) = |G| \cdot \langle f,
-\chi_{\pi} \rangle.\]</span> Od tod izračunamo relevantni skalar kot
-<span class="math inline">\(|G| \cdot \langle f, \chi_{\pi}
-\rangle/\deg(\pi)\)</span>. ◻</p>
+=  \sum_{g \in G} f(g) \chi_{\pi}(g^{-1}) = |G| \cdot [ f, \chi_{\pi}
+].\]</span> Od tod izračunamo relevantni skalar kot <span
+class="math inline">\(|G| \cdot [ f, \chi_{\pi}
+]/\deg(\pi)\)</span>. ◻</p>
 </div>
 <p>Opremljeni lahko z lahkoto izpeljemo izrek.</p>
 <div class="proof">
@@ -3187,10 +3186,10 @@ Torej obstaja funkcija <span class="math inline">\(f \in
 \hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>, ki je vsebovana v
 ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak <span
 class="math inline">\(\pi \in \mathop{\mathrm{Irr}}(G)\)</span> velja
-torej <span class="math inline">\(\langle f, \chi_{\pi} \rangle =
-0\)</span>. Preslikava <span class="math inline">\(\hat{f}(\pi)\)</span>
-je po lemi zato ničelna. Ker to velja za vsako nerazcepno upodobitev,
-mora veljati tudi za regularno upodobitev, se pravi <span
+torej <span class="math inline">\([ f, \chi_{\pi} ] = 0\)</span>.
+Preslikava <span class="math inline">\(\hat{f}(\pi)\)</span> je po lemi
+zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati
+tudi za regularno upodobitev, se pravi <span
 class="math inline">\(\hat{f}(\rho_{\hom}) = 0\)</span>. Po zadnjem
 zgledu to implicira <span class="math inline">\(f = 0\)</span>. ◻</p>
 </div>
@@ -3269,9 +3268,9 @@ class="math inline">\(3\)</span>.</p>
 razrednih funkcij, lahko vsako razredno funkcijo <span
 class="math inline">\(f \in \hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>
 razvijemo po tej bazi kot <span class="math display">\[f = \sum_{\pi \in
-\mathop{\mathrm{Irr}}(G)} \langle f, \chi_{\pi} \rangle
-\chi_{\pi}.\]</span> Alternativna baza prostora razrednih funkcij
-sestoji iz karakterističnih funkcij konjugiranostnih razredov v <span
+\mathop{\mathrm{Irr}}(G)} [ f, \chi_{\pi} ] \chi_{\pi}.\]</span>
+Alternativna baza prostora razrednih funkcij sestoji iz karakterističnih
+funkcij konjugiranostnih razredov v <span
 class="math inline">\(G\)</span>. Razvoj te baze po karakterjih nam
 podaja še eno relacijo med karakterji, ki je ortogonalna<a href="#fn39"
 class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>
@@ -3291,7 +3290,7 @@ vsaka elementa <span class="math inline">\(g,h \in G\)</span> velja
 <p><em>Proof.</em> Karakteristično funkcijo <span
 class="math inline">\(1_{h^G}\)</span> razvijemo po nerazcepnih
 karakterjih kot <span class="math display">\[1_{h^G} = \sum_{\pi \in
-\mathop{\mathrm{Irr}}(G)} \langle 1_{h^G}, \chi_{\pi} \rangle \chi_{\pi}
+\mathop{\mathrm{Irr}}(G)} [ 1_{h^G}, \chi_{\pi} ] \chi_{\pi}
     = \sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \frac{|h^G|}{|G|}
 \chi_{\pi}(h^{-1}) \chi_{\pi}\]</span> in dobljeno evalviramo v elementu
 <span class="math inline">\(g\)</span>. ◻</p>
@@ -3308,8 +3307,8 @@ class="math inline">\(0\)</span>.</p>
 <ol>
 <li><p>Za vsako nerazcepno upodobitev <span
 class="math inline">\(\pi\)</span> velja <span
-class="math inline">\(\mathop{\mathrm{mult}}_{\rho}(\pi) = \langle
-\chi_{\rho}, \chi_{\pi} \rangle\)</span>.</p></li>
+class="math inline">\(\mathop{\mathrm{mult}}_{\rho}(\pi) = [
+\chi_{\rho}, \chi_{\pi} ]\)</span>.</p></li>
 <li><p><span class="math inline">\(|| \chi_{\rho} ||^2 = \sum_{\pi \in
 \mathop{\mathrm{Irr}}(G)}
 \mathop{\mathrm{mult}}_{\rho}(\pi)^2\)</span>.</p></li>
@@ -3326,12 +3325,10 @@ class="math display">\[\chi_{\rho} = \sum_{\pi \in
 \chi_{\pi}.\]</span> Skalarno pomnožimo s <span
 class="math inline">\(\chi_{\pi}\)</span> in uporabimo ortonormiranost,
 pa dobimo <span class="math inline">\(\mathop{\mathrm{mult}}_{\rho}(\pi)
-= \langle \chi_{\rho}, \chi_{\pi} \rangle\)</span>. Od tod izračunamo
-<span class="math display">\[||\chi_{\rho}||^2 = \langle \chi_{\rho},
-\chi_{\rho} \rangle
+= [ \chi_{\rho}, \chi_{\pi} ]\)</span>. Od tod izračunamo <span
+class="math display">\[||\chi_{\rho}||^2 = [ \chi_{\rho}, \chi_{\rho} ]
     = \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
-\mathop{\mathrm{mult}}_{\rho}(\pi) \cdot \langle \chi_{\rho}, \chi_{\pi}
-\rangle
+\mathop{\mathrm{mult}}_{\rho}(\pi) \cdot [ \chi_{\rho}, \chi_{\pi} ]
     = \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
 \mathop{\mathrm{mult}}_{\rho}(\pi)^2.\]</span> Nazadnje je <span
 class="math inline">\(||\chi_{\rho}|| = 1\)</span>, če in samo če je za
@@ -3369,10 +3366,10 @@ class="math inline">\(4, 2, 1, 0, 0\)</span>. Od tod izračunamo normo
 \cdot 4^2 + 6 \cdot 2^2 + 8 \cdot 1^2  \right)
     = 2.\]</span> Upodobitev <span
 class="math inline">\(\chi_{\pi}\)</span> torej <em>ni</em> nerazcepna.
-Velja <span class="math display">\[\langle \chi_{\pi}, \chi_{\mathbf{1}}
-\rangle = \frac{1}{4!} \left( 1 \cdot 4 + 6 \cdot 2 + 8 \cdot 1 \right)
-= 1,\]</span> torej <span class="math inline">\(\pi\)</span> vsebuje
-<span class="math inline">\(\mathbf{1}\)</span> z večkratnostjo <span
+Velja <span class="math display">\[[ \chi_{\pi}, \chi_{\mathbf{1}} ] =
+\frac{1}{4!} \left( 1 \cdot 4 + 6 \cdot 2 + 8 \cdot 1 \right) =
+1,\]</span> torej <span class="math inline">\(\pi\)</span> vsebuje <span
+class="math inline">\(\mathbf{1}\)</span> z večkratnostjo <span
 class="math inline">\(1\)</span>, kar je povsem analogno temu, kar smo
 videli pri grupi <span class="math inline">\(S_3\)</span>. Zapišemo
 lahko torej <span class="math inline">\(\pi = \mathbf{1} \oplus
@@ -3512,9 +3509,9 @@ class="math inline">\(2\)</span>. Taka matrika je lahko le identiteta.
 Torej je <span class="math inline">\(\tau\)</span> trivialna v
 konjugiranostnem razredu elementa <span class="math inline">\((1 \ 2)(3
 \ 4)\)</span> in je zato pravzaprav restrikcija upodobitve kvocientne
-grupe <span class="math inline">\(S_4/\{ (), (1 \ 2)(3 \ 4), (1 \ 3)(2 \
-4), (1 \ 4)(2 \ 3) \}\)</span>. Slednjo grupo identificiramo kot <span
-class="math inline">\(S_3\)</span> prek epimorfizma <span
+grupe <span class="math inline">\(S_4w\)</span> po edinki, generirani s
+tem konjugiranostnim razredom. Slednjo kvocientno grupo identificiramo
+kot <span class="math inline">\(S_3\)</span> prek epimorfizma <span
 class="math display">\[\psi \colon S_4 \to S_3, \quad
     (1 \ 2) \mapsto (1 \ 2), \
     (1 \ 2 \ 3 \ 4) \mapsto (1 \ 3)\]</span> z jedrom <span
@@ -3605,6 +3602,7 @@ class="math display">\[\frac{\deg(\pi)}{|G|} \cdot
 class="math display">\[1_x(g) = \frac{1}{|G|} \sum_{\pi \in
 \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1) \chi_{\pi}(x^{-1}
 g).\]</span></p>
+</div>
 <p>Vsako funkcijo <span class="math inline">\(f \in \hom(G,F)\)</span>
 lahko razvijemo po karakterističnih funkcijah kot <span
 class="math inline">\(f = \sum_{x \in G} f(x) 1_x\)</span>. Ker že
@@ -3623,6 +3621,29 @@ class="math inline">\(\pi\)</span>-izotipičnih komponentah rečemo
 ekplicitno pove, kako lahko <span class="math inline">\(f\)</span>
 izračunamo iz njenih Fourierovih transformacij v nerazcepnih
 upodobitvah.</p>
+<p>Fourierova inverzija je nekoliko asimetrična. To lahko popravimo
+tako, da jo uteženo povprečimo z neko drugo funkcijo <span
+class="math inline">\(h \in \hom(G,F)\)</span>. Dobimo <span
+class="math display">\[\sum_{g \in G} f(g) h(g^{-1}) = \frac{1}{|G|}
+\sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \sum_{g \in G} h(g^{-1})
+\chi_{\pi}(1) \mathop{\mathrm{tr}}\left( \hat{f}(\pi) \cdot \pi(g)
+\right),\]</span> kar lahko z enakim argumentom kot prej zapišemo kot
+<span class="math display">\[[ f, h ] = \frac{1}{|G|^2} \sum_{\pi \in
+\mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1)
+\mathop{\mathrm{tr}}(\hat{f}(\pi) \cdot \hat{h}(\pi)).\]</span> Tej
+enakosti rečemo <span><strong><em>Parsevalova
+formula</em></strong></span>.</p>
+<div class="zgled">
+<p><strong>Zgled 3.7</strong>. Naj bo <span
+class="math inline">\(A\)</span> končna abelova grupa. Vemo že, da so
+vse njene kompleksne upodobitve enorazsežne. V tem primeru so upodobitve
+kar enake svojim karakterjem. Za dano funkcijo <span
+class="math inline">\(f \in \hom(A,\mathbf{C})\)</span> lahko Fourierovo
+inverzijo zapišemo kot <span class="math display">\[f = \frac{1}{|A|}
+\sum_{\chi \in \mathop{\mathrm{Irr}}(A)} \hat{f}(\chi) \cdot
+\chi,\]</span> kar je le posledica dejstva <span
+class="math inline">\(\hat{f}(\chi) = |A| \cdot [ f, \chi
+]\)</span>.</p>
 </div>
 <h3 id="kompleksne-upodobitve">Kompleksne upodobitve</h3>
 <p>Omenimo še eno lastnost karakterjev upodobitev naj najugodnejšim
@@ -3688,12 +3709,11 @@ algebraičnim celim številom.</p>
 <div class="proof">
 <p><em>Proof.</em> Vemo že, da je <span
 class="math inline">\(\hat{f}(\pi)\)</span> skalarno množenje s številom
-<span class="math display">\[\frac{|G|}{\deg(\pi)} \cdot \langle f,
-\chi_{\pi} \rangle.\]</span> Preveriti moramo torej, da je to
-algebraično celo število. Funkcijo <span
-class="math inline">\(f\)</span> lahko razvijemo kot vsoto
-karakterističnih funkcij konjugiranostnih razredov s koeficienti v <span
-class="math inline">\(\bar{\mathbf{Z}}\)</span>. Ker <span
+<span class="math display">\[\frac{|G|}{\deg(\pi)} \cdot [ f, \chi_{\pi}
+].\]</span> Preveriti moramo torej, da je to algebraično celo število.
+Funkcijo <span class="math inline">\(f\)</span> lahko razvijemo kot
+vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v
+<span class="math inline">\(\bar{\mathbf{Z}}\)</span>. Ker <span
 class="math inline">\(\bar{\mathbf{Z}}\)</span> tvori kolobar, bo torej
 trditev dovolj preveriti za primer, ko je <span class="math inline">\(f
 = 1_{C}\)</span> za nek konjugiranostni razred <span
@@ -3727,8 +3747,8 @@ cela števila. ◻</p>
 class="math inline">\(\pi \in \mathop{\mathrm{Irr}}(G)\)</span>.
 Uporabimo lemo s funkcijo <span class="math inline">\(f =
 \chi_{\pi}\)</span> in zaključimo <span
-class="math display">\[\frac{|G|}{\deg(\pi)} \cdot \langle \chi_{\pi},
-\chi_{\pi} \rangle = \frac{|G|}{\deg(\pi)} \in \bar{\mathbf{Z}} \cap
+class="math display">\[\frac{|G|}{\deg(\pi)} \cdot [ \chi_{\pi},
+\chi_{\pi} ] = \frac{|G|}{\deg(\pi)} \in \bar{\mathbf{Z}} \cap
 \mathbf{Q}= \mathbf{Z}.\]</span> ◻</p>
 </div>
 <h2 id="razširjeni-zgledi">Razširjeni zgledi</h2>
@@ -3786,29 +3806,6 @@ kakšno podgrupo, seveda <em>ni</em> brez produktov, zato se morajo take
 množice čim bolj izogniti podgrupam. Osnovno vprašanje v zvezi z
 množicami brez produktov je, kako velike podmnožice brez produktov dana
 grupa vsebuje.</p>
-<div class="zgled">
-<p><strong>Zgled 3.7</strong>. Fourierova inverzija je nekoliko
-asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko
-drugo funkcijo <span class="math inline">\(h \in \hom(G,F)\)</span>.
-Dobimo <span class="math display">\[\sum_{g \in G} f(g) h(g^{-1}) =
-\frac{1}{|G|} \sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \sum_{g \in G}
-h(g^{-1}) \chi_{\pi}(1) \mathop{\mathrm{tr}}\left( \hat{f}(\pi) \cdot
-\pi(g) \right),\]</span> kar lahko z enakim argumentom kot prej zapišemo
-kot <span class="math display">\[\langle f, h \rangle = \frac{1}{|G|^2}
-\sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1)
-\mathop{\mathrm{tr}}(\hat{f}(\pi) \cdot \hat{h}(\pi)).\]</span> Če torej
-uvedemo še skalarni produkt Fourierovih transformacij <span
-class="math inline">\(\hat{f}\)</span>, <span
-class="math inline">\(\hat{h}\)</span> s predpisom <span
-class="math display">\[\langle \hat{f}, \hat{h} \rangle =
-        \frac{1}{|G|^2} \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
-\deg(\pi) \cdot \mathop{\mathrm{tr}}\left( \hat{f}(\pi) \cdot
-\hat{h}(\pi) \right),\]</span> lahko zadnjo enakost zapišemo kot <span
-class="math display">\[\langle f, g \rangle = \langle \hat{f}, \hat{g}
-\rangle.\]</span> Tej enakosti rečemo <span><strong><em>Plancherelova
-formula</em></strong></span>, interpetiramo pa jo z rekom, da Fourierova
-transformacija ohranja skalarni produkt.</p>
-</div>
 <h3 id="slučajni-sprehodi">Slučajni sprehodi</h3>
 <h3 id="komutatorji">Komutatorji</h3>
 <p>Naj bo <span class="math inline">\(G\)</span> končna grupa in <span
