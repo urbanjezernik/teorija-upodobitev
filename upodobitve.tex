@@ -80,6 +80,7 @@
 
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\GL{GL}
+\DeclareMathOperator\U{U}
 \DeclareMathOperator\SL{SL}
 \DeclareMathOperator\PSL{PSL}
 \DeclareMathOperator\Gal{Gal}
@@ -1879,17 +1880,18 @@ Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, 
     \end{dokaz}
     
     \begin{dokaz}[Dokaz izreka o stopnjah upodobitev]
-    Naj bo $\pi \in \Irr(G)$. Uporabimo lemo s funkcijo $f = \chi_{\pi}$ in zaključimo
+    Naj bo $\pi \in \Irr(G)$. Uporabimo lemo s funkcijo $f = \chi_{\pi}$, ki nam pove, da je 
     \[
-        \frac{|G|}{\deg(\pi)} \cdot [ \chi_{\pi}, \chi_{\pi} ] = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ} \cap \QQ = \ZZ.
+        \frac{|G|}{\deg(\pi)} \cdot [ \chi_{\pi}, \chi_{\pi} ] = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ}.
     \]
+    Ker je zadnje število hkrati v $\QQ$, je torej v $\QQ \cap \bar{\ZZ} = \ZZ$.
     \end{dokaz}
 
 \subsubsection{Skalarni produkt}
 
-Polje $\CC$ je opremljeno s standardnim skalarnim produktom $\langle z, w \rangle = z \cdot \overline{w}$. Ta produkt lahko razširimo na vsak končnorazsežen kompleksen vektorski prostor. Obravnavali bomo dve taki razširitvi, in sicer na prostor funkcij $\fun(G,\CC)$ ter na prostor, na katerem upodabljamo grupo $G$.
+Polje $\CC$ je opremljeno s standardnim skalarnim produktom $\langle z, w \rangle = z \cdot \overline{w}$. Ta produkt lahko razširimo na vsak končnorazsežen kompleksen vektorski prostor. Obravnavali bomo dve taki razširitvi, in sicer na prostor funkcij $\fun(G,\CC)$ ter na vektorski prostor, na katerem upodabljamo grupo $G$.
 
-Opazujmo najprej prostor funkcij $\fun(G,\CC)$. Vemo že, da ga lahko opremimo s skalarnim produktom $[\cdot, \cdot]$. Ker pa je ta prostor kompleksen, lahko nanj vpeljemo še nekoliko drugačen skalarni produkt, ki je standarden v kompleksnih prostorih, in sicer
+Opazujmo najprej prostor funkcij $\fun(G,\CC)$. Vemo že, da ga lahko opremimo s skalarnim produktom $[\cdot, \cdot]$. Ker pa je ta prostor kompleksen, lahko nanj vpeljemo še {\definicija standarden kompleksni skalarni produkt},
 \[
     \langle f, h \rangle = \frac{1}{|G|} \sum_{g \in G} f(g) \overline{h(g)}
 \]
@@ -1898,6 +1900,39 @@ za $f,h \in \fun(G,\CC)$. Za vsako končnorazsežno kompleksno upodobitev $\rho$
     [f, \chi_{\rho}] = \langle f, \chi_{\rho} \rangle,
 \]
 zato se večina rezultatov, ki smo jih izpeljali za skalarni produkt $[\cdot, \cdot]$, prenese na skalarni produkt $\langle \cdot, \cdot \rangle$. V posebnem  karakterji še vedno tvorijo ortonormiran sistem vektorjev v $\fun(G,\CC)$ in koeficienti razvoja razrednih funkcij po karakterjih se ne spremenijo.
+
+Osredotočimo se sedaj še na upodobitveni prostor. Naj bo $\rho$ kompleksna upodobitev grupe $G$ na končnorazsežnem prostoru $V$. Izberimo bazo prostora $\{ v_i \}_{i}$ in z njo kompleksen skalarni produkt
+\[
+    \left\langle \sum_i \alpha_i v_i, \sum_i \beta_i v_j \right\rangle = \sum_i \alpha_i \overline{\beta_i}.
+\]
+Prostor $V$ je opremljen z linearnim delovanjem grupe $G$. Zdaj smo na ta prostor dodali strukturo skalarnega produkta in ni jasno, ali je grupa $G$ kompatibilna s to dodatno strukturo. Kadar je temu tako, se pravi
+\[
+    \forall g \in G. \ \forall v, w \in V. \quad \langle \rho(g) \cdot v, \rho(g) \cdot w \rangle = \langle v, w \rangle,
+\]
+tedaj rečemo, da je $\rho$ {\definicija unitarna upodobitev}. V tem primeru $\rho$ slika iz $G$ v grupo unitarnih transformacij $\U(V)$ prostora $V$ s skalarnim produktom $\langle \cdot, \cdot \rangle$. Seveda ni vsaka upodobitev končne grupe unitarna,\footnote{Skalarni produkt na danem prostoru lahko izberemo na mnogo različnih načinov.} je pa vsaka upodobitev \emph{unitarizabilna}.
+
+\begin{trditev}
+Naj bo $G$ končna grupa in $\rho$ njena končnorazsežna kompleksna upodobitev na prostoru $V$. Tedaj na $V$ obstaja skalarni produkt, glede na katerega je $\rho$ unitarna.
+\end{trditev}
+\begin{dokaz}
+Izberimo poljuben skalarni produkt $\langle \cdot, \cdot \rangle$ na $V$ in ga povprečimo do
+\[
+    \langle \cdot, \cdot \rangle_0 \colon V \times V \to \CC, \quad
+    \langle v, w \rangle_0 = \frac{1}{|G|} \sum_{g \in G} \langle \rho(g) \cdot v, \rho(g) \cdot w \rangle.
+\]
+Ni težko preveriti, da je $\langle \cdot, \cdot \rangle_0$ skalarni produkt na $V$, glede na katerega je $\rho$ unitarna upodobitev.
+\end{dokaz}
+
+V kontekstu kompleksnih upodobitev končnih grup lahko torej brez škode predpostavimo, da je prostor opremljen s skalarnim produktom, glede na katerega je dana upodobitev unitarna.
+
+\begin{zgled}
+Končna grupa deluje z regularno upodobitvijo $\rho_{\fun}$ na prostoru funkcij $\fun(G, \CC)$. Ta prostor je opremljen s standardnim kompleksnim skalarnim produktom. Glede na ta skalarni produkt je $\rho_{\fun}$ unitarna upodobitev, saj za vsaka $f,h \in \fun(G,\CC)$ in $x \in G$ velja
+\[
+    \left\langle \rho_{\fun}(G,\CC)(x) \cdot f, \rho_{\fun}(G,\CC)(x) \cdot h  \right\rangle =
+    \frac{1}{|G|} \sum_{g \in G} f(gx) \overline{h(gx)}
+    = \langle f, h \rangle.
+\]
+\end{zgled}
 
 \subsubsection{Parsevalov izrek}
 
