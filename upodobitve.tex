@@ -75,6 +75,7 @@
 \def\GAP{\bf{GAP}}
 \DeclareMathOperator\inv{inv}
 \DeclareMathOperator\Eig{Eig}
+\DeclareMathOperator\fun{fun}
 
 
 \DeclareMathOperator\Aut{Aut}
@@ -316,12 +317,12 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
         
         Za konkreten zgled lahko vzamemo $G = S_n$, ki naravno deluje na množici $X = \{ 1, 2, \dots, n \}$. Na ta način dobimo permutacijsko upodobitev grupe $S_n$ na prostoru $F[\{ 1, 2, \dots, n \}]$ razsežnosti $n$.
         \item Naj bo $G$ grupa in $F$ polje. Grupa $G$ vselej deluje na sebi s Cayleyjevim delovanjem. Prirejeni permutacijski upodobitvi grupe $G$ na $F[G]$\footnote{Prostor $F[G]$ je vektorski prostor nad $F$, generiran z množico $G$. Običajno mu pravimo {\definicija grupna algebra}, saj ta prostor na naraven način podeduje operacijo množenja iz grupe $G$.} rečemo {\definicija Cayleyjeva upodobitev} grupe $G$ nad $F$. To delovanje označimo z $\pi_{\Cay}$.
-        \item Naj bo $G$ grupa in $F$ polje. Naj bo $\hom(G,F)$ množica vseh funkcij iz množice $G$ v $F$. Te funkcije lahko po točkah seštevamo in množimo s skalarji, na ta način je $\hom(G,F)$ vektorski prostor. Grupa $G$ deluje na $\hom(G,F)$ s homomorfizmom
+        \item Naj bo $G$ grupa in $F$ polje. Naj bo $\fun(G,F)$ množica vseh funkcij iz množice $G$ v $F$. Te funkcije lahko po točkah seštevamo in množimo s skalarji, na ta način je $\fun(G,F)$ vektorski prostor. Grupa $G$ deluje na $\fun(G,F)$ s homomorfizmom
         \[
-            \rho_{\hom} \colon G \to \GL(\hom(G,F)), \quad
+            \rho_{\fun} \colon G \to \GL(\fun(G,F)), \quad
             g \mapsto \left( f \mapsto \left( x \mapsto f(xg) \right) \right),
         \]
-        kjer je $f \in \hom(G,F), \ x \in G$. To delovanje izhaja iz (desnega) delovanja grupe $G$ na sebi in ga zato imenujemo {\definicija (desna) regularna upodobitev} grupe $G$ nad $F$.
+        kjer je $f \in \fun(G,F), \ x \in G$. To delovanje izhaja iz (desnega) delovanja grupe $G$ na sebi in ga zato imenujemo {\definicija (desna) regularna upodobitev} grupe $G$ nad $F$.
     \end{itemize}
 \end{zgled}
 
@@ -385,9 +386,9 @@ Naj bo $G$ grupa in $F$ polje. Kadar je spletična $\Phi \colon V_1 \to V_2$ med
     \]
     V to kratko zgodbo lahko vključimo še desno regularno upodobitev
     \[
-        \rho_{\hom} \colon \ZZ/n\ZZ \to \GL(\hom(\ZZ/n\ZZ,\CC)).
+        \rho_{\fun} \colon \ZZ/n\ZZ \to \GL(\fun(\ZZ/n\ZZ,\CC)).
     \]
-    Vektorski prostor $\hom(\ZZ/n\ZZ, \CC)$ lahko na naraven način opremimo z bazo iz karakterističnih funkcij
+    Vektorski prostor $\fun(\ZZ/n\ZZ, \CC)$ lahko na naraven način opremimo z bazo iz karakterističnih funkcij
     \[
         1_{\bar x} \colon \ZZ/n\ZZ \to \CC, \quad
         \bar y \mapsto \begin{cases}
@@ -397,7 +398,7 @@ Naj bo $G$ grupa in $F$ polje. Kadar je spletična $\Phi \colon V_1 \to V_2$ med
     \]
     za $\bar x \in \ZZ/n\ZZ$. Predpišimo linearno preslikavo\footnote{Pozor, karakteristična funkcija je zasidrana pri {\em inverzu} elementa $\bar x$ v $\ZZ/n\ZZ$.}
     \[
-        \Phi^\prime \colon \CC[\ZZ/n\ZZ] \to \hom(\ZZ/n\ZZ, \CC), \quad
+        \Phi^\prime \colon \CC[\ZZ/n\ZZ] \to \fun(\ZZ/n\ZZ, \CC), \quad
         e_{\bar x} \mapsto 1_{- \bar x}.
     \]
     Jasno je $\Phi^\prime$ bijektivna. Preverimo še, da je res spletična. Za vsaka $\bar x, \bar y \in \ZZ/n\ZZ$ velja
@@ -455,7 +456,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL(V)$. Denimo, da obstaja v
     Množica $V^G$ je vektorski podprostor prostora $V$, ki je invarianten za delovanje grupe $G$. Torej je $\tilde \rho \colon G \to \GL(V^G)$ podupodobitev upodobitve $\rho$. Na prostoru $V^G$ po definiciji grupa $G$ deluje trivialno, torej je $\tilde \rho$ izomorfna trivialni upodobitvi $\11^{\dim V^G}$.
 
     \begin{domacanaloga}
-        Naj bo $G$ grupa in $F$ polje. Določi upodobitvi $F[G]^G$ in $\hom(G,F)^G$.
+        Naj bo $G$ grupa in $F$ polje. Določi upodobitvi $F[G]^G$ in $\fun(G,F)^G$.
     \end{domacanaloga}
 
     Prostor $V^G$ lahko razumemo še na naslednji alternativen način, ki nam bo prišel zelo prav v nadaljevanju. Iz vsakega vektorja $v \in V^G$ izhaja injektivna spletična
@@ -466,7 +467,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL(V)$. Denimo, da obstaja v
     med $\11$ in $\rho$. S tem je določena preslikava $V^G \to \hom_G(\11, V)$. Ta preslikava ima jasen inverz, ki spletični $\Phi \in \hom_G(\11, V)$ priredi $\Phi(1)$. Na ta način lahko identificiramo prostor $V^G$ z množico spletičen $\hom_G(\11, V)$.
     \item Naj bo $G$ grupa in $\rho$ njena upodobitev na prostoru $V$. Predpostavimo, da obstaja vektor $v \in V$, ki je lastni vektor vsake linearne preslikave $\rho(g)$ za $g \in G$. 
     
-    Torej za vsak $g \in G$ obstaja $\chi(g) \in F$, da je $\rho(g) \cdot v = \chi(g) v$. Na ta način dobimo funkcijo $\chi \colon G \to F$, se pravi element prostora $\hom(G,F)$. Ta funkcija ni čisto poljubna; ker je $\rho$ upodobitev, je $\chi$ nujno {\em homomorfizem} iz grupe $G$ v grupo $F^*$. Torej je $\chi$ pravzaprav upodobitev grupe $G$ na prostoru $F$ razsežnosti $1$.\footnote{Kadar je $\chi(g) = 1$ za vsak $g \in G$, je ta upodobitev izomorfna $\11$. Kadar je $\chi(g) \neq 1$ za vsaj kak $g \in G$, pa ta upodobitev \emph{ni} trivialna.} 
+    Torej za vsak $g \in G$ obstaja $\chi(g) \in F$, da je $\rho(g) \cdot v = \chi(g) v$. Na ta način dobimo funkcijo $\chi \colon G \to F$, se pravi element prostora $\fun(G,F)$. Ta funkcija ni čisto poljubna; ker je $\rho$ upodobitev, je $\chi$ nujno {\em homomorfizem} iz grupe $G$ v grupo $F^*$. Torej je $\chi$ pravzaprav upodobitev grupe $G$ na prostoru $F$ razsežnosti $1$.\footnote{Kadar je $\chi(g) = 1$ za vsak $g \in G$, je ta upodobitev izomorfna $\11$. Kadar je $\chi(g) \neq 1$ za vsaj kak $g \in G$, pa ta upodobitev \emph{ni} trivialna.} 
     
     Zdaj kot v zadnjem zgledu s predpisom
     \[
@@ -479,11 +480,11 @@ Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL(V)$. Denimo, da obstaja v
 
     Poseben primer te korespondence je zadnji zgled. Množico enorazsežnih trivialnih podupodobitev upodobitve $\rho$ lahko identificiramo z množico neničelnih spletičen $\hom_G(\11, V) \backslash \{ x \mapsto 0 \}$, ta pa ustreza skupnim lastnim vektorjem $\rho(g)$ za $g \in G$ z lastno vrednostjo $1$, kar je ravno množica $V^G \backslash \{ 0 \}$.
 
-    \item Naj bo $G$ grupa in $F$ polje. Opazujmo Cayleyjevo upodobitev $\pi_{\Cay}$ na $F[G]$ in desno regularno upodobitev $\rho_{\hom}$ na $\hom(G,F)$. Trdimo, da je $\pi_{\Cay}$ podupodobitev upodobitve $\rho_{\hom}$.
+    \item Naj bo $G$ grupa in $F$ polje. Opazujmo Cayleyjevo upodobitev $\pi_{\Cay}$ na $F[G]$ in desno regularno upodobitev $\rho_{\fun}$ na $\fun(G,F)$. Trdimo, da je $\pi_{\Cay}$ podupodobitev upodobitve $\rho_{\fun}$.
     
     V ta namen predpišimo linearno preslikavo\footnote{Poseben primer te preslikave smo videli za grupo $\ZZ/n\ZZ$, kjer smo premislili, da je celo bijektivna.}
     \[
-        \Phi \colon F[G] \to \hom(G,F), \quad
+        \Phi \colon F[G] \to \fun(G,F), \quad
         e_g \mapsto 1_{g^{-1}}
     \]
     za $g \in G$. Jasno je $\Phi$ injektivna preslikava. Hkrati za vse $g,h,x \in G$ velja
@@ -494,13 +495,13 @@ Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL(V)$. Denimo, da obstaja v
     \]
     in
     \[
-        \left( \rho_{\hom}(g) \cdot \Phi(e_h) \right)(x)
+        \left( \rho_{\fun}(g) \cdot \Phi(e_h) \right)(x)
         = 1_{h^{-1}}(xg)
         = 1_{g^{-1} h^{-1}}(x),
     \]
     zato je $\Phi$ tudi spletična.
 
-    Kadar je grupa $G$ \emph{končna}, sta prostora $F[G]$ in $\hom(G,F)$ enake razsežnosti, zato sta v tem primeru upodobitvi $\pi_{\Cay}$ in $\rho_{\hom}$ izomorfni. Kadar je grupa $G$ \emph{neskončna}, pa preslikava $\Phi$ vsekakor ni bijektivna.\footnote{Slika $\image \Phi$ namreč sestoji iz funkcij, ki so neničelne le v končno mnogo elementih grupe $G$.} V tem primeru upodobitvi nista izomorfni.\footnote{To sledi na primer iz dejstva, da prostora $F[G]^G$ in $\hom(G,F)^G$ nista izomorfna.}
+    Kadar je grupa $G$ \emph{končna}, sta prostora $F[G]$ in $\fun(G,F)$ enake razsežnosti, zato sta v tem primeru upodobitvi $\pi_{\Cay}$ in $\rho_{\fun}$ izomorfni. Kadar je grupa $G$ \emph{neskončna}, pa preslikava $\Phi$ vsekakor ni bijektivna.\footnote{Slika $\image \Phi$ namreč sestoji iz funkcij, ki so neničelne le v končno mnogo elementih grupe $G$.} V tem primeru upodobitvi nista izomorfni.\footnote{To sledi na primer iz dejstva, da prostora $F[G]^G$ in $\fun(G,F)^G$ nista izomorfna.}
 \end{itemize}
 \end{zgled}
 
@@ -746,39 +747,39 @@ Kadar imamo na voljo tri grupe, povezane s homomorfizmoma $\phi_2 \colon H_2 \to
 
 Naj bo kot zgoraj $G$ grupa in $H$ še ena grupa s homomorfizmom $\phi \colon H \to G$. {\definicija Indukcija} je postopek, ki s pomočjo homomorfizma $\phi$ upodobitvi $\rho$ grupe $H$ priredi upodobitev grupe $G$. Indukcija torej deluje ravno v obratno smer kot restrikcija in nam omogoča, da upodobitev $\rho$ \emph{potisnemo naprej} vzdolž homomorfizma $\phi$. Ta postopek je nekoliko bolj zapleten kot restrikcija.
 
-Začnimo z upodobitvijo $\rho \colon H \to \GL(V)$. Konstruirali bomo prostor, na katerem deluje grupa $G$. Odskočna deska za to bo regularna upodobitev grupe $G$, katere vektorski prostor je prostor funkcij $\hom(G,F)$. Ta prostor razširimo s prostorom $V$ do prostora funkcij
+Začnimo z upodobitvijo $\rho \colon H \to \GL(V)$. Konstruirali bomo prostor, na katerem deluje grupa $G$. Odskočna deska za to bo regularna upodobitev grupe $G$, katere vektorski prostor je prostor funkcij $\fun(G,F)$. Ta prostor razširimo s prostorom $V$ do prostora funkcij
 \[
-    \hom(G,V) = \{ f \mid f \colon G \to V \},
+    \fun(G,V) = \{ f \mid f \colon G \to V \},
 \]
 na katerem linearno deluje grupa $G$ z analogom regularne upodobitve, in sicer kot
 \[
     g \cdot f = \left( x \mapsto f(xg) \right)
 \]
-za $g \in G, \ f \in \hom(G,V)$. Po drugi strani na tej množici deluje tudi grupa $H$, in sicer na dva načina: prvič prek homomorfizma $\phi$ in pravkar opisanega delovanja grupe $G$, drugič pa prek svojega delovanja $\rho$ na prostoru $V$. Ko ti dve delovanji združimo, dobimo delovanje grupe $H$ na prostoru funkcij
-$\hom(G,V)$ s predpisom
+za $g \in G, \ f \in \fun(G,V)$. Po drugi strani na tej množici deluje tudi grupa $H$, in sicer na dva načina: prvič prek homomorfizma $\phi$ in pravkar opisanega delovanja grupe $G$, drugič pa prek svojega delovanja $\rho$ na prostoru $V$. Ko ti dve delovanji združimo, dobimo delovanje grupe $H$ na prostoru funkcij
+$\fun(G,V)$ s predpisom
 \[
     h \cdot f = \left( x \mapsto \rho(h) \cdot f \left( \phi(h^{-1}) \cdot x \right) \right)
 \]
-za $h \in H, \ f \in \hom(G,V)$.\footnote{Delovanje $H$ na $\hom(G,V)$ je konstruirano analogno delovanju grupe na prostoru linearnih preslikav.} Opazujmo invariantni podprostor
+za $h \in H, \ f \in \fun(G,V)$.\footnote{Delovanje $H$ na $\fun(G,V)$ je konstruirano analogno delovanju grupe na prostoru linearnih preslikav.} Opazujmo invariantni podprostor
 \[
-    \hom(G, V)^H =
-    \left\{ f \in \hom(G,V) \mid \forall h \in H, x \in G. \ \rho(h) \cdot f(x) = f \left(\phi(h) \cdot x\right)\right\}.
+    \fun(G, V)^H =
+    \left\{ f \in \fun(G,V) \mid \forall h \in H, x \in G. \ \rho(h) \cdot f(x) = f \left(\phi(h) \cdot x\right)\right\}.
 \]
-Ker grupa $G$ deluje na $\hom(G,V)$ prek množenja z \emph{desne}, pogoj pripadnosti invariantam $\hom(G,V)^H$ pa je izražen prek množenja z \emph{leve}, je podprostor $\hom(G,V)^H$ avtomatično $G$-invarianten. S tem smo dobili upodobitev grupe $G$ na prostoru $\hom(G,V)^H$. To je želena {\definicija inducirana upodobitev}. Zanjo uporabimo oznako $\Ind^G_H(\rho)$.
+Ker grupa $G$ deluje na $\fun(G,V)$ prek množenja z \emph{desne}, pogoj pripadnosti invariantam $\fun(G,V)^H$ pa je izražen prek množenja z \emph{leve}, je podprostor $\fun(G,V)^H$ avtomatično $G$-invarianten. S tem smo dobili upodobitev grupe $G$ na prostoru $\fun(G,V)^H$. To je želena {\definicija inducirana upodobitev}. Zanjo uporabimo oznako $\Ind^G_H(\rho)$.
 
 \begin{zgled}
-Naj bo $G$ grupa z vložitvijo $\phi \colon 1 \to G$ trivialne podgrupe. Vsaka upodobitev trivialne grupe nad poljem $F$ je trivialna. Iz enorazsežne trivialne upodobitve $\11$ dobimo prostor funkcij $\hom(G,F)$, na katerem grupa $G$ deluje z regularno upodobitvijo. Inducirana upodobitev je v tem primeru torej kar regularna, se pravi $\Ind^G_1(\11) = \rho_{\hom}$.
+Naj bo $G$ grupa z vložitvijo $\phi \colon 1 \to G$ trivialne podgrupe. Vsaka upodobitev trivialne grupe nad poljem $F$ je trivialna. Iz enorazsežne trivialne upodobitve $\11$ dobimo prostor funkcij $\fun(G,F)$, na katerem grupa $G$ deluje z regularno upodobitvijo. Inducirana upodobitev je v tem primeru torej kar regularna, se pravi $\Ind^G_1(\11) = \rho_{\fun}$.
 \end{zgled}
 
-Inducirano upodobitev $\Ind^G_H(\rho) = \hom(G,V)^H$ smo konstruirali z invariantami grupe $H$. To pomeni, da vektorji v tem prostoru niso poljubne funkcije v $\hom(G,V)$, temveč zadoščajo določenim restriktivnim pogojem. Te funkcije so določene z vrednostmi, ki jih zavzamejo na predstavnikih desnih odsekov $\image \phi \backslash G$,\footnote{Če je $R$ množica predstavnikov desnih odsekov $\image \phi$ v $G$ in če že poznamo vrednosti $f \in \hom(G,V)$ na množici $R$, potem lahko vsako drugo vrednost $f$ izračunamo kot $f(x \cdot r) = \rho(y) \cdot f(r)$ za $x = \phi(y) \in \image \phi$.} in te vrednosti pripadajo podprostoru $V^{\ker \phi}$.\footnote{Če je $f \in \hom(G,V)^H$, potem pogoj $H$-invariantnosti uporabimo z elementi $h \in \ker \phi$ in dobimo $\rho(h) \cdot f(x) = f(x)$, torej je $f \in V^h$.}
+Inducirano upodobitev $\Ind^G_H(\rho) = \fun(G,V)^H$ smo konstruirali z invariantami grupe $H$. To pomeni, da vektorji v tem prostoru niso poljubne funkcije v $\fun(G,V)$, temveč zadoščajo določenim restriktivnim pogojem. Te funkcije so določene z vrednostmi, ki jih zavzamejo na predstavnikih desnih odsekov $\image \phi \backslash G$,\footnote{Če je $R$ množica predstavnikov desnih odsekov $\image \phi$ v $G$ in če že poznamo vrednosti $f \in \fun(G,V)$ na množici $R$, potem lahko vsako drugo vrednost $f$ izračunamo kot $f(x \cdot r) = \rho(y) \cdot f(r)$ za $x = \phi(y) \in \image \phi$.} in te vrednosti pripadajo podprostoru $V^{\ker \phi}$.\footnote{Če je $f \in \fun(G,V)^H$, potem pogoj $H$-invariantnosti uporabimo z elementi $h \in \ker \phi$ in dobimo $\rho(h) \cdot f(x) = f(x)$, torej je $f \in V^h$.}
 
 \begin{zgled}
-Naj bo $G$ grupa z upodobitvijo $\rho$ in naj bo $\phi = \id_G$. Tedaj je vsaka funkcija $f \in \hom(G,V)^G$ določena že z vrednostjo $f(1)$. Dodatnih restrikcij za to vrednost ni, zato dobimo izomorfizem vektorskih prostorov
+Naj bo $G$ grupa z upodobitvijo $\rho$ in naj bo $\phi = \id_G$. Tedaj je vsaka funkcija $f \in \fun(G,V)^G$ določena že z vrednostjo $f(1)$. Dodatnih restrikcij za to vrednost ni, zato dobimo izomorfizem vektorskih prostorov
     \[
-        \hom(G,V)^G \to V, \quad
+        \fun(G,V)^G \to V, \quad
         f \mapsto f(1),
     \]
-ki je spletična glede na regularno delovanje $G$ na $\hom(G,V)$. S tem imamo torej izomorfizem upodobitev $\Ind^G_G(\rho) \cong \rho$.
+ki je spletična glede na regularno delovanje $G$ na $\fun(G,V)$. S tem imamo torej izomorfizem upodobitev $\Ind^G_G(\rho) \cong \rho$.
 \end{zgled}
 
 \begin{domacanaloga}
@@ -787,12 +788,12 @@ ki je spletična glede na regularno delovanje $G$ na $\hom(G,V)$. S tem imamo to
 
 Najpomembnejši primer indukcije, čeravno ne tudi najbolj preprost, je {\definicija indukcija iz podgrupe končnega indeksa}. Naj bo $G$ grupa s podgrupo $H$ in naj bo $\phi$ vložitev $H$ v $G$. Predpostavimo, da je $|G:H| < \infty$. Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$. Premislimo, kako izgleda upodobitev $\Ind^G_H(\rho)$. 
     
-Naj bo $R$ neka izbrana množica predstavnikov desnih odsekov $H$ v $G$. Vsaka funkcija $f \in \hom(G,V)^H$ je določena z vrednostmi $f(r)$ za $r \in R$ in dodatnih restrikcij za te vrednosti ni, zato dobimo izomorfizem vektorskih prostorov\footnote{Množico funkcij $\hom(R,V)$ lahko vidimo kot direktno vsoto prostorov $V$, indeksirano z množico $R$.}
+Naj bo $R$ neka izbrana množica predstavnikov desnih odsekov $H$ v $G$. Vsaka funkcija $f \in \fun(G,V)^H$ je določena z vrednostmi $f(r)$ za $r \in R$ in dodatnih restrikcij za te vrednosti ni, zato dobimo izomorfizem vektorskih prostorov\footnote{Množico funkcij $\fun(R,V)$ lahko vidimo kot direktno vsoto prostorov $V$, indeksirano z množico $R$.}
     \[
-        \Phi \colon \hom(G,V)^H \to \hom(R,V), \quad
+        \Phi \colon \fun(G,V)^H \to \fun(R,V), \quad
         f \mapsto \left( r \mapsto f(r) \right).
     \]
-Da dobimo spletično, moramo posplošitev regularnega delovanja $G$ na $\hom(G,V)$ prenesti prek linearnega izomorfizma $\Phi$ na desno stran. V ta namen naj bo $v \in V$ in $f \in \hom(G,V)^H$ z lastnostjo $f(r_0) = v$ in $f(r) = 0$ za $r \in R \backslash \{ r_0 \}$. Za vsak $g \in G$ mora tako veljati
+Da dobimo spletično, moramo posplošitev regularnega delovanja $G$ na $\fun(G,V)$ prenesti prek linearnega izomorfizma $\Phi$ na desno stran. V ta namen naj bo $v \in V$ in $f \in \fun(G,V)^H$ z lastnostjo $f(r_0) = v$ in $f(r) = 0$ za $r \in R \backslash \{ r_0 \}$. Za vsak $g \in G$ mora tako veljati
     \[
         g \cdot \left( r \mapsto \begin{cases} v & r = r_0, \\ 0 & r \neq r_0 \end{cases} \right) =
         \Phi \left( g \cdot f \right) =
@@ -803,15 +804,15 @@ Za $x \in R$ z lastnostjo $xg \in Hr_0$, se pravi $x = h r_0 g^{-1}$ za nek $h \
         g \cdot \left( r \mapsto \begin{cases} v & r = r_0, \\ 0 & r \neq r_0 \end{cases} \right) =
         \left( r \mapsto \begin{cases} \rho(h) \cdot v & r = h r_0 g^{-1} \text{ za nek $h \in H$,} \\ 0 & r \notin H r_0 g^{-1} \end{cases} \right).
     \]
-Da bo preslikava $\Phi$ spletična, moramo na $\hom(R,V)$ torej uvesti tako delovanje grupe $G$, ki dan vektor $v$ pri vnosu $r_0 \in R$ preslika tako, da najprej izračuna odsek elementa $r_0 g^{-1}$ po $H$, ta element zapiše kot $r_0 g^{-1} = h^{-1} r$ za $h \in H, \ r \in R$, nato pa na vektor $v$ deluje z $\rho(h)$ in ga hkrati prestavi k vnosu $r$.
+Da bo preslikava $\Phi$ spletična, moramo na $\fun(R,V)$ torej uvesti tako delovanje grupe $G$, ki dan vektor $v$ pri vnosu $r_0 \in R$ preslika tako, da najprej izračuna odsek elementa $r_0 g^{-1}$ po $H$, ta element zapiše kot $r_0 g^{-1} = h^{-1} r$ za $h \in H, \ r \in R$, nato pa na vektor $v$ deluje z $\rho(h)$ in ga hkrati prestavi k vnosu $r$.
     
-Opisan postopek si lahko nekoliko lažje predstavljamo tako, da množico $\hom(R,V)$ identificiramo z direktno vsoto $\bigoplus_{r \in R} V r$, kjer je $Vr$ kopija vektorskega prostora $V$ pri komponenti $r$. Element $g \in G$ deluje na vektorju $v r_0 \in Vr_0$ kot $g^{-1}$ z desne. V teh domačih oznakah izračunamo
+Opisan postopek si lahko nekoliko lažje predstavljamo tako, da množico $\fun(R,V)$ identificiramo z direktno vsoto $\bigoplus_{r \in R} V r$, kjer je $Vr$ kopija vektorskega prostora $V$ pri komponenti $r$. Element $g \in G$ deluje na vektorju $v r_0 \in Vr_0$ kot $g^{-1}$ z desne. V teh domačih oznakah izračunamo
     \[
         g \cdot v r_0 = v r_0 g^{-1} = v h^{-1} r = (h \cdot v) r = (\rho(h) \cdot v) r,
     \]
 kar ravno ustreza bolj zakompliciranemu zapisu zgoraj.
 
-Poseben primer opisane indukcije dobimo z enorazsežnimi upodobitvami grupe $H$. Vsak homomorfizem $\rho \colon H \to F^*$ porodi prostor $\hom(G,F)^H$ razsežnosti $|G:H|$, ki je podprostor prostora funkcij $\hom(G,F)$ in na katerem torej grupa $G$ deluje z regularno upodobitvjo. Inducirana upodobitev je v tem primeru podupodobitev regularne upodobitve $\rho_{\hom}$. Na ta način lahko dobimo mnogo različnih upodobitev grupe $G$.
+Poseben primer opisane indukcije dobimo z enorazsežnimi upodobitvami grupe $H$. Vsak homomorfizem $\rho \colon H \to F^*$ porodi prostor $\fun(G,F)^H$ razsežnosti $|G:H|$, ki je podprostor prostora funkcij $\fun(G,F)$ in na katerem torej grupa $G$ deluje z regularno upodobitvjo. Inducirana upodobitev je v tem primeru podupodobitev regularne upodobitve $\rho_{\fun}$. Na ta način lahko dobimo mnogo različnih upodobitev grupe $G$.
 
 \begin{zgled}
     Opazujmo grupo $S_n$ in njeno podgrupo $A_n$ indeksa $2$. Za $n \geq 5$ je grupa $A_n$ enostavna, zato je $A_n = [A_n, A_n]$ in ni netrivialnih enorazsežnih upodobitev. Oglejmo si inducirano upodobitev $\Ind^{S_n}_{A_n}(\11)$. A priori vemo, da je to dvorazsežna upodobitev. Za množico predstavnikov odsekov vzamemo $R = \{ (), (1 \ 2) \}$. V domačih oznakah je vektorski prostor upodobitve enak $F ()\oplus F (1 \ 2)$, na katerem deluje grupa $S_n$ s predpisom
@@ -870,13 +871,13 @@ Naj bo $\rho$ upodobitev na prostoru $V$ in $\sigma$ upodobitev na prostoru $W$.
 \]
 Sestavimo pripadajočo spletično
 \[
-    \Psi \in \hom_G(\rho, \Ind^G_H(\sigma)) = \hom_G(V, \hom(G,W)^H).
+    \Psi \in \hom_G(\rho, \Ind^G_H(\sigma)) = \hom_G(V, \fun(G,W)^H).
     \]
 Za vektor $v \in V$ definirajmo
 \[
-    \Psi(v) = \left( x \mapsto \Phi(\rho(x) \cdot v) \right) \in \hom(G,W).
+    \Psi(v) = \left( x \mapsto \Phi(\rho(x) \cdot v) \right) \in \fun(G,W).
 \]
-Ni težko (je pa sitno) preveriti, da opisano prirejanje vzpostavi izomorfizem med prostoroma spletičen $\hom_H(V,W)$ in $\hom_G(V,\hom(G,W)^H)$.
+Ni težko (je pa sitno) preveriti, da opisano prirejanje vzpostavi izomorfizem med prostoroma spletičen $\hom_H(V,W)$ in $\hom_G(V,\fun(G,W)^H)$.
 \end{dokaz}
 
 \begin{zgled}
@@ -1203,7 +1204,7 @@ O matričnih koeficientih upodobitve $\rho$ lahko abstraktneje govorimo tudi bre
 
 \subsection{Matrični koeficienti in regularna upodobitev}
 
-Matrične koeficiente lahko vidimo kot elemente vektorskega prostora funkcij $\hom(G,F)$ iz $G$ v $F$. Na tem prostoru deluje grupa $G$ z regularno upodobitvijo $\rho_{\hom}$. Naj bo $\MK(\pi) \leq \hom(G,F)$ podprostor, ki ga razpenjajo matrični koeficienti neke končnorazsežne nerazcepne upodobitve $\pi$.\footnote{Prostor $\MK(\pi)$ je enak prostoru, ki ga razpenjajo posplošeni matrični koeficienti upodobitve $\pi$, zato je neodvisen od izbire baze.}
+Matrične koeficiente lahko vidimo kot elemente vektorskega prostora funkcij $\fun(G,F)$ iz $G$ v $F$. Na tem prostoru deluje grupa $G$ z regularno upodobitvijo $\rho_{\fun}$. Naj bo $\MK(\pi) \leq \fun(G,F)$ podprostor, ki ga razpenjajo matrični koeficienti neke končnorazsežne nerazcepne upodobitve $\pi$.\footnote{Prostor $\MK(\pi)$ je enak prostoru, ki ga razpenjajo posplošeni matrični koeficienti upodobitve $\pi$, zato je neodvisen od izbire baze.}
 
 \begin{trditev}
 $\MK(\pi)$ je $G$-invarianten podprostor.
@@ -1218,31 +1219,31 @@ Naj bo $g \in G$ in $f_{v, \lambda}$ posplošen matrični koeficient. Velja
 zato je $g \cdot f_{v, \lambda} = f_{\pi(g) \cdot v, \lambda} \in \MK(\pi)$.
 \end{dokaz}
 
-Matrični koeficienti upodobitve $\pi$ nam torej dajejo podupodobitev na prostoru $\MK(\pi)$ znotraj regularne upodobitve $\rho_{\hom}$ na $\hom(G,F)$. Ni presenetljivo, da je ta podupodobitev v resnici tesno povezana s $\pi$.
+Matrični koeficienti upodobitve $\pi$ nam torej dajejo podupodobitev na prostoru $\MK(\pi)$ znotraj regularne upodobitve $\rho_{\fun}$ na $\fun(G,F)$. Ni presenetljivo, da je ta podupodobitev v resnici tesno povezana s $\pi$.
 
 \begin{izrek}
 Naj bo $G$ grupa s končnorazsežno nerazcepno upodobitvijo $\pi$. Tedaj je
 \[
-   \textstyle  \MK(\pi) = \Izotip_{\rho_{\hom}}(\pi)
+   \textstyle  \MK(\pi) = \Izotip_{\rho_{\fun}}(\pi)
 \]
 Nad algebraično zaprtim poljem je večkratnost $\pi$ v slednji upodobitvi enaka $\deg(\pi)$.
 \end{izrek}
 \begin{dokaz}
-Naj bo $\pi$ upodobitev na prostoru $W$. Spomnimo se, da je $\pi$-izotipična komponenta v $\rho_{\hom}$ napeta na vektorje oblike $\Phi(w)$ za $\Phi \in \hom_G(\pi, \rho_{\hom})$ in $w \in W$. Regularno upodobitev predstavimo kot inducirano upodobitev $\rho_{\hom} = \Ind^G_1(\11)$. Po adjunkciji med restrikcijo in indukcijo je
+Naj bo $\pi$ upodobitev na prostoru $W$. Spomnimo se, da je $\pi$-izotipična komponenta v $\rho_{\fun}$ napeta na vektorje oblike $\Phi(w)$ za $\Phi \in \hom_G(\pi, \rho_{\fun})$ in $w \in W$. Regularno upodobitev predstavimo kot inducirano upodobitev $\rho_{\fun} = \Ind^G_1(\11)$. Po adjunkciji med restrikcijo in indukcijo je
 \[
-    \textstyle \hom_G(\pi, \rho_{\hom}) \cong \hom_1(\Res^G_1(\pi), \11)
+    \textstyle \hom_G(\pi, \rho_{\fun}) \cong \hom_1(\Res^G_1(\pi), \11)
     \cong \hom(\11^{\deg(\pi)}, \11).
 \]
 Standardna dualna baza $\{ e_i^* \mid 1 \leq i \leq \deg(\pi) \}$ v zadnjem vektorskem prostoru nam po tej adjunkciji porodi bazo
 \[
-    \Phi_i \colon W \to \hom(G,F), \quad
+    \Phi_i \colon W \to \fun(G,F), \quad
     w \mapsto \left( g \mapsto \langle e_i^*, \pi(g) \cdot w \rangle \right) = f_{e_i^*, w}
 \]
-za $1 \leq i \leq \deg(\pi)$ prostora spletičen $\hom_G(\pi, \rho_{\hom})$. Ko te bazne spletične evalviramo na neki izbrani bazi $\{ f_j \mid 1 \leq j \leq \deg(\pi) \}$ prostora $W$, dobimo torej ravno prostor $\MK(\pi)$. Nad algebraično zaprtim poljem te evalvacije tvorijo celo bazo\footnote{Preslikava $\Sigma_{\pi, \rho_{\hom}}$ je injektivna, ker je $\dim \hom_G(\pi, \rho_{\hom}) = \deg(\pi) < \infty$.}
+za $1 \leq i \leq \deg(\pi)$ prostora spletičen $\hom_G(\pi, \rho_{\fun})$. Ko te bazne spletične evalviramo na neki izbrani bazi $\{ f_j \mid 1 \leq j \leq \deg(\pi) \}$ prostora $W$, dobimo torej ravno prostor $\MK(\pi)$. Nad algebraično zaprtim poljem te evalvacije tvorijo celo bazo\footnote{Preslikava $\Sigma_{\pi, \rho_{\fun}}$ je injektivna, ker je $\dim \hom_G(\pi, \rho_{\fun}) = \deg(\pi) < \infty$.}
 \[
     \Phi_i(f_j) = f_{i,j}
 \]
-prostora $\Izotip_{\rho_{\hom}}(\pi)$. V izbranih bazah torej matrični koeficienti tvorijo bazo za $\pi$-izotipično komponento regularne upodobitve. Večkratnost $\pi$ v njej je enaka $\dim \hom_G(\pi, \rho_{\hom}) = \deg(\pi)$.
+prostora $\Izotip_{\rho_{\fun}}(\pi)$. V izbranih bazah torej matrični koeficienti tvorijo bazo za $\pi$-izotipično komponento regularne upodobitve. Večkratnost $\pi$ v njej je enaka $\dim \hom_G(\pi, \rho_{\fun}) = \deg(\pi)$.
 \end{dokaz}
 
 Izpostavimo pomembno posledico, ki nam pove, da lahko vse nerazcepne upodobitve najdemo v regularni.
@@ -1255,16 +1256,16 @@ V posebnem smo tekom zadnjega dokaza izpeljali, da so po izbiri baze matrični k
 
 Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve \emph{končno mnogo} paroma neizomorfnih nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam po izbiri baze podari svoje matrične koeficiente. Ti razpenjajo prostore, ki so enakim izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med sabo. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$. 
 
-Matrični koeficienti so elementi prostora funkcij $\hom(G,F)$. V primeru, ko je grupa končna, lahko po primerjanju dimenzij zato izpeljemo neenakost
+Matrični koeficienti so elementi prostora funkcij $\fun(G,F)$. V primeru, ko je grupa končna, lahko po primerjanju dimenzij zato izpeljemo neenakost
 \[
-    \sum_{i \in I} \deg(\pi_i)^2 \leq \dim \hom(G,F) = |G|.
+    \sum_{i \in I} \deg(\pi_i)^2 \leq \dim \fun(G,F) = |G|.
 \]
 
 \begin{posledica}
 Končna grupa ima le končno mnogo končnorazsežnih nerazcepnih upodobitev. Nad algebraično zaprtim poljem je vsaka od njih stopnje kvečjemu $\sqrt{|G|}$.
 \end{posledica}
 \begin{dokaz}
-Vsaka končnorazsežna nerazcepna upodobitev je vsebovana v regularni in se zatorej pojavi kot njen kompozicijski faktor. Vseh možnih kompozicijskih faktorjev je končno mnogo, ker je prostor $\hom(G,F)$ končnorazsežen. Drugi del posledice sledi neposredno iz neenakosti pred njo.
+Vsaka končnorazsežna nerazcepna upodobitev je vsebovana v regularni in se zatorej pojavi kot njen kompozicijski faktor. Vseh možnih kompozicijskih faktorjev je končno mnogo, ker je prostor $\fun(G,F)$ končnorazsežen. Drugi del posledice sledi neposredno iz neenakosti pred njo.
 \end{dokaz}
 
 \begin{zgled}
@@ -1275,7 +1276,7 @@ Več o upodobitvah končnih grup si bomo pogledali nekoliko kasneje.
 
 \subsection{Karakterji}
 
-Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev. Po izbiri baze dobimo matrične koeficiente $f_{i,j}$. Te lahko kombiniramo na različne načine, da dobimo funkcije v $\hom(G,F)$, ki so nazadnje \emph{neodvisne} od izbire baze. Najosnovnejša\footnote{V resnici je sled do skalarja natančno \emph{edina} taka funkcija.} taka funkcija je sled linearnega operatorja, se pravi
+Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev. Po izbiri baze dobimo matrične koeficiente $f_{i,j}$. Te lahko kombiniramo na različne načine, da dobimo funkcije v $\fun(G,F)$, ki so nazadnje \emph{neodvisne} od izbire baze. Najosnovnejša\footnote{V resnici je sled do skalarja natančno \emph{edina} taka funkcija.} taka funkcija je sled linearnega operatorja, se pravi
 \[
     \textstyle \chi_{\rho} \colon G \to F, \quad
     g \mapsto \tr(\rho(g)) = \sum_{i = 1}^{\deg(\rho)} f_{i,i}(g).
@@ -1284,7 +1285,7 @@ To funkcijo imenujemo {\definicija karakter} upodobitve $\rho$. Kadar je upodobi
 
 Karakter je neodvisen od izbire baze, zato za vsaka $x, g \in G$ velja $\chi_{\rho}(x g x^{-1}) = \chi_{\rho}(g)$. Karakterji so torej funkcije na $G$, ki so konstantne na konjugiranostnih razredih.\footnote{{\definicija Konjugiranostni razred} elementa $g \in G$ je množica $\{ x g x^{-1} \mid x \in G \}$. Grupa $G$ je disjunktna unija konjugiranostnih razredov svojih elementov.} Takim funkcijam pravimo {\definicija razredne funkcije} in jih označimo s
 \[
-    \hom_{\cl}(G,F) = \{ f \in \hom(G,F) \mid \forall x, g \in G \colon f(x g x^{-1}) = f(g) \}.
+    \hom_{\cl}(G,F) = \{ f \in \fun(G,F) \mid \forall x, g \in G \colon f(x g x^{-1}) = f(g) \}.
 \]
 
 \begin{zgled}
@@ -1316,13 +1317,13 @@ Vse podatke o vrednostih karakterjev dane grupe ponavadi zložimo v {\definicija
 \end{table}
 \end{zgled}
 
-Že samo imenovanje karakterjev odzvanja, da to niso poljubne funkcije v $\hom(G,F)$, temveč da v nekem smislu zajemajo srž upodobitve.
+Že samo imenovanje karakterjev odzvanja, da to niso poljubne funkcije v $\fun(G,F)$, temveč da v nekem smislu zajemajo srž upodobitve.
 
 \begin{trditev}
 Naj bo $G$ grupa s končnorazsežnima nerazcepnima upodobitvama nad algebraično zaprtim poljem. Ti dve upodobitvi sta izomorfni, če in samo če imata enaka karakterja.
 \end{trditev}
 \begin{dokaz}
-Ker so matrični koeficienti različnih nerazcepnih upodobitev linearno neodvisni med sabo, so tudi njihovi karakterji linearno neodvisni kot elementi prostora $\hom(G,F)$. 
+Ker so matrični koeficienti različnih nerazcepnih upodobitev linearno neodvisni med sabo, so tudi njihovi karakterji linearno neodvisni kot elementi prostora $\fun(G,F)$. 
 \end{dokaz}
 
 Karakterjev fundamentalnih konstrukcij različnih upodobitev ni težko izračunati.
@@ -1357,18 +1358,18 @@ zato je sled induciranega delovanja $g$ na $V r_0$ enaka $\chi_{\rho}(r_0 g r_0^
 \end{dokaz}
 
 \begin{zgled}
-    Naj bo $G$ končna grupa. V tem primeru je regularna upodobitev $\rho_{\hom}$ končnorazsežna. Določimo njen karakter najprej na roke. V regularni upodobitvi imamo naravno bazo iz karakterističnih funkcij
+    Naj bo $G$ končna grupa. V tem primeru je regularna upodobitev $\rho_{\fun}$ končnorazsežna. Določimo njen karakter najprej na roke. V regularni upodobitvi imamo naravno bazo iz karakterističnih funkcij
     \[
         1_{x} \colon G \to F, \quad
         y \mapsto \begin{cases} 1 & y = x, \\ 0 & \text{sicer.} \end{cases}
     \]
-    Na vsaki od teh element grupe $g \in G$ deluje kot $\rho_{\hom}(g) \cdot 1_x = 1_{x g^{-1}}$. Grupa $G$ torej permutira karakteristične funkcije. Sled preslikave $\rho_{\hom}(g)$ je zato enaka številu karakterističnih funkcij, ki jih ta preslikava fiksira. To je mogoče le, če je $x = x g^{-1}$, kar pa se zgodi zgolj pri $g = 1$, ko je $\rho_{\hom}(1) = \id$ s sledjo $\dim \hom(G,F) = |G|$. Torej je karakter regularne upodobitve končne grupe enak
+    Na vsaki od teh element grupe $g \in G$ deluje kot $\rho_{\fun}(g) \cdot 1_x = 1_{x g^{-1}}$. Grupa $G$ torej permutira karakteristične funkcije. Sled preslikave $\rho_{\fun}(g)$ je zato enaka številu karakterističnih funkcij, ki jih ta preslikava fiksira. To je mogoče le, če je $x = x g^{-1}$, kar pa se zgodi zgolj pri $g = 1$, ko je $\rho_{\fun}(1) = \id$ s sledjo $\dim \fun(G,F) = |G|$. Torej je karakter regularne upodobitve končne grupe enak
     \[
-        \chi_{\rho_{\hom}} \colon G \to F, \quad
+        \chi_{\rho_{\fun}} \colon G \to F, \quad
         g \mapsto \begin{cases} |G| & g = 1, \\ 0 & \text{sicer.} \end{cases}
     \]
     
-    Ta karakter bi lahko hitreje izračunali s pomočjo znane identifikacije $\rho_{\hom} \cong \Ind^G_1(\11)$. V tem primeru je $R = G$ in za $g \neq 1$ je vsota v formuli za induciran karakter prazna, torej se evalvira v $0$, za $g = 1$ pa dobimo $\sum_{r \in G} \chi_{\11}(1) = |G|$.
+    Ta karakter bi lahko hitreje izračunali s pomočjo znane identifikacije $\rho_{\fun} \cong \Ind^G_1(\11)$. V tem primeru je $R = G$ in za $g \neq 1$ je vsota v formuli za induciran karakter prazna, torej se evalvira v $0$, za $g = 1$ pa dobimo $\sum_{r \in G} \chi_{\11}(1) = |G|$.
 \end{zgled}
 
 Lastnost karakterjev kot srža upodobitve se prenese na končnorazsežne polenostavne upodobitve, \emph{če je le polje ničelne karakeristike}. Karakter dane polenostavne upodobitve $\rho$ namreč lahko razvijemo kot
@@ -1414,7 +1415,7 @@ Spoznali smo že, da niso vse upodobitve polenostavne, niti kadar je grupa konč
 Naj bo $G$ končna grupa in $F$ polje. Tedaj je vsaka upodobitev $G$ nad poljem $F$ polenostavna, če in samo če $\characteristic(F) \nmid |G|$.
 \end{izrek}
 
-Preden dokažemo izrek, pojasnimo, kako in zakaj nam prideta prav končnost grupe $G$ in ustrezna karakteristika polja $F$. Ti dve predpostavki namreč odpirata vrata orodju {\definicija povprečenja po grupi}. Za dano funkcijo $f \in \hom(G,F)$ lahko v tej ugodni situaciji izračunamo njeno povprečno vrednost\footnote{Tukaj uporabljamo verjetnostno oznako za povprečno vrednost. Mislimo si, da enakomerno naključno izberemo element $X$ iz grupe $G$ in v njem izračunamo vrednost $f$. Število $\EE(f)$ je pričakovana vrednost slučajne spremenljivke $f(X)$.}
+Preden dokažemo izrek, pojasnimo, kako in zakaj nam prideta prav končnost grupe $G$ in ustrezna karakteristika polja $F$. Ti dve predpostavki namreč odpirata vrata orodju {\definicija povprečenja po grupi}. Za dano funkcijo $f \in \fun(G,F)$ lahko v tej ugodni situaciji izračunamo njeno povprečno vrednost\footnote{Tukaj uporabljamo verjetnostno oznako za povprečno vrednost. Mislimo si, da enakomerno naključno izberemo element $X$ iz grupe $G$ in v njem izračunamo vrednost $f$. Število $\EE(f)$ je pričakovana vrednost slučajne spremenljivke $f(X)$.}
 \[
     \EE(f) = \frac{1}{|G|} \sum_{g \in G} f(g) \in F.
 \]
@@ -1434,13 +1435,13 @@ $(\Leftarrow):$ Predpostavimo $\characteristic(F) \nmid |G|$. Naj bo $\rho$ upod
 \]
 za katero velja $Q|_W = \id_W$ in $\image Q = W$. Torej je $Q$ projekcijska spletična na $W$. Njeno jedro je zato $G$-invarianten komplement prostora $W$ v $V$. \kljuka
 
-$(\Rightarrow):$ Predpostavimo, da $\characteristic(F) \mid |G|$.\footnote{V tem primeru sicer nimamo dostopa do povprečenja v celoti, lahko pa uporabimo \emph{delno} povprečenje, ki izračuna le vsoto po grupi.} Opazujmo regularno upodobitev $\rho_{\hom}$ na prostoru $\hom(G,F)$. Ta prostor ima vselej $G$-invarianten podprostor
+$(\Rightarrow):$ Predpostavimo, da $\characteristic(F) \mid |G|$.\footnote{V tem primeru sicer nimamo dostopa do povprečenja v celoti, lahko pa uporabimo \emph{delno} povprečenje, ki izračuna le vsoto po grupi.} Opazujmo regularno upodobitev $\rho_{\fun}$ na prostoru $\fun(G,F)$. Ta prostor ima vselej $G$-invarianten podprostor
 \[
-    \textstyle \hom_0(G,F) = \left\{ f \in \hom(G,F) \mid \sum_{g \in G} f(g) = 0 \right\}
+    \textstyle \hom_0(G,F) = \left\{ f \in \fun(G,F) \mid \sum_{g \in G} f(g) = 0 \right\}
 \]
-korazsežnosti $1$ v $\hom(G,F)$. Dokažimo, da upodobitev na tem podprostoru \emph{ni} komplementirana in da torej vsaka upodobitev ni polenostavna. 
+korazsežnosti $1$ v $\fun(G,F)$. Dokažimo, da upodobitev na tem podprostoru \emph{ni} komplementirana in da torej vsaka upodobitev ni polenostavna. 
 
-Zavoljo protislovja predpostavimo, da komplement obstaja. Imamo torej funkcijo $0 \neq \phi \in \hom(G,F)$, za katero velja $\sum_{g \in G} \phi(g) \neq 0$ in prostor $F \cdot \phi$ je $G$-invarianten. Torej obstaja enorazsežna upodobitev $\chi \colon G \to F^*$, da pri vsakem $g \in G$ velja $g \cdot \phi = \chi(g) \cdot \phi$, se pravi $\phi(g) = \chi(g) \cdot \phi(1)$. Od tod sledi 
+Zavoljo protislovja predpostavimo, da komplement obstaja. Imamo torej funkcijo $0 \neq \phi \in \fun(G,F)$, za katero velja $\sum_{g \in G} \phi(g) \neq 0$ in prostor $F \cdot \phi$ je $G$-invarianten. Torej obstaja enorazsežna upodobitev $\chi \colon G \to F^*$, da pri vsakem $g \in G$ velja $g \cdot \phi = \chi(g) \cdot \phi$, se pravi $\phi(g) = \chi(g) \cdot \phi(1)$. Od tod sledi 
 \[
     \sum_{g \in G} \phi(g) = \phi(1) \cdot \sum_{g \in G} \chi(g).
 \]
@@ -1463,12 +1464,12 @@ Imejmo netrivialno nerazcepno upodobitev $p$-grupe $G$ na prostoru $V$ nad polje
 
 \subsection{Dekompozicija regularne upodobitve}
 
-Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Vsaka nerazcepna upodobitev $\pi$ grupe $G$ nad $F$ je uresničljiva kot podupodobitev regularne $\rho_{\hom}$. Slednja je po Maschkejevem izreku polenostavna, zato jo lahko zapišemo kot direktno vsoto izotipičnih komponent nerazcepnih upodobitev. Vsaka $\pi$-komponenta pri tem sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$. Izpostavimo in povzemimo.
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Vsaka nerazcepna upodobitev $\pi$ grupe $G$ nad $F$ je uresničljiva kot podupodobitev regularne $\rho_{\fun}$. Slednja je po Maschkejevem izreku polenostavna, zato jo lahko zapišemo kot direktno vsoto izotipičnih komponent nerazcepnih upodobitev. Vsaka $\pi$-komponenta pri tem sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$. Izpostavimo in povzemimo.
 
 \begin{izrek}
 Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Velja
 \[
-    \rho_{\hom} \cong \bigoplus_{\pi \in \Irr(G)} \underbrace{\pi \oplus \pi \oplus \cdots \oplus \pi}_{\deg(\pi)}.
+    \rho_{\fun} \cong \bigoplus_{\pi \in \Irr(G)} \underbrace{\pi \oplus \pi \oplus \cdots \oplus \pi}_{\deg(\pi)}.
 \]
 \end{izrek}
 
@@ -1484,11 +1485,11 @@ Opazujmo permutacijsko upodobitev $\pi$ grupe $\ZZ/n\ZZ$ na prostoru $\CC[\Omega
 
 \subsection{Ortogonalnost matričnih koeficientov}
 
-Na prostor funkcij $\hom(G,F)$ uvedimo {\definicija skalarni produkt} s predpisom
+Na prostor funkcij $\fun(G,F)$ uvedimo {\definicija skalarni produkt} s predpisom
 \[
     [ f_1, f_2 ] = \frac{1}{|G|} \sum_{g \in G} f_1(g) f_2(g^{-1})
 \]
-za $f_1, f_2 \in \hom(G,F)$. Ker je polje $F$ v splošnem abstraktno, to sicer ni običajen skalarni produkt, je pa to vendarle nedegenerirana simetrična bilinearna forma na $\hom(G,F)$, zato zanjo uporabljamo vso standardno terminologijo iz običajnih skalarnih produktov.
+za $f_1, f_2 \in \fun(G,F)$. Ker je polje $F$ v splošnem abstraktno, to sicer ni običajen skalarni produkt, je pa to vendarle nedegenerirana simetrična bilinearna forma na $\fun(G,F)$, zato zanjo uporabljamo vso standardno terminologijo iz običajnih skalarnih produktov.
 
 Z uporabo povprečenja na prostoru linearnih preslikav (podobno kot pri dokazu Maschkejevega izreka) bomo nadgradili dekompozicijo regularne upodobitve na \emph{ortogonalno} direktno vsoto.
 
@@ -1570,21 +1571,21 @@ Naj bo $G$ končna grupa z nerazcepnima upodobitvama $\pi_1$, $\pi_2$ nad algebr
 Izberemo bazo, izrazimo $\chi_{\pi} = \sum_i f_{i,i}^{\pi}$ in uporabimo zadnji dve trditvi o skalarnih produktih matričnih koeficientov.
 \end{dokaz}
 
-V skladu z običajno terminologijo za funkcijo $f \in \hom(G,F)$ označimo $||f|| = \sqrt{[ f, f ]}$, to je {\definicija norma} funkcije $f$. Nerazcepni karakterji tvorijo ortonormiran sistem vektorjev v $\hom(G,F)$.
+V skladu z običajno terminologijo za funkcijo $f \in \fun(G,F)$ označimo $||f|| = \sqrt{[ f, f ]}$, to je {\definicija norma} funkcije $f$. Nerazcepni karakterji tvorijo ortonormiran sistem vektorjev v $\fun(G,F)$.
 
 \subsection{Razredne funkcije}
 
-Karakterji niso poljubne funkcije v $\hom(G,F)$, temveč vselej pripadajo prostoru $\hom_{\cl}(G,F)$ razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev tudi linearno nedovisni. S pomočjo ortonormiranosti karakterjev bomo sedaj dokazali, da tvorijo celo \emph{bazo} prostora razrednih funkcij. 
+Karakterji niso poljubne funkcije v $\fun(G,F)$, temveč vselej pripadajo prostoru $\hom_{\cl}(G,F)$ razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev tudi linearno nedovisni. S pomočjo ortonormiranosti karakterjev bomo sedaj dokazali, da tvorijo celo \emph{bazo} prostora razrednih funkcij. 
 
 \begin{izrek}[o bazi razrednih funkcij]
     Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj karakterji nerazcepnih upodobitev tvorijo ortonormirano bazo prostora $\hom_{\cl}(G,F)$.
 \end{izrek}
 
-Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to povprečenje še \emph{utežili}. Za dano funkcijo $f \in \hom(G,F)$ definiramo njeno {\definicija nekomutativno Fourierovo transformacijo} $\hat{f}$ kot funkcijo, ki poljubni upodobitvi $\rho$ grupe $G$ na prostoru $V$ priredi
+Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to povprečenje še \emph{utežili}. Za dano funkcijo $f \in \fun(G,F)$ definiramo njeno {\definicija nekomutativno Fourierovo transformacijo} $\hat{f}$ kot funkcijo, ki poljubni upodobitvi $\rho$ grupe $G$ na prostoru $V$ priredi
 \[
     \hat{f}(\rho) = \sum_{g \in G} f(g) \rho(g^{-1}) \in \hom(V,V).
 \]
-Fourierova transformacija funkciji $f$ torej priredi njeno uteženo povprečje poljubne upodobitve vzdolž $f$, pri čemer se zgleduje po skalarnem produktu na prostoru funkcij $\hom(G,F)$. V primeru, ko je $f$ konstantna funkcija $1/|G|$, z njeno Fourierovo transformacijo najdemo običajno povprečno vrednost upodobitve $\EE(\rho)$.
+Fourierova transformacija funkciji $f$ torej priredi njeno uteženo povprečje poljubne upodobitve vzdolž $f$, pri čemer se zgleduje po skalarnem produktu na prostoru funkcij $\fun(G,F)$. V primeru, ko je $f$ konstantna funkcija $1/|G|$, z njeno Fourierovo transformacijo najdemo običajno povprečno vrednost upodobitve $\EE(\rho)$.
 
 \begin{zgled} \leavevmode
 \begin{itemize}
@@ -1594,14 +1595,14 @@ Fourierova transformacija funkciji $f$ torej priredi njeno uteženo povprečje p
     \]
     Vektorju števil $(f(1), f(2), \dots, f(n)) \in \CC^n$ na ta način priredimo vektor števil $(\hat{f}(\chi_1), \hat{f}(\chi_2), \dots, \hat{f}(\chi_n)) \in \CC^n$. To prirejanje je v numerični matematiki znano pod imenom {\definicija diskretna Fourierova transformacija} in je fundamentalno v digitalnem procesiranju signalov.
 
-    \item Naj bo $f \in \hom(G,F)$ funkcija na $G$ in $\rho_{\hom}$ regularna upodobitev grupe $G$. Vrednost $\hat{f}(\rho_{\hom})$ je linearni endomorfizem prostora $\hom(G,F)$. Pri tem se karakteristična funkcija $1_x$ za $x \in G$ preslika v
+    \item Naj bo $f \in \fun(G,F)$ funkcija na $G$ in $\rho_{\fun}$ regularna upodobitev grupe $G$. Vrednost $\hat{f}(\rho_{\fun})$ je linearni endomorfizem prostora $\fun(G,F)$. Pri tem se karakteristična funkcija $1_x$ za $x \in G$ preslika v
 \[
-    \hat{f}(\rho_{\hom}) \cdot 1_x 
-    = \sum_{g \in G} f(g) \rho_{\hom}(g^{-1}) \cdot 1_x
+    \hat{f}(\rho_{\fun}) \cdot 1_x 
+    = \sum_{g \in G} f(g) \rho_{\fun}(g^{-1}) \cdot 1_x
     = \sum_{g \in G} f(g) 1_{xg}
     = \sum_{g \in G} f(x^{-1}g) 1_{g}.
 \] 
-V posebnem pri $x = 1$ dobimo $\hat{f}(\rho_{\hom}) \cdot 1_1 = f$. Funkcijo $f$ lahko torej rekonstruiramo iz vrednosti njene Fourierove transformacije v regularni upodobitvi. 
+V posebnem pri $x = 1$ dobimo $\hat{f}(\rho_{\fun}) \cdot 1_1 = f$. Funkcijo $f$ lahko torej rekonstruiramo iz vrednosti njene Fourierove transformacije v regularni upodobitvi. 
 
 Regularna upodobitev končne grupe nad ugodnim poljem je direktna vsota nerazcepnih upodobitev grupe, zato je tudi Fourierova transformacija v regularni upodobitvi direktna vsota Fourierovih transformacij v nerazcepnih upodobitvah. Iz zgornjega premisleka sledi, da je vsaka funkcija zatorej enolično določena z vrednostmi svoje Fourierove transformacije v vseh nerazcepnih upodobitvah.
 \end{itemize}
@@ -1634,7 +1635,7 @@ Od tod izračunamo relevantni skalar kot $|G| \cdot [ f, \chi_{\pi} ]/\deg(\pi)$
 Opremljeni lahko z lahkoto izpeljemo izrek.
 
 \begin{dokaz}[Dokaz izreka o bazi razrednih funkcij]
-Predpostavimo, da nerazcepni karakterji \emph{ne} razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \hom_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $[ f, \chi_{\pi} ] = 0$. Preslikava $\hat{f}(\pi)$ je po lemi zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, se pravi $\hat{f}(\rho_{\hom}) = 0$. Po zadnjem zgledu to implicira $f = 0$. 
+Predpostavimo, da nerazcepni karakterji \emph{ne} razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \hom_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $[ f, \chi_{\pi} ] = 0$. Preslikava $\hat{f}(\pi)$ je po lemi zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, se pravi $\hat{f}(\rho_{\fun}) = 0$. Po zadnjem zgledu to implicira $f = 0$. 
 \end{dokaz}
 
 Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavnikih konjugiranostnih razredov. Če {\definicija število konjugiranostnih razredov} označimo s $\kk(G)$, velja torej $\dim \hom_{\cl}(G,F) = \kk(G)$. Ker karakterji tvorijo bazo prostora razrednih funkcij, lahko \emph{število} nerazcepnih upodobitev torej izračunamo neposredno iz algebraične strukture grupe.
@@ -1650,7 +1651,7 @@ Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sig
 Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(k_1, k_2, \dots, k_{\ell})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom.
 \end{domacanaloga}
 
-V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija particije} števila $n$. Število vseh particij označimo s $p(n)$. Velja torej $p(n) = \kk(S_n) = |\Irr(S_n)|$. Splošna eksplicitna formula za to število \emph{ne} obstaja, poznamo pa njeno asimptotsko oceno\footnote{\href{https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF}{G. H. Hardy in S. Ramanujan, \emph{Asymptotic formulae in combinatory analysis}, Proceedings of the London Mathematical Society, Second Series, \textbf{17} (1918) 75--115.}}
+V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija razčlenitve} števila $n$. Število vseh razčlenitev označimo s $p(n)$. Velja torej $p(n) = \kk(S_n) = |\Irr(S_n)|$. Splošna eksplicitna formula za to število \emph{ne} obstaja, poznamo pa njeno asimptotsko oceno\footnote{\href{https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF}{G. H. Hardy in S. Ramanujan, \emph{Asymptotic formulae in combinatory analysis}, Proceedings of the London Mathematical Society, Second Series, \textbf{17} (1918) 75--115.}}
 \[
     p(n) \sim \frac{1}{4 n \sqrt{3}} e^{\pi \sqrt{\frac{2n}{3}}}
 \]
@@ -1779,9 +1780,9 @@ Ko upodobitev $\rho$ razstavimo na direktno vsoto nerazcepnih podupodobitev, je 
 \end{dokaz}
 
 \begin{zgled}
-Naj bo $\rho_{\hom}$ regularna upodobitev grupe $G$. Vemo že, da za vsako funkcijo $f \in \hom(G,F)$ velja $\hat{f}(\rho_{\hom}) \cdot 1_1 = f$. Torej je projekcija funkcije $1_1$ na $\pi$-izotipično komponento enaka
+Naj bo $\rho_{\fun}$ regularna upodobitev grupe $G$. Vemo že, da za vsako funkcijo $f \in \fun(G,F)$ velja $\hat{f}(\rho_{\fun}) \cdot 1_1 = f$. Torej je projekcija funkcije $1_1$ na $\pi$-izotipično komponento enaka
 \[
-    \frac{\deg(\pi)}{|G|} \cdot \widehat{\chi_{\pi}}(\rho_{\hom}) \cdot 1_1 = 
+    \frac{\deg(\pi)}{|G|} \cdot \widehat{\chi_{\pi}}(\rho_{\fun}) \cdot 1_1 = 
     \frac{\deg(\pi)}{|G|} \cdot \chi_{\pi}.
 \]
 S tem dobimo razvoj
@@ -1792,7 +1793,7 @@ ki je le poseben primer druge ortogonalnostne relacije.
 
 Oglejmo si še karakteristično funkcijo $1_x$ za $x \in G$. Njena projekcija na $\pi$-izotipično komponento je
 \[
-    \frac{\deg(\pi)}{|G|} \cdot \widehat{\chi_{\pi}}(\rho_{\hom}) \cdot 1_x = 
+    \frac{\deg(\pi)}{|G|} \cdot \widehat{\chi_{\pi}}(\rho_{\fun}) \cdot 1_x = 
     \frac{\deg(\pi)}{|G|} \cdot \left( g \mapsto \chi_{\pi}(x^{-1}g) \right),
 \]
 s čimer dobimo razvoj
@@ -1801,7 +1802,7 @@ s čimer dobimo razvoj
 \]
 \end{zgled}
 
-Vsako funkcijo $f \in \hom(G,F)$ lahko razvijemo po karakterističnih funkcijah kot $f = \sum_{x \in G} f(x) 1_x$. Ker že poznamo razvoj vsake od karaterističnih funkcij po $\pi$-izotipičnih komponentah, od tod izpeljemo
+Vsako funkcijo $f \in \fun(G,F)$ lahko razvijemo po karakterističnih funkcijah kot $f = \sum_{x \in G} f(x) 1_x$. Ker že poznamo razvoj vsake od karaterističnih funkcij po $\pi$-izotipičnih komponentah, od tod izpeljemo
 \[
     f(g) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{x \in G} f(x) \chi_{\pi}(1) \tr \left( \pi(x^{-1}) \cdot \pi(g) \right),
 \]
@@ -1811,18 +1812,8 @@ kar lahko po upoštevanju linearnosti sledi izrazimo kot
 \]
 Temu razvoju funkcije $f$ po $\pi$-izotipičnih komponentah rečemo {\definicija Fourierova inverzija}, saj nam ekplicitno pove, kako lahko $f$ izračunamo iz njenih Fourierovih transformacij v nerazcepnih upodobitvah.
 
-Fourierova inverzija je nekoliko asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko drugo funkcijo $h \in \hom(G,F)$. Dobimo
-\[
-    \sum_{g \in G} f(g) h(g^{-1}) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{g \in G} h(g^{-1}) \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right),
-\]
-kar lahko z enakim argumentom kot prej zapišemo kot
-\[
-    [ f, h ] = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr(\hat{f}(\pi) \cdot \hat{h}(\pi)).
-\]
-Tej enakosti rečemo {\definicija Parsevalov izrek}.
-
 \begin{zgled}
-Naj bo $A$ končna abelova grupa. Vemo že, da so vse njene kompleksne upodobitve enorazsežne. V tem primeru so upodobitve kar enake svojim karakterjem. Za dano funkcijo $f \in \hom(A,\CC)$ lahko Fourierovo inverzijo zapišemo kot
+Naj bo $A$ končna abelova grupa. Vemo že, da so vse njene kompleksne upodobitve enorazsežne. V tem primeru so upodobitve kar enake svojim karakterjem. Za dano funkcijo $f \in \fun(A,\CC)$ lahko Fourierovo inverzijo zapišemo kot
 \[
     f = \frac{1}{|A|} \sum_{\chi \in \Irr(A)} \hat{f}(\chi) \cdot \chi,
 \]
@@ -1831,30 +1822,32 @@ kar je le posledica dejstva $\hat{f}(\chi) = |A| \cdot [ f, \chi ]$.
 
 \subsection{Kompleksne upodobitve}
 
-\todo{Kompleksna števila imajo konjugiranje, tudi prostore nad $\CC$ opremimo s skalarnim produktom, ki je wlog $G$-invarianten po povprečenju.}
+Splošno teorijo upodobitev končnih grup zaključimo z upodobitvami nad najugodnejšim poljem $\CC$. To polje je daleč od abstraktnega in je opremljeno z mnogo dodatne strukture, ki jo lahko pri upodobitvah izkoristimo.
 
-Omenimo še eno lastnost karakterjev upodobitev naj najugodnejšim poljem $\CC$. Njihove vrednosti namreč niso čisto poljubna kompleksna števila, temveč so algebraična cela števila\footnote{{\definicija Algebraično celo število} je kompleksno število, ki je ničla moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih celih števil označimo z $\bar{\ZZ}$. Ni se težko prepričati, da $\bar{\ZZ}$ tvori kolobar in da velja $\QQ \cap \bar{\ZZ} = \ZZ$.} omejene absolutne vrednosti. 
+\subsubsection{Vrednosti karakterjev}
+
+Najprej si oglejmo nekaj dodatnih lastnosti, ki jih imajo karakterji kompleksnih upodobitev. Njihove vrednosti namreč niso čisto poljubna kompleksna števila, temveč so algebraična cela števila\footnote{{\definicija Algebraično celo število} je kompleksno število, ki je ničla moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih celih števil označimo z $\bar{\ZZ}$. Ni se težko prepričati, da $\bar{\ZZ}$ tvori kolobar in da velja $\QQ \cap \bar{\ZZ} = \ZZ$.} omejene absolutne vrednosti. 
 
 \begin{trditev}
-Naj bo $G$ končna grupa. Za vsako nerazcepno kompleksno upodobitev $\pi$ in vsak $g \in G$ je
+Naj bo $G$ končna grupa. Za vsako končnorazsežno kompleksno upodobitev $\rho$ in vsak $g \in G$ je
 \[
-    |\chi_{\pi}(g)| \leq \deg(\pi), \quad
-    \chi_{\pi}(g) \in \bar{\ZZ}, \quad
-    \chi_{\pi}(g^{-1}) = \overline{\chi_{\pi}(g)}. 
+    |\chi_{\rho}(g)| \leq \deg(\rho), \quad
+    \chi_{\rho}(g) \in \bar{\ZZ}, \quad
+    \chi_{\rho}(g^{-1}) = \overline{\chi_{\rho}(g)}. 
 \] 
 \end{trditev}
 \begin{dokaz}
-Če je $g \in G$ in $\pi \in \Irr(G)$, potem je $\pi(g^{|G|}) = \pi(1) = \id$, zato je $\pi(g)$ linearna preslikava končnega reda. Take preslikave so diagonalizabilne.\footnote{Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\pi(g)$.} V posebnem je zato vsaka lastna vrednost $\lambda \in \Eig(\pi(g))$ končnega reda v $\CC^*$. S tem je seveda
+Velja $\rho(g^{|G|}) = \rho(1) = \id$, zato je $\rho(g)$ linearna preslikava končnega reda. Take preslikave so diagonalizabilne.\footnote{Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\rho(g)$.} V posebnem je zato vsaka lastna vrednost $\lambda \in \Eig(\rho(g))$ končnega reda v $\CC^*$. S tem je seveda
 \[
-    \chi_{\pi}(g) = \sum_{\lambda \in \Eig(\pi(g))} \lambda \in \bar{\ZZ},
+    \chi_{\rho}(g) = \sum_{\lambda \in \Eig(\rho(g))} \lambda \in \bar{\ZZ},
     \quad
-    |\chi_{\pi}(g)| \leq \sum_{\lambda \in \Eig(\pi(g))} |\lambda| = \deg(\pi)
+    |\chi_{\rho}(g)| \leq \sum_{\lambda \in \Eig(\rho(g))} |\lambda| = \deg(\rho)
 \]
 in hkrati
 \[
-    \chi_{\pi}(g^{-1}) = \sum_{\lambda \in \Eig(\pi(g))} \lambda^{-1}
-    = \sum_{\lambda \in \Eig(\pi(g))} \overline{\lambda}
-    = \overline{\chi_{\pi}(g)}.
+    \chi_{\rho}(g^{-1}) = \sum_{\lambda \in \Eig(\rho(g))} \lambda^{-1}
+    = \sum_{\lambda \in \Eig(\rho(g))} \overline{\lambda}
+    = \overline{\chi_{\rho}(g)}.
 \]
 \end{dokaz}
 
@@ -1867,7 +1860,7 @@ Stopnja vsake nerazcepne kompleksne upodobitve končne grupe deli moč grupe.
 Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, in sicer je to lema o Fourierovi transformaciji razredne funkcije. Ko funkcija, vzdolž katere izvedemo transformacijo, slika v kolobar algebraičnih celih števil, lahko lemo o Fourierovi transformaciji razredne funkcije zaostrimo na naslednji način.
 
     \begin{lema}
-    Naj bo $G$ končna grupa. Za vsako funkcijo $f \in \hom_{\cl}(G, \bar{\ZZ})$ in nerazcepno upodobitev $\pi$ nad $\CC$ je $\hat{f}(\pi)$ skalarno množenje z algebraičnim celim številom.
+    Naj bo $G$ končna grupa. Za vsako funkcijo $f \in \hom_{\cl}(G, \bar{\ZZ})$ in nerazcepno kompleksno upodobitev $\pi$ je $\hat{f}(\pi)$ skalarno množenje z algebraičnim celim številom.
     \end{lema}
     \begin{dokaz}
     Vemo že, da je $\hat{f}(\pi)$ skalarno množenje s številom
@@ -1876,13 +1869,13 @@ Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, 
     \]
     Preveriti moramo torej, da je to algebraično celo število. Funkcijo $f$ lahko razvijemo kot vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v $\bar{\ZZ}$. Ker $\bar{\ZZ}$ tvori kolobar, bo torej trditev dovolj preveriti za primer, ko je $f = 1_{\conclass}$ za nek konjugiranostni razred $\conclass$ v $G$.
     
-    Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in s tem linearno preslikavo $\widehat{1_{\conclass}}(\rho_{\hom})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, ta preslikava deluje kot $\widehat{1_{\conclass}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\widehat{1_{\conclass}}(\rho_{\hom})$.
+    Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in s tem linearno preslikavo $\widehat{1_{\conclass}}(\rho_{\fun})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, ta preslikava deluje kot $\widehat{1_{\conclass}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\widehat{1_{\conclass}}(\rho_{\fun})$.
     
-    Vemo že, da $\widehat{1_{\conclass}}(\rho_{\hom})$ deluje na naravni bazi iz karakterističnih funkcij $1_x$ za $x \in G$ kot
+    Vemo že, da $\widehat{1_{\conclass}}(\rho_{\fun})$ deluje na naravni bazi iz karakterističnih funkcij $1_x$ za $x \in G$ kot
     \[
-        \widehat{1_{\conclass}}(\rho_{\hom}) \cdot 1_x = \sum_{g \in G} 1_{\conclass}(x^{-1} g) 1_g \in \hom(G, \{ 0, 1 \}).
+        \widehat{1_{\conclass}}(\rho_{\fun}) \cdot 1_x = \sum_{g \in G} 1_{\conclass}(x^{-1} g) 1_g \in \fun(G, \{ 0, 1 \}).
     \]
-    V tej bazi ima torej $\widehat{1_{\conclass}}(\rho_{\hom})$ matriko s koeficienti v množici $\{ 0, 1 \}$. Karakteristični polinom te matrike ima zato celoštevilske koeficiente, torej so lastne vrednosti preslikave $\widehat{1_{\conclass}}(\rho_{\hom})$ algebraična cela števila.
+    V tej bazi ima torej $\widehat{1_{\conclass}}(\rho_{\fun})$ matriko s koeficienti v množici $\{ 0, 1 \}$. Karakteristični polinom te matrike ima zato celoštevilske koeficiente, torej so lastne vrednosti preslikave $\widehat{1_{\conclass}}(\rho_{\fun})$ algebraična cela števila.
     \end{dokaz}
     
     \begin{dokaz}[Dokaz izreka o stopnjah upodobitev]
@@ -1891,6 +1884,34 @@ Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, 
         \frac{|G|}{\deg(\pi)} \cdot [ \chi_{\pi}, \chi_{\pi} ] = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ} \cap \QQ = \ZZ.
     \]
     \end{dokaz}
+
+\subsubsection{Skalarni produkt}
+
+Polje $\CC$ je opremljeno s standardnim skalarnim produktom $\langle z, w \rangle = z \cdot \overline{w}$. Ta produkt lahko razširimo na vsak končnorazsežen kompleksen vektorski prostor. Obravnavali bomo dve taki razširitvi, in sicer na prostor funkcij $\fun(G,\CC)$ ter na prostor, na katerem upodabljamo grupo $G$.
+
+Opazujmo najprej prostor funkcij $\fun(G,\CC)$. Vemo že, da ga lahko opremimo s skalarnim produktom $[\cdot, \cdot]$. Ker pa je ta prostor kompleksen, lahko nanj vpeljemo še nekoliko drugačen skalarni produkt, ki je standarden v kompleksnih prostorih, in sicer
+\[
+    \langle f, h \rangle = \frac{1}{|G|} \sum_{g \in G} f(g) \overline{h(g)}
+\]
+za $f,h \in \fun(G,\CC)$. Za vsako končnorazsežno kompleksno upodobitev $\rho$  po zadnji trditvi velja
+\[
+    [f, \chi_{\rho}] = \langle f, \chi_{\rho} \rangle,
+\]
+zato se večina rezultatov, ki smo jih izpeljali za skalarni produkt $[\cdot, \cdot]$, prenese na skalarni produkt $\langle \cdot, \cdot \rangle$. V posebnem  karakterji še vedno tvorijo ortonormiran sistem vektorjev v $\fun(G,\CC)$ in koeficienti razvoja razrednih funkcij po karakterjih se ne spremenijo.
+
+\subsubsection{Parsevalov izrek}
+
+Fourierova inverzija je nekoliko asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko drugo funkcijo $h \in \fun(G,F)$. Dobimo
+\[
+    \sum_{g \in G} f(g) h(g^{-1}) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{g \in G} h(g^{-1}) \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right),
+\]
+kar lahko z enakim argumentom kot prej zapišemo kot
+\[
+    [ f, h ] = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr(\hat{f}(\pi) \cdot \hat{h}(\pi)).
+\]
+Tej enakosti rečemo {\definicija Parsevalov izrek}.
+
+    \todo{Kompleksna števila imajo konjugiranje, tudi prostore nad $\CC$ opremimo s skalarnim produktom, ki je wlog $G$-invarianten po povprečenju.}
 
 \todo{En drug, standarden Skalarni produkt, unitarizabilnost, omeni Maschkeja nad $\CC$, o HS normi pri Plancherelovi formuli.}
 
@@ -1909,9 +1930,8 @@ Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, 
 \subsection{$S_n$}
 
 \todo[inline]{
-- $\GL_2(\FF_p)$
-- simetrične grupe (!!!, napiši tabelo za $S_5$)
-- ? mixing in simetrične grupe (konkreten primer, simetrična grupa $S_5$, matrika sosednosti (katero mešanje?), spletična, lastne vrednosti po komponentah, kako dolgo moramo mešati?)
+- https://mathoverflow.net/questions/10635/why-are-the-characters-of-the-symmetric-group-integer-valued
+- https://link.springer.com/content/pdf/10.1007/s00209-014-1290-x.pdf
 }
 
 \section{Aplikacije}
@@ -1922,7 +1942,7 @@ Večina rezultatov v zvezi z upodobitvami končnih grup je temeljila na utežene
 
 \todo[inline]{Roth kot primer za abelove grupe (omeni Bloom etc sodobne rezultate)}
 
-Naj bosta $f_1, f_2 \in \hom(G,F)$ funkciji in $\rho$ upodobitev grupe $G$. Kompozicija Fourierovih transformacij $\widehat{f_1}(\rho) \cdot \widehat{f_2}(\rho)$ je enaka
+Naj bosta $f_1, f_2 \in \fun(G,F)$ funkciji in $\rho$ upodobitev grupe $G$. Kompozicija Fourierovih transformacij $\widehat{f_1}(\rho) \cdot \widehat{f_2}(\rho)$ je enaka
 \[
     \sum_{g_1, g_2 \in G} f_1(g_1) f_2(g_2) \rho(g_1^{-1} g_2^{-1}) =
     \sum_{g \in G} \left( \sum_{g_1, g_2 \in G \colon g_2 g_1 = g} f_2(g_2) f_1(g_1)  \right) \rho(g^{-1}).
@@ -1959,7 +1979,7 @@ Ta množica v splošnem \emph{ni} podgrupa, zato je teoriji grup vsekakor v inte
     N \colon G \to \NN_0, \quad
     g \mapsto |\{ (x,y) \in G \times G \mid g = [x,y] \}|.
 \]
-Funkcijo $N$ obravnavajmo kot element prostora $\hom(G,\CC)$. 
+Funkcijo $N$ obravnavajmo kot element prostora $\fun(G,\CC)$. 
 
 Prvi princip harmonične analize je, da lahko vsako \emph{razredno} funkcijo razumemo s pomočjo močnih orodij teorije upodobitev. Da to drži v konkretnem primeru funkcije $N$, se ni težko prepričati. Za vsak $z \in G$ namreč velja $[z x z^{-1}, z y z^{-1}] = z [x,y] z^{-1}$, torej vsak par $(x,y)$ z lastnostjo $[x,y] = g$ porodi par $(z x z^{-1}, z y z^{-1})$ z lastnostjo $[z x z^{-1}, z y z^{-1}] = z g z^{-1}$. S tem je $N(g) = N(z g z^{-1})$.
 

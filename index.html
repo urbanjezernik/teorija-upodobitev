@@ -46,7 +46,7 @@
 <strong> Urban Jezernik <br>
 Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-Zadnja posodobitev: 27. 06. 2022
+Zadnja posodobitev: 28. 06. 2022
 </div>
 
 <div class="kazalo">
@@ -236,21 +236,22 @@ class="math inline">\(F\)</span>. To delovanje označimo z <span
 class="math inline">\(\pi_{\mathop{\mathrm{Cay}}}\)</span>.</p></li>
 <li><p>Naj bo <span class="math inline">\(G\)</span> grupa in <span
 class="math inline">\(F\)</span> polje. Naj bo <span
-class="math inline">\(\hom(G,F)\)</span> množica vseh funkcij iz množice
-<span class="math inline">\(G\)</span> v <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span> množica vseh
+funkcij iz množice <span class="math inline">\(G\)</span> v <span
 class="math inline">\(F\)</span>. Te funkcije lahko po točkah seštevamo
 in množimo s skalarji, na ta način je <span
-class="math inline">\(\hom(G,F)\)</span> vektorski prostor. Grupa <span
-class="math inline">\(G\)</span> deluje na <span
-class="math inline">\(\hom(G,F)\)</span> s homomorfizmom <span
-class="math display">\[\rho_{\hom} \colon G \to
-\mathop{\mathrm{GL}}(\hom(G,F)), \quad
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span> vektorski
+prostor. Grupa <span class="math inline">\(G\)</span> deluje na <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span> s
+homomorfizmom <span class="math display">\[\rho_{\mathop{\mathrm{fun}}}
+\colon G \to \mathop{\mathrm{GL}}(\mathop{\mathrm{fun}}(G,F)), \quad
             g \mapsto \left( f \mapsto \left( x \mapsto f(xg) \right)
-\right),\]</span> kjer je <span class="math inline">\(f \in \hom(G,F), \
-x \in G\)</span>. To delovanje izhaja iz (desnega) delovanja grupe <span
-class="math inline">\(G\)</span> na sebi in ga zato imenujemo
-<span><strong><em>(desna) regularna upodobitev</em></strong></span>
-grupe <span class="math inline">\(G\)</span> nad <span
+\right),\]</span> kjer je <span class="math inline">\(f \in
+\mathop{\mathrm{fun}}(G,F), \ x \in G\)</span>. To delovanje izhaja iz
+(desnega) delovanja grupe <span class="math inline">\(G\)</span> na sebi
+in ga zato imenujemo <span><strong><em>(desna) regularna
+upodobitev</em></strong></span> grupe <span
+class="math inline">\(G\)</span> nad <span
 class="math inline">\(F\)</span>.</p></li>
 </ul>
 </div>
@@ -378,13 +379,14 @@ class="math display">\[\Phi(\bar x \cdot e_i)
         = \bar x \cdot e_{\bar i}
         = \bar x \cdot \Phi(e_i).\]</span> V to kratko zgodbo lahko
 vključimo še desno regularno upodobitev <span
-class="math display">\[\rho_{\hom} \colon \mathbf{Z}/n\mathbf{Z}\to
-\mathop{\mathrm{GL}}(\hom(\mathbf{Z}/n\mathbf{Z},\mathbf{C})).\]</span>
+class="math display">\[\rho_{\mathop{\mathrm{fun}}} \colon
+\mathbf{Z}/n\mathbf{Z}\to
+\mathop{\mathrm{GL}}(\mathop{\mathrm{fun}}(\mathbf{Z}/n\mathbf{Z},\mathbf{C})).\]</span>
 Vektorski prostor <span
-class="math inline">\(\hom(\mathbf{Z}/n\mathbf{Z}, \mathbf{C})\)</span>
-lahko na naraven način opremimo z bazo iz karakterističnih funkcij <span
-class="math display">\[1_{\bar x} \colon \mathbf{Z}/n\mathbf{Z}\to
-\mathbf{C}, \quad
+class="math inline">\(\mathop{\mathrm{fun}}(\mathbf{Z}/n\mathbf{Z},
+\mathbf{C})\)</span> lahko na naraven način opremimo z bazo iz
+karakterističnih funkcij <span class="math display">\[1_{\bar x} \colon
+\mathbf{Z}/n\mathbf{Z}\to \mathbf{C}, \quad
         \bar y \mapsto \begin{cases}
             1 &amp; \bar y = \bar x, \\
             0 &amp; \text{sicer}
@@ -393,8 +395,8 @@ class="math display">\[1_{\bar x} \colon \mathbf{Z}/n\mathbf{Z}\to
 href="#fn5" class="footnote-ref" id="fnref5"
 role="doc-noteref"><sup>5</sup></a> <span
 class="math display">\[\Phi^\prime \colon
-\mathbf{C}[\mathbf{Z}/n\mathbf{Z}] \to \hom(\mathbf{Z}/n\mathbf{Z},
-\mathbf{C}), \quad
+\mathbf{C}[\mathbf{Z}/n\mathbf{Z}] \to
+\mathop{\mathrm{fun}}(\mathbf{Z}/n\mathbf{Z}, \mathbf{C}), \quad
         e_{\bar x} \mapsto 1_{- \bar x}.\]</span> Jasno je <span
 class="math inline">\(\Phi^\prime\)</span> bijektivna. Preverimo še, da
 je res spletična. Za vsaka <span class="math inline">\(\bar x, \bar y
@@ -498,7 +500,7 @@ V^G}\)</span>.</p>
 class="math inline">\(G\)</span> grupa in <span
 class="math inline">\(F\)</span> polje. Določi upodobitvi <span
 class="math inline">\(F[G]^G\)</span> in <span
-class="math inline">\(\hom(G,F)^G\)</span>.</p>
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)^G\)</span>.</p>
 </div>
 <p>Prostor <span class="math inline">\(V^G\)</span> lahko razumemo še na
 naslednji alternativen način, ki nam bo prišel zelo prav v nadaljevanju.
@@ -526,9 +528,9 @@ linearne preslikave <span class="math inline">\(\rho(g)\)</span> za
 class="math inline">\(\rho(g) \cdot v = \chi(g) v\)</span>. Na ta način
 dobimo funkcijo <span class="math inline">\(\chi \colon G \to
 F\)</span>, se pravi element prostora <span
-class="math inline">\(\hom(G,F)\)</span>. Ta funkcija ni čisto poljubna;
-ker je <span class="math inline">\(\rho\)</span> upodobitev, je <span
-class="math inline">\(\chi\)</span> nujno
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>. Ta funkcija
+ni čisto poljubna; ker je <span class="math inline">\(\rho\)</span>
+upodobitev, je <span class="math inline">\(\chi\)</span> nujno
 <span><em>homomorfizem</em></span> iz grupe <span
 class="math inline">\(G\)</span> v grupo <span
 class="math inline">\(F^*\)</span>. Torej je <span
@@ -566,13 +568,15 @@ class="math inline">\(V^G \backslash \{ 0 \}\)</span>.</p></li>
 class="math inline">\(F\)</span> polje. Opazujmo Cayleyjevo upodobitev
 <span class="math inline">\(\pi_{\mathop{\mathrm{Cay}}}\)</span> na
 <span class="math inline">\(F[G]\)</span> in desno regularno upodobitev
-<span class="math inline">\(\rho_{\hom}\)</span> na <span
-class="math inline">\(\hom(G,F)\)</span>. Trdimo, da je <span
-class="math inline">\(\pi_{\mathop{\mathrm{Cay}}}\)</span> podupodobitev
-upodobitve <span class="math inline">\(\rho_{\hom}\)</span>.</p>
+<span class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span> na
+<span class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>. Trdimo,
+da je <span class="math inline">\(\pi_{\mathop{\mathrm{Cay}}}\)</span>
+podupodobitev upodobitve <span
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>.</p>
 <p>V ta namen predpišimo linearno preslikavo<a href="#fn9"
 class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>
-<span class="math display">\[\Phi \colon F[G] \to \hom(G,F), \quad
+<span class="math display">\[\Phi \colon F[G] \to
+\mathop{\mathrm{fun}}(G,F), \quad
         e_g \mapsto 1_{g^{-1}}\]</span> za <span class="math inline">\(g
 \in G\)</span>. Jasno je <span class="math inline">\(\Phi\)</span>
 injektivna preslikava. Hkrati za vse <span class="math inline">\(g,h,x
@@ -580,18 +584,20 @@ injektivna preslikava. Hkrati za vse <span class="math inline">\(g,h,x
 class="math display">\[\Phi(\pi_{\mathop{\mathrm{Cay}}}(g) \cdot e_h)
         = \Phi(e_{gh})
         = 1_{h^{-1} g^{-1}}\]</span> in <span
-class="math display">\[\left( \rho_{\hom}(g) \cdot \Phi(e_h) \right)(x)
+class="math display">\[\left( \rho_{\mathop{\mathrm{fun}}}(g) \cdot
+\Phi(e_h) \right)(x)
         = 1_{h^{-1}}(xg)
         = 1_{g^{-1} h^{-1}}(x),\]</span> zato je <span
 class="math inline">\(\Phi\)</span> tudi spletična.</p>
 <p>Kadar je grupa <span class="math inline">\(G\)</span>
 <em>končna</em>, sta prostora <span class="math inline">\(F[G]\)</span>
-in <span class="math inline">\(\hom(G,F)\)</span> enake razsežnosti,
-zato sta v tem primeru upodobitvi <span
+in <span class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span> enake
+razsežnosti, zato sta v tem primeru upodobitvi <span
 class="math inline">\(\pi_{\mathop{\mathrm{Cay}}}\)</span> in <span
-class="math inline">\(\rho_{\hom}\)</span> izomorfni. Kadar je grupa
-<span class="math inline">\(G\)</span> <em>neskončna</em>, pa preslikava
-<span class="math inline">\(\Phi\)</span> vsekakor ni bijektivna.<a
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span> izomorfni.
+Kadar je grupa <span class="math inline">\(G\)</span>
+<em>neskončna</em>, pa preslikava <span
+class="math inline">\(\Phi\)</span> vsekakor ni bijektivna.<a
 href="#fn10" class="footnote-ref" id="fnref10"
 role="doc-noteref"><sup>10</sup></a> V tem primeru upodobitvi nista
 izomorfni.<a href="#fn11" class="footnote-ref" id="fnref11"
@@ -1145,40 +1151,42 @@ nekoliko bolj zapleten kot restrikcija.</p>
 deluje grupa <span class="math inline">\(G\)</span>. Odskočna deska za
 to bo regularna upodobitev grupe <span class="math inline">\(G\)</span>,
 katere vektorski prostor je prostor funkcij <span
-class="math inline">\(\hom(G,F)\)</span>. Ta prostor razširimo s
-prostorom <span class="math inline">\(V\)</span> do prostora funkcij
-<span class="math display">\[\hom(G,V) = \{ f \mid f \colon G \to V
-\},\]</span> na katerem linearno deluje grupa <span
-class="math inline">\(G\)</span> z analogom regularne upodobitve, in
-sicer kot <span class="math display">\[g \cdot f = \left( x \mapsto
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>. Ta prostor
+razširimo s prostorom <span class="math inline">\(V\)</span> do prostora
+funkcij <span class="math display">\[\mathop{\mathrm{fun}}(G,V) = \{ f
+\mid f \colon G \to V \},\]</span> na katerem linearno deluje grupa
+<span class="math inline">\(G\)</span> z analogom regularne upodobitve,
+in sicer kot <span class="math display">\[g \cdot f = \left( x \mapsto
 f(xg) \right)\]</span> za <span class="math inline">\(g \in G, \ f \in
-\hom(G,V)\)</span>. Po drugi strani na tej množici deluje tudi grupa
-<span class="math inline">\(H\)</span>, in sicer na dva načina: prvič
-prek homomorfizma <span class="math inline">\(\phi\)</span> in pravkar
-opisanega delovanja grupe <span class="math inline">\(G\)</span>, drugič
-pa prek svojega delovanja <span class="math inline">\(\rho\)</span> na
-prostoru <span class="math inline">\(V\)</span>. Ko ti dve delovanji
-združimo, dobimo delovanje grupe <span class="math inline">\(H\)</span>
-na prostoru funkcij <span class="math inline">\(\hom(G,V)\)</span> s
-predpisom <span class="math display">\[h \cdot f = \left( x \mapsto
+\mathop{\mathrm{fun}}(G,V)\)</span>. Po drugi strani na tej množici
+deluje tudi grupa <span class="math inline">\(H\)</span>, in sicer na
+dva načina: prvič prek homomorfizma <span
+class="math inline">\(\phi\)</span> in pravkar opisanega delovanja grupe
+<span class="math inline">\(G\)</span>, drugič pa prek svojega delovanja
+<span class="math inline">\(\rho\)</span> na prostoru <span
+class="math inline">\(V\)</span>. Ko ti dve delovanji združimo, dobimo
+delovanje grupe <span class="math inline">\(H\)</span> na prostoru
+funkcij <span class="math inline">\(\mathop{\mathrm{fun}}(G,V)\)</span>
+s predpisom <span class="math display">\[h \cdot f = \left( x \mapsto
 \rho(h) \cdot f \left( \phi(h^{-1}) \cdot x \right) \right)\]</span> za
-<span class="math inline">\(h \in H, \ f \in \hom(G,V)\)</span>.<a
-href="#fn16" class="footnote-ref" id="fnref16"
-role="doc-noteref"><sup>16</sup></a> Opazujmo invariantni podprostor
-<span class="math display">\[\hom(G, V)^H =
-    \left\{ f \in \hom(G,V) \mid \forall h \in H, x \in G. \ \rho(h)
-\cdot f(x) = f \left(\phi(h) \cdot x\right)\right\}.\]</span> Ker grupa
-<span class="math inline">\(G\)</span> deluje na <span
-class="math inline">\(\hom(G,V)\)</span> prek množenja z <em>desne</em>,
-pogoj pripadnosti invariantam <span
-class="math inline">\(\hom(G,V)^H\)</span> pa je izražen prek množenja z
-<em>leve</em>, je podprostor <span
-class="math inline">\(\hom(G,V)^H\)</span> avtomatično <span
-class="math inline">\(G\)</span>-invarianten. S tem smo dobili
+<span class="math inline">\(h \in H, \ f \in
+\mathop{\mathrm{fun}}(G,V)\)</span>.<a href="#fn16" class="footnote-ref"
+id="fnref16" role="doc-noteref"><sup>16</sup></a> Opazujmo invariantni
+podprostor <span class="math display">\[\mathop{\mathrm{fun}}(G, V)^H =
+    \left\{ f \in \mathop{\mathrm{fun}}(G,V) \mid \forall h \in H, x \in
+G. \ \rho(h) \cdot f(x) = f \left(\phi(h) \cdot
+x\right)\right\}.\]</span> Ker grupa <span
+class="math inline">\(G\)</span> deluje na <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,V)\)</span> prek množenja
+z <em>desne</em>, pogoj pripadnosti invariantam <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,V)^H\)</span> pa je
+izražen prek množenja z <em>leve</em>, je podprostor <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,V)^H\)</span> avtomatično
+<span class="math inline">\(G\)</span>-invarianten. S tem smo dobili
 upodobitev grupe <span class="math inline">\(G\)</span> na prostoru
-<span class="math inline">\(\hom(G,V)^H\)</span>. To je želena
-<span><strong><em>inducirana upodobitev</em></strong></span>. Zanjo
-uporabimo oznako <span
+<span class="math inline">\(\mathop{\mathrm{fun}}(G,V)^H\)</span>. To je
+želena <span><strong><em>inducirana upodobitev</em></strong></span>.
+Zanjo uporabimo oznako <span
 class="math inline">\(\mathop{\mathrm{Ind}}^G_H(\rho)\)</span>.</p>
 <div class="zgled">
 <p><strong>Zgled 1.12</strong>. Naj bo <span
@@ -1187,22 +1195,24 @@ class="math inline">\(\phi \colon 1 \to G\)</span> trivialne podgrupe.
 Vsaka upodobitev trivialne grupe nad poljem <span
 class="math inline">\(F\)</span> je trivialna. Iz enorazsežne trivialne
 upodobitve <span class="math inline">\(\mathbf{1}\)</span> dobimo
-prostor funkcij <span class="math inline">\(\hom(G,F)\)</span>, na
-katerem grupa <span class="math inline">\(G\)</span> deluje z regularno
+prostor funkcij <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>, na katerem
+grupa <span class="math inline">\(G\)</span> deluje z regularno
 upodobitvijo. Inducirana upodobitev je v tem primeru torej kar
 regularna, se pravi <span
 class="math inline">\(\mathop{\mathrm{Ind}}^G_1(\mathbf{1}) =
-\rho_{\hom}\)</span>.</p>
+\rho_{\mathop{\mathrm{fun}}}\)</span>.</p>
 </div>
 <p>Inducirano upodobitev <span
 class="math inline">\(\mathop{\mathrm{Ind}}^G_H(\rho) =
-\hom(G,V)^H\)</span> smo konstruirali z invariantami grupe <span
-class="math inline">\(H\)</span>. To pomeni, da vektorji v tem prostoru
-niso poljubne funkcije v <span class="math inline">\(\hom(G,V)\)</span>,
-temveč zadoščajo določenim restriktivnim pogojem. Te funkcije so
-določene z vrednostmi, ki jih zavzamejo na predstavnikih desnih odsekov
-<span class="math inline">\(\mathop{\mathrm{im}}\phi \backslash
-G\)</span>,<a href="#fn17" class="footnote-ref" id="fnref17"
+\mathop{\mathrm{fun}}(G,V)^H\)</span> smo konstruirali z invariantami
+grupe <span class="math inline">\(H\)</span>. To pomeni, da vektorji v
+tem prostoru niso poljubne funkcije v <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,V)\)</span>, temveč
+zadoščajo določenim restriktivnim pogojem. Te funkcije so določene z
+vrednostmi, ki jih zavzamejo na predstavnikih desnih odsekov <span
+class="math inline">\(\mathop{\mathrm{im}}\phi \backslash G\)</span>,<a
+href="#fn17" class="footnote-ref" id="fnref17"
 role="doc-noteref"><sup>17</sup></a> in te vrednosti pripadajo
 podprostoru <span class="math inline">\(V^{\ker \phi}\)</span>.<a
 href="#fn18" class="footnote-ref" id="fnref18"
@@ -1212,16 +1222,17 @@ role="doc-noteref"><sup>18</sup></a></p>
 class="math inline">\(G\)</span> grupa z upodobitvijo <span
 class="math inline">\(\rho\)</span> in naj bo <span
 class="math inline">\(\phi = \mathop{\mathrm{id}}_G\)</span>. Tedaj je
-vsaka funkcija <span class="math inline">\(f \in \hom(G,V)^G\)</span>
-določena že z vrednostjo <span class="math inline">\(f(1)\)</span>.
-Dodatnih restrikcij za to vrednost ni, zato dobimo izomorfizem
-vektorskih prostorov <span class="math display">\[\hom(G,V)^G \to V,
-\quad
+vsaka funkcija <span class="math inline">\(f \in
+\mathop{\mathrm{fun}}(G,V)^G\)</span> določena že z vrednostjo <span
+class="math inline">\(f(1)\)</span>. Dodatnih restrikcij za to vrednost
+ni, zato dobimo izomorfizem vektorskih prostorov <span
+class="math display">\[\mathop{\mathrm{fun}}(G,V)^G \to V, \quad
         f \mapsto f(1),\]</span> ki je spletična glede na regularno
 delovanje <span class="math inline">\(G\)</span> na <span
-class="math inline">\(\hom(G,V)\)</span>. S tem imamo torej izomorfizem
-upodobitev <span class="math inline">\(\mathop{\mathrm{Ind}}^G_G(\rho)
-\cong \rho\)</span>.</p>
+class="math inline">\(\mathop{\mathrm{fun}}(G,V)\)</span>. S tem imamo
+torej izomorfizem upodobitev <span
+class="math inline">\(\mathop{\mathrm{Ind}}^G_G(\rho) \cong
+\rho\)</span>.</p>
 </div>
 <div class="domacanaloga">
 <p><strong>Domača naloga 1.8</strong>. Naj bo <span
@@ -1254,20 +1265,22 @@ class="math inline">\(\mathop{\mathrm{Ind}}^G_H(\rho)\)</span>.</p>
 <p>Naj bo <span class="math inline">\(R\)</span> neka izbrana množica
 predstavnikov desnih odsekov <span class="math inline">\(H\)</span> v
 <span class="math inline">\(G\)</span>. Vsaka funkcija <span
-class="math inline">\(f \in \hom(G,V)^H\)</span> je določena z
-vrednostmi <span class="math inline">\(f(r)\)</span> za <span
+class="math inline">\(f \in \mathop{\mathrm{fun}}(G,V)^H\)</span> je
+določena z vrednostmi <span class="math inline">\(f(r)\)</span> za <span
 class="math inline">\(r \in R\)</span> in dodatnih restrikcij za te
 vrednosti ni, zato dobimo izomorfizem vektorskih prostorov<a
 href="#fn19" class="footnote-ref" id="fnref19"
 role="doc-noteref"><sup>19</sup></a> <span class="math display">\[\Phi
-\colon \hom(G,V)^H \to \hom(R,V), \quad
+\colon \mathop{\mathrm{fun}}(G,V)^H \to \mathop{\mathrm{fun}}(R,V),
+\quad
         f \mapsto \left( r \mapsto f(r) \right).\]</span> Da dobimo
 spletično, moramo posplošitev regularnega delovanja <span
 class="math inline">\(G\)</span> na <span
-class="math inline">\(\hom(G,V)\)</span> prenesti prek linearnega
-izomorfizma <span class="math inline">\(\Phi\)</span> na desno stran. V
-ta namen naj bo <span class="math inline">\(v \in V\)</span> in <span
-class="math inline">\(f \in \hom(G,V)^H\)</span> z lastnostjo <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,V)\)</span> prenesti prek
+linearnega izomorfizma <span class="math inline">\(\Phi\)</span> na
+desno stran. V ta namen naj bo <span class="math inline">\(v \in
+V\)</span> in <span class="math inline">\(f \in
+\mathop{\mathrm{fun}}(G,V)^H\)</span> z lastnostjo <span
 class="math inline">\(f(r_0) = v\)</span> in <span
 class="math inline">\(f(r) = 0\)</span> za <span class="math inline">\(r
 \in R \backslash \{ r_0 \}\)</span>. Za vsak <span
@@ -1292,9 +1305,9 @@ class="math display">\[g \cdot \left( r \mapsto \begin{cases} v &amp; r
 g^{-1} \text{ za nek $h \in H$,} \\ 0 &amp; r \notin H r_0 g^{-1}
 \end{cases} \right).\]</span> Da bo preslikava <span
 class="math inline">\(\Phi\)</span> spletična, moramo na <span
-class="math inline">\(\hom(R,V)\)</span> torej uvesti tako delovanje
-grupe <span class="math inline">\(G\)</span>, ki dan vektor <span
-class="math inline">\(v\)</span> pri vnosu <span
+class="math inline">\(\mathop{\mathrm{fun}}(R,V)\)</span> torej uvesti
+tako delovanje grupe <span class="math inline">\(G\)</span>, ki dan
+vektor <span class="math inline">\(v\)</span> pri vnosu <span
 class="math inline">\(r_0 \in R\)</span> preslika tako, da najprej
 izračuna odsek elementa <span class="math inline">\(r_0 g^{-1}\)</span>
 po <span class="math inline">\(H\)</span>, ta element zapiše kot <span
@@ -1304,10 +1317,10 @@ class="math inline">\(h \in H, \ r \in R\)</span>, nato pa na vektor
 class="math inline">\(\rho(h)\)</span> in ga hkrati prestavi k vnosu
 <span class="math inline">\(r\)</span>.</p>
 <p>Opisan postopek si lahko nekoliko lažje predstavljamo tako, da
-množico <span class="math inline">\(\hom(R,V)\)</span> identificiramo z
-direktno vsoto <span class="math inline">\(\bigoplus_{r \in R} V
-r\)</span>, kjer je <span class="math inline">\(Vr\)</span> kopija
-vektorskega prostora <span class="math inline">\(V\)</span> pri
+množico <span class="math inline">\(\mathop{\mathrm{fun}}(R,V)\)</span>
+identificiramo z direktno vsoto <span class="math inline">\(\bigoplus_{r
+\in R} V r\)</span>, kjer je <span class="math inline">\(Vr\)</span>
+kopija vektorskega prostora <span class="math inline">\(V\)</span> pri
 komponenti <span class="math inline">\(r\)</span>. Element <span
 class="math inline">\(g \in G\)</span> deluje na vektorju <span
 class="math inline">\(v r_0 \in Vr_0\)</span> kot <span
@@ -1318,12 +1331,14 @@ ustreza bolj zakompliciranemu zapisu zgoraj.</p>
 <p>Poseben primer opisane indukcije dobimo z enorazsežnimi upodobitvami
 grupe <span class="math inline">\(H\)</span>. Vsak homomorfizem <span
 class="math inline">\(\rho \colon H \to F^*\)</span> porodi prostor
-<span class="math inline">\(\hom(G,F)^H\)</span> razsežnosti <span
-class="math inline">\(|G:H|\)</span>, ki je podprostor prostora funkcij
-<span class="math inline">\(\hom(G,F)\)</span> in na katerem torej grupa
-<span class="math inline">\(G\)</span> deluje z regularno upodobitvjo.
-Inducirana upodobitev je v tem primeru podupodobitev regularne
-upodobitve <span class="math inline">\(\rho_{\hom}\)</span>. Na ta način
+<span class="math inline">\(\mathop{\mathrm{fun}}(G,F)^H\)</span>
+razsežnosti <span class="math inline">\(|G:H|\)</span>, ki je podprostor
+prostora funkcij <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span> in na katerem
+torej grupa <span class="math inline">\(G\)</span> deluje z regularno
+upodobitvjo. Inducirana upodobitev je v tem primeru podupodobitev
+regularne upodobitve <span
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>. Na ta način
 lahko dobimo mnogo različnih upodobitev grupe <span
 class="math inline">\(G\)</span>.</p>
 <div class="zgled">
@@ -1467,13 +1482,14 @@ class="math inline">\(W\)</span>. Naj bo <span
 class="math display">\[\Phi \in \hom_H(\mathop{\mathrm{Res}}^G_H(\rho),
 \sigma) = \hom_H(V, W).\]</span> Sestavimo pripadajočo spletično <span
 class="math display">\[\Psi \in \hom_G(\rho,
-\mathop{\mathrm{Ind}}^G_H(\sigma)) = \hom_G(V, \hom(G,W)^H).\]</span> Za
-vektor <span class="math inline">\(v \in V\)</span> definirajmo <span
+\mathop{\mathrm{Ind}}^G_H(\sigma)) = \hom_G(V,
+\mathop{\mathrm{fun}}(G,W)^H).\]</span> Za vektor <span
+class="math inline">\(v \in V\)</span> definirajmo <span
 class="math display">\[\Psi(v) = \left( x \mapsto \Phi(\rho(x) \cdot v)
-\right) \in \hom(G,W).\]</span> Ni težko (je pa sitno) preveriti, da
-opisano prirejanje vzpostavi izomorfizem med prostoroma spletičen <span
-class="math inline">\(\hom_H(V,W)\)</span> in <span
-class="math inline">\(\hom_G(V,\hom(G,W)^H)\)</span>. ◻</p>
+\right) \in \mathop{\mathrm{fun}}(G,W).\]</span> Ni težko (je pa sitno)
+preveriti, da opisano prirejanje vzpostavi izomorfizem med prostoroma
+spletičen <span class="math inline">\(\hom_H(V,W)\)</span> in <span
+class="math inline">\(\hom_G(V,\mathop{\mathrm{fun}}(G,W)^H)\)</span>. ◻</p>
 </div>
 <div class="zgled">
 <p><strong>Zgled 1.15</strong>. Naj bo <span
@@ -2319,16 +2335,16 @@ matričnih koeficientih.</p>
 <h3 id="matrični-koeficienti-in-regularna-upodobitev">Matrični
 koeficienti in regularna upodobitev</h3>
 <p>Matrične koeficiente lahko vidimo kot elemente vektorskega prostora
-funkcij <span class="math inline">\(\hom(G,F)\)</span> iz <span
-class="math inline">\(G\)</span> v <span
+funkcij <span class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>
+iz <span class="math inline">\(G\)</span> v <span
 class="math inline">\(F\)</span>. Na tem prostoru deluje grupa <span
 class="math inline">\(G\)</span> z regularno upodobitvijo <span
-class="math inline">\(\rho_{\hom}\)</span>. Naj bo <span
-class="math inline">\(\mathop{\mathrm{MK}}(\pi) \leq \hom(G,F)\)</span>
-podprostor, ki ga razpenjajo matrični koeficienti neke končnorazsežne
-nerazcepne upodobitve <span class="math inline">\(\pi\)</span>.<a
-href="#fn29" class="footnote-ref" id="fnref29"
-role="doc-noteref"><sup>29</sup></a></p>
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>. Naj bo
+<span class="math inline">\(\mathop{\mathrm{MK}}(\pi) \leq
+\mathop{\mathrm{fun}}(G,F)\)</span> podprostor, ki ga razpenjajo
+matrični koeficienti neke končnorazsežne nerazcepne upodobitve <span
+class="math inline">\(\pi\)</span>.<a href="#fn29" class="footnote-ref"
+id="fnref29" role="doc-noteref"><sup>29</sup></a></p>
 <div class="trditev">
 <p><strong>Trditev 2.5</strong>. <span
 class="math inline">\(\mathop{\mathrm{MK}}(\pi)\)</span> je <span
@@ -2348,57 +2364,58 @@ class="math inline">\(g \cdot f_{v, \lambda} = f_{\pi(g) \cdot v,
 class="math inline">\(\pi\)</span> nam torej dajejo podupodobitev na
 prostoru <span class="math inline">\(\mathop{\mathrm{MK}}(\pi)\)</span>
 znotraj regularne upodobitve <span
-class="math inline">\(\rho_{\hom}\)</span> na <span
-class="math inline">\(\hom(G,F)\)</span>. Ni presenetljivo, da je ta
-podupodobitev v resnici tesno povezana s <span
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span> na <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>. Ni
+presenetljivo, da je ta podupodobitev v resnici tesno povezana s <span
 class="math inline">\(\pi\)</span>.</p>
 <div class="izrek">
 <p><strong>Izrek 2.2</strong>. Naj bo <span
 class="math inline">\(G\)</span> grupa s končnorazsežno nerazcepno
 upodobitvijo <span class="math inline">\(\pi\)</span>. Tedaj je <span
 class="math display">\[\textstyle  \mathop{\mathrm{MK}}(\pi) =
-\mathop{\mathrm{Izotip}}_{\rho_{\hom}}(\pi)\]</span> Nad algebraično
-zaprtim poljem je večkratnost <span class="math inline">\(\pi\)</span> v
-slednji upodobitvi enaka <span
+\mathop{\mathrm{Izotip}}_{\rho_{\mathop{\mathrm{fun}}}}(\pi)\]</span>
+Nad algebraično zaprtim poljem je večkratnost <span
+class="math inline">\(\pi\)</span> v slednji upodobitvi enaka <span
 class="math inline">\(\deg(\pi)\)</span>.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Naj bo <span class="math inline">\(\pi\)</span>
 upodobitev na prostoru <span class="math inline">\(W\)</span>. Spomnimo
 se, da je <span class="math inline">\(\pi\)</span>-izotipična komponenta
-v <span class="math inline">\(\rho_{\hom}\)</span> napeta na vektorje
-oblike <span class="math inline">\(\Phi(w)\)</span> za <span
-class="math inline">\(\Phi \in \hom_G(\pi, \rho_{\hom})\)</span> in
-<span class="math inline">\(w \in W\)</span>. Regularno upodobitev
-predstavimo kot inducirano upodobitev <span
-class="math inline">\(\rho_{\hom} =
+v <span class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>
+napeta na vektorje oblike <span class="math inline">\(\Phi(w)\)</span>
+za <span class="math inline">\(\Phi \in \hom_G(\pi,
+\rho_{\mathop{\mathrm{fun}}})\)</span> in <span class="math inline">\(w
+\in W\)</span>. Regularno upodobitev predstavimo kot inducirano
+upodobitev <span class="math inline">\(\rho_{\mathop{\mathrm{fun}}} =
 \mathop{\mathrm{Ind}}^G_1(\mathbf{1})\)</span>. Po adjunkciji med
 restrikcijo in indukcijo je <span class="math display">\[\textstyle
-\hom_G(\pi, \rho_{\hom}) \cong \hom_1(\mathop{\mathrm{Res}}^G_1(\pi),
-\mathbf{1})
+\hom_G(\pi, \rho_{\mathop{\mathrm{fun}}}) \cong
+\hom_1(\mathop{\mathrm{Res}}^G_1(\pi), \mathbf{1})
     \cong \hom(\mathbf{1}^{\deg(\pi)}, \mathbf{1}).\]</span> Standardna
 dualna baza <span class="math inline">\(\{ e_i^* \mid 1 \leq i \leq
 \deg(\pi) \}\)</span> v zadnjem vektorskem prostoru nam po tej
 adjunkciji porodi bazo <span class="math display">\[\Phi_i \colon W \to
-\hom(G,F), \quad
+\mathop{\mathrm{fun}}(G,F), \quad
     w \mapsto \left( g \mapsto \langle e_i^*, \pi(g) \cdot w \rangle
 \right) = f_{e_i^*, w}\]</span> za <span class="math inline">\(1 \leq i
 \leq \deg(\pi)\)</span> prostora spletičen <span
-class="math inline">\(\hom_G(\pi, \rho_{\hom})\)</span>. Ko te bazne
-spletične evalviramo na neki izbrani bazi <span class="math inline">\(\{
-f_j \mid 1 \leq j \leq \deg(\pi) \}\)</span> prostora <span
+class="math inline">\(\hom_G(\pi,
+\rho_{\mathop{\mathrm{fun}}})\)</span>. Ko te bazne spletične evalviramo
+na neki izbrani bazi <span class="math inline">\(\{ f_j \mid 1 \leq j
+\leq \deg(\pi) \}\)</span> prostora <span
 class="math inline">\(W\)</span>, dobimo torej ravno prostor <span
 class="math inline">\(\mathop{\mathrm{MK}}(\pi)\)</span>. Nad
 algebraično zaprtim poljem te evalvacije tvorijo celo bazo<a
 href="#fn30" class="footnote-ref" id="fnref30"
 role="doc-noteref"><sup>30</sup></a> <span
 class="math display">\[\Phi_i(f_j) = f_{i,j}\]</span> prostora <span
-class="math inline">\(\mathop{\mathrm{Izotip}}_{\rho_{\hom}}(\pi)\)</span>.
+class="math inline">\(\mathop{\mathrm{Izotip}}_{\rho_{\mathop{\mathrm{fun}}}}(\pi)\)</span>.
 V izbranih bazah torej matrični koeficienti tvorijo bazo za <span
 class="math inline">\(\pi\)</span>-izotipično komponento regularne
 upodobitve. Večkratnost <span class="math inline">\(\pi\)</span> v njej
-je enaka <span class="math inline">\(\dim \hom_G(\pi, \rho_{\hom}) =
-\deg(\pi)\)</span>. ◻</p>
+je enaka <span class="math inline">\(\dim \hom_G(\pi,
+\rho_{\mathop{\mathrm{fun}}}) = \deg(\pi)\)</span>. ◻</p>
 </div>
 <p>Izpostavimo pomembno posledico, ki nam pove, da lahko vse nerazcepne
 upodobitve najdemo v regularni.</p>
@@ -2426,10 +2443,10 @@ notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so
 torej linearno neodvisni med sabo. Vseh skupaj je <span
 class="math inline">\(\sum_{i \in I} \deg(\pi_i)^2\)</span>.</p>
 <p>Matrični koeficienti so elementi prostora funkcij <span
-class="math inline">\(\hom(G,F)\)</span>. V primeru, ko je grupa končna,
-lahko po primerjanju dimenzij zato izpeljemo neenakost <span
-class="math display">\[\sum_{i \in I} \deg(\pi_i)^2 \leq \dim \hom(G,F)
-= |G|.\]</span></p>
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>. V primeru, ko
+je grupa končna, lahko po primerjanju dimenzij zato izpeljemo neenakost
+<span class="math display">\[\sum_{i \in I} \deg(\pi_i)^2 \leq \dim
+\mathop{\mathrm{fun}}(G,F) = |G|.\]</span></p>
 <div class="posledica">
 <p><strong>Posledica 2.6</strong>. Končna grupa ima le končno mnogo
 končnorazsežnih nerazcepnih upodobitev. Nad algebraično zaprtim poljem
@@ -2440,8 +2457,9 @@ class="math inline">\(\sqrt{|G|}\)</span>.</p>
 <p><em>Proof.</em> Vsaka končnorazsežna nerazcepna upodobitev je
 vsebovana v regularni in se zatorej pojavi kot njen kompozicijski
 faktor. Vseh možnih kompozicijskih faktorjev je končno mnogo, ker je
-prostor <span class="math inline">\(\hom(G,F)\)</span> končnorazsežen.
-Drugi del posledice sledi neposredno iz neenakosti pred njo. ◻</p>
+prostor <span class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>
+končnorazsežen. Drugi del posledice sledi neposredno iz neenakosti pred
+njo. ◻</p>
 </div>
 <div class="zgled">
 <p><strong>Zgled 2.9</strong>. Opazujmo grupo <span
@@ -2466,8 +2484,8 @@ class="math inline">\(\rho\)</span> njena končnorazsežna upodobitev. Po
 izbiri baze dobimo matrične koeficiente <span
 class="math inline">\(f_{i,j}\)</span>. Te lahko kombiniramo na različne
 načine, da dobimo funkcije v <span
-class="math inline">\(\hom(G,F)\)</span>, ki so nazadnje
-<em>neodvisne</em> od izbire baze. Najosnovnejša<a href="#fn32"
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>, ki so
+nazadnje <em>neodvisne</em> od izbire baze. Najosnovnejša<a href="#fn32"
 class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>
 taka funkcija je sled linearnega operatorja, se pravi <span
 class="math display">\[\textstyle \chi_{\rho} \colon G \to F, \quad
@@ -2486,8 +2504,8 @@ class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>
 Takim funkcijam pravimo <span><strong><em>razredne
 funkcije</em></strong></span> in jih označimo s <span
 class="math display">\[\hom_{\mathop{\mathrm{cl}}}(G,F) = \{ f \in
-\hom(G,F) \mid \forall x, g \in G \colon f(x g x^{-1}) = f(g)
-\}.\]</span></p>
+\mathop{\mathrm{fun}}(G,F) \mid \forall x, g \in G \colon f(x g x^{-1})
+= f(g) \}.\]</span></p>
 <div class="zgled">
 <p><strong>Zgled 2.10</strong>. Opazujmo grupo <span
 class="math inline">\(S_3\)</span> nad poljem <span
@@ -2564,8 +2582,8 @@ class="math inline">\(-1\)</span></td>
 </table>
 </div>
 <p>Že samo imenovanje karakterjev odzvanja, da to niso poljubne funkcije
-v <span class="math inline">\(\hom(G,F)\)</span>, temveč da v nekem
-smislu zajemajo srž upodobitve.</p>
+v <span class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>,
+temveč da v nekem smislu zajemajo srž upodobitve.</p>
 <div class="trditev">
 <p><strong>Trditev 2.6</strong>. Naj bo <span
 class="math inline">\(G\)</span> grupa s končnorazsežnima nerazcepnima
@@ -2576,7 +2594,7 @@ izomorfni, če in samo če imata enaka karakterja.</p>
 <p><em>Proof.</em> Ker so matrični koeficienti različnih nerazcepnih
 upodobitev linearno neodvisni med sabo, so tudi njihovi karakterji
 linearno neodvisni kot elementi prostora <span
-class="math inline">\(\hom(G,F)\)</span>. ◻</p>
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>. ◻</p>
 </div>
 <p>Karakterjev fundamentalnih konstrukcij različnih upodobitev ni težko
 izračunati.</p>
@@ -2644,35 +2662,38 @@ predstavnikih <span class="math inline">\(r_0 \in R\)</span>, dobimo
 <div class="zgled">
 <p><strong>Zgled 2.11</strong>. Naj bo <span
 class="math inline">\(G\)</span> končna grupa. V tem primeru je
-regularna upodobitev <span class="math inline">\(\rho_{\hom}\)</span>
+regularna upodobitev <span
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>
 končnorazsežna. Določimo njen karakter najprej na roke. V regularni
 upodobitvi imamo naravno bazo iz karakterističnih funkcij <span
 class="math display">\[1_{x} \colon G \to F, \quad
         y \mapsto \begin{cases} 1 &amp; y = x, \\ 0 &amp; \text{sicer.}
 \end{cases}\]</span> Na vsaki od teh element grupe <span
 class="math inline">\(g \in G\)</span> deluje kot <span
-class="math inline">\(\rho_{\hom}(g) \cdot 1_x = 1_{x g^{-1}}\)</span>.
-Grupa <span class="math inline">\(G\)</span> torej permutira
-karakteristične funkcije. Sled preslikave <span
-class="math inline">\(\rho_{\hom}(g)\)</span> je zato enaka številu
-karakterističnih funkcij, ki jih ta preslikava fiksira. To je mogoče le,
-če je <span class="math inline">\(x = x g^{-1}\)</span>, kar pa se zgodi
-zgolj pri <span class="math inline">\(g = 1\)</span>, ko je <span
-class="math inline">\(\rho_{\hom}(1) = \mathop{\mathrm{id}}\)</span> s
-sledjo <span class="math inline">\(\dim \hom(G,F) = |G|\)</span>. Torej
-je karakter regularne upodobitve končne grupe enak <span
-class="math display">\[\chi_{\rho_{\hom}} \colon G \to F, \quad
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}(g) \cdot 1_x = 1_{x
+g^{-1}}\)</span>. Grupa <span class="math inline">\(G\)</span> torej
+permutira karakteristične funkcije. Sled preslikave <span
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}(g)\)</span> je zato
+enaka številu karakterističnih funkcij, ki jih ta preslikava fiksira. To
+je mogoče le, če je <span class="math inline">\(x = x g^{-1}\)</span>,
+kar pa se zgodi zgolj pri <span class="math inline">\(g = 1\)</span>, ko
+je <span class="math inline">\(\rho_{\mathop{\mathrm{fun}}}(1) =
+\mathop{\mathrm{id}}\)</span> s sledjo <span class="math inline">\(\dim
+\mathop{\mathrm{fun}}(G,F) = |G|\)</span>. Torej je karakter regularne
+upodobitve končne grupe enak <span
+class="math display">\[\chi_{\rho_{\mathop{\mathrm{fun}}}} \colon G \to
+F, \quad
         g \mapsto \begin{cases} |G| &amp; g = 1, \\ 0 &amp;
 \text{sicer.} \end{cases}\]</span></p>
 <p>Ta karakter bi lahko hitreje izračunali s pomočjo znane
-identifikacije <span class="math inline">\(\rho_{\hom} \cong
-\mathop{\mathrm{Ind}}^G_1(\mathbf{1})\)</span>. V tem primeru je <span
-class="math inline">\(R = G\)</span> in za <span class="math inline">\(g
-\neq 1\)</span> je vsota v formuli za induciran karakter prazna, torej
-se evalvira v <span class="math inline">\(0\)</span>, za <span
-class="math inline">\(g = 1\)</span> pa dobimo <span
-class="math inline">\(\sum_{r \in G} \chi_{\mathbf{1}}(1) =
-|G|\)</span>.</p>
+identifikacije <span class="math inline">\(\rho_{\mathop{\mathrm{fun}}}
+\cong \mathop{\mathrm{Ind}}^G_1(\mathbf{1})\)</span>. V tem primeru je
+<span class="math inline">\(R = G\)</span> in za <span
+class="math inline">\(g \neq 1\)</span> je vsota v formuli za induciran
+karakter prazna, torej se evalvira v <span
+class="math inline">\(0\)</span>, za <span class="math inline">\(g =
+1\)</span> pa dobimo <span class="math inline">\(\sum_{r \in G}
+\chi_{\mathbf{1}}(1) = |G|\)</span>.</p>
 </div>
 <p>Lastnost karakterjev kot srža upodobitve se prenese na končnorazsežne
 polenostavne upodobitve, <em>če je le polje ničelne karakeristike</em>.
@@ -2762,8 +2783,8 @@ končnost grupe <span class="math inline">\(G\)</span> in ustrezna
 karakteristika polja <span class="math inline">\(F\)</span>. Ti dve
 predpostavki namreč odpirata vrata orodju <span><strong><em>povprečenja
 po grupi</em></strong></span>. Za dano funkcijo <span
-class="math inline">\(f \in \hom(G,F)\)</span> lahko v tej ugodni
-situaciji izračunamo njeno povprečno vrednost<a href="#fn34"
+class="math inline">\(f \in \mathop{\mathrm{fun}}(G,F)\)</span> lahko v
+tej ugodni situaciji izračunamo njeno povprečno vrednost<a href="#fn34"
 class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a>
 <span class="math display">\[\mathbf{E}(f) = \frac{1}{|G|} \sum_{g \in
 G} f(g) \in F.\]</span> Te račune povprečij lahko razširimo na izračun
@@ -2810,34 +2831,34 @@ class="math inline">\(\checkmark\)</span></p>
 <span class="math inline">\(\mathop{\mathrm{char}}(F) \mid
 |G|\)</span>.<a href="#fn35" class="footnote-ref" id="fnref35"
 role="doc-noteref"><sup>35</sup></a> Opazujmo regularno upodobitev <span
-class="math inline">\(\rho_{\hom}\)</span> na prostoru <span
-class="math inline">\(\hom(G,F)\)</span>. Ta prostor ima vselej <span
-class="math inline">\(G\)</span>-invarianten podprostor <span
-class="math display">\[\textstyle \hom_0(G,F) = \left\{ f \in \hom(G,F)
-\mid \sum_{g \in G} f(g) = 0 \right\}\]</span> korazsežnosti <span
-class="math inline">\(1\)</span> v <span
-class="math inline">\(\hom(G,F)\)</span>. Dokažimo, da upodobitev na tem
-podprostoru <em>ni</em> komplementirana in da torej vsaka upodobitev ni
-polenostavna.</p>
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span> na prostoru
+<span class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>. Ta
+prostor ima vselej <span class="math inline">\(G\)</span>-invarianten
+podprostor <span class="math display">\[\textstyle \hom_0(G,F) = \left\{
+f \in \mathop{\mathrm{fun}}(G,F) \mid \sum_{g \in G} f(g) = 0
+\right\}\]</span> korazsežnosti <span class="math inline">\(1\)</span> v
+<span class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>.
+Dokažimo, da upodobitev na tem podprostoru <em>ni</em> komplementirana
+in da torej vsaka upodobitev ni polenostavna.</p>
 <p>Zavoljo protislovja predpostavimo, da komplement obstaja. Imamo torej
-funkcijo <span class="math inline">\(0 \neq \phi \in \hom(G,F)\)</span>,
-za katero velja <span class="math inline">\(\sum_{g \in G} \phi(g) \neq
-0\)</span> in prostor <span class="math inline">\(F \cdot \phi\)</span>
-je <span class="math inline">\(G\)</span>-invarianten. Torej obstaja
-enorazsežna upodobitev <span class="math inline">\(\chi \colon G \to
-F^*\)</span>, da pri vsakem <span class="math inline">\(g \in G\)</span>
-velja <span class="math inline">\(g \cdot \phi = \chi(g) \cdot
-\phi\)</span>, se pravi <span class="math inline">\(\phi(g) = \chi(g)
-\cdot \phi(1)\)</span>. Od tod sledi <span
-class="math display">\[\sum_{g \in G} \phi(g) = \phi(1) \cdot \sum_{g
-\in G} \chi(g).\]</span> Trdimo, da je zadnja vsota vselej ničelna, kar
-nas privede v protislovje s predpostavko <span
-class="math inline">\(\sum_{g \in G} \phi(g) \neq 0\)</span>. Če je
-namreč <span class="math inline">\(\chi\)</span> trivialna upodobitev,
-potem iz predpostavke o karakteristiki izpeljemo <span
-class="math display">\[\sum_{g \in G} \chi(g) = |G| = 0.\]</span> Če pa
-<span class="math inline">\(\chi\)</span> ni trivialna, potem za nek
-<span class="math inline">\(x \in G\)</span> velja <span
+funkcijo <span class="math inline">\(0 \neq \phi \in
+\mathop{\mathrm{fun}}(G,F)\)</span>, za katero velja <span
+class="math inline">\(\sum_{g \in G} \phi(g) \neq 0\)</span> in prostor
+<span class="math inline">\(F \cdot \phi\)</span> je <span
+class="math inline">\(G\)</span>-invarianten. Torej obstaja enorazsežna
+upodobitev <span class="math inline">\(\chi \colon G \to F^*\)</span>,
+da pri vsakem <span class="math inline">\(g \in G\)</span> velja <span
+class="math inline">\(g \cdot \phi = \chi(g) \cdot \phi\)</span>, se
+pravi <span class="math inline">\(\phi(g) = \chi(g) \cdot
+\phi(1)\)</span>. Od tod sledi <span class="math display">\[\sum_{g \in
+G} \phi(g) = \phi(1) \cdot \sum_{g \in G} \chi(g).\]</span> Trdimo, da
+je zadnja vsota vselej ničelna, kar nas privede v protislovje s
+predpostavko <span class="math inline">\(\sum_{g \in G} \phi(g) \neq
+0\)</span>. Če je namreč <span class="math inline">\(\chi\)</span>
+trivialna upodobitev, potem iz predpostavke o karakteristiki izpeljemo
+<span class="math display">\[\sum_{g \in G} \chi(g) = |G| = 0.\]</span>
+Če pa <span class="math inline">\(\chi\)</span> ni trivialna, potem za
+nek <span class="math inline">\(x \in G\)</span> velja <span
 class="math inline">\(\chi(x) \neq 1\)</span> in v tem primeru
 izračunamo <span class="math display">\[(\chi(x) - 1) \cdot \sum_{g \in
 G} \chi(g) = \sum_{g \in G} \chi(xg) - \sum_{g \in G} \chi(g) =
@@ -2890,7 +2911,8 @@ tuje <span class="math inline">\(|G|\)</span>. Vsaka nerazcepna
 upodobitev <span class="math inline">\(\pi\)</span> grupe <span
 class="math inline">\(G\)</span> nad <span
 class="math inline">\(F\)</span> je uresničljiva kot podupodobitev
-regularne <span class="math inline">\(\rho_{\hom}\)</span>. Slednja je
+regularne <span
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>. Slednja je
 po Maschkejevem izreku polenostavna, zato jo lahko zapišemo kot direktno
 vsoto izotipičnih komponent nerazcepnih upodobitev. Vsaka <span
 class="math inline">\(\pi\)</span>-komponenta pri tem sestoji iz <span
@@ -2901,8 +2923,8 @@ class="math inline">\(\pi\)</span>. Izpostavimo in povzemimo.</p>
 class="math inline">\(G\)</span> končna grupa in <span
 class="math inline">\(F\)</span> algebraično zaprto polje karakteristike
 tuje <span class="math inline">\(|G|\)</span>. Velja <span
-class="math display">\[\rho_{\hom} \cong \bigoplus_{\pi \in
-\mathop{\mathrm{Irr}}(G)} \underbrace{\pi \oplus \pi \oplus \cdots
+class="math display">\[\rho_{\mathop{\mathrm{fun}}} \cong \bigoplus_{\pi
+\in \mathop{\mathrm{Irr}}(G)} \underbrace{\pi \oplus \pi \oplus \cdots
 \oplus \pi}_{\deg(\pi)}.\]</span></p>
 </div>
 <p>V posebnem iz izreka po primerjavi razsežnosti izpeljemo <span
@@ -2927,16 +2949,18 @@ class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span>.</p>
 </div>
 <h3 id="ortogonalnost-matričnih-koeficientov">Ortogonalnost matričnih
 koeficientov</h3>
-<p>Na prostor funkcij <span class="math inline">\(\hom(G,F)\)</span>
-uvedimo <span><strong><em>skalarni produkt</em></strong></span> s
-predpisom <span class="math display">\[[ f_1, f_2 ] = \frac{1}{|G|}
-\sum_{g \in G} f_1(g) f_2(g^{-1})\]</span> za <span
-class="math inline">\(f_1, f_2 \in \hom(G,F)\)</span>. Ker je polje
-<span class="math inline">\(F\)</span> v splošnem abstraktno, to sicer
-ni običajen skalarni produkt, je pa to vendarle nedegenerirana
-simetrična bilinearna forma na <span
-class="math inline">\(\hom(G,F)\)</span>, zato zanjo uporabljamo vso
-standardno terminologijo iz običajnih skalarnih produktov.</p>
+<p>Na prostor funkcij <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span> uvedimo
+<span><strong><em>skalarni produkt</em></strong></span> s predpisom
+<span class="math display">\[[ f_1, f_2 ] = \frac{1}{|G|} \sum_{g \in G}
+f_1(g) f_2(g^{-1})\]</span> za <span class="math inline">\(f_1, f_2 \in
+\mathop{\mathrm{fun}}(G,F)\)</span>. Ker je polje <span
+class="math inline">\(F\)</span> v splošnem abstraktno, to sicer ni
+običajen skalarni produkt, je pa to vendarle nedegenerirana simetrična
+bilinearna forma na <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>, zato zanjo
+uporabljamo vso standardno terminologijo iz običajnih skalarnih
+produktov.</p>
 <p>Z uporabo povprečenja na prostoru linearnih preslikav (podobno kot
 pri dokazu Maschkejevega izreka) bomo nadgradili dekompozicijo regularne
 upodobitve na <em>ortogonalno</em> direktno vsoto.</p>
@@ -3051,16 +3075,16 @@ uporabimo zadnji dve trditvi o skalarnih produktih matričnih
 koeficientov. ◻</p>
 </div>
 <p>V skladu z običajno terminologijo za funkcijo <span
-class="math inline">\(f \in \hom(G,F)\)</span> označimo <span
-class="math inline">\(||f|| = \sqrt{[ f, f ]}\)</span>, to je
+class="math inline">\(f \in \mathop{\mathrm{fun}}(G,F)\)</span> označimo
+<span class="math inline">\(||f|| = \sqrt{[ f, f ]}\)</span>, to je
 <span><strong><em>norma</em></strong></span> funkcije <span
 class="math inline">\(f\)</span>. Nerazcepni karakterji tvorijo
 ortonormiran sistem vektorjev v <span
-class="math inline">\(\hom(G,F)\)</span>.</p>
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>.</p>
 <h3 id="razredne-funkcije">Razredne funkcije</h3>
 <p>Karakterji niso poljubne funkcije v <span
-class="math inline">\(\hom(G,F)\)</span>, temveč vselej pripadajo
-prostoru <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>, temveč vselej
+pripadajo prostoru <span
 class="math inline">\(\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>
 razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev
 tudi linearno nedovisni. S pomočjo ortonormiranosti karakterjev bomo
@@ -3076,8 +3100,8 @@ class="math inline">\(\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>.</p>
 </div>
 <p>Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to
 povprečenje še <em>utežili</em>. Za dano funkcijo <span
-class="math inline">\(f \in \hom(G,F)\)</span> definiramo njeno
-<span><strong><em>nekomutativno Fourierovo
+class="math inline">\(f \in \mathop{\mathrm{fun}}(G,F)\)</span>
+definiramo njeno <span><strong><em>nekomutativno Fourierovo
 transformacijo</em></strong></span> <span
 class="math inline">\(\hat{f}\)</span> kot funkcijo, ki poljubni
 upodobitvi <span class="math inline">\(\rho\)</span> grupe <span
@@ -3088,8 +3112,8 @@ class="math display">\[\hat{f}(\rho) = \sum_{g \in G} f(g) \rho(g^{-1})
 class="math inline">\(f\)</span> torej priredi njeno uteženo povprečje
 poljubne upodobitve vzdolž <span class="math inline">\(f\)</span>, pri
 čemer se zgleduje po skalarnem produktu na prostoru funkcij <span
-class="math inline">\(\hom(G,F)\)</span>. V primeru, ko je <span
-class="math inline">\(f\)</span> konstantna funkcija <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>. V primeru, ko
+je <span class="math inline">\(f\)</span> konstantna funkcija <span
 class="math inline">\(1/|G|\)</span>, z njeno Fourierovo transformacijo
 najdemo običajno povprečno vrednost upodobitve <span
 class="math inline">\(\mathbf{E}(\rho)\)</span>.</p>
@@ -3117,22 +3141,23 @@ class="math inline">\((\hat{f}(\chi_1), \hat{f}(\chi_2), \dots,
 matematiki znano pod imenom <span><strong><em>diskretna Fourierova
 transformacija</em></strong></span> in je fundamentalno v digitalnem
 procesiranju signalov.</p></li>
-<li><p>Naj bo <span class="math inline">\(f \in \hom(G,F)\)</span>
-funkcija na <span class="math inline">\(G\)</span> in <span
-class="math inline">\(\rho_{\hom}\)</span> regularna upodobitev grupe
-<span class="math inline">\(G\)</span>. Vrednost <span
-class="math inline">\(\hat{f}(\rho_{\hom})\)</span> je linearni
-endomorfizem prostora <span class="math inline">\(\hom(G,F)\)</span>.
-Pri tem se karakteristična funkcija <span
-class="math inline">\(1_x\)</span> za <span class="math inline">\(x \in
-G\)</span> preslika v <span class="math display">\[\hat{f}(\rho_{\hom})
-\cdot 1_x
-    = \sum_{g \in G} f(g) \rho_{\hom}(g^{-1}) \cdot 1_x
+<li><p>Naj bo <span class="math inline">\(f \in
+\mathop{\mathrm{fun}}(G,F)\)</span> funkcija na <span
+class="math inline">\(G\)</span> in <span
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span> regularna
+upodobitev grupe <span class="math inline">\(G\)</span>. Vrednost <span
+class="math inline">\(\hat{f}(\rho_{\mathop{\mathrm{fun}}})\)</span> je
+linearni endomorfizem prostora <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>. Pri tem se
+karakteristična funkcija <span class="math inline">\(1_x\)</span> za
+<span class="math inline">\(x \in G\)</span> preslika v <span
+class="math display">\[\hat{f}(\rho_{\mathop{\mathrm{fun}}}) \cdot 1_x
+    = \sum_{g \in G} f(g) \rho_{\mathop{\mathrm{fun}}}(g^{-1}) \cdot 1_x
     = \sum_{g \in G} f(g) 1_{xg}
     = \sum_{g \in G} f(x^{-1}g) 1_{g}.\]</span> V posebnem pri <span
 class="math inline">\(x = 1\)</span> dobimo <span
-class="math inline">\(\hat{f}(\rho_{\hom}) \cdot 1_1 = f\)</span>.
-Funkcijo <span class="math inline">\(f\)</span> lahko torej
+class="math inline">\(\hat{f}(\rho_{\mathop{\mathrm{fun}}}) \cdot 1_1 =
+f\)</span>. Funkcijo <span class="math inline">\(f\)</span> lahko torej
 rekonstruiramo iz vrednosti njene Fourierove transformacije v regularni
 upodobitvi.</p>
 <p>Regularna upodobitev končne grupe nad ugodnim poljem je direktna
@@ -3190,8 +3215,9 @@ torej <span class="math inline">\([ f, \chi_{\pi} ] = 0\)</span>.
 Preslikava <span class="math inline">\(\hat{f}(\pi)\)</span> je po lemi
 zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati
 tudi za regularno upodobitev, se pravi <span
-class="math inline">\(\hat{f}(\rho_{\hom}) = 0\)</span>. Po zadnjem
-zgledu to implicira <span class="math inline">\(f = 0\)</span>. ◻</p>
+class="math inline">\(\hat{f}(\rho_{\mathop{\mathrm{fun}}}) =
+0\)</span>. Po zadnjem zgledu to implicira <span class="math inline">\(f
+= 0\)</span>. ◻</p>
 </div>
 <p>Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v
 predstavnikih konjugiranostnih razredov. Če <span><strong><em>število
@@ -3231,9 +3257,9 @@ class="math inline">\(\sigma\)</span>, potem konjugiranostni razred
 vseh permutacij s tem cikličnim tipom.</p>
 </div>
 <p>V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi
-<span><strong><em>particije</em></strong></span> števila <span
-class="math inline">\(n\)</span>. Število vseh particij označimo s <span
-class="math inline">\(p(n)\)</span>. Velja torej <span
+<span><strong><em>razčlenitve</em></strong></span> števila <span
+class="math inline">\(n\)</span>. Število vseh razčlenitev označimo s
+<span class="math inline">\(p(n)\)</span>. Velja torej <span
 class="math inline">\(p(n) = \mathop{\mathrm{k}}(S_n) =
 |\mathop{\mathrm{Irr}}(S_n)|\)</span>. Splošna eksplicitna formula za to
 število <em>ne</em> obstaja, poznamo pa njeno asimptotsko oceno<a
@@ -3282,7 +3308,7 @@ poljem karakteristike tuje <span class="math inline">\(|G|\)</span>. Za
 vsaka elementa <span class="math inline">\(g,h \in G\)</span> velja
 <span class="math display">\[\sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
 \chi_{\pi}(g) \chi_{\pi}(h^{-1}) = \begin{cases}
-        \frac{|G|}{|g^G|} &amp; g^G = h^G, \\
+        |G|/|g^G| &amp; g^G = h^G, \\
         0 &amp; \text{sicer.}
     \end{cases}\]</span></p>
 </div>
@@ -3521,7 +3547,8 @@ torej prepoznamo kot restrikcijo dvorazsežne nerazcepne upodobitve grupe
 <span class="math inline">\(S_3\)</span> vzdolž homomorfizma <span
 class="math inline">\(\psi\)</span>.</p>
 </div>
-<h3 id="izotipične-projekcije">Izotipične projekcije</h3>
+<h3 id="projekcije-na-izotipične-komponente">Projekcije na izotipične
+komponente</h3>
 <p>Dekompozicijo regularne upodobitve smo dobili iz matričnih
 koeficientov nerazcepnih upodobitev, torej gre za nekakšno
 <em>notranjo</em> dekompozicijo. Obstaja pa tudi <em>zunanja</em>
@@ -3579,14 +3606,16 @@ class="math inline">\(\pi\)</span>-izotipično komponento. ◻</p>
 </div>
 <div class="zgled">
 <p><strong>Zgled 3.6</strong>. Naj bo <span
-class="math inline">\(\rho_{\hom}\)</span> regularna upodobitev grupe
-<span class="math inline">\(G\)</span>. Vemo že, da za vsako funkcijo
-<span class="math inline">\(f \in \hom(G,F)\)</span> velja <span
-class="math inline">\(\hat{f}(\rho_{\hom}) \cdot 1_1 = f\)</span>. Torej
-je projekcija funkcije <span class="math inline">\(1_1\)</span> na <span
+class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span> regularna
+upodobitev grupe <span class="math inline">\(G\)</span>. Vemo že, da za
+vsako funkcijo <span class="math inline">\(f \in
+\mathop{\mathrm{fun}}(G,F)\)</span> velja <span
+class="math inline">\(\hat{f}(\rho_{\mathop{\mathrm{fun}}}) \cdot 1_1 =
+f\)</span>. Torej je projekcija funkcije <span
+class="math inline">\(1_1\)</span> na <span
 class="math inline">\(\pi\)</span>-izotipično komponento enaka <span
 class="math display">\[\frac{\deg(\pi)}{|G|} \cdot
-\widehat{\chi_{\pi}}(\rho_{\hom}) \cdot 1_1 =
+\widehat{\chi_{\pi}}(\rho_{\mathop{\mathrm{fun}}}) \cdot 1_1 =
     \frac{\deg(\pi)}{|G|} \cdot \chi_{\pi}.\]</span> S tem dobimo razvoj
 <span class="math display">\[1_1 = \frac{1}{|G|} \sum_{\pi \in
 \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1) \cdot \chi_{\pi},\]</span> ki je
@@ -3596,18 +3625,18 @@ class="math inline">\(1_x\)</span> za <span class="math inline">\(x \in
 G\)</span>. Njena projekcija na <span
 class="math inline">\(\pi\)</span>-izotipično komponento je <span
 class="math display">\[\frac{\deg(\pi)}{|G|} \cdot
-\widehat{\chi_{\pi}}(\rho_{\hom}) \cdot 1_x =
+\widehat{\chi_{\pi}}(\rho_{\mathop{\mathrm{fun}}}) \cdot 1_x =
     \frac{\deg(\pi)}{|G|} \cdot \left( g \mapsto \chi_{\pi}(x^{-1}g)
 \right),\]</span> s čimer dobimo razvoj <span
 class="math display">\[1_x(g) = \frac{1}{|G|} \sum_{\pi \in
 \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1) \chi_{\pi}(x^{-1}
 g).\]</span></p>
 </div>
-<p>Vsako funkcijo <span class="math inline">\(f \in \hom(G,F)\)</span>
-lahko razvijemo po karakterističnih funkcijah kot <span
-class="math inline">\(f = \sum_{x \in G} f(x) 1_x\)</span>. Ker že
-poznamo razvoj vsake od karaterističnih funkcij po <span
-class="math inline">\(\pi\)</span>-izotipičnih komponentah, od tod
+<p>Vsako funkcijo <span class="math inline">\(f \in
+\mathop{\mathrm{fun}}(G,F)\)</span> lahko razvijemo po karakterističnih
+funkcijah kot <span class="math inline">\(f = \sum_{x \in G} f(x)
+1_x\)</span>. Ker že poznamo razvoj vsake od karaterističnih funkcij po
+<span class="math inline">\(\pi\)</span>-izotipičnih komponentah, od tod
 izpeljemo <span class="math display">\[f(g) = \frac{1}{|G|} \sum_{\pi
 \in \mathop{\mathrm{Irr}}(G)} \sum_{x \in G} f(x) \chi_{\pi}(1)
 \mathop{\mathrm{tr}}\left( \pi(x^{-1}) \cdot \pi(g) \right),\]</span>
@@ -3621,67 +3650,58 @@ class="math inline">\(\pi\)</span>-izotipičnih komponentah rečemo
 ekplicitno pove, kako lahko <span class="math inline">\(f\)</span>
 izračunamo iz njenih Fourierovih transformacij v nerazcepnih
 upodobitvah.</p>
-<p>Fourierova inverzija je nekoliko asimetrična. To lahko popravimo
-tako, da jo uteženo povprečimo z neko drugo funkcijo <span
-class="math inline">\(h \in \hom(G,F)\)</span>. Dobimo <span
-class="math display">\[\sum_{g \in G} f(g) h(g^{-1}) = \frac{1}{|G|}
-\sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \sum_{g \in G} h(g^{-1})
-\chi_{\pi}(1) \mathop{\mathrm{tr}}\left( \hat{f}(\pi) \cdot \pi(g)
-\right),\]</span> kar lahko z enakim argumentom kot prej zapišemo kot
-<span class="math display">\[[ f, h ] = \frac{1}{|G|^2} \sum_{\pi \in
-\mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1)
-\mathop{\mathrm{tr}}(\hat{f}(\pi) \cdot \hat{h}(\pi)).\]</span> Tej
-enakosti rečemo <span><strong><em>Parsevalova
-formula</em></strong></span>.</p>
 <div class="zgled">
 <p><strong>Zgled 3.7</strong>. Naj bo <span
 class="math inline">\(A\)</span> končna abelova grupa. Vemo že, da so
 vse njene kompleksne upodobitve enorazsežne. V tem primeru so upodobitve
 kar enake svojim karakterjem. Za dano funkcijo <span
-class="math inline">\(f \in \hom(A,\mathbf{C})\)</span> lahko Fourierovo
-inverzijo zapišemo kot <span class="math display">\[f = \frac{1}{|A|}
-\sum_{\chi \in \mathop{\mathrm{Irr}}(A)} \hat{f}(\chi) \cdot
-\chi,\]</span> kar je le posledica dejstva <span
+class="math inline">\(f \in \mathop{\mathrm{fun}}(A,\mathbf{C})\)</span>
+lahko Fourierovo inverzijo zapišemo kot <span class="math display">\[f =
+\frac{1}{|A|} \sum_{\chi \in \mathop{\mathrm{Irr}}(A)} \hat{f}(\chi)
+\cdot \chi,\]</span> kar je le posledica dejstva <span
 class="math inline">\(\hat{f}(\chi) = |A| \cdot [ f, \chi
 ]\)</span>.</p>
 </div>
 <h3 id="kompleksne-upodobitve">Kompleksne upodobitve</h3>
-<p>Omenimo še eno lastnost karakterjev upodobitev naj najugodnejšim
-poljem <span class="math inline">\(\mathbf{C}\)</span>. Njihove
-vrednosti namreč niso čisto poljubna kompleksna števila, temveč so
-algebraična cela števila<a href="#fn41" class="footnote-ref"
-id="fnref41" role="doc-noteref"><sup>41</sup></a> omejene absolutne
-vrednosti.</p>
+<p>Splošno teorijo upodobitev končnih grup zaključimo z upodobitvami nad
+najugodnejšim poljem <span class="math inline">\(\mathbf{C}\)</span>. To
+polje je daleč od abstraktnega in je opremljeno z mnogo dodatne
+strukture, ki jo lahko pri upodobitvah izkoristimo.</p>
+<h4 id="vrednosti-karakterjev">Vrednosti karakterjev</h4>
+<p>Najprej si oglejmo nekaj dodatnih lastnosti, ki jih imajo karakterji
+kompleksnih upodobitev. Njihove vrednosti namreč niso čisto poljubna
+kompleksna števila, temveč so algebraična cela števila<a href="#fn41"
+class="footnote-ref" id="fnref41" role="doc-noteref"><sup>41</sup></a>
+omejene absolutne vrednosti.</p>
 <div class="trditev">
 <p><strong>Trditev 3.5</strong>. Naj bo <span
-class="math inline">\(G\)</span> končna grupa. Za vsako nerazcepno
-kompleksno upodobitev <span class="math inline">\(\pi\)</span> in vsak
+class="math inline">\(G\)</span> končna grupa. Za vsako končnorazsežno
+kompleksno upodobitev <span class="math inline">\(\rho\)</span> in vsak
 <span class="math inline">\(g \in G\)</span> je <span
-class="math display">\[|\chi_{\pi}(g)| \leq \deg(\pi), \quad
-    \chi_{\pi}(g) \in \bar{\mathbf{Z}}, \quad
-    \chi_{\pi}(g^{-1}) = \overline{\chi_{\pi}(g)}.\]</span></p>
+class="math display">\[|\chi_{\rho}(g)| \leq \deg(\rho), \quad
+    \chi_{\rho}(g) \in \bar{\mathbf{Z}}, \quad
+    \chi_{\rho}(g^{-1}) = \overline{\chi_{\rho}(g)}.\]</span></p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Če je <span class="math inline">\(g \in G\)</span> in
-<span class="math inline">\(\pi \in \mathop{\mathrm{Irr}}(G)\)</span>,
-potem je <span class="math inline">\(\pi(g^{|G|}) = \pi(1) =
-\mathop{\mathrm{id}}\)</span>, zato je <span
-class="math inline">\(\pi(g)\)</span> linearna preslikava končnega reda.
-Take preslikave so diagonalizabilne.<a href="#fn42" class="footnote-ref"
-id="fnref42" role="doc-noteref"><sup>42</sup></a> V posebnem je zato
-vsaka lastna vrednost <span class="math inline">\(\lambda \in
-\mathop{\mathrm{Eig}}(\pi(g))\)</span> končnega reda v <span
+<p><em>Proof.</em> Velja <span class="math inline">\(\rho(g^{|G|}) =
+\rho(1) = \mathop{\mathrm{id}}\)</span>, zato je <span
+class="math inline">\(\rho(g)\)</span> linearna preslikava končnega
+reda. Take preslikave so diagonalizabilne.<a href="#fn42"
+class="footnote-ref" id="fnref42" role="doc-noteref"><sup>42</sup></a> V
+posebnem je zato vsaka lastna vrednost <span
+class="math inline">\(\lambda \in
+\mathop{\mathrm{Eig}}(\rho(g))\)</span> končnega reda v <span
 class="math inline">\(\mathbf{C}^*\)</span>. S tem je seveda <span
-class="math display">\[\chi_{\pi}(g) = \sum_{\lambda \in
-\mathop{\mathrm{Eig}}(\pi(g))} \lambda \in \bar{\mathbf{Z}},
+class="math display">\[\chi_{\rho}(g) = \sum_{\lambda \in
+\mathop{\mathrm{Eig}}(\rho(g))} \lambda \in \bar{\mathbf{Z}},
     \quad
-    |\chi_{\pi}(g)| \leq \sum_{\lambda \in
-\mathop{\mathrm{Eig}}(\pi(g))} |\lambda| = \deg(\pi)\]</span> in hkrati
-<span class="math display">\[\chi_{\pi}(g^{-1}) = \sum_{\lambda \in
-\mathop{\mathrm{Eig}}(\pi(g))} \lambda^{-1}
-    = \sum_{\lambda \in \mathop{\mathrm{Eig}}(\pi(g))}
+    |\chi_{\rho}(g)| \leq \sum_{\lambda \in
+\mathop{\mathrm{Eig}}(\rho(g))} |\lambda| = \deg(\rho)\]</span> in
+hkrati <span class="math display">\[\chi_{\rho}(g^{-1}) = \sum_{\lambda
+\in \mathop{\mathrm{Eig}}(\rho(g))} \lambda^{-1}
+    = \sum_{\lambda \in \mathop{\mathrm{Eig}}(\rho(g))}
 \overline{\lambda}
-    = \overline{\chi_{\pi}(g)}.\]</span> ◻</p>
+    = \overline{\chi_{\rho}(g)}.\]</span> ◻</p>
 </div>
 <p>S pomočjo te restriktivne lastnosti vrednosti karakterjev lahko
 izpeljemo pomembno lastnost stopenj nerazcepnih kompleksnih
@@ -3700,9 +3720,8 @@ naslednji način.</p>
 <p><strong>Lema 3.2</strong>. Naj bo <span
 class="math inline">\(G\)</span> končna grupa. Za vsako funkcijo <span
 class="math inline">\(f \in \hom_{\mathop{\mathrm{cl}}}(G,
-\bar{\mathbf{Z}})\)</span> in nerazcepno upodobitev <span
-class="math inline">\(\pi\)</span> nad <span
-class="math inline">\(\mathbf{C}\)</span> in je <span
+\bar{\mathbf{Z}})\)</span> in nerazcepno kompleksno upodobitev <span
+class="math inline">\(\pi\)</span> je <span
 class="math inline">\(\hat{f}(\pi)\)</span> skalarno množenje z
 algebraičnim celim številom.</p>
 </div>
@@ -3721,26 +3740,29 @@ class="math inline">\(C\)</span> v <span
 class="math inline">\(G\)</span>.</p>
 <p>Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer
 tako, da opazujemo regularno upodobitev in s tem linearno preslikavo
-<span class="math inline">\(\widehat{1_{C}}(\rho_{\hom})\)</span>. Na
-vsaki od podupodobitev, ki je izomorfna <span
+<span
+class="math inline">\(\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})\)</span>.
+Na vsaki od podupodobitev, ki je izomorfna <span
 class="math inline">\(\pi\)</span>, ta preslikava deluje kot <span
 class="math inline">\(\widehat{1_{C}}(\pi)\)</span>, torej kot skalarno
 množenje z gornjim številom. To število je zato lastna vrednost
 preslikave <span
-class="math inline">\(\widehat{1_{C}}(\rho_{\hom})\)</span>.</p>
+class="math inline">\(\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})\)</span>.</p>
 <p>Vemo že, da <span
-class="math inline">\(\widehat{1_{C}}(\rho_{\hom})\)</span> deluje na
-naravni bazi iz karakterističnih funkcij <span
+class="math inline">\(\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
+deluje na naravni bazi iz karakterističnih funkcij <span
 class="math inline">\(1_x\)</span> za <span class="math inline">\(x \in
-G\)</span> kot <span class="math display">\[\widehat{1_{C}}(\rho_{\hom})
-\cdot 1_x = \sum_{g \in G} 1_{C}(x^{-1} g) 1_g \in \hom(G, \{ 0, 1
-\}).\]</span> V tej bazi ima torej <span
-class="math inline">\(\widehat{1_{C}}(\rho_{\hom})\)</span> matriko s
-koeficienti v množici <span class="math inline">\(\{ 0, 1 \}\)</span>.
-Karakteristični polinom te matrike ima zato celoštevilske koeficiente,
-torej so lastne vrednosti preslikave <span
-class="math inline">\(\widehat{1_{C}}(\rho_{\hom})\)</span> algebraična
-cela števila. ◻</p>
+G\)</span> kot <span
+class="math display">\[\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})
+\cdot 1_x = \sum_{g \in G} 1_{C}(x^{-1} g) 1_g \in
+\mathop{\mathrm{fun}}(G, \{ 0, 1 \}).\]</span> V tej bazi ima torej
+<span
+class="math inline">\(\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
+matriko s koeficienti v množici <span class="math inline">\(\{ 0, 1
+\}\)</span>. Karakteristični polinom te matrike ima zato celoštevilske
+koeficiente, torej so lastne vrednosti preslikave <span
+class="math inline">\(\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
+algebraična cela števila. ◻</p>
 </div>
 <div class="proof">
 <p><em>Dokaz izreka o stopnjah upodobitev.</em> Naj bo <span
@@ -3751,6 +3773,48 @@ class="math display">\[\frac{|G|}{\deg(\pi)} \cdot [ \chi_{\pi},
 \chi_{\pi} ] = \frac{|G|}{\deg(\pi)} \in \bar{\mathbf{Z}} \cap
 \mathbf{Q}= \mathbf{Z}.\]</span> ◻</p>
 </div>
+<h4 id="skalarni-produkt">Skalarni produkt</h4>
+<p>Polje <span class="math inline">\(\mathbf{C}\)</span> je opremljeno s
+standardnim skalarnim produktom <span class="math inline">\(\langle z, w
+\rangle = z \cdot \overline{w}\)</span>. Ta produkt lahko razširimo na
+vsak končnorazsežen kompleksen vektorski prostor. Obravnavali bomo dve
+taki razširitvi, in sicer na prostor funkcij <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,\mathbf{C})\)</span> ter
+na prostor, na katerem upodabljamo grupo <span
+class="math inline">\(G\)</span>.</p>
+<p>Opazujmo najprej prostor funkcij <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,\mathbf{C})\)</span>. Vemo
+že, da ga lahko opremimo s skalarnim produktom <span
+class="math inline">\([\cdot, \cdot]\)</span>. Ker pa je ta prostor
+kompleksen, lahko nanj vpeljemo še nekoliko drugačen skalarni produkt,
+ki je standarden v kompleksnih prostorih, in sicer <span
+class="math display">\[\langle f, h \rangle = \frac{1}{|G|} \sum_{g \in
+G} f(g) \overline{h(g)}\]</span> za <span class="math inline">\(f,h \in
+\mathop{\mathrm{fun}}(G,\mathbf{C})\)</span>. Za vsako končnorazsežno
+kompleksno upodobitev <span class="math inline">\(\rho\)</span> po
+zadnji trditvi velja <span class="math display">\[[f, \chi_{\rho}] =
+\langle f, \chi_{\rho} \rangle,\]</span> zato se večina rezultatov, ki
+smo jih izpeljali za skalarni produkt <span
+class="math inline">\([\cdot, \cdot]\)</span>, prenese na skalarni
+produkt <span class="math inline">\(\langle \cdot, \cdot
+\rangle\)</span>. V posebnem karakterji še vedno tvorijo ortonormiran
+sistem vektorjev v <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,\mathbf{C})\)</span> in
+koeficienti razvoja razrednih funkcij po karakterjih se ne
+spremenijo.</p>
+<h4 id="parsevalov-izrek">Parsevalov izrek</h4>
+<p>Fourierova inverzija je nekoliko asimetrična. To lahko popravimo
+tako, da jo uteženo povprečimo z neko drugo funkcijo <span
+class="math inline">\(h \in \mathop{\mathrm{fun}}(G,F)\)</span>. Dobimo
+<span class="math display">\[\sum_{g \in G} f(g) h(g^{-1}) =
+\frac{1}{|G|} \sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \sum_{g \in G}
+h(g^{-1}) \chi_{\pi}(1) \mathop{\mathrm{tr}}\left( \hat{f}(\pi) \cdot
+\pi(g) \right),\]</span> kar lahko z enakim argumentom kot prej zapišemo
+kot <span class="math display">\[[ f, h ] = \frac{1}{|G|^2} \sum_{\pi
+\in \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1)
+\mathop{\mathrm{tr}}(\hat{f}(\pi) \cdot \hat{h}(\pi)).\]</span> Tej
+enakosti rečemo <span><strong><em>Parsevalov
+izrek</em></strong></span>.</p>
 <h2 id="razširjeni-zgledi">Razširjeni zgledi</h2>
 <h3 id="gap"><strong><span>GAP</span></strong></h3>
 <h3 id="mathopmathrmgl_2mathbff_p"><span
@@ -3769,10 +3833,11 @@ izrazimo in tudi razrešimo s pomočjo karakterjev. Ne bomo zamudili
 priložnosti, da vzporedno razvijemo še nekaj dodatnih lastnosti
 Fourierove transformacije.</p>
 <h3 id="aritmetična-zaporedja">Aritmetična zaporedja</h3>
-<p>Naj bosta <span class="math inline">\(f_1, f_2 \in \hom(G,F)\)</span>
-funkciji in <span class="math inline">\(\rho\)</span> upodobitev grupe
-<span class="math inline">\(G\)</span>. Kompozicija Fourierovih
-transformacij <span class="math inline">\(\widehat{f_1}(\rho) \cdot
+<p>Naj bosta <span class="math inline">\(f_1, f_2 \in
+\mathop{\mathrm{fun}}(G,F)\)</span> funkciji in <span
+class="math inline">\(\rho\)</span> upodobitev grupe <span
+class="math inline">\(G\)</span>. Kompozicija Fourierovih transformacij
+<span class="math inline">\(\widehat{f_1}(\rho) \cdot
 \widehat{f_2}(\rho)\)</span> je enaka <span
 class="math display">\[\sum_{g_1, g_2 \in G} f_1(g_1) f_2(g_2)
 \rho(g_1^{-1} g_2^{-1}) =
@@ -3806,7 +3871,6 @@ kakšno podgrupo, seveda <em>ni</em> brez produktov, zato se morajo take
 množice čim bolj izogniti podgrupam. Osnovno vprašanje v zvezi z
 množicami brez produktov je, kako velike podmnožice brez produktov dana
 grupa vsebuje.</p>
-<h3 id="slučajni-sprehodi">Slučajni sprehodi</h3>
 <h3 id="komutatorji">Komutatorji</h3>
 <p>Naj bo <span class="math inline">\(G\)</span> končna grupa in <span
 class="math inline">\(K(G)\)</span> njena podmnožica, ki sestoji iz
@@ -3823,7 +3887,8 @@ zapišemo kot komutator. V ta namen predpišimo funkcijo <span
 class="math display">\[N \colon G \to \mathbf{N}_0, \quad
     g \mapsto |\{ (x,y) \in G \times G \mid g = [x,y] \}|.\]</span>
 Funkcijo <span class="math inline">\(N\)</span> obravnavajmo kot element
-prostora <span class="math inline">\(\hom(G,\mathbf{C})\)</span>.</p>
+prostora <span
+class="math inline">\(\mathop{\mathrm{fun}}(G,\mathbf{C})\)</span>.</p>
 <p>Prvi princip harmonične analize je, da lahko vsako <em>razredno</em>
 funkcijo razumemo s pomočjo močnih orodij teorije upodobitev. Da to drži
 v konkretnem primeru funkcije <span class="math inline">\(N\)</span>, se
@@ -3859,6 +3924,7 @@ g\)</span>. S tem smo opisali prirejanje <span class="math display">\[\{
 Fourierovo transformacijo, ki jo karseda dokončno izračunamo.</p>
 <p>Četrti princip harmonične analize je, da iz Fourierove transformacije
 izvlečemo podatke o začetni funkciji.</p>
+<h3 id="slučajni-sprehodi">Slučajni sprehodi</h3>
 <h1 id="upodobitve-linearnih-grup">Upodobitve linearnih grup</h1>
 <h2 id="ozaljšane-upodobitve">Ozaljšane upodobitve</h2>
 <h3 id="zvezne-upodobitve">Zvezne upodobitve</h3>
@@ -3928,8 +3994,9 @@ class="math inline">\(G\)</span>.<a href="#fnref10"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn11" role="doc-endnote"><p>To sledi na primer iz dejstva, da
 prostora <span class="math inline">\(F[G]^G\)</span> in <span
-class="math inline">\(\hom(G,F)^G\)</span> nista izomorfna.<a
-href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+class="math inline">\(\mathop{\mathrm{fun}}(G,F)^G\)</span> nista
+izomorfna.<a href="#fnref11" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
 <li id="fn12" role="doc-endnote"><p>Prehodna matrika iz baze <span
 class="math inline">\(e_i\)</span> v bazo <span
 class="math inline">\(f_j\)</span> je ravno Vandermondova matrika.<a
@@ -3949,32 +4016,32 @@ class="math inline">\(F = \mathbf{Q}\)</span>.<a href="#fnref15"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn16" role="doc-endnote"><p>Delovanje <span
 class="math inline">\(H\)</span> na <span
-class="math inline">\(\hom(G,V)\)</span> je konstruirano analogno
-delovanju grupe na prostoru linearnih preslikav.<a href="#fnref16"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+class="math inline">\(\mathop{\mathrm{fun}}(G,V)\)</span> je
+konstruirano analogno delovanju grupe na prostoru linearnih preslikav.<a
+href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn17" role="doc-endnote"><p>Če je <span
 class="math inline">\(R\)</span> množica predstavnikov desnih odsekov
 <span class="math inline">\(\mathop{\mathrm{im}}\phi\)</span> v <span
 class="math inline">\(G\)</span> in če že poznamo vrednosti <span
-class="math inline">\(f \in \hom(G,V)\)</span> na množici <span
-class="math inline">\(R\)</span>, potem lahko vsako drugo vrednost <span
-class="math inline">\(f\)</span> izračunamo kot <span
+class="math inline">\(f \in \mathop{\mathrm{fun}}(G,V)\)</span> na
+množici <span class="math inline">\(R\)</span>, potem lahko vsako drugo
+vrednost <span class="math inline">\(f\)</span> izračunamo kot <span
 class="math inline">\(f(x \cdot r) = \rho(y) \cdot f(r)\)</span> za
 <span class="math inline">\(x = \phi(y) \in
 \mathop{\mathrm{im}}\phi\)</span>.<a href="#fnref17"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn18" role="doc-endnote"><p>Če je <span class="math inline">\(f
-\in \hom(G,V)^H\)</span>, potem pogoj <span
+\in \mathop{\mathrm{fun}}(G,V)^H\)</span>, potem pogoj <span
 class="math inline">\(H\)</span>-invariantnosti uporabimo z elementi
 <span class="math inline">\(h \in \ker \phi\)</span> in dobimo <span
 class="math inline">\(\rho(h) \cdot f(x) = f(x)\)</span>, torej je <span
 class="math inline">\(f \in V^h\)</span>.<a href="#fnref18"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn19" role="doc-endnote"><p>Množico funkcij <span
-class="math inline">\(\hom(R,V)\)</span> lahko vidimo kot direktno vsoto
-prostorov <span class="math inline">\(V\)</span>, indeksirano z množico
-<span class="math inline">\(R\)</span>.<a href="#fnref19"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+class="math inline">\(\mathop{\mathrm{fun}}(R,V)\)</span> lahko vidimo
+kot direktno vsoto prostorov <span class="math inline">\(V\)</span>,
+indeksirano z množico <span class="math inline">\(R\)</span>.<a
+href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn20" role="doc-endnote"><p>V nadaljevanju bomo spoznali
 presenetljivo uporabnost tega navidez naključnega dejstva.<a
 href="#fnref20" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -4026,8 +4093,9 @@ prostoru, ki ga razpenjajo posplošeni matrični koeficienti upodobitve
 baze.<a href="#fnref29" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn30" role="doc-endnote"><p>Preslikava <span
-class="math inline">\(\Sigma_{\pi, \rho_{\hom}}\)</span> je injektivna,
-ker je <span class="math inline">\(\dim \hom_G(\pi, \rho_{\hom}) =
+class="math inline">\(\Sigma_{\pi,
+\rho_{\mathop{\mathrm{fun}}}}\)</span> je injektivna, ker je <span
+class="math inline">\(\dim \hom_G(\pi, \rho_{\mathop{\mathrm{fun}}}) =
 \deg(\pi) &lt; \infty\)</span>.<a href="#fnref30" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn31" role="doc-endnote"><p>Temu dejstvu včasih pravimo
@@ -4089,7 +4157,7 @@ in da velja <span class="math inline">\(\mathbf{Q}\cap \bar{\mathbf{Z}}
 role="doc-backlink">↩︎</a></p></li>
 <li id="fn42" role="doc-endnote"><p>Diagonalizabilnost sledi iz
 obravnave Jordanove normalne forme preslikave <span
-class="math inline">\(\pi(g)\)</span>.<a href="#fnref42"
+class="math inline">\(\rho(g)\)</span>.<a href="#fnref42"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn43"
 role="doc-endnote"><p><span><strong><em>Komutator</em></strong></span>
