@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
+<html$if(lang)$ lang="$lang$" $endif$$if(dir)$ dir="$dir$" $endif$>
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="generator" content="pandoc">
     <meta name="description" content="">
-$for(author-meta)$
+    $for(author-meta)$
     <meta name="author" content="$author-meta$">
-$endfor$
-$if(date-meta)$
+    $endfor$
+    $if(date-meta)$
     <meta name="dcterms.date" content="$date-meta$">
-$endif$
-$if(keywords)$
+    $endif$
+    $if(keywords)$
     <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$">
-$endif$
+    $endif$
 
     <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 
@@ -34,83 +35,109 @@ $endif$
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- <style type="text/css">code{white-space: pre;}</style> -->
-<!-- $if(toc)$
+    <!-- $if(toc)$
     <style type="text/css">.sidebar ul{padding-left: 10px;}</style>
 $endif$
  -->
- $if(quotes)$
-    <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
-$endif$
-$if(highlighting-css)$
+    $if(quotes)$
     <style type="text/css">
-$highlighting-css$
+      q {
+        quotes: "“""”""‘""’";
+      }
     </style>
-$endif$
-$for(css)$
-    <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
-$endfor$
-$if(math)$
-  $math$
-$endif$
-$for(header-includes)$
-  $header-includes$
-$endfor$
+    $endif$
+    $if(highlighting-css)$
+    <style type="text/css">
+      $highlighting-css$
+    </style>
+    $endif$
+    $for(css)$
+    <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$ />
+    $endfor$
+    $if(math)$
+    <script>
+      window.MathJax = {
+      startup: {
+        ready: () => {
+          MathJax.startup.defaultReady();
+          MathJax.startup.promise.then(() => {
+            document.getElementById("spinner").style.display = "none";
+            document.getElementById("hidden_contents").style.display = "";
+          });
+        }
+      }
+    };
+    </script>
+    $math$
+    $endif$
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
   </head>
 
   <body>
-$for(include-before)$
+    $for(include-before)$
     $include-before$
-$endfor$
-    
+    $endfor$
+
     <div class="container-fluid">
       <div class="row flex-nowrap">
         <div class="col-lg-7 mx-auto p-4">
 
-<div class="naslov">
-<h1>$pagetitle$</h1>
+          <div class="naslov">
+            <h1>$pagetitle$</h1>
 
-<strong> Urban Jezernik <br>
-Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
+            <strong> Urban Jezernik <br>
+              Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-Zadnja posodobitev: $date$
-</div>
+            Zadnja posodobitev: $date$
+          </div>
 
-<div class="kazalo">
-  <h3>Kazalo</h3>
-$toc$
-</div>
+          <div id="spinner" class="text-center">
+            <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status"></div>
+          </div>
 
-$body$
+          <div id="hidden_contents" style="display:none">
+
+            <div class="kazalo">
+              <h3>Kazalo</h3>
+              $toc$
+            </div>
+
+            $body$
+
+          </div>
         </div>
       </div>
     </div>
-    
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        var tables = document.getElementsByTagName("table");
-        for(var i = 0; i < tables.length; ++i){
-            tables[i].className += "table table-striped";
-            old_html = tables[i].outerHTML;
-            new_html = "<div class='table-responsive'>" + old_html + "</div>";
-            tables[i].outerHTML = new_html;
-        }
+      var tables = document.getElementsByTagName("table");
+      for (var i = 0; i < tables.length; ++i) {
+        tables[i].className += "table table-striped";
+        old_html = tables[i].outerHTML;
+        new_html = "<div class='table-responsive'>" + old_html + "</div>";
+        tables[i].outerHTML = new_html;
+      }
     </script>
     <script>
       var proofClasses = document.getElementsByClassName("proof");
 
       for (var i = 0; i < proofClasses.length; i++) {
         var html = proofClasses[i].innerHTML;
-        html = html.replace(/Proof./g,"Dokaz.");        
+        html = html.replace(/Proof./g, "Dokaz.");
         proofClasses[i].innerHTML = html;
-        }
+      }
     </script>
 
-$for(include-after)$
-  $include-after$
-$endfor$
+    $for(include-after)$
+    $include-after$
+    $endfor$
   </body>
-</html>
+
+  </html>
