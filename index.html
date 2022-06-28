@@ -3147,7 +3147,7 @@ class="math inline">\(G\)</span> in <span
 class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span> regularna
 upodobitev grupe <span class="math inline">\(G\)</span>. Vrednost <span
 class="math inline">\(\hat{f}(\rho_{\mathop{\mathrm{fun}}})\)</span> je
-linearni endomorfizem prostora <span
+linearni endomorfizem prostora funkcij <span
 class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>. Pri tem se
 karakteristična funkcija <span class="math inline">\(1_x\)</span> za
 <span class="math inline">\(x \in G\)</span> preslika v <span
@@ -3872,18 +3872,44 @@ class="math display">\[\left\langle
     = \langle f, h \rangle.\]</span></p>
 </div>
 <h4 id="parsevalov-izrek">Parsevalov izrek</h4>
-<p>Fourierova inverzija je nekoliko asimetrična. To lahko popravimo
-tako, da jo uteženo povprečimo z neko drugo funkcijo <span
-class="math inline">\(h \in \mathop{\mathrm{fun}}(G,F)\)</span>. Dobimo
-<span class="math display">\[\sum_{g \in G} f(g) h(g^{-1}) =
+<p>Unitarnost upodobitev končne grupe <span
+class="math inline">\(G\)</span> lahko izkoristimo pri Fourierovi
+transformaciji. Za unitarno upodobitev <span
+class="math inline">\(\rho\)</span> je namreč <span
+class="math inline">\(\rho(g^{-1}) = \rho(g)^*\)</span> za vsak <span
+class="math inline">\(g \in G\)</span> in s tem <span
+class="math display">\[\hat{f}(\rho) = \sum_{g \in G} f(g)
+\rho(g)^*.\]</span> Opremljeni s tem komentarjem se obrnimo k Fourierovi
+inverziji. Formula za razvoj funkcije <span class="math inline">\(f \in
+\mathop{\mathrm{fun}}(G,\mathbf{C})\)</span> po <span
+class="math inline">\(\pi\)</span>-izotipičnih komponentah je nekoliko
+asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko
+drugo funkcijo <span class="math inline">\(h \in
+\mathop{\mathrm{fun}}(G,\mathbf{C})\)</span>. Dobimo <span
+class="math display">\[\sum_{g \in G} f(g) \overline{h(g)} =
 \frac{1}{|G|} \sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \sum_{g \in G}
-h(g^{-1}) \chi_{\pi}(1) \mathop{\mathrm{tr}}\left( \hat{f}(\pi) \cdot
-\pi(g) \right),\]</span> kar lahko z enakim argumentom kot prej zapišemo
-kot <span class="math display">\[[ f, h ] = \frac{1}{|G|^2} \sum_{\pi
+\overline{h(g)} \chi_{\pi}(1) \mathop{\mathrm{tr}}\left( \hat{f}(\pi)
+\cdot \pi(g) \right),\]</span> kar lahko po upoštevanju linearnosti
+sledi in gornjega komentarja glede unitarnosti upodobitve <span
+class="math inline">\(\pi\)</span> zapišemo kot <span
+class="math display">\[\langle f, h \rangle = \frac{1}{|G|^2} \sum_{\pi
 \in \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1)
-\mathop{\mathrm{tr}}(\hat{f}(\pi) \cdot \hat{h}(\pi)).\]</span> Tej
-enakosti rečemo <span><strong><em>Parsevalov
-izrek</em></strong></span>.</p>
+\mathop{\mathrm{tr}}(\hat{f}(\pi) \cdot \hat{h}(\pi)^*).\]</span> Tej
+enakosti rečemo <span><strong><em>Parsevalov izrek</em></strong></span>.
+Nekoliko pregledneje ga lahko zapišemo z uporabo še enega skalarnega
+produkta, tokrat na prostoru endomorfizmov danega vektorskega prostora
+<span class="math inline">\(V\)</span>. Za linearni preslikavi <span
+class="math inline">\(A,B \in \hom(V,V)\)</span> definiramo <span
+class="math display">\[\langle A, B \rangle_{\mathop{\mathrm{HS}}} =
+\mathop{\mathrm{tr}}(A \cdot B^*),\]</span> to je
+<span><strong><em>Hilbert-Schmidtov skalarni
+produkt</em></strong></span>. Parsevalov izrek nam torej povezuje
+standarden kompleksni skalarni produkt funkcij s Hilbert-Schmidtovim
+skalarnim produktom Fourierovih transformacij v nerazcepnih upodobitvah,
+<span class="math display">\[\langle f, h \rangle = \frac{1}{|G|^2}
+\sum_{\pi \in \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1) \left\langle
+\hat{f}(\pi), \hat{h}(\pi)
+\right\rangle_{\mathop{\mathrm{HS}}}.\]</span></p>
 <h2 id="razširjeni-zgledi">Razširjeni zgledi</h2>
 <h3 id="gap"><strong><span>GAP</span></strong></h3>
 <h3 id="mathopmathrmgl_2mathbff_p"><span

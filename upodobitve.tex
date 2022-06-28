@@ -76,6 +76,7 @@
 \DeclareMathOperator\inv{inv}
 \DeclareMathOperator\Eig{Eig}
 \DeclareMathOperator\fun{fun}
+\DeclareMathOperator\HS{HS}
 
 
 \DeclareMathOperator\Aut{Aut}
@@ -1596,7 +1597,7 @@ Fourierova transformacija funkciji $f$ torej priredi njeno uteženo povprečje p
     \]
     Vektorju števil $(f(1), f(2), \dots, f(n)) \in \CC^n$ na ta način priredimo vektor števil $(\hat{f}(\chi_1), \hat{f}(\chi_2), \dots, \hat{f}(\chi_n)) \in \CC^n$. To prirejanje je v numerični matematiki znano pod imenom {\definicija diskretna Fourierova transformacija} in je fundamentalno v digitalnem procesiranju signalov.
 
-    \item Naj bo $f \in \fun(G,F)$ funkcija na $G$ in $\rho_{\fun}$ regularna upodobitev grupe $G$. Vrednost $\hat{f}(\rho_{\fun})$ je linearni endomorfizem prostora $\fun(G,F)$. Pri tem se karakteristična funkcija $1_x$ za $x \in G$ preslika v
+    \item Naj bo $f \in \fun(G,F)$ funkcija na $G$ in $\rho_{\fun}$ regularna upodobitev grupe $G$. Vrednost $\hat{f}(\rho_{\fun})$ je linearni endomorfizem prostora funkcij $\fun(G,F)$. Pri tem se karakteristična funkcija $1_x$ za $x \in G$ preslika v
 \[
     \hat{f}(\rho_{\fun}) \cdot 1_x 
     = \sum_{g \in G} f(g) \rho_{\fun}(g^{-1}) \cdot 1_x
@@ -1936,19 +1937,26 @@ Končna grupa deluje z regularno upodobitvijo $\rho_{\fun}$ na prostoru funkcij 
 
 \subsubsection{Parsevalov izrek}
 
-Fourierova inverzija je nekoliko asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko drugo funkcijo $h \in \fun(G,F)$. Dobimo
+Unitarnost upodobitev končne grupe $G$ lahko izkoristimo pri Fourierovi transformaciji. Za unitarno upodobitev $\rho$ je namreč $\rho(g^{-1}) = \rho(g)^*$ za vsak $g \in G$ in s tem
 \[
-    \sum_{g \in G} f(g) h(g^{-1}) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{g \in G} h(g^{-1}) \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right),
+    \hat{f}(\rho) = \sum_{g \in G} f(g) \rho(g)^*.
 \]
-kar lahko z enakim argumentom kot prej zapišemo kot
+Opremljeni s tem komentarjem se obrnimo k Fourierovi inverziji. Formula za razvoj funkcije $f \in \fun(G,\CC)$ po $\pi$-izotipičnih komponentah je nekoliko asimetrična. To lahko popravimo tako, da jo uteženo povprečimo z neko drugo funkcijo $h \in \fun(G,\CC)$. Dobimo
 \[
-    [ f, h ] = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr(\hat{f}(\pi) \cdot \hat{h}(\pi)).
+    \sum_{g \in G} f(g) \overline{h(g)} = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{g \in G} \overline{h(g)} \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right),
 \]
-Tej enakosti rečemo {\definicija Parsevalov izrek}.
-
-    \todo{Kompleksna števila imajo konjugiranje, tudi prostore nad $\CC$ opremimo s skalarnim produktom, ki je wlog $G$-invarianten po povprečenju.}
-
-\todo{En drug, standarden Skalarni produkt, unitarizabilnost, omeni Maschkeja nad $\CC$, o HS normi pri Plancherelovi formuli.}
+kar lahko po upoštevanju linearnosti sledi in gornjega komentarja glede unitarnosti upodobitve $\pi$ zapišemo kot
+\[
+    \langle f, h \rangle = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr(\hat{f}(\pi) \cdot \hat{h}(\pi)^*).
+\]
+Tej enakosti rečemo {\definicija Parsevalov izrek}. Nekoliko pregledneje ga lahko zapišemo z uporabo še enega skalarnega produkta, tokrat na prostoru endomorfizmov danega vektorskega prostora $V$. Za linearni preslikavi $A,B \in \hom(V,V)$ definiramo
+\[
+    \langle A, B \rangle_{\HS} = \tr(A \cdot B^*),
+\]
+to je {\definicija Hilbert-Schmidtov skalarni produkt}. Parsevalov izrek nam torej povezuje standarden kompleksni skalarni produkt funkcij s Hilbert-Schmidtovim skalarnim produktom Fourierovih transformacij v nerazcepnih upodobitvah,
+\[
+    \langle f, h \rangle = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \left\langle \hat{f}(\pi), \hat{h}(\pi) \right\rangle_{\HS}.
+\]
 
 \section{Razširjeni zgledi}
 
