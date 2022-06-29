@@ -1289,6 +1289,7 @@ Karakter je neodvisen od izbire baze, zato za vsaka $x, g \in G$ velja $\chi_{\r
 \[
     \hom_{\cl}(G,F) = \{ f \in \fun(G,F) \mid \forall x, g \in G \colon f(x g x^{-1}) = f(g) \}.
 \]
+Za dan konjugiranostni razred $\conclass$ v grupi $G$ bomo pisali $\chi_{\rho}(\conclass)$ za vrednost karakterja v poljubnem predstavniku tega razreda.
 
 \begin{zgled}
 Opazujmo grupo $S_3$ nad poljem $\CC$. Poznamo že vse tri njene končnorazsežne nerazcepne upodobitve. Določimo karakterje teh nerazcepnih upodobitev. Karakterji enorazsežnih upodobitev so kot funkcije kar enaki upodobitvam. Za karakter $\chi_{\rho}$ velja
@@ -2007,9 +2008,35 @@ Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je p
 
 \todo{Dodaj zgled iz Eberhard (one-sided mixing) o množici brez produktov v $S_n$.}
 
+\begin{lema}
+Naj bo $G$ končna grupa in $\conclass_1$, $\conclass_2$ konjugiranostna razreda v $G$. Za vsako nerazcepno kompleksno upodobitev $\pi$ na prostoru $V$ velja
+\[
+    \widehat{1_{\conclass_1} * 1_{\conclass_2}}(\pi) =
+    |\conclass_1| \cdot |\conclass_2| \cdot \frac{\overline{\chi_{\pi}(\conclass_1)} \cdot \overline{\chi_{\pi}(\conclass_2)}}{\chi_{\pi}(1)^2} \cdot {\textstyle \id_V}.
+\]
+\end{lema}
+\begin{dokaz}
+Fourierova transformacija konvolucije je produkt Fourierovih transformacij, ki jih za dani karakteristični funkciji ni težko izračunati po lemi o Fourierovi transformaciji razredne funkcije.
+\end{dokaz}
+
+\begin{trditev}
+Naj bo $G$ končna grupa in $\conclass_1$, $\conclass_2$ konjugiranostna razreda v $G$. Velja
+\[
+    1_{\conclass_1} * 1_{\conclass_2} = \frac{|\conclass_1| \cdot |\conclass_2|}{|G|} \sum_{\pi \in \Irr(G)} \frac{\overline{\chi_{\pi}(\conclass_1)} \cdot \overline{\chi_{\pi}(\conclass_2)}}{\chi_{\pi}(1)} \chi_{\pi}.
+\]
+\end{trditev}
+\begin{dokaz}
+Uporabimo Fourierovo inverzijo za funkcijo $1_{\conclass_1} * 1_{\conclass_2}$. Za vsak $g \in G$ dobimo
+\[
+    \left( 1_{\conclass_1} * 1_{\conclass_2} \right) (g) 
+    = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr \left( \widehat{1_{\conclass_1} * 1_{\conclass_2}}(\pi) \cdot \pi(g) \right).
+\]
+Trditev zdaj sledi iz zadnje leme.
+\end{dokaz}
+
 \subsection{Komutatorji}
 
-\todo[inline]{??? čisto nekomutativen problem: ga izpeljemo spet iz konvolucije identifikatorjev konjugiranostnih razredov, komutatorji; Frobeniusova formula, omeni LOST Ore domneva}
+Oglejmo si še en čisto nekomutativen problem, ki na prvi pogled nima veliko skupnega s teorijo upodobitev, nazadnje pa se izkaže, da ga lahko popolnoma razrešimo, če le poznamo tabelo karakterjev grupe. Izpeljava bo sledila Fourierovi inverziji konvolucij iz zadnjega razdelka.
 
 Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, ki so komutatorji\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$.} v $G$, se pravi
 \[
@@ -2022,18 +2049,44 @@ Ta množica v splošnem \emph{ni} podgrupa, zato je teoriji grup vsekakor v inte
 \]
 Funkcijo $N$ obravnavajmo kot element prostora $\fun(G,\CC)$. 
 
-Prvi princip harmonične analize je, da lahko vsako \emph{razredno} funkcijo razumemo s pomočjo močnih orodij teorije upodobitev. Da to drži v konkretnem primeru funkcije $N$, se ni težko prepričati. Za vsak $z \in G$ namreč velja $[z x z^{-1}, z y z^{-1}] = z [x,y] z^{-1}$, torej vsak par $(x,y)$ z lastnostjo $[x,y] = g$ porodi par $(z x z^{-1}, z y z^{-1})$ z lastnostjo $[z x z^{-1}, z y z^{-1}] = z g z^{-1}$. S tem je $N(g) = N(z g z^{-1})$.
+Vsako \emph{razredno} funkcijo razumemo s pomočjo močnih orodij teorije upodobitev. Ni se težko prepričati, da je $N$ razredna funkcija. Za vsak $z \in G$ namreč velja $[z x z^{-1}, z y z^{-1}] = z [x,y] z^{-1}$, torej vsak par $(x,y)$ z lastnostjo $[x,y] = g$ porodi par $(z x z^{-1}, z y z^{-1})$ z lastnostjo $[z x z^{-1}, z y z^{-1}] = z g z^{-1}$. S tem je $N(g) = N(z g z^{-1})$.
 
-Drugi princip harmonične analize je, da dano razredno funkcijo zapišemo karseda neodvisno od predstavnikov konjugiranostnih razredov. Našo funkcijo $N$ bomo zato prepisali v malo bolj nenavadno obliko, ki pa nam bo dobro služila v nadaljevanju. Recimo, da za elementa $x,y \in G$ velja $[x,y] = g$. To enakost interpretiramo kot $x^{-1} \cdot y^{-1} x y = g$, torej je $g$ zapisan kot produkt elementa $x^{-1}$ in elementa, ki je konjugiran $x$. Vsakemu takemu paru $(x,y)$ lahko zato priredimo konjugiranostni razred $\conclass = x^G$ in elementa $a = x^{-1} \in \conclass^{-1}$ ter $b = y^{-1} x y \in \conclass$, za katera velja $a \cdot b = g$. S tem smo opisali prirejanje
+Funkcijo $N$ bomo prepisali v malo bolj nenavadno obliko, ki pa nam bo dobro služila v nadaljevanju. Recimo, da za elementa $x,y \in G$ velja $[x,y] = g$. To enakost interpretiramo kot $x^{-1} \cdot y^{-1} x y = g$, torej je $g$ zapisan kot produkt elementa $x^{-1}$ in elementa, ki je konjugiran $x$. Vsakemu takemu paru $(x,y)$ lahko zato priredimo konjugiranostni razred $\conclass = x^G$ in elementa $a = x^{-1} \in \conclass^{-1}$ ter $b = y^{-1} x y \in \conclass$, za katera velja $a \cdot b = g$. S tem smo opisali prirejanje
 \[
-    \{ (x,y) \in G \times G \mid g = [x,y] \} \to 
+    \psi \colon \{ (x,y) \in G \times G \mid g = [x,y] \} \to 
     \{ (\conclass, a, b) \mid \conclass = (a^{-1})^G, \ b \in \conclass,\ a \cdot b = g \}.
 \]
-To prirejanje \emph{ni} injektivno. \todo{}
+To prirejanje \emph{ni} injektivno, saj s trojico $(\conclass,a,b)$ element $y$ ni enolično določen, pač pa le do odseka po centralizatorju $C_G(a^{-1}) = C_G(a)$ natančno.\footnote{Velja namreč zveza $b = y^{-1} a^{1} y$.} Torej je $|\psi^{-1}(\conclass,a,b)| = |C_G(a)| = |G|/|\conclass|$. S tem lahko izrazimo
+\[
+    N(g) = \sum_{\conclass} \frac{|G|}{|\conclass|} \cdot |\{ (a,b) \in G \times G \mid a \in \conclass^{-1}, \ b \in \conclass, \ a \cdot b = g \}|,
+\]
+kjer vsota teče po vseh konjugiranostnih razredih grupe $G$. 
 
-Tretji princip harmonične analize je, da z novim zapisom uporabimo Fourierovo transformacijo, ki jo karseda dokončno izračunamo.
+Dobljeni zapis funkcije $N$ je priročen, ker je izražen le s konjugiranostnimi razredi in je neodvisen od izbire njihovih konkretnih predstavnikov. S tem je amenabilen za gnetenje s Fourierovo transformacijo. Najprej opazimo, da lahko drugi faktor zadnje vsote zapišemo kot
+\[
+    \sum_{a,b \in G, \ a \cdot b = g} 1_{\conclass^{-1}}(a) \cdot 1_{\conclass}(b) = \left( 1_{\conclass^{-1}} * 1_{\conclass} \right) (g).
+\]
+S tem je
+\[
+    N(g) = \sum_{\conclass} \frac{|G|}{|\conclass|} \cdot \left( 1_{\conclass^{-1}} * 1_{\conclass} \right) (g).
+\]
+Konvolucijo lahko po Fourierovi inverziji razvijemo po karakterjih in dobimo
+\[
+    N(g) = \sum_{\conclass} \frac{|G|}{|\conclass|} \cdot \frac{|\conclass|^2}{|G|} \sum_{\pi \in \Irr(G)} \frac{|\chi_{\pi}(\conclass)|^2}{\chi_{\pi}(1)} \chi_{\pi}(g)
+    = \sum_{\pi \in \Irr(G)} \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)} \sum_{\conclass} |\conclass| \cdot |\chi_{\pi}(\conclass)|^2.
+\]
+Zadnja vsota je ravno enaka $|G| \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle = |G|$, zato nazadnje sklenemo
+\[
+    N(g) = |G| \cdot \sum_{\pi \in \Irr(G)} \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)}.
+\]
+Dobljen izraz za število načinov, na katere lahko $g$ zapišemo kot komutator v $G$, se imenuje {\definicija Frobeniusova formula}. V posebnem iz nje sklepamo, da za element $g \in G$ velja
+\[
+    g \in K(G) \quad \Longleftrightarrow \quad \sum_{\pi \in \Irr(G)} \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)} \neq 0,
+\]
+slednji pogoj pa lahko preberemo neposredno iz tabele karakterjev grupe.
 
-Četrti princip harmonične analize je, da iz Fourierove transformacije izvlečemo podatke o začetni funkciji.
+
+\todo[inline]{omeni LOST Ore domneva}
 
 \subsection{Slučajni sprehodi}
 

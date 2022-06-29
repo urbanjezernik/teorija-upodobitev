@@ -60,7 +60,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 28. 06. 2022
+            Zadnja posodobitev: 29. 06. 2022
           </div>
 
           <div id="spinner" class="text-center">
@@ -2971,7 +2971,12 @@
             jih označimo s <span
             class="math display">\[\hom_{\mathop{\mathrm{cl}}}(G,F) = \{
             f \in \mathop{\mathrm{fun}}(G,F) \mid \forall x, g \in G
-            \colon f(x g x^{-1}) = f(g) \}.\]</span></p>
+            \colon f(x g x^{-1}) = f(g) \}.\]</span> Za dan
+            konjugiranostni razred <span
+            class="math inline">\(C\)</span> v grupi <span
+            class="math inline">\(G\)</span> bomo pisali <span
+            class="math inline">\(\chi_{\rho}(C)\)</span> za vrednost
+            karakterja v poljubnem predstavniku tega razreda.</p>
             <div class="zgled">
             <p><strong>Zgled 2.10</strong>. Opazujmo grupo <span
             class="math inline">\(S_3\)</span> nad poljem <span
@@ -4667,7 +4672,55 @@
             množice čim bolj izogniti podgrupam. Osnovno vprašanje v
             zvezi z množicami brez produktov je, kako velike podmnožice
             brez produktov dana grupa vsebuje.</p>
+            <div class="lema">
+            <p><strong>Lema 3.3</strong>. Naj bo <span
+            class="math inline">\(G\)</span> končna grupa in <span
+            class="math inline">\(C_1\)</span>, <span
+            class="math inline">\(C_2\)</span> konjugiranostna razreda v
+            <span class="math inline">\(G\)</span>. Za vsako nerazcepno
+            kompleksno upodobitev <span
+            class="math inline">\(\pi\)</span> na prostoru <span
+            class="math inline">\(V\)</span> velja <span
+            class="math display">\[\widehat{1_{C_1} * 1_{C_2}}(\pi) =
+                |C_1| \cdot |C_2| \cdot \frac{\overline{\chi_{\pi}(C_1)}
+            \cdot \overline{\chi_{\pi}(C_2)}}{\chi_{\pi}(1)^2} \cdot
+            {\textstyle \mathop{\mathrm{id}}_V}.\]</span></p>
+            </div>
+            <div class="proof">
+            <p><em>Proof.</em> Fourierova transformacija konvolucije je
+            produkt Fourierovih transformacij, ki jih za dani
+            karakteristični funkciji ni težko izračunati po lemi o
+            Fourierovi transformaciji razredne funkcije. ◻</p>
+            </div>
+            <div class="trditev">
+            <p><strong>Trditev 3.7</strong>. Naj bo <span
+            class="math inline">\(G\)</span> končna grupa in <span
+            class="math inline">\(C_1\)</span>, <span
+            class="math inline">\(C_2\)</span> konjugiranostna razreda v
+            <span class="math inline">\(G\)</span>. Velja <span
+            class="math display">\[1_{C_1} * 1_{C_2} = \frac{|C_1| \cdot
+            |C_2|}{|G|} \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
+            \frac{\overline{\chi_{\pi}(C_1)} \cdot
+            \overline{\chi_{\pi}(C_2)}}{\chi_{\pi}(1)}
+            \chi_{\pi}.\]</span></p>
+            </div>
+            <div class="proof">
+            <p><em>Proof.</em> Uporabimo Fourierovo inverzijo za
+            funkcijo <span class="math inline">\(1_{C_1} *
+            1_{C_2}\)</span>. Za vsak <span class="math inline">\(g \in
+            G\)</span> dobimo <span class="math display">\[\left(
+            1_{C_1} * 1_{C_2} \right) (g)
+                = \frac{1}{|G|} \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
+            \chi_{\pi}(1) \mathop{\mathrm{tr}}\left( \widehat{1_{C_1} *
+            1_{C_2}}(\pi) \cdot \pi(g) \right).\]</span> Trditev zdaj
+            sledi iz zadnje leme. ◻</p>
+            </div>
             <h3 id="komutatorji">Komutatorji</h3>
+            <p>Oglejmo si še en čisto nekomutativen problem, ki na prvi
+            pogled nima veliko skupnega s teorijo upodobitev, nazadnje
+            pa se izkaže, da ga lahko popolnoma razrešimo, če le poznamo
+            tabelo karakterjev grupe. Izpeljava bo sledila Fourierovi
+            inverziji konvolucij iz zadnjega razdelka.</p>
             <p>Naj bo <span class="math inline">\(G\)</span> končna
             grupa in <span class="math inline">\(K(G)\)</span> njena
             podmnožica, ki sestoji iz elementov, ki so komutatorji<a
@@ -4689,25 +4742,21 @@
             class="math inline">\(N\)</span> obravnavajmo kot element
             prostora <span
             class="math inline">\(\mathop{\mathrm{fun}}(G,\mathbf{C})\)</span>.</p>
-            <p>Prvi princip harmonične analize je, da lahko vsako
-            <em>razredno</em> funkcijo razumemo s pomočjo močnih orodij
-            teorije upodobitev. Da to drži v konkretnem primeru funkcije
-            <span class="math inline">\(N\)</span>, se ni težko
-            prepričati. Za vsak <span class="math inline">\(z \in
-            G\)</span> namreč velja <span class="math inline">\([z x
-            z^{-1}, z y z^{-1}] = z [x,y] z^{-1}\)</span>, torej vsak
-            par <span class="math inline">\((x,y)\)</span> z lastnostjo
-            <span class="math inline">\([x,y] = g\)</span> porodi par
-            <span class="math inline">\((z x z^{-1}, z y
-            z^{-1})\)</span> z lastnostjo <span class="math inline">\([z
-            x z^{-1}, z y z^{-1}] = z g z^{-1}\)</span>. S tem je <span
+            <p>Vsako <em>razredno</em> funkcijo razumemo s pomočjo
+            močnih orodij teorije upodobitev. Ni se težko prepričati, da
+            je <span class="math inline">\(N\)</span> razredna funkcija.
+            Za vsak <span class="math inline">\(z \in G\)</span> namreč
+            velja <span class="math inline">\([z x z^{-1}, z y z^{-1}] =
+            z [x,y] z^{-1}\)</span>, torej vsak par <span
+            class="math inline">\((x,y)\)</span> z lastnostjo <span
+            class="math inline">\([x,y] = g\)</span> porodi par <span
+            class="math inline">\((z x z^{-1}, z y z^{-1})\)</span> z
+            lastnostjo <span class="math inline">\([z x z^{-1}, z y
+            z^{-1}] = z g z^{-1}\)</span>. S tem je <span
             class="math inline">\(N(g) = N(z g z^{-1})\)</span>.</p>
-            <p>Drugi princip harmonične analize je, da dano razredno
-            funkcijo zapišemo karseda neodvisno od predstavnikov
-            konjugiranostnih razredov. Našo funkcijo <span
-            class="math inline">\(N\)</span> bomo zato prepisali v malo
-            bolj nenavadno obliko, ki pa nam bo dobro služila v
-            nadaljevanju. Recimo, da za elementa <span
+            <p>Funkcijo <span class="math inline">\(N\)</span> bomo
+            prepisali v malo bolj nenavadno obliko, ki pa nam bo dobro
+            služila v nadaljevanju. Recimo, da za elementa <span
             class="math inline">\(x,y \in G\)</span> velja <span
             class="math inline">\([x,y] = g\)</span>. To enakost
             interpretiramo kot <span class="math inline">\(x^{-1} \cdot
@@ -4722,15 +4771,58 @@
             x^{-1} \in C^{-1}\)</span> ter <span class="math inline">\(b
             = y^{-1} x y \in C\)</span>, za katera velja <span
             class="math inline">\(a \cdot b = g\)</span>. S tem smo
-            opisali prirejanje <span class="math display">\[\{ (x,y) \in
-            G \times G \mid g = [x,y] \} \to
+            opisali prirejanje <span class="math display">\[\psi \colon
+            \{ (x,y) \in G \times G \mid g = [x,y] \} \to
                 \{ (C, a, b) \mid C= (a^{-1})^G, \ b \in C,\ a \cdot b =
-            g \}.\]</span> To prirejanje <em>ni</em> injektivno.</p>
-            <p>Tretji princip harmonične analize je, da z novim zapisom
-            uporabimo Fourierovo transformacijo, ki jo karseda dokončno
-            izračunamo.</p>
-            <p>Četrti princip harmonične analize je, da iz Fourierove
-            transformacije izvlečemo podatke o začetni funkciji.</p>
+            g \}.\]</span> To prirejanje <em>ni</em> injektivno, saj s
+            trojico <span class="math inline">\((C,a,b)\)</span> element
+            <span class="math inline">\(y\)</span> ni enolično določen,
+            pač pa le do odseka po centralizatorju <span
+            class="math inline">\(C_G(a^{-1}) = C_G(a)\)</span>
+            natančno.<a href="#fn45" class="footnote-ref" id="fnref45"
+            role="doc-noteref"><sup>45</sup></a> Torej je <span
+            class="math inline">\(|\psi^{-1}(C,a,b)| = |C_G(a)| =
+            |G|/|C|\)</span>. S tem lahko izrazimo <span
+            class="math display">\[N(g) = \sum_{C} \frac{|G|}{|C|} \cdot
+            |\{ (a,b) \in G \times G \mid a \in C^{-1}, \ b \in C, \ a
+            \cdot b = g \}|,\]</span> kjer vsota teče po vseh
+            konjugiranostnih razredih grupe <span
+            class="math inline">\(G\)</span>.</p>
+            <p>Dobljeni zapis funkcije <span
+            class="math inline">\(N\)</span> je priročen, ker je izražen
+            le s konjugiranostnimi razredi in je neodvisen od izbire
+            njihovih konkretnih predstavnikov. S tem je amenabilen za
+            gnetenje s Fourierovo transformacijo. Najprej opazimo, da
+            lahko drugi faktor zadnje vsote zapišemo kot <span
+            class="math display">\[\sum_{a,b \in G, \ a \cdot b = g}
+            1_{C^{-1}}(a) \cdot 1_{C}(b) = \left( 1_{C^{-1}} * 1_{C}
+            \right) (g).\]</span> S tem je <span
+            class="math display">\[N(g) = \sum_{C} \frac{|G|}{|C|} \cdot
+            \left( 1_{C^{-1}} * 1_{C} \right) (g).\]</span> Konvolucijo
+            lahko po Fourierovi inverziji razvijemo po karakterjih in
+            dobimo <span class="math display">\[N(g) = \sum_{C}
+            \frac{|G|}{|C|} \cdot \frac{|C|^2}{|G|} \sum_{\pi \in
+            \mathop{\mathrm{Irr}}(G)}
+            \frac{|\chi_{\pi}(C)|^2}{\chi_{\pi}(1)} \chi_{\pi}(g)
+                = \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
+            \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)} \sum_{C} |C| \cdot
+            |\chi_{\pi}(C)|^2.\]</span> Zadnja vsota je ravno enaka
+            <span class="math inline">\(|G| \cdot \langle \chi_{\pi},
+            \chi_{\pi} \rangle = |G|\)</span>, zato nazadnje sklenemo
+            <span class="math display">\[N(g) = |G| \cdot \sum_{\pi \in
+            \mathop{\mathrm{Irr}}(G)}
+            \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)}.\]</span> Dobljen izraz
+            za število načinov, na katere lahko <span
+            class="math inline">\(g\)</span> zapišemo kot komutator v
+            <span class="math inline">\(G\)</span>, se imenuje
+            <span><strong><em>Frobeniusova formula</em></strong></span>.
+            V posebnem iz nje sklepamo, da za element <span
+            class="math inline">\(g \in G\)</span> velja <span
+            class="math display">\[g \in K(G) \quad \Longleftrightarrow
+            \quad \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
+            \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)} \neq 0,\]</span> slednji
+            pogoj pa lahko preberemo neposredno iz tabele karakterjev
+            grupe.</p>
             <h3 id="slučajni-sprehodi">Slučajni sprehodi</h3>
             <h1 id="upodobitve-linearnih-grup">Upodobitve linearnih
             grup</h1>
@@ -5020,6 +5112,10 @@
             elementov <span class="math inline">\(x,y \in G\)</span> je
             element <span class="math inline">\([x,y] = x^{-1} y^{-1} x
             y\)</span>.<a href="#fnref44" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn45" role="doc-endnote"><p>Velja namreč zveza <span
+            class="math inline">\(b = y^{-1} a^{1} y\)</span>.<a
+            href="#fnref45" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>
