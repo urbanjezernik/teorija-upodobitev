@@ -55,7 +55,7 @@
 \def\QQ{\mathbf{Q}}
 \def\RR{\mathbf{R}}
 \def\CC{\mathbf{C}}
-\def\conclass{C}
+\def\conclass{\mathcal{C}}
 \def\11{\mathbf{1}}
 \def\FF{\mathbf{F}}
 \def\EE{\mathbf{E}}
@@ -76,7 +76,8 @@
 \DeclareMathOperator\cl{cl}
 \def\GAP{\textbf{GAP}}
 \DeclareMathOperator\inv{inv}
-\DeclareMathOperator\Eig{Eig}
+\DeclareMathOperator\Eigenvalues{LVrednosti}
+\DeclareMathOperator\Eigenspace{LPodprostor}
 \DeclareMathOperator\fun{fun}
 \DeclareMathOperator\HS{HS}
 
@@ -1825,6 +1826,76 @@ Naj bo $A$ končna abelova grupa. Vemo že, da so vse njene kompleksne upodobitv
 kar je le posledica dejstva $\hat{f}(\chi) = |A| \cdot [ f, \chi ]$.
 \end{zgled}
 
+\subsection{Izračunljivost tabele karakterjev}
+
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike $0$. Kategorijo $\Rep(G)$ v tem primeru razumemo zelo dobro, če le poznamo tabelo karakterjev. Za zdaj smo si pogledali nekaj zgledov, kako to tabelo izračunati za posebne primere grupe. Pri tem smo si sicer res pomagali z razvito teorijo, a je bil večji del izračuna tabele opravljen z metodo ostrega pogleda. V splošnem se temu lahko izognemo; obstaja namreč več algoritmov, ki le z uporabo linearne algebre izračunajo tabelo karakterjev.
+
+Pogledali si bomo enega takih algoritmov, ki uporablja projekcije na izotipične komponente iz zadnjega razdelka. Algoritem temelji na Fourierovi transformaciji karakteristične funkcije $1_{\conclass}$ konjugiranostnega razreda $\conclass$ grupe $G$ v regularni upodobitvi $\rho_{\fun}$. Po lemi o Fourierovi transformaciji razredne funkcije je namreč zožitev $\widehat{1_{\conclass}}(\rho_{\fun})$ na $\pi$-izotipično komponento skalarno množenje s številom
+\[
+    \frac{|G|}{\deg(\pi)} \cdot [1_{\conclass}, \chi_{\pi}] =
+    |\conclass| \cdot \frac{\chi_{\pi}(\conclass^{-1})}{\chi_{\pi}(1)}.
+\]
+Vektorji v $\pi$-izotipični komponenti so zato hkratni lastni vektorji preslikav $\widehat{1_{\conclass}}(\rho_{\fun})$, ko $\conclass$ preteče vse konjugiranostne razrede grupe $G$. Pokažimo, da je ta opis v resnici karakterizacija $\pi$-izotipičnih komponent.
+
+\begin{lema}
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Izotipične komponente regularne upodobitve so natanko netrivialni preseki lastnih podprostorov $\widehat{1_{\conclass}}(\rho_{\fun})$, ko $\conclass$ preteče vse konjugiranostne razrede grupe $G$.
+\end{lema}
+\begin{dokaz}
+Naj bo
+\[
+    W = \bigcap_{\conclass} \Eigenspace_{\lambda_{\conclass}}\left(\widehat{1_{\conclass}}(\rho_{\fun})\right) \leq \fun(G,F)
+\]
+za neke skalarje $\lambda_{\conclass}$, kjer presek teče po vseh konjugiranostnih razredih grupe $G$. Predpostavimo, da je $W \neq 0$. Naj bo $w \in W$. Za $\pi \in \Irr(G)$ naj bo $P_{\pi}$ projekcija na $\pi$-izotipično komponento. Velja
+\[
+    P_{\pi} \cdot w = \frac{\chi_{\pi}(1)}{|G|} \widehat{\chi_{\pi}}(\rho_{\fun}) \cdot w =
+    \frac{\chi_{\pi}(1)}{|G|} \sum_{g \in G} \chi_{\pi}(g) \rho_{\fun}(g^{-1}) \cdot w.
+\]
+Vsoto lahko razvijemo po vsakem konjugiranostnem razredu posebej in dobimo
+\[
+    \frac{\chi_{\pi}(1)}{|G|} \sum_{\conclass} \chi_{\pi}(\conclass) \sum_{g \in \conclass} \rho_{\fun}(g^{-1}) \cdot w =
+    \left( \frac{\chi_{\pi}(1)}{|G|} \sum_{\conclass} \chi_{\pi}(\conclass) \lambda_{\conclass} \right) w
+\]
+kjer smo v enakosti upoštevali, da je $w \in W$. Od tod sledi
+\[
+    W \leq \Eigenspace_{\frac{\chi_{\pi}(1)}{|G|} \sum_{\conclass} \chi_{\pi}(\conclass) \lambda_{\conclass}}(P_{\pi}).
+\]
+Projektor $P_{\pi}$ ima seveda le dve možni lastni vrednosti: $0$ in $1$. Ker je po predpostavki $W \neq 0$, ne mora biti za vse $\pi \in \Irr(G)$ projekcija na $\pi$-izotipično komponento ničelna na $W$. Torej je za nek $\pi$ nujno
+\[
+    W \leq \Eigenspace_{1}(P_{\pi}) = \Izotip_{\rho_{\fun}}(\pi).
+\]
+Vemo že, kako deluje $\widehat{1_{\conclass}}(\rho_{\fun})$ na $\pi$-izotipični komponenti, od koder določimo skalarje kot $\lambda_{\conclass} = |\conclass| \cdot \chi_{\pi}(\conclass^{-1})/\chi_{\pi}(1)$. Iz definicije $W$ zdaj sledi, da je $\pi$-izotipična komponenta vsebovana v $W$, s čimer smo nazadnje izpeljali $W = \Izotip_{\rho_{\fun}}(\pi)$.
+\end{dokaz}
+
+S to karakterizacijo izotipičnih komponent lahko opišemo algoritem za izračun tabele karakterjev. Najprej oštevilčimo elemente grupe $G$ kot $g_1, g_2, \dots, g_|G|$ in pripravimo vektorski prostor $F^{|G|} \cong \hom(G,F)$ s standardno bazo $e_i$, ki ustreza karakteristični funkciji $1_{g_i}$. Izračunamo še konjugiranostne razrede grupe $G$ in iz vsakega izberemo predstavnika. Pripravimo funkcijo, ki izračuna matriko regularne upodobitve $\rho_{\fun}$ v poljubnem elementu $x \in G$, in za tem še funkcijo, ki izračuna matriko Fourierove transformacije $\widehat{1_{\conclass}}(\rho_{\hom})$ za konjugiranostni razred $\conclass$. Izračunamo lastne podprostore vseh teh matrik in za tem vse njihove netrivialne preseke. Te so ravno izotipične komponente. V vsaki komponenti $W$ izberemo bazo, v kateri izračunamo sled zožitve matrike $\rho_{\fun}(x)$ na $W$. Ker je $W$ kot upodobitev izomorfen direktni vsoti $\deg(\pi)$ kopij neke nerazcepne upodobitve $\pi$, velja $\dim(W) = \deg(\pi)^2$ in zato
+\[
+    \tr(\rho_{\fun}(x) |_W) = \sqrt{\dim(W)} \cdot \chi_{\pi}(x).
+\]
+Iz izračunane sledi torej lahko določimo vrednost pripadajočega karakterja v predstavnikih konjugiranostnih razredov. Implementacija predstavljenega algoritma za izračun tabele karakterjev nad $\CC$ v programskem jeziku \GAP~je dostopna \href{https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g}{tukaj}.
+
+\begin{zgled}
+Opazujmo alternirajočo grupo $A_5$ nad poljem $\CC$. Z opisanim algoritmom hitro izračunamo njeno tabelo karakterjev.
+
+\begin{table}[h!]
+    \centering
+\begin{tabular}{c|ccccc}
+    & $()$ & $(1 \ 2)(3 \ 4)$ & $(1 \ 2 \ 3)$ & $(1 \ 2 \ 3 \ 4 \ 5)$ & $(1 \ 2 \ 3 \ 5 \ 4)$ \\ \hline
+    $\chi_1$ & $1$ & $1$ & $1$ & $1$ & $1$ \\
+    $\chi_2$ & $5$ & $1$ & $-1$ & $0$ & $0$ \\
+    $\chi_3$ & $4$ & $0$ & $1$ & $-1$ & $-1$ \\
+    $\chi_4$ & $3$ & $-1$ & $0$ & $-\zeta^2-\zeta^3$ & $-\zeta-\zeta^4$ \\
+    $\chi_5$ & $3$ & $-1$ & $0$ & $-\zeta-\zeta^4$ & $-\zeta^2-\zeta^3$ \\
+\end{tabular}
+\caption{Tabela karakterjev $A_5$, kjer je $\zeta = e^{2 \pi i / 5}$}
+\end{table}
+\end{zgled}
+
+Predstavljeni algoritem ima mnogo pomanjkljivosti. V programskem jeziku \GAP~je za izračun tabele karakterjev implementiran algoritem \href{https://www.sciencedirect.com/science/article/pii/S0747717108800776}{(Dixon 1967, Schneider 1990)}, ki izboljša predstavljenega na naslednja dva načina.
+\begin{enumerate}
+    \item S predstavljenim algoritmom bomo težko izračunali tabelo karakterjev kakšne zelo velike grupe, saj moramo v postopku diagonalizirati matrike velikosti $|G| \times |G|$. Algoritem v \GAP~sicer temelji na enaki ideji iskanja skupnih lastnih podprostorov, a pri tem ne opazuje regularne upodobitve, temveč upošteva abstraktne formule med karakterji in iz njih izpelje matrike velikosti $\kk(G) \times \kk(G)$, katerih skupni lastni vektorji so bolj ali manj karakterji. Ker je $\kk(G)$ bistveno manjše od $|G|$, je ta izračun mnogo lažji in hitrejši.
+    
+    \item Za izračun natančnih vrednosti karakterjev moramo vse račune izvajati eksaktno in brez približkov. Numerične metode, ki jih sicer lahko uporabimo za hitro računanje lastnih vrednosti velikih matrik, torej odpadejo. Programski jezik \GAP~zna računati simbolično, a je to lahko precej zamudno. Algoritem v \GAP~se temu izogne tako, da večino računov opravi nad poljem $\FF_p$ za ustrezno izbrano dovolj veliko praštevilo $p$, potem pa te rezultate prenese nazaj nad $\CC$. Vsi računi so zato hitri in eksaktni.
+\end{enumerate}
+
 \subsection{Kompleksne upodobitve}
 
 Splošno teorijo upodobitev končnih grup zaključimo z upodobitvami nad najugodnejšim poljem $\CC$. To polje je daleč od abstraktnega in je opremljeno z mnogo dodatne strukture, ki jo lahko pri upodobitvah izkoristimo.
@@ -1842,16 +1913,16 @@ Naj bo $G$ končna grupa. Za vsako končnorazsežno kompleksno upodobitev $\rho$
 \] 
 \end{trditev}
 \begin{dokaz}
-Velja $\rho(g^{|G|}) = \rho(1) = \id$, zato je $\rho(g)$ linearna preslikava končnega reda. Take preslikave so diagonalizabilne.\footnote{Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\rho(g)$.} V posebnem je zato vsaka lastna vrednost $\lambda \in \Eig(\rho(g))$ končnega reda v $\CC^*$. S tem je seveda
+Velja $\rho(g^{|G|}) = \rho(1) = \id$, zato je $\rho(g)$ linearna preslikava končnega reda. Take preslikave so diagonalizabilne.\footnote{Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\rho(g)$.} V posebnem je zato vsaka lastna vrednost $\lambda \in \Eigenvalues(\rho(g))$ končnega reda v $\CC^*$. S tem je seveda
 \[
-    \chi_{\rho}(g) = \sum_{\lambda \in \Eig(\rho(g))} \lambda \in \bar{\ZZ},
+    \chi_{\rho}(g) = \sum_{\lambda \in \Eigenvalues(\rho(g))} \lambda \in \bar{\ZZ},
     \quad
-    |\chi_{\rho}(g)| \leq \sum_{\lambda \in \Eig(\rho(g))} |\lambda| = \deg(\rho)
+    |\chi_{\rho}(g)| \leq \sum_{\lambda \in \Eigenvalues(\rho(g))} |\lambda| = \deg(\rho)
 \]
 in hkrati
 \[
-    \chi_{\rho}(g^{-1}) = \sum_{\lambda \in \Eig(\rho(g))} \lambda^{-1}
-    = \sum_{\lambda \in \Eig(\rho(g))} \overline{\lambda}
+    \chi_{\rho}(g^{-1}) = \sum_{\lambda \in \Eigenvalues(\rho(g))} \lambda^{-1}
+    = \sum_{\lambda \in \Eigenvalues(\rho(g))} \overline{\lambda}
     = \overline{\chi_{\rho}(g)}.
 \]
 \end{dokaz}
@@ -1960,16 +2031,6 @@ to je {\definicija Hilbert-Schmidtov skalarni produkt}. Parsevalov izrek nam tor
 \]
 
 \section{Razširjeni zgledi}
-
-\subsection{\GAP}
-
-Implementacija predstavljenega algoritma za izračun tabele karakterjev v \GAP~je dostopna \href{https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g}{tukaj}.
-
-\todo[inline]{
-    - izračunljivost tabele karakterjev Proposition 4.6.2
-    - konkreten zgled, pokaži, kaj vse se da prebrati o grupi iz tega zgleda, morda $\GL_2(\FF_2)$ in $S_5$
-    - upodobitve v potencah: vključi kakšen preprost zgled; omeni, da gre za to, da ni treba razstavljati regularne upodobitve; ta zgled lahko potem kasneje razširimo z \GAP.
-}
 
 \subsection{$\GL_2(\FF_p)$}
 

@@ -2973,10 +2973,11 @@
             f \in \mathop{\mathrm{fun}}(G,F) \mid \forall x, g \in G
             \colon f(x g x^{-1}) = f(g) \}.\]</span> Za dan
             konjugiranostni razred <span
-            class="math inline">\(C\)</span> v grupi <span
+            class="math inline">\(\mathcal{C}\)</span> v grupi <span
             class="math inline">\(G\)</span> bomo pisali <span
-            class="math inline">\(\chi_{\rho}(C)\)</span> za vrednost
-            karakterja v poljubnem predstavniku tega razreda.</p>
+            class="math inline">\(\chi_{\rho}(\mathcal{C})\)</span> za
+            vrednost karakterja v poljubnem predstavniku tega
+            razreda.</p>
             <div class="zgled">
             <p><strong>Zgled 2.10</strong>. Opazujmo grupo <span
             class="math inline">\(S_3\)</span> nad poljem <span
@@ -4315,6 +4316,298 @@
             class="math inline">\(\hat{f}(\chi) = |A| \cdot [ f, \chi
             ]\)</span>.</p>
             </div>
+            <h3 id="izračunljivost-tabele-karakterjev">Izračunljivost
+            tabele karakterjev</h3>
+            <p>Naj bo <span class="math inline">\(G\)</span> končna
+            grupa in <span class="math inline">\(F\)</span> algebraično
+            zaprto polje karakteristike <span
+            class="math inline">\(0\)</span>. Kategorijo <span
+            class="math inline">\(\mathop{\mathrm{Rep}}(G)\)</span> v
+            tem primeru razumemo zelo dobro, če le poznamo tabelo
+            karakterjev. Za zdaj smo si pogledali nekaj zgledov, kako to
+            tabelo izračunati za posebne primere grupe. Pri tem smo si
+            sicer res pomagali z razvito teorijo, a je bil večji del
+            izračuna tabele opravljen z metodo ostrega pogleda. V
+            splošnem se temu lahko izognemo; obstaja namreč več
+            algoritmov, ki le z uporabo linearne algebre izračunajo
+            tabelo karakterjev.</p>
+            <p>Pogledali si bomo enega takih algoritmov, ki uporablja
+            projekcije na izotipične komponente iz zadnjega razdelka.
+            Algoritem temelji na Fourierovi transformaciji
+            karakteristične funkcije <span
+            class="math inline">\(1_{\mathcal{C}}\)</span>
+            konjugiranostnega razreda <span
+            class="math inline">\(\mathcal{C}\)</span> grupe <span
+            class="math inline">\(G\)</span> v regularni upodobitvi
+            <span
+            class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>.
+            Po lemi o Fourierovi transformaciji razredne funkcije je
+            namreč zožitev <span
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
+            na <span class="math inline">\(\pi\)</span>-izotipično
+            komponento skalarno množenje s številom <span
+            class="math display">\[\frac{|G|}{\deg(\pi)} \cdot
+            [1_{\mathcal{C}}, \chi_{\pi}] =
+                |\mathcal{C}| \cdot
+            \frac{\chi_{\pi}(\mathcal{C}^{-1})}{\chi_{\pi}(1)}.\]</span>
+            Vektorji v <span
+            class="math inline">\(\pi\)</span>-izotipični komponenti so
+            zato hkratni lastni vektorji preslikav <span
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})\)</span>,
+            ko <span class="math inline">\(\mathcal{C}\)</span> preteče
+            vse konjugiranostne razrede grupe <span
+            class="math inline">\(G\)</span>. Pokažimo, da je ta opis v
+            resnici karakterizacija <span
+            class="math inline">\(\pi\)</span>-izotipičnih
+            komponent.</p>
+            <div class="lema">
+            <p><strong>Lema 3.2</strong>. Naj bo <span
+            class="math inline">\(G\)</span> končna grupa in <span
+            class="math inline">\(F\)</span> algebraično zaprto polje
+            karakteristike tuje <span
+            class="math inline">\(|G|\)</span>. Izotipične komponente
+            regularne upodobitve so natanko netrivialni preseki lastnih
+            podprostorov <span
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})\)</span>,
+            ko <span class="math inline">\(\mathcal{C}\)</span> preteče
+            vse konjugiranostne razrede grupe <span
+            class="math inline">\(G\)</span>.</p>
+            </div>
+            <div class="proof">
+            <p><em>Proof.</em> Naj bo <span class="math display">\[W =
+            \bigcap_{\mathcal{C}}
+            \mathop{\mathrm{LPodprostor}}_{\lambda_{\mathcal{C}}}\left(\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})\right)
+            \leq \mathop{\mathrm{fun}}(G,F)\]</span> za neke skalarje
+            <span class="math inline">\(\lambda_{\mathcal{C}}\)</span>,
+            kjer presek teče po vseh konjugiranostnih razredih grupe
+            <span class="math inline">\(G\)</span>. Predpostavimo, da je
+            <span class="math inline">\(W \neq 0\)</span>. Naj bo <span
+            class="math inline">\(w \in W\)</span>. Za <span
+            class="math inline">\(\pi \in
+            \mathop{\mathrm{Irr}}(G)\)</span> naj bo <span
+            class="math inline">\(P_{\pi}\)</span> projekcija na <span
+            class="math inline">\(\pi\)</span>-izotipično komponento.
+            Velja <span class="math display">\[P_{\pi} \cdot w =
+            \frac{\chi_{\pi}(1)}{|G|}
+            \widehat{\chi_{\pi}}(\rho_{\mathop{\mathrm{fun}}}) \cdot w =
+                \frac{\chi_{\pi}(1)}{|G|} \sum_{g \in G} \chi_{\pi}(g)
+            \rho_{\mathop{\mathrm{fun}}}(g^{-1}) \cdot w.\]</span> Vsoto
+            lahko razvijemo po vsakem konjugiranostnem razredu posebej
+            in dobimo <span
+            class="math display">\[\frac{\chi_{\pi}(1)}{|G|}
+            \sum_{\mathcal{C}} \chi_{\pi}(\mathcal{C}) \sum_{g \in
+            \mathcal{C}} \rho_{\mathop{\mathrm{fun}}}(g^{-1}) \cdot w =
+                \left( \frac{\chi_{\pi}(1)}{|G|} \sum_{\mathcal{C}}
+            \chi_{\pi}(\mathcal{C}) \lambda_{\mathcal{C}} \right)
+            w\]</span> kjer smo v enakosti upoštevali, da je <span
+            class="math inline">\(w \in W\)</span>. Od tod sledi <span
+            class="math display">\[W \leq
+            \mathop{\mathrm{LPodprostor}}_{\frac{\chi_{\pi}(1)}{|G|}
+            \sum_{\mathcal{C}} \chi_{\pi}(\mathcal{C})
+            \lambda_{\mathcal{C}}}(P_{\pi}).\]</span> Projektor <span
+            class="math inline">\(P_{\pi}\)</span> ima seveda le dve
+            možni lastni vrednosti: <span
+            class="math inline">\(0\)</span> in <span
+            class="math inline">\(1\)</span>. Ker je po predpostavki
+            <span class="math inline">\(W \neq 0\)</span>, ne mora biti
+            za vse <span class="math inline">\(\pi \in
+            \mathop{\mathrm{Irr}}(G)\)</span> projekcija na <span
+            class="math inline">\(\pi\)</span>-izotipično komponento
+            ničelna na <span class="math inline">\(W\)</span>. Torej je
+            za nek <span class="math inline">\(\pi\)</span> nujno <span
+            class="math display">\[W \leq
+            \mathop{\mathrm{LPodprostor}}_{1}(P_{\pi}) =
+            \mathop{\mathrm{Izotip}}_{\rho_{\mathop{\mathrm{fun}}}}(\pi).\]</span>
+            Vemo že, kako deluje <span
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
+            na <span class="math inline">\(\pi\)</span>-izotipični
+            komponenti, od koder določimo skalarje kot <span
+            class="math inline">\(\lambda_{\mathcal{C}} = |\mathcal{C}|
+            \cdot \chi_{\pi}(\mathcal{C}^{-1})/\chi_{\pi}(1)\)</span>.
+            Iz definicije <span class="math inline">\(W\)</span> zdaj
+            sledi, da je <span
+            class="math inline">\(\pi\)</span>-izotipična komponenta
+            vsebovana v <span class="math inline">\(W\)</span>, s čimer
+            smo nazadnje izpeljali <span class="math inline">\(W =
+            \mathop{\mathrm{Izotip}}_{\rho_{\mathop{\mathrm{fun}}}}(\pi)\)</span>. ◻</p>
+            </div>
+            <p>S to karakterizacijo izotipičnih komponent lahko opišemo
+            algoritem za izračun tabele karakterjev. Najprej oštevilčimo
+            elemente grupe <span class="math inline">\(G\)</span> kot
+            <span class="math inline">\(g_1, g_2, \dots, g_|G|\)</span>
+            in pripravimo vektorski prostor <span
+            class="math inline">\(F^{|G|} \cong \hom(G,F)\)</span> s
+            standardno bazo <span class="math inline">\(e_i\)</span>, ki
+            ustreza karakteristični funkciji <span
+            class="math inline">\(1_{g_i}\)</span>. Izračunamo še
+            konjugiranostne razrede grupe <span
+            class="math inline">\(G\)</span> in iz vsakega izberemo
+            predstavnika. Pripravimo funkcijo, ki izračuna matriko
+            regularne upodobitve <span
+            class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>
+            v poljubnem elementu <span class="math inline">\(x \in
+            G\)</span>, in za tem še funkcijo, ki izračuna matriko
+            Fourierove transformacije <span
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\hom})\)</span>
+            za konjugiranostni razred <span
+            class="math inline">\(\mathcal{C}\)</span>. Izračunamo
+            lastne podprostore vseh teh matrik in za tem vse njihove
+            netrivialne preseke. Te so ravno izotipične komponente. V
+            vsaki komponenti <span class="math inline">\(W\)</span>
+            izberemo bazo, v kateri izračunamo sled zožitve matrike
+            <span
+            class="math inline">\(\rho_{\mathop{\mathrm{fun}}}(x)\)</span>
+            na <span class="math inline">\(W\)</span>. Ker je <span
+            class="math inline">\(W\)</span> kot upodobitev izomorfen
+            direktni vsoti <span
+            class="math inline">\(\deg(\pi)\)</span> kopij neke
+            nerazcepne upodobitve <span
+            class="math inline">\(\pi\)</span>, velja <span
+            class="math inline">\(\dim(W) = \deg(\pi)^2\)</span> in zato
+            <span
+            class="math display">\[\mathop{\mathrm{tr}}(\rho_{\mathop{\mathrm{fun}}}(x)
+            |_W) = \sqrt{\dim(W)} \cdot \chi_{\pi}(x).\]</span> Iz
+            izračunane sledi torej lahko določimo vrednost pripadajočega
+            karakterja v predstavnikih konjugiranostnih razredov.
+            Implementacija predstavljenega algoritma za izračun tabele
+            karakterjev nad <span
+            class="math inline">\(\mathbf{C}\)</span> v programskem
+            jeziku <strong>GAP</strong> je dostopna <a
+            href="https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g">tukaj</a>.</p>
+            <div class="zgled">
+            <p><strong>Zgled 3.8</strong>. Opazujmo alternirajočo grupo
+            <span class="math inline">\(A_5\)</span> nad poljem <span
+            class="math inline">\(\mathbf{C}\)</span>. Z opisanim
+            algoritmom hitro izračunamo njeno tabelo karakterjev.</p>
+            <table>
+            <caption>Tabela karakterjev <span
+            class="math inline">\(A_5\)</span>, kjer je <span
+            class="math inline">\(\zeta = e^{2 \pi i /
+            5}\)</span></caption>
+            <thead>
+            <tr class="header">
+            <th style="text-align: center;"></th>
+            <th style="text-align: center;"><span
+            class="math inline">\(()\)</span></th>
+            <th style="text-align: center;"><span
+            class="math inline">\((1 \ 2)(3 \ 4)\)</span></th>
+            <th style="text-align: center;"><span
+            class="math inline">\((1 \ 2 \ 3)\)</span></th>
+            <th style="text-align: center;"><span
+            class="math inline">\((1 \ 2 \ 3 \ 4 \ 5)\)</span></th>
+            <th style="text-align: center;"><span
+            class="math inline">\((1 \ 2 \ 3 \ 5 \ 4)\)</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="odd">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            </tr>
+            <tr class="even">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_2\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(5\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(0\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(0\)</span></td>
+            </tr>
+            <tr class="odd">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_3\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(4\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(0\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-1\)</span></td>
+            </tr>
+            <tr class="even">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_4\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(3\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(0\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-\zeta^2-\zeta^3\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-\zeta-\zeta^4\)</span></td>
+            </tr>
+            <tr class="odd">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_5\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(3\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(0\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-\zeta-\zeta^4\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-\zeta^2-\zeta^3\)</span></td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+            <p>Predstavljeni algoritem ima mnogo pomanjkljivosti. V
+            programskem jeziku <strong>GAP</strong> je za izračun tabele
+            karakterjev implementiran algoritem <a
+            href="https://www.sciencedirect.com/science/article/pii/S0747717108800776">(Dixon
+            1967, Schneider 1990)</a>, ki izboljša predstavljenega na
+            naslednja dva načina.</p>
+            <ol>
+            <li><p>S predstavljenim algoritmom bomo težko izračunali
+            tabelo karakterjev kakšne zelo velike grupe, saj moramo v
+            postopku diagonalizirati matrike velikosti <span
+            class="math inline">\(|G| \times |G|\)</span>. Algoritem v
+            <strong>GAP</strong> sicer temelji na enaki ideji iskanja
+            skupnih lastnih podprostorov, a pri tem ne opazuje regularne
+            upodobitve, temveč upošteva abstraktne formule med
+            karakterji in iz njih izpelje matrike velikosti <span
+            class="math inline">\(\mathop{\mathrm{k}}(G) \times
+            \mathop{\mathrm{k}}(G)\)</span>, katerih skupni lastni
+            vektorji so bolj ali manj karakterji. Ker je <span
+            class="math inline">\(\mathop{\mathrm{k}}(G)\)</span>
+            bistveno manjše od <span class="math inline">\(|G|\)</span>,
+            je ta izračun mnogo lažji in hitrejši.</p></li>
+            <li><p>Za izračun natančnih vrednosti karakterjev moramo vse
+            račune izvajati eksaktno in brez približkov. Numerične
+            metode, ki jih sicer lahko uporabimo za hitro računanje
+            lastnih vrednosti velikih matrik, torej odpadejo. Programski
+            jezik <strong>GAP</strong> zna računati simbolično, a je to
+            lahko precej zamudno. Algoritem v <strong>GAP</strong> se
+            temu izogne tako, da večino računov opravi nad poljem <span
+            class="math inline">\(\mathbf{F}_p\)</span> za ustrezno
+            izbrano dovolj veliko praštevilo <span
+            class="math inline">\(p\)</span>, potem pa te rezultate
+            prenese nazaj nad <span
+            class="math inline">\(\mathbf{C}\)</span>. Vsi računi so
+            zato hitri in eksaktni.</p></li>
+            </ol>
             <h3 id="kompleksne-upodobitve">Kompleksne upodobitve</h3>
             <p>Splošno teorijo upodobitev končnih grup zaključimo z
             upodobitvami nad najugodnejšim poljem <span
@@ -4349,19 +4642,19 @@
             href="#fn42" class="footnote-ref" id="fnref42"
             role="doc-noteref"><sup>42</sup></a> V posebnem je zato
             vsaka lastna vrednost <span class="math inline">\(\lambda
-            \in \mathop{\mathrm{Eig}}(\rho(g))\)</span> končnega reda v
-            <span class="math inline">\(\mathbf{C}^*\)</span>. S tem je
-            seveda <span class="math display">\[\chi_{\rho}(g) =
-            \sum_{\lambda \in \mathop{\mathrm{Eig}}(\rho(g))} \lambda
-            \in \bar{\mathbf{Z}},
+            \in \mathop{\mathrm{LVrednosti}}(\rho(g))\)</span> končnega
+            reda v <span class="math inline">\(\mathbf{C}^*\)</span>. S
+            tem je seveda <span class="math display">\[\chi_{\rho}(g) =
+            \sum_{\lambda \in \mathop{\mathrm{LVrednosti}}(\rho(g))}
+            \lambda \in \bar{\mathbf{Z}},
                 \quad
                 |\chi_{\rho}(g)| \leq \sum_{\lambda \in
-            \mathop{\mathrm{Eig}}(\rho(g))} |\lambda| =
+            \mathop{\mathrm{LVrednosti}}(\rho(g))} |\lambda| =
             \deg(\rho)\]</span> in hkrati <span
             class="math display">\[\chi_{\rho}(g^{-1}) = \sum_{\lambda
-            \in \mathop{\mathrm{Eig}}(\rho(g))} \lambda^{-1}
-                = \sum_{\lambda \in \mathop{\mathrm{Eig}}(\rho(g))}
-            \overline{\lambda}
+            \in \mathop{\mathrm{LVrednosti}}(\rho(g))} \lambda^{-1}
+                = \sum_{\lambda \in
+            \mathop{\mathrm{LVrednosti}}(\rho(g))} \overline{\lambda}
                 = \overline{\chi_{\rho}(g)}.\]</span> ◻</p>
             </div>
             <p>S pomočjo te restriktivne lastnosti vrednosti karakterjev
@@ -4380,7 +4673,7 @@
             lahko lemo o Fourierovi transformaciji razredne funkcije
             zaostrimo na naslednji način.</p>
             <div class="lema">
-            <p><strong>Lema 3.2</strong>. Naj bo <span
+            <p><strong>Lema 3.3</strong>. Naj bo <span
             class="math inline">\(G\)</span> končna grupa. Za vsako
             funkcijo <span class="math inline">\(f \in
             \hom_{\mathop{\mathrm{cl}}}(G, \bar{\mathbf{Z}})\)</span> in
@@ -4402,35 +4695,36 @@
             class="math inline">\(\bar{\mathbf{Z}}\)</span>. Ker <span
             class="math inline">\(\bar{\mathbf{Z}}\)</span> tvori
             kolobar, bo torej trditev dovolj preveriti za primer, ko je
-            <span class="math inline">\(f = 1_{C}\)</span> za nek
-            konjugiranostni razred <span
-            class="math inline">\(C\)</span> v <span
+            <span class="math inline">\(f = 1_{\mathcal{C}}\)</span> za
+            nek konjugiranostni razred <span
+            class="math inline">\(\mathcal{C}\)</span> v <span
             class="math inline">\(G\)</span>.</p>
             <p>Vse narazcepne upodobitve lahko obravnavamo v enem
             zamahu, in sicer tako, da opazujemo regularno upodobitev in
             s tem linearno preslikavo <span
-            class="math inline">\(\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})\)</span>.
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})\)</span>.
             Na vsaki od podupodobitev, ki je izomorfna <span
             class="math inline">\(\pi\)</span>, ta preslikava deluje kot
-            <span class="math inline">\(\widehat{1_{C}}(\pi)\)</span>,
+            <span
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\pi)\)</span>,
             torej kot skalarno množenje z gornjim številom. To število
             je zato lastna vrednost preslikave <span
-            class="math inline">\(\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})\)</span>.</p>
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})\)</span>.</p>
             <p>Vemo že, da <span
-            class="math inline">\(\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
             deluje na naravni bazi iz karakterističnih funkcij <span
             class="math inline">\(1_x\)</span> za <span
             class="math inline">\(x \in G\)</span> kot <span
-            class="math display">\[\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})
-            \cdot 1_x = \sum_{g \in G} 1_{C}(x^{-1} g) 1_g \in
+            class="math display">\[\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})
+            \cdot 1_x = \sum_{g \in G} 1_{\mathcal{C}}(x^{-1} g) 1_g \in
             \mathop{\mathrm{fun}}(G, \{ 0, 1 \}).\]</span> V tej bazi
             ima torej <span
-            class="math inline">\(\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
             matriko s koeficienti v množici <span
             class="math inline">\(\{ 0, 1 \}\)</span>. Karakteristični
             polinom te matrike ima zato celoštevilske koeficiente, torej
             so lastne vrednosti preslikave <span
-            class="math inline">\(\widehat{1_{C}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
             algebraična cela števila. ◻</p>
             </div>
             <div class="proof">
@@ -4541,7 +4835,7 @@
             skalarnim produktom, glede na katerega je dana upodobitev
             unitarna.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.8</strong>. Končna grupa deluje z
+            <p><strong>Zgled 3.9</strong>. Končna grupa deluje z
             regularno upodobitvijo <span
             class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>
             na prostoru funkcij <span
@@ -4607,10 +4901,6 @@
             \chi_{\pi}(1) \left\langle \hat{f}(\pi), \hat{h}(\pi)
             \right\rangle_{\mathop{\mathrm{HS}}}.\]</span></p>
             <h2 id="razširjeni-zgledi">Razširjeni zgledi</h2>
-            <h3 id="gap"><strong>GAP</strong></h3>
-            <p>Implementacija predstavljenega algoritma za izračun
-            tabele karakterjev v <strong>GAP</strong> je dostopna <a
-            href="https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g">tukaj</a>.</p>
             <h3 id="mathopmathrmgl_2mathbff_p"><span
             class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span></h3>
             <h3 id="s_n"><span class="math inline">\(S_n\)</span></h3>
@@ -4676,17 +4966,19 @@
             zvezi z množicami brez produktov je, kako velike podmnožice
             brez produktov dana grupa vsebuje.</p>
             <div class="lema">
-            <p><strong>Lema 3.3</strong>. Naj bo <span
+            <p><strong>Lema 3.4</strong>. Naj bo <span
             class="math inline">\(G\)</span> končna grupa in <span
-            class="math inline">\(C_1\)</span>, <span
-            class="math inline">\(C_2\)</span> konjugiranostna razreda v
-            <span class="math inline">\(G\)</span>. Za vsako nerazcepno
-            kompleksno upodobitev <span
+            class="math inline">\(\mathcal{C}_1\)</span>, <span
+            class="math inline">\(\mathcal{C}_2\)</span> konjugiranostna
+            razreda v <span class="math inline">\(G\)</span>. Za vsako
+            nerazcepno kompleksno upodobitev <span
             class="math inline">\(\pi\)</span> na prostoru <span
             class="math inline">\(V\)</span> velja <span
-            class="math display">\[\widehat{1_{C_1} * 1_{C_2}}(\pi) =
-                |C_1| \cdot |C_2| \cdot \frac{\overline{\chi_{\pi}(C_1)}
-            \cdot \overline{\chi_{\pi}(C_2)}}{\chi_{\pi}(1)^2} \cdot
+            class="math display">\[\widehat{1_{\mathcal{C}_1} *
+            1_{\mathcal{C}_2}}(\pi) =
+                |\mathcal{C}_1| \cdot |\mathcal{C}_2| \cdot
+            \frac{\overline{\chi_{\pi}(\mathcal{C}_1)} \cdot
+            \overline{\chi_{\pi}(\mathcal{C}_2)}}{\chi_{\pi}(1)^2} \cdot
             {\textstyle \mathop{\mathrm{id}}_V}.\]</span></p>
             </div>
             <div class="proof">
@@ -4698,25 +4990,29 @@
             <div class="trditev">
             <p><strong>Trditev 3.7</strong>. Naj bo <span
             class="math inline">\(G\)</span> končna grupa in <span
-            class="math inline">\(C_1\)</span>, <span
-            class="math inline">\(C_2\)</span> konjugiranostna razreda v
-            <span class="math inline">\(G\)</span>. Velja <span
-            class="math display">\[1_{C_1} * 1_{C_2} = \frac{|C_1| \cdot
-            |C_2|}{|G|} \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
-            \frac{\overline{\chi_{\pi}(C_1)} \cdot
-            \overline{\chi_{\pi}(C_2)}}{\chi_{\pi}(1)}
+            class="math inline">\(\mathcal{C}_1\)</span>, <span
+            class="math inline">\(\mathcal{C}_2\)</span> konjugiranostna
+            razreda v <span class="math inline">\(G\)</span>. Velja
+            <span class="math display">\[1_{\mathcal{C}_1} *
+            1_{\mathcal{C}_2} = \frac{|\mathcal{C}_1| \cdot
+            |\mathcal{C}_2|}{|G|} \sum_{\pi \in
+            \mathop{\mathrm{Irr}}(G)}
+            \frac{\overline{\chi_{\pi}(\mathcal{C}_1)} \cdot
+            \overline{\chi_{\pi}(\mathcal{C}_2)}}{\chi_{\pi}(1)}
             \chi_{\pi}.\]</span></p>
             </div>
             <div class="proof">
             <p><em>Proof.</em> Uporabimo Fourierovo inverzijo za
-            funkcijo <span class="math inline">\(1_{C_1} *
-            1_{C_2}\)</span>. Za vsak <span class="math inline">\(g \in
-            G\)</span> dobimo <span class="math display">\[\left(
-            1_{C_1} * 1_{C_2} \right) (g)
+            funkcijo <span class="math inline">\(1_{\mathcal{C}_1} *
+            1_{\mathcal{C}_2}\)</span>. Za vsak <span
+            class="math inline">\(g \in G\)</span> dobimo <span
+            class="math display">\[\left( 1_{\mathcal{C}_1} *
+            1_{\mathcal{C}_2} \right) (g)
                 = \frac{1}{|G|} \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
-            \chi_{\pi}(1) \mathop{\mathrm{tr}}\left( \widehat{1_{C_1} *
-            1_{C_2}}(\pi) \cdot \pi(g) \right).\]</span> Trditev zdaj
-            sledi iz zadnje leme. ◻</p>
+            \chi_{\pi}(1) \mathop{\mathrm{tr}}\left(
+            \widehat{1_{\mathcal{C}_1} * 1_{\mathcal{C}_2}}(\pi) \cdot
+            \pi(g) \right).\]</span> Trditev zdaj sledi iz zadnje
+            leme. ◻</p>
             </div>
             <h3 id="komutatorji">Komutatorji</h3>
             <p>Oglejmo si še en čisto nekomutativen problem, ki na prvi
@@ -4769,28 +5065,30 @@
             elementa, ki je konjugiran <span
             class="math inline">\(x\)</span>. Vsakemu takemu paru <span
             class="math inline">\((x,y)\)</span> lahko zato priredimo
-            konjugiranostni razred <span class="math inline">\(C=
-            x^G\)</span> in elementa <span class="math inline">\(a =
-            x^{-1} \in C^{-1}\)</span> ter <span class="math inline">\(b
-            = y^{-1} x y \in C\)</span>, za katera velja <span
+            konjugiranostni razred <span
+            class="math inline">\(\mathcal{C}= x^G\)</span> in elementa
+            <span class="math inline">\(a = x^{-1} \in
+            \mathcal{C}^{-1}\)</span> ter <span class="math inline">\(b
+            = y^{-1} x y \in \mathcal{C}\)</span>, za katera velja <span
             class="math inline">\(a \cdot b = g\)</span>. S tem smo
             opisali prirejanje <span class="math display">\[\psi \colon
             \{ (x,y) \in G \times G \mid g = [x,y] \} \to
-                \{ (C, a, b) \mid C= (a^{-1})^G, \ b \in C,\ a \cdot b =
-            g \}.\]</span> To prirejanje <em>ni</em> injektivno, saj s
-            trojico <span class="math inline">\((C,a,b)\)</span> element
+                \{ (\mathcal{C}, a, b) \mid \mathcal{C}= (a^{-1})^G, \ b
+            \in \mathcal{C},\ a \cdot b = g \}.\]</span> To prirejanje
+            <em>ni</em> injektivno, saj s trojico <span
+            class="math inline">\((\mathcal{C},a,b)\)</span> element
             <span class="math inline">\(y\)</span> ni enolično določen,
             pač pa le do odseka po centralizatorju <span
             class="math inline">\(C_G(a^{-1}) = C_G(a)\)</span>
             natančno.<a href="#fn45" class="footnote-ref" id="fnref45"
             role="doc-noteref"><sup>45</sup></a> Torej je <span
-            class="math inline">\(|\psi^{-1}(C,a,b)| = |C_G(a)| =
-            |G|/|C|\)</span>. S tem lahko izrazimo <span
-            class="math display">\[N(g) = \sum_{C} \frac{|G|}{|C|} \cdot
-            |\{ (a,b) \in G \times G \mid a \in C^{-1}, \ b \in C, \ a
-            \cdot b = g \}|,\]</span> kjer vsota teče po vseh
-            konjugiranostnih razredih grupe <span
-            class="math inline">\(G\)</span>.</p>
+            class="math inline">\(|\psi^{-1}(\mathcal{C},a,b)| =
+            |C_G(a)| = |G|/|\mathcal{C}|\)</span>. S tem lahko izrazimo
+            <span class="math display">\[N(g) = \sum_{\mathcal{C}}
+            \frac{|G|}{|\mathcal{C}|} \cdot |\{ (a,b) \in G \times G
+            \mid a \in \mathcal{C}^{-1}, \ b \in \mathcal{C}, \ a \cdot
+            b = g \}|,\]</span> kjer vsota teče po vseh konjugiranostnih
+            razredih grupe <span class="math inline">\(G\)</span>.</p>
             <p>Dobljeni zapis funkcije <span
             class="math inline">\(N\)</span> je priročen, ker je izražen
             le s konjugiranostnimi razredi in je neodvisen od izbire
@@ -4798,22 +5096,25 @@
             gnetenje s Fourierovo transformacijo. Najprej opazimo, da
             lahko drugi faktor zadnje vsote zapišemo kot <span
             class="math display">\[\sum_{a,b \in G, \ a \cdot b = g}
-            1_{C^{-1}}(a) \cdot 1_{C}(b) = \left( 1_{C^{-1}} * 1_{C}
-            \right) (g),\]</span> zato je <span
-            class="math display">\[N(g) = \sum_{C} \frac{|G|}{|C|} \cdot
-            \left( 1_{C^{-1}} * 1_{C} \right) (g).\]</span> Konvolucijo
-            lahko po Fourierovi inverziji razvijemo po karakterjih in
-            dobimo <span class="math display">\[N(g) = \sum_{C}
-            \frac{|G|}{|C|} \cdot \frac{|C|^2}{|G|} \sum_{\pi \in
+            1_{\mathcal{C}^{-1}}(a) \cdot 1_{\mathcal{C}}(b) = \left(
+            1_{\mathcal{C}^{-1}} * 1_{\mathcal{C}} \right) (g),\]</span>
+            zato je <span class="math display">\[N(g) =
+            \sum_{\mathcal{C}} \frac{|G|}{|\mathcal{C}|} \cdot \left(
+            1_{\mathcal{C}^{-1}} * 1_{\mathcal{C}} \right) (g).\]</span>
+            Konvolucijo lahko po Fourierovi inverziji razvijemo po
+            karakterjih in dobimo <span class="math display">\[N(g) =
+            \sum_{\mathcal{C}} \frac{|G|}{|\mathcal{C}|} \cdot
+            \frac{|\mathcal{C}|^2}{|G|} \sum_{\pi \in
             \mathop{\mathrm{Irr}}(G)}
-            \frac{|\chi_{\pi}(C)|^2}{\chi_{\pi}(1)} \chi_{\pi}(g)
+            \frac{|\chi_{\pi}(\mathcal{C})|^2}{\chi_{\pi}(1)}
+            \chi_{\pi}(g)
                 = \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
-            \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)} \sum_{C} |C| \cdot
-            |\chi_{\pi}(C)|^2.\]</span> Zadnja vsota je ravno enaka
-            <span class="math inline">\(|G| \cdot \langle \chi_{\pi},
-            \chi_{\pi} \rangle = |G|\)</span>, zato nazadnje sklenemo
-            <span class="math display">\[N(g) = |G| \cdot \sum_{\pi \in
-            \mathop{\mathrm{Irr}}(G)}
+            \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)} \sum_{\mathcal{C}}
+            |\mathcal{C}| \cdot |\chi_{\pi}(\mathcal{C})|^2.\]</span>
+            Zadnja vsota je ravno enaka <span class="math inline">\(|G|
+            \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle = |G|\)</span>,
+            zato nazadnje sklenemo <span class="math display">\[N(g) =
+            |G| \cdot \sum_{\pi \in \mathop{\mathrm{Irr}}(G)}
             \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)}.\]</span> Dobljen izraz
             za število načinov, na katere lahko <span
             class="math inline">\(g\)</span> zapišemo kot komutator v
