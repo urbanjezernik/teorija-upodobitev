@@ -3,6 +3,8 @@
 
 # grupa
 g := AlternatingGroup(5);
+# g := GL(2,3);
+# g := Group([ (1,3,5)(2,4,6)(7,11,9)(8,12,10), (3,9,4,10)(5,7)(6,8)(11,12) ]);
 
 # naštejemo elemente grupe 
 # in določimo predstavnike konjugiranostnih razredov
@@ -36,15 +38,35 @@ end;
 
 # določimo lastne podprostore Fourierovih transformacij 1_C
 Print("Določanje lastnih podprostorov ...\n");
+stevilo_konj_razredov := Length(predstavniki_konj_razredov);;
 lastni_podprostori := [];;
+indeks := 0;
 for c in predstavniki_konj_razredov do
+    indeks := indeks + 1;
+    Print(indeks, "\t/", stevilo_konj_razredov, "\r");
     Append(lastni_podprostori, [Eigenspaces(CF(Exponent(g)), fourier_konj_razreda(c))]);
 od;
 
-# izračunamo preseke lastnih podprostorov in izluščimo netrivialne
+# izračunamo netrivialne preseke lastnih podprostorov
 # to so ravno vse izotipične komponente
 Print("Določanje presekov lastnih podprostorov ...\n");
-izotipicne_komponente := Filtered(List(Cartesian(lastni_podprostori), Intersection), x -> Dimension(x) > 0);;
+kandidati := lastni_podprostori[1];
+indeks := 0;
+for novi_podprostori in lastni_podprostori do
+    indeks := indeks + 1;
+    Print(indeks, "\t/", stevilo_konj_razredov, "\r");
+    novi_kandidati := [];
+    for kandidat in kandidati do
+        for podprostor in novi_podprostori do
+            nov_kandidat := Intersection(kandidat, podprostor);
+            if Dimension(nov_kandidat) > 0 then
+                Append(novi_kandidati, [nov_kandidat]);
+            fi;
+        od;
+    od;
+    kandidati := novi_kandidati;
+od;
+izotipicne_komponente := kandidati;
 
 # funkcija za Gram-Schmidtovo ortogonalizacijo dane množice vektorjev
 gram_schmidt := function (vektorji) 
@@ -85,4 +107,3 @@ for i in [1..Length(izotipicne_komponente)] do
         Print("chi_", i, "(", c, ") = ", vrednost_karakterja, "\n");
     od;
 od;
-
