@@ -4431,10 +4431,183 @@
             smo nazadnje izpeljali <span class="math inline">\(W =
             \mathop{\mathrm{Izotip}}_{\rho_{\mathop{\mathrm{fun}}}}(\pi)\)</span>. ◻</p>
             </div>
-            <p>Implementacija predstavljenega algoritma za izračun
-            tabele karakterjev v programskem jeziku
-            <strong>GAP</strong> je dostopna <a
+            <p>S to karakterizacijo izotipičnih komponent lahko opišemo
+            algoritem za izračun tabele karakterjev. Najprej oštevilčimo
+            elemente grupe <span class="math inline">\(G\)</span> kot
+            <span class="math inline">\(g_1, g_2, \dots, g_|G|\)</span>
+            in pripravimo vektorski prostor <span
+            class="math inline">\(F^{|G|} \cong \hom(G,F)\)</span> s
+            standardno bazo <span class="math inline">\(e_i\)</span>, ki
+            ustreza karakteristični funkciji <span
+            class="math inline">\(1_{g_i}\)</span>. Izračunamo še
+            konjugiranostne razrede grupe <span
+            class="math inline">\(G\)</span> in iz vsakega izberemo
+            predstavnika. Pripravimo funkcijo, ki izračuna matriko
+            regularne upodobitve <span
+            class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>
+            v poljubnem elementu <span class="math inline">\(x \in
+            G\)</span>, in za tem še funkcijo, ki izračuna matriko
+            Fourierove transformacije <span
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\hom})\)</span>
+            za konjugiranostni razred <span
+            class="math inline">\(\mathcal{C}\)</span>. Izračunamo
+            lastne podprostore vseh teh matrik in za tem vse njihove
+            netrivialne preseke. Te so ravno izotipične komponente. V
+            vsaki komponenti <span class="math inline">\(W\)</span>
+            izberemo bazo, v kateri izračunamo sled zožitve matrike
+            <span
+            class="math inline">\(\rho_{\mathop{\mathrm{fun}}}(x)\)</span>
+            na <span class="math inline">\(W\)</span>. Ker je <span
+            class="math inline">\(W\)</span> kot upodobitev izomorfen
+            direktni vsoti <span
+            class="math inline">\(\deg(\pi)\)</span> kopij neke
+            nerazcepne upodobitve <span
+            class="math inline">\(\pi\)</span>, velja <span
+            class="math inline">\(\dim(W) = \deg(\pi)^2\)</span> in zato
+            <span
+            class="math display">\[\mathop{\mathrm{tr}}(\rho_{\mathop{\mathrm{fun}}}(x)
+            |_W) = \sqrt{\dim(W)} \cdot \chi_{\pi}(x).\]</span> Iz
+            izračunane sledi torej lahko določimo vrednost pripadajočega
+            karakterja v predstavnikih konjugiranostnih razredov.
+            Implementacija predstavljenega algoritma za izračun tabele
+            karakterjev nad <span
+            class="math inline">\(\mathbf{C}\)</span> v programskem
+            jeziku <strong>GAP</strong> je dostopna <a
             href="https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g">tukaj</a>.</p>
+            <div class="zgled">
+            <p><strong>Zgled 3.8</strong>. Opazujmo alternirajočo grupo
+            <span class="math inline">\(A_5\)</span> nad poljem <span
+            class="math inline">\(\mathbf{C}\)</span>. Z opisanim
+            algoritmom hitro izračunamo njeno tabelo karakterjev.</p>
+            <table>
+            <caption>Tabela karakterjev <span
+            class="math inline">\(A_5\)</span>, kjer je <span
+            class="math inline">\(\zeta = e^{2 \pi i /
+            5}\)</span></caption>
+            <thead>
+            <tr class="header">
+            <th style="text-align: center;"></th>
+            <th style="text-align: center;"><span
+            class="math inline">\(()\)</span></th>
+            <th style="text-align: center;"><span
+            class="math inline">\((1 \ 2)(3 \ 4)\)</span></th>
+            <th style="text-align: center;"><span
+            class="math inline">\((1 \ 2 \ 3)\)</span></th>
+            <th style="text-align: center;"><span
+            class="math inline">\((1 \ 2 \ 3 \ 4 \ 5)\)</span></th>
+            <th style="text-align: center;"><span
+            class="math inline">\((1 \ 2 \ 3 \ 5 \ 4)\)</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="odd">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            </tr>
+            <tr class="even">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_2\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(5\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(0\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(0\)</span></td>
+            </tr>
+            <tr class="odd">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_3\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(4\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(0\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-1\)</span></td>
+            </tr>
+            <tr class="even">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_4\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(3\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(0\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-\zeta^2-\zeta^3\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-\zeta-\zeta^4\)</span></td>
+            </tr>
+            <tr class="odd">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_5\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(3\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(0\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-\zeta-\zeta^4\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(-\zeta^2-\zeta^3\)</span></td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+            <p>Predstavljeni algoritem ima mnogo pomanjkljivosti. V
+            programskem jeziku <strong>GAP</strong> je za izračun tabele
+            karakterjev implementiran algoritem <a
+            href="https://www.sciencedirect.com/science/article/pii/S0747717108800776">(Dixon
+            1967, Schneider 1990)</a>, ki izboljša predstavljenega na
+            naslednja dva načina.</p>
+            <ol>
+            <li><p>S predstavljenim algoritmom bomo težko izračunali
+            tabelo karakterjev kakšne zelo velike grupe, saj moramo v
+            postopku diagonalizirati matrike velikosti <span
+            class="math inline">\(|G| \times |G|\)</span>. Algoritem v
+            <strong>GAP</strong> sicer temelji na enaki ideji iskanja
+            skupnih lastnih podprostorov, a pri tem ne opazuje regularne
+            upodobitve, temveč upošteva abstraktne formule med
+            karakterji in iz njih izpelje matrike velikosti <span
+            class="math inline">\(\mathop{\mathrm{k}}(G) \times
+            \mathop{\mathrm{k}}(G)\)</span>, katerih skupni lastni
+            vektorji so bolj ali manj karakterji. Ker je <span
+            class="math inline">\(\mathop{\mathrm{k}}(G)\)</span>
+            bistveno manjše od <span class="math inline">\(|G|\)</span>,
+            je ta izračun mnogo lažji in hitrejši.</p></li>
+            <li><p>Za izračun natančnih vrednosti karakterjev moramo vse
+            račune izvajati eksaktno in brez približkov. Numerične
+            metode, ki jih sicer lahko uporabimo za hitro računanje
+            lastnih vrednosti velikih matrik, torej odpadejo. Programski
+            jezik <strong>GAP</strong> zna računati simbolično, a je to
+            lahko precej zamudno. Algoritem v <strong>GAP</strong> se
+            temu izogne tako, da večino računov opravi nad poljem <span
+            class="math inline">\(\mathbf{F}_p\)</span> za ustrezno
+            izbrano dovolj veliko praštevilo <span
+            class="math inline">\(p\)</span>, potem pa te rezultate
+            prenese nazaj nad <span
+            class="math inline">\(\mathbf{C}\)</span>. Vsi računi so
+            zato hitri in eksaktni.</p></li>
+            </ol>
             <h3 id="kompleksne-upodobitve">Kompleksne upodobitve</h3>
             <p>Splošno teorijo upodobitev končnih grup zaključimo z
             upodobitvami nad najugodnejšim poljem <span
@@ -4662,7 +4835,7 @@
             skalarnim produktom, glede na katerega je dana upodobitev
             unitarna.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.8</strong>. Končna grupa deluje z
+            <p><strong>Zgled 3.9</strong>. Končna grupa deluje z
             regularno upodobitvijo <span
             class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>
             na prostoru funkcij <span

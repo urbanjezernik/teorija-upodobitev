@@ -1866,9 +1866,35 @@ Projektor $P_{\pi}$ ima seveda le dve možni lastni vrednosti: $0$ in $1$. Ker j
 Vemo že, kako deluje $\widehat{1_{\conclass}}(\rho_{\fun})$ na $\pi$-izotipični komponenti, od koder določimo skalarje kot $\lambda_{\conclass} = |\conclass| \cdot \chi_{\pi}(\conclass^{-1})/\chi_{\pi}(1)$. Iz definicije $W$ zdaj sledi, da je $\pi$-izotipična komponenta vsebovana v $W$, s čimer smo nazadnje izpeljali $W = \Izotip_{\rho_{\fun}}(\pi)$.
 \end{dokaz}
 
-Implementacija predstavljenega algoritma za izračun tabele karakterjev v programskem jeziku \GAP~je dostopna \href{https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g}{tukaj}.
+S to karakterizacijo izotipičnih komponent lahko opišemo algoritem za izračun tabele karakterjev. Najprej oštevilčimo elemente grupe $G$ kot $g_1, g_2, \dots, g_|G|$ in pripravimo vektorski prostor $F^{|G|} \cong \hom(G,F)$ s standardno bazo $e_i$, ki ustreza karakteristični funkciji $1_{g_i}$. Izračunamo še konjugiranostne razrede grupe $G$ in iz vsakega izberemo predstavnika. Pripravimo funkcijo, ki izračuna matriko regularne upodobitve $\rho_{\fun}$ v poljubnem elementu $x \in G$, in za tem še funkcijo, ki izračuna matriko Fourierove transformacije $\widehat{1_{\conclass}}(\rho_{\hom})$ za konjugiranostni razred $\conclass$. Izračunamo lastne podprostore vseh teh matrik in za tem vse njihove netrivialne preseke. Te so ravno izotipične komponente. V vsaki komponenti $W$ izberemo bazo, v kateri izračunamo sled zožitve matrike $\rho_{\fun}(x)$ na $W$. Ker je $W$ kot upodobitev izomorfen direktni vsoti $\deg(\pi)$ kopij neke nerazcepne upodobitve $\pi$, velja $\dim(W) = \deg(\pi)^2$ in zato
+\[
+    \tr(\rho_{\fun}(x) |_W) = \sqrt{\dim(W)} \cdot \chi_{\pi}(x).
+\]
+Iz izračunane sledi torej lahko določimo vrednost pripadajočega karakterja v predstavnikih konjugiranostnih razredov. Implementacija predstavljenega algoritma za izračun tabele karakterjev nad $\CC$ v programskem jeziku \GAP~je dostopna \href{https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g}{tukaj}.
 
-\todo{Omeni boljši algoritem, ki ga uporablja GAP: 1. hitrejši, ker so matrike manjše. 2. nad končnim poljem, zato so računi eksaktni.}
+\begin{zgled}
+Opazujmo alternirajočo grupo $A_5$ nad poljem $\CC$. Z opisanim algoritmom hitro izračunamo njeno tabelo karakterjev.
+
+\begin{table}[h!]
+    \centering
+\begin{tabular}{c|ccccc}
+    & $()$ & $(1 \ 2)(3 \ 4)$ & $(1 \ 2 \ 3)$ & $(1 \ 2 \ 3 \ 4 \ 5)$ & $(1 \ 2 \ 3 \ 5 \ 4)$ \\ \hline
+    $\chi_1$ & $1$ & $1$ & $1$ & $1$ & $1$ \\
+    $\chi_2$ & $5$ & $1$ & $-1$ & $0$ & $0$ \\
+    $\chi_3$ & $4$ & $0$ & $1$ & $-1$ & $-1$ \\
+    $\chi_4$ & $3$ & $-1$ & $0$ & $-\zeta^2-\zeta^3$ & $-\zeta-\zeta^4$ \\
+    $\chi_5$ & $3$ & $-1$ & $0$ & $-\zeta-\zeta^4$ & $-\zeta^2-\zeta^3$ \\
+\end{tabular}
+\caption{Tabela karakterjev $A_5$, kjer je $\zeta = e^{2 \pi i / 5}$}
+\end{table}
+\end{zgled}
+
+Predstavljeni algoritem ima mnogo pomanjkljivosti. V programskem jeziku \GAP~je za izračun tabele karakterjev implementiran algoritem \href{https://www.sciencedirect.com/science/article/pii/S0747717108800776}{(Dixon 1967, Schneider 1990)}, ki izboljša predstavljenega na naslednja dva načina.
+\begin{enumerate}
+    \item S predstavljenim algoritmom bomo težko izračunali tabelo karakterjev kakšne zelo velike grupe, saj moramo v postopku diagonalizirati matrike velikosti $|G| \times |G|$. Algoritem v \GAP~sicer temelji na enaki ideji iskanja skupnih lastnih podprostorov, a pri tem ne opazuje regularne upodobitve, temveč upošteva abstraktne formule med karakterji in iz njih izpelje matrike velikosti $\kk(G) \times \kk(G)$, katerih skupni lastni vektorji so bolj ali manj karakterji. Ker je $\kk(G)$ bistveno manjše od $|G|$, je ta izračun mnogo lažji in hitrejši.
+    
+    \item Za izračun natančnih vrednosti karakterjev moramo vse račune izvajati eksaktno in brez približkov. Numerične metode, ki jih sicer lahko uporabimo za hitro računanje lastnih vrednosti velikih matrik, torej odpadejo. Programski jezik \GAP~zna računati simbolično, a je to lahko precej zamudno. Algoritem v \GAP~se temu izogne tako, da večino računov opravi nad poljem $\FF_p$ za ustrezno izbrano dovolj veliko praštevilo $p$, potem pa te rezultate prenese nazaj nad $\CC$. Vsi računi so zato hitri in eksaktni.
+\end{enumerate}
 
 \subsection{Kompleksne upodobitve}
 
