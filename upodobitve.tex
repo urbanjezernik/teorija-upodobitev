@@ -2107,7 +2107,18 @@ Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, k
 \[
     K(G) = \{ [x,y] \mid x,y \in G \}.
 \]
-Ta množica v splošnem \emph{ni} podgrupa, zato je teoriji grup vsekakor v interesu, da bi razumela, kdaj dan element $g \in G$ pripada množici $K(G)$. Lahko smo celo bolj natančni in se vprašamo, na koliko načinov lahko $g$ zapišemo kot komutator. V ta namen predpišimo funkcijo
+Ta množica v splošnem \emph{ni} podgrupa.
+
+\begin{zgled}
+V okolju \GAP~se ni težko prepričati, da je najmanjša\footnote{Natančneje, obstajata dve taki neizomorfni grupi.} grupa $G$, v kateri $K(G)$ ne sovpada z izvedeno podgrupo $[G,G] = \langle K(G) \rangle$, moči $96$. Podamo jo lahko v njeni permutacijski obliki kot podgrupo $S_{12}$, generirano s permutacijama
+\[
+    x = (1 \ 3 \ 5)(2 \ 4 \ 6)(7 \ 11 \ 9)(8 \ 12 \ 10), \quad
+    y = (3 \ 9 \ 4 \ 10)(5 \ 7)(6 \ 8)(11 \ 12).
+\]
+Hitro izračunamo, da je $|K(G)| = 29$, torej $K(G)$ vsekakor ni podgrupa $G$. Izvedena podgrupa je le nekoliko večja, $|[G,G]| = 32$. Primer elementa v $[G,G]$, ki ni hkrati v $K(G)$, je permutacija $(5 \ 6)(7 \ 8)$. 
+\end{zgled}
+
+V luči zgleda je teoriji grup vsekakor v interesu, da bi razumela, kdaj dan element $g \in G$ pripada množici $K(G)$. Lahko smo celo bolj natančni in se vprašamo, na koliko načinov lahko $g$ zapišemo kot komutator. V ta namen predpišimo funkcijo
 \[
     N \colon G \to \NN_0, \quad
     g \mapsto |\{ (x,y) \in G \times G \mid g = [x,y] \}|.
@@ -2150,7 +2161,11 @@ Dobljen izraz za število načinov, na katere lahko $g$ zapišemo kot komutator 
 \]
 slednji pogoj pa lahko preberemo neposredno iz tabele karakterjev grupe.
 
-\todo{Primer grupe s tabelo karakterjev in njene podmnožice komutatorjev.}
+\begin{zgled}
+Naj bo $G$ grupa moči $96$ iz zadnjega zgleda. Z algoritmom iz prejšnjega razdelka lahko hitro izračunamo njeno tabelo karakterjev. Grupa ima sicer $12$ razredov za konjugiranje, zato je njena tabela karakterjev kar velika. Iz nje lahko razberemo, da je element $(5 \ 6)(7 \ 8)$ v jedru vseh linearnih upodobitev, zato pripada izvedeni podgrupi $[G,G]$. Hkrati pa z uporabo Frobeniusove formule izračunamo, da ta element \emph{ne} pripada $K(G)$. Njegov konjugiranostni razred v $G$ sestoji iz treh elementov. Ko te elemente dodamo množici $K(G)$, dobimo ravno $[G,G]$.
+\end{zgled}
+
+\todo{Primer: komutatorji v $GL_2$ so ravno $SL_2$.}
 
 \todo[inline]{omeni LOST Ore domneva}
 

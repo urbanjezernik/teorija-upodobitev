@@ -5027,9 +5027,33 @@
             role="doc-noteref"><sup>44</sup></a> v <span
             class="math inline">\(G\)</span>, se pravi <span
             class="math display">\[K(G) = \{ [x,y] \mid x,y \in G
-            \}.\]</span> Ta množica v splošnem <em>ni</em> podgrupa,
-            zato je teoriji grup vsekakor v interesu, da bi razumela,
-            kdaj dan element <span class="math inline">\(g \in
+            \}.\]</span> Ta množica v splošnem <em>ni</em> podgrupa.</p>
+            <div class="zgled">
+            <p><strong>Zgled 3.10</strong>. V okolju
+            <strong>GAP</strong> se ni težko prepričati, da je
+            najmanjša<a href="#fn45" class="footnote-ref" id="fnref45"
+            role="doc-noteref"><sup>45</sup></a> grupa <span
+            class="math inline">\(G\)</span>, v kateri <span
+            class="math inline">\(K(G)\)</span> ne sovpada z izvedeno
+            podgrupo <span class="math inline">\([G,G] = \langle K(G)
+            \rangle\)</span>, moči <span
+            class="math inline">\(96\)</span>. Podamo jo lahko v njeni
+            permutacijski obliki kot podgrupo <span
+            class="math inline">\(S_{12}\)</span>, generirano s
+            permutacijama <span class="math display">\[x = (1 \ 3 \ 5)(2
+            \ 4 \ 6)(7 \ 11 \ 9)(8 \ 12 \ 10), \quad
+                y = (3 \ 9 \ 4 \ 10)(5 \ 7)(6 \ 8)(11 \ 12).\]</span>
+            Hitro izračunamo, da je <span class="math inline">\(|K(G)| =
+            29\)</span>, torej <span class="math inline">\(K(G)\)</span>
+            vsekakor ni podgrupa <span class="math inline">\(G\)</span>.
+            Izvedena podgrupa je le nekoliko večja, <span
+            class="math inline">\(|[G,G]| = 32\)</span>. Primer elementa
+            v <span class="math inline">\([G,G]\)</span>, ki ni hkrati v
+            <span class="math inline">\(K(G)\)</span>, je permutacija
+            <span class="math inline">\((5 \ 6)(7 \ 8)\)</span>.</p>
+            </div>
+            <p>V luči zgleda je teoriji grup vsekakor v interesu, da bi
+            razumela, kdaj dan element <span class="math inline">\(g \in
             G\)</span> pripada množici <span
             class="math inline">\(K(G)\)</span>. Lahko smo celo bolj
             natančni in se vprašamo, na koliko načinov lahko <span
@@ -5080,8 +5104,8 @@
             <span class="math inline">\(y\)</span> ni enolično določen,
             pač pa le do odseka po centralizatorju <span
             class="math inline">\(C_G(a^{-1}) = C_G(a)\)</span>
-            natančno.<a href="#fn45" class="footnote-ref" id="fnref45"
-            role="doc-noteref"><sup>45</sup></a> Torej je <span
+            natančno.<a href="#fn46" class="footnote-ref" id="fnref46"
+            role="doc-noteref"><sup>46</sup></a> Torej je <span
             class="math inline">\(|\psi^{-1}(\mathcal{C},a,b)| =
             |C_G(a)| = |G|/|\mathcal{C}|\)</span>. S tem lahko izrazimo
             <span class="math display">\[N(g) = \sum_{\mathcal{C}}
@@ -5127,6 +5151,26 @@
             \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)} \neq 0,\]</span> slednji
             pogoj pa lahko preberemo neposredno iz tabele karakterjev
             grupe.</p>
+            <div class="zgled">
+            <p><strong>Zgled 3.11</strong>. Naj bo <span
+            class="math inline">\(G\)</span> grupa moči <span
+            class="math inline">\(96\)</span> iz zadnjega zgleda. Z
+            algoritmom iz prejšnjega razdelka lahko hitro izračunamo
+            njeno tabelo karakterjev. Grupa ima sicer <span
+            class="math inline">\(12\)</span> razredov za konjugiranje,
+            zato je njena tabela karakterjev kar velika. Iz nje lahko
+            razberemo, da je element <span class="math inline">\((5 \
+            6)(7 \ 8)\)</span> v jedru vseh linearnih upodobitev, zato
+            pripada izvedeni podgrupi <span
+            class="math inline">\([G,G]\)</span>. Hkrati pa z uporabo
+            Frobeniusove formule izračunamo, da ta element <em>ne</em>
+            pripada <span class="math inline">\(K(G)\)</span>. Njegov
+            konjugiranostni razred v <span
+            class="math inline">\(G\)</span> sestoji iz treh elementov.
+            Ko te elemente dodamo množici <span
+            class="math inline">\(K(G)\)</span>, dobimo ravno <span
+            class="math inline">\([G,G]\)</span>.</p>
+            </div>
             <h3 id="slučajni-sprehodi">Slučajni sprehodi</h3>
             <h1 id="upodobitve-linearnih-grup">Upodobitve linearnih
             grup</h1>
@@ -5417,9 +5461,12 @@
             element <span class="math inline">\([x,y] = x^{-1} y^{-1} x
             y\)</span>.<a href="#fnref44" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn45" role="doc-endnote"><p>Velja namreč zveza <span
+            <li id="fn45" role="doc-endnote"><p>Natančneje, obstajata
+            dve taki neizomorfni grupi.<a href="#fnref45"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn46" role="doc-endnote"><p>Velja namreč zveza <span
             class="math inline">\(b = y^{-1} a^{1} y\)</span>.<a
-            href="#fnref45" class="footnote-back"
+            href="#fnref46" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>
