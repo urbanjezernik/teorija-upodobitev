@@ -76,8 +76,8 @@
 \DeclareMathOperator\cl{cl}
 \def\GAP{\textbf{GAP}}
 \DeclareMathOperator\inv{inv}
-\DeclareMathOperator\Eigenvalues{LVrednosti}
-\DeclareMathOperator\Eigenspace{LPodprostor}
+\DeclareMathOperator\Eigenvalues{Spec}
+\DeclareMathOperator\Eigenspace{E}
 \DeclareMathOperator\fun{fun}
 \DeclareMathOperator\HS{HS}
 
@@ -1845,7 +1845,7 @@ Naj bo
 \[
     \textstyle W = \bigcap_{\conclass} \Eigenspace_{\lambda_{\conclass}}\left(\widehat{1_{\conclass}}(\rho_{\fun})\right) \leq \fun(G,F)
 \]
-za neke skalarje $\lambda_{\conclass}$, kjer presek teče po vseh konjugiranostnih razredih grupe $G$. Predpostavimo, da je $W \neq 0$. Naj bo $w \in W$. Za $\pi \in \Irr(G)$ naj bo $P_{\pi}$ projekcija na $\pi$-izotipično komponento. Velja
+presek lastnih podprostorov za neke skalarje $\lambda_{\conclass}$, kjer presek teče po vseh konjugiranostnih razredih grupe $G$. Predpostavimo, da je $W \neq 0$. Naj bo $w \in W$. Za $\pi \in \Irr(G)$ naj bo $P_{\pi}$ projekcija na $\pi$-izotipično komponento. Velja
 \[
     P_{\pi} \cdot w = \frac{\chi_{\pi}(1)}{|G|} \widehat{\chi_{\pi}}(\rho_{\fun}) \cdot w =
     \frac{\chi_{\pi}(1)}{|G|} \sum_{g \in G} \chi_{\pi}(g) \rho_{\fun}(g^{-1}) \cdot w.
@@ -2034,14 +2034,16 @@ to je {\definicija Hilbert-Schmidtov skalarni produkt}. Parsevalov izrek nam tor
 
 \section{Razširjeni zgledi}
 
-\subsection{$\GL_2(\FF_p)$}
-
 \subsection{$S_n$}
 
 \todo[inline]{
 - https://mathoverflow.net/questions/10635/why-are-the-characters-of-the-symmetric-group-integer-valued
 - https://link.springer.com/content/pdf/10.1007/s00209-014-1290-x.pdf
 }
+
+\subsection{$\GL_2(\FF_p)$}
+
+\todo[inline]{Omeni Kazhdan-Lusztig teorijo, generične tabele karakterjev: https://icerm.brown.edu/materials/Slides/tw-18-7/Character_tables_of_finite_groups_]_Gunter_Malle,_Technische_Universität_Kaiserslautern.pdf}
 
 \section{Aplikacije}
 
