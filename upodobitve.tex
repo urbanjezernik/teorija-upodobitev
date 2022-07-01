@@ -1311,7 +1311,7 @@ V grupi $S_3$ je vsak element konjugiran enemu od $()$, $(1 \ 2)$ ali $(1 \ 2 \ 
 
 Vse podatke o vrednostih karakterjev dane grupe ponavadi zložimo v {\definicija tabelo karakterjev}. Stolpce indeksiramo s predstavniki konjugiranostnih razredov, vrstice pa z nerazcepnimi karakterji. Vrednosti v tabeli so vrednosti karakterjev v konjugiranostnih razredih.
 
-\begin{table}[h!]
+\begin{table}[t]
      \centering
 \begin{tabular}{c|ccc}
      & $()$ & $(1 \ 2)$ & $(1 \ 2 \ 3)$ \\ \hline
@@ -1736,7 +1736,7 @@ zato je upodobitev $\rho$ nerazcepna.
 
 Zaenkrat imamo tri nerazcepne upodobitve stopenj $1,1,3$. Iščemo torej še dve nerazcepni upodobitvi, katerih vsote kvadratov stopenj so enake $24 - (1^2 + 1^2 + 3^2) = 13$. Stopnji teh dveh neznanih upodobitev sta zato nujno enaki $2$ in $3$. Ker že imamo eno nerazcepno upodobitev stopnje $3$, lahko iz nje pridelamo novo s tenzoriranjem z upodobitvijo stopnje $1$. Dobimo upodobitev $\sgn \otimes \rho$. Njen karakter ima vrednosti $3,-1,0,1,-1$ in s tem normo $1$, zato je upodobitev $\sgn \otimes \rho$ res nerazcepna. Nazadnje nam torej manjka le še ena upodobitev stopnje $2$. Imenujmo jo $\tau$. Čeprav je ne poznamo, lahko iz ortonormiranosti karakterjev določimo njen karakter $\chi_{\tau}$ kot natanko tisto razredno funkcijo, ki je ortogonalna na vse poznane neracepne karakterje in je norme $1$. Na ta način dobimo vrednosti $2,0,-1,0,2$. S tem smo nazadnje določili celotno tabelo karakterjev grupe $S_4$ nad $\CC$.\footnote{Zanimivo je, da smo uspeli določiti tabelo karakterjev, brez da bi eksplicitno poznali vse upodobitve. }
 
-\begin{table}[h!]
+\begin{table}[t]
     \centering
 \begin{tabular}{c|ccccc}
     & $()$ & $(1 \ 2)$ & $(1 \ 2 \ 3)$ &  $(1 \ 2 \ 3 \ 4)$ &  $(1 \ 2)(3 \ 4)$\\ \hline
@@ -1843,7 +1843,7 @@ Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|
 \begin{dokaz}
 Naj bo
 \[
-    W = \bigcap_{\conclass} \Eigenspace_{\lambda_{\conclass}}\left(\widehat{1_{\conclass}}(\rho_{\fun})\right) \leq \fun(G,F)
+    \textstyle W = \bigcap_{\conclass} \Eigenspace_{\lambda_{\conclass}}\left(\widehat{1_{\conclass}}(\rho_{\fun})\right) \leq \fun(G,F)
 \]
 za neke skalarje $\lambda_{\conclass}$, kjer presek teče po vseh konjugiranostnih razredih grupe $G$. Predpostavimo, da je $W \neq 0$. Naj bo $w \in W$. Za $\pi \in \Irr(G)$ naj bo $P_{\pi}$ projekcija na $\pi$-izotipično komponento. Velja
 \[
@@ -1857,11 +1857,11 @@ Vsoto lahko razvijemo po vsakem konjugiranostnem razredu posebej in dobimo
 \]
 kjer smo v enakosti upoštevali, da je $w \in W$. Od tod sledi
 \[
-    W \leq \Eigenspace_{\frac{\chi_{\pi}(1)}{|G|} \sum_{\conclass} \chi_{\pi}(\conclass) \lambda_{\conclass}}(P_{\pi}).
+    \textstyle W \leq \Eigenspace_{\frac{\chi_{\pi}(1)}{|G|} \sum_{\conclass} \chi_{\pi}(\conclass) \lambda_{\conclass}}(P_{\pi}).
 \]
 Projektor $P_{\pi}$ ima seveda le dve možni lastni vrednosti: $0$ in $1$. Ker je po predpostavki $W \neq 0$, ne mora biti za vse $\pi \in \Irr(G)$ projekcija na $\pi$-izotipično komponento ničelna na $W$. Torej je za nek $\pi$ nujno
 \[
-    W \leq \Eigenspace_{1}(P_{\pi}) = \Izotip_{\rho_{\fun}}(\pi).
+    \textstyle W \leq \Eigenspace_{1}(P_{\pi}) = \Izotip_{\rho_{\fun}}(\pi).
 \]
 Vemo že, kako deluje $\widehat{1_{\conclass}}(\rho_{\fun})$ na $\pi$-izotipični komponenti, od koder določimo skalarje kot $\lambda_{\conclass} = |\conclass| \cdot \chi_{\pi}(\conclass^{-1})/\chi_{\pi}(1)$. Iz definicije $W$ zdaj sledi, da je $\pi$-izotipična komponenta vsebovana v $W$, s čimer smo nazadnje izpeljali $W = \Izotip_{\rho_{\fun}}(\pi)$.
 \end{dokaz}
@@ -1875,7 +1875,7 @@ Iz izračunane sledi torej lahko določimo vrednost pripadajočega karakterja v 
 \begin{zgled}
 Opazujmo alternirajočo grupo $A_5$ nad poljem $\CC$. Z opisanim algoritmom hitro izračunamo njeno tabelo karakterjev.
 
-\begin{table}[h!]
+\begin{table}[t]
     \centering
 \begin{tabular}{c|ccccc}
     & $()$ & $(1 \ 2)(3 \ 4)$ & $(1 \ 2 \ 3)$ & $(1 \ 2 \ 3 \ 4 \ 5)$ & $(1 \ 2 \ 3 \ 5 \ 4)$ \\ \hline
@@ -1887,6 +1887,8 @@ Opazujmo alternirajočo grupo $A_5$ nad poljem $\CC$. Z opisanim algoritmom hitr
 \end{tabular}
 \caption{Tabela karakterjev $A_5$, kjer je $\zeta = e^{2 \pi i / 5}$}
 \end{table}
+
+Iz tabele lahko razberemo kar nekaj lastnosti grupe. Poglejmo si, kako hitro premislimo, da je $A_5$ \emph{enostavna} grupa. Če bi namreč $A_5$ imela kakšno pravo netrivialno edinko $N$, potem bi kvocient $A_5/N$ imel kakšno netrivialno nerazcepno upodobitev $\rho$. Restrikcija $\Res^G_{G/N}(\rho)$ je zato netrivialna nerazcepna upodobitev grupe $A_5$ z netrivialnim jedrom $N$. Vrednost karakterja $\chi_{\rho}$ v poljubnem elementu $N$ je torej enaka $\chi_{\rho}(1)$. Iz tabele karakterjev grupe $A_5$ pa je jasno, da takega karakterja ni.
 \end{zgled}
 
 Predstavljeni algoritem ima mnogo pomanjkljivosti. V programskem jeziku \GAP~je za izračun tabele karakterjev implementiran algoritem \href{https://www.sciencedirect.com/science/article/pii/S0747717108800776}{(Dixon 1967, Schneider 1990)}, ki izboljša predstavljenega na naslednja dva načina.
@@ -2110,7 +2112,7 @@ Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, k
 Ta množica v splošnem \emph{ni} podgrupa.
 
 \begin{zgled}
-V okolju \GAP~se ni težko prepričati, da je najmanjša\footnote{Natančneje, obstajata dve taki neizomorfni grupi.} grupa $G$, v kateri $K(G)$ ne sovpada z izvedeno podgrupo $[G,G] = \langle K(G) \rangle$, moči $96$. Podamo jo lahko v njeni permutacijski obliki kot podgrupo $S_{12}$, generirano s permutacijama
+V okolju \GAP~se ni težko prepričati, da je najmanjša\footnote{Natančneje, obstajata dve taki neizomorfni grupi.} grupa $G$, v kateri $K(G)$ ne sovpada z izvedeno podgrupo $[G,G] = \langle K(G) \rangle$, moči $96$. V \GAP~je ta grupa dostopna pod imenom \texttt{SmallGroup(96, 3)}. Podamo jo lahko v njeni permutacijski obliki kot podgrupo $S_{12}$, generirano s permutacijama
 \[
     x = (1 \ 3 \ 5)(2 \ 4 \ 6)(7 \ 11 \ 9)(8 \ 12 \ 10), \quad
     y = (3 \ 9 \ 4 \ 10)(5 \ 7)(6 \ 8)(11 \ 12).
@@ -2162,10 +2164,43 @@ Dobljen izraz za število načinov, na katere lahko $g$ zapišemo kot komutator 
 slednji pogoj pa lahko preberemo neposredno iz tabele karakterjev grupe.
 
 \begin{zgled}
-Naj bo $G$ grupa moči $96$ iz zadnjega zgleda. Z algoritmom iz prejšnjega razdelka lahko hitro izračunamo njeno tabelo karakterjev. Grupa ima sicer $12$ razredov za konjugiranje, zato je njena tabela karakterjev kar velika. Iz nje lahko razberemo, da je element $(5 \ 6)(7 \ 8)$ v jedru vseh linearnih upodobitev, zato pripada izvedeni podgrupi $[G,G]$. Hkrati pa z uporabo Frobeniusove formule izračunamo, da ta element \emph{ne} pripada $K(G)$. Njegov konjugiranostni razred v $G$ sestoji iz treh elementov. Ko te elemente dodamo množici $K(G)$, dobimo ravno $[G,G]$.
+Naj bo $G = \langle x, y \rangle$ grupa moči $96$ iz zadnjega zgleda. S predstavljenim algoritmom lahko hitro izračunamo njeno tabelo karakterjev. Grupa ima sicer $12$ razredov za konjugiranje, zato je njena tabela karakterjev kar velika. 
+
+\begin{table}[t]
+    \centering
+\begin{tabular}{c|*{5}{c}}
+    & $()$ & $(5,6)(7,8)$ & $y$ & $[x,y]$ & $x$\\ \hline 
+    $\chi_{1}$ & $1$ & $1$ & $1$ & $1$ & $1$\\ 
+    $\chi_{2}$ & $1$ & $1$ & $1$ & $1$ & $\zeta$\\ 
+    $\chi_{3}$ & $1$ & $1$ & $1$ & $1$ & $\zeta^2$\\ 
+    $\chi_{4}$ & $3$ & $3$ & $-1$ & $-1$ & $0$\\ 
+    $\chi_{5}$ & $6$ & $2$ & $0$ & $0$ & $0$\\ 
+    $\chi_{6}$ & $3$ & $-1$ & $1$ & $-1+2i$ & $0$\\ 
+    $\chi_{7}$ & $3$ & $-1$ & $1$ & $-1-2i$ & $0$\\ 
+    $\chi_{8}$ & $3$ & $-1$ & $-1+2i$ & $1$ & $0$\\ 
+    $\chi_{9}$ & $3$ & $-1$ & $-1-2i$ & $1$ & $0$\\ 
+    $\chi_{10}$ & $2$ & $-2$ & $0$ & $0$ & $-1$\\ 
+    $\chi_{11}$ & $2$ & $-2$ & $0$ & $0$ & $-\zeta^2$\\ 
+    $\chi_{12}$ & $2$ & $-2$ & $0$ & $0$ & $-\zeta$\\
+\end{tabular}
+\caption{Del tabele karakterjev \texttt{SmallGroup(96, 3)}, kjer je $\zeta = e^{2 \pi i / 3}$}
+\end{table}
+
+Iz tabele lahko razberemo, da je element $[x,y]$ res komutator, saj je 
+\[
+    \sum_{i = 1}^{12} \frac{\chi_i([x,y])}{\chi_i(1)} = 
+    3 - \frac13 - 2 \cdot \frac13 + 2 \cdot \frac13 = 
+    \frac83 \neq 0.
+\]
+Po drugi strani je element $(5 \ 6)(7 \ 8)$ v jedru vseh linearnih upodobitev, zato pripada izvedeni podgrupi $[G,G]$. Hkrati pa ta element \emph{ne} pripada $K(G)$, saj je 
+\[
+    \sum_{i = 1}^{12} \frac{\chi_i((5 \ 6)(7 \ 8))}{\chi_i(1)} =
+    3 + 1 + \frac13 - 4 \cdot \frac13 - 3 = 0.
+\]
+Njegov konjugiranostni razred v $G$ sestoji iz treh elementov. Ko te elemente dodamo množici $K(G)$, dobimo ravno $[G,G]$.
 \end{zgled}
 
-\todo{Primer: komutatorji v $GL_2$ so ravno $SL_2$.}
+\todo{Primer: komutatorji v $GL_2$ so ravno $SL_2$, razberemo iz tabele karakterjev $GL_2$.}
 
 \todo[inline]{omeni LOST Ore domneva}
 
