@@ -59,6 +59,7 @@
 \def\11{\mathbf{1}}
 \def\FF{\mathbf{F}}
 \def\EE{\mathbf{E}}
+\def\PP{\mathbf{P}}
 
 \DeclareMathOperator\image{im}
 \DeclareMathOperator\sgn{sgn}
@@ -74,7 +75,7 @@
 \DeclareMathOperator\characteristic{char}
 \DeclareMathOperator\kk{k}
 \DeclareMathOperator\cl{cl}
-\def\GAP{\textbf{GAP}}
+\def\GAP{\texttt{GAP}}
 \DeclareMathOperator\inv{inv}
 \DeclareMathOperator\Eigenvalues{Spec}
 \DeclareMathOperator\Eigenspace{E}
@@ -303,6 +304,7 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
             \chi_m \colon \ZZ/q\ZZ \to \GL(\CC) = \CC^*, \quad
             x \mapsto e^{2 \pi i mx/q}.
         \]
+        \todo{Diedrska grupa, $2$-razsežne upodobitve. Dodaj potem tudi v primer po tem, ko vemo, koliko upodobitev iščemo. Dodaj tabelo karakterjev za nek konkreten primer(g := DihedralGroup(IsPermGroup,22);)}
         \item Naj bo $G$ grupa in $V$ vektorski prostor nad poljem $F$. {\definicija Trivialna upodobitev} grupe $G$ je homomorfizem
         \[
             \rho \colon G \to \GL(V), \quad
@@ -1650,11 +1652,13 @@ Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavni
 Za končno grupo $G$ nad algebraično zaprtim poljem karakteristike tuje $|G|$ velja $|\Irr(G)| = \kk(G)$.
 \end{posledica}
 
+V splošnem \emph{ne} poznamo eksplicitne korespondence\footnote{In najverjetneje taka korespondenca v splošnem \emph{ne} obstaja. Je pa na voljo za kakšne posebne družine grup, kot bomo spoznali kasneje.}  med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Vemo le, da njuno število sovpada.
+
 \begin{zgled}
-Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.\footnote{Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.} Recimo, da so dolžine teh ciklov enake $k_1 \geq k_2 \geq \cdots \geq k_{\ell}$. Seveda velja $\sum_{i = 1}^{\ell} k_i = n$. Zaporedju $(k_1, k_2, \dots, k_{\ell})$ pravimo {\definicija ciklični tip} permutacije $\alpha$. 
+Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.\footnote{Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.} Recimo, da so dolžine teh ciklov enake $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_{k}$. Seveda velja $\sum_{i = 1}^{k} \lambda_i = n$. Zaporedju $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ pravimo {\definicija ciklični tip} permutacije $\alpha$. 
 
 \begin{domacanaloga}
-Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(k_1, k_2, \dots, k_{\ell})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom.
+Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom. Konjugiranostni razred danega cikličnega tipa $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_{k})$ označimo s $\conclass_{\lambda}$.
 \end{domacanaloga}
 
 V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija razčlenitve} števila $n$. Število vseh razčlenitev označimo s $p(n)$. Velja torej $p(n) = \kk(S_n) = |\Irr(S_n)|$. Splošna eksplicitna formula za to število \emph{ne} obstaja, poznamo pa njeno asimptotsko oceno\footnote{\href{https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF}{G. H. Hardy in S. Ramanujan, \emph{Asymptotic formulae in combinatory analysis}, Proceedings of the London Mathematical Society, Second Series, \textbf{17} (1918) 75--115.}}
@@ -1888,12 +1892,12 @@ Opazujmo alternirajočo grupo $A_5$ nad poljem $\CC$. Z opisanim algoritmom hitr
 \caption{Tabela karakterjev $A_5$, kjer je $\zeta = e^{2 \pi i / 5}$}
 \end{table}
 
-Iz tabele lahko razberemo kar nekaj lastnosti grupe. Poglejmo si, kako hitro premislimo, da je $A_5$ \emph{enostavna} grupa. Če bi namreč $A_5$ imela kakšno pravo netrivialno edinko $N$, potem bi kvocient $A_5/N$ imel kakšno netrivialno nerazcepno upodobitev $\rho$. Restrikcija $\Res^G_{G/N}(\rho)$ je zato netrivialna nerazcepna upodobitev grupe $A_5$ z netrivialnim jedrom $N$. Vrednost karakterja $\chi_{\rho}$ v poljubnem elementu $N$ je torej enaka $\chi_{\rho}(1)$. Iz tabele karakterjev grupe $A_5$ pa je jasno, da takega karakterja ni.
+Iz tabele lahko razberemo kar nekaj lastnosti grupe. Poglejmo si, kako hitro premislimo, da je $A_5$ \emph{enostavna} grupa. Če bi namreč $A_5$ imela kakšno pravo netrivialno edinko $N$, potem bi kvocient $A_5/N$ imel kakšno netrivialno nerazcepno upodobitev $\rho$. Restrikcija $\Res^G_{G/N}(\rho)$ je zato netrivialna nerazcepna upodobitev grupe $A_5$ z netrivialnim jedrom $N$. Vrednost karakterja $\chi_{\rho}$ v poljubnem elementu $N$ je torej enaka $\chi_{\rho}(1)$. Iz tabele karakterjev grupe $A_5$ pa je jasno, da takega karakterja ni.\footnote{Iz argumenta vidimo, da velja celo naslednje. Končna grupa $G$ je enostavna, če in samo če je vsaka njena netrivialna nerazcepna upodobitev zvesta.}
 \end{zgled}
 
 Predstavljeni algoritem ima mnogo pomanjkljivosti. V programskem jeziku \GAP~je za izračun tabele karakterjev implementiran algoritem \href{https://www.sciencedirect.com/science/article/pii/S0747717108800776}{(Dixon 1967, Schneider 1990)}, ki izboljša predstavljenega na naslednja dva načina.
 \begin{enumerate}
-    \item S predstavljenim algoritmom bomo težko izračunali tabelo karakterjev kakšne zelo velike grupe, saj moramo v postopku diagonalizirati matrike velikosti $|G| \times |G|$. Algoritem v \GAP~sicer temelji na enaki ideji iskanja skupnih lastnih podprostorov, a pri tem ne opazuje regularne upodobitve, temveč upošteva abstraktne formule med karakterji in iz njih izpelje matrike velikosti $\kk(G) \times \kk(G)$, katerih skupni lastni vektorji so bolj ali manj karakterji. Ker je $\kk(G)$ bistveno manjše od $|G|$, je ta izračun mnogo lažji in hitrejši.
+    \item S predstavljenim algoritmom bomo težko izračunali tabelo karakterjev kakšne zelo velike grupe, saj moramo v postopku diagonalizirati matrike velikosti $|G| \times |G|$. Algoritem v \GAP~sicer temelji na enaki ideji iskanja skupnih lastnih podprostorov, a pri tem ne opazuje regularne upodobitve, temveč upošteva abstraktne formule med karakterji in iz njih izpelje matrike velikosti $\kk(G) \times \kk(G)$, katerih skupni lastni vektorji so (bolj ali manj) karakterji. Ker je $\kk(G)$ bistveno manjše od $|G|$, je ta izračun mnogo lažji in hitrejši.
     
     \item Za izračun natančnih vrednosti karakterjev moramo vse račune izvajati eksaktno in brez približkov. Numerične metode, ki jih sicer lahko uporabimo za hitro računanje lastnih vrednosti velikih matrik, torej odpadejo. Programski jezik \GAP~zna računati simbolično, a je to lahko precej zamudno. Algoritem v \GAP~se temu izogne tako, da večino računov opravi nad poljem $\FF_p$ za ustrezno izbrano dovolj veliko praštevilo $p$, potem pa te rezultate prenese nazaj nad $\CC$. Vsi računi so zato hitri in eksaktni.
 \end{enumerate}
@@ -2034,16 +2038,52 @@ to je {\definicija Hilbert-Schmidtov skalarni produkt}. Parsevalov izrek nam tor
 
 \section{Razširjeni zgledi}
 
+Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo na voljo tabelo karakterjev, izračun te pa je končen problem. S tem smo za konkretne končne grupe dosegli ultimativen cilj teorije upodobitev. Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves ne spregledamo gozda. Grupe namreč praviloma ne nastopajo posamično, temveč kot del večjih družin.\footnote{Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, \dots} V tem razdelku si bomo podrobneje pogledali dve temeljni družini grup, in sicer simetrične grupe ter splošne linearne grupe nad končnim poljem. Njuno teorijo upodobitev bomo obravnavali celostno.
+
 \subsection{$S_n$}
 
-\todo[inline]{
-- https://mathoverflow.net/questions/10635/why-are-the-characters-of-the-symmetric-group-integer-valued
-- https://link.springer.com/content/pdf/10.1007/s00209-014-1290-x.pdf
-}
+Opazujmo simetrično grupo $S_n$ na $n \in \NN$ nad poljem $\CC$. Ogledali smo si že tabele karakterjev za $n \leq 4$ in razložili, da je število nerazcepnih upodobitev enako številu konjugiranostnih razredov, to pa je enako številu razčlenitev $p(n)$. Družina simetričnih grup je posebna, saj zanjo presenetljivo obstaja eksplicitna korespondenca med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Iz dane razčlenitve $(\lambda_1, \lambda_2, \dots, \lambda_k)$ števila $n$ lahko torej konstruiramo nerazcepno upodobitev grupe $S_n$ in za tem z nekoliko več truda določimo vrednosti karakterjev.
+
+\subsubsection{Nerazcepne upodobitve}
+
+\subsubsection{Vrednosti karakterjev}
+
+Za družino simetričnih grup poznamo celo dokaj preprost način, kako lahko določimo vrednosti karakterjev nerazcepnih upodobitev. Dokaz je precej tehničen, temelji na teoriji simetričnih funkcij in nekoliko drugačnem\footnote{Standarden dokaz Frobeniusove formule uporablja jezik grupnih algeber in Youngovega simetrizatorja, glej (Fulton in Harris 2004, [Section 4.1]).} opisu nerazcepnih upodobitev $V_{\lambda}$, zato ga brez prehude žalosti izpustimo.
+
+\begin{izrek}[Frobeniusova formula]
+Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$ in $\chi_{\lambda}$ pripadajoči karakter. Naj bo $\conclass_{(i_1, i_2, \dots, i_n)}$ konjugiranostni razred. Tedaj je 
+\[
+    \chi_{\lambda}(\conclass_{(i_1, i_2, \dots, i_n)}) =
+    \left[ \Delta(x) \cdot \prod_{j = 1}^n P_j(x)^{i_j} \right]_{(\ell_1, \ell_2, \dots, \ell_k)},
+\]
+kjer je
+\[
+    \ell_1 = \lambda_1 + k - 1, \quad
+    \ell_2 = \lambda_2 + k - 2, \quad
+    \dots, \quad
+    \ell_k = \lambda_k.
+\]
+\end{izrek}
+
+Iz izreka neposredno sledi, da so vrednosti karakterjev zelo posebne.\footnote{To posledico bi sicer lahko izpeljali tudi brez zahtevne Frobeniusove formule, glej na primer (Serre 1977, [Section 13.1, Corollary 1]).}
+
+\begin{posledica}
+Vrednosti nerazcepnih karakterjev simetrične grupe so cela števila.
+\end{posledica}
+
+V zvezi s tabelo karakterjev simetrične grupe omenimo le še sodobnejši presenetljiv rezultat \href{https://link.springer.com/article/10.1007/s00209-014-1290-x}{(Miller 2014)}, v katerem avtor dokaže, da so vrednosti skoraj vseh karakterjev v skoraj vseh grupnih elementih ničelne. Natančneje, če enakomerno naključno izberemo $g \in S_n$ in $\pi \in \Irr(S_n)$, potem je
+\[
+    \lim_{n \to \infty} \PP_{g, \pi}\left(\chi_{\pi}(g) = 0\right) = 1.
+\]
+Avtor omeni analogno vprašanje glede same tabele karakterjev.
+
+\begin{odprtproblem}
+Enakomerno naključno izberimo konjugiranostni razred $\conclass$ v $S_n$ in $\pi \in \Irr(S_n)$. Kaj lahko povemo o obnašanju zaporedja $\PP_{\conclass, \pi}\left( \chi_{\pi}(\conclass) = 0 \right)$, ko gre $n$ čez vse meje?
+\end{odprtproblem}
 
 \subsection{$\GL_2(\FF_p)$}
 
-\todo[inline]{Omeni Kazhdan-Lusztig teorijo, generične tabele karakterjev: https://icerm.brown.edu/materials/Slides/tw-18-7/Character_tables_of_finite_groups_]_Gunter_Malle,_Technische_Universität_Kaiserslautern.pdf}
+\todo[inline]{Omeni Kazhdan-Lusztig teorijo, generične tabele karakterjev (Malle), CFSG in ATLAS}
 
 \section{Aplikacije}
 
