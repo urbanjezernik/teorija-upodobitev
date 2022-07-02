@@ -1655,10 +1655,10 @@ Za končno grupo $G$ nad algebraično zaprtim poljem karakteristike tuje $|G|$ v
 V splošnem \emph{ne} poznamo eksplicitne korespondence\footnote{In najverjetneje taka korespondenca v splošnem \emph{ne} obstaja. Je pa na voljo za kakšne posebne družine grup, kot bomo spoznali kasneje.}  med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Vemo le, da njuno število sovpada.
 
 \begin{zgled}
-Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.\footnote{Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.} Recimo, da so dolžine teh ciklov enake $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_{k}$. Seveda velja $\sum_{i = 1}^{k} \lambda_i = n$. Zaporedju $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ pravimo {\definicija ciklični tip} permutacije $\alpha$. 
+Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.\footnote{Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.} Recimo, da so dolžine teh ciklov enake $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_{k}$. Seveda velja $\sum_{i = 1}^{k} \lambda_i = n$. Zaporedju $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ pravimo {\definicija ciklični tip} permutacije $\sigma$. Kadar so kateri od členov cikličnega tipa enaki, ciklični tip pišemo tudi kot $1^{i_1} 2^{i_2} \cdots n^{i_n}$, kjer je $i_m$ število ciklov dolžine $m$ v $\sigma$.
 
 \begin{domacanaloga}
-Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom. Konjugiranostni razred danega cikličnega tipa $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_{k})$ označimo s $\conclass_{\lambda}$.
+Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom.
 \end{domacanaloga}
 
 V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija razčlenitve} števila $n$. Število vseh razčlenitev označimo s $p(n)$. Velja torej $p(n) = \kk(S_n) = |\Irr(S_n)|$. Splošna eksplicitna formula za to število \emph{ne} obstaja, poznamo pa njeno asimptotsko oceno\footnote{\href{https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF}{G. H. Hardy in S. Ramanujan, \emph{Asymptotic formulae in combinatory analysis}, Proceedings of the London Mathematical Society, Second Series, \textbf{17} (1918) 75--115.}}
@@ -2042,19 +2042,31 @@ Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo 
 
 \subsection{$S_n$}
 
-Opazujmo simetrično grupo $S_n$ na $n \in \NN$ nad poljem $\CC$. Ogledali smo si že tabele karakterjev za $n \leq 4$ in razložili, da je število nerazcepnih upodobitev enako številu konjugiranostnih razredov, to pa je enako številu razčlenitev $p(n)$. Družina simetričnih grup je posebna, saj zanjo presenetljivo obstaja eksplicitna korespondenca med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Iz dane razčlenitve $(\lambda_1, \lambda_2, \dots, \lambda_k)$ števila $n$ lahko torej konstruiramo nerazcepno upodobitev grupe $S_n$ in za tem z nekoliko več truda določimo vrednosti karakterjev.
+Opazujmo simetrično grupo $S_n$ za $n \in \NN$ nad poljem $\CC$. Ogledali smo si že tabele karakterjev za $n \leq 4$ in razložili, da je število nerazcepnih upodobitev enako številu konjugiranostnih razredov, to pa je enako številu razčlenitev $p(n)$. Družina simetričnih grup je posebna, saj zanjo presenetljivo obstaja eksplicitna korespondenca med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Iz dane razčlenitve $(\lambda_1, \lambda_2, \dots, \lambda_k)$ števila $n$ lahko torej konstruiramo nerazcepno upodobitev grupe $S_n$ in za tem z nekoliko več truda določimo vrednosti karakterjev.
 
 \subsubsection{Nerazcepne upodobitve}
 
 \subsubsection{Vrednosti karakterjev}
 
-Za družino simetričnih grup poznamo celo dokaj preprost način, kako lahko določimo vrednosti karakterjev nerazcepnih upodobitev. Dokaz je precej tehničen, temelji na teoriji simetričnih funkcij in nekoliko drugačnem\footnote{Standarden dokaz Frobeniusove formule uporablja jezik grupnih algeber in Youngovega simetrizatorja, glej {\literatura (Fulton in Harris 2004, [Section 4.1])}.} opisu nerazcepnih upodobitev $V_{\lambda}$, kot smo ga uporabili mi, zato ga brez prehude žalosti izpustimo.
+Za družino simetričnih grup poznamo celo dokaj preprost način, kako lahko določimo vrednosti karakterjev nerazcepnih upodobitev. Izrekli ga bomo v jeziku polinomskega kolobarja $\CC[\mathbf{x}] = \CC[x_1, x_2, \dots, x_k]$. Potrebovali bomo nekaj posebnih polinomov iz tega kolobarja, in sicer {\definicija diskriminanto}
+\[
+    \Delta(\mathbf{x}) = \prod_{1 \leq i < j \leq k} (x_i - x_j)
+\]
+ter {\definicija potenčne vsote}
+\[
+    P_j(\mathbf{x}) = x_1^j + x_2^j + \cdots + x_k^j
+\]
+za $j \in \NN$. Za dan polinom $P(\mathbf{x}) \in \CC[\mathbf{x}]$ označimo s
+\[
+    [P(\mathbf{x})]_{(\ell_1, \ell_2, \dots, \ell_k)}
+\]
+njegov koeficient pred monomom $x_1^{\ell_1} x_2^{\ell_2} \cdots x_k^{\ell_k}$.
 
 \begin{izrek}[Frobeniusova formula]
-Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$ in $\chi_{\lambda}$ pripadajoči karakter. Naj bo $\conclass_{(i_1, i_2, \dots, i_n)}$ konjugiranostni razred. Tedaj je 
+Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$ in $\chi_{\lambda}$ pripadajoči karakter. Naj bo $\conclass_{1^{i_1} 2^{i_2} \cdots n^{i_n}}$ konjugiranostni razred. Tedaj je 
 \[
-    \chi_{\lambda}(\conclass_{(i_1, i_2, \dots, i_n)}) =
-    \left[ \Delta(x) \cdot \prod_{j = 1}^n P_j(x)^{i_j} \right]_{(\ell_1, \ell_2, \dots, \ell_k)},
+    \chi_{\lambda}\left(\conclass_{1^{i_1} 2^{i_2} \cdots n^{i_n}}\right) =
+    \left[ \Delta(\mathbf{x}) \cdot P_1(\mathbf{x})^{i_1} P_2(\mathbf{x})^{i_2} \cdots P_n(\mathbf{x})^{i_n} \right]_{(\ell_1, \ell_2, \dots, \ell_k)},
 \]
 kjer je
 \[
@@ -2064,6 +2076,8 @@ kjer je
     \ell_k = \lambda_k.
 \]
 \end{izrek}
+
+Dokaz temelji na poznavanju osnov teorije simetričnih funkcij.\footnote{Te osnove študent-ka ponavadi spozna pri predmetu Kombinatorika.}. Poleg tega dokaz sloni na nekoliko drugačnem\footnote{Standarden dokaz Frobeniusove formule uporablja jezik grupnih algeber in Youngovega simetrizatorja, glej {\literatura (Fulton in Harris 2004, [Section 4.1])}.} opisu nerazcepnih upodobitev $V_{\lambda}$, kot smo ga uporabili mi, zato ga brez prehude žalosti izpustimo. Poglejmo pa si nekaj primerov uporabe izreka.
 
 \begin{zgled}
     \todo{Zgled: Vrednost karakterja v dolgem ciklu. Definiraj kljuke. Izpelji posledico o stopnjah. Zgled. Domača naloga: Izračunaj vrednost karakterja v transpoziciji.}
@@ -2321,6 +2335,7 @@ Njegov konjugiranostni razred v $G$ sestoji iz treh elementov. Ko te elemente do
 
 \todo[inline]{
 - ? lastnost $(T)$, dodaj referenco na TGP in expanderje
+- $\SL_2(\RR)$: sorodna $SU$ (imata enako kompleksifikacijo Liejevih algeber), ampak hkrati popolnoma drugačna kar se tiče unitarnih upodobitev.
 }
 
 \end{document}
