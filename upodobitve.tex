@@ -1292,7 +1292,7 @@ To funkcijo imenujemo {\definicija karakter} upodobitve $\rho$. Kadar je upodobi
 
 Karakter je neodvisen od izbire baze, zato za vsaka $x, g \in G$ velja $\chi_{\rho}(x g x^{-1}) = \chi_{\rho}(g)$. Karakterji so torej funkcije na $G$, ki so konstantne na konjugiranostnih razredih.\footnote{{\definicija Konjugiranostni razred} elementa $g \in G$ je množica $\{ x g x^{-1} \mid x \in G \}$. Grupa $G$ je disjunktna unija konjugiranostnih razredov svojih elementov.} Takim funkcijam pravimo {\definicija razredne funkcije} in jih označimo s
 \[
-    \hom_{\cl}(G,F) = \{ f \in \fun(G,F) \mid \forall x, g \in G \colon f(x g x^{-1}) = f(g) \}.
+    \fun_{\cl}(G,F) = \{ f \in \fun(G,F) \mid \forall x, g \in G \colon f(x g x^{-1}) = f(g) \}.
 \]
 Za dan konjugiranostni razred $\conclass$ v grupi $G$ bomo pisali $\chi_{\rho}(\conclass)$ za vrednost karakterja v poljubnem predstavniku tega razreda.
 
@@ -1583,10 +1583,10 @@ V skladu z običajno terminologijo za funkcijo $f \in \fun(G,F)$ označimo $||f|
 
 \subsection{Razredne funkcije}
 
-Karakterji niso poljubne funkcije v $\fun(G,F)$, temveč vselej pripadajo prostoru $\hom_{\cl}(G,F)$ razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev tudi linearno nedovisni. S pomočjo ortonormiranosti karakterjev bomo sedaj dokazali, da tvorijo celo \emph{bazo} prostora razrednih funkcij. 
+Karakterji niso poljubne funkcije v $\fun(G,F)$, temveč vselej pripadajo prostoru $\fun_{\cl}(G,F)$ razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev tudi linearno nedovisni. S pomočjo ortonormiranosti karakterjev bomo sedaj dokazali, da tvorijo celo \emph{bazo} prostora razrednih funkcij. 
 
 \begin{izrek}[o bazi razrednih funkcij]
-    Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj karakterji nerazcepnih upodobitev tvorijo ortonormirano bazo prostora $\hom_{\cl}(G,F)$.
+    Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj karakterji nerazcepnih upodobitev tvorijo ortonormirano bazo prostora $\fun_{\cl}(G,F)$.
 \end{izrek}
 
 Zopet bomo za dokaz uporabili metodo povprečenja po grupi, a bomo to povprečenje še \emph{utežili}. Za dano funkcijo $f \in \fun(G,F)$ definiramo njeno {\definicija nekomutativno Fourierovo transformacijo} $\hat{f}$ kot funkcijo, ki poljubni upodobitvi $\rho$ grupe $G$ na prostoru $V$ priredi
@@ -1643,10 +1643,10 @@ Od tod izračunamo relevantni skalar kot $|G| \cdot [ f, \chi_{\pi} ]/\deg(\pi)$
 Opremljeni lahko z lahkoto izpeljemo izrek.
 
 \begin{dokaz}[Dokaz izreka o bazi razrednih funkcij]
-Predpostavimo, da nerazcepni karakterji \emph{ne} razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \hom_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $[ f, \chi_{\pi} ] = 0$. Preslikava $\hat{f}(\pi)$ je po lemi zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, se pravi $\hat{f}(\rho_{\fun}) = 0$. Po zadnjem zgledu to implicira $f = 0$. 
+Predpostavimo, da nerazcepni karakterji \emph{ne} razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \fun_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $[ f, \chi_{\pi} ] = 0$. Preslikava $\hat{f}(\pi)$ je po lemi zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, se pravi $\hat{f}(\rho_{\fun}) = 0$. Po zadnjem zgledu to implicira $f = 0$. 
 \end{dokaz}
 
-Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavnikih konjugiranostnih razredov. Če {\definicija število konjugiranostnih razredov} označimo s $\kk(G)$, velja torej $\dim \hom_{\cl}(G,F) = \kk(G)$. Ker karakterji tvorijo bazo prostora razrednih funkcij, lahko \emph{število} nerazcepnih upodobitev torej izračunamo neposredno iz algebraične strukture grupe.
+Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavnikih konjugiranostnih razredov. Če {\definicija število konjugiranostnih razredov} označimo s $\kk(G)$, velja torej $\dim \fun_{\cl}(G,F) = \kk(G)$. Ker karakterji tvorijo bazo prostora razrednih funkcij, lahko \emph{število} nerazcepnih upodobitev torej izračunamo neposredno iz algebraične strukture grupe.
 
 \begin{posledica}
 Za končno grupo $G$ nad algebraično zaprtim poljem karakteristike tuje $|G|$ velja $|\Irr(G)| = \kk(G)$.
@@ -1670,7 +1670,7 @@ za $n \to \infty$.
 V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 1$. Res smo našli natanko $3$ nerazcepne upodobitve grupe $S_3$. V primeru $n = 4$ pa velja $p(4) = 5$. Temu ustrezajo konjugiranostni razredi identične permutacije $()$ ($4 = 1 + 1 + 1 + 1$), transpozicije $(1 \ 2)$ ($4 = 2 + 1 + 1$), tricikla $(1 \ 2 \ 3)$ ($4 = 3 + 1$), štiricikla $(1 \ 2 \ 3 \ 4)$ ($4 = 4$) in produkta dveh tranzpozicij $(1 \ 2)(3 \ 4)$ ($4 = 2 + 2$). Ti konjugiranostni razredi so zaporedoma velikosti $1$, $6$, $8$, $6$, $3$.
 \end{zgled}
 
-Ker nerazcepni karakterji tvorijo ortonormirano bazo prostora razrednih funkcij, lahko vsako razredno funkcijo $f \in \hom_{\cl}(G,F)$ razvijemo po tej bazi kot
+Ker nerazcepni karakterji tvorijo ortonormirano bazo prostora razrednih funkcij, lahko vsako razredno funkcijo $f \in \fun_{\cl}(G,F)$ razvijemo po tej bazi kot
 \[
     f = \sum_{\pi \in \Irr(G)} [ f, \chi_{\pi} ] \chi_{\pi}.
 \]
@@ -1902,6 +1902,85 @@ Predstavljeni algoritem ima mnogo pomanjkljivosti. V programskem jeziku \GAP~je 
     \item Za izračun natančnih vrednosti karakterjev moramo vse račune izvajati eksaktno in brez približkov. Numerične metode, ki jih sicer lahko uporabimo za hitro računanje lastnih vrednosti velikih matrik, torej odpadejo. Programski jezik \GAP~zna računati simbolično, a je to lahko precej zamudno. Algoritem v \GAP~se temu izogne tako, da večino računov opravi nad poljem $\FF_p$ za ustrezno izbrano dovolj veliko praštevilo $p$, potem pa te rezultate prenese nazaj nad $\CC$. Vsi računi so zato hitri in eksaktni.
 \end{enumerate}
 
+\subsection{Kolobar virtualnih karakterjev}
+
+Pogosto nas ne zanima le računski aspekt upodobitev, temveč konceptualno razumevanje, od kod prihajajo nerazcepne upodobitve dane grupe. Kot bomo videli, tukaj igra glavno vlogo indukcija.
+
+Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike $0$. Karakterji upodobitev grupe $G$ so celoštevilske kombinacije nerazcepnih karakterjev. Tvorimo množico vseh takih kombinacij, se pravi
+\[
+    R(G) = \bigoplus_{\pi \in \Irr(G)} \ZZ \cdot \chi_{\pi} \subseteq \fun_{\cl}(G, F).
+\]
+Množica $R(G)$ je najprej očitno abelova podgrupa razrednih funkcij. Za tem je opremljena z množenjem, ki izhaja iz tenzorskega produkta upodobitev. Množica $R(G)$ na ta način postane komutativen podkolobar v $\fun_{\cl}(G,F)$, ki ga imenujemo {\definicija kolobar virtualnih karakterjev}.\footnote{Virtualnih, ker vsebuje tudi negativne kombinacije nerazcepnih kolobarjev, ki ne ustrezajo karakterjem upodobitev.}
+
+Naj bo $H$ podgrupa v $G$. Restrikcija vzdolž vložitve $H$ v $G$ porodi \emph{homomorfizem kolobarjev}
+\[
+    \textstyle \Res \colon R(G) \to R(H), \quad \chi_{\pi} \mapsto \Res^G_H(\chi_{\pi}).
+\]
+Sorodno dobimo z indukcijo preslikavo
+\[
+    \textstyle \Ind \colon R(H) \to R(G), \quad \chi_{\pi} \mapsto \Ind^G_H(\chi_{\pi}),
+\]
+ki pa je le \emph{homomorfizem abelovih grup}. Ob koncu razdelka o indukciji smo za upodobitvi $\rho$ v $\Rep_G$ in $\sigma$ v $\Rep_H$ zapisali izomorfizem
+\[
+    \textstyle \Ind^G_H(\Res^G_H(\rho) \otimes \sigma) \cong
+        \rho \otimes \Ind^G_H(\sigma),
+\]
+ki ga zdaj lahko interpretiramo s karakterji teh upodobitev in skelenemo, da je slika $\Ind(R(H))$ \emph{ideal} v $R(G)$.
+
+\begin{zgled}
+Naj bo $H$ ciklična grupa. Definirajmo funkcijo
+\[
+    c_H \colon H \to F, \quad
+    h \mapsto \begin{cases} |H| & \langle h \rangle = H, \\ 0 & \text{sicer.} \end{cases}
+\]
+Ker je $H$ abelova grupa, je seveda $c_H \in \fun_{\cl}(H,F)$. 
+
+Premislimo, da je celo $c_H \in R(H)$. Dokazujmo z indukcijo na $|H|$. Vsaka prava podgrupa $K \leq H$ je tudi ciklična, zato zanjo po indukcijski predpostavki velja $c_K \in R(K)$. Naj bo $R$ množica predstavnikov odsekov $K$ v $H$. S formulo za indukcijo karakterja za $h \in H$ izračunamo
+\[
+    \Ind^H_K(c_K)(h) = \sum_{r \in R \colon h \in K} c_K(h) =
+    \begin{cases} |H:K| c_K(h) & h \in K, \\ 0 & \text{sicer}  \end{cases} =
+    \begin{cases}  |H| & \langle h \rangle = K, \\ 0 & \text{sicer.} \\ \end{cases}
+\]
+Vsak element $h \in H$ generira neko podgrupo $H$, bodisi pravo bodisi kar $H$. Torej lahko zapišemo
+\[
+    c_H = |H| - \sum_{K < H} \Ind^H_K(c_K).
+\]
+Konstanta $|H|$ je karakter trivialne upodobitve $\11^{|H|}$ grupe $H$, torej iz zadnje enakosti sledi želeno $c_H \in R(H)$. 
+\end{zgled}
+
+Naj bo $C$ množica vseh cikličnih pogrup grupe $G$ in izberimo $H \in C$. Naj bo $R$ množica predstavnikov desnih odsekov $H$ v $G$. Zadnji zgled nam pove $c_H \in R(H)$. Ta virtualni karakter lahko induciramo na grupo $G$ in za $g \in G$ dobimo
+\[
+    \Ind^G_H(c_H)(g) = \sum_{r \in R \colon r g r^{-1} \in H} c_H(r g r^{-1}) =
+    \sum_{r \in R \colon \langle r g r^{-1} \rangle = H} |H| =
+    \sum_{x \in G \colon  \langle x g x^{-1} \rangle = H} 1.
+\]
+Ko torej seštejemo prispevke po vseh cikličnih podgrupah, dobimo
+\[
+  \sum_{H \in C} \Ind^G_H(c_H)(g) = \sum_{x \in G} \sum_{H \in C} 1_{\langle x g x^{-1} \rangle = C} = \sum_{x \in G} 1 = |G|.  
+\]
+Konstantna funkcija $|G|$ je torej element ideala $\sum_{H \in C} \Ind(R(H))$ v $R(G)$. Od tod seveda sledi enakost 
+\[
+    |G| \cdot R(G) = \sum_{H \in C} \Ind(R(H)).
+\]
+Vsak virtualni karakter v $R(G)$ je zato linearna kombinacija induciranih virtualnih karakterjev cikličnih podgrup, pri čemer so koeficienti racionalna števila z imenovalcem kvečjemu $|G|$. Povzemimo to presenetljivo ugotovitev.
+
+\begin{izrek}[Artinov izrek]
+Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev nad algebraično zaprtim poljem karakteristike $0$. Tedaj je $\chi_{\rho}$ racionalna linearna kombinacija indukcij nerazcepnih karakterjev cikličnih podgrup grupe $G$.
+\end{izrek}
+
+Racionalnim kombinacijam se lahko izognemo, če razširimo razred podgrup s cikličnih na {\definicija $p$-elementarne podgrupe} $E_p$ grupe $G$. To so podgrupe, ki so izomorfne direktnemu produktu ciklične grupe in $p$-grupe.
+
+\begin{izrek}[Brauerjev izrek]
+Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike $0$. Tedaj je
+\[
+    R(G) = \sum_{H \in \bigcup_{p \in \PP} E_p} \Ind(R(H)).
+\]
+\end{izrek}
+
+Dokaz Brauerjevega izreka je nekoliko bolj zapleten kot preprost argument, ki nas je pripeljal do Artinovega izreka. Bralec ga lahko najde v {\literatura (Serre 1977)}. 
+
+Ne spreglejmo ključne lekcije tega razdelka: nerazcepne upodobitve dane končne grupe iščemo s pomočjo indukcije iz preprostih podgrup.
+
 \subsection{Kompleksne upodobitve}
 
 Splošno teorijo upodobitev končnih grup zaključimo z upodobitvami nad najugodnejšim poljem $\CC$. To polje je daleč od abstraktnega in je opremljeno z mnogo dodatne strukture, ki jo lahko pri upodobitvah izkoristimo.
@@ -1942,7 +2021,7 @@ Stopnja vsake nerazcepne kompleksne upodobitve končne grupe deli moč grupe.
 Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, in sicer je to lema o Fourierovi transformaciji razredne funkcije. Ko funkcija, vzdolž katere izvedemo transformacijo, slika v kolobar algebraičnih celih števil, lahko lemo o Fourierovi transformaciji razredne funkcije zaostrimo na naslednji način.
 
     \begin{lema}
-    Naj bo $G$ končna grupa. Za vsako funkcijo $f \in \hom_{\cl}(G, \bar{\ZZ})$ in nerazcepno kompleksno upodobitev $\pi$ je $\hat{f}(\pi)$ skalarno množenje z algebraičnim celim številom.
+    Naj bo $G$ končna grupa. Za vsako funkcijo $f \in \fun_{\cl}(G, \bar{\ZZ})$ in nerazcepno kompleksno upodobitev $\pi$ je $\hat{f}(\pi)$ skalarno množenje z algebraičnim celim številom.
     \end{lema}
     \begin{dokaz}
     Vemo že, da je $\hat{f}(\pi)$ skalarno množenje s številom

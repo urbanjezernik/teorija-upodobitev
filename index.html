@@ -60,7 +60,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 02. 07. 2022
+            Zadnja posodobitev: 04. 07. 2022
           </div>
 
           <div id="spinner" class="text-center">
@@ -2969,9 +2969,9 @@
             role="doc-noteref"><sup>33</sup></a> Takim funkcijam pravimo
             <span><strong><em>razredne funkcije</em></strong></span> in
             jih označimo s <span
-            class="math display">\[\hom_{\mathop{\mathrm{cl}}}(G,F) = \{
-            f \in \mathop{\mathrm{fun}}(G,F) \mid \forall x, g \in G
-            \colon f(x g x^{-1}) = f(g) \}.\]</span> Za dan
+            class="math display">\[\mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(G,F)
+            = \{ f \in \mathop{\mathrm{fun}}(G,F) \mid \forall x, g \in
+            G \colon f(x g x^{-1}) = f(g) \}.\]</span> Za dan
             konjugiranostni razred <span
             class="math inline">\(\mathcal{C}\)</span> v grupi <span
             class="math inline">\(G\)</span> bomo pisali <span
@@ -3650,7 +3650,7 @@
             <p>Karakterji niso poljubne funkcije v <span
             class="math inline">\(\mathop{\mathrm{fun}}(G,F)\)</span>,
             temveč vselej pripadajo prostoru <span
-            class="math inline">\(\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>
+            class="math inline">\(\mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(G,F)\)</span>
             razrednih funkcij. Vemo že tudi, da so karakterji
             nerazcepnih upodobitev tudi linearno nedovisni. S pomočjo
             ortonormiranosti karakterjev bomo sedaj dokazali, da tvorijo
@@ -3663,7 +3663,7 @@
             class="math inline">\(|G|\)</span>. Tedaj karakterji
             nerazcepnih upodobitev tvorijo ortonormirano bazo prostora
             <span
-            class="math inline">\(\hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>.</p>
+            class="math inline">\(\mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(G,F)\)</span>.</p>
             </div>
             <p>Zopet bomo za dokaz uporabili metodo povprečenja po
             grupi, a bomo to povprečenje še <em>utežili</em>. Za dano
@@ -3799,9 +3799,9 @@
             Predpostavimo, da nerazcepni karakterji <em>ne</em>
             razpenjajo prostora razrednih funkcij. Torej obstaja
             funkcija <span class="math inline">\(f \in
-            \hom_{\mathop{\mathrm{cl}}}(G,F)\)</span>, ki je vsebovana v
-            ortogonalnem komplementu vseh nerazcepnih karakterjev. Za
-            vsak <span class="math inline">\(\pi \in
+            \mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(G,F)\)</span>,
+            ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih
+            karakterjev. Za vsak <span class="math inline">\(\pi \in
             \mathop{\mathrm{Irr}}(G)\)</span> velja torej <span
             class="math inline">\([ f, \chi_{\pi} ] = 0\)</span>.
             Preslikava <span class="math inline">\(\hat{f}(\pi)\)</span>
@@ -3818,7 +3818,7 @@
             razredov</em></strong></span> označimo s <span
             class="math inline">\(\mathop{\mathrm{k}}(G)\)</span>, velja
             torej <span class="math inline">\(\dim
-            \hom_{\mathop{\mathrm{cl}}}(G,F) =
+            \mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(G,F) =
             \mathop{\mathrm{k}}(G)\)</span>. Ker karakterji tvorijo bazo
             prostora razrednih funkcij, lahko <em>število</em>
             nerazcepnih upodobitev torej izračunamo neposredno iz
@@ -3911,9 +3911,9 @@
             <p>Ker nerazcepni karakterji tvorijo ortonormirano bazo
             prostora razrednih funkcij, lahko vsako razredno funkcijo
             <span class="math inline">\(f \in
-            \hom_{\mathop{\mathrm{cl}}}(G,F)\)</span> razvijemo po tej
-            bazi kot <span class="math display">\[f = \sum_{\pi \in
-            \mathop{\mathrm{Irr}}(G)} [ f, \chi_{\pi} ]
+            \mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(G,F)\)</span>
+            razvijemo po tej bazi kot <span class="math display">\[f =
+            \sum_{\pi \in \mathop{\mathrm{Irr}}(G)} [ f, \chi_{\pi} ]
             \chi_{\pi}.\]</span> Alternativna baza prostora razrednih
             funkcij sestoji iz karakterističnih funkcij konjugiranostnih
             razredov v <span class="math inline">\(G\)</span>. Razvoj te
@@ -4641,6 +4641,167 @@
             class="math inline">\(\mathbf{C}\)</span>. Vsi računi so
             zato hitri in eksaktni.</p></li>
             </ol>
+            <h3 id="kolobar-virtualnih-karakterjev">Kolobar virtualnih
+            karakterjev</h3>
+            <p>Pogosto nas ne zanima le računski aspekt upodobitev,
+            temveč konceptualno razumevanje, od kod prihajajo nerazcepne
+            upodobitve dane grupe. Kot bomo videli, tukaj igra glavno
+            vlogo indukcija.</p>
+            <p>Naj bo <span class="math inline">\(G\)</span> grupa in
+            <span class="math inline">\(F\)</span> algebraično zaprto
+            polje karakteristike <span class="math inline">\(0\)</span>.
+            Karakterji upodobitev grupe <span
+            class="math inline">\(G\)</span> so celoštevilske
+            kombinacije nerazcepnih karakterjev. Tvorimo množico vseh
+            takih kombinacij, se pravi <span class="math display">\[R(G)
+            = \bigoplus_{\pi \in \mathop{\mathrm{Irr}}(G)}
+            \mathbf{Z}\cdot \chi_{\pi} \subseteq
+            \mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(G, F).\]</span>
+            Množica <span class="math inline">\(R(G)\)</span> je najprej
+            očitno abelova podgrupa razrednih funkcij. Za tem je
+            opremljena z množenjem, ki izhaja iz tenzorskega produkta
+            upodobitev. Množica <span
+            class="math inline">\(R(G)\)</span> na ta način postane
+            komutativen podkolobar v <span
+            class="math inline">\(\mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(G,F)\)</span>,
+            ki ga imenujemo <span><strong><em>kolobar virtualnih
+            karakterjev</em></strong></span>.<a href="#fn43"
+            class="footnote-ref" id="fnref43"
+            role="doc-noteref"><sup>43</sup></a></p>
+            <p>Naj bo <span class="math inline">\(H\)</span> podgrupa v
+            <span class="math inline">\(G\)</span>. Restrikcija vzdolž
+            vložitve <span class="math inline">\(H\)</span> v <span
+            class="math inline">\(G\)</span> porodi <em>homomorfizem
+            kolobarjev</em> <span class="math display">\[\textstyle
+            \mathop{\mathrm{Res}}\colon R(G) \to R(H), \quad \chi_{\pi}
+            \mapsto \mathop{\mathrm{Res}}^G_H(\chi_{\pi}).\]</span>
+            Sorodno dobimo z indukcijo preslikavo <span
+            class="math display">\[\textstyle
+            \mathop{\mathrm{Ind}}\colon R(H) \to R(G), \quad \chi_{\pi}
+            \mapsto \mathop{\mathrm{Ind}}^G_H(\chi_{\pi}),\]</span> ki
+            pa je le <em>homomorfizem abelovih grup</em>. Ob koncu
+            razdelka o indukciji smo za upodobitvi <span
+            class="math inline">\(\rho\)</span> v <span
+            class="math inline">\(\mathop{\mathrm{Rep}}_G\)</span> in
+            <span class="math inline">\(\sigma\)</span> v <span
+            class="math inline">\(\mathop{\mathrm{Rep}}_H\)</span>
+            zapisali izomorfizem <span class="math display">\[\textstyle
+            \mathop{\mathrm{Ind}}^G_H(\mathop{\mathrm{Res}}^G_H(\rho)
+            \otimes \sigma) \cong
+                    \rho \otimes
+            \mathop{\mathrm{Ind}}^G_H(\sigma),\]</span> ki ga zdaj lahko
+            interpretiramo s karakterji teh upodobitev in skelenemo, da
+            je slika <span
+            class="math inline">\(\mathop{\mathrm{Ind}}(R(H))\)</span>
+            <em>ideal</em> v <span
+            class="math inline">\(R(G)\)</span>.</p>
+            <div class="zgled">
+            <p><strong>Zgled 3.9</strong>. Naj bo <span
+            class="math inline">\(H\)</span> ciklična grupa. Definirajmo
+            funkcijo <span class="math display">\[c_H \colon H \to F,
+            \quad
+                h \mapsto \begin{cases} |H| &amp; \langle h \rangle = H,
+            \\ 0 &amp; \text{sicer.} \end{cases}\]</span> Ker je <span
+            class="math inline">\(H\)</span> abelova grupa, je seveda
+            <span class="math inline">\(c_H \in
+            \mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(H,F)\)</span>.</p>
+            <p>Premislimo, da je celo <span class="math inline">\(c_H
+            \in R(H)\)</span>. Dokazujmo z indukcijo na <span
+            class="math inline">\(|H|\)</span>. Vsaka prava podgrupa
+            <span class="math inline">\(K \leq H\)</span> je tudi
+            ciklična, zato zanjo po indukcijski predpostavki velja <span
+            class="math inline">\(c_K \in R(K)\)</span>. Naj bo <span
+            class="math inline">\(R\)</span> množica predstavnikov
+            odsekov <span class="math inline">\(K\)</span> v <span
+            class="math inline">\(H\)</span>. S formulo za indukcijo
+            karakterja za <span class="math inline">\(h \in H\)</span>
+            izračunamo <span
+            class="math display">\[\mathop{\mathrm{Ind}}^H_K(c_K)(h) =
+            \sum_{r \in R \colon h \in K} c_K(h) =
+                \begin{cases} |H:K| c_K(h) &amp; h \in K, \\ 0 &amp;
+            \text{sicer}  \end{cases} =
+                \begin{cases}  |H| &amp; \langle h \rangle = K, \\ 0
+            &amp; \text{sicer.} \\ \end{cases}\]</span> Vsak element
+            <span class="math inline">\(h \in H\)</span> generira neko
+            podgrupo <span class="math inline">\(H\)</span>, bodisi
+            pravo bodisi kar <span class="math inline">\(H\)</span>.
+            Torej lahko zapišemo <span class="math display">\[c_H = |H|
+            - \sum_{K &lt; H} \mathop{\mathrm{Ind}}^H_K(c_K).\]</span>
+            Konstanta <span class="math inline">\(|H|\)</span> je
+            karakter trivialne upodobitve <span
+            class="math inline">\(\mathbf{1}^{|H|}\)</span> grupe <span
+            class="math inline">\(H\)</span>, torej iz zadnje enakosti
+            sledi želeno <span class="math inline">\(c_H \in
+            R(H)\)</span>.</p>
+            </div>
+            <p>Naj bo <span class="math inline">\(C\)</span> množica
+            vseh cikličnih pogrup grupe <span
+            class="math inline">\(G\)</span> in izberimo <span
+            class="math inline">\(H \in C\)</span>. Naj bo <span
+            class="math inline">\(R\)</span> množica predstavnikov
+            desnih odsekov <span class="math inline">\(H\)</span> v
+            <span class="math inline">\(G\)</span>. Zadnji zgled nam
+            pove <span class="math inline">\(c_H \in R(H)\)</span>. Ta
+            virtualni karakter lahko induciramo na grupo <span
+            class="math inline">\(G\)</span> in za <span
+            class="math inline">\(g \in G\)</span> dobimo <span
+            class="math display">\[\mathop{\mathrm{Ind}}^G_H(c_H)(g) =
+            \sum_{r \in R \colon r g r^{-1} \in H} c_H(r g r^{-1}) =
+                \sum_{r \in R \colon \langle r g r^{-1} \rangle = H} |H|
+            =
+                \sum_{x \in G \colon  \langle x g x^{-1} \rangle = H}
+            1.\]</span> Ko torej seštejemo prispevke po vseh cikličnih
+            podgrupah, dobimo <span class="math display">\[\sum_{H \in
+            C} \mathop{\mathrm{Ind}}^G_H(c_H)(g) = \sum_{x \in G}
+            \sum_{H \in C} 1_{\langle x g x^{-1} \rangle = C} = \sum_{x
+            \in G} 1 = |G|.\]</span> Konstantna funkcija <span
+            class="math inline">\(|G|\)</span> je torej element ideala
+            <span class="math inline">\(\sum_{H \in C}
+            \mathop{\mathrm{Ind}}(R(H))\)</span> v <span
+            class="math inline">\(R(G)\)</span>. Od tod seveda sledi
+            enakost <span class="math display">\[|G| \cdot R(G) =
+            \sum_{H \in C} \mathop{\mathrm{Ind}}(R(H)).\]</span> Vsak
+            virtualni karakter v <span
+            class="math inline">\(R(G)\)</span> je zato linearna
+            kombinacija induciranih virtualnih karakterjev cikličnih
+            podgrup, pri čemer so koeficienti racionalna števila z
+            imenovalcem kvečjemu <span
+            class="math inline">\(|G|\)</span>. Povzemimo to
+            presenetljivo ugotovitev.</p>
+            <div class="izrek">
+            <p><strong>Izrek 3.4</strong> (Artinov izrek). Naj bo <span
+            class="math inline">\(G\)</span> grupa in <span
+            class="math inline">\(\rho\)</span> njena končnorazsežna
+            upodobitev nad algebraično zaprtim poljem karakteristike
+            <span class="math inline">\(0\)</span>. Tedaj je <span
+            class="math inline">\(\chi_{\rho}\)</span> racionalna
+            linearna kombinacija indukcij nerazcepnih karakterjev
+            cikličnih podgrup grupe <span
+            class="math inline">\(G\)</span>.</p>
+            </div>
+            <p>Racionalnim kombinacijam se lahko izognemo, če razširimo
+            razred podgrup s cikličnih na <span><strong><em><span
+            class="math inline">\(p\)</span>-elementarne
+            podgrupe</em></strong></span> <span
+            class="math inline">\(E_p\)</span> grupe <span
+            class="math inline">\(G\)</span>. To so podgrupe, ki so
+            izomorfne direktnemu produktu ciklične grupe in <span
+            class="math inline">\(p\)</span>-grupe.</p>
+            <div class="izrek">
+            <p><strong>Izrek 3.5</strong> (Brauerjev izrek). Naj bo
+            <span class="math inline">\(G\)</span> grupa in <span
+            class="math inline">\(F\)</span> algebraično zaprto polje
+            karakteristike <span class="math inline">\(0\)</span>. Tedaj
+            je <span class="math display">\[R(G) = \sum_{H \in
+            \bigcup_{p \in \mathbf{P}} E_p}
+            \mathop{\mathrm{Ind}}(R(H)).\]</span></p>
+            </div>
+            <p>Dokaz Brauerjevega izreka je nekoliko bolj zapleten kot
+            preprost argument, ki nas je pripeljal do Artinovega izreka.
+            Bralec ga lahko najde v <span>(Serre 1977)</span>.</p>
+            <p>Ne spreglejmo ključne lekcije tega razdelka: nerazcepne
+            upodobitve dane končne grupe iščemo s pomočjo indukcije iz
+            preprostih podgrup.</p>
             <h3 id="kompleksne-upodobitve">Kompleksne upodobitve</h3>
             <p>Splošno teorijo upodobitev končnih grup zaključimo z
             upodobitvami nad najugodnejšim poljem <span
@@ -4651,8 +4812,8 @@
             <p>Najprej si oglejmo nekaj dodatnih lastnosti, ki jih imajo
             karakterji kompleksnih upodobitev. Njihove vrednosti namreč
             niso čisto poljubna kompleksna števila, temveč so
-            algebraična cela števila<a href="#fn43" class="footnote-ref"
-            id="fnref43" role="doc-noteref"><sup>43</sup></a> omejene
+            algebraična cela števila<a href="#fn44" class="footnote-ref"
+            id="fnref44" role="doc-noteref"><sup>44</sup></a> omejene
             absolutne vrednosti.</p>
             <div class="trditev">
             <p><strong>Trditev 3.5</strong>. Naj bo <span
@@ -4672,8 +4833,8 @@
             \mathop{\mathrm{id}}\)</span>, zato je <span
             class="math inline">\(\rho(g)\)</span> linearna preslikava
             končnega reda. Take preslikave so diagonalizabilne.<a
-            href="#fn44" class="footnote-ref" id="fnref44"
-            role="doc-noteref"><sup>44</sup></a> V posebnem je zato
+            href="#fn45" class="footnote-ref" id="fnref45"
+            role="doc-noteref"><sup>45</sup></a> V posebnem je zato
             vsaka lastna vrednost <span class="math inline">\(\lambda
             \in \mathop{\mathrm{Spec}}(\rho(g))\)</span> končnega reda v
             <span class="math inline">\(\mathbf{C}^*\)</span>. S tem je
@@ -4694,7 +4855,7 @@
             lahko izpeljemo pomembno lastnost stopenj nerazcepnih
             kompleksnih upodobitev.</p>
             <div class="izrek">
-            <p><strong>Izrek 3.4</strong> (o stopnjah upodobitev).
+            <p><strong>Izrek 3.6</strong> (o stopnjah upodobitev).
             Stopnja vsake nerazcepne kompleksne upodobitve končne grupe
             deli moč grupe.</p>
             </div>
@@ -4709,9 +4870,9 @@
             <p><strong>Lema 3.3</strong>. Naj bo <span
             class="math inline">\(G\)</span> končna grupa. Za vsako
             funkcijo <span class="math inline">\(f \in
-            \hom_{\mathop{\mathrm{cl}}}(G, \bar{\mathbf{Z}})\)</span> in
-            nerazcepno kompleksno upodobitev <span
-            class="math inline">\(\pi\)</span> je <span
+            \mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(G,
+            \bar{\mathbf{Z}})\)</span> in nerazcepno kompleksno
+            upodobitev <span class="math inline">\(\pi\)</span> je <span
             class="math inline">\(\hat{f}(\pi)\)</span> skalarno
             množenje z algebraičnim celim številom.</p>
             </div>
@@ -4835,8 +4996,8 @@
             prostora <span class="math inline">\(V\)</span> s skalarnim
             produktom <span class="math inline">\(\langle \cdot, \cdot
             \rangle\)</span>. Seveda ni vsaka upodobitev končne grupe
-            unitarna,<a href="#fn45" class="footnote-ref" id="fnref45"
-            role="doc-noteref"><sup>45</sup></a> je pa vsaka upodobitev
+            unitarna,<a href="#fn46" class="footnote-ref" id="fnref46"
+            role="doc-noteref"><sup>46</sup></a> je pa vsaka upodobitev
             <em>unitarizabilna</em>.</p>
             <div class="trditev">
             <p><strong>Trditev 3.6</strong>. Naj bo <span
@@ -4868,7 +5029,7 @@
             skalarnim produktom, glede na katerega je dana upodobitev
             unitarna.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.9</strong>. Končna grupa deluje z
+            <p><strong>Zgled 3.10</strong>. Končna grupa deluje z
             regularno upodobitvijo <span
             class="math inline">\(\rho_{\mathop{\mathrm{fun}}}\)</span>
             na prostoru funkcij <span
@@ -4940,9 +5101,9 @@
             končne grupe dosegli ultimativen cilj teorije upodobitev.
             Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves
             ne spregledamo gozda. Grupe namreč praviloma ne nastopajo
-            posamično, temveč kot del večjih družin.<a href="#fn46"
-            class="footnote-ref" id="fnref46"
-            role="doc-noteref"><sup>46</sup></a> V tem razdelku si bomo
+            posamično, temveč kot del večjih družin.<a href="#fn47"
+            class="footnote-ref" id="fnref47"
+            role="doc-noteref"><sup>47</sup></a> V tem razdelku si bomo
             podrobneje pogledali dve temeljni družini grup, in sicer
             simetrične grupe ter splošne linearne grupe nad končnim
             poljem. Njuno teorijo upodobitev bomo obravnavali
@@ -4988,7 +5149,7 @@
             <span class="math inline">\(x_1^{\ell_1} x_2^{\ell_2} \cdots
             x_k^{\ell_k}\)</span>.</p>
             <div class="izrek">
-            <p><strong>Izrek 3.5</strong> (Frobeniusova formula). Naj bo
+            <p><strong>Izrek 3.7</strong> (Frobeniusova formula). Naj bo
             <span class="math inline">\(\lambda = (\lambda_1, \lambda_2,
             \dots, \lambda_k)\)</span> razčlenitev <span
             class="math inline">\(n\)</span> in <span
@@ -5008,16 +5169,16 @@
                 \ell_k = \lambda_k.\]</span></p>
             </div>
             <p>Dokaz temelji na poznavanju osnov teorije simetričnih
-            funkcij.<a href="#fn47" class="footnote-ref" id="fnref47"
-            role="doc-noteref"><sup>47</sup></a>. Poleg tega dokaz sloni
-            na nekoliko drugačnem<a href="#fn48" class="footnote-ref"
-            id="fnref48" role="doc-noteref"><sup>48</sup></a> opisu
+            funkcij.<a href="#fn48" class="footnote-ref" id="fnref48"
+            role="doc-noteref"><sup>48</sup></a>. Poleg tega dokaz sloni
+            na nekoliko drugačnem<a href="#fn49" class="footnote-ref"
+            id="fnref49" role="doc-noteref"><sup>49</sup></a> opisu
             nerazcepnih upodobitev <span
             class="math inline">\(V_{\lambda}\)</span>, kot smo ga
             uporabili mi, zato ga brez prehude žalosti izpustimo.
             Poglejmo pa si nekaj primerov uporabe izreka.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.10</strong>. </p>
+            <p><strong>Zgled 3.11</strong>. </p>
             </div>
             <p>S Frobeniusovo formulo lahko določimo stopnje nerazcepnih
             upodobitev simetrične grupe.</p>
@@ -5030,8 +5191,8 @@
             </div>
             <p>Ne spreglejmo, da iz Frobeniusove formule neposredno
             sledi, da so vrednosti karakterjev zelo posebne.<a
-            href="#fn49" class="footnote-ref" id="fnref49"
-            role="doc-noteref"><sup>49</sup></a></p>
+            href="#fn50" class="footnote-ref" id="fnref50"
+            role="doc-noteref"><sup>50</sup></a></p>
             <div class="posledica">
             <p><strong>Posledica 3.6</strong>. Vrednosti nerazcepnih
             karakterjev simetrične grupe so cela števila.</p>
@@ -5181,16 +5342,16 @@
             <p>Naj bo <span class="math inline">\(G\)</span> končna
             grupa in <span class="math inline">\(K(G)\)</span> njena
             podmnožica, ki sestoji iz elementov, ki so komutatorji<a
-            href="#fn50" class="footnote-ref" id="fnref50"
-            role="doc-noteref"><sup>50</sup></a> v <span
+            href="#fn51" class="footnote-ref" id="fnref51"
+            role="doc-noteref"><sup>51</sup></a> v <span
             class="math inline">\(G\)</span>, se pravi <span
             class="math display">\[K(G) = \{ [x,y] \mid x,y \in G
             \}.\]</span> Ta množica v splošnem <em>ni</em> podgrupa.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.11</strong>. V okolju <code>GAP</code> se
-            ni težko prepričati, da je najmanjša<a href="#fn51"
-            class="footnote-ref" id="fnref51"
-            role="doc-noteref"><sup>51</sup></a> grupa <span
+            <p><strong>Zgled 3.12</strong>. V okolju <code>GAP</code> se
+            ni težko prepričati, da je najmanjša<a href="#fn52"
+            class="footnote-ref" id="fnref52"
+            role="doc-noteref"><sup>52</sup></a> grupa <span
             class="math inline">\(G\)</span>, v kateri <span
             class="math inline">\(K(G)\)</span> ne sovpada z izvedeno
             podgrupo <span class="math inline">\([G,G] = \langle K(G)
@@ -5263,8 +5424,8 @@
             <span class="math inline">\(y\)</span> ni enolično določen,
             pač pa le do odseka po centralizatorju <span
             class="math inline">\(C_G(a^{-1}) = C_G(a)\)</span>
-            natančno.<a href="#fn52" class="footnote-ref" id="fnref52"
-            role="doc-noteref"><sup>52</sup></a> Torej je <span
+            natančno.<a href="#fn53" class="footnote-ref" id="fnref53"
+            role="doc-noteref"><sup>53</sup></a> Torej je <span
             class="math inline">\(|\psi^{-1}(\mathcal{C},a,b)| =
             |C_G(a)| = |G|/|\mathcal{C}|\)</span>. S tem lahko izrazimo
             <span class="math display">\[N(g) = \sum_{\mathcal{C}}
@@ -5311,7 +5472,7 @@
             pogoj pa lahko preberemo neposredno iz tabele karakterjev
             grupe.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.12</strong>. Naj bo <span
+            <p><strong>Zgled 3.13</strong>. Naj bo <span
             class="math inline">\(G = \langle x, y \rangle\)</span>
             grupa moči <span class="math inline">\(96\)</span> iz
             zadnjega zgleda. S predstavljenim algoritmom lahko hitro
@@ -5804,7 +5965,11 @@
             je vsaka njena netrivialna nerazcepna upodobitev zvesta.<a
             href="#fnref42" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn43"
+            <li id="fn43" role="doc-endnote"><p>Virtualnih, ker vsebuje
+            tudi negativne kombinacije nerazcepnih kolobarjev, ki ne
+            ustrezajo karakterjem upodobitev.<a href="#fnref43"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn44"
             role="doc-endnote"><p><span><strong><em>Algebraično celo
             število</em></strong></span> je kompleksno število, ki je
             ničla moničnega polinoma s celoštevilskimi koeficienti.
@@ -5814,46 +5979,46 @@
             class="math inline">\(\bar{\mathbf{Z}}\)</span> tvori
             kolobar in da velja <span
             class="math inline">\(\mathbf{Q}\cap \bar{\mathbf{Z}} =
-            \mathbf{Z}\)</span>.<a href="#fnref43" class="footnote-back"
+            \mathbf{Z}\)</span>.<a href="#fnref44" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn44" role="doc-endnote"><p>Diagonalizabilnost sledi
+            <li id="fn45" role="doc-endnote"><p>Diagonalizabilnost sledi
             iz obravnave Jordanove normalne forme preslikave <span
-            class="math inline">\(\rho(g)\)</span>.<a href="#fnref44"
+            class="math inline">\(\rho(g)\)</span>.<a href="#fnref45"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn45" role="doc-endnote"><p>Skalarni produkt na
+            <li id="fn46" role="doc-endnote"><p>Skalarni produkt na
             danem prostoru lahko izberemo na mnogo različnih načinov.<a
-            href="#fnref45" class="footnote-back"
+            href="#fnref46" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn46" role="doc-endnote"><p>Na primer abelove grupe,
+            <li id="fn47" role="doc-endnote"><p>Na primer abelove grupe,
             simetrične grupe, diedrske grupe, splošne linearne grupe,
-            končne enostavne grupe, …<a href="#fnref46"
+            končne enostavne grupe, …<a href="#fnref47"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn47" role="doc-endnote"><p>Te osnove študent-ka
+            <li id="fn48" role="doc-endnote"><p>Te osnove študent-ka
             ponavadi spozna pri predmetu Kombinatorika.<a
-            href="#fnref47" class="footnote-back"
+            href="#fnref48" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn48" role="doc-endnote"><p>Standarden dokaz
+            <li id="fn49" role="doc-endnote"><p>Standarden dokaz
             Frobeniusove formule uporablja jezik grupnih algeber in
             Youngovega simetrizatorja, glej <span>(Fulton in Harris
-            2004, [Section 4.1])</span>.<a href="#fnref48"
+            2004, [Section 4.1])</span>.<a href="#fnref49"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn49" role="doc-endnote"><p>To posledico bi sicer
+            <li id="fn50" role="doc-endnote"><p>To posledico bi sicer
             lahko izpeljali tudi brez zahtevne Frobeniusove formule,
             glej na primer <span>(Serre 1977, [Section 13.1, Corollary
-            1])</span>.<a href="#fnref49" class="footnote-back"
+            1])</span>.<a href="#fnref50" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn50"
+            <li id="fn51"
             role="doc-endnote"><p><span><strong><em>Komutator</em></strong></span>
             elementov <span class="math inline">\(x,y \in G\)</span> je
             element <span class="math inline">\([x,y] = x^{-1} y^{-1} x
-            y\)</span>.<a href="#fnref50" class="footnote-back"
+            y\)</span>.<a href="#fnref51" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn51" role="doc-endnote"><p>Natančneje, obstajata
-            dve taki neizomorfni grupi.<a href="#fnref51"
+            <li id="fn52" role="doc-endnote"><p>Natančneje, obstajata
+            dve taki neizomorfni grupi.<a href="#fnref52"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn52" role="doc-endnote"><p>Velja namreč zveza <span
+            <li id="fn53" role="doc-endnote"><p>Velja namreč zveza <span
             class="math inline">\(b = y^{-1} a^{1} y\)</span>.<a
-            href="#fnref52" class="footnote-back"
+            href="#fnref53" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>
