@@ -58,6 +58,7 @@
 \def\conclass{\mathcal{C}}
 \def\11{\mathbf{1}}
 \def\FF{\mathbf{F}}
+\def\Fcal{\mathcal{F}}
 \def\EE{\mathbf{E}}
 \def\PP{\mathbf{P}}
 
@@ -1765,12 +1766,37 @@ z jedrom $\{ (), (1 \ 2)(3 \ 4), (1 \ 3)(2 \ 4), (1 \ 4)(2 \ 3) \}$. Upodobitev 
 
 \subsection{Projekcije na izotipične komponente}
 
-Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih projekcijskih spletičen najdemo izotipične komponente upodobitve. Za te seveda najprej potrebujemo vse nerazcepne karakterje.
+Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih projekcijskih spletičen najdemo izotipične komponente upodobitve.
 
-Take projekcije ni težko najti za $\11$-izotipično komponento. Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$ nad ugodnim poljem. Povprečna vrednost upodobitve $\EE(\rho)$ je projekcijska spletična v $\hom_G(V,V)$ na podprostor fiksnih vektorjev $V^G$, se pravi na $\11$-izotipično komponento v $V$. 
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Naj bo $\rho$ podupodobitev regularne upodobitve $\rho_{\fun}$ na prostoru $V \leq \fun(G,F)$. Ta prostor lahko predstavimo kot sliko neke projekcijske spletične $\Phi \in \hom_G(\rho_{\fun}, \rho)$. Res je tudi obratno, vsaka spletična $\Phi \in \hom_G(\rho_{\fun}, \rho_{\fun})$, ki zadošča $\Phi^2 = \Phi$, podaja prek svoje slike podupodobitev regularne upodobitve. Podupodobitve so torej parametrizirane s spletičnami. Izkaže se, da te vselej izhajajo iz Fourierovih transformacij.
 
-Za splošnejše izotipične komponente uporabimo utežena povprečja, se pravi Fourierovo transformacijo.
-    
+\begin{trditev}
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Preslikava
+\[
+    \Fcal \colon \fun(G,F) \to \hom_G(\rho_{\fun}, \rho_{\fun}), \quad
+    f \mapsto \left( h \mapsto \hat{h}(\rho_{\fun}) \cdot f \right)
+\]
+je izomorfizem vektorskih prostorov.
+\end{trditev}
+\begin{dokaz}
+Ni težko preveriti, da je $\Fcal$ dobro definirana preslikava. Očitno je linearna. Za $f \in \fun(G,F)$ je $\Fcal(f) \cdot 1_1 = \widehat{1_1}(\rho_{\fun}) \cdot f = f$, zato je $\Fcal$ injektivna. Oba prostora sta enake razsežnosti, namreč $|G|$, zato je $\Fcal$ izomorfizem.
+\end{dokaz}
+
+V posebnem je vsaka endospletična regularne upodobitve enaka evalvaciji Fourierovi transformacije v neki fiksni funkciji. Nekoliko natančneje si poglejmo, kaj je ta evalvacija. Za funkciji $f,g \in \fun(G,F)$ je
+\[
+    \hat{h}(\rho_{\fun}) \cdot f = \sum_{g \in G} h(g) \rho_{\fun}(g^{-1}) \cdot f =
+    \left( x \mapsto \sum_{g \in G} h(g) f(x g^{-1}) \right).
+\]
+Zadnjo vsoto prepoznamo kot {\definicija konvolucijo} funkcij $f$ in $h$, se pravi
+\[
+    \left( f * h \right) (x) = \sum_{g \in G} f(x g^{-1}) h(g).
+\]
+Velja torej $\hat{h}(\rho_{\fun}) \cdot f = f * h$. Če dodatno predpostavimo, da je $f$ razredna funkcija, potem se ni težko prepričati, da velja $f * h = h * f$, torej je v tem primeru
+\[
+    \Fcal(f) \cdot h = \hat{h}(\rho_{\fun}) \cdot f = \hat{f}(\rho_{\fun}) \cdot h 
+\]
+in zato preslikava $\Fcal$ ni nič drugega kot običajna Fourierova transformacija razredne funkcije. V posebnem so torej Fourierove transformacije karakterjev endospletične regularne upodobitve. Izkaže se, da so te vselej tesno povezane s projekcijami na izotipične komponente.
+
 \begin{trditev}
 Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Za vsako končnorazsežno upodobitev $\rho$ in nerazcepno upodobitev $\pi$ je
 \[
