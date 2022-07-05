@@ -3866,8 +3866,10 @@
             \lambda_{k})\)</span> ciklični tip permutacije <span
             class="math inline">\(\sigma\)</span>, potem konjugiranostni
             razred <span class="math inline">\(\sigma^{S_n}\)</span>
-            sestoji natanko iz vseh permutacij s tem cikličnim
-            tipom.</p>
+            sestoji natanko iz vseh permutacij s tem cikličnim tipom. Ta
+            konjugiranostni razred ponavadi označimo kot <span
+            class="math inline">\(\mathcal{C}_{(\lambda_1, \lambda_2,
+            \dots, \lambda_k)}\)</span>.</p>
             </div>
             <p>V teoriji števil in kombinatoriki cikličnim tipom rečemo
             tudi <span><strong><em>razčlenitve</em></strong></span>
@@ -4745,16 +4747,17 @@
             virtualni karakter lahko induciramo na grupo <span
             class="math inline">\(G\)</span> in za <span
             class="math inline">\(g \in G\)</span> dobimo <span
-            class="math display">\[\mathop{\mathrm{Ind}}^G_H(c_H)(g) =
-            \sum_{r \in R \colon r g r^{-1} \in H} c_H(r g r^{-1}) =
+            class="math display">\[{\textstyle
+            \mathop{\mathrm{Ind}}^G_H(c_H)(g)} = \sum_{r \in R \colon r
+            g r^{-1} \in H} c_H(r g r^{-1}) =
                 \sum_{r \in R \colon \langle r g r^{-1} \rangle = H} |H|
             =
                 \sum_{x \in G \colon  \langle x g x^{-1} \rangle = H}
             1.\]</span> Ko torej seštejemo prispevke po vseh cikličnih
             podgrupah, dobimo <span class="math display">\[\sum_{H \in
-            C} \mathop{\mathrm{Ind}}^G_H(c_H)(g) = \sum_{x \in G}
-            \sum_{H \in C} 1_{\langle x g x^{-1} \rangle = C} = \sum_{x
-            \in G} 1 = |G|.\]</span> Konstantna funkcija <span
+            C} {\textstyle \mathop{\mathrm{Ind}}^G_H(c_H)(g)} = \sum_{x
+            \in G} \sum_{H \in C} 1_{\langle x g x^{-1} \rangle = C} =
+            \sum_{x \in G} 1 = |G|.\]</span> Konstantna funkcija <span
             class="math inline">\(|G|\)</span> je torej element ideala
             <span class="math inline">\(\sum_{H \in C}
             \mathop{\mathrm{Ind}}(R(H))\)</span> v <span
@@ -5178,7 +5181,60 @@
             uporabili mi, zato ga brez prehude žalosti izpustimo.
             Poglejmo pa si nekaj primerov uporabe izreka.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.11</strong>. </p>
+            <p><strong>Zgled 3.11</strong>. Izračunajmo vrednost
+            poljubnega karakterja <span
+            class="math inline">\(\chi_{\lambda}\)</span> v dolgem ciklu
+            <span class="math inline">\((1 \ 2 \ \cdots \ n) \in
+            S_n\)</span>. Konjugiranostni razred je torej <span
+            class="math inline">\(\mathcal{C}_{n^1}\)</span> in
+            izračunati moramo koeficient <span
+            class="math display">\[\left[ \Delta(\mathbf{x}) \cdot
+            (x_1^n + x_2^n + \cdots + x_k^n) \right]_{(\ell_1, \ell_2,
+            \dots, \ell_k)}.\]</span> Diskriminanta <span
+            class="math inline">\(\Delta(\mathbf{x})\)</span> je enaka
+            Vandermondovi determinanti <span
+            class="math display">\[\Delta(\mathbf{x}) = \sum_{\sigma \in
+            S_k} \mathop{\mathrm{sgn}}(\sigma) \cdot x_1^{\sigma(k) - 1}
+            x_2^{\sigma(k-1) - 1} \cdots x_k^{\sigma(1) - 1}.\]</span>
+            Opazujmo potence spremenljivke <span
+            class="math inline">\(x_1\)</span>. Opazimo, da velja <span
+            class="math inline">\(\ell_1 = \lambda_1 + k - 1 \geq
+            k\)</span>, zato iščemo monome, katerih potenca pri <span
+            class="math inline">\(x_1\)</span> je vsaj <span
+            class="math inline">\(k\)</span>. Edina možnost je, da ta
+            monom izhaja iz produkta diskriminante in člena <span
+            class="math inline">\(x_1^n\)</span>. Iščemo torej člen
+            <span class="math display">\[\left[ \sum_{\sigma \in S_k}
+            \mathop{\mathrm{sgn}}(\sigma) \cdot x_1^{\sigma(k) - 1 + n}
+            x_2^{\sigma(k-1) - 1} \cdots x_k^{\sigma(1) - 1}
+            \right]_{(\ell_1, \ell_2, \dots, \ell_k)}.\]</span> Oglejmo
+            si zdaj spremenljivko <span
+            class="math inline">\(x_2\)</span>. Da bo obstajal kak
+            relevanten monom, mora veljati <span
+            class="math inline">\(\ell_2 = \sigma(k-1) - 1\)</span>. Ker
+            je <span class="math inline">\(\sigma(k-1) \leq k\)</span>,
+            sledi <span class="math inline">\(\ell_2 \leq k -1\)</span>
+            in od tod <span class="math inline">\(\lambda_2 \leq
+            1\)</span>. Edina možnost, da je <span
+            class="math inline">\(\chi_{\lambda}(\mathcal{C}_{n^1}) \neq
+            0\)</span>, je torej, da ima razčlenitev <span
+            class="math inline">\(\lambda\)</span> vse člene od drugega
+            dalje enake <span class="math inline">\(1\)</span> in je
+            zato oblike <span class="math display">\[\lambda = (n-s, 1,
+            1, \dots, 1)\]</span> za nek <span class="math inline">\(0
+            \leq s \leq n-1\)</span>. Taki razčlenitvi pravimo
+            <span><strong><em>kljuka</em></strong></span>. Zanjo je
+            <span class="math inline">\(k = s+1\)</span> in <span
+            class="math inline">\((\ell_1, \ell_2, \dots, \ell_k) = (n,
+            k-1, k-2, \dots, 1)\)</span>, od koder ni težko izračunati,
+            da edini relevanten monom izhaja iz permutacije <span
+            class="math inline">\(\sigma = (1 \ 2 \ \cdots \
+            k)\)</span>, zato je nazadnje <span
+            class="math display">\[\chi_{\lambda}(C_{n^1}) =
+            \mathop{\mathrm{sgn}}(\sigma) = (-1)^s.\]</span> Vrednost
+            karakterja v dolgem ciklu je torej neničelna le za kljuke, v
+            katerih pa ima vrednost <span class="math inline">\(\pm
+            1\)</span>.</p>
             </div>
             <p>S Frobeniusovo formulo lahko določimo stopnje nerazcepnih
             upodobitev simetrične grupe.</p>
@@ -5348,10 +5404,12 @@
             class="math display">\[K(G) = \{ [x,y] \mid x,y \in G
             \}.\]</span> Ta množica v splošnem <em>ni</em> podgrupa.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.12</strong>. V okolju <code>GAP</code> se
-            ni težko prepričati, da je najmanjša<a href="#fn52"
-            class="footnote-ref" id="fnref52"
-            role="doc-noteref"><sup>52</sup></a> grupa <span
+            <p><strong>Zgled 3.12</strong>. V programskem okolju
+            <code>GAP</code><a href="#fn52" class="footnote-ref"
+            id="fnref52" role="doc-noteref"><sup>52</sup></a> se ni
+            težko prepričati, da je najmanjša<a href="#fn53"
+            class="footnote-ref" id="fnref53"
+            role="doc-noteref"><sup>53</sup></a> grupa <span
             class="math inline">\(G\)</span>, v kateri <span
             class="math inline">\(K(G)\)</span> ne sovpada z izvedeno
             podgrupo <span class="math inline">\([G,G] = \langle K(G)
@@ -5424,8 +5482,8 @@
             <span class="math inline">\(y\)</span> ni enolično določen,
             pač pa le do odseka po centralizatorju <span
             class="math inline">\(C_G(a^{-1}) = C_G(a)\)</span>
-            natančno.<a href="#fn53" class="footnote-ref" id="fnref53"
-            role="doc-noteref"><sup>53</sup></a> Torej je <span
+            natančno.<a href="#fn54" class="footnote-ref" id="fnref54"
+            role="doc-noteref"><sup>54</sup></a> Torej je <span
             class="math inline">\(|\psi^{-1}(\mathcal{C},a,b)| =
             |C_G(a)| = |G|/|\mathcal{C}|\)</span>. S tem lahko izrazimo
             <span class="math display">\[N(g) = \sum_{\mathcal{C}}
@@ -6013,12 +6071,20 @@
             element <span class="math inline">\([x,y] = x^{-1} y^{-1} x
             y\)</span>.<a href="#fnref51" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn52" role="doc-endnote"><p>Natančneje, obstajata
-            dve taki neizomorfni grupi.<a href="#fnref52"
+            <li id="fn52" role="doc-endnote"><p><code>GAP</code> je
+            programski jezik, ki pride zelo prav pri delu z grupami, saj
+            ima implementiranih veliko standardnih konstrukcij grup in
+            funkcij za delo z njimi. Dostopen je prosto na naslovu <a
+            href="https://www.gap-system.org"
+            class="uri">https://www.gap-system.org</a>.<a
+            href="#fnref52" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn53" role="doc-endnote"><p>Natančneje, obstajata
+            dve taki neizomorfni grupi.<a href="#fnref53"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn53" role="doc-endnote"><p>Velja namreč zveza <span
+            <li id="fn54" role="doc-endnote"><p>Velja namreč zveza <span
             class="math inline">\(b = y^{-1} a^{1} y\)</span>.<a
-            href="#fnref53" class="footnote-back"
+            href="#fnref54" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>

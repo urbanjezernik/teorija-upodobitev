@@ -1658,7 +1658,7 @@ V splošnem \emph{ne} poznamo eksplicitne korespondence\footnote{In najverjetnej
 Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.\footnote{Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.} Recimo, da so dolžine teh ciklov enake $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_{k}$. Seveda velja $\sum_{i = 1}^{k} \lambda_i = n$. Zaporedju $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ pravimo {\definicija ciklični tip} permutacije $\sigma$. Kadar so kateri od členov cikličnega tipa enaki, ciklični tip pišemo tudi kot $1^{i_1} 2^{i_2} \cdots n^{i_n}$, kjer je $i_m$ število ciklov dolžine $m$ v $\sigma$.
 
 \begin{domacanaloga}
-Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom.
+Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom. Ta konjugiranostni razred ponavadi označimo kot $\conclass_{(\lambda_1, \lambda_2, \dots, \lambda_k)}$.
 \end{domacanaloga}
 
 V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija razčlenitve} števila $n$. Število vseh razčlenitev označimo s $p(n)$. Velja torej $p(n) = \kk(S_n) = |\Irr(S_n)|$. Splošna eksplicitna formula za to število \emph{ne} obstaja, poznamo pa njeno asimptotsko oceno\footnote{\href{https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF}{G. H. Hardy in S. Ramanujan, \emph{Asymptotic formulae in combinatory analysis}, Proceedings of the London Mathematical Society, Second Series, \textbf{17} (1918) 75--115.}}
@@ -2159,8 +2159,30 @@ kjer je
 Dokaz temelji na poznavanju osnov teorije simetričnih funkcij.\footnote{Te osnove študent-ka ponavadi spozna pri predmetu Kombinatorika.}. Poleg tega dokaz sloni na nekoliko drugačnem\footnote{Standarden dokaz Frobeniusove formule uporablja jezik grupnih algeber in Youngovega simetrizatorja, glej {\literatura (Fulton in Harris 2004, [Section 4.1])}.} opisu nerazcepnih upodobitev $V_{\lambda}$, kot smo ga uporabili mi, zato ga brez prehude žalosti izpustimo. Poglejmo pa si nekaj primerov uporabe izreka.
 
 \begin{zgled}
-    \todo{Zgled: Vrednost karakterja v dolgem ciklu. Definiraj kljuke. Izpelji posledico o stopnjah. Zgled. Domača naloga: Izračunaj vrednost karakterja v transpoziciji.}
+Izračunajmo vrednost poljubnega karakterja $\chi_{\lambda}$ v dolgem ciklu $(1 \ 2 \ \cdots \ n) \in S_n$. Konjugiranostni razred je torej $\conclass_{n^1}$ in izračunati moramo koeficient
+\[
+    \left[ \Delta(\mathbf{x}) \cdot (x_1^n + x_2^n + \cdots + x_k^n) \right]_{(\ell_1, \ell_2, \dots, \ell_k)}.
+\]
+Diskriminanta $\Delta(\mathbf{x})$ je enaka Vandermondovi determinanti
+\[
+    \Delta(\mathbf{x}) = \sum_{\sigma \in S_k} \sgn(\sigma) \cdot x_1^{\sigma(k) - 1} x_2^{\sigma(k-1) - 1} \cdots x_k^{\sigma(1) - 1}.
+\]
+Opazujmo potence spremenljivke $x_1$. Opazimo, da velja $\ell_1 = \lambda_1 + k - 1 \geq k$, zato iščemo monome, katerih potenca pri $x_1$ je vsaj $k$. Edina možnost je, da ta monom izhaja iz produkta diskriminante in člena $x_1^n$. Iščemo torej člen
+\[
+    \left[ \sum_{\sigma \in S_k} \sgn(\sigma) \cdot x_1^{\sigma(k) - 1 + n} x_2^{\sigma(k-1) - 1} \cdots x_k^{\sigma(1) - 1} \right]_{(\ell_1, \ell_2, \dots, \ell_k)}.
+\]
+Oglejmo si zdaj spremenljivko $x_2$. Da bo obstajal kak relevanten monom, mora veljati $\ell_2 = \sigma(k-1) - 1$. Ker je $\sigma(k-1) \leq k$, sledi $\ell_2 \leq k -1$ in od tod $\lambda_2 \leq 1$. Edina možnost, da je $\chi_{\lambda}(\conclass_{n^1}) \neq 0$, je torej, da ima razčlenitev $\lambda$ vse člene od drugega dalje enake $1$ in je zato oblike
+\[
+    \lambda = (n-s, 1, 1, \dots, 1)
+\]
+za nek $0 \leq s \leq n-1$. Taki razčlenitvi pravimo {\definicija kljuka}. Zanjo je $k = s+1$ in $(\ell_1, \ell_2, \dots, \ell_k) = (n, k-1, k-2, \dots, 1)$, od koder ni težko izračunati, da edini relevanten monom izhaja iz permutacije $\sigma = (1 \ 2 \ \cdots \ k)$, zato je nazadnje
+\[
+    \chi_{\lambda}(C_{n^1}) = \sgn(\sigma) = (-1)^s.
+\]
+Vrednost karakterja v dolgem ciklu je torej neničelna le za kljuke, v katerih pa ima vrednost $\pm 1$.
 \end{zgled}
+
+\todo{Definiraj splošne kljuke. Izpelji posledico o stopnjah. Zgled. Domača naloga: Izračunaj vrednost karakterja v transpoziciji.}
 
 S Frobeniusovo formulo lahko določimo stopnje nerazcepnih upodobitev simetrične grupe.
 
