@@ -5193,6 +5193,173 @@
             class="math inline">\(S_n\)</span> in za tem z nekoliko več
             truda določimo vrednosti karakterjev.</p>
             <h4 id="nerazcepne-upodobitve-1">Nerazcepne upodobitve</h4>
+            <p>Naj bo <span class="math inline">\(\lambda = (\lambda_1,
+            \lambda_2, \dots, \lambda_k)\)</span> razčlenitev <span
+            class="math inline">\(n\)</span>. Nerazcepno upodobitev
+            grupe <span class="math inline">\(S_n\)</span>, prirejeno
+            <span class="math inline">\(\lambda\)</span>, kot ponavadi
+            iščemo z indukcijo iz podgrup. Razčlenitev <span
+            class="math inline">\(\lambda\)</span> lahko interpretiramo
+            kot ciklični tip permutacij, zato se naravno ponuja
+            <span><strong><em>Youngova podgrupa</em></strong></span>
+            <span class="math display">\[P = S_{\lambda_1} \times
+            S_{\lambda_2} \times \cdots \times S_{\lambda_k} \leq
+            S_n.\]</span></p>
+            <p>Inducirajmo trivialno upodobitev iz <span
+            class="math inline">\(P\)</span> na <span
+            class="math inline">\(S_n\)</span>. V razdelku o indukciji
+            smo spoznali, da lahko <span
+            class="math inline">\(\mathop{\mathrm{Ind}}^{S_n}_{P}(\mathbf{1})\)</span>
+            interpretiramo kot permutacijsko upodobitev <span
+            class="math inline">\(S_n\)</span> na desnih odsekih
+            podgrupe <span class="math inline">\(P\)</span>. To
+            interpretacijo lahko vložimo v prostor funkcij <span
+            class="math inline">\(\mathop{\mathrm{fun}}(S_n,
+            \mathbf{C})\)</span>. Namesto množice <span
+            class="math inline">\(P\)</span> lahko namreč opazujemo
+            indikatorsko funkcijo <span
+            class="math inline">\(1_P\)</span>. Element <span
+            class="math inline">\(g \in S_n\)</span> na njej deluje kot
+            <span class="math inline">\(\rho_{\mathop{\mathrm{fun}}}(g)
+            \cdot 1_P = 1_{P g^{-1}}\)</span>, se pravi kot permutacija
+            desnih odsekov. Na ta način upodobitveni prostor upodobitve
+            <span
+            class="math inline">\(\mathop{\mathrm{Ind}}^{S_n}_{P}(\mathbf{1})\)</span>
+            vidimo kot <span class="math display">\[\langle
+            \rho_{\mathop{\mathrm{fun}}}(g) \cdot 1_{P} \mid g \in G
+            \rangle.\]</span> Ta prostor lahko izrazimo s pomočjo
+            Fourierove transformacije kot <span
+            class="math display">\[\langle
+            \hat{f}(\rho_{\mathop{\mathrm{fun}}}) \cdot 1_P \mid f \in
+            \mathop{\mathrm{fun}}(S_n, \mathbf{C}) \rangle
+                = \mathop{\mathrm{im}}\mathcal{F}(1_P)
+                = \langle 1_P * f \mid f \in \mathop{\mathrm{fun}}(S_n,
+            \mathbf{C}) \rangle.\]</span> Upodobitev <span
+            class="math inline">\(S_n\)</span> na tem prostoru gotovo
+            <em>ni</em> nerazcepna, saj na primer vsebuje trivialno z
+            večkratnostjo <span class="math inline">\(\langle
+            \chi_{\mathbf{1}},
+            \mathop{\mathrm{Ind}}^{S_n}_{P}(\chi_{\mathbf{1}}) \rangle =
+            \langle \chi_{\mathbf{1}}, \chi_{\mathbf{1}} \rangle =
+            1\)</span>. Ta prostor bomo zato še dodatno projicirali na
+            nek podprostor.</p>
+            <p>Razčlenitev <span class="math inline">\(\lambda\)</span>
+            si lahko predstavljamo kot zaporedje vrstic diagrama, v
+            katerem je <span class="math inline">\(\lambda_1\)</span>
+            škatlic v <span class="math inline">\(1\)</span>. vrstici,
+            <span class="math inline">\(\lambda_2\)</span> škatlic v
+            <span class="math inline">\(2\)</span>. vrstici, …, <span
+            class="math inline">\(\lambda_k\)</span> škatlic v <span
+            class="math inline">\(k\)</span>. vrstici. Pri tem so
+            vrstice poravnane na levo. Takemu shematičnemu prikazu
+            razčlenitve pravimo <span><strong><em>Youngov
+            diagram</em></strong></span>. Diagram ima <span
+            class="math inline">\(n\)</span> škatlic, v katere poljubno
+            vpišemo števila od <span class="math inline">\(1\)</span> do
+            <span class="math inline">\(n\)</span>. Tako izpolnjenemu
+            diagramu pravimo <span><strong><em>Youngov
+            tablo</em></strong></span>. Vsak Youngov tablo nam
+            pravzaprav ponuja vložitev grupe <span
+            class="math inline">\(P\)</span> v <span
+            class="math inline">\(S_n\)</span>. Fiksirajmo standardno
+            vložitev, ki ustreza temu, da v škatlice vpišemo po vrsti
+            števila od <span class="math inline">\(1\)</span> do <span
+            class="math inline">\(n\)</span>, začenši zgoraj levo in
+            hodeč po <span class="math inline">\(1\)</span>. vrstici,
+            nato po <span class="math inline">\(2\)</span>. vrstici in
+            tako naprej. Grupa <span class="math inline">\(P\)</span>,
+            standardno vložena v <span
+            class="math inline">\(S_n\)</span>, predstavlja ravno vse
+            permutacije, ki ohranjajo <em>vrstice</em> tabloja. Iz tega
+            gledišča je naravno, da obravnavamo tudi grupo permutacij,
+            ki ohranjajo <em>stolpce</em> tabloja. Označimo jo s <span
+            class="math inline">\(Q\)</span>. Ravno ta podgrupa je
+            dodatek, ki nam bo dodatno reduciral upodobitev zgoraj
+            opisano inducirano upodobitev. Pri tem bomo upoštevali, da
+            je <span class="math inline">\(Q\)</span> sestavljena dualno
+            <span class="math inline">\(P\)</span>, zato jo bomo utežili
+            s predznačno upodobitvijo <span
+            class="math inline">\(\mathop{\mathrm{sgn}}\)</span>.</p>
+            <p>Definirajmo funkcijo <span
+            class="math display">\[\sigma_{\lambda} = 1_P *
+            (\mathop{\mathrm{sgn}}\cdot 1_Q) \in
+            \mathop{\mathrm{fun}}(S_n, \mathbf{C}),\]</span> ki ji
+            pravimo <span><strong><em>Youngov
+            simetrizator</em></strong></span>. Vzdolž nje dobimo
+            endospletično <span
+            class="math inline">\(\mathcal{F}(\sigma_{\lambda})\)</span>
+            regularne upodobitve, katere slika je vektorski prostor
+            <span class="math display">\[V_{\lambda} =
+            \mathop{\mathrm{im}}\mathcal{F}(\sigma_{\lambda}) = \langle
+            \sigma_{\lambda} * f \mid f \in \mathop{\mathrm{fun}}(S_n,
+            \mathbf{C}) \rangle.\]</span> Na tem prostoru naravno deluje
+            grupa <span class="math inline">\(S_n\)</span><a
+            href="#fn48" class="footnote-ref" id="fnref48"
+            role="doc-noteref"><sup>48</sup></a>, dobljeno upodobitev
+            označimo z <span
+            class="math inline">\(\rho_{\lambda}\)</span>.</p>
+            <div class="izrek">
+            <p><strong>Izrek 3.7</strong>. </p>
+            <ol>
+            <li><p>Za vsako razčlenitev <span
+            class="math inline">\(\lambda\)</span> je <span
+            class="math inline">\(\rho_{\lambda}\)</span>
+            nerazcepna.</p></li>
+            <li><p>Za različni razčlenitvi <span
+            class="math inline">\(\lambda, \mu\)</span> je <span
+            class="math inline">\(\rho_{\lambda} \not\cong
+            \rho_{\mu}\)</span>.</p></li>
+            <li><p>Vsaka nerazcepna upodobitev grupe <span
+            class="math inline">\(S_n\)</span> je izomorfna <span
+            class="math inline">\(\rho_{\lambda}\)</span> za neko
+            razčlenitev <span
+            class="math inline">\(\lambda\)</span>.</p></li>
+            </ol>
+            </div>
+            <p>Zadnja točka seveda sledi iz prvih dveh, saj je število
+            nerazcepnih upodobitev ravno enako številu razčlenitev <span
+            class="math inline">\(n\)</span>. Pred dokazom izreka si
+            oglejmo nekaj zgledov.</p>
+            <div class="zgled">
+            <p><strong>Zgled 3.11</strong>. </p>
+            <ul>
+            <li><p>Naj bo <span class="math inline">\(\lambda =
+            (n)\)</span>. Tedaj je <span class="math inline">\(P =
+            S_n\)</span> in <span class="math inline">\(Q = 1\)</span>,
+            zato je <span class="math inline">\(\sigma_{\lambda} =
+            1\)</span>. Za funkcijo <span class="math inline">\(f \in
+            \mathop{\mathrm{fun}}(S_n, \mathbf{C})\)</span> je <span
+            class="math inline">\(\mathcal{F}(1) \cdot f = 1 * f = |G|
+            \cdot \mathbf{E}(f)\)</span> in grupa <span
+            class="math inline">\(S_n\)</span> deluje trivialno na tej
+            funkciji. S tem je <span class="math display">\[V_{\lambda}
+            = \mathop{\mathrm{im}}\mathcal{F}(1) = \mathbf{C}\]</span>
+            in dobimo trivialno upodobitev.</p></li>
+            <li><p>Naj bo <span class="math inline">\(\lambda =
+            (1,1,\dots,1)\)</span>. Tedaj je <span
+            class="math inline">\(P = 1\)</span> in <span
+            class="math inline">\(Q = S_n\)</span>, zato je <span
+            class="math inline">\(\sigma_{\lambda} =
+            \mathop{\mathrm{sgn}}\)</span>. Za funkcijo <span
+            class="math inline">\(f \in \mathop{\mathrm{fun}}(S_n,
+            \mathbf{C})\)</span> je <span
+            class="math display">\[\mathcal{F}(\mathop{\mathrm{sgn}})
+            \cdot f = \mathop{\mathrm{sgn}}* f = \left( x \mapsto
+            \sum_{g \in G} \mathop{\mathrm{sgn}}(xg^{-1}) f(g) \right) =
+            (\mathop{\mathrm{sgn}}* f)(1) \cdot
+            \mathop{\mathrm{sgn}},\]</span> zato je <span
+            class="math display">\[V_{\lambda} =
+            \mathop{\mathrm{im}}\mathcal{F}(\mathop{\mathrm{sgn}}) =
+            \langle \mathop{\mathrm{sgn}}\rangle.\]</span> Na funkciji
+            <span class="math inline">\(\mathop{\mathrm{sgn}}\)</span>
+            grupa <span class="math inline">\(S_n\)</span> deluje kot
+            <span class="math inline">\(\rho_{\mathop{\mathrm{fun}}}(g)
+            \cdot \mathop{\mathrm{sgn}}= \mathop{\mathrm{sgn}}(g) \cdot
+            \mathop{\mathrm{sgn}}\)</span>, torej je <span
+            class="math inline">\(\rho_{\lambda}\)</span> predznačna
+            upodobitev.</p></li>
+            </ul>
+            </div>
             <h4 id="vrednosti-karakterjev-1">Vrednosti karakterjev</h4>
             <p>Za družino simetričnih grup poznamo celo dokaj preprost
             način, kako lahko določimo vrednosti karakterjev nerazcepnih
@@ -5214,7 +5381,7 @@
             <span class="math inline">\(x_1^{\ell_1} x_2^{\ell_2} \cdots
             x_k^{\ell_k}\)</span>.</p>
             <div class="izrek">
-            <p><strong>Izrek 3.7</strong> (Frobeniusova formula). Naj bo
+            <p><strong>Izrek 3.8</strong> (Frobeniusova formula). Naj bo
             <span class="math inline">\(\lambda = (\lambda_1, \lambda_2,
             \dots, \lambda_k)\)</span> razčlenitev <span
             class="math inline">\(n\)</span> in <span
@@ -5234,16 +5401,16 @@
                 \ell_k = \lambda_k.\]</span></p>
             </div>
             <p>Dokaz temelji na poznavanju osnov teorije simetričnih
-            funkcij.<a href="#fn48" class="footnote-ref" id="fnref48"
-            role="doc-noteref"><sup>48</sup></a>. Poleg tega dokaz sloni
-            na nekoliko drugačnem<a href="#fn49" class="footnote-ref"
-            id="fnref49" role="doc-noteref"><sup>49</sup></a> opisu
+            funkcij.<a href="#fn49" class="footnote-ref" id="fnref49"
+            role="doc-noteref"><sup>49</sup></a>. Poleg tega dokaz sloni
+            na nekoliko drugačnem<a href="#fn50" class="footnote-ref"
+            id="fnref50" role="doc-noteref"><sup>50</sup></a> opisu
             nerazcepnih upodobitev <span
             class="math inline">\(V_{\lambda}\)</span>, kot smo ga
             uporabili mi, zato ga brez prehude žalosti izpustimo.
             Poglejmo pa si nekaj primerov uporabe izreka.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.11</strong>. Izračunajmo vrednost
+            <p><strong>Zgled 3.12</strong>. Izračunajmo vrednost
             poljubnega karakterja <span
             class="math inline">\(\chi_{\lambda}\)</span> v dolgem ciklu
             <span class="math inline">\((1 \ 2 \ \cdots \ n) \in
@@ -5309,8 +5476,8 @@
             </div>
             <p>Ne spreglejmo, da iz Frobeniusove formule neposredno
             sledi, da so vrednosti karakterjev zelo posebne.<a
-            href="#fn50" class="footnote-ref" id="fnref50"
-            role="doc-noteref"><sup>50</sup></a></p>
+            href="#fn51" class="footnote-ref" id="fnref51"
+            role="doc-noteref"><sup>51</sup></a></p>
             <div class="posledica">
             <p><strong>Posledica 3.6</strong>. Vrednosti nerazcepnih
             karakterjev simetrične grupe so cela števila.</p>
@@ -5460,18 +5627,18 @@
             <p>Naj bo <span class="math inline">\(G\)</span> končna
             grupa in <span class="math inline">\(K(G)\)</span> njena
             podmnožica, ki sestoji iz elementov, ki so komutatorji<a
-            href="#fn51" class="footnote-ref" id="fnref51"
-            role="doc-noteref"><sup>51</sup></a> v <span
+            href="#fn52" class="footnote-ref" id="fnref52"
+            role="doc-noteref"><sup>52</sup></a> v <span
             class="math inline">\(G\)</span>, se pravi <span
             class="math display">\[K(G) = \{ [x,y] \mid x,y \in G
             \}.\]</span> Ta množica v splošnem <em>ni</em> podgrupa.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.12</strong>. V programskem okolju
-            <code>GAP</code><a href="#fn52" class="footnote-ref"
-            id="fnref52" role="doc-noteref"><sup>52</sup></a> se ni
-            težko prepričati, da je najmanjša<a href="#fn53"
-            class="footnote-ref" id="fnref53"
-            role="doc-noteref"><sup>53</sup></a> grupa <span
+            <p><strong>Zgled 3.13</strong>. V programskem okolju
+            <code>GAP</code><a href="#fn53" class="footnote-ref"
+            id="fnref53" role="doc-noteref"><sup>53</sup></a> se ni
+            težko prepričati, da je najmanjša<a href="#fn54"
+            class="footnote-ref" id="fnref54"
+            role="doc-noteref"><sup>54</sup></a> grupa <span
             class="math inline">\(G\)</span>, v kateri <span
             class="math inline">\(K(G)\)</span> ne sovpada z izvedeno
             podgrupo <span class="math inline">\([G,G] = \langle K(G)
@@ -5544,8 +5711,8 @@
             <span class="math inline">\(y\)</span> ni enolično določen,
             pač pa le do odseka po centralizatorju <span
             class="math inline">\(C_G(a^{-1}) = C_G(a)\)</span>
-            natančno.<a href="#fn54" class="footnote-ref" id="fnref54"
-            role="doc-noteref"><sup>54</sup></a> Torej je <span
+            natančno.<a href="#fn55" class="footnote-ref" id="fnref55"
+            role="doc-noteref"><sup>55</sup></a> Torej je <span
             class="math inline">\(|\psi^{-1}(\mathcal{C},a,b)| =
             |C_G(a)| = |G|/|\mathcal{C}|\)</span>. S tem lahko izrazimo
             <span class="math display">\[N(g) = \sum_{\mathcal{C}}
@@ -5592,7 +5759,7 @@
             pogoj pa lahko preberemo neposredno iz tabele karakterjev
             grupe.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.13</strong>. Naj bo <span
+            <p><strong>Zgled 3.14</strong>. Naj bo <span
             class="math inline">\(G = \langle x, y \rangle\)</span>
             grupa moči <span class="math inline">\(96\)</span> iz
             zadnjega zgleda. S predstavljenim algoritmom lahko hitro
@@ -6113,40 +6280,51 @@
             simetrične grupe, diedrske grupe, splošne linearne grupe,
             končne enostavne grupe, …<a href="#fnref47"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn48" role="doc-endnote"><p>Te osnove študent-ka
-            ponavadi spozna pri predmetu Kombinatorika.<a
+            <li id="fn48" role="doc-endnote"><p>Ker je <span
+            class="math inline">\(\mathcal{F}(\sigma_{\lambda})\)</span>
+            spletična, je to res invarianten podprostor. Ni pa težko
+            videti, kako elementi grupe zares delujejo; za <span
+            class="math inline">\(g \in S_n\)</span> element <span
+            class="math inline">\(\rho_{\mathop{\mathrm{fun}}}(g)\)</span>
+            preslika <span class="math inline">\(\sigma_{\lambda} *
+            f\)</span> v <span class="math inline">\(\sigma_{\lambda} *
+            (\rho_{\mathop{\mathrm{fun}}}(g) \cdot f)\)</span>.<a
             href="#fnref48" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn49" role="doc-endnote"><p>Standarden dokaz
+            <li id="fn49" role="doc-endnote"><p>Te osnove študent-ka
+            ponavadi spozna pri predmetu Kombinatorika.<a
+            href="#fnref49" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn50" role="doc-endnote"><p>Standarden dokaz
             Frobeniusove formule uporablja jezik grupnih algeber in
             Youngovega simetrizatorja, glej <span>(Fulton in Harris
-            2004, [Section 4.1])</span>.<a href="#fnref49"
+            2004, [Section 4.1])</span>.<a href="#fnref50"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn50" role="doc-endnote"><p>To posledico bi sicer
+            <li id="fn51" role="doc-endnote"><p>To posledico bi sicer
             lahko izpeljali tudi brez zahtevne Frobeniusove formule,
             glej na primer <span>(Serre 1977, [Section 13.1, Corollary
-            1])</span>.<a href="#fnref50" class="footnote-back"
+            1])</span>.<a href="#fnref51" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn51"
+            <li id="fn52"
             role="doc-endnote"><p><span><strong><em>Komutator</em></strong></span>
             elementov <span class="math inline">\(x,y \in G\)</span> je
             element <span class="math inline">\([x,y] = x^{-1} y^{-1} x
-            y\)</span>.<a href="#fnref51" class="footnote-back"
+            y\)</span>.<a href="#fnref52" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn52" role="doc-endnote"><p><code>GAP</code> je
+            <li id="fn53" role="doc-endnote"><p><code>GAP</code> je
             programski jezik, ki pride zelo prav pri delu z grupami, saj
             ima implementiranih veliko standardnih konstrukcij grup in
             funkcij za delo z njimi. Dostopen je prosto na naslovu <a
             href="https://www.gap-system.org"
             class="uri">https://www.gap-system.org</a>.<a
-            href="#fnref52" class="footnote-back"
+            href="#fnref53" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn53" role="doc-endnote"><p>Natančneje, obstajata
-            dve taki neizomorfni grupi.<a href="#fnref53"
+            <li id="fn54" role="doc-endnote"><p>Natančneje, obstajata
+            dve taki neizomorfni grupi.<a href="#fnref54"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn54" role="doc-endnote"><p>Velja namreč zveza <span
+            <li id="fn55" role="doc-endnote"><p>Velja namreč zveza <span
             class="math inline">\(b = y^{-1} a^{1} y\)</span>.<a
-            href="#fnref54" class="footnote-back"
+            href="#fnref55" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>

@@ -61,6 +61,7 @@
 \def\Fcal{\mathcal{F}}
 \def\EE{\mathbf{E}}
 \def\PP{\mathbf{P}}
+\def\youngsym{\sigma}
 
 \DeclareMathOperator\image{im}
 \DeclareMathOperator\sgn{sgn}
@@ -2150,6 +2151,66 @@ Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo 
 Opazujmo simetrično grupo $S_n$ za $n \in \NN$ nad poljem $\CC$. Ogledali smo si že tabele karakterjev za $n \leq 4$ in razložili, da je število nerazcepnih upodobitev enako številu konjugiranostnih razredov, to pa je enako številu razčlenitev $p(n)$. Družina simetričnih grup je posebna, saj zanjo presenetljivo obstaja eksplicitna korespondenca med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Iz dane razčlenitve $(\lambda_1, \lambda_2, \dots, \lambda_k)$ števila $n$ lahko torej konstruiramo nerazcepno upodobitev grupe $S_n$ in za tem z nekoliko več truda določimo vrednosti karakterjev.
 
 \subsubsection{Nerazcepne upodobitve}
+
+Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$. Nerazcepno upodobitev grupe $S_n$, prirejeno $\lambda$, kot ponavadi iščemo z indukcijo iz podgrup. Razčlenitev $\lambda$ lahko interpretiramo kot ciklični tip permutacij, zato se naravno ponuja {\definicija Youngova podgrupa}
+\[
+    P = S_{\lambda_1} \times S_{\lambda_2} \times \cdots \times S_{\lambda_k} \leq S_n.
+\]
+
+Inducirajmo trivialno upodobitev iz $P$ na $S_n$. V razdelku o indukciji smo spoznali, da lahko $\Ind^{S_n}_{P}(\11)$ interpretiramo kot permutacijsko upodobitev $S_n$ na desnih odsekih podgrupe $P$. To interpretacijo lahko vložimo v prostor funkcij $\fun(S_n, \CC)$. Namesto množice $P$ lahko namreč opazujemo indikatorsko funkcijo $1_P$. Element $g \in S_n$ na njej deluje kot
+$\rho_{\fun}(g) \cdot 1_P = 1_{P g^{-1}}$, se pravi kot permutacija desnih odsekov. Na ta način upodobitveni prostor upodobitve $\Ind^{S_n}_{P}(\11)$ vidimo kot 
+\[
+    \langle \rho_{\fun}(g) \cdot 1_{P} \mid g \in G \rangle.
+\]
+Ta prostor lahko izrazimo s pomočjo Fourierove transformacije kot
+\[
+    \langle \hat{f}(\rho_{\fun}) \cdot 1_P \mid f \in \fun(S_n, \CC) \rangle
+    = \image \Fcal(1_P)
+    = \langle 1_P * f \mid f \in \fun(S_n, \CC) \rangle.    
+\]
+Upodobitev $S_n$ na tem prostoru gotovo \emph{ni} nerazcepna, saj na primer vsebuje trivialno z večkratnostjo $\langle \chi_{\11}, \Ind^{S_n}_{P}(\chi_{\11}) \rangle = \langle \chi_{\11}, \chi_{\11} \rangle = 1$. Ta prostor bomo zato še dodatno projicirali na nek podprostor.
+
+Razčlenitev $\lambda$ si lahko predstavljamo kot zaporedje vrstic diagrama, v katerem je $\lambda_1$ škatlic v $1$. vrstici, $\lambda_2$ škatlic v $2$. vrstici, \dots, $\lambda_k$ škatlic v $k$. vrstici. Pri tem so vrstice poravnane na levo. Takemu shematičnemu prikazu razčlenitve pravimo {\definicija Youngov diagram}. Diagram ima $n$ škatlic, v katere poljubno vpišemo števila od $1$ do $n$. Tako izpolnjenemu diagramu pravimo {\definicija Youngov tablo}. Vsak Youngov tablo nam pravzaprav ponuja vložitev grupe $P$ v $S_n$. Fiksirajmo standardno vložitev, ki ustreza temu, da v škatlice vpišemo po vrsti števila od $1$ do $n$, začenši zgoraj levo in hodeč po $1$. vrstici, nato po $2$. vrstici in tako naprej. Grupa $P$, standardno vložena v $S_n$, predstavlja ravno vse permutacije, ki ohranjajo \emph{vrstice} tabloja. Iz tega gledišča je naravno, da obravnavamo tudi grupo permutacij, ki ohranjajo \emph{stolpce} tabloja. Označimo jo s $Q$. Ravno ta podgrupa je dodatek, ki nam bo dodatno reduciral upodobitev zgoraj opisano inducirano upodobitev. Pri tem bomo upoštevali, da je $Q$ sestavljena dualno $P$, zato jo bomo utežili s predznačno upodobitvijo $\sgn$.
+
+Definirajmo funkcijo
+\[
+    \youngsym_{\lambda} = 1_P * (\sgn \cdot 1_Q) \in \fun(S_n, \CC),
+\]
+ki ji pravimo {\definicija Youngov simetrizator}. Vzdolž nje dobimo endospletično $\Fcal(\youngsym_{\lambda})$ regularne upodobitve, katere slika je vektorski prostor
+\[
+    V_{\lambda} = \image \Fcal(\youngsym_{\lambda}) = \langle \youngsym_{\lambda} * f \mid f \in \fun(S_n, \CC) \rangle.
+\]
+Na tem prostoru naravno deluje grupa $S_n$\footnote{Ker je $\Fcal(\youngsym_{\lambda})$ spletična, je to res invarianten podprostor. Ni pa težko videti, kako elementi grupe zares delujejo; za $g \in S_n$ element $\rho_{\fun}(g)$ preslika $\youngsym_{\lambda} * f$ v $\youngsym_{\lambda} * (\rho_{\fun}(g) \cdot f)$.}, dobljeno upodobitev označimo z $\rho_{\lambda}$. 
+
+\begin{izrek} \leavevmode
+\begin{enumerate}
+    \item Za vsako razčlenitev $\lambda$ je $\rho_{\lambda}$ nerazcepna.
+    \item Za različni razčlenitvi $\lambda, \mu$ je $\rho_{\lambda} \not\cong \rho_{\mu}$.
+    \item Vsaka nerazcepna upodobitev grupe $S_n$ je izomorfna $\rho_{\lambda}$ za neko razčlenitev $\lambda$.
+\end{enumerate}
+\end{izrek}
+
+Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev ravno enako številu razčlenitev $n$. Pred dokazom izreka si oglejmo nekaj zgledov.
+
+\begin{zgled} \leavevmode
+\begin{itemize}
+    \item Naj bo $\lambda = (n)$. Tedaj je $P = S_n$ in $Q = 1$, zato je $\youngsym_{\lambda} = 1$. Za funkcijo $f \in \fun(S_n, \CC)$ je $\Fcal(1) \cdot f = 1 * f = |G| \cdot \EE(f)$ in grupa $S_n$ deluje trivialno na tej funkciji. S tem je
+    \[
+        V_{\lambda} = \image \Fcal(1) = \CC
+    \]
+    in dobimo trivialno upodobitev.
+    \item Naj bo $\lambda = (1,1,\dots,1)$. Tedaj je $P = 1$ in $Q = S_n$, zato je $\youngsym_{\lambda} = \sgn$. Za funkcijo $f \in \fun(S_n, \CC)$ je
+    \[
+        \Fcal(\sgn) \cdot f = \sgn * f = \left( x \mapsto \sum_{g \in G} \sgn(xg^{-1}) f(g) \right) = (\sgn * f)(1) \cdot \sgn,
+    \]
+    zato je
+    \[
+        V_{\lambda} = \image \Fcal(\sgn) = \langle \sgn \rangle.
+    \]
+    Na funkciji $\sgn$ grupa $S_n$ deluje kot $\rho_{\fun}(g) \cdot \sgn = \sgn(g) \cdot \sgn$, torej je $\rho_{\lambda}$ predznačna upodobitev.
+    \todo{Regularna upodobitev.}
+\end{itemize}
+\end{zgled}
 
 \subsubsection{Vrednosti karakterjev}
 
