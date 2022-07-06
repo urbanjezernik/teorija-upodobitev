@@ -2177,7 +2177,13 @@ Definirajmo funkcijo
 \[
     \youngsym = (\sgn \cdot 1_Q) * 1_P \in \fun(S_n, \CC),
 \]
-ki ji pravimo {\definicija Youngov simetrizator}. Vzdolž nje dobimo endospletično $\Fcal(\youngsym)$ regularne upodobitve, katere slika je vektorski prostor
+ki ji pravimo {\definicija Youngov simetrizator}. Njene vrednosti so
+\[
+    \youngsym(x) = \sum_{p \in P, q \in Q \colon qp = x} \sgn(q).
+\]
+Ker velja $P \cap Q = 1$, ima vsak element $x \in S_n$ \emph{kvečjemu en} zapis v obliki $x = qp$ za $p \in P, q \in Q$,\footnote{Res, če je $x = q_1 p_1 = q_2 p_2$, potem je $q_2^{-1} q_1 = p_2 p_1^{-1} \in P \cap Q = 1$, zato je $q_1 = q_2$ in $p_1 = p_2$.} torej ima zadnja vsota kvečjemu en neničeln člen in je torej enaka karakteristični funkciji množice $QP = \{ qp \mid q \in Q, p \in P \}$, uteženi s predznakom člena v $Q$.
+
+Vzdolž Youngovega simetrizatorja dobimo endospletično $\Fcal(\youngsym)$ regularne upodobitve, katere slika je vektorski prostor
 \[
     V_{\lambda} = \image \Fcal(\youngsym) = \langle \youngsym * f \mid f \in \fun(S_n, \CC) \rangle.
 \]
@@ -2228,7 +2234,7 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
 \end{itemize}
 \end{zgled}
 
-Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vlogo delovanje Youngovega simetrizatorja $\widehat{\youngsym}(\rho_{\fun})$. V lemi uporabljamo leksikografsko delno urejenost $<$ na množici vseh razčlenitev. 
+Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vlogo delovanje Youngovega simetrizatorja $\widehat{\youngsym}(\rho_{\fun})$ na prostoru $V_{\lambda}$. V lemi uporabljamo leksikografsko delno urejenost $<$ na množici vseh razčlenitev. 
 
 \begin{lema} \leavevmode
 \begin{enumerate}
@@ -2249,10 +2255,61 @@ Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vl
 \end{enumerate}
 \end{dokaz}
 
+Tekom dokaza smo premislili, da je $\youngsym * \youngsym = n_{\lambda} \cdot \youngsym$ za nek $n_{\lambda} \neq 0$. Od tod sledi, da je $V_{\lambda}$ slika \emph{projektorske} spletične $\Fcal(\youngsym / n_{\lambda})$. Youngov simetrizator nam torej prek Fourierove transformacije izdaja nerazcepno upodobitev $V_{\lambda}$.
+
 Preostane nam še dokaz leme.
 
-\begin{dokaz}[Dokaz leme]
-\todo{}
+\begin{dokaz}[Dokaz leme] \leavevmode
+\begin{enumerate}
+    \item Za vsaka $p \in P$, $q \in Q$ je $\sgn \cdot 1_q * \youngsym * 1_p = \youngsym$. Dokažimo najprej, da je Youngov simetrizator do skalarja natančno \emph{edina} funkcija s to lastnostjo. 
+    
+    Res, naj funkcija $f \in \hom(S_n, \CC)$ zadošča $\sgn \cdot 1_q * f * 1_p = f$. To pomeni, da za vsak $g \in G$ velja
+    \[
+        f(g) = \sum_{x \in S_n \colon q x p = g} \sgn(q) \cdot f(g) = \sgn(q) \cdot f(q^{-1} g p^{-1}),
+    \]
+    kar lahko prepišemo v $f(qgp) = \sgn(q) \cdot f(g)$. Od tod sledi $f(qp) = \sgn(q) \cdot f(1)$. Na množici $QP$ se torej do skalarja $f(1)$ natančno funkcija $f$ ujema z Youngovim simetrizatorjem $\youngsym$. 
+    
+    Preverimo še, da je izven množice $QP$ funkcija $f$ ničelna. V ta namen se spomnimo, da $P$ in $Q$ izhajata iz Youngovega tabloja $T$. Elementi $S_n$ naravno delujejo s permutacijami na množici tablojev. Za $g \in S_n$ naj bo $g \cdot T$ rezultat tega delovanja z elementom $g$.
+
+    \begin{domacanaloga}
+    Za vsak $g \in S_n \backslash QP$ obstajata števili, ki sta zapisani v istem stolpcu $T$ in isti vrstici $g \cdot T$.
+    \end{domacanaloga}
+
+    Naj bo $t$ transpozicija, ki zamenja ti dve števili. Zanjo torej velja $t \in Q$ in $g^{-1} t g \in P$. S tem je
+    \[
+        f(g) = f(t \cdot g \cdot g^{-1} t g) = \sgn(t) \cdot f(g) = - f(g),
+    \]
+    zato je $f(g) = 0$. \kljuka
+
+    Dokazano uporabimo z elementom $\youngsym * f * \youngsym$, kjer je $f$ poljubna funkcija. Vrednost $\sgn \cdot 1_q * (\youngsym * f * \youngsym) * 1_p$ izračunamo kot
+    \[
+        (\sgn \cdot 1_q * \sgn \cdot 1_Q * 1_P) * f * (\sgn * 1_Q * 1_P * 1_p) =
+        \youngsym * f * \youngsym,
+    \]
+    od koder sledi želeno
+    \[
+        \widehat{\youngsym}(\rho_{\fun}) \cdot (\youngsym * f) = \youngsym * f * \youngsym \in \CC \cdot \youngsym.
+    \]
+
+    \item Trdimo, da za vsako funkcijo $f \in \fun(S_n, \CC)$ velja enakost
+    \[    
+        1_{P_\mu} * f * (\sgn \cdot 1_{Q_{\lambda}}) = 0.
+    \]
+    Zaradi linearnosti te trditve lahko predpostavimo, da je $f = 1_g$ za nek $g \in G$. 
+    
+    Naj bosta $T_{\lambda}$, $T_{\mu}$ Youngova tabloja razčlenitev $\lambda$, $\mu$, s katerima smo dobili grupe $P$ in $Q$. Tablo $T_{\lambda}$ zamenjajmo s tablojem $g \cdot T_{\lambda}$; ob tem se $Q_{\lambda}$ zamenja s $g^{-1} Q_{\lambda} g$. Z novimi tabloji je
+    \[
+        1_{P_\mu} * (\sgn \cdot 1_{g^{-1} Q_{\lambda} g}) = 1_{P_\mu} * 1_{g^{-1}} * (\sgn \cdot 1_{Q_{\lambda}}) * 1_g.
+    \]
+    Če uspemo dokazati, da je leva stran ničelna, bo taka tudi desna, od koder po dodatni konvoluciji z $1_{g^{-1}}$ z desne sledi želena enakost.
+
+    Predpostavimo torej lahko, da je $g = 1$. Kot v dokazu prejšnje točke najdemo transpozicijo $t \in Q_{\lambda} \cap P_{\mu}$. Z njo velja
+    \[
+        1_{P_{\mu}} * (\sgn \cdot 1_{Q_{\lambda}}) = 
+        \left( 1_{P_{\mu}} * 1_t \right) * \left( 1_{t^{-1}} * (\sgn \cdot 1_{Q_{\lambda}}) \right).
+    \]
+    Ker je $1_{P_{\mu}} * 1_t = 1_{P_{\mu}}$ in $1_{t^{-1}} * (\sgn \cdot 1_{Q_{\lambda}}) = - (\sgn \cdot 1_{Q_{\lambda}})$, je zadnja konvolucija enaka svoji negativni vrednosti, torej je ničelna.
+\end{enumerate}
 \end{dokaz}
 
 \subsubsection{Vrednosti karakterjev}
