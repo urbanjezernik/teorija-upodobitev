@@ -2174,7 +2174,7 @@ Razčlenitev $\lambda$ si lahko predstavljamo kot zaporedje vrstic diagrama, v k
 
 Definirajmo funkcijo
 \[
-    \youngsym_{\lambda} = 1_P * (\sgn \cdot 1_Q) \in \fun(S_n, \CC),
+    \youngsym_{\lambda} = (\sgn \cdot 1_Q) * 1_P \in \fun(S_n, \CC),
 \]
 ki ji pravimo {\definicija Youngov simetrizator}. Vzdolž nje dobimo endospletično $\Fcal(\youngsym_{\lambda})$ regularne upodobitve, katere slika je vektorski prostor
 \[
@@ -2199,6 +2199,7 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
         V_{\lambda} = \image \Fcal(1) = \CC
     \]
     in dobimo trivialno upodobitev.
+
     \item Naj bo $\lambda = (1,1,\dots,1)$. Tedaj je $P = 1$ in $Q = S_n$, zato je $\youngsym_{\lambda} = \sgn$. Za funkcijo $f \in \fun(S_n, \CC)$ je
     \[
         \Fcal(\sgn) \cdot f = \sgn * f = \left( x \mapsto \sum_{g \in G} \sgn(xg^{-1}) f(g) \right) = (\sgn * f)(1) \cdot \sgn,
@@ -2208,7 +2209,21 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
         V_{\lambda} = \image \Fcal(\sgn) = \langle \sgn \rangle.
     \]
     Na funkciji $\sgn$ grupa $S_n$ deluje kot $\rho_{\fun}(g) \cdot \sgn = \sgn(g) \cdot \sgn$, torej je $\rho_{\lambda}$ predznačna upodobitev.
-    \todo{Regularna upodobitev.}
+    
+    \item Naj bo $\lambda = (n-1,1)$. Tedaj je $P = S_{n-1}$ in $Q = \{ (), (1 \ n)\}$. Za funkcijo $f \in \fun(S_n, \CC)$ velja najprej
+    \[
+        \left( 1_P * f \right) (x) = \sum_{p \in P} f(p^{-1} x) = \sum_{g \in Px} f(g),
+    \]
+    torej $1_P * f$ izračuna vsoto funkcije $f$ po odseku $Px$. Prostor $\image \Fcal(1_P)$ lahko zato identificiramo s podprostorom funkcij $\fun_{S \backslash S_n}(S_n, \CC)$, ki so konstantne na desnih odsekih $S \backslash S_n$. Delovanje $S_n$ na tem prostoru ni nič drugega kot $\Ind^{S_n}_P(\11)$, kar prepoznamo kot standardno permutacijska upodobitev grupe $S_n$ njenega delovanja na $\{ 1, 2, \dots, n \}$. Uporabimo zdaj še konvolucijo s funkcijo $\sgn \cdot 1_Q$. Dobimo linearno preslikavo
+    \[
+        \fun_{S \backslash S_n}(S_n, \CC) \to \fun_{S \backslash S_n}(S_n, \CC), \quad
+        \psi \mapsto \left( x \mapsto \psi(x) - \psi((1 \ n) \cdot x) \right).
+    \]
+    Njeno jedro sestoji iz funkcij $\psi$, ki so konstantne na odsekih $S$ in povrhu zadoščajo še enakosti $\psi(x) = \psi((1 \ n) \cdot x)$ za vsak $x \in S_n$. Ko ta pogoj uporabimo s transpozicijami $(i \ n)$ za $1 \leq i < n$, sklenemo, da je vsaka taka funkcija $\psi$ nujno konstantna. Nazadnje je torej
+    \[
+        V_{\lambda} = \image \Fcal(\youngsym_{\lambda}) \cong \frac{\fun_{S \backslash S_n}(S_n, \CC)}{\CC}.
+    \]
+    Ta prostor je razsežnosti $n-1$. Prirejeno upodobitev imenujemo {\definicija standardna upodobitev} simetrične grupe $S_n$. Kot smo videli, jo lahko dobimo tako, da iz standardne permutacijske upodobitve odstanimo trivialno upodobitev.
 \end{itemize}
 \end{zgled}
 
