@@ -61,7 +61,7 @@
 \def\Fcal{\mathcal{F}}
 \def\EE{\mathbf{E}}
 \def\PP{\mathbf{P}}
-\def\youngsym{\sigma}
+\def\youngsym{\sigma_{\lambda}}
 
 \DeclareMathOperator\image{im}
 \DeclareMathOperator\sgn{sgn}
@@ -175,6 +175,7 @@
 %     }
 
 \newtheorem*{trditev}{Trditev}
+\newtheorem*{pomoznatrditev}{Pomožna trditev}
 
 % \newenvironment{trditev}
 %     {\smallskip\begin{center}\noindent\begin{tabular}{|p{0.9\textwidth}|}
@@ -1783,7 +1784,7 @@ je izomorfizem vektorskih prostorov.
 Ni težko preveriti, da je $\Fcal$ dobro definirana preslikava. Očitno je linearna. Za $f \in \fun(G,F)$ je $\Fcal(f) \cdot 1_1 = \widehat{1_1}(\rho_{\fun}) \cdot f = f$, zato je $\Fcal$ injektivna. Oba prostora sta enake razsežnosti, namreč $|G|$, zato je $\Fcal$ izomorfizem.
 \end{dokaz}
 
-V posebnem je vsaka endospletična regularne upodobitve enaka evalvaciji Fourierovi transformacije v neki fiksni funkciji. Nekoliko natančneje si poglejmo, kaj je ta evalvacija. Za funkciji $f,g \in \fun(G,F)$ je
+V posebnem je vsaka endospletična regularne upodobitve enaka evalvaciji Fourierovi transformacije v neki fiksni funkciji.\footnote{V asociativni algebri to izrečemo ponavadi takole: vsak levi ideal v polenostavni algebri je glavni.} Nekoliko natančneje si poglejmo, kaj je ta evalvacija. Za funkciji $f,g \in \fun(G,F)$ je
 \[
     \hat{h}(\rho_{\fun}) \cdot f = \sum_{g \in G} h(g) \rho_{\fun}(g^{-1}) \cdot f =
     \left( x \mapsto \sum_{g \in G} h(g) f(x g^{-1}) \right).
@@ -2174,19 +2175,19 @@ Razčlenitev $\lambda$ si lahko predstavljamo kot zaporedje vrstic diagrama, v k
 
 Definirajmo funkcijo
 \[
-    \youngsym_{\lambda} = (\sgn \cdot 1_Q) * 1_P \in \fun(S_n, \CC),
+    \youngsym = (\sgn \cdot 1_Q) * 1_P \in \fun(S_n, \CC),
 \]
-ki ji pravimo {\definicija Youngov simetrizator}. Vzdolž nje dobimo endospletično $\Fcal(\youngsym_{\lambda})$ regularne upodobitve, katere slika je vektorski prostor
+ki ji pravimo {\definicija Youngov simetrizator}. Vzdolž nje dobimo endospletično $\Fcal(\youngsym)$ regularne upodobitve, katere slika je vektorski prostor
 \[
-    V_{\lambda} = \image \Fcal(\youngsym_{\lambda}) = \langle \youngsym_{\lambda} * f \mid f \in \fun(S_n, \CC) \rangle.
+    V_{\lambda} = \image \Fcal(\youngsym) = \langle \youngsym * f \mid f \in \fun(S_n, \CC) \rangle.
 \]
-Na tem prostoru naravno deluje grupa $S_n$\footnote{Ker je $\Fcal(\youngsym_{\lambda})$ spletična, je to res invarianten podprostor. Ni pa težko videti, kako elementi grupe zares delujejo; za $g \in S_n$ element $\rho_{\fun}(g)$ preslika $\youngsym_{\lambda} * f$ v $\youngsym_{\lambda} * (\rho_{\fun}(g) \cdot f)$.}, dobljeno upodobitev označimo z $\rho_{\lambda}$. 
+Na tem prostoru naravno deluje grupa $S_n$\footnote{Ker je $\Fcal(\youngsym)$ spletična, je to res invarianten podprostor. Ni pa težko videti, kako elementi grupe zares delujejo; za $g \in S_n$ element $\rho_{\fun}(g)$ preslika $\youngsym * f$ v $\youngsym * (\rho_{\fun}(g) \cdot f)$.}, dobljeno upodobitev označimo z $\rho_{\lambda}$. 
 
-\begin{izrek} \leavevmode
+\begin{izrek}[o nerazcepnih upodobitvah simetrične grupe] \leavevmode
 \begin{enumerate}
     \item Za vsako razčlenitev $\lambda$ je $\rho_{\lambda}$ nerazcepna.
     \item Za različni razčlenitvi $\lambda, \mu$ je $\rho_{\lambda} \not\cong \rho_{\mu}$.
-    \item Vsaka nerazcepna upodobitev grupe $S_n$ je izomorfna $\rho_{\lambda}$ za neko razčlenitev $\lambda$.
+    \item Vsaka nerazcepna upodobitev simetrične grupe je izomorfna $\rho_{\lambda}$ za neko razčlenitev $\lambda$.
 \end{enumerate}
 \end{izrek}
 
@@ -2194,13 +2195,13 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
 
 \begin{zgled} \leavevmode
 \begin{itemize}
-    \item Naj bo $\lambda = (n)$. Tedaj je $P = S_n$ in $Q = 1$, zato je $\youngsym_{\lambda} = 1$. Za funkcijo $f \in \fun(S_n, \CC)$ je $\Fcal(1) \cdot f = 1 * f = |G| \cdot \EE(f)$ in grupa $S_n$ deluje trivialno na tej funkciji. S tem je
+    \item Naj bo $\lambda = (n)$. Tedaj je $P = S_n$ in $Q = 1$, zato je $\youngsym = 1$. Za funkcijo $f \in \fun(S_n, \CC)$ je $\Fcal(1) \cdot f = 1 * f = |G| \cdot \EE(f)$ in grupa $S_n$ deluje trivialno na tej funkciji. S tem je
     \[
         V_{\lambda} = \image \Fcal(1) = \CC
     \]
     in dobimo trivialno upodobitev.
 
-    \item Naj bo $\lambda = (1,1,\dots,1)$. Tedaj je $P = 1$ in $Q = S_n$, zato je $\youngsym_{\lambda} = \sgn$. Za funkcijo $f \in \fun(S_n, \CC)$ je
+    \item Naj bo $\lambda = (1,1,\dots,1)$. Tedaj je $P = 1$ in $Q = S_n$, zato je $\youngsym = \sgn$. Za funkcijo $f \in \fun(S_n, \CC)$ je
     \[
         \Fcal(\sgn) \cdot f = \sgn * f = \left( x \mapsto \sum_{g \in G} \sgn(xg^{-1}) f(g) \right) = (\sgn * f)(1) \cdot \sgn,
     \]
@@ -2221,11 +2222,38 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
     \]
     Njeno jedro sestoji iz funkcij $\psi$, ki so konstantne na odsekih $S$ in povrhu zadoščajo še enakosti $\psi(x) = \psi((1 \ n) \cdot x)$ za vsak $x \in S_n$. Ko ta pogoj uporabimo s transpozicijami $(i \ n)$ za $1 \leq i < n$, sklenemo, da je vsaka taka funkcija $\psi$ nujno konstantna. Nazadnje je torej
     \[
-        V_{\lambda} = \image \Fcal(\youngsym_{\lambda}) \cong \frac{\fun_{S \backslash S_n}(S_n, \CC)}{\CC}.
+        V_{\lambda} = \image \Fcal(\youngsym) \cong \frac{\fun_{S \backslash S_n}(S_n, \CC)}{\CC}.
     \]
     Ta prostor je razsežnosti $n-1$. Prirejeno upodobitev imenujemo {\definicija standardna upodobitev} simetrične grupe $S_n$. Kot smo videli, jo lahko dobimo tako, da iz standardne permutacijske upodobitve odstanimo trivialno upodobitev.
 \end{itemize}
 \end{zgled}
+
+Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vlogo delovanje Youngovega simetrizatorja $\widehat{\youngsym}(\rho_{\fun})$. V lemi uporabljamo leksikografsko delno urejenost $<$ na množici vseh razčlenitev. 
+
+\begin{lema} \leavevmode
+\begin{enumerate}
+    \item Za vsako razčlenitev $\lambda$ je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda} \subseteq \CC \cdot \youngsym$.
+    \item Za razčlenitvi $\lambda > \mu$ je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\mu} = 0$.
+\end{enumerate}
+\end{lema}
+
+\begin{dokaz}[Dokaz izreka o nerazcepnih upodobitvah simetrične grupe] \leavevmode
+\begin{enumerate}
+    \item Naj bo $W \leq V_{\lambda}$ podupodobitev. Po lemi je $\widehat{\youngsym}(\rho_{\fun}) \cdot W$ bodisi $\CC \cdot \youngsym$ bodisi $0$. 
+    
+    V prvem primeru sledi, da je $\youngsym \in W$, od koder iz nerazcepnosti $W$ sklenemo $W = \image \Fcal(\youngsym) = V_{\lambda}$. \kljuka
+    
+    Privzemimo zdaj, da je $\widehat{\youngsym}(\rho_{\fun}) \cdot W = 0$, kar lahko zapišemo kot $W * \youngsym = 0$. Od tod sledi $W * V_{\lambda} = 0$ in zato $W * W = 0$. Naj bo $W = \image P$ za neko projektorsko endospletično $P$ regularne upodobitve. Vemo že, da so vse take preslikave oblike $P = \Fcal(w)$ za neko funkcijo $w \in \fun(S_n, \CC)$. Ker je $P \cdot 1_1 = \widehat{1_1}(\rho_{\fun}) \cdot w = w$, sledi $w \in W$. Še več, ker je $P^2 = P$, izračunamo $w = P \cdot w = \widehat{w}(\rho_{\fun}) \cdot w = w * w$. Ker je $W * W = 0$, sledi $w = 0$ in s tem $W = 0$. \kljuka
+
+    \item Za različni razčlenitvi $\lambda$, $\mu$ lahko brez škode predpostavimo $\lambda > \mu$, saj je $<$ linearna urejenost. Po lemi je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\mu} = 0$. Hkrati je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda}$ bodisi $\CC \cdot \youngsym$ bodisi $0$. V slednjem primeru pristopimo kot zgoraj: velja $V_{\lambda} * V_{\lambda} = 0$ in projektorska endospletična regularne upodobitve na $V_{\lambda}$ je oblike $\Fcal(v)$ za nek $v \in V_{\lambda}$ z lastnostjo $v = v * v$, kar implicira $v = 0$ in s tem $V_{\lambda} = 0$, protislovje. Torej je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda} \neq 0$ in zato $V_{\lambda} \not\cong V_{\mu}$.
+\end{enumerate}
+\end{dokaz}
+
+Preostane nam še dokaz leme.
+
+\begin{dokaz}[Dokaz leme]
+\todo{}
+\end{dokaz}
 
 \subsubsection{Vrednosti karakterjev}
 
@@ -2258,7 +2286,7 @@ kjer je
 \]
 \end{izrek}
 
-Dokaz temelji na poznavanju osnov teorije simetričnih funkcij.\footnote{Te osnove študent-ka ponavadi spozna pri predmetu Kombinatorika.}. Poleg tega dokaz sloni na nekoliko drugačnem\footnote{Standarden dokaz Frobeniusove formule uporablja jezik grupnih algeber in Youngovega simetrizatorja, glej {\literatura (Fulton in Harris 2004, [Section 4.1])}.} opisu nerazcepnih upodobitev $V_{\lambda}$, kot smo ga uporabili mi, zato ga brez prehude žalosti izpustimo. Poglejmo pa si nekaj primerov uporabe izreka.
+Dokaz temelji na poznavanju osnov teorije simetričnih funkcij, ki jih študent-ka ponavadi spozna pri kombinatoričnih predmetih, zato ga brez prehude žalosti izpustimo. Poglejmo pa si nekaj primerov uporabe izreka.
 
 \begin{zgled}
 Izračunajmo vrednost poljubnega karakterja $\chi_{\lambda}$ v dolgem ciklu $(1 \ 2 \ \cdots \ n) \in S_n$. Konjugiranostni razred je torej $\conclass_{n^1}$ in izračunati moramo koeficient
@@ -2284,16 +2312,27 @@ za nek $0 \leq s \leq n-1$. Taki razčlenitvi pravimo {\definicija kljuka}. Zanj
 Vrednost karakterja v dolgem ciklu je torej neničelna le za kljuke, v katerih pa ima vrednost $\pm 1$.
 \end{zgled}
 
-\todo{Definiraj splošne kljuke. Izpelji posledico o stopnjah. Zgled. Domača naloga: Izračunaj vrednost karakterja v transpoziciji.}
+\todo{Definiraj splošne kljuke. Izpelji posledico o stopnjah.}
 
 S Frobeniusovo formulo lahko določimo stopnje nerazcepnih upodobitev simetrične grupe.
 
-\begin{posledica}
+\begin{posledica}[formula o dolžinah kljuk]
 Naj bo $\lambda$ razčlenitev $n$. Tedaj je
 \[
     \dim V_{\lambda} = \frac{n!}{\prod_{i,j} h_{\lambda}(i,j)}.
 \]
 \end{posledica}
+
+\begin{zgled}
+Iz formule o dolžinah kljuk takoj izračunamo stopnjo standardne upodobitve. Usteza ji razčlenitev $(n-1,1)$, torej je njena stopnja enaka
+\[
+    \frac{n!}{1 \cdot 2 \cdot \cdots \cdot (n-2) \cdot n \cdot 1} = n-1.
+\]
+\end{zgled}
+
+\begin{domacanaloga}
+Izračunaj vrednost poljubnega karakterja $\chi_{\lambda}$ v konjugiranostnem razredu transpozicij.
+\end{domacanaloga}
 
 Ne spreglejmo, da iz Frobeniusove formule neposredno sledi, da so vrednosti karakterjev zelo posebne.\footnote{To posledico bi sicer lahko izpeljali tudi brez zahtevne Frobeniusove formule, glej na primer {\literatura (Serre 1977, [Section 13.1, Corollary 1])}.}
 
