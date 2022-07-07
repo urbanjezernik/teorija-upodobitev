@@ -2361,8 +2361,16 @@ kjer je
 
 Dokaz temelji na poznavanju osnov teorije simetričnih funkcij, ki jih študent-ka ponavadi spozna pri kombinatoričnih predmetih, zato ga brez prehude žalosti izpustimo. Poglejmo pa si nekaj primerov uporabe izreka.
 
-\begin{zgled}
-Izračunajmo vrednost poljubnega karakterja $\chi_{\lambda}$ v dolgem ciklu $(1 \ 2 \ \cdots \ n) \in S_n$. Konjugiranostni razred je torej $\conclass_{n^1}$ in izračunati moramo koeficient
+\begin{zgled} \leavevmode
+\begin{itemize}
+\item Naj bo $n = 7$ in $\lambda = (4,3)$. Izračunajmo vrednost karakterja v permutaciji $(1 \ 2)(3 \ 4)$. Velja $i_1 = 3$, $i_2 = 2$, $\ell_1 = 5$, $\ell_2 = 3$ in s tem
+\[
+    \chi_{(4,5)}(\conclass_{1^3 2^2}) = 
+    \left[ (x_1 - x_2) \cdot (x_1 + x_2)^3 (x_1^2 + x_2^2)^2 \right]_{(5,3)} =
+    2.
+\]
+
+\item Izračunajmo vrednost poljubnega karakterja $\chi_{\lambda}$ v dolgem ciklu $(1 \ 2 \ \cdots \ n) \in S_n$. Konjugiranostni razred je torej $\conclass_{n^1}$ in izračunati moramo koeficient
 \[
     \left[ \Delta(\mathbf{x}) \cdot (x_1^n + x_2^n + \cdots + x_k^n) \right]_{(\ell_1, \ell_2, \dots, \ell_k)}.
 \]
@@ -2383,18 +2391,60 @@ za nek $0 \leq s \leq n-1$. Taki razčlenitvi pravimo {\definicija kljuka}. Zanj
     \chi_{\lambda}(C_{n^1}) = \sgn(\sigma) = (-1)^s.
 \]
 Vrednost karakterja v dolgem ciklu je torej neničelna le za kljuke, v katerih pa ima vrednost $\pm 1$.
+\end{itemize}
 \end{zgled}
 
-\todo{Definiraj splošne kljuke. Izpelji posledico o stopnjah.}
-
-S Frobeniusovo formulo lahko določimo stopnje nerazcepnih upodobitev simetrične grupe.
+S Frobeniusovo formulo lahko določimo stopnje nerazcepnih upodobitev simetrične grupe. Za to bomo potrebovali koncept kljuke, ki je malo splošnejši od tiste, ki smo jo videli v zadnjem zgledu. Opazujmo Youngov diagram razčlenitve $\lambda$. Za vsako celico $(i,j)$ diagrama, kjer $i$ predstavlja vrstico in $j$ stopec, je {\definicija kljuka} $H_{\lambda}(i,j)$ množica tistih celic, ki so desno ali pod celico $(i,j)$, vključivši celico $(i,j)$.\footnote{$H_{\lambda}(i,j)$ torej sestoji iz tistih celic $(a,b)$, za katere je $a = i$ in $b \geq j$ ali $b = j$ in $a \geq i$.} {\definicija Dolžina kljuke} $H_{\lambda}(i,j)$ je enaka številu celic v kljuki, se pravi $|H_{\lambda}(i,j)|$.
 
 \begin{posledica}[formula o dolžinah kljuk]
 Naj bo $\lambda$ razčlenitev $n$. Tedaj je
 \[
-    \dim V_{\lambda} = \frac{n!}{\prod_{i,j} h_{\lambda}(i,j)}.
+    \dim V_{\lambda} = \frac{n!}{\prod_{i,j} |H_{\lambda}(i,j)|}.
 \]
 \end{posledica}
+\begin{dokaz}
+Velja 
+\[
+    \dim V_{\lambda} = \chi_{\lambda}(\conclass_{1^n}) =
+    \left[ \Delta(\mathbf{x}) \cdot (x_1 + x_2 + \cdots + x_k)^n \right]_{(\ell_1, \ell_2, \dots, \ell_k)}.
+\]
+Diskriminanto razvijemo kot v zadnjem zgledu, drugi člen pa po binomski formuli kot
+\[
+    (x_1 + x_2 + \cdots + x_k)^n = \sum_{j_1 + j_2 + \cdots + j_k = n} \frac{n!}{j_1! j_2! \cdots j_k!} x_1^{j_1} x_2^{j_2} \cdots x_k^{j_k}.
+\]
+Ko razviti vsoti zmnožimo, dobimo člen $x_1^{\ell_1} x_2^{\ell_2} \cdots x_k^{\ell_k}$, če in samo če za neko permutacijo $\sigma \in S_n$ in nabor $j_1, j_2, \dots, j_k$ velja $\sigma(k - i + 1) - 1 + j_i = \ell_i$. Iskani koeficient je torej enak
+\[
+    \sum_{\sigma} \sgn(\sigma) \cdot \frac{n!}{(\ell_1 - \sigma(k) + 1)! (\ell_2 - \sigma(k-1) + 1)! \cdots (\ell_k - \sigma(1) + 1)!},
+\]
+kjer seštevamo po tistih $\sigma \in S_k$, za katere velja $\ell_i - \sigma(k-i+1) + 1 \geq 0$ za vsak $i$. To vsoto lahko prepišemo v
+\[
+    \frac{n!}{\ell_1! \ell_2! \cdots \ell_k!} \cdot \sum_{\sigma} \sgn(\sigma) \cdot \prod_{j = 1}^k \ell_j (\ell_j - 1) \cdots (\ell_j - \sigma(k-j+1) + 2). 
+\]
+Zadnjo vsoto lahko seštevamo po vseh $\sigma \in S_k$, saj so členi, v katerih je $\ell_i - \sigma(k-i+1) + 1 < 0$, ničelni. To vsoto zato prepoznamo kot determinanto matrike razsežnosti $k \times k$ z $j$-tim stolpcem
+\[
+    1, \ \ell_j, \ \ell_j(\ell_j - 1), \ \dots, \ell_j(\ell_j - 1) \cdots (\ell_j - k + 2). 
+\]
+Ta determinanta je enaka Vandermondovi determinanti, zato je iskani koeficient enak
+\[
+    \frac{n!}{\ell_1! \ell_2! \cdots \ell_k!} \cdot \prod_{1 \leq i < j \leq n} (\ell_i - \ell_j).
+\]
+Če ima $\lambda$ en sam stolpec in je torej $\lambda = (1,1,\dots,1)$, potem je $k = n$ in $\ell_i = n - i + 1$, zato je zadnje število enako
+\[
+    \frac{n!}{n! (n-1)! \cdots 1!} \cdot \prod_{1 \leq i < j \leq n} (j-i) =
+    \frac{n!}{n! (n-1)! \cdots 1!} \cdot \prod_{1 < j \leq n} (j-1)! =
+    1,
+\]
+kot mora biti, saj že vemo, da je v tem primeru $V_{\lambda} \cong \11$. Dolžine kljuk so $|H_{\lambda}(i,1)| = n-i$, zato formula o kljukah za ta trivialen primer drži. Splošnega primera ni težko izpeljati z indukcijo.
+
+\begin{domacanaloga}
+Z indukcijo na število stolpcev Youngovega diagrama $\lambda$ dokaži, da je
+\[
+    \frac{n!}{\ell_1! \ell_2! \cdots \ell_k!} \cdot \prod_{i < j} (\ell_i - \ell_j) = \frac{n!}{\prod_{i,j}|H_{\lambda}(i,j)|}.
+\]
+\end{domacanaloga}
+
+S tem je formula o kljukah dokazana.
+\end{dokaz}
 
 \begin{zgled}
 Iz formule o dolžinah kljuk takoj izračunamo stopnjo standardne upodobitve. Usteza ji razčlenitev $(n-1,1)$, torej je njena stopnja enaka
