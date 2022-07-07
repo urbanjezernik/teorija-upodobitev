@@ -333,6 +333,7 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
             g \mapsto \left( f \mapsto \left( x \mapsto f(xg) \right) \right),
         \]
         kjer je $f \in \fun(G,F), \ x \in G$. To delovanje izhaja iz (desnega) delovanja grupe $G$ na sebi in ga zato imenujemo {\definicija (desna) regularna upodobitev} grupe $G$ nad $F$.
+        \todo{Primer kakšne modularne upodobitve. Definiraj modularno in definiraj kompleksno.}
     \end{itemize}
 \end{zgled}
 
@@ -2153,10 +2154,11 @@ Opazujmo simetrično grupo $S_n$ za $n \in \NN$ nad poljem $\CC$. Ogledali smo s
 
 \subsubsection{Nerazcepne upodobitve}
 
-Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$. Nerazcepno upodobitev grupe $S_n$, prirejeno $\lambda$, kot ponavadi iščemo z indukcijo iz podgrup. Razčlenitev $\lambda$ lahko interpretiramo kot ciklični tip permutacij, zato se naravno ponuja {\definicija Youngova podgrupa}
+Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$. Nerazcepno upodobitev grupe $S_n$, prirejeno $\lambda$, kot ponavadi iščemo z indukcijo iz podgrup. Razčlenitev $\lambda$ lahko interpretiramo kot ciklični tip permutacij, zato se naravno ponuja {\definicija Youngova grupa}
 \[
-    P = S_{\lambda_1} \times S_{\lambda_2} \times \cdots \times S_{\lambda_k} \leq S_n.
+    P = S_{\lambda_1} \times S_{\lambda_2} \times \cdots \times S_{\lambda_k}.
 \]
+Razčlenitev $\lambda$ si lahko predstavljamo kot zaporedje vrstic diagrama, v katerem je $\lambda_1$ škatlic v $1$. vrstici, $\lambda_2$ škatlic v $2$. vrstici, \dots, $\lambda_k$ škatlic v $k$. vrstici. Pri tem so vrstice poravnane na levo. Takemu shematičnemu prikazu razčlenitve pravimo {\definicija Youngov diagram}. Diagram ima $n$ škatlic, v katere poljubno vpišemo števila od $1$ do $n$. Tako izpolnjenemu diagramu pravimo {\definicija Youngov tablo}. Vsak Youngov tablo nam pravzaprav ponuja vložitev grupe $P$ v $S_n$. Fiksirajmo standardno vložitev, ki ustreza temu, da v škatlice vpišemo po vrsti števila od $1$ do $n$, začenši zgoraj levo in hodeč po $1$. vrstici, nato po $2$. vrstici in tako naprej. Grupa $P$, standardno vložena v $S_n$, predstavlja ravno vse permutacije, ki ohranjajo \emph{vrstice} tabloja. 
 
 Inducirajmo trivialno upodobitev iz $P$ na $S_n$. V razdelku o indukciji smo spoznali, da lahko $\Ind^{S_n}_{P}(\11)$ interpretiramo kot permutacijsko upodobitev $S_n$ na desnih odsekih podgrupe $P$. To interpretacijo lahko vložimo v prostor funkcij $\fun(S_n, \CC)$. Namesto množice $P$ lahko namreč opazujemo indikatorsko funkcijo $1_P$. Element $g \in S_n$ na njej deluje kot
 $\rho_{\fun}(g) \cdot 1_P = 1_{P g^{-1}}$, se pravi kot permutacija desnih odsekov. Na ta način upodobitveni prostor upodobitve $\Ind^{S_n}_{P}(\11)$ vidimo kot 
@@ -2171,7 +2173,7 @@ Ta prostor lahko izrazimo s pomočjo Fourierove transformacije kot
 \]
 Upodobitev $S_n$ na tem prostoru gotovo \emph{ni} nerazcepna, saj na primer vsebuje trivialno z večkratnostjo $\langle \chi_{\11}, \Ind^{S_n}_{P}(\chi_{\11}) \rangle = \langle \chi_{\11}, \chi_{\11} \rangle = 1$. Ta prostor bomo zato še dodatno projicirali na nek podprostor.
 
-Razčlenitev $\lambda$ si lahko predstavljamo kot zaporedje vrstic diagrama, v katerem je $\lambda_1$ škatlic v $1$. vrstici, $\lambda_2$ škatlic v $2$. vrstici, \dots, $\lambda_k$ škatlic v $k$. vrstici. Pri tem so vrstice poravnane na levo. Takemu shematičnemu prikazu razčlenitve pravimo {\definicija Youngov diagram}. Diagram ima $n$ škatlic, v katere poljubno vpišemo števila od $1$ do $n$. Tako izpolnjenemu diagramu pravimo {\definicija Youngov tablo}. Vsak Youngov tablo nam pravzaprav ponuja vložitev grupe $P$ v $S_n$. Fiksirajmo standardno vložitev, ki ustreza temu, da v škatlice vpišemo po vrsti števila od $1$ do $n$, začenši zgoraj levo in hodeč po $1$. vrstici, nato po $2$. vrstici in tako naprej. Grupa $P$, standardno vložena v $S_n$, predstavlja ravno vse permutacije, ki ohranjajo \emph{vrstice} tabloja. Iz tega gledišča je naravno, da obravnavamo tudi grupo permutacij, ki ohranjajo \emph{stolpce} tabloja. Označimo jo s $Q$. Ravno ta podgrupa je dodatek, ki nam bo dodatno reduciral upodobitev zgoraj opisano inducirano upodobitev. Pri tem bomo upoštevali, da je $Q$ sestavljena dualno $P$, zato jo bomo utežili s predznačno upodobitvijo $\sgn$.
+Do zdaj smo upoštevali le grupo $P$ permutacij, ki ohranjajo \emph{vrstice} izbranega Youngovega tabloja. Iz tega gledišča je naravno, da obravnavamo tudi grupo permutacij, ki ohranjajo \emph{stolpce} tabloja. Označimo jo s $Q$. Ravno ta podgrupa je dodatek, ki nam bo dodatno reduciral upodobitev zgoraj opisano inducirano upodobitev. Pri tem bomo upoštevali, da je $Q$ sestavljena dualno $P$, zato jo bomo utežili s predznačno upodobitvijo $\sgn$.
 
 Definirajmo funkcijo
 \[
@@ -2185,9 +2187,9 @@ Ker velja $P \cap Q = 1$, ima vsak element $x \in S_n$ \emph{kvečjemu en} zapis
 
 Vzdolž Youngovega simetrizatorja dobimo endospletično $\Fcal(\youngsym)$ regularne upodobitve, katere slika je vektorski prostor
 \[
-    V_{\lambda} = \image \Fcal(\youngsym) = \langle \youngsym * f \mid f \in \fun(S_n, \CC) \rangle.
+    V_{\lambda} = \image \Fcal(\youngsym) = \langle \youngsym * f \mid f \in \fun(S_n, \CC) \rangle,
 \]
-Na tem prostoru naravno deluje grupa $S_n$\footnote{Ker je $\Fcal(\youngsym)$ spletična, je to res invarianten podprostor. Ni pa težko videti, kako elementi grupe zares delujejo; za $g \in S_n$ element $\rho_{\fun}(g)$ preslika $\youngsym * f$ v $\youngsym * (\rho_{\fun}(g) \cdot f)$.}, dobljeno upodobitev označimo z $\rho_{\lambda}$. 
+ki ga imenujemo {\definicija Spechtov modul}. Na tem prostoru naravno deluje grupa $S_n$\footnote{Ker je $\Fcal(\youngsym)$ spletična, je to res invarianten podprostor. Ni pa težko videti, kako elementi grupe zares delujejo; za $g \in S_n$ element $\rho_{\fun}(g)$ preslika $\youngsym * f$ v $\youngsym * (\rho_{\fun}(g) \cdot f)$.}, dobljeno upodobitev označimo z $\rho_{\lambda}$.
 
 \begin{izrek}[o nerazcepnih upodobitvah simetrične grupe] \leavevmode
 \begin{enumerate}
@@ -2255,8 +2257,6 @@ Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vl
 \end{enumerate}
 \end{dokaz}
 
-Tekom dokaza smo premislili, da je $\youngsym * \youngsym = n_{\lambda} \cdot \youngsym$ za nek $n_{\lambda} \neq 0$. Od tod sledi, da je $V_{\lambda}$ slika \emph{projektorske} spletične $\Fcal(\youngsym / n_{\lambda})$. Youngov simetrizator nam torej prek Fourierove transformacije izdaja nerazcepno upodobitev $V_{\lambda}$.
-
 Preostane nam še dokaz leme.
 
 \begin{dokaz}[Dokaz leme] \leavevmode
@@ -2312,9 +2312,25 @@ Preostane nam še dokaz leme.
 \end{enumerate}
 \end{dokaz}
 
+Tekom dokaza izreka smo premislili, da je $\youngsym * \youngsym = n_{\lambda} \cdot \youngsym$ za nek $n_{\lambda} \neq 0$. Od tod sledi, da je $V_{\lambda}$ slika \emph{projektorske} spletične $\Fcal(\youngsym / n_{\lambda})$. Youngov simetrizator nam torej prek Fourierove transformacije izdaja nerazcepno upodobitev $V_{\lambda}$. Projektor $\Fcal(\youngsym / n_{\lambda})$ lahko zapišemo z matriko z \emph{racionalnimi} koeficienti, zato v prostoru $V_{\lambda}$ lahko izberemo bazo, glede na katero ima delovanje vsakega elementa $g \in G$ \emph{racionalne} matrične koeficiente. Vsaka nerazcepna upodobitev $\rho_{\lambda}$ je zato definirana nad poljem $\QQ$.
+
+\begin{domacanaloga}
+Naj bo $G$ končna grupa z upodobitvijo nad $\QQ$. Dokaži, da obstaja baza vektorskega prostora, v kateri je dana upodobitev definirana nad $\ZZ$.
+\end{domacanaloga}
+
+\begin{posledica}
+Vsaka nerazcepna upodobitev simetrične grupe je definirana nad $\ZZ$.
+\end{posledica}    
+
+Vsak Spechtov modul $V_{\lambda}$ lahko z redukcijo po modulu $p$ za poljubno praštevilo $p$ reduciramo do vektorskega prostora nad končnim poljem $\FF_p$. Na ta način dobimo mnogo modularnih upodobitev simetrične grupe. Kot smo videli že v primeru $p = 3$, te upodobitve niso nujno nerazcepne. V takih primerih obstaja enoličen \emph{kvocient} $D_{\lambda}$ reducirane upodobitve, ki je nerazcepen nad $\FF_p$.\footnote{Pozor, za nekatere razčlenitve $\lambda$ je $D_{\lambda} = 0$. Izkaže se, da je število modularnih upodobitev enako številu konjugiranostnih razredov elementov, katerih red je \emph{tuj} $p$.} Izkaže se, da na ta način dobimo vse nerazcepne modularne upodobitve simetrične grupe. Modularni je mnogo bolj mističen od kompleksnega. Sodobna teorija upodobitev se povečini ukvarja s tem, kako \emph{regularna} je kategorija upodobitev v odvisnosti od praštevila $p$.\footnote{Na primer, mnogo dela je osredotočenega na \href{https://mathoverflow.net/questions/138310/what-to-do-now-that-lusztigs-and-james-conjectures-have-been-shown-to-be-false}{Lusztigovo in Jamesovo domnevo}.} V zvezi s tem obstaja mnogo odprtih problemov.
+
+\begin{odprtproblem}
+Obravnavajmo modularne upodobitve nad $\FF_p$, kjer je $p \leq n$. Naj bosta $\lambda$, $\mu$ razčlenitvi $n$. Izračunaj večkratnosti $\mult_{V_{\lambda}}(D_{\mu})$.
+\end{odprtproblem}
+
 \subsubsection{Vrednosti karakterjev}
 
-Za družino simetričnih grup poznamo celo dokaj preprost način, kako lahko določimo vrednosti karakterjev nerazcepnih upodobitev. Izrekli ga bomo v jeziku polinomskega kolobarja $\CC[\mathbf{x}] = \CC[x_1, x_2, \dots, x_k]$. Potrebovali bomo nekaj posebnih polinomov iz tega kolobarja, in sicer {\definicija diskriminanto}
+Premislili smo že, da so vsi Spechtovi moduli definirani nad $\ZZ$, zato so vrednosti karakterjev simetrične grupe vselej cela števila. Poznamo pa celo dokaj preprost način, kako lahko eksplicitno določimo vse vrednosti karakterjev nerazcepnih upodobitev. Izrekli ga bomo v jeziku polinomskega kolobarja $\CC[\mathbf{x}] = \CC[x_1, x_2, \dots, x_k]$. Potrebovali bomo nekaj posebnih polinomov iz tega kolobarja, in sicer {\definicija diskriminanto}
 \[
     \Delta(\mathbf{x}) = \prod_{1 \leq i < j \leq k} (x_i - x_j)
 \]
@@ -2391,13 +2407,7 @@ Iz formule o dolžinah kljuk takoj izračunamo stopnjo standardne upodobitve. Us
 Izračunaj vrednost poljubnega karakterja $\chi_{\lambda}$ v konjugiranostnem razredu transpozicij.
 \end{domacanaloga}
 
-Ne spreglejmo, da iz Frobeniusove formule neposredno sledi, da so vrednosti karakterjev zelo posebne.\footnote{To posledico bi sicer lahko izpeljali tudi brez zahtevne Frobeniusove formule, glej na primer {\literatura (Serre 1977, [Section 13.1, Corollary 1])}.}
-
-\begin{posledica}
-Vrednosti nerazcepnih karakterjev simetrične grupe so cela števila.
-\end{posledica}
-
-V zvezi s tabelo karakterjev simetrične grupe omenimo le še sodobnejši presenetljiv rezultat \href{https://link.springer.com/article/10.1007/s00209-014-1290-x}{(Miller 2014)}, v katerem avtor dokaže, da so vrednosti skoraj vseh karakterjev v skoraj vseh grupnih elementih ničelne. Natančneje, če enakomerno naključno izberemo $g \in S_n$ in $\pi \in \Irr(S_n)$, potem je
+V zvezi s tabelo karakterjev simetrične grupe omenimo še sodobnejši presenetljiv rezultat \href{https://link.springer.com/article/10.1007/s00209-014-1290-x}{(Miller 2014)}, v katerem avtor dokaže, da so vrednosti skoraj vseh karakterjev v skoraj vseh grupnih elementih ničelne. Natančneje, če enakomerno naključno izberemo $g \in S_n$ in $\pi \in \Irr(S_n)$, potem je
 \[
     \lim_{n \to \infty} \PP_{g, \pi}\left(\chi_{\pi}(g) = 0\right) = 1.
 \]
