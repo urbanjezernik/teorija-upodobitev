@@ -1905,7 +1905,7 @@ S to karakterizacijo izotipičnih komponent lahko opišemo algoritem za izračun
 \[
     \tr(\rho_{\fun}(x) |_W) = \sqrt{\dim(W)} \cdot \chi_{\pi}(x).
 \]
-Iz izračunane sledi torej lahko določimo vrednost pripadajočega karakterja v predstavnikih konjugiranostnih razredov. Implementacija predstavljenega algoritma za izračun tabele karakterjev nad $\CC$ v programskem jeziku \GAP~je dostopna \href{https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g}{tukaj}.
+Iz izračunane sledi torej lahko določimo vrednost pripadajočega karakterja v predstavnikih konjugiranostnih razredov. Implementacija predstavljenega algoritma za izračun tabele karakterjev nad $\CC$ v programskem jeziku \GAP\footnote{\GAP~je programski jezik, ki pride zelo prav pri delu z grupami, saj ima implementiranih veliko standardnih konstrukcij grup in funkcij za delo z njimi. Dostopen je prosto na naslovu \url{https://www.gap-system.org}.}~je dostopna \href{https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g}{tukaj}.
 
 \begin{zgled}
 Opazujmo alternirajočo grupo $A_5$ nad poljem $\CC$. Z opisanim algoritmom hitro izračunamo njeno tabelo karakterjev.
@@ -2488,7 +2488,7 @@ Grupo $G_p$ lahko razumemo s pomočjo njenih podgrup
     D_p &= \left\{ \begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} \mid a,d \in \FF_p^* \right\}, \\
     U_p &= \left\{ \begin{pmatrix} 1 & b \\ 0 & 1 \end{pmatrix} \mid b \in \FF_p \right\}.
 \end{align*}
-Grupa $B_p$ je {\definicija Borelova podgrupa}, grupa $U_p$ pa {\definicija unipotentna podgrupa}. Seveda je $B_p = D_p \times U_p$. Grupa $G_p$ ima tako vrsto podgrup
+Grupa $B_p$ je {\definicija Borelova podgrupa}, grupa $U_p$ pa {\definicija unipotentna podgrupa}. Seveda je $B_p = D_p \times U_p$. Grupa $G_p$ ima torej vrsto podgrup
 \[
     G_p \geq B_p \geq U_p \geq 1.
 \]
@@ -2575,7 +2575,7 @@ Ker je $G_p/\SL_2(\FF_p)$ komutativna, je $[G_p,G_p] \leq \SL_2(\FF_p)$. Za obra
     \end{pmatrix}
     = S_+
 \]
-in sklenemo $S_+ \in [G_p, G_p]$. Sorodno dobimo $S_- \in [G_p, G_p]$. Ker $S_+,S_-$ generirata $\SL_2(\FF_p)$, dobimo še drugo neenakost.
+in sklenemo $S_+ \in [G_p, G_p]$. Sorodno dobimo $S_- \in [G_p, G_p]$. Ker $S_+,S_-$ generirata $\SL_2(\FF_p)$, dobimo še drugo vsebovanost.
 \end{dokaz} 
 
 Nazadnje upoštevajmo oba posebna homomorfizma, $\Pi$ in $\det$. Presek njunih jeder sestoji iz skalarnih matrik z determinanto $1$, torej je enak $\{ I, -I \}$. Ta podgrupa je edinka v $\SL_2(\FF_p)$, zato lahko tvorimo kvocient
@@ -2653,8 +2653,8 @@ Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnost
 
 \begin{table}[t]
     \centering
-\begin{tabular}{l|*{4}{c}}
-    tip razreda & 
+\begin{tabular}{l*{4}{c}}
+    & 
     $\begin{pmatrix}
         a & 0 \\ 0 & a
     \end{pmatrix}$
@@ -2673,7 +2673,7 @@ Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnost
     število razredov & $p-1$ & $p-1$ & $(p-1)(p-2)/2$ & $p(p-1)/2$ \\
     velikost razreda & $1$ & $p^2 - 1$ & $p(p+1)$ & $p(p-1)$ \\
 \end{tabular}
-\caption{Konjugiranostni razredi v $G_p$: njihov tip, velikost in število razredov določenega tipa}
+\caption{Konjugiranostni razredi v $G_p$: njihov tip, število razredov določenega tipa in velikost razreda}
 \end{table}
 
 Seštejemo število vseh konjugiranostnih razredov in dobimo
@@ -2768,7 +2768,7 @@ Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, k
 Ta množica v splošnem \emph{ni} podgrupa.
 
 \begin{zgled}
-V programskem okolju \GAP\footnote{\GAP~je programski jezik, ki pride zelo prav pri delu z grupami, saj ima implementiranih veliko standardnih konstrukcij grup in funkcij za delo z njimi. Dostopen je prosto na naslovu \url{https://www.gap-system.org}.}~se ni težko prepričati, da je najmanjša\footnote{Natančneje, obstajata dve taki neizomorfni grupi.} grupa $G$, v kateri $K(G)$ ne sovpada z izvedeno podgrupo $[G,G] = \langle K(G) \rangle$, moči $96$. V \GAP~je ta grupa dostopna pod imenom \texttt{SmallGroup(96, 3)}. Podamo jo lahko v njeni permutacijski obliki kot podgrupo $S_{12}$, generirano s permutacijama
+V programskem okolju \GAP~se ni težko prepričati, da je najmanjša\footnote{Natančneje, obstajata dve taki neizomorfni grupi.} grupa $G$, v kateri $K(G)$ ne sovpada z izvedeno podgrupo $[G,G] = \langle K(G) \rangle$, moči $96$. V \GAP~je ta grupa dostopna pod imenom \texttt{SmallGroup(96, 3)}. Podamo jo lahko v njeni permutacijski obliki kot podgrupo $S_{12}$, generirano s permutacijama
 \[
     x = (1 \ 3 \ 5)(2 \ 4 \ 6)(7 \ 11 \ 9)(8 \ 12 \ 10), \quad
     y = (3 \ 9 \ 4 \ 10)(5 \ 7)(6 \ 8)(11 \ 12).
