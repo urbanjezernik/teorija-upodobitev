@@ -2148,7 +2148,7 @@ to je {\definicija Hilbert-Schmidtov skalarni produkt}. Parsevalov izrek nam tor
 
 \section{Razširjeni zgledi}
 
-Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo na voljo tabelo karakterjev, izračun te pa je končen problem. S tem smo za konkretne končne grupe dosegli ultimativen cilj teorije upodobitev. Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves ne spregledamo gozda. Grupe namreč praviloma ne nastopajo posamično, temveč kot del večjih družin.\footnote{Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, \dots} V tem razdelku si bomo podrobneje pogledali dve temeljni družini grup, in sicer simetrične grupe ter splošne linearne grupe nad končnim poljem. Njuno teorijo upodobitev bomo obravnavali celostno.
+Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo na voljo tabelo karakterjev, izračun te pa je končen problem. S tem smo za konkretne končne grupe dosegli ultimativen cilj teorije upodobitev. Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves ne spregledamo gozda. Grupe namreč praviloma ne nastopajo posamično, temveč kot del večjih družin.\footnote{Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, \dots} V tem razdelku si bomo podrobneje pogledali dve temeljni družini grup, in sicer simetrične grupe ter splošne linearne grupe nad končnim poljem.\footnote{Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, dveh neskončnih družin, ki so zelo podobne družini simetričnih grup in linearnih grup nad končnim poljem. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev končnih enostavnih grup.} Njuno teorijo upodobitev bomo obravnavali celostno.
 
 \subsection{$S_n$}
 
@@ -2330,7 +2330,7 @@ Vsak Spechtov modul $V_{\lambda}$ lahko z redukcijo po modulu $p$ za poljubno pr
 Obravnavajmo modularne upodobitve nad $\FF_p$, kjer je $p \leq n$. Naj bo $\lambda$ razčlenitev $n$. Izračunaj večkratnosti nerazcepnih podupodobitev v redukciji $V_{\lambda}$ po modulu $p$.
 \end{odprtproblem}
 
-Ta problem je razrešen le za razčlenitve $\lambda$ z največ dvema deloma, torej s $k \leq 2$. Za $k = 3$ sodobna bilijardna domneva {\literatura \href{https://arxiv.org/pdf/1703.05898.pdf}{(Lusztig-Williamson 2018)}} predvideva, da se te večkratnosti obnašajo po zakonu nekega zakompliciranega dinamičnega sistema (\href{https://www.youtube.com/watch?v=Ru0Zys1Vvq4}{video}).
+Ta problem je razrešen le za razčlenitve $\lambda$ z največ dvema deloma, torej s $k \leq 2$. Za $k = 3$ sodobna bilijardna domneva {\literatura \href{https://arxiv.org/pdf/1703.05898.pdf}{(Lusztig-Williamson 2018)}} predvideva, da se te večkratnosti obnašajo po zakonu nekega zakompliciranega \href{https://www.youtube.com/watch?v=Ru0Zys1Vvq4}{dinamičnega sistema}.
 
 \subsubsection{Vrednosti karakterjev}
 
@@ -2472,6 +2472,66 @@ Enakomerno naključno izberimo konjugiranostni razred $\conclass$ v $S_n$ in $\p
 \end{odprtproblem}
 
 \subsection{$\GL_2(\FF_p)$}
+
+Opazujmo {\definicija splošno linearno grupo}
+\[
+    G_p = \GL_2(\FF_p) =
+    \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mid a,b,c,d \in \FF_p, \ ad - bc \neq 0 \right\}
+\] 
+obrnljivih matrik razsežnosti $2 \times 2$ nad končnim poljem $\FF_p$, kjer je $p$ praštevilo. Njeno kategorijo upodobitev bomo obravnavali nad $\CC$. Še pred tem pa moramo bolje spoznati to grupo.
+
+\subsubsection{Osnovne poteze}
+
+Grupo $G_p$ lahko razumemo s pomočjo njenih podgrup
+\begin{align*}
+    B_p &= \left\{ \begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \mid a,d \in \FF_p^*, \ b \in \FF_p \right\}, \\
+    D_p &= \left\{ \begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} \mid a,d \in \FF_p^* \right\}, \\
+    U_p &= \left\{ \begin{pmatrix} 1 & b \\ 0 & 1 \end{pmatrix} \mid b \in \FF_p \right\}.
+\end{align*}
+Grupa $B_p$ je {\definicija Borelova podgrupa}, grupa $U_p$ pa {\definicija unipotentna podgrupa}. Seveda je $B_p = D_p \times U_p$. Grupa $G_p$ ima tako vrsto podgrup
+\[
+    G_p \geq B_p \geq U_p \geq 1.
+\]
+Borelova podgrupa \emph{ni} edinka v $G_p$, ima pa kvocientna množica $G_p/B_p$  odsekov vsekakor pomembno vlogo. Grupa $G_p$ namreč deluje na ravnini $\FF_p^2$ z matričnim množenjem in za tem na množici premic v tej ravnini, se pravi
+\[
+    \PP^1(\FF_p) = \{ \ell \leq \FF_p^2 \mid \dim \ell = 1 \},
+\]
+čemur pravimo {\definicija projektiva premica} nad $\FF_p$. Grupa $G_p$ deluje na tej premici tranzitivno in stabilizator premice $e_1$ je ravno Borelova podgrupa $B_p$. Projektivno premico lahko zato enačimo z množico $G_p/B_p$. V posebnem tako dobimo homomorfizem 
+\[
+    G_p \to S_{p+1} = \Sym(\PP^1(\FF_p)),
+\]
+o katerem bomo več povedali nekoliko kasneje. Za zdaj ne spreglejmo, da od tod takoj izračunamo $|G_p/B_p| = p+1$ in s tem 
+\[
+    |G_p| = |G_p/B_p| \cdot |B_p/U_p| \cdot |U_p| = (p+1) \cdot (p-1)^2 \cdot p.
+\]
+
+\begin{zgled}
+Naj bo $p = 2$. Grupa $G_2$ je moči $6$ in naravno deluje z matričnim množenjem na množici neničelnih vektorjev $\FF_2^2 \backslash \{ 0 \} = \{ e_1, e_2, e_1 + e_2 \}$. Na ta način dobimo homomorfizem
+\[
+    G_2 \to S_3, \quad
+     \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \mapsto (1 \ 2), \ 
+     \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \mapsto (2 \ 3),
+    \]
+ki je jasno surjektiven. Ker imata obe grupi enako moč, je celo izomorfizem, torej je $G_2 \cong S_3$.
+\end{zgled}
+
+Grupa $G_p$ ima še eno pomembno podgrupo, in sicer {\definicija specialno linearno grupo}
+\[
+    \SL_2(\FF_p) = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mid a,b,c,d \in \FF_p, \ ad - bc = 1 \right\}
+\]
+obrnljivih matrik z determinanto $1$.
+\todo{Generatorja te grupe, pojasni, razloži da je to izvedena podgrupa.}
+
+\subsubsection{Konjugiranostni razredi}
+
+V luči zadnjega zgleda brez škode predpostavimo, da je $p > 2$.
+
+\subsubsection{Tabela karakterjev}
+
+Grupa $\GL_2(\FF_p)$ naravno deluje na množici vektorjev v $\FF_p^2 \backslash \{ 0 \}$ z matričnim množenjem, kar lahko opišemo s homomorfizmom
+\[
+    \GL_2(\FF_p) \to S_{p^2 - 1}.
+\]
 
 \todo[inline]{Omeni Kazhdan-Lusztig teorijo, generične tabele karakterjev (Malle), CFSG in ATLAS}
 
