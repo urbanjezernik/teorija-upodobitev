@@ -6038,8 +6038,8 @@
             podgrupa <span class="math inline">\(B_p\)</span>.
             Projektivno premico lahko zato enačimo z množico <span
             class="math inline">\(G_p/B_p\)</span>. V posebnem tako
-            dobimo homomorfizem <span class="math display">\[G_p \to
-            S_{p+1} =
+            dobimo homomorfizem <span class="math display">\[\Pi \colon
+            G_p \to S_{p+1} =
             \mathop{\mathrm{Sym}}(\mathbf{P}^1(\mathbf{F}_p)),\]</span>
             o katerem bomo več povedali nekoliko kasneje. Za zdaj ne
             spreglejmo, da od tod takoj izračunamo <span
@@ -6047,30 +6047,152 @@
             <span class="math display">\[|G_p| = |G_p/B_p| \cdot
             |B_p/U_p| \cdot |U_p| = (p+1) \cdot (p-1)^2 \cdot
             p.\]</span></p>
-            <div class="zgled">
-            <p><strong>Zgled 3.14</strong>. Naj bo <span
-            class="math inline">\(p = 2\)</span>. Grupa <span
-            class="math inline">\(G_2\)</span> je moči <span
-            class="math inline">\(6\)</span> in naravno deluje z
-            matričnim množenjem na množici neničelnih vektorjev <span
-            class="math inline">\(\mathbf{F}_2^2 \backslash \{ 0 \} = \{
-            e_1, e_2, e_1 + e_2 \}\)</span>. Na ta način dobimo
-            homomorfizem <span class="math display">\[G_2 \to S_3, \quad
-                 \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}
-            \mapsto (1 \ 2), \
-                 \begin{pmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{pmatrix}
-            \mapsto (2 \ 3),\]</span> ki je jasno surjektiven. Ker imata
-            obe grupi enako moč, je celo izomorfizem, torej je <span
-            class="math inline">\(G_2 \cong S_3\)</span>.</p>
-            </div>
-            <p>Grupa <span class="math inline">\(G_p\)</span> ima še eno
-            pomembno podgrupo, in sicer <span><strong><em>specialno
-            linearno grupo</em></strong></span> <span
+            <p>Grupa <span class="math inline">\(G_p\)</span> je
+            opremljena tudi z determinantnim homomorfizmom <span
+            class="math display">\[\det \colon G_p \to
+            \mathbf{F}_p^*.\]</span> Jedro tega homomorfizma je
+            <span><strong><em>specialna linearna
+            grupa</em></strong></span> <span
             class="math display">\[\mathop{\mathrm{SL}}_2(\mathbf{F}_p)
             = \left\{ \begin{pmatrix} a &amp; b \\ c &amp; d
             \end{pmatrix} \mid a,b,c,d \in \mathbf{F}_p, \ ad - bc = 1
-            \right\}\]</span> obrnljivih matrik z determinanto <span
-            class="math inline">\(1\)</span>.</p>
+            \right\}.\]</span> Velja <span
+            class="math inline">\(|\mathop{\mathrm{SL}}_2(\mathbf{F}_p)|
+            = |G_p|/(p-1) = (p+1)p(p-1)\)</span>. Izpostavimo dva
+            posebna elementa te grupe, <span class="math display">\[S_+
+            = \begin{pmatrix}
+                    1 &amp; 1 \\ 0 &amp; 1
+                \end{pmatrix}, \quad
+                S_- = \begin{pmatrix}
+                    1 &amp; 0 \\ 1 &amp; 1
+                \end{pmatrix}.\]</span> Levo množenje s tema dvema
+            elementoma ustreza izvajanju vrstičnih operacij na dani
+            matriki, <span class="math display">\[S_+ \cdot
+                \begin{pmatrix}
+                    a &amp; b \\ c &amp; d
+                \end{pmatrix}
+                =
+                \begin{pmatrix}
+                    a+c &amp; b+d \\ c &amp; d
+                \end{pmatrix}, \quad
+                S_- \cdot
+                \begin{pmatrix}
+                    a &amp; b \\ c &amp; d
+                \end{pmatrix}
+                =
+                \begin{pmatrix}
+                    a &amp; b \\ c+a &amp; d+b
+                \end{pmatrix}\]</span> Ker lahko vsako matriko v <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{F}_p)\)</span>
+            z vrstičnimi operacijami pripeljemo do identitete, sklemeno,
+            da elementa <span class="math inline">\(S_+\)</span>, <span
+            class="math inline">\(S_-\)</span> <em>generirata</em> grupo
+            <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{F}_p)\)</span>.</p>
+            <div class="zgled">
+            <p><strong>Zgled 3.14</strong>. Naj bo <span
+            class="math inline">\(p = 2\)</span>. Grupa <span
+            class="math inline">\(G_2\)</span> v tem primeru enaka <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{F}_2)\)</span>
+            in je moči <span class="math inline">\(6\)</span>. Naravno
+            deluje z matričnim množenjem na množici treh neničelnih
+            vektorjev <span class="math inline">\(\mathbf{F}_2^2
+            \backslash \{ 0 \} = \{ e_1, e_2, e_1 + e_2 \}\)</span>. Na
+            ta način dobimo homomorfizem <span
+            class="math display">\[G_2 \to S_3, \quad
+                    S_+ \mapsto (2 \ 3), \
+                    S_- \mapsto (1 \ 3).\]</span> ki je surjektiven, ker
+            zapisani transpoziciji generirata grupo <span
+            class="math inline">\(S_3\)</span>. Ker imata obe grupi
+            enako moč, je celo izomorfizem, torej je <span
+            class="math inline">\(G_2 \cong S_3\)</span>.</p>
+            </div>
+            <div class="trditev">
+            <p><strong>Trditev 3.8</strong>. Za <span
+            class="math inline">\(p &gt; 2\)</span> je <span
+            class="math inline">\([G_p, G_p] =
+            \mathop{\mathrm{SL}}_2(\mathbf{F}_p)\)</span>.</p>
+            </div>
+            <div class="proof">
+            <p><em>Proof.</em> Ker je <span
+            class="math inline">\(G_p/\mathop{\mathrm{SL}}_2(\mathbf{F}_p)\)</span>
+            komutativna, je <span class="math inline">\([G_p,G_p] \leq
+            \mathop{\mathrm{SL}}_2(\mathbf{F}_p)\)</span>. Za obratno
+            neenakost upoštevamo račun <span
+            class="math display">\[\left[
+                    S_+^{-2^{-1}},
+                    \begin{pmatrix}
+                        1 &amp; 0 \\ 0 &amp; -1
+                    \end{pmatrix}
+                \right] =
+                S_+^{2^{-1}} \cdot
+                \begin{pmatrix}
+                    1 &amp; 0 \\ 0 &amp; -1
+                \end{pmatrix}
+                \cdot S_+^{-2^{-1}} \cdot
+                \begin{pmatrix}
+                    1 &amp; 0 \\ 0 &amp; -1
+                \end{pmatrix}
+                = S_+\]</span> in sklenemo <span
+            class="math inline">\(S_+ \in [G_p, G_p]\)</span>. Sorodno
+            dobimo <span class="math inline">\(S_- \in [G_p,
+            G_p]\)</span>. Ker <span
+            class="math inline">\(S_+,S_-\)</span> generirata <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{F}_p)\)</span>,
+            dobimo še drugo neenakost. ◻</p>
+            </div>
+            <p>Nazadnje upoštevajmo oba posebna homomorfizma, <span
+            class="math inline">\(\Pi\)</span> in <span
+            class="math inline">\(\det\)</span>. Presek njunih jeder
+            sestoji iz skalarnih matrik z determinanto <span
+            class="math inline">\(1\)</span>, torej je enak <span
+            class="math inline">\(\{ I, -I \}\)</span>. Ta podgrupa je
+            edinka v <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{F}_p)\)</span>,
+            zato lahko tvorimo kvocient <span
+            class="math display">\[\mathop{\mathrm{PSL}}_2(\mathbf{F}_p)
+            = \frac{\mathop{\mathrm{SL}}_2(\mathbf{F}_p)}{\{ I, -I
+            \}}.\]</span></p>
+            <div class="zgled">
+            <p><strong>Zgled 3.15</strong>. Za <span
+            class="math inline">\(p = 2\)</span> je <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{F}_2)
+            = \mathop{\mathrm{SL}}_2(\mathbf{F}_2) \cong S_3\)</span>.
+            Za <span class="math inline">\(p = 3\)</span> se grupa <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{F}_3)\)</span>
+            prek delovanja <span class="math inline">\(\Pi\)</span>
+            vloži v simetrično grupo <span
+            class="math inline">\(S_4\)</span>. Ker je <span
+            class="math inline">\(|\mathop{\mathrm{PSL}}_2(\mathbf{F}_3)|
+            = 12\)</span>, je slika te vložitve podgrupa indeksa <span
+            class="math inline">\(2\)</span> v <span
+            class="math inline">\(S_4\)</span>, kar pomeni, da gre za
+            alternirajočo podgrupo. Sledi <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{F}_3)
+            \cong A_4\)</span>.</p>
+            </div>
+            <div class="domacanaloga">
+            <p><strong>Domača naloga 3.7</strong>. Naj bo <span
+            class="math inline">\(p = 5\)</span>. Grupa <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{F}_5)\)</span>
+            je moči <span class="math inline">\(60\)</span>. Poišči
+            njene <span class="math inline">\(2\)</span>-podgrupe
+            Sylowa. Na množici teh podgrup grupa <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{F}_5)\)</span>
+            deluje tranzitivno. Iz tega delovanja izpelji, da je <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{F}_5)
+            \cong A_5\)</span>.</p>
+            </div>
+            <div class="izrek">
+            <p><strong>Izrek 3.9</strong> (Galois). Za <span
+            class="math inline">\(p &gt; 3\)</span> je grupa <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(p)\)</span>
+            enostavna.</p>
+            </div>
+            <p>Družina grup <span class="math inline">\(G_p\)</span> za
+            praštevila <span class="math inline">\(p\)</span> je torej
+            dobra prijateljica ene od fundamentalnih družin končnih
+            enostavnih grup.</p>
             <h4 id="konjugiranostni-razredi">Konjugiranostni
             razredi</h4>
             <p>V luči zadnjega zgleda brez škode predpostavimo, da je
@@ -6168,7 +6290,7 @@
             Fourierovi transformaciji razredne funkcije. ◻</p>
             </div>
             <div class="trditev">
-            <p><strong>Trditev 3.8</strong>. Naj bo <span
+            <p><strong>Trditev 3.9</strong>. Naj bo <span
             class="math inline">\(G\)</span> končna grupa in <span
             class="math inline">\(\mathcal{C}_1\)</span>, <span
             class="math inline">\(\mathcal{C}_2\)</span> konjugiranostna
@@ -6209,7 +6331,7 @@
             class="math display">\[K(G) = \{ [x,y] \mid x,y \in G
             \}.\]</span> Ta množica v splošnem <em>ni</em> podgrupa.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.15</strong>. V programskem okolju
+            <p><strong>Zgled 3.16</strong>. V programskem okolju
             <code>GAP</code><a href="#fn56" class="footnote-ref"
             id="fnref56" role="doc-noteref"><sup>56</sup></a> se ni
             težko prepričati, da je najmanjša<a href="#fn57"
@@ -6335,7 +6457,7 @@
             pogoj pa lahko preberemo neposredno iz tabele karakterjev
             grupe.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.16</strong>. Naj bo <span
+            <p><strong>Zgled 3.17</strong>. Naj bo <span
             class="math inline">\(G = \langle x, y \rangle\)</span>
             grupa moči <span class="math inline">\(96\)</span> iz
             zadnjega zgleda. S predstavljenim algoritmom lahko hitro
