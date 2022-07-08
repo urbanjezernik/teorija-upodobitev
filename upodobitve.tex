@@ -2498,40 +2498,204 @@ Borelova podgrupa \emph{ni} edinka v $G_p$, ima pa kvocientna množica $G_p/B_p$
 \]
 čemur pravimo {\definicija projektiva premica} nad $\FF_p$. Grupa $G_p$ deluje na tej premici tranzitivno in stabilizator premice $e_1$ je ravno Borelova podgrupa $B_p$. Projektivno premico lahko zato enačimo z množico $G_p/B_p$. V posebnem tako dobimo homomorfizem 
 \[
-    G_p \to S_{p+1} = \Sym(\PP^1(\FF_p)),
+    \Pi \colon G_p \to S_{p+1} = \Sym(\PP^1(\FF_p)),
 \]
 o katerem bomo več povedali nekoliko kasneje. Za zdaj ne spreglejmo, da od tod takoj izračunamo $|G_p/B_p| = p+1$ in s tem 
 \[
     |G_p| = |G_p/B_p| \cdot |B_p/U_p| \cdot |U_p| = (p+1) \cdot (p-1)^2 \cdot p.
 \]
 
-\begin{zgled}
-Naj bo $p = 2$. Grupa $G_2$ je moči $6$ in naravno deluje z matričnim množenjem na množici neničelnih vektorjev $\FF_2^2 \backslash \{ 0 \} = \{ e_1, e_2, e_1 + e_2 \}$. Na ta način dobimo homomorfizem
+Grupa $G_p$ je opremljena tudi z determinantnim homomorfizmom
 \[
-    G_2 \to S_3, \quad
-     \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \mapsto (1 \ 2), \ 
-     \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \mapsto (2 \ 3),
-    \]
-ki je jasno surjektiven. Ker imata obe grupi enako moč, je celo izomorfizem, torej je $G_2 \cong S_3$.
+    \det \colon G_p \to \FF_p^*.
+\]
+Jedro tega homomorfizma je {\definicija specialna linearna grupa}
+\[
+    \SL_2(\FF_p) = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mid a,b,c,d \in \FF_p, \ ad - bc = 1 \right\}.
+\]
+Velja $|\SL_2(\FF_p)| = |G_p|/(p-1) = (p+1)p(p-1)$. Izpostavimo dva posebna elementa te grupe,
+\[
+    S_+ = \begin{pmatrix}
+        1 & 1 \\ 0 & 1
+    \end{pmatrix}, \quad
+    S_- = \begin{pmatrix}
+        1 & 0 \\ 1 & 1
+    \end{pmatrix}.
+\]
+Levo množenje s tema dvema elementoma ustreza izvajanju vrstičnih operacij na dani matriki,
+\[
+    S_+ \cdot 
+    \begin{pmatrix}
+        a & b \\ c & d
+    \end{pmatrix}
+    = 
+    \begin{pmatrix}
+        a+c & b+d \\ c & d
+    \end{pmatrix}, \quad
+    S_- \cdot 
+    \begin{pmatrix}
+        a & b \\ c & d
+    \end{pmatrix}
+    = 
+    \begin{pmatrix}
+        a & b \\ c+a & d+b
+    \end{pmatrix}
+\]
+Ker lahko vsako matriko v $\SL_2(\FF_p)$ z vrstičnimi operacijami pripeljemo do identitete, sklemeno, da elementa $S_+$, $S_-$ \emph{generirata} grupo $\SL_2(\FF_p)$. 
+
+\begin{zgled}
+    Naj bo $p = 2$. Grupa $G_2$ v tem primeru enaka $\SL_2(\FF_2)$ in je moči $6$. Naravno deluje z matričnim množenjem na množici treh neničelnih vektorjev $\FF_2^2 \backslash \{ 0 \} = \{ e_1, e_2, e_1 + e_2 \}$. Na ta način dobimo homomorfizem
+    \[
+        G_2 \to S_3, \quad
+        S_+ \mapsto (2 \ 3), \ 
+        S_- \mapsto (1 \ 3).
+        \]
+    ki je surjektiven, ker zapisani transpoziciji generirata grupo $S_3$. Ker imata obe grupi enako moč, je celo izomorfizem, torej je $G_2 \cong S_3$.
 \end{zgled}
 
-Grupa $G_p$ ima še eno pomembno podgrupo, in sicer {\definicija specialno linearno grupo}
+\begin{trditev}
+Za $p > 2$ je $[G_p, G_p] = \SL_2(\FF_p)$.
+\end{trditev}
+\begin{dokaz}
+Ker je $G_p/\SL_2(\FF_p)$ komutativna, je $[G_p,G_p] \leq \SL_2(\FF_p)$. Za obratno neenakost upoštevamo račun
 \[
-    \SL_2(\FF_p) = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mid a,b,c,d \in \FF_p, \ ad - bc = 1 \right\}
+    \left[ 
+        S_+^{-2^{-1}}, 
+        \begin{pmatrix}
+            1 & 0 \\ 0 & -1 
+        \end{pmatrix}
+    \right] =
+    S_+^{2^{-1}} \cdot 
+    \begin{pmatrix}
+        1 & 0 \\ 0 & -1 
+    \end{pmatrix}
+    \cdot S_+^{-2^{-1}} \cdot
+    \begin{pmatrix}
+        1 & 0 \\ 0 & -1 
+    \end{pmatrix}
+    = S_+
 \]
-obrnljivih matrik z determinanto $1$.
-\todo{Generatorja te grupe, pojasni, razloži da je to izvedena podgrupa.}
+in sklenemo $S_+ \in [G_p, G_p]$. Sorodno dobimo $S_- \in [G_p, G_p]$. Ker $S_+,S_-$ generirata $\SL_2(\FF_p)$, dobimo še drugo neenakost.
+\end{dokaz} 
+
+Nazadnje upoštevajmo oba posebna homomorfizma, $\Pi$ in $\det$. Presek njunih jeder sestoji iz skalarnih matrik z determinanto $1$, torej je enak $\{ I, -I \}$. Ta podgrupa je edinka v $\SL_2(\FF_p)$, zato lahko tvorimo kvocient
+\[
+    \PSL_2(\FF_p) = \frac{\SL_2(\FF_p)}{\{ I, -I \}}.
+\]
+
+\begin{zgled}
+Za $p = 2$ je $\PSL_2(\FF_2) = \SL_2(\FF_2) \cong S_3$. Za $p = 3$ se grupa $\PSL_2(\FF_3)$ prek delovanja $\Pi$ vloži v simetrično grupo $S_4$. Ker je $|\PSL_2(\FF_3)| = 12$, je slika te vložitve podgrupa indeksa $2$ v $S_4$, kar pomeni, da gre za alternirajočo podgrupo. Sledi $\PSL_2(\FF_3) \cong A_4$.
+\end{zgled}
+
+\begin{domacanaloga}
+Naj bo $p = 5$. Grupa $\PSL_2(\FF_5)$ je moči $60$. Poišči njene $2$-podgrupe Sylowa. Na množici teh podgrup grupa $\PSL_2(\FF_5)$ deluje tranzitivno. Iz tega delovanja izpelji, da je $\PSL_2(\FF_5) \cong A_5$. 
+\end{domacanaloga}
+
+\begin{izrek}[Galois]
+Za $p > 3$ je grupa $\PSL_2(\FF_p)$ enostavna.
+\end{izrek}
+
+Družina grup $G_p$ za praštevila $p$ je torej dobra prijateljica ene od fundamentalnih družin končnih enostavnih grup.
 
 \subsubsection{Konjugiranostni razredi}
 
-V luči zadnjega zgleda brez škode predpostavimo, da je $p > 2$.
+Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnostnim razredom matrik. Te najlažje sistematično obravnavamo prek lastnosti njihovih karakterističnih polinomov, ki so stopnje $2$. Bodisi je ta polinom razcepen (z eno dvojno ničlo ali dvema različnima v $\FF_p$) bodisi je nerazcepen. V primeru dvojnih ničel obravnavamo še možnost, da matrika morda ni diagonalizabilna. Na ta način dobimo naslednje konjugiranostne razrede.
+
+\begin{enumerate}
+    \item {\definicija Skalarji}. Naj ima element $g \in G_p$ karakteristični polinom z dvojno ničlo $a \in \FF_p^*$ in je hkrati diagonalizabilen. Tedaj je $g$ skalarna matrika
+    \[
+        \begin{pmatrix}
+            a & 0 \\ 0 & a
+        \end{pmatrix}.
+    \]
+    Vsak tak element je centralen v $G_p$, zato je njegov konjugiranostni razred velikosti $1$. Vseh takih razredov je $p-1$.
+
+    \item {\definicija Nediagonalizabilni elementi}. Naj ima element $g \in G_p$ karakteristični polinom z dvojno ničlo $a \in \FF_p^*$ in hkrati \emph{ni} diagonalizabilen. Tedaj je po Jordanovi formi $g$ podoben matriki
+    \[
+        \begin{pmatrix}
+            a & 1 \\ 0 & a
+        \end{pmatrix}. 
+    \]
+    Centralizator vsakega takega elementa je generiran z njegovimi potencami in skalarji, zato je moči $(p-1)p$. Konjugiranostni razred je torej velikosti $p^2 - 1$. Vseh takih razredov je $p-1$.
+
+    \item {\definicija Razcepni polenostavni elementi}. Naj ima element $g \in G_p$ karakteristični polinom z dvema različnima ničlama $a,b \in \FF_p^*$. Tak element je diagonalizabilen in zato podoben
+    \[
+        \begin{pmatrix}
+            a & 0 \\ 0 & b
+        \end{pmatrix}.
+    \]
+    Centralizator vsakega takega elementa je enak
+    \[
+        T_r = D_p = \left\{ \begin{pmatrix}
+            x & 0 \\ 0 & y
+        \end{pmatrix} \mid x, y \in \FF_p^* \right\}.
+    \]
+    in je zato moči $(p-1)^2$. Konjugiranostni razred je torej velikosti $p(p+1)$. Vseh takih razredov je $\binom{p-1}{2} = (p-1)(p-2)/2$.
+
+    \item {\definicija Nerazcepni polenostavni elementi}. Naj ima element $g \in G_p$ \emph{nerazcepen} karakteristični polinom. Ta polinom torej nima ničel v $\FF_p$, ima pa ničle v razširitvi $F$ tega polja z ničlama karakterističnega polinoma. Ker je $p > 2$, sta ti dve ničli različni.\footnote{Ponovljena ničla bi bila ničla odvoda karakterističnega polinoma, ki pa je linearen in ima vse ničle v $\FF_p$.} Razširitev $F/\FF_p$ je stopnje $2$, zato jo lahko predstavimo kot
+    \[
+        F \cong \frac{\FF_p[X]}{(X^2 - \epsilon)} = \FF_p(\sqrt{\epsilon}),
+    \]
+    kjer $\epsilon \in \FF_p^*$ \emph{ni} kvadrat v $\FF_p$. To polje je opremljeno z Galoisovim avtomorfizmom $\sigma \colon \sqrt{\epsilon} \mapsto - \sqrt{\epsilon}$ reda $2$. Če je $\lambda$ lastna vrednost $g$, je torej tudi $\lambda^{\sigma}$ lastna vrednost in pripadajoča lastna vektorja sta $v$ in $v^{\sigma}$. Zamenjajmo bazo v $w_2 = v + v^{\sigma}$ in $w_1 = (v - v^{\sigma})/\sqrt{\epsilon}$. Ta dva vektorja sta invariantna za avtomorfizem $\sigma$, zato imata obe komponenti v $\FF_p$. V tej bazi ima element $g$ matriko
+    \[
+        \begin{pmatrix}
+            a & \epsilon b \\ b & a
+        \end{pmatrix},
+    \]
+    kjer je $a = (\lambda + \lambda^{\sigma})/2 \in \FF_p$ in $b = \sqrt{\epsilon} (\lambda - \lambda^{\sigma})/2 \in \FF_p^*$. Centralizator vsakega takega elementa je enak
+    \[
+        T_{nr} = \left\{ \begin{pmatrix}
+            x & \epsilon y \\ y & x
+        \end{pmatrix} \mid x, y \in \FF_p, \ (x,y) \neq (0,0) \right\}.
+    \]
+    Konjugiranostni razred je torej velikosti $p(p-1)$. Vseh takih razredov je $p (p-1)/2$.\footnote{Če zamenjamo v zgornji matriki $b$ z $-b$, dobimo podobno matriko.}
+\end{enumerate}
+
+\begin{table}[t]
+    \centering
+\begin{tabular}{l|*{4}{c}}
+    tip razreda & 
+    $\begin{pmatrix}
+        a & 0 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 1 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 0 \\ 0 & b
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & \epsilon b \\ b & a
+    \end{pmatrix}$ \\ \hline
+    število razredov & $p-1$ & $p-1$ & $(p-1)(p-2)/2$ & $p(p-1)/2$ \\
+    velikost razreda & $1$ & $p^2 - 1$ & $p(p+1)$ & $p(p-1)$ \\
+\end{tabular}
+\caption{Konjugiranostni razredi v $G_p$: njihov tip, velikost in število razredov določenega tipa}
+\end{table}
+
+Seštejemo število vseh konjugiranostnih razredov in dobimo
+\[
+    \kk(G_p) = p^2 - 1.
+\]
+
+Preden nadaljujemo z iskanjem nerazcepnih upodobitev grupe $G_p$, se še enkrat ozrimo na klasifikacijo konjugiranostnih razredov. Tekom določanja velikosti razredov smo naleteli na dva posebna centralizatorja polenostavnih elementov, in sicer $T_r$ in $T_{nr}$. Ta dva centralizatorja bosta igrala pomembno vlogo v teoriji upodobitev grupe $G_p$. Prvemu pravimo {\definicija razcepni torus}, drugemu pa {\definicija nerazcepni torus}. Za razcepni torus velja
+\[
+    T_r \cong \FF_p^* \times \FF_p^*,
+\]
+nerazcepni torus pa identificiramo kot\footnote{Element $x + \sqrt{\epsilon} y$ deluje na $\FF_p(\sqrt{\epsilon})$ z množenjem z leve. Če to grupo obravnavamo kot vektorski prostor nad $\FF_p$, potem je matrika tega delovanja v bazi $\{ 1, \sqrt{\epsilon} \}$ ravno ta, ki je prikazana.}
+\[
+    T_{nr} \cong \FF_p(\sqrt{\epsilon})^*, \quad
+    \begin{pmatrix}
+        x & \epsilon y \\ y & x
+    \end{pmatrix}
+    \mapsto x + \sqrt{\epsilon} y.
+\]
 
 \subsubsection{Tabela karakterjev}
 
-Grupa $\GL_2(\FF_p)$ naravno deluje na množici vektorjev v $\FF_p^2 \backslash \{ 0 \}$ z matričnim množenjem, kar lahko opišemo s homomorfizmom
-\[
-    \GL_2(\FF_p) \to S_{p^2 - 1}.
-\]
 
 \todo[inline]{Omeni Kazhdan-Lusztig teorijo, generične tabele karakterjev (Malle), CFSG in ATLAS}
 
