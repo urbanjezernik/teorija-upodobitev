@@ -83,6 +83,7 @@
 \DeclareMathOperator\Eigenspace{E}
 \DeclareMathOperator\fun{fun}
 \DeclareMathOperator\HS{HS}
+\DeclareMathOperator\St{St}
 
 
 \DeclareMathOperator\Aut{Aut}
@@ -1492,9 +1493,17 @@ V posebnem iz izreka po primerjavi razsežnosti izpeljemo
     \sum_{\pi \in \Irr(G)} \deg(\pi)^2 = |G|.
 \]
 
-\begin{zgled}
-Opazujmo permutacijsko upodobitev $\pi$ grupe $\ZZ/n\ZZ$ na prostoru $\CC[\Omega]$, kjer je $\Omega = \{ 1, 2, \dots, n \}$. Premislili smo že, da je $\pi$ izomorfna regularni upodobitvi in da jo lahko razstavimo kot direktno vsoto $\pi = \bigoplus_{j \in \Omega} \chi_j$, kjer je $\chi_j \colon \ZZ/n\ZZ \to \CC^*$, $x \mapsto e^{2 \pi i j x / n}$, enorazsežna upodobitev. V posebnem od tod sledi, da so $\{ \chi_j \mid j \in \Omega \}$ \emph{vse} neizomorfne nerazcepne upodobitve ciklične grupe $\ZZ/n\ZZ$.
-\todo{upodobitve abelovih grup nasploh: strukturni izrek, produk upodobitev, te so različne med sabo in jih je ravno toliko kot moč grupe}
+\begin{zgled} \leavevmode
+\begin{itemize}
+    \item Opazujmo permutacijsko upodobitev $\pi$ grupe $\ZZ/n\ZZ$ na prostoru $\CC[\Omega]$, kjer je $\Omega = \{ 1, 2, \dots, n \}$. Premislili smo že, da je $\pi$ izomorfna regularni upodobitvi in da jo lahko razstavimo kot direktno vsoto $\pi = \bigoplus_{j \in \Omega} \chi_j$, kjer je $\chi_j \colon \ZZ/n\ZZ \to \CC^*$, $x \mapsto e^{2 \pi i j x / n}$, enorazsežna upodobitev. V posebnem od tod sledi, da so $\{ \chi_j \mid j \in \Omega \}$ \emph{vse} neizomorfne nerazcepne upodobitve ciklične grupe $\ZZ/n\ZZ$.
+
+    \item Naj bo $A$ poljubna končna abelova grupa. Strukturni izrek o abelovih grupah nam pove, da $A$ lahko zapišemo kot direktni produkt določenih cikličnih grup, se pravi $A = C_1 \times C_2 \times \cdots \times C_k$. Kategorijo upodobitev vsake od cikličnih kosov nad $\CC$ že poznamo. Naj bodo $\{ \chi^i_j \mid j \in \Omega_i \}$ nerazcepne upodobitve grupe $C_i$. Tvorimo lahko {\definicija produkt upodobitev}
+    \[
+        \chi^1_{j_1} \times \chi^2_{j_2} \times \cdots \times \chi^k_{j_k} \colon \prod_{i=1}^k C_i = A \to \CC^*, \quad
+        (c_1, c_2, \dots, c_k) \mapsto \prod_{i = 1}^k \chi^i_{j_i}(c_i).
+    \]
+    Na ta način dobimo $\prod_{i=1}^k |\Omega_i| = \prod_{i=1}^k |C_i| = |A|$ enorazsežnih upodobitev. Vsaki dve od teh sta različni med sabo. Na ta način smo torej našli \emph{vse} nerazcepne upodobitve abelove grupe $A$.
+\end{itemize}
 \end{zgled}
 
 \subsection{Ortogonalnost matričnih koeficientov}
@@ -2488,7 +2497,7 @@ Grupo $G_p$ lahko razumemo s pomočjo njenih podgrup
     D_p &= \left\{ \begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} \mid a,d \in \FF_p^* \right\}, \\
     U_p &= \left\{ \begin{pmatrix} 1 & b \\ 0 & 1 \end{pmatrix} \mid b \in \FF_p \right\}.
 \end{align*}
-Grupa $B_p$ je {\definicija Borelova podgrupa}, grupa $U_p$ pa {\definicija unipotentna podgrupa}. Seveda je $B_p = D_p \times U_p$. Grupa $G_p$ ima torej vrsto podgrup
+Grupa $B_p$ je {\definicija Borelova podgrupa}, grupa $U_p$ pa {\definicija unipotentna podgrupa}. Seveda je $B_p/U_p = D_p$. Grupa $G_p$ ima torej vrsto podgrup
 \[
     G_p \geq B_p \geq U_p \geq 1.
 \]
@@ -2498,7 +2507,7 @@ Borelova podgrupa \emph{ni} edinka v $G_p$, ima pa kvocientna množica $G_p/B_p$
 \]
 čemur pravimo {\definicija projektiva premica} nad $\FF_p$. Grupa $G_p$ deluje na tej premici tranzitivno in stabilizator premice $e_1$ je ravno Borelova podgrupa $B_p$. Projektivno premico lahko zato enačimo z množico $G_p/B_p$. V posebnem tako dobimo homomorfizem 
 \[
-    \Pi \colon G_p \to S_{p+1} = \Sym(\PP^1(\FF_p)),
+    \Pi \colon G_p \to \Sym(\PP^1(\FF_p)) = S_{p+1},
 \]
 o katerem bomo več povedali nekoliko kasneje. Za zdaj ne spreglejmo, da od tod takoj izračunamo $|G_p/B_p| = p+1$ in s tem 
 \[
@@ -2651,10 +2660,7 @@ Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnost
     Konjugiranostni razred je torej velikosti $p(p-1)$. Vseh takih razredov je $p (p-1)/2$.\footnote{Če zamenjamo v zgornji matriki $b$ z $-b$, dobimo podobno matriko.}
 \end{enumerate}
 
-
-Za velika praštevila $p$ velja $|G_p| \sim p^4$. Hkrati iz izračunov števila razredov in njihovih velikosti vidimo, da je število polenostavnih elementov asimptotsko primerljivo s $p^4$, razdeljeno približno na polovico med razcepnimi in nerazcepnimi elementi. Generični elementi v $G_p$ so za velika praštevila torej polenostavni. 
-
-\begin{table}[t]
+\begin{table}[ht]
     \centering
 \begin{tabular}{l*{4}{c}}
     & 
@@ -2679,11 +2685,15 @@ Za velika praštevila $p$ velja $|G_p| \sim p^4$. Hkrati iz izračunov števila 
 \caption{Konjugiranostni razredi v $G_p$: njihov tip, število razredov določenega tipa in velikost razreda}
 \end{table}
 
+Za velika praštevila $p$ velja $|G_p| \sim p^4$. Hkrati iz izračunov števila razredov in njihovih velikosti vidimo, da je število polenostavnih elementov asimptotsko primerljivo s $p^4$, razdeljeno približno na polovico med razcepnimi in nerazcepnimi elementi. Generični elementi v $G_p$ so za velika praštevila torej polenostavni. 
+
 Seštejemo število vseh konjugiranostnih razredov in dobimo
 \[
     \kk(G_p) = p^2 - 1.
 \]
-Grupa $G_p$ ima torej $p^2-1$ nerazcepnih kompleksnih upodobitev. Preden nadaljujemo z natančnim določanjem teh upodobitev, se še enkrat ozrimo na klasifikacijo konjugiranostnih razredov. Tekom določanja velikosti razredov smo naleteli na dva posebna centralizatorja polenostavnih elementov, in sicer $T_r$ in $T_{nr}$. Ta dva centralizatorja bosta igrala pomembno vlogo v teoriji upodobitev grupe $G_p$. Prvemu pravimo {\definicija razcepni torus}, drugemu pa {\definicija nerazcepni torus}. Za razcepni torus velja
+Grupa $G_p$ ima torej $p^2-1$ nerazcepnih kompleksnih upodobitev. 
+
+Preden nadaljujemo z natančnim določanjem teh upodobitev, se še enkrat ozrimo na klasifikacijo konjugiranostnih razredov. Tekom določanja velikosti razredov smo naleteli na dva posebna centralizatorja polenostavnih elementov, in sicer $T_r$ in $T_{nr}$. Ta dva centralizatorja bosta igrala pomembno vlogo v teoriji upodobitev grupe $G_p$. Prvemu pravimo {\definicija razcepni torus}, drugemu pa {\definicija nerazcepni torus}. Za razcepni torus velja
 \[
     T_r \cong \FF_p^* \times \FF_p^*,
 \]
@@ -2697,6 +2707,141 @@ nerazcepni torus pa identificiramo kot\footnote{Element $x + \sqrt{\epsilon} y$ 
 \]
 
 \subsubsection{Tabela karakterjev}
+
+Predpostavimo, da je $p > 2$. Določimo najprej enorazsežne upodobitve grupe $G_p$. Ker je $[G_p, G_p] = \SL_2(\FF_p) = \ker (\det)$, vse enorazsežne upodobitve dobimo tako, da najprej uporabimo determinanto $\det \colon G_p \to \FF_p^*$, za tem pa poljubno upodobitev abelove grupe $\FF_p^*$. Za vsak homomorfizem $\chi \colon \FF_p^* \to \CC^*$ dobimo torej enorazsežno upodobitev $\chi \circ \det$ grupe $G_p$ in vse enorazsežne upodobitve so take oblike. Vseh teh upodobitev je $|\FF_p^*| = p-1$.
+
+\begin{table}[ht]
+    \centering
+\begin{tabular}{l|*{4}{c}}
+    & 
+    $\begin{pmatrix}
+        a & 0 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 1 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 0 \\ 0 & b
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & \epsilon b \\ b & a
+    \end{pmatrix}$ \\ \hline
+    $\chi \circ \det$ & $\chi(a)^2$ & $\chi(a)^2$ & $\chi(a) \chi(b)$ & $\chi(a^2 - \epsilon b^2)$ \\
+\end{tabular}
+\caption{Enorazsežni karakterji $G_p$}
+\end{table}
+
+Nadaljujmo s pomočjo homomorfizma $\Pi \colon G_p \to S_{p+1}$, ki opisuje permutacijsko delovanje $G_p$ na projektivni premici. Od tod dobimo permutacijsko upodobitev $G_p$ na $\CC[\PP^1(\FF_p)]$. Kot smo videli že v primeru simetrične grupe, ta upodobitev \emph{ni} nerazcepna, saj vedno vsebuje $\11$. Naj bo $\St$ komplement $\11$ v tej permutacijski upodobitvi. Ta komplement je do izomorfizma natako enolično določen in mu pravimo {\definicija Steinbergova upodobitev}.\footnote{Steinbergovo upodobitev dobimo torej tako, da $\Pi$ podaljšamo s standardno upodobitvijo simetrične grupe $S_{p+1}$.} Vrednosti karakterjev $\St$ ni težko izračunati. Račun pokaže $\langle \St, \St \rangle = 1$, zato je $\St$ nerazcepna upodobitev.
+
+\begin{table}[ht]
+    \centering
+\begin{tabular}{l|*{4}{c}}
+    & 
+    $\begin{pmatrix}
+        a & 0 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 1 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 0 \\ 0 & b
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & \epsilon b \\ b & a
+    \end{pmatrix}$ \\ \hline
+    $\St$ & $p$ & $0$ & $1$ & $-1$ \\
+\end{tabular}
+\caption{Steinbergov karakter $G_p$}
+\end{table}
+
+Steinbergovo upodobitev lahko tenzoriramo s poljubno enorazsežno in dobimo $\St \otimes (\chi \circ \det)$, kar označimo krajše kot $\St(\chi)$. Za $\chi = \11$ dobimo običajno Steibergovo upodobitev. Vse te upodobitve so tudi nerazcepne.
+
+\begin{table}[ht]
+    \centering
+\begin{tabular}{l|*{4}{c}}
+    & 
+    $\begin{pmatrix}
+        a & 0 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 1 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 0 \\ 0 & b
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & \epsilon b \\ b & a
+    \end{pmatrix}$ \\ \hline
+    $\St(\chi)$ & $p \chi(a)^2$ & $0$ & $\chi(a) \chi(b)$ & $- \chi(a^2 - \epsilon b^2)$ \\
+\end{tabular}
+\caption{Posplošeni Steinbergov karakter $G_p$}
+\end{table}
+
+Do zdaj smo našteli $2(p-1)$ nerazcepnih upodobitev, iščemo pa jih $p^2 - 1$. Še veliko jih manjka! Sledeč filozofiji Artina in Brauerja nadaljne nerazcepne upodobitve iščemo z indukcijo iz podgrup $G_p$. Opazujmo Borelovo podgrupo $B_p$. Ta grupa je opremljena s projekcijo na razcepni torus
+\[
+    B_p \to B_p / U_p = D_p = T_r = \FF_p^* \times \FF_p^*.
+\]
+Nerazcepne upodobitve razcepnega torusa so ravno produkti $\chi_1 \times \chi_2$, kjer sta $\chi_1$, $\chi_2$ nerazcepni upodobitvi prvega oziroma drugega faktorja torusa. Na ta način dobimo nerazcepne upodobitve Borelove podgrupe,
+\[
+    \rho(\chi_1, \chi_2) \colon B_p \to \CC^*, \quad
+    \begin{pmatrix}
+        a & b \\ 0 & d
+    \end{pmatrix} \mapsto
+    \chi_1(a) \chi_2(d).
+\]
+Vsako od teh upodobitev induciramo na grupo $G_p$ in dobimo upodobitev
+\[
+    \gamma(\chi_1, \chi_2) = \Ind^{G_p}_{B_p}(\rho(\chi_1, \chi_2))
+\] 
+razsežnosti $|G_p/B_p| = p+1$. Karakter take upodobitve lahko izračunamo s formulo za vrednosti karakterjev inducirane upodobitve.
+
+\begin{domacanaloga}
+Izračunaj vrednosti karakterjev upodobitve $\gamma(\chi_1, \chi_2)$.
+\end{domacanaloga}
+
+\begin{table}[ht]
+    \centering
+\begin{tabular}{l|*{4}{c}}
+    & 
+    $\begin{pmatrix}
+        a & 0 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 1 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 0 \\ 0 & b
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & \epsilon b \\ b & a
+    \end{pmatrix}$ \\ \hline
+    $\gamma(\chi_1, \chi_2)$ & $(p+1) \chi_1(a) \chi_2(a)$ & $\chi_1(a) \chi_2(a)$ & $\chi_1(a) \chi_2(b) + \chi_2(a) \chi_1(b)$ & $0$ \\
+\end{tabular}
+\caption{Karakter upodobitve $\gamma(\chi_1, \chi_2)$ grupe $G_p$}
+\end{table}
+
+Od tod po preprostem računu določimo normo karakterja kot
+\[
+    || \chi_{\gamma(\chi_1, \chi_2)} ||^2 = 
+    \begin{cases}
+        2 & \chi_1 = \chi_2, \\
+        1 & \chi_1 \neq \chi_2.
+    \end{cases}
+\]
+Za $\chi_1 \neq \chi_2$ je upodobitev $\gamma(\chi_1, \chi_2)$ torej nerazcepna. Iz karakterja opazimo, da je $\rho$ simetrična v svojih argumentih, se pravi $\gamma(\chi_1, \chi_2) \cong \gamma(\chi_2, \chi_1)$. Na ta način torej dobimo $\binom{p-1}{2} = (p-1)(p-2)/2$ nerazcepnih upodobitev grupe $G_p$. Tem upodobitvam pravimo {\definicija upodobitve glavne vrste}. V primeru, ko je $\chi_1 = \chi_2$, iz vrednosti karakterjev opazimo izomorfizem $\gamma(\chi, \chi) \cong \St(\chi) \oplus (\chi \circ \det)$, torej tukaj ne najdemo nobenih novih nerazcepnih upodobitev.
+
 
 
 \todo[inline]{Omeni Kazhdan-Lusztig teorijo, generične tabele karakterjev (Malle), CFSG in ATLAS}
