@@ -84,6 +84,7 @@
 \DeclareMathOperator\fun{fun}
 \DeclareMathOperator\HS{HS}
 \DeclareMathOperator\St{St}
+\DeclareMathOperator\Realpart{Re}
 
 
 \DeclareMathOperator\Aut{Aut}
@@ -2550,7 +2551,7 @@ Levo množenje s tema dvema elementoma ustreza izvajanju vrstičnih operacij na 
         a & b \\ c+a & d+b
     \end{pmatrix}
 \]
-Ker lahko vsako matriko v $\SL_2(\FF_p)$ z vrstičnimi operacijami pripeljemo do identitete, sklemeno, da elementa $S_+$, $S_-$ \emph{generirata} grupo $\SL_2(\FF_p)$. 
+Ker lahko vsako matriko v $\SL_2(\FF_p)$ z vrstičnimi operacijami pripeljemo do identitete, sklenemo, da elementa $S_+$, $S_-$ \emph{generirata} grupo $\SL_2(\FF_p)$. 
 
 \begin{zgled}
     Naj bo $p = 2$. Grupa $G_2$ v tem primeru enaka $\SL_2(\FF_2)$ in je moči $6$. Naravno deluje z matričnim množenjem na množici treh neničelnih vektorjev $\FF_2^2 \backslash \{ 0 \} = \{ e_1, e_2, e_1 + e_2 \}$. Na ta način dobimo homomorfizem
@@ -2625,7 +2626,13 @@ Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnost
             a & 1 \\ 0 & a
         \end{pmatrix}. 
     \]
-    Centralizator vsakega takega elementa je generiran z njegovimi potencami in skalarji, zato je moči $(p-1)p$. Konjugiranostni razred je torej velikosti $p^2 - 1$. Vseh takih razredov je $p-1$.
+    Centralizator vsakega takega elementa je enak
+    \[
+      C_p = \left\{ \begin{pmatrix}
+      x & t \\ 0 & x
+  \end{pmatrix} \mid x \in \FF_p^*, \ t \in \FF_p \right\} = S_p \times U_p,
+    \]
+    kjer je $S_p$ množica skalarnih matrik. Velja $|C_p| = (p-1)p$. Konjugiranostni razred je torej velikosti $p^2 - 1$. Vseh takih razredov je $p-1$.
 
     \item {\definicija Razcepni polenostavni elementi}. Naj ima element $g \in G_p$ karakteristični polinom z dvema različnima ničlama $a,b \in \FF_p^*$. Tak element je diagonalizabilen in zato podoben
     \[
@@ -2645,7 +2652,7 @@ Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnost
     \[
         F \cong \frac{\FF_p[X]}{(X^2 - \epsilon)} = \FF_p(\sqrt{\epsilon}),
     \]
-    kjer $\epsilon \in \FF_p^*$ \emph{ni} kvadrat v $\FF_p$. To polje je opremljeno z Galoisovim avtomorfizmom $\sigma \colon \sqrt{\epsilon} \mapsto - \sqrt{\epsilon}$ reda $2$. Če je $\lambda$ lastna vrednost $g$, je torej tudi $\lambda^{\sigma}$ lastna vrednost in pripadajoča lastna vektorja sta $v$ in $v^{\sigma}$. Zamenjajmo bazo v $w_2 = v + v^{\sigma}$ in $w_1 = (v - v^{\sigma})/\sqrt{\epsilon}$. Ta dva vektorja sta invariantna za avtomorfizem $\sigma$, zato imata obe komponenti v $\FF_p$. V tej bazi ima element $g$ matriko
+    kjer $\epsilon \in \FF_p^*$ \emph{ni} kvadrat v $\FF_p$. To polje je opremljeno z Galoisjevim avtomorfizmom $\sigma \colon \sqrt{\epsilon} \mapsto - \sqrt{\epsilon}$ reda $2$. Če je $\lambda$ lastna vrednost $g$, je torej tudi $\lambda^{\sigma}$ lastna vrednost in pripadajoča lastna vektorja sta $v$ in $v^{\sigma}$. Zamenjajmo bazo v $w_2 = v + v^{\sigma}$ in $w_1 = (v - v^{\sigma})/\sqrt{\epsilon}$. Ta dva vektorja sta invariantna za avtomorfizem $\sigma$, zato imata obe komponenti v $\FF_p$. V tej bazi ima element $g$ matriko
     \[
         \begin{pmatrix}
             a & \epsilon b \\ b & a
@@ -2657,7 +2664,7 @@ Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnost
             x & \epsilon y \\ y & x
         \end{pmatrix} \mid x, y \in \FF_p, \ (x,y) \neq (0,0) \right\}.
     \]
-    Konjugiranostni razred je torej velikosti $p(p-1)$. Vseh takih razredov je $p (p-1)/2$.\footnote{Če zamenjamo v zgornji matriki $b$ z $-b$, dobimo podobno matriko.}
+    Konjugiranostni razred je torej velikosti $p(p-1)$. Vseh takih razredov je $p (p-1)/2$.\footnote{Če zamenjamo v zgornji matriki $b$ z $-b$, dobimo podobno matriko. To ravno ustreza delovanju $\sigma$.}
 \end{enumerate}
 
 \begin{table}[ht]
@@ -2800,12 +2807,12 @@ Nerazcepne upodobitve razcepnega torusa so ravno produkti $\chi_1 \times \chi_2$
 \]
 Vsako od teh upodobitev induciramo na grupo $G_p$ in dobimo upodobitev
 \[
-    \gamma(\chi_1, \chi_2) = \Ind^{G_p}_{B_p}(\rho(\chi_1, \chi_2))
+    \pi(\chi_1, \chi_2) = \Ind^{G_p}_{B_p}(\rho(\chi_1, \chi_2))
 \] 
 razsežnosti $|G_p/B_p| = p+1$. Karakter take upodobitve lahko izračunamo s formulo za vrednosti karakterjev inducirane upodobitve.
 
 \begin{domacanaloga}
-Izračunaj vrednosti karakterjev upodobitve $\gamma(\chi_1, \chi_2)$.
+Izračunaj vrednosti karakterjev upodobitve $\pi(\chi_1, \chi_2)$.
 \end{domacanaloga}
 
 \begin{table}[ht]
@@ -2827,24 +2834,90 @@ Izračunaj vrednosti karakterjev upodobitve $\gamma(\chi_1, \chi_2)$.
     $\begin{pmatrix}
         a & \epsilon b \\ b & a
     \end{pmatrix}$ \\ \hline
-    $\gamma(\chi_1, \chi_2)$ & $(p+1) \chi_1(a) \chi_2(a)$ & $\chi_1(a) \chi_2(a)$ & $\chi_1(a) \chi_2(b) + \chi_2(a) \chi_1(b)$ & $0$ \\
+    $\pi(\chi_1, \chi_2)$ & $(p+1) \chi_1(a) \chi_2(a)$ & $\chi_1(a) \chi_2(a)$ & $\chi_1(a) \chi_2(b) + \chi_2(a) \chi_1(b)$ & $0$ \\
 \end{tabular}
-\caption{Karakter upodobitve $\gamma(\chi_1, \chi_2)$ grupe $G_p$}
+\caption{Karakter upodobitve $\pi(\chi_1, \chi_2)$ grupe $G_p$}
 \end{table}
 
 Od tod po preprostem računu določimo normo karakterja kot
 \[
-    || \chi_{\gamma(\chi_1, \chi_2)} ||^2 = 
+    || \chi_{\pi(\chi_1, \chi_2)} ||^2 = 
     \begin{cases}
         2 & \chi_1 = \chi_2, \\
         1 & \chi_1 \neq \chi_2.
     \end{cases}
 \]
-Za $\chi_1 \neq \chi_2$ je upodobitev $\gamma(\chi_1, \chi_2)$ torej nerazcepna. Iz karakterja opazimo, da je $\rho$ simetrična v svojih argumentih, se pravi $\gamma(\chi_1, \chi_2) \cong \gamma(\chi_2, \chi_1)$. Na ta način torej dobimo $\binom{p-1}{2} = (p-1)(p-2)/2$ nerazcepnih upodobitev grupe $G_p$. Tem upodobitvam pravimo {\definicija upodobitve glavne vrste}. V primeru, ko je $\chi_1 = \chi_2$, iz vrednosti karakterjev opazimo izomorfizem $\gamma(\chi, \chi) \cong \St(\chi) \oplus (\chi \circ \det)$, torej tukaj ne najdemo nobenih novih nerazcepnih upodobitev.
+Za $\chi_1 \neq \chi_2$ je upodobitev $\pi(\chi_1, \chi_2)$ torej nerazcepna. Iz karakterja opazimo, da je $\rho$ simetrična v svojih argumentih, se pravi $\pi(\chi_1, \chi_2) \cong \pi(\chi_2, \chi_1)$. Na ta način torej dobimo $\binom{p-1}{2} = (p-1)(p-2)/2$ nerazcepnih upodobitev grupe $G_p$. Tem upodobitvam pravimo {\definicija upodobitve glavne vrste}.\footnote{Angleško \emph{principal series representaions}.} V primeru, ko je $\chi_1 = \chi_2$, iz vrednosti karakterjev opazimo izomorfizem $\pi(\chi, \chi) \cong \St(\chi) \oplus (\chi \circ \det)$, torej tukaj ne najdemo nobenih novih nerazcepnih upodobitev.
 
+Opazujmo zdaj še upodobitve, ki jih dobimo z indukcijo iz nerazcepnega torusa. Te so nekoliko bolj zapletene, zato bomo pristopili bolj previdno. Naj bo
+\[
+    \theta \colon T_{nr} \cong \FF_p(\sqrt{\epsilon})^* \to \CC^*
+\]
+poljubna enorazsežna upodobitev. Izračunajmo karakter indukcije upodobitve $\theta$ nerazcepnega torusa. Uporabimo formulo za karakter inducirane upodobitve. Naj bo $R$ množica predstavnikov desnih odsekov $T_{nr}$ v $G_p$. Za $g \in G_p$ je $r g r^{-1} \in T_{nr}$ za nek $r \in R$, če in samo če je $r g r^{-1}$ bodisi skalar bodisi nerazcepen polenostaven element, kar je enakovredno temu, da je $g$ bodisi skalar bodisi nerazcepen polenostaven element. Za skalarje, ki jih interpretiramo kot elemente $g = a \in \FF_p^* \subseteq \FF_p(\sqrt{\epsilon})^*$, velja
+\[
+    \Ind_{T_{nr}}^{G_p}(\theta)(a) = |G_p : T_{nr}| \cdot \theta(a) = p(p-1) \theta(a).
+\]
+Za nerazcepne polenostavne elemente, ki jih interpretiramo kot elemente $g = a + \sqrt{\epsilon} b \in \FF_p(\sqrt{\epsilon})^*$, pa velja $g^{G_p} \cap T_{nr} = \{ g, g^{\sigma} \}$, zato sta v formuli za izračun induciranega karakterja relevantna le dva člena in dobimo
+\[
+    \Ind_{T_{nr}}^{G_p}(\theta)(a + \sqrt{\epsilon} b) = \theta(a + \sqrt{\epsilon} b) + \theta(a - \sqrt{\epsilon} b).
+\]
+Z avtomorfizmom $\sigma \in \Gal(\FF_p(\sqrt{\epsilon})/\FF_p)$ lahko delujemo na upodobitvi s predpisom $\theta^\sigma(x) = \theta(x^\sigma) = \theta(x^p)$. Torej je zadnja vrednost karakterja enaka $\theta(g) + \theta^\sigma(g)$.
 
+\begin{table}[ht]
+    \centering
+\begin{tabular}{l|*{4}{c}}
+    & 
+    $\begin{pmatrix}
+        a & 0 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 1 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 0 \\ 0 & b
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & \epsilon b \\ b & a
+    \end{pmatrix}$ \\ \hline
+    $\Ind_{T_{nr}}^{G_p}(\theta)$ & $p(p-1) \theta(a)$ & $0$ & $0$ & $\theta(a + \sqrt{\epsilon}b) + \theta(a - \sqrt{\epsilon}b)$ \\
+\end{tabular}
+\caption{Karakter upodobitve $\Ind_{T_{nr}}^{G_p}$ grupe $G_p$}
+\end{table}
 
-\todo[inline]{Omeni Kazhdan-Lusztig teorijo, generične tabele karakterjev (Malle), CFSG in ATLAS}
+Iz vrednosti karakterjev lahko izračunamo normo induciranega karakterja. Vrednost $|| \Ind_{T_{nr}}^{G_p}(\theta) ||^2$ je enaka
+\[
+    \frac{1}{|G_p|} \left(  \sum_{g \in \FF_p^*} (p (p-1) |\theta(g)|)^2 + \sum_{g \in \FF_p(\sqrt{\epsilon})^* \backslash \FF_p^*} \frac{p(p-1)}{2} \cdot |\theta(g) + \theta^{\sigma}(g)|^2 \right).
+\]
+Zadnjo vsoto lahko po razvoju kvadrata zapišemo kot
+\[
+    \frac{p(p-1)}{2} \cdot \left( 2 (p^2  - p) + 2 \Realpart \left( \sum_{g \in \FF_p(\sqrt{\epsilon})^*} \theta(g) \overline{\theta^{\sigma}(g)} - \sum_{g \in \FF_p^*}  |\theta(g)|^2 \right) \right).
+\]
+Prvo notranjo vsoto prepoznamo kot skalarni produkt upodobitev $\theta$ in $\theta^{\sigma}$ v grupi $\FF_p(\sqrt{\epsilon})$, ki je enak bodisi $0$ bodisi $1$ po ortogonalnosti nerazcepnih karakterjev. S tem je norma $|| \Ind_{T_{nr}}^{G_p}(\theta) ||^2$ enaka
+\[
+    \frac{1}{|G_p|} \left( p^2(p-1)^3 + p^2(p-1)^2 + p(p-1) \cdot \left(  (p^2 - 1) \langle \theta, \theta^{\sigma} \rangle - (p-1) \right) \right),
+\]
+kar se poenostavi do
+\[
+    || \Ind_{T_{nr}}^{G_p}(\theta) ||^2 = p-1 + \langle \theta, \theta^{\sigma} \rangle = \begin{cases}
+        p & \theta = \theta^\sigma, \\
+        p-1 & \theta \neq \theta^{\sigma}.
+    \end{cases}
+\]
+Upodobitev $\Ind_{T_{nr}}^{G_p}(\theta)$ je torej daleč od nerazcepne.
+
+Pred nadaljevanjem postojmo pri pogoju $\theta = \theta^{\sigma}$, ki razdeli inducirane upodobitve na dva naravna razreda. Ta pogoj lahko enakovredno zapišemo kot $\theta(x) = \theta(x^{p})$ za vsak $x \in \FF_p(\sqrt{\epsilon})^*$, kar je enakovredno $\theta(x^{p-1}) = 1$. Vrednost $\theta$ je torej trivialna na množici $\{ x^{p-1} \mid x \in \FF_p(\sqrt{\epsilon})^* \}$, ki jo prepoznamo ravno kot jedro determinante $\ker(\det) = \{ x \in \FF_p(\sqrt{\epsilon})^* \mid x^{p+1} = 1 \}$. Pogoj $\theta = \theta^{\sigma}$ je torej enakovreden temu, da se $\theta$ \emph{faktorizira prek determinante}, se pravi da je oblike $\theta = \chi \circ \det$ za nek karakter $\chi \colon \FF_p^* \to \CC^*$. Vseh takih upodobitev je $p-1$. Upodobitve $\theta$, ki se \emph{ne} faktorizirajo prek determinante, torej za katere velja $\theta \neq \theta^{\sigma}$, se imenujejo {\definicija regularne}. Regularne upodobitve prihajajo torej v parih $(\theta, \theta^\sigma)$. Število Galoisjevih orbit regularnih upodobitev je zato enako $((p^2 - 1) - (p-1))/2 = p(p-1)/2$.
+
+Glede na to, da inducirana upodobitev iz nerazcepnega torusa ni nerazcepna, lahko poskusimo inducirati še iz kakšne druge podgrupe. Naravni kandidat, ki nam še preostane, je centralizator nediagonalizabilnega elementa, se pravi grupa $C_p = S_p \times U_p$. Izberimo upodobitvi
+\[
+    \chi \colon S_p \to \CC^*, \quad
+    \psi \colon U_p \to \CC^*
+\]
+in tvorimo produktno upodobitev $\chi \times \psi$ grupe $C_p$. To upodobitev induciramo na grupo $G_p$. S formulo za izračun karakterjev inducirane upodobitve ni težko določiti njenega karakterja.
+
+\todo[inline]{Omeni Kazhdan-Lusztig teorijo, generične tabele karakterjev (Malle), CFSG in ATLAS, lokalni Langlands.}
 
 \section{Aplikacije}
 
