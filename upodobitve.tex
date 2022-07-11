@@ -2884,7 +2884,7 @@ Z avtomorfizmom $\sigma \in \Gal(\FF_p(\sqrt{\epsilon})/\FF_p)$ lahko delujemo n
     \end{pmatrix}$ \\ \hline
     $\Ind_{T_{nr}}^{G_p}(\theta)$ & $p(p-1) \theta(a)$ & $0$ & $0$ & $\theta(a + \sqrt{\epsilon}b) + \theta(a - \sqrt{\epsilon}b)$ \\
 \end{tabular}
-\caption{Karakter upodobitve $\Ind_{T_{nr}}^{G_p}$ grupe $G_p$}
+\caption{Karakter upodobitve $\Ind_{T_{nr}}^{G_p}(\theta)$ grupe $G_p$}
 \end{table}
 
 Iz vrednosti karakterjev lahko izračunamo normo induciranega karakterja. Vrednost $|| \Ind_{T_{nr}}^{G_p}(\theta) ||^2$ je enaka
@@ -2910,12 +2910,151 @@ Upodobitev $\Ind_{T_{nr}}^{G_p}(\theta)$ je torej daleč od nerazcepne.
 
 Pred nadaljevanjem postojmo pri pogoju $\theta = \theta^{\sigma}$, ki razdeli inducirane upodobitve na dva naravna razreda. Ta pogoj lahko enakovredno zapišemo kot $\theta(x) = \theta(x^{p})$ za vsak $x \in \FF_p(\sqrt{\epsilon})^*$, kar je enakovredno $\theta(x^{p-1}) = 1$. Vrednost $\theta$ je torej trivialna na množici $\{ x^{p-1} \mid x \in \FF_p(\sqrt{\epsilon})^* \}$, ki jo prepoznamo ravno kot jedro determinante $\ker(\det) = \{ x \in \FF_p(\sqrt{\epsilon})^* \mid x^{p+1} = 1 \}$. Pogoj $\theta = \theta^{\sigma}$ je torej enakovreden temu, da se $\theta$ \emph{faktorizira prek determinante}, se pravi da je oblike $\theta = \chi \circ \det$ za nek karakter $\chi \colon \FF_p^* \to \CC^*$. Vseh takih upodobitev je $p-1$. Upodobitve $\theta$, ki se \emph{ne} faktorizirajo prek determinante, torej za katere velja $\theta \neq \theta^{\sigma}$, se imenujejo {\definicija regularne}. Regularne upodobitve prihajajo torej v parih $(\theta, \theta^\sigma)$. Število Galoisjevih orbit regularnih upodobitev je zato enako $((p^2 - 1) - (p-1))/2 = p(p-1)/2$.
 
-Glede na to, da inducirana upodobitev iz nerazcepnega torusa ni nerazcepna, lahko poskusimo inducirati še iz kakšne druge podgrupe. Naravni kandidat, ki nam še preostane, je centralizator nediagonalizabilnega elementa, se pravi grupa $C_p = S_p \times U_p$. Izberimo upodobitvi
+Glede na to, da inducirana upodobitev iz nerazcepnega torusa ni nerazcepna, lahko poskusimo inducirati še iz kakšne druge podgrupe. Naravni kandidat, ki nam še preostane, je centralizator nediagonalizabilnega elementa, se pravi grupa $C_p = S_p \times U_p$. Ta sestoji iz vseh elementov v $G_p$, katerih karakteristični polinom ima dvojno ničlo v $\FF_p$. Izberimo upodobitvi
 \[
-    \chi \colon S_p \to \CC^*, \quad
-    \psi \colon U_p \to \CC^*
+    \chi \colon S_p \cong \FF_p^* \to \CC^*, \quad
+    \psi \colon U_p \cong \FF_p \to \CC^*
 \]
-in tvorimo produktno upodobitev $\chi \times \psi$ grupe $C_p$. To upodobitev induciramo na grupo $G_p$. S formulo za izračun karakterjev inducirane upodobitve ni težko določiti njenega karakterja.
+in tvorimo produktno upodobitev $\chi \times \psi$ grupe $C_p$. To upodobitev induciramo na grupo $G_p$. S formulo za izračun karakterjev inducirane upodobitve ni težko določiti njenega karakterja. Naj bo $R$ množica predstavnikov desnih odsekov $C_p$ v $G_p$. Za $g \in G_p$ je $r g r^{-1} \in C_p$ za nek $r \in R$, če in samo če je $g$ bodisi skalar bodisi nediagonalizabilen element. Za skalarje velja
+\[
+    \Ind_{C_p}^{G_p}(\chi \times \psi) \left( \begin{pmatrix} a & 0 \\ 0 & a \end{pmatrix} \right)
+    = |G_p : C_p| \cdot \chi(a) = (p^2 - 1) \chi(a).
+\]
+Za nediagonalizabilen element $g$ pa velja $g^{G_p} \cap C_p = g U_p \backslash S_p$, zato je v formuli za induciran karakter relevantnih le $p-1$ členov in dobimo
+\[
+    \Ind_{C_p}^{G_p}(\chi \times \psi) \left( \begin{pmatrix} a & 1 \\ 0 & a \end{pmatrix} \right)
+    = \sum_{t \in \FF_p^*} (\chi \times \psi) \left( \begin{pmatrix} a & 1 \\ 0 & a \end{pmatrix} \cdot \begin{pmatrix} 1 & t \\ 0 & 1 \end{pmatrix} \right)
+    = \sum_{t \in \FF_p^*} \chi(a) \psi(t).
+\]
+Zadnjo vsoto lahko prepišemo kot
+\[
+    \chi(a) \cdot \left( \sum_{t \in \FF_p} \psi(t) - 1 \right)
+    = \chi(a) \cdot \left( p \cdot \langle \psi, \11 \rangle - 1 \right)
+    = \begin{cases}
+        (p-1) \chi(a) & \psi = \11, \\
+        - \chi(a) & \psi \neq \11.
+    \end{cases}
+\]
+Inducirani karakter je torej odvisen od $\psi$ le preko veljavnosti enakosti $\psi = \11$.
+
+\begin{table}[ht]
+    \centering
+\begin{tabular}{l|*{4}{c}}
+    & 
+    $\begin{pmatrix}
+        a & 0 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 1 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 0 \\ 0 & b
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & \epsilon b \\ b & a
+    \end{pmatrix}$ \\ \hline
+    $\Ind_{C_p}^{G_p}(\chi \times \psi)$ & $(p^2 - 1) \chi(a)$ & $(p \cdot 1_{\psi = \11} - 1) \chi(a)$ & $0$ & $0$ \\
+\end{tabular}
+\caption{Karakter upodobitve $\Ind_{C_p}^{G_p}(\chi \times \psi)$ grupe $G_p$}
+\end{table}
+
+Iz vrednosti karakterjev izračunamo normo 
+\[
+    ||\Ind_{C_p}^{G_p}(\chi \times \psi) ||^2
+    = \begin{cases}
+        2(p-1) & \psi = \11, \\
+        p & \psi \neq \11.
+    \end{cases}
+\]
+Upodobitev $\Ind_{C_p}^{G_p}(\chi \times \psi)$ je torej spet daleč od nerazcepne.
+
+Primerjajmo obe inducirani upodobitvi. Skalarni produkt njunih karakterjev lahko izračunamo tako, da seštejemo le prispevke po skalarnih elementih, saj so vsi ostali členi ničelni. Dobimo
+\begin{align*}
+    \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\chi \times \psi) \rangle
+    &= \frac{1}{|G_p|} \sum_{a \in \FF_p^*} p(p-1) \theta(a) \cdot (p^2 - 1) \overline{\chi(a)} \\
+    &= (p-1) \cdot \langle \theta |_{S_p}, \chi \rangle \\
+    &= \begin{cases}
+        0 & \chi \neq \theta |_{S_p}, \\
+        p-1 & \chi = \theta |_{S_p}. \\
+    \end{cases}
+\end{align*}
+Če torej izberemo $\chi = \theta |_{S_p}$, je skalarni produkt med obema upodobitvama enak $p-1$. Izračunali smo tudi že normi obeh upodobitev, obe sta blizu $\sqrt{p}$. V luči Cauchy-Schwartzove neenakosti sta karakterja obeh induciranih upodobitev kot vektorja torej zelo blizu temu, da bi bila \emph{vzporedna} in s tem \emph{enaka}. Najtesnejšo zvezo med njima dobimo, če minimiziramo normi obeh, torej če vzamemo za $\theta$ regularen karakter in za $\psi$ poljuben netrivialen karakter. S to izbiro opazujmo \emph{virtualen} karakter
+\[
+    \zeta_{\theta} = \Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi) - \Ind_{T_{nr}}^{G_p}(\theta) \in R(G_p).
+\]
+Po že opravljenih računih je norma tega virtualnega karakterja res minimalna,
+\begin{align*}
+    \langle \zeta_{\theta}, \zeta_{\theta} \rangle 
+    &= ||\Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi)||^2 + ||\Ind_{T_{nr}}^{G_p}(\theta)||^2 - 2 \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\chi \times \psi) \rangle \\
+    &= p + (p-1) - 2 (p-1) \\
+    &= 1.
+\end{align*}
+Torej je bodisi $\zeta_{\theta}$ bodisi $-\zeta_{\theta}$ nerazcepen karakter. Ker velja $\zeta_{\theta}(1) = p-1$, je $\zeta_{\theta}$ nerazcepen karakter.
+
+\begin{table}[ht]
+    \centering
+\begin{tabular}{l|*{4}{c}}
+    & 
+    $\begin{pmatrix}
+        a & 0 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 1 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 0 \\ 0 & b
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & \epsilon b \\ b & a
+    \end{pmatrix}$ \\ \hline
+    $\zeta_{\theta}$ & $(p-1) \theta(a)$ & $-\theta(a)$ & $0$ & $- \theta(a + \sqrt{\epsilon} b) - \theta(a - \sqrt{\epsilon} b)$ \\
+\end{tabular}
+\caption{Karakter upodobitve $\zeta_{\theta}$ grupe $G_p$}
+\end{table}
+
+Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo {\definicija ostna upodobitev}.\footnote{Angleško \emph{cuspidal representation}.} Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti Galoisjevi orbiti. Število ostnih upodobitev je zato enako $p(p-1)/2$.
+
+Povzemimo naštete upodobitve. Skupaj smo našli:
+\begin{itemize}
+    \item $p-1$ upodobitev stopnje $1$ (linearne),
+    \item $p-1$ upodobitev stopnje $p$ (Steinbergove),
+    \item $(p-1)(p-2)/2$ upodobitev stopnje $p+1$ (glavne vrste),
+    \item $p(p-1)/2$ upodobitev stopnje $p-1$ (ostne).
+\end{itemize}
+S tem smo našteli $p^2-1$ nerazcepnih upodobitev in zatorej vse nerazcepne upodobitve grupe $G_p$.
+
+\begin{table}[ht]
+    \centering
+\begin{tabular}{l|*{4}{c}}
+    & 
+    $\begin{pmatrix}
+        a & 0 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 1 \\ 0 & a
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & 0 \\ 0 & b
+    \end{pmatrix}$
+    &
+    $\begin{pmatrix}
+        a & \epsilon b \\ b & a
+    \end{pmatrix}$ \\ \hline
+    $\chi \circ \det$ & $\chi(a)^2$ & $\chi(a)^2$ & $\chi(a) \chi(b)$ & $\chi(a^2 - \epsilon b^2)$ \\
+    $\St(\chi)$ & $p \chi(a)^2$ & $0$ & $\chi(a) \chi(b)$ & $- \chi(a^2 - \epsilon b^2)$ \\
+    $\pi(\chi_1, \chi_2)$ & $(p+1) \chi_1(a) \chi_2(a)$ & $\chi_1(a) \chi_2(a)$ & $\chi_1(a) \chi_2(b) + \chi_2(a) \chi_1(b)$ & $0$ \\
+    $\zeta_{\theta}$ & $(p-1) \theta(a)$ & $-\theta(a)$ & $0$ & $- \theta(a + \sqrt{\epsilon} b) - \theta(a - \sqrt{\epsilon} b)$ \\
+\end{tabular}
+\caption{Tabela karakterjev $G_p$}
+\end{table}
 
 \todo[inline]{Omeni Kazhdan-Lusztig teorijo, generične tabele karakterjev (Malle), CFSG in ATLAS, lokalni Langlands.}
 
