@@ -2728,7 +2728,7 @@ nerazcepni torus pa identificiramo kot\footnote{Element $x + \sqrt{\epsilon} y$ 
     \mapsto x + \sqrt{\epsilon} y.
 \]
 
-\subsubsection{Tabela karakterjev}
+\subsubsection{Tabela karakterjev, 1. del}
 
 Predpostavimo, da je $p > 2$. Določimo najprej enorazsežne upodobitve grupe $G_p$. Ker je $[G_p, G_p] = \SL_2(\FF_p) = \ker (\det)$, vse enorazsežne upodobitve dobimo tako, da najprej uporabimo determinanto $\det \colon G_p \to \FF_p^*$, za tem pa poljubno upodobitev abelove grupe $\FF_p^*$. Za vsak homomorfizem $\chi \colon \FF_p^* \to \CC^*$ dobimo torej enorazsežno upodobitev $\chi \circ \det$ grupe $G_p$ in vse enorazsežne upodobitve so take oblike. Vseh teh upodobitev je $|\FF_p^*| = p-1$.
 
@@ -2832,7 +2832,8 @@ Izračunaj vrednosti karakterjev upodobitve $\pi(\chi_1, \chi_2)$.
 
 \begin{table}[ht]
     \centering
-\begin{tabular}{l|*{4}{c}}
+    \small
+\begin{tabular}{l|*{4}{p{2cm}}}
     & 
     $\begin{pmatrix}
         a & 0 \\ 0 & a
@@ -2863,6 +2864,8 @@ Od tod po preprostem računu določimo normo karakterja kot
     \end{cases}
 \]
 Za $\chi_1 \neq \chi_2$ je upodobitev $\pi(\chi_1, \chi_2)$ torej nerazcepna. Iz karakterja opazimo, da je $\rho$ simetrična v svojih argumentih, se pravi $\pi(\chi_1, \chi_2) \cong \pi(\chi_2, \chi_1)$. Na ta način torej dobimo $\binom{p-1}{2} = (p-1)(p-2)/2$ nerazcepnih upodobitev grupe $G_p$. Tem upodobitvam pravimo {\definicija upodobitve glavne vrste}.\footnote{Angleško \emph{principal series representaions}.} V primeru, ko je $\chi_1 = \chi_2$, iz vrednosti karakterjev opazimo izomorfizem $\pi(\chi, \chi) \cong \St(\chi) \oplus (\chi \circ \det)$, torej tukaj ne najdemo nobenih novih nerazcepnih upodobitev.
+
+\subsubsection{Tabela karakterjev, 2. del}
 
 Opazujmo zdaj še upodobitve, ki jih dobimo z indukcijo iz nerazcepnega torusa. Te so nekoliko bolj zapletene, zato bomo pristopili bolj previdno. Naj bo
 \[
@@ -3035,18 +3038,19 @@ Torej je bodisi $\zeta_{\theta}$ bodisi $-\zeta_{\theta}$ nerazcepen karakter. K
 
 Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo {\definicija ostna upodobitev}.\footnote{Angleško \emph{cuspidal representation}.} Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti Galoisjevi orbiti. Število ostnih upodobitev je zato enako $p(p-1)/2$.
 
-Povzemimo naštete upodobitve. Skupaj smo našli:
-\begin{itemize}
-    \item $p-1$ upodobitev stopnje $1$ (linearne),
-    \item $p-1$ upodobitev stopnje $p$ (Steinbergove),
-    \item $(p-1)(p-2)/2$ upodobitev stopnje $p+1$ (glavne vrste),
-    \item $p(p-1)/2$ upodobitev stopnje $p-1$ (ostne).
-\end{itemize}
+Povzemimo. Skupaj smo našli naslednje upodobitve:
+\begin{description}
+    \item[linearne:] $p-1$ upodobitev stopnje $1$,
+    \item[Steinbergove:] $p-1$ upodobitev stopnje $p$,
+    \item[glavne vrste:] $(p-1)(p-2)/2$ upodobitev stopnje $p+1$,
+    \item[ostne:] $p(p-1)/2$ upodobitev stopnje $p-1$.
+\end{description}
 S tem smo našteli $p^2-1$ nerazcepnih upodobitev in zatorej vse nerazcepne upodobitve grupe $G_p$.
 
 \begin{table}[ht]
     \centering
-\begin{tabular}{l|*{4}{c}}
+    \small
+\begin{tabular}{l|*{4}{p{2cm}}}
     & 
     $\begin{pmatrix}
         a & 0 \\ 0 & a
@@ -3071,9 +3075,21 @@ S tem smo našteli $p^2-1$ nerazcepnih upodobitev in zatorej vse nerazcepne upod
 \caption{Tabela karakterjev $G_p$}
 \end{table}
 
+Izračunano tabelo karakterjev grupe $G_p$ lahko uporabimo, da z njo določimo še tabelo karakterjev grupe $\PSL_2(\FF_p)$.
 
+\begin{domacanaloga}
+Izračunaj tabelo karakterjev grupe $\SL(\FF_p)$ in grupe $\PSL_2(\FF_p)$. S tabelo se prepričaj, da je grupa $\PSL_2(\FF_p)$ enostavna za $p > 3$.
+\end{domacanaloga}
 
-\todo[inline]{Omeni Kazhdan-Lusztig teorijo, generične tabele karakterjev (Malle), CFSG in ATLAS, lokalni Langlands.}
+\subsubsection{Onkraj $\GL_2(\FF_p)$}
+
+Argumente, ki smo jih videli v tem razdelku, bi lahko posplošili na matrike večjih razsežnosti in tako (s precej več truda) izračunali generično tabelo karakterjev grupe $\GL_n(\FF_q)$, kot je storil \href{https://www.jstor.org/stable/1992997#metadata_info_tab_contents}{(Green 1955)}. Zopet dobimo glavno vrsto upodobitev, tokrat inducirano induktivno iz podgrup $\GL_m(\FF_q)$ za $m < n$. Pri tem je relevantno, da to lahko naredimo na več načinov, na primer za vsako razčlenitev števila $n = m_1 + m_2 + \cdots + m_k$ lahko v $\GL_n(\FF_q)$ vidimo bločnodiagonalni direktni produkt grup
+\[
+    \GL_{m_1}(\FF_q) \times \GL_{m_2}(\FF_q) \times \cdots \times \GL_{m_k}(\FF_q).  
+\]
+Teorija upodobitev $\GL_n(\FF_q)$ zato vključuje nekaj kompleksnosti teorije upodobitev simetrične grupe $S_n$. Tudi v splošnem primeru dobimo ostne upodobitve, in sicer s pomočjo indukcije iz Galoisjevih razredov regularnih upodobitev nerazcepnega torusa, ki ga lahko predstavimo kot končno polje $\FF_{q^n}$.
+
+Ni pa tako enostavno pridobiti tudi tabele karakterjev družine enostavnih grup $\PSL_n(\FF_q)$ ali njene prijateljice $E_8(\FF_q)$. Seveda lahko posamezne tabele za specifične vrednosti $n$ in $q$ izračunamo,\footnote{Računanje teh tabel specifičnih končnih enostavnih grup je zbrano v \href{http://brauer.maths.qmul.ac.uk/Atlas/v3/}{ATLAS}. Ti izračuni so močno pripomogli k dokazu izreka o \href{https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups}{klasifikaciji končnih enostavnih grup}.} ampak končni cilj je imeti generične tabele karakterjev, kot smo to dosegli za $G_p = \GL_2(\FF_p)$. Za razumevanje teorije upodobitev teh grup imamo na voljo matematično zahtevno \href{https://en.wikipedia.org/wiki/Deligne–Lusztig_theory}{Deligne-Lusztigovo teorijo}, ki upodobitve končnih grup sestavlja s pomočjo upodobitev prirejenih algebraičnih grup nad algebraično zaprtim poljem, na primer $\SL_n(\overline{\FF_p})$, in sicer te upodobitve izhajajo iz delovanja na $\ell$-adičnih kohomoloških grupah prirejenih raznoterosti. Iz te teorije lahko razumemo \emph{del} generične tabele karakterjev, na primer poznamo vse stopnje nerazcepnih upodobitev, ne poznamo pa vseh vrednosti vseh karakterjev.
 
 \section{Aplikacije}
 
