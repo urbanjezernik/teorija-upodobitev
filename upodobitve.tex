@@ -1964,8 +1964,8 @@ Pogosto nas ne zanima le računski aspekt upodobitev, temveč konceptualno razum
 
 Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike $0$. Karakterji upodobitev grupe $G$ so celoštevilske kombinacije nerazcepnih karakterjev. Tvorimo množico vseh takih kombinacij, se pravi
 \[
-    R(G) = \bigoplus_{\pi \in \Irr(G)} \ZZ \cdot \chi_{\pi} \subseteq \fun_{\cl}(G, F).
-\]
+    R(G) = \bigoplus_{\pi \in \Irr(G)} \ZZ \cdot \chi_{\pi} \subseteq \textstyle \fun_{\cl}(G, F).
+\]  
 Množica $R(G)$ je najprej očitno abelova podgrupa razrednih funkcij. Za tem je opremljena z množenjem, ki izhaja iz tenzorskega produkta upodobitev. Množica $R(G)$ na ta način postane komutativen podkolobar v $\fun_{\cl}(G,F)$, ki ga imenujemo {\definicija kolobar virtualnih karakterjev}.\footnote{Virtualnih, ker vsebuje tudi negativne kombinacije nerazcepnih kolobarjev, ki ne ustrezajo karakterjem upodobitev.}
 
 Naj bo $H$ podgrupa v $G$. Restrikcija vzdolž vložitve $H$ v $G$ porodi \emph{homomorfizem kolobarjev}
@@ -1993,13 +1993,13 @@ Ker je $H$ abelova grupa, je seveda $c_H \in \fun_{\cl}(H,F)$.
 
 Premislimo, da je celo $c_H \in R(H)$. Dokazujmo z indukcijo na $|H|$. Vsaka prava podgrupa $K \leq H$ je tudi ciklična, zato zanjo po indukcijski predpostavki velja $c_K \in R(K)$. Naj bo $R$ množica predstavnikov odsekov $K$ v $H$. S formulo za indukcijo karakterja za $h \in H$ izračunamo
 \[
-    \Ind^H_K(c_K)(h) = \sum_{r \in R \colon h \in K} c_K(h) =
+    {\textstyle \Ind^H_K(c_K)(h)} = \sum_{r \in R \colon h \in K} c_K(h) =
     \begin{cases} |H:K| c_K(h) & h \in K, \\ 0 & \text{sicer}  \end{cases} =
     \begin{cases}  |H| & \langle h \rangle = K, \\ 0 & \text{sicer.} \\ \end{cases}
 \]
 Vsak element $h \in H$ generira neko podgrupo $H$, bodisi pravo bodisi kar $H$. Torej lahko zapišemo
 \[
-    c_H = |H| - \sum_{K < H} \Ind^H_K(c_K).
+    c_H = |H| - \sum_{K < H} \textstyle  \Ind^H_K(c_K).
 \]
 Konstanta $|H|$ je karakter trivialne upodobitve $\11^{|H|}$ grupe $H$, torej iz zadnje enakosti sledi želeno $c_H \in R(H)$. 
 \end{zgled}
@@ -2021,16 +2021,13 @@ Konstantna funkcija $|G|$ je torej element ideala $\sum_{H \in C} \Ind(R(H))$ v 
 Vsak virtualni karakter v $R(G)$ je zato linearna kombinacija induciranih virtualnih karakterjev cikličnih podgrup, pri čemer so koeficienti racionalna števila z imenovalcem kvečjemu $|G|$. Povzemimo to presenetljivo ugotovitev.
 
 \begin{izrek}[Artinov izrek]
-Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev nad algebraično zaprtim poljem karakteristike $0$. Tedaj je $\chi_{\rho}$ racionalna linearna kombinacija indukcij nerazcepnih karakterjev cikličnih podgrup grupe $G$.
+Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev nad algebraično zaprtim poljem karakteristike $0$. Tedaj je $\chi_{\rho}$ \emph{racionalna} linearna kombinacija indukcij nerazcepnih karakterjev cikličnih podgrup grupe $G$.
 \end{izrek}
 
-Racionalnim kombinacijam se lahko izognemo, če razširimo razred podgrup s cikličnih na {\definicija $p$-elementarne podgrupe} $E_p$ grupe $G$. To so podgrupe, ki so izomorfne direktnemu produktu ciklične grupe in $p$-grupe.
+Racionalnim kombinacijam se lahko izognemo, če razširimo razred podgrup s cikličnih na {\definicija $p$-elementarne podgrupe} grupe $G$. To so podgrupe, ki so izomorfne direktnemu produktu ciklične grupe in $p$-grupe.
 
 \begin{izrek}[Brauerjev izrek]
-Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike $0$. Tedaj je
-\[
-    R(G) = \sum_{H \in \bigcup_{p \in \PP} E_p} \Ind(R(H)).
-\]
+Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev nad algebraično zaprtim poljem karakteristike $0$. Tedaj je $\chi_{\rho}$ \emph{celoštevilska} linearna kombinacija indukcij nerazcepnih karakterjev $p$-elementarnih podgrup grupe $G$, ko $p$ preteče vse praštevilske delitelje moči $G$.
 \end{izrek}
 
 Dokaz Brauerjevega izreka je nekoliko bolj zapleten kot preprost argument, ki nas je pripeljal do Artinovega izreka. Bralec ga lahko najde v {\literatura (Serre 1977)}. 
@@ -2175,7 +2172,7 @@ to je {\definicija Hilbert-Schmidtov skalarni produkt}. Parsevalov izrek nam tor
 
 Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo na voljo tabelo karakterjev, izračun te pa je končen problem. S tem smo za konkretne končne grupe dosegli ultimativen cilj teorije upodobitev. Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves ne spregledamo gozda. Grupe namreč praviloma ne nastopajo posamično, temveč kot del večjih družin.\footnote{Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, \dots} V tem razdelku si bomo podrobneje pogledali dve temeljni družini grup, in sicer simetrične grupe ter splošne linearne grupe nad končnim poljem.\footnote{Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, dveh neskončnih družin, ki so zelo podobne družini simetričnih grup in linearnih grup nad končnim poljem. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev končnih enostavnih grup.} Njuno teorijo upodobitev bomo obravnavali celostno.
 
-\subsection{$S_n$}
+\subsection{Simetrična grupa $S_n$}
 
 Opazujmo simetrično grupo $S_n$ za $n \in \NN$ nad poljem $\CC$. Ogledali smo si že tabele karakterjev za $n \leq 4$ in razložili, da je število nerazcepnih upodobitev enako številu konjugiranostnih razredov, to pa je enako številu razčlenitev $p(n)$. Družina simetričnih grup je posebna, saj zanjo presenetljivo obstaja eksplicitna korespondenca med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Iz dane razčlenitve $(\lambda_1, \lambda_2, \dots, \lambda_k)$ števila $n$ lahko torej konstruiramo nerazcepno upodobitev grupe $S_n$ in za tem z nekoliko več truda določimo vrednosti karakterjev.
 
@@ -2252,12 +2249,12 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
     \]
     torej $1_P * f$ izračuna vsoto funkcije $f$ po odseku $Px$. Prostor $\image \Fcal(1_P)$ lahko zato identificiramo s podprostorom funkcij $\fun_{S \backslash S_n}(S_n, \CC)$, ki so konstantne na desnih odsekih $S \backslash S_n$. Delovanje $S_n$ na tem prostoru ni nič drugega kot $\Ind^{S_n}_P(\11)$, kar prepoznamo kot standardno permutacijska upodobitev grupe $S_n$ njenega delovanja na $\{ 1, 2, \dots, n \}$. Uporabimo zdaj še konvolucijo s funkcijo $\sgn \cdot 1_Q$. Dobimo linearno preslikavo
     \[
-        \fun_{S \backslash S_n}(S_n, \CC) \to \fun_{S \backslash S_n}(S_n, \CC), \quad
+        \textstyle \fun_{S \backslash S_n}(S_n, \CC) \to \fun_{S \backslash S_n}(S_n, \CC), \quad
         \psi \mapsto \left( x \mapsto \psi(x) - \psi((1 \ n) \cdot x) \right).
     \]
     Njeno jedro sestoji iz funkcij $\psi$, ki so konstantne na odsekih $S$ in povrhu zadoščajo še enakosti $\psi(x) = \psi((1 \ n) \cdot x)$ za vsak $x \in S_n$. Ko ta pogoj uporabimo s transpozicijami $(i \ n)$ za $1 \leq i < n$, sklenemo, da je vsaka taka funkcija $\psi$ nujno konstantna. Nazadnje je torej
     \[
-        V_{\lambda} = \image \Fcal(\youngsym) \cong \frac{\fun_{S \backslash S_n}(S_n, \CC)}{\CC}.
+        V_{\lambda} = \image \Fcal(\youngsym) \cong \frac{\textstyle \fun_{S \backslash S_n}(S_n, \CC)}{\CC}.
     \]
     Ta prostor je razsežnosti $n-1$. Prirejeno upodobitev imenujemo {\definicija standardna upodobitev} simetrične grupe $S_n$. Kot smo videli, jo lahko dobimo tako, da iz standardne permutacijske upodobitve odstanimo trivialno upodobitev.
 \end{itemize}
@@ -2496,11 +2493,11 @@ Avtor omeni analogno vprašanje glede same tabele karakterjev.
 Enakomerno naključno izberimo konjugiranostni razred $\conclass$ v $S_n$ in $\pi \in \Irr(S_n)$. Kaj lahko povemo o obnašanju zaporedja $\PP_{\conclass, \pi}\left( \chi_{\pi}(\conclass) = 0 \right)$, ko gre $n$ čez vse meje?
 \end{odprtproblem}
 
-\subsection{$\GL_2(\FF_p)$}
+\subsection{Splošna linearna grupa $\GL_2(\FF_p)$}
 
 Opazujmo {\definicija splošno linearno grupo}
 \[
-    G_p = \GL_2(\FF_p) =
+    G_p = {\textstyle \GL_2(\FF_p)} =
     \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mid a,b,c,d \in \FF_p, \ ad - bc \neq 0 \right\}
 \] 
 obrnljivih matrik razsežnosti $2 \times 2$ nad končnim poljem $\FF_p$, kjer je $p$ praštevilo. Njeno kategorijo upodobitev bomo obravnavali nad $\CC$. Še pred tem pa moramo bolje spoznati to grupo.
@@ -2536,7 +2533,7 @@ Grupa $G_p$ je opremljena tudi z determinantnim homomorfizmom
 \]
 Jedro tega homomorfizma je {\definicija specialna linearna grupa}
 \[
-    \SL_2(\FF_p) = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mid a,b,c,d \in \FF_p, \ ad - bc = 1 \right\}.
+    {\textstyle \SL_2(\FF_p)} = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mid a,b,c,d \in \FF_p, \ ad - bc = 1 \right\}.
 \]
 Velja $|\SL_2(\FF_p)| = |G_p|/(p-1) = (p+1)p(p-1)$. Izpostavimo dva posebna elementa te grupe,
 \[
@@ -2605,7 +2602,7 @@ in sklenemo $S_+ \in [G_p, G_p]$. Sorodno dobimo $S_- \in [G_p, G_p]$. Ker $S_+,
 
 Nazadnje upoštevajmo oba posebna homomorfizma, $\Pi$ in $\det$. Presek njunih jeder sestoji iz skalarnih matrik z determinanto $1$, torej je enak $\{ I, -I \}$. Ta podgrupa je edinka v $\SL_2(\FF_p)$, zato lahko tvorimo kvocient
 \[
-    \PSL_2(\FF_p) = \frac{\SL_2(\FF_p)}{\{ I, -I \}}.
+    {\textstyle \PSL_2(\FF_p)} = \frac{\SL_2(\FF_p)}{\{ I, -I \}}.
 \]
 
 \begin{zgled}
@@ -2822,7 +2819,7 @@ Nerazcepne upodobitve razcepnega torusa so ravno produkti $\chi_1 \times \chi_2$
 \]
 Vsako od teh upodobitev induciramo na grupo $G_p$ in dobimo upodobitev
 \[
-    \pi(\chi_1, \chi_2) = \Ind^{G_p}_{B_p}(\rho(\chi_1, \chi_2))
+    \pi(\chi_1, \chi_2) = \textstyle \Ind^{G_p}_{B_p}(\rho(\chi_1, \chi_2))
 \] 
 razsežnosti $|G_p/B_p| = p+1$. Karakter take upodobitve lahko izračunamo s formulo za vrednosti karakterjev inducirane upodobitve.
 
@@ -2873,11 +2870,11 @@ Opazujmo zdaj še upodobitve, ki jih dobimo z indukcijo iz nerazcepnega torusa. 
 \]
 poljubna enorazsežna upodobitev. Izračunajmo karakter indukcije upodobitve $\theta$ nerazcepnega torusa. Uporabimo formulo za karakter inducirane upodobitve. Naj bo $R$ množica predstavnikov desnih odsekov $T_{nr}$ v $G_p$. Za $g \in G_p$ je $r g r^{-1} \in T_{nr}$ za nek $r \in R$, če in samo če je $r g r^{-1}$ bodisi skalar bodisi nerazcepen polenostaven element, kar je enakovredno temu, da je $g$ bodisi skalar bodisi nerazcepen polenostaven element. Za skalarje, ki jih interpretiramo kot elemente $g = a \in \FF_p^* \subseteq \FF_p(\sqrt{\epsilon})^*$, velja
 \[
-    \Ind_{T_{nr}}^{G_p}(\theta)(a) = |G_p : T_{nr}| \cdot \theta(a) = p(p-1) \theta(a).
+    \textstyle \Ind_{T_{nr}}^{G_p}(\theta)(a) = |G_p : T_{nr}| \cdot \theta(a) = p(p-1) \theta(a).
 \]
 Za nerazcepne polenostavne elemente, ki jih interpretiramo kot elemente $g = a + \sqrt{\epsilon} b \in \FF_p(\sqrt{\epsilon})^*$, pa velja $g^{G_p} \cap T_{nr} = \{ g, g^{\sigma} \}$, zato sta v formuli za izračun induciranega karakterja relevantna le dva člena in dobimo
 \[
-    \Ind_{T_{nr}}^{G_p}(\theta)(a + \sqrt{\epsilon} b) = \theta(a + \sqrt{\epsilon} b) + \theta(a - \sqrt{\epsilon} b).
+    \textstyle \Ind_{T_{nr}}^{G_p}(\theta)(a + \sqrt{\epsilon} b) = \theta(a + \sqrt{\epsilon} b) + \theta(a - \sqrt{\epsilon} b).
 \]
 Z avtomorfizmom $\sigma \in \Gal(\FF_p(\sqrt{\epsilon})/\FF_p)$ lahko delujemo na upodobitvi s predpisom $\theta^\sigma(x) = \theta(x^\sigma) = \theta(x^p)$. Torej je zadnja vrednost karakterja enaka $\theta(g) + \theta^\sigma(g)$.
 
@@ -2919,7 +2916,7 @@ Prvo notranjo vsoto prepoznamo kot skalarni produkt upodobitev $\theta$ in $\the
 \]
 kar se poenostavi do
 \[
-    || \Ind_{T_{nr}}^{G_p}(\theta) ||^2 = p-1 + \langle \theta, \theta^{\sigma} \rangle = \begin{cases}
+    || {\textstyle \Ind_{T_{nr}}^{G_p}(\theta)} ||^2 = p-1 + \langle \theta, \theta^{\sigma} \rangle = \begin{cases}
         p & \theta = \theta^\sigma, \\
         p-1 & \theta \neq \theta^{\sigma}.
     \end{cases}
@@ -2935,12 +2932,12 @@ Glede na to, da inducirana upodobitev iz nerazcepnega torusa ni nerazcepna, lahk
 \]
 in tvorimo produktno upodobitev $\chi \times \psi$ grupe $C_p$. To upodobitev induciramo na grupo $G_p$. S formulo za izračun karakterjev inducirane upodobitve ni težko določiti njenega karakterja. Naj bo $R$ množica predstavnikov desnih odsekov $C_p$ v $G_p$. Za $g \in G_p$ je $r g r^{-1} \in C_p$ za nek $r \in R$, če in samo če je $g$ bodisi skalar bodisi nediagonalizabilen element. Za skalarje velja
 \[
-    \Ind_{C_p}^{G_p}(\chi \times \psi) \left( \begin{pmatrix} a & 0 \\ 0 & a \end{pmatrix} \right)
+    {\textstyle \Ind_{C_p}^{G_p}(\chi \times \psi) } \left( \begin{pmatrix} a & 0 \\ 0 & a \end{pmatrix} \right)
     = |G_p : C_p| \cdot \chi(a) = (p^2 - 1) \chi(a).
 \]
 Za nediagonalizabilen element $g$ pa velja $g^{G_p} \cap C_p = g U_p \backslash S_p$, zato je v formuli za induciran karakter relevantnih le $p-1$ členov in dobimo
 \[
-    \Ind_{C_p}^{G_p}(\chi \times \psi) \left( \begin{pmatrix} a & 1 \\ 0 & a \end{pmatrix} \right)
+    {\textstyle \Ind_{C_p}^{G_p}(\chi \times \psi)} \left( \begin{pmatrix} a & 1 \\ 0 & a \end{pmatrix} \right)
     = \sum_{t \in \FF_p^*} (\chi \times \psi) \left( \begin{pmatrix} a & 1 \\ 0 & a \end{pmatrix} \cdot \begin{pmatrix} 1 & t \\ 0 & 1 \end{pmatrix} \right)
     = \sum_{t \in \FF_p^*} \chi(a) \psi(t).
 \]
@@ -2981,7 +2978,7 @@ Inducirani karakter je torej odvisen od $\psi$ le preko veljavnosti enakosti $\p
 
 Iz vrednosti karakterjev izračunamo normo 
 \[
-    ||\Ind_{C_p}^{G_p}(\chi \times \psi) ||^2
+    ||{\textstyle \Ind_{C_p}^{G_p}(\chi \times \psi)} ||^2
     = \begin{cases}
         2(p-1) & \psi = \11, \\
         p & \psi \neq \11.
@@ -2990,22 +2987,25 @@ Iz vrednosti karakterjev izračunamo normo
 Upodobitev $\Ind_{C_p}^{G_p}(\chi \times \psi)$ je torej spet daleč od nerazcepne.
 
 Primerjajmo obe inducirani upodobitvi. Skalarni produkt njunih karakterjev lahko izračunamo tako, da seštejemo le prispevke po skalarnih elementih, saj so vsi ostali členi ničelni. Dobimo
-\begin{align*}
-    \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\chi \times \psi) \rangle
-    &= \frac{1}{|G_p|} \sum_{a \in \FF_p^*} p(p-1) \theta(a) \cdot (p^2 - 1) \overline{\chi(a)} \\
-    &= (p-1) \cdot \langle \theta |_{S_p}, \chi \rangle \\
-    &= \begin{cases}
+\[
+{\textstyle \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\chi \times \psi) \rangle}
+= \frac{1}{|G_p|} \sum_{a \in \FF_p^*} p(p-1) \theta(a) \cdot (p^2 - 1) \overline{\chi(a)},
+\]
+kar prepoznamo kot
+\[
+(p-1) \cdot \langle \theta |_{S_p}, \chi \rangle 
+= \begin{cases}
         0 & \chi \neq \theta |_{S_p}, \\
         p-1 & \chi = \theta |_{S_p}. \\
-    \end{cases}
-\end{align*}
+\end{cases}  
+\]
 Če torej izberemo $\chi = \theta |_{S_p}$, je skalarni produkt med obema upodobitvama enak $p-1$. Izračunali smo tudi že normi obeh upodobitev, obe sta blizu $\sqrt{p}$. V luči Cauchy-Schwartzove neenakosti sta karakterja obeh induciranih upodobitev kot vektorja torej zelo blizu temu, da bi bila \emph{vzporedna} in s tem \emph{enaka}. Najtesnejšo zvezo med njima dobimo, če minimiziramo normi obeh, torej če vzamemo za $\theta$ regularen karakter in za $\psi$ poljuben netrivialen karakter. S to izbiro opazujmo \emph{virtualen} karakter
 \[
-    \zeta_{\theta} = \Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi) - \Ind_{T_{nr}}^{G_p}(\theta) \in R(G_p).
+    \textstyle \zeta_{\theta} = \Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi) - \Ind_{T_{nr}}^{G_p}(\theta) \in R(G_p).
 \]
 Po že opravljenih računih je norma tega virtualnega karakterja res minimalna,
 \begin{align*}
-    \langle \zeta_{\theta}, \zeta_{\theta} \rangle 
+    \textstyle \langle \zeta_{\theta}, \zeta_{\theta} \rangle 
     &= ||\Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi)||^2 + ||\Ind_{T_{nr}}^{G_p}(\theta)||^2 - 2 \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\chi \times \psi) \rangle \\
     &= p + (p-1) - 2 (p-1) \\
     &= 1.
@@ -3039,12 +3039,12 @@ Torej je bodisi $\zeta_{\theta}$ bodisi $-\zeta_{\theta}$ nerazcepen karakter. K
 Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo {\definicija ostna upodobitev}.\footnote{Angleško \emph{cuspidal representation}.} Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti Galoisjevi orbiti. Število ostnih upodobitev je zato enako $p(p-1)/2$.
 
 Povzemimo. Skupaj smo našli naslednje upodobitve:
-\begin{description}
-    \item[linearne:] $p-1$ upodobitev stopnje $1$,
-    \item[Steinbergove:] $p-1$ upodobitev stopnje $p$,
-    \item[glavne vrste:] $(p-1)(p-2)/2$ upodobitev stopnje $p+1$,
-    \item[ostne:] $p(p-1)/2$ upodobitev stopnje $p-1$.
-\end{description}
+\begin{itemize}
+    \item linearne: $p-1$ upodobitev stopnje $1$,
+    \item Steinbergove: $p-1$ upodobitev stopnje $p$,
+    \item glavne vrste: $(p-1)(p-2)/2$ upodobitev stopnje $p+1$,
+    \item ostne: $p(p-1)/2$ upodobitev stopnje $p-1$.
+\end{itemize}
 S tem smo našteli $p^2-1$ nerazcepnih upodobitev in zatorej vse nerazcepne upodobitve grupe $G_p$.
 
 \begin{table}[ht]
@@ -3085,13 +3085,16 @@ Izračunaj tabelo karakterjev grupe $\SL(\FF_p)$ in grupe $\PSL_2(\FF_p)$. S tab
 
 Argumente, ki smo jih videli v tem razdelku, bi lahko posplošili na matrike večjih razsežnosti in tako (s precej več truda) izračunali generično tabelo karakterjev grupe $\GL_n(\FF_q)$, kot je storil \href{https://www.jstor.org/stable/1992997#metadata_info_tab_contents}{(Green 1955)}. Zopet dobimo glavno vrsto upodobitev, tokrat inducirano induktivno iz podgrup $\GL_m(\FF_q)$ za $m < n$. Pri tem je relevantno, da to lahko naredimo na več načinov, na primer za vsako razčlenitev števila $n = m_1 + m_2 + \cdots + m_k$ lahko v $\GL_n(\FF_q)$ vidimo bločnodiagonalni direktni produkt grup
 \[
-    \GL_{m_1}(\FF_q) \times \GL_{m_2}(\FF_q) \times \cdots \times \GL_{m_k}(\FF_q).  
+    \textstyle  \GL_{m_1}(\FF_q) \times \GL_{m_2}(\FF_q) \times \cdots \times \GL_{m_k}(\FF_q).  
 \]
 Teorija upodobitev $\GL_n(\FF_q)$ zato vključuje nekaj kompleksnosti teorije upodobitev simetrične grupe $S_n$. Tudi v splošnem primeru dobimo ostne upodobitve, in sicer s pomočjo indukcije iz Galoisjevih razredov regularnih upodobitev nerazcepnega torusa, ki ga lahko predstavimo kot končno polje $\FF_{q^n}$.
 
 Ni pa tako enostavno pridobiti tudi tabele karakterjev družine enostavnih grup $\PSL_n(\FF_q)$ ali njene prijateljice $E_8(\FF_q)$. Seveda lahko posamezne tabele za specifične vrednosti $n$ in $q$ izračunamo,\footnote{Računanje teh tabel specifičnih končnih enostavnih grup je zbrano v \href{http://brauer.maths.qmul.ac.uk/Atlas/v3/}{ATLAS}. Ti izračuni so močno pripomogli k dokazu izreka o \href{https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups}{klasifikaciji končnih enostavnih grup}.} ampak končni cilj je imeti generične tabele karakterjev, kot smo to dosegli za $G_p = \GL_2(\FF_p)$. Za razumevanje teorije upodobitev teh grup imamo na voljo matematično zahtevno \href{https://en.wikipedia.org/wiki/Deligne–Lusztig_theory}{Deligne-Lusztigovo teorijo}, ki upodobitve končnih grup sestavlja s pomočjo upodobitev prirejenih algebraičnih grup nad algebraično zaprtim poljem, na primer $\SL_n(\overline{\FF_p})$, in sicer te upodobitve izhajajo iz delovanja na $\ell$-adičnih kohomoloških grupah prirejenih raznoterosti. Iz te teorije lahko razumemo \emph{del} generične tabele karakterjev, na primer poznamo vse stopnje nerazcepnih upodobitev, ne poznamo pa vseh vrednosti vseh karakterjev.
 
 \section{Aplikacije}
+
+
+
 
 Večina rezultatov v zvezi z upodobitvami končnih grup je temeljila na uteženem povprečju. {\definicija Harmonična analiza} v kontekstu končnih grup je teorija, ki se ubada z globljim razumevanjem uteženih povprečij oziroma Fourierove transformacije in z aplikacijami, ki same po sebi niti niso izražene v jeziku teorije upodobitev. V tem razdelku si bomo na dveh primerih pogledali del te zgodbe. Obakrat bomo vzeli problem, ki a priori nima nobene povezave s teorijo upodobitev, in pokazali, kako ga lahko izrazimo in tudi razrešimo s pomočjo karakterjev. Ne bomo zamudili priložnosti, da vzporedno razvijemo še nekaj dodatnih lastnosti Fourierove transformacije.
 

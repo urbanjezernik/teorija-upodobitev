@@ -4774,7 +4774,7 @@
             kombinacije nerazcepnih karakterjev. Tvorimo množico vseh
             takih kombinacij, se pravi <span class="math display">\[R(G)
             = \bigoplus_{\pi \in \mathop{\mathrm{Irr}}(G)}
-            \mathbf{Z}\cdot \chi_{\pi} \subseteq
+            \mathbf{Z}\cdot \chi_{\pi} \subseteq \textstyle
             \mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(G, F).\]</span>
             Množica <span class="math inline">\(R(G)\)</span> je najprej
             očitno abelova podgrupa razrednih funkcij. Za tem je
@@ -4835,9 +4835,9 @@
             odsekov <span class="math inline">\(K\)</span> v <span
             class="math inline">\(H\)</span>. S formulo za indukcijo
             karakterja za <span class="math inline">\(h \in H\)</span>
-            izračunamo <span
-            class="math display">\[\mathop{\mathrm{Ind}}^H_K(c_K)(h) =
-            \sum_{r \in R \colon h \in K} c_K(h) =
+            izračunamo <span class="math display">\[{\textstyle
+            \mathop{\mathrm{Ind}}^H_K(c_K)(h)} = \sum_{r \in R \colon h
+            \in K} c_K(h) =
                 \begin{cases} |H:K| c_K(h) &amp; h \in K, \\ 0 &amp;
             \text{sicer}  \end{cases} =
                 \begin{cases}  |H| &amp; \langle h \rangle = K, \\ 0
@@ -4846,7 +4846,8 @@
             podgrupo <span class="math inline">\(H\)</span>, bodisi
             pravo bodisi kar <span class="math inline">\(H\)</span>.
             Torej lahko zapišemo <span class="math display">\[c_H = |H|
-            - \sum_{K &lt; H} \mathop{\mathrm{Ind}}^H_K(c_K).\]</span>
+            - \sum_{K &lt; H}
+            \textstyle  \mathop{\mathrm{Ind}}^H_K(c_K).\]</span>
             Konstanta <span class="math inline">\(|H|\)</span> je
             karakter trivialne upodobitve <span
             class="math inline">\(\mathbf{1}^{|H|}\)</span> grupe <span
@@ -4895,27 +4896,31 @@
             class="math inline">\(\rho\)</span> njena končnorazsežna
             upodobitev nad algebraično zaprtim poljem karakteristike
             <span class="math inline">\(0\)</span>. Tedaj je <span
-            class="math inline">\(\chi_{\rho}\)</span> racionalna
-            linearna kombinacija indukcij nerazcepnih karakterjev
-            cikličnih podgrup grupe <span
+            class="math inline">\(\chi_{\rho}\)</span>
+            <em>racionalna</em> linearna kombinacija indukcij
+            nerazcepnih karakterjev cikličnih podgrup grupe <span
             class="math inline">\(G\)</span>.</p>
             </div>
             <p>Racionalnim kombinacijam se lahko izognemo, če razširimo
             razred podgrup s cikličnih na <span><strong><em><span
             class="math inline">\(p\)</span>-elementarne
-            podgrupe</em></strong></span> <span
-            class="math inline">\(E_p\)</span> grupe <span
+            podgrupe</em></strong></span> grupe <span
             class="math inline">\(G\)</span>. To so podgrupe, ki so
             izomorfne direktnemu produktu ciklične grupe in <span
             class="math inline">\(p\)</span>-grupe.</p>
             <div class="izrek">
             <p><strong>Izrek 3.5</strong> (Brauerjev izrek). Naj bo
             <span class="math inline">\(G\)</span> grupa in <span
-            class="math inline">\(F\)</span> algebraično zaprto polje
-            karakteristike <span class="math inline">\(0\)</span>. Tedaj
-            je <span class="math display">\[R(G) = \sum_{H \in
-            \bigcup_{p \in \mathbf{P}} E_p}
-            \mathop{\mathrm{Ind}}(R(H)).\]</span></p>
+            class="math inline">\(\rho\)</span> njena končnorazsežna
+            upodobitev nad algebraično zaprtim poljem karakteristike
+            <span class="math inline">\(0\)</span>. Tedaj je <span
+            class="math inline">\(\chi_{\rho}\)</span>
+            <em>celoštevilska</em> linearna kombinacija indukcij
+            nerazcepnih karakterjev <span
+            class="math inline">\(p\)</span>-elementarnih podgrup grupe
+            <span class="math inline">\(G\)</span>, ko <span
+            class="math inline">\(p\)</span> preteče vse praštevilske
+            delitelje moči <span class="math inline">\(G\)</span>.</p>
             </div>
             <p>Dokaz Brauerjevega izreka je nekoliko bolj zapleten kot
             preprost argument, ki nas je pripeljal do Artinovega izreka.
@@ -5230,7 +5235,8 @@
             poljem.<a href="#fn50" class="footnote-ref" id="fnref50"
             role="doc-noteref"><sup>50</sup></a> Njuno teorijo
             upodobitev bomo obravnavali celostno.</p>
-            <h3 id="s_n"><span class="math inline">\(S_n\)</span></h3>
+            <h3 id="simetrična-grupa-s_n">Simetrična grupa <span
+            class="math inline">\(S_n\)</span></h3>
             <p>Opazujmo simetrično grupo <span
             class="math inline">\(S_n\)</span> za <span
             class="math inline">\(n \in \mathbf{N}\)</span> nad poljem
@@ -5460,9 +5466,10 @@
             \}\)</span>. Uporabimo zdaj še konvolucijo s funkcijo <span
             class="math inline">\(\mathop{\mathrm{sgn}}\cdot
             1_Q\)</span>. Dobimo linearno preslikavo <span
-            class="math display">\[\mathop{\mathrm{fun}}_{S \backslash
-            S_n}(S_n, \mathbf{C}) \to \mathop{\mathrm{fun}}_{S
-            \backslash S_n}(S_n, \mathbf{C}), \quad
+            class="math display">\[\textstyle \mathop{\mathrm{fun}}_{S
+            \backslash S_n}(S_n, \mathbf{C}) \to
+            \mathop{\mathrm{fun}}_{S \backslash S_n}(S_n, \mathbf{C}),
+            \quad
                     \psi \mapsto \left( x \mapsto \psi(x) - \psi((1 \ n)
             \cdot x) \right).\]</span> Njeno jedro sestoji iz funkcij
             <span class="math inline">\(\psi\)</span>, ki so konstantne
@@ -5476,10 +5483,10 @@
             class="math inline">\(\psi\)</span> nujno konstantna.
             Nazadnje je torej <span class="math display">\[V_{\lambda} =
             \mathop{\mathrm{im}}\mathcal{F}(\sigma_{\lambda}) \cong
-            \frac{\mathop{\mathrm{fun}}_{S \backslash S_n}(S_n,
-            \mathbf{C})}{\mathbf{C}}.\]</span> Ta prostor je razsežnosti
-            <span class="math inline">\(n-1\)</span>. Prirejeno
-            upodobitev imenujemo <span><strong><em>standardna
+            \frac{\textstyle \mathop{\mathrm{fun}}_{S \backslash
+            S_n}(S_n, \mathbf{C})}{\mathbf{C}}.\]</span> Ta prostor je
+            razsežnosti <span class="math inline">\(n-1\)</span>.
+            Prirejeno upodobitev imenujemo <span><strong><em>standardna
             upodobitev</em></strong></span> simetrične grupe <span
             class="math inline">\(S_n\)</span>. Kot smo videli, jo lahko
             dobimo tako, da iz standardne permutacijske upodobitve
@@ -6028,11 +6035,13 @@
             \chi_{\pi}(\mathcal{C}) = 0 \right)\)</span>, ko gre <span
             class="math inline">\(n\)</span> čez vse meje?</p>
             </div>
-            <h3 id="mathopmathrmgl_2mathbff_p"><span
+            <h3
+            id="splošna-linearna-grupa-mathopmathrmgl_2mathbff_p">Splošna
+            linearna grupa <span
             class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span></h3>
             <p>Opazujmo <span><strong><em>splošno linearno
             grupo</em></strong></span> <span class="math display">\[G_p
-            = \mathop{\mathrm{GL}}_2(\mathbf{F}_p) =
+            = {\textstyle \mathop{\mathrm{GL}}_2(\mathbf{F}_p)} =
                 \left\{ \begin{pmatrix} a &amp; b \\ c &amp; d
             \end{pmatrix} \mid a,b,c,d \in \mathbf{F}_p, \ ad - bc \neq
             0 \right\}\]</span> obrnljivih matrik razsežnosti <span
@@ -6095,10 +6104,11 @@
             \mathbf{F}_p^*.\]</span> Jedro tega homomorfizma je
             <span><strong><em>specialna linearna
             grupa</em></strong></span> <span
-            class="math display">\[\mathop{\mathrm{SL}}_2(\mathbf{F}_p)
-            = \left\{ \begin{pmatrix} a &amp; b \\ c &amp; d
-            \end{pmatrix} \mid a,b,c,d \in \mathbf{F}_p, \ ad - bc = 1
-            \right\}.\]</span> Velja <span
+            class="math display">\[{\textstyle
+            \mathop{\mathrm{SL}}_2(\mathbf{F}_p)} = \left\{
+            \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \mid
+            a,b,c,d \in \mathbf{F}_p, \ ad - bc = 1 \right\}.\]</span>
+            Velja <span
             class="math inline">\(|\mathop{\mathrm{SL}}_2(\mathbf{F}_p)|
             = |G_p|/(p-1) = (p+1)p(p-1)\)</span>. Izpostavimo dva
             posebna elementa te grupe, <span class="math display">\[S_+
@@ -6192,8 +6202,9 @@
             edinka v <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{F}_p)\)</span>,
             zato lahko tvorimo kvocient <span
-            class="math display">\[\mathop{\mathrm{PSL}}_2(\mathbf{F}_p)
-            = \frac{\mathop{\mathrm{SL}}_2(\mathbf{F}_p)}{\{ I, -I
+            class="math display">\[{\textstyle
+            \mathop{\mathrm{PSL}}_2(\mathbf{F}_p)} =
+            \frac{\mathop{\mathrm{SL}}_2(\mathbf{F}_p)}{\{ I, -I
             \}}.\]</span></p>
             <div class="zgled">
             <p><strong>Zgled 3.15</strong>. Za <span
@@ -6637,7 +6648,7 @@
                 \chi_1(a) \chi_2(d).\]</span> Vsako od teh upodobitev
             induciramo na grupo <span class="math inline">\(G_p\)</span>
             in dobimo upodobitev <span
-            class="math display">\[\pi(\chi_1, \chi_2) =
+            class="math display">\[\pi(\chi_1, \chi_2) = \textstyle
             \mathop{\mathrm{Ind}}^{G_p}_{B_p}(\rho(\chi_1,
             \chi_2))\]</span> razsežnosti <span
             class="math inline">\(|G_p/B_p| = p+1\)</span>. Karakter
@@ -6742,17 +6753,18 @@
             interpretiramo kot elemente <span class="math inline">\(g =
             a \in \mathbf{F}_p^* \subseteq
             \mathbf{F}_p(\sqrt{\epsilon})^*\)</span>, velja <span
-            class="math display">\[\mathop{\mathrm{Ind}}_{T_{nr}}^{G_p}(\theta)(a)
-            = |G_p : T_{nr}| \cdot \theta(a) = p(p-1)
-            \theta(a).\]</span> Za nerazcepne polenostavne elemente, ki
-            jih interpretiramo kot elemente <span
-            class="math inline">\(g = a + \sqrt{\epsilon} b \in
-            \mathbf{F}_p(\sqrt{\epsilon})^*\)</span>, pa velja <span
-            class="math inline">\(g^{G_p} \cap T_{nr} = \{ g, g^{\sigma}
-            \}\)</span>, zato sta v formuli za izračun induciranega
-            karakterja relevantna le dva člena in dobimo <span
-            class="math display">\[\mathop{\mathrm{Ind}}_{T_{nr}}^{G_p}(\theta)(a
-            + \sqrt{\epsilon} b) = \theta(a + \sqrt{\epsilon} b) +
+            class="math display">\[\textstyle
+            \mathop{\mathrm{Ind}}_{T_{nr}}^{G_p}(\theta)(a) = |G_p :
+            T_{nr}| \cdot \theta(a) = p(p-1) \theta(a).\]</span> Za
+            nerazcepne polenostavne elemente, ki jih interpretiramo kot
+            elemente <span class="math inline">\(g = a + \sqrt{\epsilon}
+            b \in \mathbf{F}_p(\sqrt{\epsilon})^*\)</span>, pa velja
+            <span class="math inline">\(g^{G_p} \cap T_{nr} = \{ g,
+            g^{\sigma} \}\)</span>, zato sta v formuli za izračun
+            induciranega karakterja relevantna le dva člena in dobimo
+            <span class="math display">\[\textstyle
+            \mathop{\mathrm{Ind}}_{T_{nr}}^{G_p}(\theta)(a +
+            \sqrt{\epsilon} b) = \theta(a + \sqrt{\epsilon} b) +
             \theta(a - \sqrt{\epsilon} b).\]</span> Z avtomorfizmom
             <span class="math inline">\(\sigma \in
             \mathop{\mathrm{Gal}}(\mathbf{F}_p(\sqrt{\epsilon})/\mathbf{F}_p)\)</span>
@@ -6831,8 +6843,8 @@
             p^2(p-1)^3 + p^2(p-1)^2 + p(p-1) \cdot \left(  (p^2 - 1)
             \langle \theta, \theta^{\sigma} \rangle - (p-1) \right)
             \right),\]</span> kar se poenostavi do <span
-            class="math display">\[||
-            \mathop{\mathrm{Ind}}_{T_{nr}}^{G_p}(\theta) ||^2 = p-1 +
+            class="math display">\[|| {\textstyle
+            \mathop{\mathrm{Ind}}_{T_{nr}}^{G_p}(\theta)} ||^2 = p-1 +
             \langle \theta, \theta^{\sigma} \rangle = \begin{cases}
                     p &amp; \theta = \theta^\sigma, \\
                     p-1 &amp; \theta \neq \theta^{\sigma}.
@@ -6897,19 +6909,18 @@
             <span class="math inline">\(r \in R\)</span>, če in samo če
             je <span class="math inline">\(g\)</span> bodisi skalar
             bodisi nediagonalizabilen element. Za skalarje velja <span
-            class="math display">\[\mathop{\mathrm{Ind}}_{C_p}^{G_p}(\chi
-            \times \psi) \left( \begin{pmatrix} a &amp; 0 \\ 0 &amp; a
-            \end{pmatrix} \right)
+            class="math display">\[{\textstyle
+            \mathop{\mathrm{Ind}}_{C_p}^{G_p}(\chi \times \psi) } \left(
+            \begin{pmatrix} a &amp; 0 \\ 0 &amp; a \end{pmatrix} \right)
                 = |G_p : C_p| \cdot \chi(a) = (p^2 - 1)
             \chi(a).\]</span> Za nediagonalizabilen element <span
             class="math inline">\(g\)</span> pa velja <span
             class="math inline">\(g^{G_p} \cap C_p = g U_p \backslash
             S_p\)</span>, zato je v formuli za induciran karakter
             relevantnih le <span class="math inline">\(p-1\)</span>
-            členov in dobimo <span
-            class="math display">\[\mathop{\mathrm{Ind}}_{C_p}^{G_p}(\chi
-            \times \psi) \left( \begin{pmatrix} a &amp; 1 \\ 0 &amp; a
-            \end{pmatrix} \right)
+            členov in dobimo <span class="math display">\[{\textstyle
+            \mathop{\mathrm{Ind}}_{C_p}^{G_p}(\chi \times \psi)} \left(
+            \begin{pmatrix} a &amp; 1 \\ 0 &amp; a \end{pmatrix} \right)
                 = \sum_{t \in \mathbf{F}_p^*} (\chi \times \psi) \left(
             \begin{pmatrix} a &amp; 1 \\ 0 &amp; a \end{pmatrix} \cdot
             \begin{pmatrix} 1 &amp; t \\ 0 &amp; 1 \end{pmatrix} \right)
@@ -6970,8 +6981,8 @@
             </tbody>
             </table>
             <p>Iz vrednosti karakterjev izračunamo normo <span
-            class="math display">\[||\mathop{\mathrm{Ind}}_{C_p}^{G_p}(\chi
-            \times \psi) ||^2
+            class="math display">\[||{\textstyle
+            \mathop{\mathrm{Ind}}_{C_p}^{G_p}(\chi \times \psi)} ||^2
                 = \begin{cases}
                     2(p-1) &amp; \psi = \mathbf{1}, \\
                     p &amp; \psi \neq \mathbf{1}.
@@ -6981,19 +6992,19 @@
             <p>Primerjajmo obe inducirani upodobitvi. Skalarni produkt
             njunih karakterjev lahko izračunamo tako, da seštejemo le
             prispevke po skalarnih elementih, saj so vsi ostali členi
-            ničelni. Dobimo <span class="math display">\[\begin{aligned}
-                \langle \mathop{\mathrm{Ind}}_{T_{nr}}^{G_p}(\theta),
-            \mathop{\mathrm{Ind}}_{C_p}^{G_p}(\chi \times \psi) \rangle
-                &amp;= \frac{1}{|G_p|} \sum_{a \in \mathbf{F}_p^*}
-            p(p-1) \theta(a) \cdot (p^2 - 1) \overline{\chi(a)} \\
-                &amp;= (p-1) \cdot \langle \theta |_{S_p}, \chi \rangle
-            \\
-                &amp;= \begin{cases}
+            ničelni. Dobimo <span class="math display">\[{\textstyle
+            \langle \mathop{\mathrm{Ind}}_{T_{nr}}^{G_p}(\theta),
+            \mathop{\mathrm{Ind}}_{C_p}^{G_p}(\chi \times \psi) \rangle}
+            = \frac{1}{|G_p|} \sum_{a \in \mathbf{F}_p^*} p(p-1)
+            \theta(a) \cdot (p^2 - 1) \overline{\chi(a)},\]</span> kar
+            prepoznamo kot <span class="math display">\[(p-1) \cdot
+            \langle \theta |_{S_p}, \chi \rangle
+            = \begin{cases}
                     0 &amp; \chi \neq \theta |_{S_p}, \\
                     p-1 &amp; \chi = \theta |_{S_p}. \\
-                \end{cases}\end{aligned}\]</span> Če torej izberemo
-            <span class="math inline">\(\chi = \theta |_{S_p}\)</span>,
-            je skalarni produkt med obema upodobitvama enak <span
+            \end{cases}\]</span> Če torej izberemo <span
+            class="math inline">\(\chi = \theta |_{S_p}\)</span>, je
+            skalarni produkt med obema upodobitvama enak <span
             class="math inline">\(p-1\)</span>. Izračunali smo tudi že
             normi obeh upodobitev, obe sta blizu <span
             class="math inline">\(\sqrt{p}\)</span>. V luči
@@ -7006,13 +7017,14 @@
             za <span class="math inline">\(\psi\)</span> poljuben
             netrivialen karakter. S to izbiro opazujmo
             <em>virtualen</em> karakter <span
-            class="math display">\[\zeta_{\theta} =
+            class="math display">\[\textstyle \zeta_{\theta} =
             \mathop{\mathrm{Ind}}_{C_p}^{G_p}(\theta |_{S_p} \times
             \psi) - \mathop{\mathrm{Ind}}_{T_{nr}}^{G_p}(\theta) \in
             R(G_p).\]</span> Po že opravljenih računih je norma tega
             virtualnega karakterja res minimalna, <span
             class="math display">\[\begin{aligned}
-                \langle \zeta_{\theta}, \zeta_{\theta} \rangle
+                \textstyle \langle \zeta_{\theta}, \zeta_{\theta}
+            \rangle
                 &amp;= ||\mathop{\mathrm{Ind}}_{C_p}^{G_p}(\theta
             |_{S_p} \times \psi)||^2 +
             ||\mathop{\mathrm{Ind}}_{T_{nr}}^{G_p}(\theta)||^2 - 2
@@ -7081,29 +7093,20 @@
             Galoisjevi orbiti. Število ostnih upodobitev je zato enako
             <span class="math inline">\(p(p-1)/2\)</span>.</p>
             <p>Povzemimo. Skupaj smo našli naslednje upodobitve:</p>
-            <dl>
-            <dt>linearne:</dt>
-            <dd>
-            <p><span class="math inline">\(p-1\)</span> upodobitev
-            stopnje <span class="math inline">\(1\)</span>,</p>
-            </dd>
-            <dt>Steinbergove:</dt>
-            <dd>
-            <p><span class="math inline">\(p-1\)</span> upodobitev
-            stopnje <span class="math inline">\(p\)</span>,</p>
-            </dd>
-            <dt>glavne vrste:</dt>
-            <dd>
-            <p><span class="math inline">\((p-1)(p-2)/2\)</span>
+            <ul>
+            <li><p>linearne: <span class="math inline">\(p-1\)</span>
             upodobitev stopnje <span
-            class="math inline">\(p+1\)</span>,</p>
-            </dd>
-            <dt>ostne:</dt>
-            <dd>
-            <p><span class="math inline">\(p(p-1)/2\)</span> upodobitev
-            stopnje <span class="math inline">\(p-1\)</span>.</p>
-            </dd>
-            </dl>
+            class="math inline">\(1\)</span>,</p></li>
+            <li><p>Steinbergove: <span
+            class="math inline">\(p-1\)</span> upodobitev stopnje <span
+            class="math inline">\(p\)</span>,</p></li>
+            <li><p>glavne vrste: <span
+            class="math inline">\((p-1)(p-2)/2\)</span> upodobitev
+            stopnje <span class="math inline">\(p+1\)</span>,</p></li>
+            <li><p>ostne: <span class="math inline">\(p(p-1)/2\)</span>
+            upodobitev stopnje <span
+            class="math inline">\(p-1\)</span>.</p></li>
+            </ul>
             <p>S tem smo našteli <span
             class="math inline">\(p^2-1\)</span> nerazcepnih upodobitev
             in zatorej vse nerazcepne upodobitve grupe <span
@@ -7219,7 +7222,7 @@
             m_1 + m_2 + \cdots + m_k\)</span> lahko v <span
             class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{F}_q)\)</span>
             vidimo bločnodiagonalni direktni produkt grup <span
-            class="math display">\[\mathop{\mathrm{GL}}_{m_1}(\mathbf{F}_q)
+            class="math display">\[\textstyle  \mathop{\mathrm{GL}}_{m_1}(\mathbf{F}_q)
             \times \mathop{\mathrm{GL}}_{m_2}(\mathbf{F}_q) \times
             \cdots \times
             \mathop{\mathrm{GL}}_{m_k}(\mathbf{F}_q).\]</span> Teorija
