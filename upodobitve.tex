@@ -286,6 +286,8 @@ Vmes so hribi. Vmes so morja.
 \item {\literatura J. P. Serre, {\em Linear Representations of Finite Groups}, Springer GTM 42, 1977.}
 \item {\literatura P. Diaconis, {\em Group representations in probability and statistics}, Lecture notes - monograph series 11, i-192, 1988.}
 \item {\literatura C. J. Bushnell, G. Henniart, {\em The Local Langlands Conjecture for $\GL(2)$}, Springer Grundlehren der mathematischen Wissenschaften \textbf{335}, 2006.}
+\item {\literatura W. T. Gowers, {\em Generalizations of Fourier analysis, and how to apply them},  Bulletin of the American Mathematical Society \textbf{54}, 1-44 (2017).}
+\item {\literatura S. Eberhard, {\em Product mixing in the alternating group}, Discrete Analysis, 2-18 (2016).}
 \end{itemize}
 
 \chapter{Temelji teorije upodobitev}
@@ -356,7 +358,7 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
     \end{itemize}
 \end{zgled}
 
-Upodobitev $\rho$ grupe $G$ pohvalimo s pridevnikom {\definicija zvesta}, kadar je injektivna, se pravi $\ker \rho = 1$. Trivialna upodobitev netrivialne grupe ni zvesta, sta pa vselej zvesti Cayleyjeva in desna regularna upodobitev. \todo{Ali tole sploh kje potrebujemo?}
+Upodobitev $\rho$ grupe $G$ pohvalimo s pridevnikom {\definicija zvesta}, kadar je injektivna, se pravi $\ker \rho = 1$. Trivialna upodobitev netrivialne grupe ni zvesta, sta pa vselej zvesti Cayleyjeva in desna regularna upodobitev.
 
 \subsection{Kategorija upodobitev}
 
@@ -2168,15 +2170,15 @@ to je {\definicija Hilbert-Schmidtov skalarni produkt}. Parsevalov izrek nam tor
     \langle f, h \rangle = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \left\langle \hat{f}(\pi), \hat{h}(\pi) \right\rangle_{\HS}.
 \]
 
-\section{Razširjeni zgledi}
+\chapter{Razširjeni zgledi}
 
-Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo na voljo tabelo karakterjev, izračun te pa je končen problem. S tem smo za konkretne končne grupe dosegli ultimativen cilj teorije upodobitev. Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves ne spregledamo gozda. Grupe namreč praviloma ne nastopajo posamično, temveč kot del večjih družin.\footnote{Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, \dots} V tem razdelku si bomo podrobneje pogledali dve temeljni družini grup, in sicer simetrične grupe ter splošne linearne grupe nad končnim poljem.\footnote{Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, dveh neskončnih družin, ki so zelo podobne družini simetričnih grup in linearnih grup nad končnim poljem. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev končnih enostavnih grup.} Njuno teorijo upodobitev bomo obravnavali celostno.
+Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo na voljo tabelo karakterjev, izračun te pa je končen problem. S tem smo za konkretne končne grupe dosegli ultimativen cilj teorije upodobitev. Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves ne spregledamo gozda. Grupe namreč praviloma ne nastopajo posamično, temveč kot del večjih družin.\footnote{Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, \dots} V tem poglavju si bomo podrobneje pogledali dve temeljni družini grup, in sicer simetrične grupe ter splošne linearne grupe nad končnim poljem.\footnote{Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, dveh neskončnih družin, ki so zelo podobne družini simetričnih grup in linearnih grup nad končnim poljem. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev končnih enostavnih grup.} Njuno teorijo upodobitev bomo obravnavali celostno.
 
-\subsection{Simetrična grupa $S_n$}
+\section{Simetrična grupa}
 
 Opazujmo simetrično grupo $S_n$ za $n \in \NN$ nad poljem $\CC$. Ogledali smo si že tabele karakterjev za $n \leq 4$ in razložili, da je število nerazcepnih upodobitev enako številu konjugiranostnih razredov, to pa je enako številu razčlenitev $p(n)$. Družina simetričnih grup je posebna, saj zanjo presenetljivo obstaja eksplicitna korespondenca med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Iz dane razčlenitve $(\lambda_1, \lambda_2, \dots, \lambda_k)$ števila $n$ lahko torej konstruiramo nerazcepno upodobitev grupe $S_n$ in za tem z nekoliko več truda določimo vrednosti karakterjev.
 
-\subsubsection{Nerazcepne upodobitve}
+\subsection{Nerazcepne upodobitve}
 
 Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$. Nerazcepno upodobitev grupe $S_n$, prirejeno $\lambda$, kot ponavadi iščemo z indukcijo iz podgrup. Razčlenitev $\lambda$ lahko interpretiramo kot ciklični tip permutacij, zato se naravno ponuja {\definicija Youngova grupa}
 \[
@@ -2354,7 +2356,7 @@ Obravnavajmo modularne upodobitve nad $\FF_p$, kjer je $p \leq n$. Naj bo $\lamb
 
 Ta problem je razrešen le za razčlenitve $\lambda$ z največ dvema deloma, torej s $k \leq 2$. Za $k = 3$ sodobna bilijardna domneva {\literatura \href{https://arxiv.org/pdf/1703.05898.pdf}{(Lusztig-Williamson 2018)}} predvideva, da se te večkratnosti obnašajo po zakonu nekega zakompliciranega \href{https://www.youtube.com/watch?v=Ru0Zys1Vvq4}{dinamičnega sistema}.
 
-\subsubsection{Vrednosti karakterjev}
+\subsection{Vrednosti karakterjev}
 
 Premislili smo že, da so vsi Spechtovi moduli definirani nad $\ZZ$, zato so vrednosti karakterjev simetrične grupe vselej cela števila. Poznamo pa celo dokaj preprost način, kako lahko eksplicitno določimo vse vrednosti karakterjev nerazcepnih upodobitev. Izrekli ga bomo v jeziku polinomskega kolobarja $\CC[\mathbf{x}] = \CC[x_1, x_2, \dots, x_k]$. Potrebovali bomo nekaj posebnih polinomov iz tega kolobarja, in sicer {\definicija diskriminanto}
 \[
@@ -2493,7 +2495,7 @@ Avtor omeni analogno vprašanje glede same tabele karakterjev.
 Enakomerno naključno izberimo konjugiranostni razred $\conclass$ v $S_n$ in $\pi \in \Irr(S_n)$. Kaj lahko povemo o obnašanju zaporedja $\PP_{\conclass, \pi}\left( \chi_{\pi}(\conclass) = 0 \right)$, ko gre $n$ čez vse meje?
 \end{odprtproblem}
 
-\subsection{Splošna linearna grupa $\GL_2(\FF_p)$}
+\section{Splošna linearna grupa}
 
 Opazujmo {\definicija splošno linearno grupo}
 \[
@@ -2502,7 +2504,7 @@ Opazujmo {\definicija splošno linearno grupo}
 \] 
 obrnljivih matrik razsežnosti $2 \times 2$ nad končnim poljem $\FF_p$, kjer je $p$ praštevilo. Njeno kategorijo upodobitev bomo obravnavali nad $\CC$. Še pred tem pa moramo bolje spoznati to grupo.
 
-\subsubsection{Osnovne poteze}
+\subsection{Osnovne poteze}
 
 Grupo $G_p$ lahko razumemo s pomočjo njenih podgrup
 \begin{align*}
@@ -2613,13 +2615,13 @@ Za $p = 2$ je $\PSL_2(\FF_2) = \SL_2(\FF_2) \cong S_3$. Za $p = 3$ se grupa $\PS
 Naj bo $p = 5$. Grupa $\PSL_2(\FF_5)$ je moči $60$. Poišči njene $2$-podgrupe Sylowa. Na množici teh podgrup grupa $\PSL_2(\FF_5)$ deluje tranzitivno. Iz tega delovanja izpelji, da je $\PSL_2(\FF_5) \cong A_5$. 
 \end{domacanaloga}
 
-\begin{izrek}[Galois]
+\begin{izrek}[Galois 1831]
 Za $p > 3$ je grupa $\PSL_2(\FF_p)$ enostavna.
 \end{izrek}
 
 Družina grup $G_p$ za praštevila $p$ je torej dobra prijateljica ene od fundamentalnih družin končnih enostavnih grup.
 
-\subsubsection{Konjugiranostni razredi}
+\subsection{Konjugiranostni razredi}
 
 Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnostnim razredom matrik. Te najlažje sistematično obravnavamo prek lastnosti njihovih karakterističnih polinomov, ki so stopnje $2$. Bodisi je ta polinom razcepen (z eno dvojno ničlo ali dvema različnima v $\FF_p$) bodisi je nerazcepen. V primeru dvojnih ničel obravnavamo še možnost, da matrika morda ni diagonalizabilna. Na ta način dobimo naslednje konjugiranostne razrede.
 
@@ -2725,7 +2727,7 @@ nerazcepni torus pa identificiramo kot\footnote{Element $x + \sqrt{\epsilon} y$ 
     \mapsto x + \sqrt{\epsilon} y.
 \]
 
-\subsubsection{Tabela karakterjev, 1. del}
+\subsection{Tabela karakterjev, 1. del}
 
 Predpostavimo, da je $p > 2$. Določimo najprej enorazsežne upodobitve grupe $G_p$. Ker je $[G_p, G_p] = \SL_2(\FF_p) = \ker (\det)$, vse enorazsežne upodobitve dobimo tako, da najprej uporabimo determinanto $\det \colon G_p \to \FF_p^*$, za tem pa poljubno upodobitev abelove grupe $\FF_p^*$. Za vsak homomorfizem $\chi \colon \FF_p^* \to \CC^*$ dobimo torej enorazsežno upodobitev $\chi \circ \det$ grupe $G_p$ in vse enorazsežne upodobitve so take oblike. Vseh teh upodobitev je $|\FF_p^*| = p-1$.
 
@@ -2862,7 +2864,7 @@ Od tod po preprostem računu določimo normo karakterja kot
 \]
 Za $\chi_1 \neq \chi_2$ je upodobitev $\pi(\chi_1, \chi_2)$ torej nerazcepna. Iz karakterja opazimo, da je $\rho$ simetrična v svojih argumentih, se pravi $\pi(\chi_1, \chi_2) \cong \pi(\chi_2, \chi_1)$. Na ta način torej dobimo $\binom{p-1}{2} = (p-1)(p-2)/2$ nerazcepnih upodobitev grupe $G_p$. Tem upodobitvam pravimo {\definicija upodobitve glavne vrste}.\footnote{Angleško \emph{principal series representaions}.} V primeru, ko je $\chi_1 = \chi_2$, iz vrednosti karakterjev opazimo izomorfizem $\pi(\chi, \chi) \cong \St(\chi) \oplus (\chi \circ \det)$, torej tukaj ne najdemo nobenih novih nerazcepnih upodobitev.
 
-\subsubsection{Tabela karakterjev, 2. del}
+\subsection{Tabela karakterjev, 2. del}
 
 Opazujmo zdaj še upodobitve, ki jih dobimo z indukcijo iz nerazcepnega torusa. Te so nekoliko bolj zapletene, zato bomo pristopili bolj previdno. Naj bo
 \[
@@ -3004,12 +3006,10 @@ kar prepoznamo kot
     \textstyle \zeta_{\theta} = \Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi) - \Ind_{T_{nr}}^{G_p}(\theta) \in R(G_p).
 \]
 Po že opravljenih računih je norma tega virtualnega karakterja res minimalna,
-\begin{align*}
+\[
     \textstyle \langle \zeta_{\theta}, \zeta_{\theta} \rangle 
-    &= ||\Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi)||^2 + ||\Ind_{T_{nr}}^{G_p}(\theta)||^2 - 2 \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\chi \times \psi) \rangle \\
-    &= p + (p-1) - 2 (p-1) \\
-    &= 1.
-\end{align*}
+    = ||\Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi)||^2 + ||\Ind_{T_{nr}}^{G_p}(\theta)||^2 - 2 \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\chi \times \psi) \rangle = 1.
+\]
 Torej je bodisi $\zeta_{\theta}$ bodisi $-\zeta_{\theta}$ nerazcepen karakter. Ker velja $\zeta_{\theta}(1) = p-1$, je $\zeta_{\theta}$ nerazcepen karakter.
 
 \begin{table}[ht]
@@ -3033,7 +3033,7 @@ Torej je bodisi $\zeta_{\theta}$ bodisi $-\zeta_{\theta}$ nerazcepen karakter. K
     \end{pmatrix}$ \\ \hline
     $\zeta_{\theta}$ & $(p-1) \theta(a)$ & $-\theta(a)$ & $0$ & $- \theta(a + \sqrt{\epsilon} b) - \theta(a - \sqrt{\epsilon} b)$ \\
 \end{tabular}
-\caption{Karakter upodobitve $\zeta_{\theta}$ grupe $G_p$}
+\caption{Karakter $\zeta_{\theta}$ grupe $G_p$}
 \end{table}
 
 Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo {\definicija ostna upodobitev}.\footnote{Angleško \emph{cuspidal representation}.} Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti Galoisjevi orbiti. Število ostnih upodobitev je zato enako $p(p-1)/2$.
@@ -3081,7 +3081,7 @@ Izračunano tabelo karakterjev grupe $G_p$ lahko uporabimo, da z njo določimo �
 Izračunaj tabelo karakterjev grupe $\SL(\FF_p)$ in grupe $\PSL_2(\FF_p)$. S tabelo se prepričaj, da je grupa $\PSL_2(\FF_p)$ enostavna za $p > 3$.
 \end{domacanaloga}
 
-\subsubsection{Onkraj $\GL_2(\FF_p)$}
+\subsubsection{Matrike višjih razsežnosti}
 
 Argumente, ki smo jih videli v tem razdelku, bi lahko posplošili na matrike večjih razsežnosti in tako (s precej več truda) izračunali generično tabelo karakterjev grupe $\GL_n(\FF_q)$, kot je storil \href{https://www.jstor.org/stable/1992997#metadata_info_tab_contents}{(Green 1955)}. Zopet dobimo glavno vrsto upodobitev, tokrat inducirano induktivno iz podgrup $\GL_m(\FF_q)$ za $m < n$. Pri tem je relevantno, da to lahko naredimo na več načinov, na primer za vsako razčlenitev števila $n = m_1 + m_2 + \cdots + m_k$ lahko v $\GL_n(\FF_q)$ vidimo bločnodiagonalni direktni produkt grup
 \[
@@ -3091,17 +3091,19 @@ Teorija upodobitev $\GL_n(\FF_q)$ zato vključuje nekaj kompleksnosti teorije up
 
 Ni pa tako enostavno pridobiti tudi tabele karakterjev družine enostavnih grup $\PSL_n(\FF_q)$ ali njene prijateljice $E_8(\FF_q)$. Seveda lahko posamezne tabele za specifične vrednosti $n$ in $q$ izračunamo,\footnote{Računanje teh tabel specifičnih končnih enostavnih grup je zbrano v \href{http://brauer.maths.qmul.ac.uk/Atlas/v3/}{ATLAS}. Ti izračuni so močno pripomogli k dokazu izreka o \href{https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups}{klasifikaciji končnih enostavnih grup}.} ampak končni cilj je imeti generične tabele karakterjev, kot smo to dosegli za $G_p = \GL_2(\FF_p)$. Za razumevanje teorije upodobitev teh grup imamo na voljo matematično zahtevno \href{https://en.wikipedia.org/wiki/Deligne–Lusztig_theory}{Deligne-Lusztigovo teorijo}, ki upodobitve končnih grup sestavlja s pomočjo upodobitev prirejenih algebraičnih grup nad algebraično zaprtim poljem, na primer $\SL_n(\overline{\FF_p})$, in sicer te upodobitve izhajajo iz delovanja na $\ell$-adičnih kohomoloških grupah prirejenih raznoterosti. Iz te teorije lahko razumemo \emph{del} generične tabele karakterjev, na primer poznamo vse stopnje nerazcepnih upodobitev, ne poznamo pa vseh vrednosti vseh karakterjev.
 
-\section{Aplikacije}
+\chapter{Aplikacije}
 
 
 
 
 Večina rezultatov v zvezi z upodobitvami končnih grup je temeljila na uteženem povprečju. {\definicija Harmonična analiza} v kontekstu končnih grup je teorija, ki se ubada z globljim razumevanjem uteženih povprečij oziroma Fourierove transformacije in z aplikacijami, ki same po sebi niti niso izražene v jeziku teorije upodobitev. V tem razdelku si bomo na dveh primerih pogledali del te zgodbe. Obakrat bomo vzeli problem, ki a priori nima nobene povezave s teorijo upodobitev, in pokazali, kako ga lahko izrazimo in tudi razrešimo s pomočjo karakterjev. Ne bomo zamudili priložnosti, da vzporedno razvijemo še nekaj dodatnih lastnosti Fourierove transformacije.
 
-\subsection{Aritmetična zaporedja}
+\section{Aritmetična zaporedja}
 
-\todo[inline]{Roth kot primer za abelove grupe (omeni Bloom etc sodobne rezultate)}
+\todo[inline]{Gowers: Roth kot primer za abelove grupe (omeni Bloom etc sodobne rezultate)}
 
+
+\todo{Omeni, da smo zvezo s konvolucijo videli že pri spletičnah (vse so iz Fourieranja) in pri simetirčnih grupah.}
 Naj bosta $f_1, f_2 \in \fun(G,F)$ funkciji in $\rho$ upodobitev grupe $G$. Kompozicija Fourierovih transformacij $\widehat{f_1}(\rho) \cdot \widehat{f_2}(\rho)$ je enaka
 \[
     \sum_{g_1, g_2 \in G} f_1(g_1) f_2(g_2) \rho(g_1^{-1} g_2^{-1}) =
@@ -3118,9 +3120,9 @@ Torej velja
 \]
 in Fourierova transformacija pretvarja konvolucijo funkcij v produkt linearnih preslikav, pri čemer moramo biti pozorni na vrstni red operacij zaradi morebitne nekomutativnosti grupe.
 
-\subsection{Podmnožice brez produktov}
+\section{Podmnožice brez produktov}
 
-\todo[inline]{Gowers kot nekomutativna posplošitev (omeni Babai)}
+\todo[inline]{Gowers kot nekomutativna posplošitev (omeni uporabo v Babai conjecture, Helfgott), dokaz kot Eberhard}
 
 Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je podgrupa, če in samo če je zaprta za množenje, se pravi $A \cdot A \subseteq A$. Skrajno diametralno tej strukturi se znajdemo, če predpostavimo, da produkt \emph{nobenih} dveh elementov iz množice $A$ ne pripada $A$, se pravi $A \cdot A \cap A = \emptyset$. V tem primeru rečemo, da je množica $A$ {\definicija brez produktov}. Če smo v teoriji grup malodane obsedeni s strukturiranimi množicami, nas mora vsaj malo tudi zanimati tudi druga skrajnost. Kadar množica $A$ vsebuje kakšno podgrupo, seveda \emph{ni} brez produktov, zato se morajo take množice čim bolj izogniti podgrupam. Osnovno vprašanje v zvezi z množicami brez produktov je, kako velike podmnožice brez produktov dana grupa vsebuje. 
 
@@ -3152,7 +3154,7 @@ Uporabimo Fourierovo inverzijo za funkcijo $1_{\conclass_1} * 1_{\conclass_2}$. 
 Trditev zdaj sledi iz zadnje leme.
 \end{dokaz}
 
-\subsection{Komutatorji}
+\section{Prepoznavanje komutatorjev}
 
 Oglejmo si še en čisto nekomutativen problem, ki na prvi pogled nima veliko skupnega s teorijo upodobitev, nazadnje pa se izkaže, da ga lahko popolnoma razrešimo, če le poznamo tabelo karakterjev grupe. Izpeljava bo sledila Fourierovi inverziji konvolucij iz zadnjega razdelka.
 
@@ -3251,11 +3253,17 @@ Po drugi strani je element $(5 \ 6)(7 \ 8)$ v jedru vseh linearnih upodobitev, z
 Njegov konjugiranostni razred v $G$ sestoji iz treh elementov. Ko te elemente dodamo množici $K(G)$, dobimo ravno $[G,G]$.
 \end{zgled}
 
-\todo{Primer: komutatorji v $GL_2$ so ravno $SL_2$, razberemo iz tabele karakterjev $GL_2$.}
+\begin{domacanaloga}
+Iz tabele karakterjev grupe $\GL_2(\FF_p)$ razberi, da za $p>2$ velja
+\[
+    \textstyle K(\GL_2(\FF_p)) = \SL_2(\FF_p).
+\]
+Iz tabele karakterjev grupe $\SL_2(\FF_p)$ razberi, da za $p>3$ množica komutatorjev v $\SL_2(\FF_p)$ vsebuje vse neskalarne elemente. Sklepaj, da je za $p>3$ vsak element grupe $\PSL_2(\FF_p)$ komutator.
+\end{domacanaloga}
 
-\todo[inline]{omeni LOST Ore domneva}
+Nedavno razrešena Orejeva domneva iz leta 1951 je predvidevala, da je vsak element nekomutativne končne enostavne grupe komutator. Ta domneva je bila potrjena v \href{https://ems.press/journals/jems/articles/3979}{(Liebeck-O'Brien-Shalev-Tiep 2010)}. Dokaz sloni na Frobeniusovi formuli za prepoznavanje komutatorjev. Avtorji z uporabo generičnih tabel karakterjev, Deligne-Lusztigove teorije in kar nekaj računske moči dokažejo, da prispevki nelinearnih karakterjev v Frobeniusovi formuli nikdar ne uspejo izničiti prispevka trivialnega karakterja.
 
-\subsection{Slučajni sprehodi}
+\section{Slučajni sprehodi}
 
 \todo{Fourier diagonalizira matriko sosednosti (Diaconis, str. 48), kakšen konkreten primer: .}
 
@@ -3272,10 +3280,22 @@ Njegov konjugiranostni razred v $G$ sestoji iz treh elementov. Ko te elemente do
 - unitarne na hilbertovih prostorih (končne, še enkrat se ozremo na Maschkeja in karakterje v luči tega, $SU_2$)
 }
 
+\section{Kompaktne grupe}
+
 \subsection{$S^1$}
 
 \todo[inline]{
     fourier
+}
+
+\subsection{$\SU_2(\CC)$}
+
+\todo[inline]{
+- lahko bi geometrijsko iz $sl_2$, ampak pokažemo alternativen pristop, ker je kompaktna
+- naštejemo upodobitve, so nerazcepne: isti dokaz kot za $SL_2$ bolj ali manj deluje tudi tukaj
+- Clebsch-Gordan je trivialen iz karakterjev
+- dokažemo, da so to vse zvezne nerazcepne: rabimo karakterje
+- Peter-Weyl na tem primeru (samo izrek, da smo s tem pokrili vse unitarne upodobitve)
 }
 
 \section{Liejeve grupe}
@@ -3301,17 +3321,7 @@ Njegov konjugiranostni razred v $G$ sestoji iz treh elementov. Ko te elemente do
 \todo[inline]{Theorem 2.6.7 Baumslag-Solitar grupa je končno prezentirana, ni pa linearna (ampak za to bi potrebovali končno prezentirane grupe ...) Ta dokaz bi lahko dodali v del o RASTi, kjer že imamo vse potrebno razvito! Dodaj referenco o obstoju grupe, ki nima upodobitve, tukaj. Po tem lahko še omenimo rezultat Lubotzky o random grupah.}
 
 
-\section{Kompaktne grupe}
 
-\subsection{$\SU_2(\CC)$}
-
-\todo[inline]{
-- lahko bi geometrijsko iz $sl_2$, ampak pokažemo alternativen pristop, ker je kompaktna
-- naštejemo upodobitve, so nerazcepne: isti dokaz kot za $SL_2$ bolj ali manj deluje tudi tukaj
-- Clebsch-Gordan je trivialen iz karakterjev
-- dokažemo, da so to vse zvezne nerazcepne: rabimo karakterje
-- Peter-Weyl na tem primeru (samo izrek, da smo s tem pokrili vse unitarne upodobitve)
-}
 
 \todo[inline]{$p$-adične grupe. Omenimo lahko na primer rezultat Jaikin (representation growth) in Aizenbud-Avni (Representation Growth and Rational Singularities of the Moduli Space of Local Systems).}
 
