@@ -3159,7 +3159,7 @@ Torej velja
 \]
 in Fourierova transformacija pretvarja konvolucijo funkcij v produkt linearnih preslikav, pri čemer moramo biti pozorni na vrstni red operacij zaradi morebitne nekomutativnosti grupe.
 
-\item Fourierova transformacija funkcije $1_{2A}$ v $\chi$ je enaka
+\item Velja
 \[
     \widehat{1_{2A}}(\chi) = \sum_{g \in \FF_p} 1_{2A}(g) \chi(-g)
     = \sum_{x \in \FF_p} 1_A(x) \chi(-2x)
@@ -3172,10 +3172,50 @@ in Fourierova transformacija pretvarja konvolucijo funkcij v produkt linearnih p
     \frac{1}{p} \sum_{j \in \FF_p} \widehat{1_A}(\chi_j)^2 \overline{\widehat{1_A}(\chi_j^2)}
     = \frac{1}{p} \sum_{j \in \FF_p} \widehat{1_A}(\chi_j)^2 \widehat{1_A}(\chi_{-2j})
 \]
-Izoliramo prispevek trivialne upodobitve. Pri $j = 0$ dobimo $\widehat{1_A}(\chi_0) = \widehat{1_A}(\11) = |A|$, zato je zadnja vsota enaka
+Izolirajmo prispevek trivialne upodobitve. Velja $\widehat{1_A}(\chi_0) = \widehat{1_A}(\11) = |A|$, zato je zadnja vsota enaka
 \[
     \frac{|A|^3}{p} +  \frac{1}{p} \sum_{j \in \FF_p^*} \widehat{1_A}(\chi_j)^2 \widehat{1_A}(\chi_{-2j})
 \]
+
+\subsection{Glavni del in prispevki netrivialnih karakterjev}
+
+Če izberemo $x,y,z \in \FF_p$ enakomerno naključno, a pogojno na veljavnost $x+y=2z$,\footnote{Na ta način torej izbiramo aritmetična zaporedja v $\FF_p$ dolžine $3$.} potem je po izračunu v zadnjem razdelku verjetnost, da so $x,y,z$ vsi v $A$, enaka
+\[
+    \PP_{x,y,z \in \FF_p}(x,y,z \in A \mid x+y=2z) =
+    \delta^3 + \frac{1}{p^3} \sum_{j \in \FF_p^*} \widehat{1_A(\chi_j)}^2 \widehat{1_A}(\chi_{-2j}).
+\]
+Brez pogojne omejitve bi bila zgornja verjetnost seveda enaka $\delta^3$. Srčica pogoja aritmetičnega zaporedja dolžine $3$ se torej skriva v prispevkih netrivialnih karakterjev. Naš cilj je dokazati, da ti prispevki nikdar ne uspejo izničiti glavnega delta $\delta^3$ in da v $A$ torej res obstaja aritmetično zaporedje dolžine $3$. 
+
+Za omejitev netrivialnih prispevkov najprej uporabimo trikotniško neenakost,
+\[
+    \left| \sum_{j \in \FF_p^*} \widehat{1_A(\chi_j)}^2 \widehat{1_A}(\chi_{-2j}) \right|
+    \leq \max_{j \in \FF_p^*} |\widehat{1_A(\chi_j)}| \cdot 
+    \sum_{j \in \FF_p^*} 
+    |\widehat{1_A}(\chi_j)|
+    |\widehat{1_A}(\chi_{-2j})|.
+\]
+Zadnjo vsoto ocenimo s Cauchy-Schwartzovo neenakostjo, tako da dobimo zgornjo mejo
+\[
+    \max_{j \in \FF_p^*} |\widehat{1_A(\chi_j)}| \cdot 
+    \sqrt{\sum_{j \in \FF_p} |\widehat{1_A}(\chi_j)|^2} \cdot \sqrt{\sum_{j \in \FF_p} |\widehat{1_A}(\chi_{-2j})|^2}.
+\]
+Vsota pod korenoma je v obeh primerih enaka, in sicer jo po Parsevalu lahko izrazimo kot
+\[
+    \sum_{j \in \FF_p} |\widehat{1_A}(\chi_j)|^2
+    = \sum_{j \in \FF_p} \langle \widehat{1_A}(\chi_j), \widehat{1_A}(\chi_j) \rangle_{\HS}
+    = p^2 \langle 1_A, 1_A \rangle = p |A|.
+\]
+Od tod torej sklenemo
+\[
+    \PP_{x,y,z \in \FF_p}(x,y,z \in A \mid x+y=2z)
+    \geq \delta^3 - \delta \cdot \frac{1}{p} \max_{j \in \FF_p^*} |\widehat{1_A}(\chi_j)|.
+\] 
+Kadar je Fourierova transformacija $1_A$ v vseh netrivialnih karakterjih strogo manjša od $p \delta^2$, je verjetnost na levi strani strogo pozitivna, zato res najdemo aritmetično zaporedje dolžine $3$ v $A$. Ko pa ima po drugi strani $\widehat{1_A}$ kakšen velik netrivialen Fourierov koeficient, se pravi ko za nek $j \in \FF_p^*$ velja
+\[
+    |\widehat{1_A}(\chi_j)| \geq p \delta^2,
+\]
+pa harmonična analiza odpove. V tem primeru moramo podrobneje raziskati pomen velikega Fourierovega koeficienta.
+
 
 \todo[inline]{Gowers: Roth kot primer za abelove grupe (omeni Bloom etc sodobne rezultate)}
 
