@@ -60,7 +60,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 12. 07. 2022
+            Zadnja posodobitev: 13. 07. 2022
           </div>
 
           <div id="spinner" class="text-center">
@@ -169,6 +169,10 @@
             <li><p><span>S. Eberhard, <span><em>Product mixing in the
             alternating group</em></span>, Discrete Analysis, 2-18
             (2016).</span></p></li>
+            <li><p><span>S. Peluse, <span><em>Recent progress on bounds
+            for sets with no three terms in arithmetic
+            progression</em></span>, Séminaire BOURBAKI, 74e année,
+            2021-2022, no 1196.</span></p></li>
             </ul>
             <h1 id="temelji-teorije-upodobitev">Temelji teorije
             upodobitev</h1>
@@ -7090,7 +7094,14 @@
             produktov se ni težko prepričati, da sta dve taki upodobitvi
             izomorfni, če in samo če sta regularna karakterja v isti
             Galoisjevi orbiti. Število ostnih upodobitev je zato enako
-            <span class="math inline">\(p(p-1)/2\)</span>.</p>
+            <span class="math inline">\(p(p-1)/2\)</span>. Poudarimo, da
+            smo ostne upodobitve konstruirali le implicitno prek
+            indukcij. Z nekaj truda bi lahko izpeljali eksplicitno
+            konstrukcijo teh upodobitev. Izkaže se, da ostnih upodobitev
+            <em>ni</em> mogoče opisati kot neposredno induciranih iz
+            podgrup <span class="math inline">\(G_p\)</span>.
+            Najpreprostejši znan opis je preko Weilove upodobitve
+            <span>(Bushnell-Henniart 2006)</span>.</p>
             <p>Povzemimo. Skupaj smo našli naslednje upodobitve:</p>
             <ul>
             <li><p>linearne: <span class="math inline">\(p-1\)</span>
@@ -7280,7 +7291,173 @@
             <span><strong><em>harmonična analiza</em></strong></span>.
             To zgodbo bomo potem razširili še v nekomutativen svet.</p>
             <h2 id="aritmetična-zaporedja">Aritmetična zaporedja</h2>
-            <p>Naj bosta <span class="math inline">\(f_1, f_2 \in
+            <h3 id="rothov-izrek">Rothov izrek</h3>
+            <p>Za poljuben <span class="math inline">\(n \in
+            \mathbf{N}\)</span> opazujmo množico celih števil <span
+            class="math inline">\(\{ 1, 2, \dots, n \}\)</span> . Vsaki
+            njeni podmnožici <span class="math inline">\(A\)</span>
+            lahko priredimo gostoto <span class="math inline">\(\delta =
+            |A|/n\)</span>. Kadar je <span
+            class="math inline">\(A\)</span> visoke gostote,
+            pričakujemo, da bomo v njej lahko našli veliko vzorcev
+            različnih vrst, ki upoštevajo strukturo seštevanja ali
+            množenja v množici celih števil. Eden od temeljnih takih
+            vzorcev v množici celih števil so
+            <span><strong><em>aritmetična
+            zaporedja</em></strong></span>, se pravi zaporedja oblike
+            <span class="math display">\[x, \ x+y, \ x+2y, \dots, \ x +
+            (k-1)y\]</span> za <span class="math inline">\(x,y \in
+            \mathbf{Z}\)</span>, <span class="math inline">\(k \in
+            \mathbf{N}\)</span>. Število <span
+            class="math inline">\(k\)</span> je dolžina tega zaporedja
+            in opazujemo seveda le zaporedja dolžine vsaj <span
+            class="math inline">\(3\)</span>. Izkaže se, da je ta
+            struktura vselej prisotna, neodvisno od izbire konkretne
+            množice <span class="math inline">\(A\)</span>, če je le
+            <span class="math inline">\(n\)</span> dovolj velik in
+            gostota <span class="math inline">\(\delta\)</span>
+            pozitivna.</p>
+            <div class="izrek">
+            <p><strong>Izrek 5.1</strong> (Szemerédi 1974). Naj bosta
+            <span class="math inline">\(k \geq 3\)</span> in <span
+            class="math inline">\(\delta &gt; 0\)</span>. Tedaj za vse
+            dovolj velike <span class="math inline">\(n \in
+            \mathbf{N}\)</span> velja, da vsaka podmnožica <span
+            class="math inline">\(A \subseteq \{ 1, 2, \dots, n
+            \}\)</span> gostote vsaj <span
+            class="math inline">\(\delta\)</span> vsebuje aritmetično
+            zaporedje dolžine <span
+            class="math inline">\(k\)</span>.</p>
+            </div>
+            <p>Dokaz tega izreka je kombinatoričen in tehnično precej
+            zahteven. Mi si bomo ogledali poseben primer za <span
+            class="math inline">\(k = 3\)</span>, torej za obstoj <span
+            class="math inline">\(3\)</span>-členih aritmetičnih
+            zaporedij. Za ta primer bomo izpeljali celo nekoliko
+            močnejšo izjavo, katere dokaz bo slonel na teoriji
+            upodobitev.</p>
+            <div class="izrek">
+            <p><strong>Izrek 5.2</strong> (Roth 1953). Za neko konstanto
+            <span class="math inline">\(C\)</span> in za vse dovolj
+            velike <span class="math inline">\(n \in \mathbf{N}\)</span>
+            velja, da vsaka podmnožica <span class="math inline">\(A
+            \subseteq \{ 1, 2, \dots, n \}\)</span> gostote vsaj <span
+            class="math inline">\(C/\log \log n\)</span> vsebuje
+            aritmetično zaporedje dolžine <span
+            class="math inline">\(3\)</span>.</p>
+            </div>
+            <h3 id="projekcija-v-mathbff_p">Projekcija v <span
+            class="math inline">\(\mathbf{F}_p\)</span></h3>
+            <p>Rothov izrek se sicer tiče podmnožice celih števil, ampak
+            ker to množico filtriramo s podmnožicami <span
+            class="math inline">\(\{1,2,\dots,n\}\)</span>, lahko
+            izberemo neko praštevilo <span class="math inline">\(p \geq
+            n\)</span> in dogajanje opazujemo v projekciji na kvocient
+            <span class="math inline">\(\mathbf{Z}/p\mathbf{Z}=
+            \mathbf{F}_p\)</span>. Pri tem moramo biti nekoliko
+            previdni, saj so aritmetična zaporedja v <span
+            class="math inline">\(\mathbf{F}_p\)</span> lahko nekoliko
+            nenavadna.</p>
+            <div class="zgled">
+            <p><strong>Zgled 5.1</strong>. V <span
+            class="math inline">\(\mathbf{F}_p\)</span> tvori množica
+            <span class="math inline">\(\{ 0, 1, (p+1)/2 \}\)</span>
+            aritmetično zaporedje. Res, če vzamemo <span
+            class="math inline">\(x = 0\)</span>, <span
+            class="math inline">\(y = (p+1)/2\)</span>, potem dobimo
+            zaporedje z razliko <span class="math inline">\(y\)</span>
+            kot <span class="math display">\[x = 0, \ x + y =
+            \frac{p+1}{2}, \ x + 2y = p + 1 = 1.\]</span></p>
+            </div>
+            <p>Če torej rešimo Rothov problem za podmnožice <span
+            class="math inline">\(\mathbf{F}_p\)</span> namesto za
+            podmnožice <span
+            class="math inline">\(\{1,2,\dots,n\}\)</span>, moramo biti
+            previdni, saj dobljenega aritmetičnega zaporedja morda ne
+            bomo mogli dvigniti iz <span
+            class="math inline">\(\mathbf{F}_p\)</span> v <span
+            class="math inline">\(\mathbf{Z}\)</span>. Tej težavi se
+            lahko izognemo tako, da izberemo praštevilo <span
+            class="math inline">\(p\)</span> z lastnostjo <span
+            class="math inline">\(p &gt; 2n\)</span>. Ni se težko
+            prepričati, da v tem primeru vsako aritmetično zaporedje s
+            <span class="math inline">\(3\)</span> členi v <span
+            class="math inline">\(\{ 1, 2, \dots, n \} \subseteq
+            \mathbf{F}_p\)</span> lahko dvignemo do aritmetičnega
+            zaporedja v <span
+            class="math inline">\(\{1,2,\dots,n\}\)</span>. Poleg tega
+            želimo, da se gostota množice <span
+            class="math inline">\(A\)</span> pri projekciji iz <span
+            class="math inline">\(\{1,2,\dots,n \}\)</span> v <span
+            class="math inline">\(\mathbf{F}_p\)</span> ne spremeni
+            preveč, zato praštevilo <span
+            class="math inline">\(p\)</span> ne sme biti preveliko.
+            Optimalna izbira bo torej praštevilo <span
+            class="math inline">\(p\)</span> z lastnostjo <span
+            class="math inline">\(2n &lt; p &lt; 4n\)</span>, taka
+            izbira pa tudi vselej obstaja po Bertrandovem postulatu.</p>
+            <p>Dogajanje smo na ta način prestavili v končno abelovo
+            grupo <span class="math inline">\(\mathbf{F}_p\)</span>. V
+            njej opazujemo množico <span class="math inline">\(A
+            \subseteq \mathbf{F}_p\)</span>, ki je gostote <span
+            class="math inline">\(\delta\)</span>. Dokazati želimo, da
+            za dovolj velik <span class="math inline">\(p\)</span>
+            obstajajo v <span class="math inline">\(A\)</span>
+            aritmetična zaporedja dolžine <span
+            class="math inline">\(3\)</span>, če je le <span
+            class="math inline">\(\delta &gt; C/\log \log p\)</span> za
+            neko konstanto <span class="math inline">\(C\)</span>.</p>
+            <h3 id="harmonična-analiza">Harmonična analiza</h3>
+            <p>Rothov izrek v <span
+            class="math inline">\(\mathbf{F}_p\)</span> napadimo z
+            močnimi orodji teorije upodobitev grupe <span
+            class="math inline">\(\mathbf{F}_p\)</span>. Problem bomo
+            najprej izrazili v prostoru funkcij <span
+            class="math inline">\(\mathop{\mathrm{fun}}(\mathbf{F}_p,
+            \mathbf{C})\)</span>. Naj bo <span
+            class="math inline">\(1_A\)</span> karakteristična funkcija
+            množice <span class="math inline">\(A\)</span>. Vsako
+            aritmetično zaporedje dolžine <span
+            class="math inline">\(3\)</span> je oblike <span
+            class="math inline">\(x,z,y\)</span>, pri čemer je <span
+            class="math inline">\(z-x = y-z\)</span>, kar je enakovredno
+            <span class="math inline">\(x+y=2z\)</span>. Števila <span
+            class="math inline">\(x\)</span>, <span
+            class="math inline">\(y\)</span> in <span
+            class="math inline">\((x+y)/2\)</span> morajo torej
+            pripadati množici <span class="math inline">\(A\)</span>.
+            Število aritmetičnih zaporedij dolžine <span
+            class="math inline">\(3\)</span> v <span
+            class="math inline">\(A\)</span> lahko zato izrazimo kot
+            <span class="math display">\[\sum_{x,y,z \in \mathbf{F}_p :
+            x+y=2z} 1_A(x) 1_A(y) 1_A(z)
+                = \sum_{z \in \mathbf{F}_p} \left( 1_A * 1_A \right)(z)
+            1_A(z/2)\]</span> Naj bo <span
+            class="math inline">\(1_{2A}(z) = 1_A(z/2)\)</span>. Zadnjo
+            vsoto prepoznamo kot skalarni produkt <span
+            class="math display">\[p \cdot \langle 1_A * 1_A, 1_{2A}
+            \rangle,\]</span> kar lahko s Parsevalovim izrekom razvijemo
+            kot <span class="math display">\[\frac{1}{p} \sum_{\chi \in
+            \mathop{\mathrm{Irr}}(\mathbf{F}_p)} \widehat{1_A*1_A}(\chi)
+            \overline{\widehat{1_{2A}}(\chi)}.\]</span> Trikrat globoko
+            vdihnimo in premislimo vsako zadevo posebej.</p>
+            <ol>
+            <li><p>Nerazcepne upodobitve oziroma karakterje grupe <span
+            class="math inline">\(\mathbf{F}_p\)</span> eksplicitno
+            poznamo, enaki so <span class="math display">\[\chi_j \colon
+            \mathbf{F}_p \to \mathbf{C}^*, \quad
+                x \mapsto \zeta^{j x}\]</span> za <span
+            class="math inline">\(j \in \mathbf{F}_p\)</span>, kjer je
+            <span class="math inline">\(\zeta = e^{2 \pi
+            i/p}\)</span>.</p></li>
+            <li><p>Povezavo med konvolucijo in Fourierovo transformacijo
+            smo videli že pri spletičnah. Dokazali smo, da vse
+            endospletične regularne upodobitve izhajajo iz uporabe
+            Fourierove transformacije. Te lastnosti smo kasneje
+            uporabili tudi pri simetrični grupi. Naj bo zdaj <span
+            class="math inline">\(G\)</span> poljubna grupa in <span
+            class="math inline">\(F\)</span> polje. Naj bosta <span
+            class="math inline">\(f_1, f_2 \in
             \mathop{\mathrm{fun}}(G,F)\)</span> funkciji in <span
             class="math inline">\(\rho\)</span> upodobitev grupe <span
             class="math inline">\(G\)</span>. Kompozicija Fourierovih
@@ -7289,20 +7466,36 @@
             \widehat{f_2}(\rho)\)</span> je enaka <span
             class="math display">\[\sum_{g_1, g_2 \in G} f_1(g_1)
             f_2(g_2) \rho(g_1^{-1} g_2^{-1}) =
-                \sum_{g \in G} \left( \sum_{g_1, g_2 \in G \colon g_2
-            g_1 = g} f_2(g_2) f_1(g_1)  \right) \rho(g^{-1}).\]</span>
-            Člen v notranji vsoti je
-            <span><strong><em>konvolucija</em></strong></span> funkcij
-            <span class="math inline">\(f_2\)</span> in <span
-            class="math inline">\(f_1\)</span>, se pravi <span
-            class="math display">\[(f_2 * f_1)(g) = \sum_{g_1, g_2 \in G
-            \colon g_2 g_1 = g} f_2(g_2) f_1(g_1).\]</span> Torej velja
-            <span class="math display">\[\widehat{f_1}(\rho) \cdot
-            \widehat{f_2}(\rho) =
+                \sum_{g \in G} (f_2 * f_1)(g) \rho(g^{-1}).\]</span>
+            Torej velja <span class="math display">\[\widehat{f_1}(\rho)
+            \cdot \widehat{f_2}(\rho) =
                 \widehat{f_2 * f_1}(\rho)\]</span> in Fourierova
             transformacija pretvarja konvolucijo funkcij v produkt
             linearnih preslikav, pri čemer moramo biti pozorni na vrstni
-            red operacij zaradi morebitne nekomutativnosti grupe.</p>
+            red operacij zaradi morebitne nekomutativnosti
+            grupe.</p></li>
+            <li><p>Fourierova transformacija funkcije <span
+            class="math inline">\(1_{2A}\)</span> v <span
+            class="math inline">\(\chi\)</span> je enaka <span
+            class="math display">\[\widehat{1_{2A}}(\chi) = \sum_{g \in
+            \mathbf{F}_p} 1_{2A}(g) \chi(-g)
+                = \sum_{x \in \mathbf{F}_p} 1_A(x) \chi(-2x)
+                = \widehat{1_A}(\chi^2).\]</span></p></li>
+            </ol>
+            <p>Število iskanih aritmetičnih zaporedij je zato enako
+            <span class="math display">\[\frac{1}{p} \sum_{j \in
+            \mathbf{F}_p} \widehat{1_A}(\chi_j)^2
+            \overline{\widehat{1_A}(\chi_j^2)}
+                = \frac{1}{p} \sum_{j \in \mathbf{F}_p}
+            \widehat{1_A}(\chi_j)^2 \widehat{1_A}(\chi_{-2j})\]</span>
+            Izoliramo prispevek trivialne upodobitve. Pri <span
+            class="math inline">\(j = 0\)</span> dobimo <span
+            class="math inline">\(\widehat{1_A}(\chi_0) =
+            \widehat{1_A}(\mathbf{1}) = |A|\)</span>, zato je zadnja
+            vsota enaka <span class="math display">\[\frac{|A|^3}{p}
+            +  \frac{1}{p} \sum_{j \in \mathbf{F}_p^*}
+            \widehat{1_A}(\chi_j)^2
+            \widehat{1_A}(\chi_{-2j})\]</span></p>
             <h2 id="podmnožice-brez-produktov">Podmnožice brez
             produktov</h2>
             <p>Naj bo <span class="math inline">\(G\)</span> končna
@@ -7391,7 +7584,7 @@
             class="math display">\[K(G) = \{ [x,y] \mid x,y \in G
             \}.\]</span> Ta množica v splošnem <em>ni</em> podgrupa.</p>
             <div class="zgled">
-            <p><strong>Zgled 5.1</strong>. V programskem okolju
+            <p><strong>Zgled 5.2</strong>. V programskem okolju
             <code>GAP</code> se ni težko prepričati, da je najmanjša<a
             href="#fn64" class="footnote-ref" id="fnref64"
             role="doc-noteref"><sup>64</sup></a> grupa <span
@@ -7515,7 +7708,7 @@
             pogoj pa lahko preberemo neposredno iz tabele karakterjev
             grupe.</p>
             <div class="zgled">
-            <p><strong>Zgled 5.2</strong>. Naj bo <span
+            <p><strong>Zgled 5.3</strong>. Naj bo <span
             class="math inline">\(G = \langle x, y \rangle\)</span>
             grupa moči <span class="math inline">\(96\)</span> iz
             zadnjega zgleda. S predstavljenim algoritmom lahko hitro
@@ -8155,7 +8348,7 @@
             class="math inline">\(S_{p+1}\)</span>.<a href="#fnref59"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
             <li id="fn60" role="doc-endnote"><p>Angleško <em>principal
-            series representaions</em>.<a href="#fnref60"
+            series representations</em>.<a href="#fnref60"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
             <li id="fn61" role="doc-endnote"><p>Angleško <em>cuspidal
             representation</em>.<a href="#fnref61" class="footnote-back"

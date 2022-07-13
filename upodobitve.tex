@@ -271,6 +271,7 @@
 \item {\literatura C. J. Bushnell, G. Henniart, {\em The Local Langlands Conjecture for $\GL(2)$}, Springer Grundlehren der mathematischen Wissenschaften \textbf{335}, 2006.}
 \item {\literatura W. T. Gowers, {\em Generalizations of Fourier analysis, and how to apply them},  Bulletin of the American Mathematical Society \textbf{54}, 1-44 (2017).}
 \item {\literatura S. Eberhard, {\em Product mixing in the alternating group}, Discrete Analysis, 2-18 (2016).}
+\item {\literatura S. Peluse, {\em Recent progress on bounds for sets with no three terms in arithmetic progression}, Séminaire BOURBAKI, 74e année, 2021-2022, no 1196.}
 \end{itemize}
 
 \chapter{Temelji teorije upodobitev}
@@ -2845,7 +2846,7 @@ Od tod po preprostem računu določimo normo karakterja kot
         1 & \chi_1 \neq \chi_2.
     \end{cases}
 \]
-Za $\chi_1 \neq \chi_2$ je upodobitev $\pi(\chi_1, \chi_2)$ torej nerazcepna. Iz karakterja opazimo, da je $\rho$ simetrična v svojih argumentih, se pravi $\pi(\chi_1, \chi_2) \cong \pi(\chi_2, \chi_1)$. Na ta način torej dobimo $\binom{p-1}{2} = (p-1)(p-2)/2$ nerazcepnih upodobitev grupe $G_p$. Tem upodobitvam pravimo {\definicija upodobitve glavne vrste}.\footnote{Angleško \emph{principal series representaions}.} V primeru, ko je $\chi_1 = \chi_2$, iz vrednosti karakterjev opazimo izomorfizem $\pi(\chi, \chi) \cong \St(\chi) \oplus (\chi \circ \det)$, torej tukaj ne najdemo nobenih novih nerazcepnih upodobitev.
+Za $\chi_1 \neq \chi_2$ je upodobitev $\pi(\chi_1, \chi_2)$ torej nerazcepna. Iz karakterja opazimo, da je $\rho$ simetrična v svojih argumentih, se pravi $\pi(\chi_1, \chi_2) \cong \pi(\chi_2, \chi_1)$. Na ta način torej dobimo $\binom{p-1}{2} = (p-1)(p-2)/2$ nerazcepnih upodobitev grupe $G_p$. Tem upodobitvam pravimo {\definicija upodobitve glavne vrste}.\footnote{Angleško \emph{principal series representations}.} V primeru, ko je $\chi_1 = \chi_2$, iz vrednosti karakterjev opazimo izomorfizem $\pi(\chi, \chi) \cong \St(\chi) \oplus (\chi \circ \det)$, torej tukaj ne najdemo nobenih novih nerazcepnih upodobitev.
 
 \subsection{Tabela karakterjev, 2. del}
 
@@ -3019,7 +3020,7 @@ Torej je bodisi $\zeta_{\theta}$ bodisi $-\zeta_{\theta}$ nerazcepen karakter. K
 \caption{Karakter $\zeta_{\theta}$ grupe $G_p$}
 \end{table}
 
-Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo {\definicija ostna upodobitev}.\footnote{Angleško \emph{cuspidal representation}.} Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti Galoisjevi orbiti. Število ostnih upodobitev je zato enako $p(p-1)/2$.
+Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo {\definicija ostna upodobitev}.\footnote{Angleško \emph{cuspidal representation}.} Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti Galoisjevi orbiti. Število ostnih upodobitev je zato enako $p(p-1)/2$. Poudarimo, da smo ostne upodobitve konstruirali le implicitno prek indukcij. Z nekaj truda bi lahko izpeljali eksplicitno konstrukcijo teh upodobitev. Izkaže se, da ostnih upodobitev \emph{ni} mogoče opisati kot neposredno induciranih iz podgrup $G_p$. Najpreprostejši znan opis je preko Weilove upodobitve {\literatura (Bushnell-Henniart 2006)}.
 
 Povzemimo. Skupaj smo našli naslednje upodobitve:
 \begin{itemize}
@@ -3088,18 +3089,68 @@ V tem poglavju si bomo pogledali nekaj konkretnih aplikacij teorije upodobitev, 
 
 \section{Aritmetična zaporedja}
 
-\todo[inline]{Gowers: Roth kot primer za abelove grupe (omeni Bloom etc sodobne rezultate)}
+\subsection{Rothov izrek}
 
+Za poljuben $n \in \NN$ opazujmo množico celih števil $\{ 1, 2, \dots, n \}$ . Vsaki njeni podmnožici $A$ lahko priredimo gostoto $\delta = |A|/n$. Kadar je $A$ visoke gostote, pričakujemo, da bomo v njej lahko našli veliko vzorcev različnih vrst, ki upoštevajo strukturo seštevanja ali množenja v množici celih števil. Eden od temeljnih takih vzorcev v množici celih števil so {\definicija aritmetična zaporedja}, se pravi zaporedja oblike
+\[
+    x, \ x+y, \ x+2y, \dots, \ x + (k-1)y
+\]
+za $x,y \in \ZZ$, $k \in \NN$. Število $k$ je dolžina tega zaporedja in opazujemo seveda le zaporedja dolžine vsaj $3$. Izkaže se, da je ta struktura vselej prisotna, neodvisno od izbire konkretne množice $A$, če je le $n$ dovolj velik in gostota $\delta$ pozitivna.
 
-\todo{Omeni, da smo zvezo s konvolucijo videli že pri spletičnah (vse so iz Fourieranja) in pri simetirčnih grupah.}
-Naj bosta $f_1, f_2 \in \fun(G,F)$ funkciji in $\rho$ upodobitev grupe $G$. Kompozicija Fourierovih transformacij $\widehat{f_1}(\rho) \cdot \widehat{f_2}(\rho)$ je enaka
+\begin{izrek}[Szemerédi 1974]
+Naj bosta $k \geq 3$ in $\delta > 0$. Tedaj za vse dovolj velike $n \in \NN$ velja, da vsaka podmnožica $A \subseteq \{ 1, 2, \dots, n \}$ gostote vsaj $\delta$ vsebuje aritmetično zaporedje dolžine $k$.
+\end{izrek}
+
+Dokaz tega izreka je kombinatoričen in tehnično precej zahteven. Mi si bomo ogledali poseben primer za $k = 3$, torej za obstoj $3$-členih aritmetičnih zaporedij. Za ta primer bomo izpeljali celo nekoliko močnejšo izjavo, katere dokaz bo slonel na teoriji upodobitev.
+
+\begin{izrek}[Roth 1953]
+Za neko konstanto $C$ in za vse dovolj velike $n \in \NN$ velja, da vsaka podmnožica $A \subseteq \{ 1, 2, \dots, n \}$ gostote vsaj $C/\log \log n$ vsebuje aritmetično zaporedje dolžine $3$.
+\end{izrek}
+
+\subsection{Projekcija v $\FF_p$}
+
+Rothov izrek se sicer tiče podmnožice celih števil, ampak ker to množico filtriramo s podmnožicami $\{1,2,\dots,n\}$, lahko izberemo neko praštevilo $p \geq n$ in dogajanje opazujemo v projekciji na kvocient $\ZZ/p\ZZ = \FF_p$. Pri tem moramo biti nekoliko previdni, saj so aritmetična zaporedja v $\FF_p$ lahko nekoliko nenavadna.
+
+\begin{zgled}
+V $\FF_p$ tvori množica $\{ 0, 1, (p+1)/2 \}$ aritmetično zaporedje. Res, če vzamemo $x = 0$, $y = (p+1)/2$, potem dobimo zaporedje z razliko $y$ kot
+\[
+    x = 0, \ x + y = \frac{p+1}{2}, \ x + 2y = p + 1 = 1.
+\]
+\end{zgled}
+
+Če torej rešimo Rothov problem za podmnožice $\FF_p$ namesto za podmnožice $\{1,2,\dots,n\}$, moramo biti previdni, saj dobljenega aritmetičnega zaporedja morda ne bomo mogli dvigniti iz $\FF_p$ v $\ZZ$. Tej težavi se lahko izognemo tako, da izberemo praštevilo $p$ z lastnostjo $p > 2n$. Ni se težko prepričati, da v tem primeru vsako aritmetično zaporedje s $3$ členi v $\{ 1, 2, \dots, n \} \subseteq \FF_p$ lahko dvignemo do aritmetičnega zaporedja v $\{1,2,\dots,n\}$. Poleg tega želimo, da se gostota množice $A$ pri projekciji iz $\{1,2,\dots,n \}$ v $\FF_p$ ne spremeni preveč, zato praštevilo $p$ ne sme biti preveliko. Optimalna izbira bo torej praštevilo $p$ z lastnostjo $2n < p < 4n$, taka izbira pa tudi vselej obstaja po Bertrandovem postulatu.
+
+Dogajanje smo na ta način prestavili v končno abelovo grupo $\FF_p$. V njej opazujemo množico $A \subseteq \FF_p$, ki je gostote $\delta$. Dokazati želimo, da za dovolj velik $p$ obstajajo v $A$ aritmetična zaporedja dolžine $3$, če je le $\delta > C/\log \log p$ za neko konstanto $C$. 
+
+\subsection{Harmonična analiza}
+
+Rothov izrek v $\FF_p$ napadimo z močnimi orodji teorije upodobitev grupe $\FF_p$. Problem bomo najprej izrazili v prostoru funkcij $\fun(\FF_p, \CC)$. Naj bo $1_A$ karakteristična funkcija množice $A$. Vsako aritmetično zaporedje dolžine $3$ je oblike $x,z,y$, pri čemer je $z-x = y-z$, kar je enakovredno $x+y=2z$. Števila $x$, $y$ in $(x+y)/2$ morajo torej pripadati množici $A$. Število aritmetičnih zaporedij dolžine $3$ v $A$ lahko zato izrazimo kot
+\[
+    \sum_{x,y,z \in \FF_p : x+y=2z} 1_A(x) 1_A(y) 1_A(z)
+    = \sum_{z \in \FF_p} \left( 1_A * 1_A \right)(z) 1_A(z/2)
+\]
+Naj bo $1_{2A}(z) = 1_A(z/2)$. Zadnjo vsoto prepoznamo kot skalarni produkt
+\[
+    p \cdot \langle 1_A * 1_A, 1_{2A} \rangle,
+\]
+kar lahko s Parsevalovim izrekom razvijemo kot
+\[
+    \frac{1}{p} \sum_{\chi \in \Irr(\FF_p)} \widehat{1_A*1_A}(\chi) \overline{\widehat{1_{2A}}(\chi)}.
+\]
+Trikrat globoko vdihnimo in premislimo vsako zadevo posebej. 
+
+\begin{enumerate}
+\item Nerazcepne upodobitve oziroma karakterje grupe $\FF_p$ eksplicitno poznamo, enaki so
+\[
+    \chi_j \colon \FF_p \to \CC^*, \quad
+    x \mapsto \zeta^{j x}
+\]
+za $j \in \FF_p$, kjer je $\zeta = e^{2 \pi i/p}$. 
+
+\item Povezavo med konvolucijo in Fourierovo transformacijo smo videli že pri spletičnah. Dokazali smo, da vse endospletične regularne upodobitve izhajajo iz uporabe Fourierove transformacije. Te lastnosti smo kasneje uporabili tudi pri simetrični grupi. Naj bo zdaj $G$ poljubna grupa in $F$ polje. Naj bosta $f_1, f_2 \in \fun(G,F)$ funkciji in $\rho$ upodobitev grupe $G$. Kompozicija Fourierovih transformacij $\widehat{f_1}(\rho) \cdot \widehat{f_2}(\rho)$ je enaka
 \[
     \sum_{g_1, g_2 \in G} f_1(g_1) f_2(g_2) \rho(g_1^{-1} g_2^{-1}) =
-    \sum_{g \in G} \left( \sum_{g_1, g_2 \in G \colon g_2 g_1 = g} f_2(g_2) f_1(g_1)  \right) \rho(g^{-1}).
-\]
-Člen v notranji vsoti je {\definicija konvolucija} funkcij $f_2$ in $f_1$, se pravi
-\[
-    (f_2 * f_1)(g) = \sum_{g_1, g_2 \in G \colon g_2 g_1 = g} f_2(g_2) f_1(g_1).
+    \sum_{g \in G} (f_2 * f_1)(g) \rho(g^{-1}).
 \]
 Torej velja
 \[
@@ -3107,6 +3158,29 @@ Torej velja
     \widehat{f_2 * f_1}(\rho)
 \]
 in Fourierova transformacija pretvarja konvolucijo funkcij v produkt linearnih preslikav, pri čemer moramo biti pozorni na vrstni red operacij zaradi morebitne nekomutativnosti grupe.
+
+\item Fourierova transformacija funkcije $1_{2A}$ v $\chi$ je enaka
+\[
+    \widehat{1_{2A}}(\chi) = \sum_{g \in \FF_p} 1_{2A}(g) \chi(-g)
+    = \sum_{x \in \FF_p} 1_A(x) \chi(-2x)
+    = \widehat{1_A}(\chi^2).
+\]
+\end{enumerate}
+
+Število iskanih aritmetičnih zaporedij je zato enako
+\[
+    \frac{1}{p} \sum_{j \in \FF_p} \widehat{1_A}(\chi_j)^2 \overline{\widehat{1_A}(\chi_j^2)}
+    = \frac{1}{p} \sum_{j \in \FF_p} \widehat{1_A}(\chi_j)^2 \widehat{1_A}(\chi_{-2j})
+\]
+Izoliramo prispevek trivialne upodobitve. Pri $j = 0$ dobimo $\widehat{1_A}(\chi_0) = \widehat{1_A}(\11) = |A|$, zato je zadnja vsota enaka
+\[
+    \frac{|A|^3}{p} +  \frac{1}{p} \sum_{j \in \FF_p^*} \widehat{1_A}(\chi_j)^2 \widehat{1_A}(\chi_{-2j})
+\]
+
+\todo[inline]{Gowers: Roth kot primer za abelove grupe (omeni Bloom etc sodobne rezultate)}
+
+
+
 
 \section{Podmnožice brez produktov}
 
