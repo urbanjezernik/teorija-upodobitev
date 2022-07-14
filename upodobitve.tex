@@ -3107,7 +3107,9 @@ Dokaz tega izreka je kombinatoričen in tehnično precej zahteven. Mi si bomo og
 Za neko konstanto $C$ in za vse dovolj velike $n \in \NN$ velja, da vsaka podmnožica $A \subseteq \{ 1, 2, \dots, n \}$ gostote vsaj $C/\log \log n$ vsebuje aritmetično zaporedje dolžine $3$.
 \end{izrek}
 
-\subsection{Projekcija v $\FF_p$}
+\subsection{Harmonična analiza}
+
+\subsubsection{Projekcija v $\FF_p$}
 
 Rothov izrek se sicer tiče podmnožice celih števil, ampak ker to množico filtriramo s podmnožicami $\{1,2,\dots,n\}$, lahko izberemo neko praštevilo $p \geq n$ in dogajanje opazujemo v projekciji na kvocient $\ZZ/p\ZZ = \FF_p$. Pri tem moramo biti nekoliko previdni, saj so aritmetična zaporedja v $\FF_p$ lahko nekoliko nenavadna.
 
@@ -3122,7 +3124,7 @@ V $\FF_p$ tvori množica $\{ 0, 1, (p+1)/2 \}$ aritmetično zaporedje. Res, če 
 
 Dogajanje smo na ta način prestavili v končno abelovo grupo $\FF_p$. V njej opazujemo množico $A \subseteq \FF_p$, ki je gostote $\delta$. Dokazati želimo, da za dovolj velik $p$ obstajajo v $A$ aritmetična zaporedja dolžine $3$, če je le $\delta > C/\log \log p$ za neko konstanto $C$. 
 
-\subsection{Harmonična analiza}
+\subsubsection{Izražanje problema v jeziku upodobitev}
 
 Rothov izrek v $\FF_p$ napadimo z močnimi orodji teorije upodobitev grupe $\FF_p$. Problem bomo najprej izrazili v prostoru funkcij $\fun(\FF_p, \CC)$. Naj bo $1_A$ karakteristična funkcija množice $A$. Vsako aritmetično zaporedje dolžine $3$ je oblike $x,z,y$, pri čemer je $z-x = y-z$, kar je enakovredno $x+y=2z$. Števila $x$, $y$ in $(x+y)/2$ morajo torej pripadati množici $A$. Število aritmetičnih zaporedij dolžine $3$ v $A$ lahko zato izrazimo kot
 \[
@@ -3173,7 +3175,7 @@ in Fourierova transformacija pretvarja konvolucijo funkcij v produkt linearnih p
     = \frac{1}{p} \sum_{j \in \FF_p} \widehat{1_A}(\chi_j)^2 \widehat{1_A}(\chi_{-2j})
 \]
 
-\subsection{Glavni del in prispevki netrivialnih karakterjev}
+\subsubsection{Glavni del in prispevki netrivialnih karakterjev}
 
 Izolirajmo prispevek trivialne upodobitve. Velja $\widehat{1_A}(\chi_0) = \widehat{1_A}(\11) = |A|$, zato je število aritmetičnih zaporedij dolžine $3$ v $A$ enako
 \[
@@ -3216,7 +3218,7 @@ Kadar je Fourierova transformacija $1_A$ v vseh netrivialnih karakterjih strogo 
 \]
 pa harmonična analiza odpove. V tem primeru moramo podrobneje raziskati pomen velikega Fourierovega koeficienta.
 
-\subsection{Večanje gostote}
+\subsubsection{Večanje gostote}
 
 Predpostavimo, da je $|\widehat{1_A}(\chi_j)| \geq p \delta^2$ za nek $j \in \FF_p^*$. Preden nadaljujemo, bomo funkcijo $1_A$ projicirali na podprostor funkcij z ničelnim povprečjem. Naj bo $f = 1_A - \delta \in \fun(\FF_p, \CC)$. Velja
 \[
@@ -3273,13 +3275,15 @@ oziroma ekvivalentno
 \]
 Množica $A$ ima torej v aritmetičnem zaporedju $P_i$ gostoto za $\frac{c}{2} \delta^2$ večjo kot v $\FF_p$.
 
-\subsection{Iteracija}
+\subsubsection{Iteracija}
 
 Povzemimo. Če množica $A$ gostote $\delta$ nima aritmetičnih zaporedij dolžine $3$, potem smo našli aritmetično zaporedje $P_i$, v katerem ima $A$ gostoto vsaj $\delta + \frac{c}{2} \delta^2$. Ta postopek zdaj iteriramo. Če množica $A \cap P_i$ nima aritmetičnih zaporedij dolžine $3$, potem najdemo aritmetično zaporedje dolžine med $c\sqrt{|P_i|}$ in $(1-c)\sqrt{|P_i}$, v katerem ima $A$ gostoto vsaj $\delta + 2 \frac{c}{2} \delta^2$, in tako dalje. Ker gostota na nobeni točki ne more preseči vrednosti $1$, se ta postopek gotovo ustavi po končno mnogo korakih. Na tej točki najdemo aritmetično zaporedje dolžine $3$ v $A$, če je le velikost množice $P_i$ do te točke dovolj velika. Iz podrobne analize večanja gostote in spreminjaja velikosti množic $P_i$ se da izpeljati,\footnote{Glej {\literatura (Peluse 2022)}.} da ta argument res deluje, če je le $\delta \geq C/\log \log p$ za neko konstanto $C$. S tem je Rothov izrek dokazan.
 
 \subsection{Onkraj Rothovega izreka}
 
-Mnogo dela po Rothovem izreku je bilo posvečenega izboljšanju meje o gostoti, ki še zagotovi obstoj aritmetičnih zaporedij dolžine $3$. Večina izboljšav spodnje meje je s sabo prinesla nove ideje, uporabne tudi za reševanje kakšnih drugih problemov. Najsodobnejši rezultat v zvezi s tem je \href{https://www.quantamagazine.org/landmark-math-proof-clears-hurdle-in-top-erdos-conjecture-20200803/}{(Bloom-Sisask 2020)}, kjer avtorja dokažeta, da obstajata konstanti $C,c$, tako da ima vsaka množica $A \subseteq \{ 1, 2, \dots, n \}$ gostote vsaj $C / (\log n)^{1 + c}$ aritmetično zaporedje dolžine $3$. Te meja se torej znebi dvojnega logaritma in uvede minimalen eksponent k logaritmu, zato je bistveno manjša restrikcija na gostoto. Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiševa je število praštevil do $n$ vsaj $C n / \log n$, zato imajo praštevila v $\{1,2,\dots,n\}$ gostoto vsaj $C / \log n$ in na njih lahko apliciramo posplošeni Rothov izrek. Ker lahko vselej tudi izpustimo prvih nekaj praštevil, torej sklepamo, da množica praštevil vsebuje neskončno mnogo aritmetičnih zaporedij dolžine $3$. Poudarimo, da smo ta rezultat izpeljali zgolj zaradi same gostote praštevil in ne zaradi kakršne koli druge njihove lastnosti.
+Mnogo dela po Rothovem izreku je bilo posvečenega izboljšanju meje o gostoti, ki še zagotovi obstoj aritmetičnih zaporedij dolžine $3$. Večina izboljšav spodnje meje je s sabo prinesla nove ideje, uporabne tudi za reševanje kakšnih drugih problemov. Najsodobnejši rezultat v zvezi s tem je prebojen članek \href{https://www.quantamagazine.org/landmark-math-proof-clears-hurdle-in-top-erdos-conjecture-20200803/}{(Bloom-Sisask 2020)}, kjer avtorja dokažeta, da obstajata konstanti $C,c$, tako da ima vsaka množica $A \subseteq \{ 1, 2, \dots, n \}$ gostote vsaj $C / (\log n)^{1 + c}$ aritmetično zaporedje dolžine $3$. Te meja se torej znebi dvojnega logaritma in uvede minimalen eksponent k logaritmu, zato je bistveno manjša restrikcija na gostoto. 
+
+Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiševa je število praštevil do $n$ vsaj $C n / \log n$, zato imajo praštevila v $\{1,2,\dots,n\}$ gostoto vsaj $C / \log n$ in na njih lahko apliciramo posplošeni Rothov izrek. Ker lahko vselej tudi izpustimo prvih nekaj praštevil, torej sklepamo, da množica praštevil vsebuje neskončno mnogo aritmetičnih zaporedij dolžine $3$. Poudarimo konceptualno pomembno dejstvo, da smo ta rezultat izpeljali zgolj zaradi same gostote praštevil in ne zaradi kakršne koli druge njihove lastnosti. Nenazadnje je slogan izvirnega Rothovega izreka ta, da lahko najdemo v vsaki dovolj gosti množici strukturo.
 
 \begin{odprtproblem}
 Ali je mogoče z ustrezno posplošitvijo Rothovega izreka dokazati, da praštevila vsebujejo aritmetična zaporedja dolžine $k$ za vsak $k \geq 3$? Obstoj takih zaporedij je sicer znan iz \href{https://en.wikipedia.org/wiki/Green–Tao_theorem}{(Green-Tao 2004)}, ki temelji na razširitvi Szemerédijevega izreka, a ne v smeri nižanja meje gostote, temveč v uporabi izreka na specifičnih redkih podmnožicah.
