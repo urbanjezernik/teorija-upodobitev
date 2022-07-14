@@ -271,7 +271,6 @@
 \item {\literatura C. J. Bushnell, G. Henniart, {\em The Local Langlands Conjecture for $\GL(2)$}, Springer Grundlehren der mathematischen Wissenschaften \textbf{335}, 2006.}
 \item {\literatura W. T. Gowers, {\em Generalizations of Fourier analysis, and how to apply them},  Bulletin of the American Mathematical Society \textbf{54}, 1-44 (2017).}
 \item {\literatura S. Eberhard, {\em Product mixing in the alternating group}, Discrete Analysis, 2-18 (2016).}
-\item {\literatura S. Peluse, {\em Recent progress on bounds for sets with no three terms in arithmetic progression}, Séminaire BOURBAKI, 74e année, 2021-2022, no 1196.}
 \end{itemize}
 
 \chapter{Temelji teorije upodobitev}
@@ -2340,6 +2339,9 @@ Obravnavajmo modularne upodobitve nad $\FF_p$, kjer je $p \leq n$. Naj bo $\lamb
 
 Ta problem je razrešen le za razčlenitve $\lambda$ z največ dvema deloma, torej s $k \leq 2$. Za $k = 3$ sodobna bilijardna domneva {\literatura \href{https://arxiv.org/pdf/1703.05898.pdf}{(Lusztig-Williamson 2018)}} predvideva, da se te večkratnosti obnašajo po zakonu nekega zakompliciranega \href{https://www.youtube.com/watch?v=Ru0Zys1Vvq4}{dinamičnega sistema}.
 
+\todo{Dodaj Fulton-Harris str. 61 o tem, kaj se zgodi, ko te upodobitve zožimo na $A_n$.}
+
+
 \subsection{Vrednosti karakterjev}
 
 Premislili smo že, da so vsi Spechtovi moduli definirani nad $\ZZ$, zato so vrednosti karakterjev simetrične grupe vselej cela števila. Poznamo pa celo dokaj preprost način, kako lahko eksplicitno določimo vse vrednosti karakterjev nerazcepnih upodobitev. Izrekli ga bomo v jeziku polinomskega kolobarja $\CC[\mathbf{x}] = \CC[x_1, x_2, \dots, x_k]$. Potrebovali bomo nekaj posebnih polinomov iz tega kolobarja, in sicer {\definicija diskriminanto}
@@ -3277,7 +3279,7 @@ Množica $A$ ima torej v aritmetičnem zaporedju $P_i$ gostoto za $\frac{c}{2} \
 
 \subsubsection{Iteracija}
 
-Povzemimo. Če množica $A$ gostote $\delta$ nima aritmetičnih zaporedij dolžine $3$, potem smo našli aritmetično zaporedje $P_i$, v katerem ima $A$ gostoto vsaj $\delta + \frac{c}{2} \delta^2$. Ta postopek zdaj iteriramo. Če množica $A \cap P_i$ nima aritmetičnih zaporedij dolžine $3$, potem najdemo aritmetično zaporedje dolžine med $c\sqrt{|P_i|}$ in $(1-c)\sqrt{|P_i}$, v katerem ima $A$ gostoto vsaj $\delta + 2 \frac{c}{2} \delta^2$, in tako dalje. Ker gostota na nobeni točki ne more preseči vrednosti $1$, se ta postopek gotovo ustavi po končno mnogo korakih. Na tej točki najdemo aritmetično zaporedje dolžine $3$ v $A$, če je le velikost množice $P_i$ do te točke dovolj velika. Iz podrobne analize večanja gostote in spreminjaja velikosti množic $P_i$ se da izpeljati,\footnote{Glej {\literatura (Peluse 2022)}.} da ta argument res deluje, če je le $\delta \geq C/\log \log p$ za neko konstanto $C$. S tem je Rothov izrek dokazan.
+Povzemimo. Če množica $A$ gostote $\delta$ nima aritmetičnih zaporedij dolžine $3$, potem smo našli aritmetično zaporedje $P_i$, v katerem ima $A$ gostoto vsaj $\delta + \frac{c}{2} \delta^2$. Ta postopek zdaj iteriramo. Če množica $A \cap P_i$ nima aritmetičnih zaporedij dolžine $3$, potem najdemo aritmetično zaporedje dolžine med $c\sqrt{|P_i|}$ in $(1-c)\sqrt{|P_i}$, v katerem ima $A$ gostoto vsaj $\delta + 2 \frac{c}{2} \delta^2$, in tako dalje. Ker gostota na nobeni točki ne more preseči vrednosti $1$, se ta postopek gotovo ustavi po končno mnogo korakih. Na tej točki najdemo aritmetično zaporedje dolžine $3$ v $A$, če je le velikost množice $P_i$ do te točke dovolj velika. Iz podrobne analize večanja gostote in spreminjaja velikosti množic $P_i$ se da izpeljati,\footnote{Glej \href{https://arxiv.org/pdf/2206.10037.pdf}{(Peluse 2022)}.} da ta argument res deluje, če je le $\delta \geq C/\log \log p$ za neko konstanto $C$. S tem je Rothov izrek dokazan.
 
 \subsection{Onkraj Rothovega izreka}
 
@@ -3291,37 +3293,45 @@ Ali je mogoče z ustrezno posplošitvijo Rothovega izreka dokazati, da praštevi
 
 \section{Podmnožice brez produktov}
 
-\todo[inline]{Gowers kot nekomutativna posplošitev (omeni uporabo v Babai conjecture, Helfgott), dokaz kot Eberhard}
+Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je podgrupa, če in samo če je zaprta za množenje, se pravi $A \cdot A \subseteq A$. Skrajno diametralno tej strukturi se znajdemo, če predpostavimo, da produkt \emph{nobenih} dveh elementov iz množice $A$ ne pripada $A$, se pravi $A \cdot A \cap A = \emptyset$. Z drugimi besedami, enačba $xy = z$ v množici $A$ nima rešitev. V tem primeru rečemo, da je množica $A$ {\definicija brez produktov}. Če smo v teoriji grup malodane obsedeni s strukturiranimi množicami, nas mora vsaj malo tudi zanimati tudi druga skrajnost. 
 
-Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je podgrupa, če in samo če je zaprta za množenje, se pravi $A \cdot A \subseteq A$. Skrajno diametralno tej strukturi se znajdemo, če predpostavimo, da produkt \emph{nobenih} dveh elementov iz množice $A$ ne pripada $A$, se pravi $A \cdot A \cap A = \emptyset$. V tem primeru rečemo, da je množica $A$ {\definicija brez produktov}. Če smo v teoriji grup malodane obsedeni s strukturiranimi množicami, nas mora vsaj malo tudi zanimati tudi druga skrajnost. Kadar množica $A$ vsebuje kakšno podgrupo, seveda \emph{ni} brez produktov, zato se morajo take množice čim bolj izogniti podgrupam. Osnovno vprašanje v zvezi z množicami brez produktov je, kako velike podmnožice brez produktov dana grupa vsebuje. 
+Kadar množica $A$ vsebuje kakšno podgrupo, seveda \emph{ni} brez produktov, zato se morajo take množice čim bolj izogniti podgrupam. Osnovno vprašanje v zvezi z množicami brez produktov je, kako velike podmnožice brez produktov dana grupa vsebuje. Za začetek si oglejmo nekaj preprostih zgledov.
 
-\todo{Dodaj zgled iz Eberhard (one-sided mixing) o množici brez produktov v $S_n$.}
+\begin{zgled} \leavevmode
+\begin{itemize}
+\item Naj bo $G = \ZZ/n\ZZ$ in $A$ neka njena podmnožica. Množica $A$ je brez produktov, če in samo če enačba $x+y=z$ nima rešitve v $A$. To vprašanje je ravno obratno sorodni lastnosti, ki smo jo opazovali v prejšnjem razdelku. Tam smo reševali le malo drugačno enačbo $x+y=2z$ in dokazali, da ima vselej rešitve v podmnožicah pozitivne gostote. Zanimovo je, da je situacija precej drugačna za enačbo $x+y = z$.\footnote{Lahko bi naredili sicer enak razmislek kot v dokazu Rothovega izreka, a nam od tiste točke, ko harmonična analiza odpove, ne bi obstoj aritmetičnih zaporedij $P_i$ koristil za reševanje enačbe $x+y=z$.} Za množico $A$ lahko vzamemo na primer vsa števila v $\ZZ/n\ZZ$, ki so strogo med $\frac{1}{3}n$ in $\frac{2}{3}n$. Ta množica je jasno brez produktov in je gostote približno $\frac{1}{3}$ v $\ZZ/n\ZZ$ za velike vrednosti $n$. 
 
-\begin{lema}
-Naj bo $G$ končna grupa in $\conclass_1$, $\conclass_2$ konjugiranostna razreda v $G$. Za vsako nerazcepno kompleksno upodobitev $\pi$ na prostoru $V$ velja
-\[
-    \widehat{1_{\conclass_1} * 1_{\conclass_2}}(\pi) =
-    |\conclass_1| \cdot |\conclass_2| \cdot \frac{\overline{\chi_{\pi}(\conclass_1)} \cdot \overline{\chi_{\pi}(\conclass_2)}}{\chi_{\pi}(1)^2} \cdot {\textstyle \id_V}.
-\]
-\end{lema}
-\begin{dokaz}
-Fourierova transformacija konvolucije je produkt Fourierovih transformacij, ki jih za dani karakteristični funkciji ni težko izračunati po lemi o Fourierovi transformaciji razredne funkcije.
-\end{dokaz}
+To konstrukcijo lahko posplošimo na poljubno končno abelovo grupo. Ob tem se ni težko prepričati, da vselej obstaja podmnožica brez produktov gostote vsaj $\frac{2}{7}$.
 
-\begin{trditev}
-Naj bo $G$ končna grupa in $\conclass_1$, $\conclass_2$ konjugiranostna razreda v $G$. Velja
-\[
-    1_{\conclass_1} * 1_{\conclass_2} = \frac{|\conclass_1| \cdot |\conclass_2|}{|G|} \sum_{\pi \in \Irr(G)} \frac{\overline{\chi_{\pi}(\conclass_1)} \cdot \overline{\chi_{\pi}(\conclass_2)}}{\chi_{\pi}(1)} \chi_{\pi}.
-\]
-\end{trditev}
-\begin{dokaz}
-Uporabimo Fourierovo inverzijo za funkcijo $1_{\conclass_1} * 1_{\conclass_2}$. Za vsak $g \in G$ dobimo
-\[
-    \left( 1_{\conclass_1} * 1_{\conclass_2} \right) (g) 
-    = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr \left( \widehat{1_{\conclass_1} * 1_{\conclass_2}}(\pi) \cdot \pi(g) \right).
-\]
-Trditev zdaj sledi iz zadnje leme.
-\end{dokaz}
+\item Simetrična grupa $S_n$ vsebuje ogromno množico brez produktov, in sicer množico vseh lihih permutacij $S_n \backslash A_n$. Produkt dveh lihi permutacij je soda permutacija, zato je ta množica res brez produktov. Njena gostota je $\frac12$.
+\end{itemize}
+\end{zgled}
+
+Mnogo težje je najti podmnožice brez produktov pozitivne gostote v alternirajoči grupi $A_n$ ali linearni grupi $\PSL_2(\FF_p)$. Dokazali bomo, da to težavo lahko pojasnimo s teorijo updobitev.
+
+\begin{izrek}[Gowers 2008]
+Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne nerazcepne kompleksne upodobitve $G$. Tedaj je vsaka podmnožica brez produktov v $G$ gostote kvečjemu $m^{-1/3}$.
+\end{izrek}
+
+\begin{zgled} \leavevmode
+\begin{itemize}
+    \item Iz rezultatov o upodobitvah simetričnih grup (natančneje, formule o kljukah) sledi, do ima $S_n$ dve nerazcepni upodobitvi stopnje $1$ (to sta $\11$ in $\sgn$) in dve nerazcepni upodobitvi stopnje $n-1$ (to sta $\rho$ in $\rho \otimes \sgn$), vse ostale nerazcepne upodobitve pa so višje stopnje. Oba para upodobitev se zožita v izomorfno nerazcepno upodobitev na $A_n$. Velja torej $m = n-1$. Po izreku v $A_n$ zatorej \emph{ni} podmnožic brez produktov pozitivne gostote, ko gre $n$ čez vse meje.
+    
+    \item Opazujmo grupo $\PSL_2(\FF_p)$. Iz njene tabele karakterjev razberemo, da zanjo velja $m = (p-1)/2$. Po izreku tudi ta grupa nima podmnožic brez produktov pozitivne gostote, ko gre $p$ čez vse meje. Še več, največja možna gostota, ki jo dopušča izrek, je velikostnega reda $m^{-1/3} \sim p^{-1/3} \sim |\PSL_2(\FF_p)|^{-1/3}$, kar je celo mnogo manjše od zgornje meje, ki smo jo videli v primeru alternirajoče grupe.
+\end{itemize}
+\end{zgled}
+
+\todo{Dokaz Gowers iz Eberhard.}
+
+\todo{Konstrukcija za $A_n$, gostota $n^{-1/2}$, optimalno 2022.}
+
+\begin{odprtproblem}
+Kolikšna je gostota največje množice brez produktov v $\PSL_2(\FF_p)$?
+\end{odprtproblem}
+
+\todo{Omeni aplikacijo Pyber-Nikolov za Babaijevo domnevo, produktni izrek.}
+
+
 
 \section{Prepoznavanje komutatorjev}
 
@@ -3370,7 +3380,29 @@ zato je
 \[
     N(g) = \sum_{\conclass} \frac{|G|}{|\conclass|} \cdot \left( 1_{\conclass^{-1}} * 1_{\conclass} \right) (g).
 \]
-Konvolucijo lahko po Fourierovi inverziji razvijemo po karakterjih in dobimo
+Konvolucijo lahko po Fourierovi inverziji razvijemo po karakterjih. Ker gre za karakteristične funkcije konjugiranostnih razredov, je ta razvoj še posebej preprost.
+
+\begin{trditev}
+Naj bo $G$ končna grupa in $\conclass_1$, $\conclass_2$ konjugiranostna razreda v $G$. Velja
+    \[
+        1_{\conclass_1} * 1_{\conclass_2} = \frac{|\conclass_1| \cdot |\conclass_2|}{|G|} \sum_{\pi \in \Irr(G)} \frac{\overline{\chi_{\pi}(\conclass_1)} \cdot \overline{\chi_{\pi}(\conclass_2)}}{\chi_{\pi}(1)} \chi_{\pi}.
+    \]
+\end{trditev}
+\begin{dokaz}
+    Uporabimo Fourierovo inverzijo za funkcijo $1_{\conclass_1} * 1_{\conclass_2}$. Za vsak $g \in G$ dobimo
+    \[
+        \left( 1_{\conclass_1} * 1_{\conclass_2} \right) (g) 
+        = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr \left( \widehat{1_{\conclass_1} * 1_{\conclass_2}}(\pi) \cdot \pi(g) \right).
+    \]
+    Fourierova transformacija konvolucije je produkt Fourierovih transformacij, ki jih za dani karakteristični funkciji ni težko izračunati po lemi o Fourierovi transformaciji razredne funkcije. Za vsako nerazcepno kompleksno upodobitev $\pi$ na prostoru $V$ velja
+    \[
+        \widehat{1_{\conclass_1} * 1_{\conclass_2}}(\pi) =
+        |\conclass_1| \cdot |\conclass_2| \cdot \frac{\overline{\chi_{\pi}(\conclass_1)} \cdot \overline{\chi_{\pi}(\conclass_2)}}{\chi_{\pi}(1)^2} \cdot {\textstyle \id_V}.
+    \]
+    Trditev je s tem dokazana.
+\end{dokaz}
+
+Trditev uporabimo za razvoj funkcije $N$ kot
 \[
     N(g) = \sum_{\conclass} \frac{|G|}{|\conclass|} \cdot \frac{|\conclass|^2}{|G|} \sum_{\pi \in \Irr(G)} \frac{|\chi_{\pi}(\conclass)|^2}{\chi_{\pi}(1)} \chi_{\pi}(g)
     = \sum_{\pi \in \Irr(G)} \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)} \sum_{\conclass} |\conclass| \cdot |\chi_{\pi}(\conclass)|^2.
@@ -3434,7 +3466,7 @@ Nedavno razrešena Orejeva domneva iz leta 1951 je predvidevala, da je vsak elem
 
 \section{Slučajni sprehodi}
 
-\todo{Fourier diagonalizira matriko sosednosti (Diaconis, str. 48), kakšen konkreten primer: .}
+\todo{RW na $\GL_2(\FF_p)$ konjugiranostnem razredu, zapiši matriko sosednosti, diagonalizira se z lastnimi vrednostmi, ki jih preberemo iz tabele karakterjev. Analiziraj limito.}
 
 
 \chapter{Upodobitve linearnih grup}
