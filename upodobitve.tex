@@ -3317,11 +3317,48 @@ Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne nerazcepne
 \begin{itemize}
     \item Iz rezultatov o upodobitvah simetričnih grup (natančneje, formule o kljukah) sledi, do ima $S_n$ dve nerazcepni upodobitvi stopnje $1$ (to sta $\11$ in $\sgn$) in dve nerazcepni upodobitvi stopnje $n-1$ (to sta $\rho$ in $\rho \otimes \sgn$), vse ostale nerazcepne upodobitve pa so višje stopnje. Oba para upodobitev se zožita v izomorfno nerazcepno upodobitev na $A_n$. Velja torej $m = n-1$. Po izreku v $A_n$ zatorej \emph{ni} podmnožic brez produktov pozitivne gostote, ko gre $n$ čez vse meje.
     
-    \item Opazujmo grupo $\PSL_2(\FF_p)$. Iz njene tabele karakterjev razberemo, da zanjo velja $m = (p-1)/2$. Po izreku tudi ta grupa nima podmnožic brez produktov pozitivne gostote, ko gre $p$ čez vse meje. Še več, največja možna gostota, ki jo dopušča izrek, je velikostnega reda $m^{-1/3} \sim p^{-1/3} \sim |\PSL_2(\FF_p)|^{-1/3}$, kar je celo mnogo manjše od zgornje meje, ki smo jo videli v primeru alternirajoče grupe.
+    \item Opazujmo grupo $\PSL_2(\FF_p)$. Iz njene tabele karakterjev razberemo, da zanjo velja $m = (p-1)/2$. Po izreku tudi ta grupa nima podmnožic brez produktov pozitivne gostote, ko gre $p$ čez vse meje. Še več, največja možna gostota, ki jo dopušča izrek, je velikostnega reda $m^{-1/3} \sim p^{-1/3} \sim |\PSL_2(\FF_p)|^{-1/9}$, kar je celo mnogo manjše od zgornje meje, ki smo jo videli v primeru alternirajoče grupe.
 \end{itemize}
 \end{zgled}
 
-\todo{Dokaz Gowers iz Eberhard.}
+\begin{dokaz}[Dokaz Gowersovega izreka]
+Naj bo $A \subseteq G$ brez produktov gostote $\delta$. Število rešitev enačbe $xy = z$ v $A$ lahko izrazimo kot
+\[
+    \sum_{x,y,z \in G \colon xy = z} 1_A(x) 1_A(y) 1_A(z)
+    = \sum_{z \in G} (1_A * 1_A)(z) 1_A(z)
+    = |G| \cdot \langle 1_A * 1_A, 1_A \rangle.
+\]
+Ker je $A$ brez produktov, je torej $\langle 1_A * 1_A, 1_A \rangle = 0$. Po drugi strani lahko skalarni produkt razvijemo s Parsevalovo formulo in dobimo
+\[
+    0 = \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \cdot \langle \widehat{1_A}(\pi)^2, \widehat{1_A}(\pi) \rangle_{\HS}.
+\]
+Prispevek trivialne upodobitve je enak $\langle \widehat{1_A}(\11)^2, \widehat{1_A}(\11) \rangle_{\HS} = |A|^3$. Prispevke netrivialnih upodobitev lahko s trikotniško neenakostjo in Cauchy-Schwartzovo neenakostjo po absolutni vrednosti omejimo navzgor kot
+\[
+    \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) \left| \langle \widehat{1_A}(\pi)^2, \widehat{1_A}(\pi) \rangle_{\HS} \right|
+    \leq 
+    \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) || \widehat{1_A}(\pi) ||_{\HS}^3.
+\]
+V zadnji vsoti eno od norm omejimo z maksimumom, da dobimo zgornjo mejo
+\[
+    \max_{\11 \neq \pi \in \Irr(G)} || \widehat{1_A}(\pi) ||_{\HS} \cdot 
+    \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) || \widehat{1_A}(\pi) ||_{\HS}^2,
+\]
+Prvi člen lahko omejimo z neenakostjo
+\[
+    m \cdot \max_{\11 \neq \pi \in \Irr(G)} || \widehat{1_A}(\pi) ||^2_{\HS}
+    \leq \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) ||\widehat{1_A}(\pi)||_{\HS}^2 
+    \leq |G|^2 ||1_A||^2 = |A||G|
+\]
+in zadnjo neenakost lahko uporabimo tudi za omejitev drugega člena. S tem dobimo zgornjo mejo
+\[
+  \sqrt{\frac{|A||G|}{m}} \cdot |A||G| = m^{-1/2} \delta^{3/2} |G|^3
+\]
+za prispevke netrivialnih upodobitev. Ker je $A$ brez produktov, sklenemo
+\[
+    |A|^3 \leq m^{-1/2} \delta^{3/2} |G|^3,
+\]
+kar je ekvivalentno želeni neenakosti $\delta \leq m^{-1/3}$.
+\end{dokaz}
 
 \todo{Konstrukcija za $A_n$, gostota $n^{-1/2}$, optimalno 2022.}
 

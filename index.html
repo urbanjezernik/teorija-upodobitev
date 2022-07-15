@@ -60,7 +60,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 14. 07. 2022
+            Zadnja posodobitev: 15. 07. 2022
           </div>
 
           <div id="spinner" class="text-center">
@@ -7860,10 +7860,67 @@
             več, največja možna gostota, ki jo dopušča izrek, je
             velikostnega reda <span class="math inline">\(m^{-1/3} \sim
             p^{-1/3} \sim
-            |\mathop{\mathrm{PSL}}_2(\mathbf{F}_p)|^{-1/3}\)</span>, kar
+            |\mathop{\mathrm{PSL}}_2(\mathbf{F}_p)|^{-1/9}\)</span>, kar
             je celo mnogo manjše od zgornje meje, ki smo jo videli v
             primeru alternirajoče grupe.</p></li>
             </ul>
+            </div>
+            <div class="proof">
+            <p><em>Dokaz Gowersovega izreka.</em> Naj bo <span
+            class="math inline">\(A \subseteq G\)</span> brez produktov
+            gostote <span class="math inline">\(\delta\)</span>. Število
+            rešitev enačbe <span class="math inline">\(xy = z\)</span> v
+            <span class="math inline">\(A\)</span> lahko izrazimo kot
+            <span class="math display">\[\sum_{x,y,z \in G \colon xy =
+            z} 1_A(x) 1_A(y) 1_A(z)
+                = \sum_{z \in G} (1_A * 1_A)(z) 1_A(z)
+                = |G| \cdot \langle 1_A * 1_A, 1_A \rangle.\]</span> Ker
+            je <span class="math inline">\(A\)</span> brez produktov, je
+            torej <span class="math inline">\(\langle 1_A * 1_A, 1_A
+            \rangle = 0\)</span>. Po drugi strani lahko skalarni produkt
+            razvijemo s Parsevalovo formulo in dobimo <span
+            class="math display">\[0 = \sum_{\pi \in
+            \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1) \cdot \langle
+            \widehat{1_A}(\pi)^2, \widehat{1_A}(\pi)
+            \rangle_{\mathop{\mathrm{HS}}}.\]</span> Prispevek trivialne
+            upodobitve je enak <span class="math inline">\(\langle
+            \widehat{1_A}(\mathbf{1})^2, \widehat{1_A}(\mathbf{1})
+            \rangle_{\mathop{\mathrm{HS}}} = |A|^3\)</span>. Prispevke
+            netrivialnih upodobitev lahko s trikotniško neenakostjo in
+            Cauchy-Schwartzovo neenakostjo po absolutni vrednosti
+            omejimo navzgor kot <span
+            class="math display">\[\sum_{\mathbf{1} \neq \pi \in
+            \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1) \left| \langle
+            \widehat{1_A}(\pi)^2, \widehat{1_A}(\pi)
+            \rangle_{\mathop{\mathrm{HS}}} \right|
+                \leq
+                \sum_{\mathbf{1} \neq \pi \in \mathop{\mathrm{Irr}}(G)}
+            \chi_{\pi}(1) || \widehat{1_A}(\pi)
+            ||_{\mathop{\mathrm{HS}}}^3.\]</span> V zadnji vsoti eno od
+            norm omejimo z maksimumom, da dobimo zgornjo mejo <span
+            class="math display">\[\max_{\mathbf{1} \neq \pi \in
+            \mathop{\mathrm{Irr}}(G)} || \widehat{1_A}(\pi)
+            ||_{\mathop{\mathrm{HS}}} \cdot
+                \sum_{\mathbf{1} \neq \pi \in \mathop{\mathrm{Irr}}(G)}
+            \chi_{\pi}(1) || \widehat{1_A}(\pi)
+            ||_{\mathop{\mathrm{HS}}}^2,\]</span> Prvi člen lahko
+            omejimo z neenakostjo <span class="math display">\[m \cdot
+            \max_{\mathbf{1} \neq \pi \in \mathop{\mathrm{Irr}}(G)} ||
+            \widehat{1_A}(\pi) ||^2_{\mathop{\mathrm{HS}}}
+                \leq \sum_{\mathbf{1} \neq \pi \in
+            \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1)
+            ||\widehat{1_A}(\pi)||_{\mathop{\mathrm{HS}}}^2
+                \leq |G|^2 ||1_A||^2 = |A||G|\]</span> in zadnjo
+            neenakost lahko uporabimo tudi za omejitev drugega člena. S
+            tem dobimo zgornjo mejo <span
+            class="math display">\[\sqrt{\frac{|A||G|}{m}} \cdot |A||G|
+            = m^{-1/2} \delta^{3/2} |G|^3\]</span> za prispevke
+            netrivialnih upodobitev. Ker je <span
+            class="math inline">\(A\)</span> brez produktov, sklenemo
+            <span class="math display">\[|A|^3 \leq m^{-1/2}
+            \delta^{3/2} |G|^3,\]</span> kar je ekvivalentno želeni
+            neenakosti <span class="math inline">\(\delta \leq
+            m^{-1/3}\)</span>. ◻</p>
             </div>
             <div class="odprtproblem">
             <p><strong>Odprt problem 5.2</strong>. Kolikšna je gostota
