@@ -3317,9 +3317,9 @@ Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne nerazcepne
 
 \begin{zgled} \leavevmode
 \begin{itemize}
-    \item Iz rezultatov o upodobitvah simetričnih grup (natančneje, formule o kljukah) sledi, do ima $S_n$ dve nerazcepni upodobitvi stopnje $1$ (to sta $\11$ in $\sgn$) in dve nerazcepni upodobitvi stopnje $n-1$ (to sta $\rho$ in $\rho \otimes \sgn$), vse ostale nerazcepne upodobitve pa so višje stopnje. Oba para upodobitev se zožita v izomorfno nerazcepno upodobitev na $A_n$. Velja torej $m = n-1$. Po izreku v $A_n$ zatorej \emph{ni} podmnožic brez produktov pozitivne gostote, ko gre $n$ čez vse meje.
+    \item Iz rezultatov o upodobitvah simetričnih grup (natančneje, formule o kljukah) sledi, do ima $S_n$ dve nerazcepni upodobitvi stopnje $1$ (to sta $\11$ in $\sgn$) in dve nerazcepni upodobitvi stopnje $n-1$ (to sta $\rho$ in $\rho \otimes \sgn$), vse ostale nerazcepne upodobitve pa so višje stopnje. Oba para upodobitev se zožita v izomorfno nerazcepno upodobitev na $A_n$. Velja torej $m = n-1$. Po izreku v $A_n$ zatorej \emph{ni} podmnožic brez produktov pozitivne gostote, ko gre $n$ čez vse meje. Še več, največja možna gostota je velikostnega reda $m^{-1/3} \sim n^{-1/3}$.
 
-    \item Opazujmo grupo $\PSL_2(\FF_p)$. Iz njene tabele karakterjev razberemo, da zanjo velja $m = (p-1)/2$. Po izreku tudi ta grupa nima podmnožic brez produktov pozitivne gostote, ko gre $p$ čez vse meje. Še več, največja možna gostota, ki jo dopušča izrek, je velikostnega reda $m^{-1/3} \sim p^{-1/3} \sim |\PSL_2(\FF_p)|^{-1/9}$, kar je celo mnogo manjše od zgornje meje, ki smo jo videli v primeru alternirajoče grupe.
+    \item Opazujmo grupo $\PSL_2(\FF_p)$. Iz njene tabele karakterjev razberemo, da zanjo velja $m = (p-1)/2$. Po izreku tudi ta grupa nima podmnožic brez produktov pozitivne gostote, ko gre $p$ čez vse meje. Še več, največja možna gostota, ki jo dopušča izrek, je velikostnega reda $m^{-1/3} \sim p^{-1/3} \sim |\PSL_2(\FF_p)|^{-1/9}$, kar je celo mnogo manjše (relativno glede na velikost grupe) od zgornje meje, ki smo jo videli v primeru alternirajoče grupe.
 \end{itemize}
 \end{zgled}
 
@@ -3405,21 +3405,22 @@ S = \{ \sigma \in A_n \mid \sigma(1) \in T, \ \sigma(T) \cap T = \emptyset \}.
 Vsaka permutacija v $S \cdot S$ preslika $1$ v $T^c$, zato je $S \cap S \cdot S = \emptyset$ in množica $S$ je brez produktov. Njena gostota v $A_n$ je enaka
 \[
   \frac{1}{n!/2} \cdot t \cdot \binom{n-t}{t} t! \cdot (n-t-1)! \cdot \frac{1}{2}
-  = \frac{t (n-t)! (n-t-1)!}{n!(n-2t)!}  
+  = \frac{t (n-t)! (n-t-1)!}{n!(n-2t)!}.
 \]
-
-
-\todo{posploši za tranzitivne}
+S Stirlingovo aproksimacijo za $t = o(n)$ lahko zadnji izraz poenostavimo do 
+\[
+    \frac{t}{n} e^{O(t^2/n)}.
+\]
+Optimalno vrednost dosežemo z izbiro $t \sim n^{1/2}$, takrat je gostota množice $S$ v $A_n$ enaka $\sim n^{-1/2}$. 
 \end{zgled}
 
-\todo{Konstrukcija za $A_n$, gostota $n^{-1/2}$, optimalno 2022.}
+Gowersov izrek zagotavlja, da gostota množice brez produktov v $A_n$ ne more biti večja od $n^{-1/3}$. Po drugi strani pa imamo zgled podmnožice brez produktov gostote $n^{-1/2}$. Kateri, če sploh kateri, od teh mej je blizu resnični največji možni gostoti podmnožice brez produktov v $A_n$? To vprašanje je bilo razrešeno nedavno v \href{https://arxiv.org/abs/2205.15191}{(Keevash-Lifschitz-Minzer 2022)}, kjer avtorji dokažejo, da je konstrukcija v zadnjem zgledu v resnici optimalna: če je $A \subseteq A_n$ brez produktov največje možne moči, potem je $A$ ali $A^{-1}$ enaka eni od množic iz zadnjega zgleda.
+
+Konstrukcija Kedlaya, ki smo jo prikazali, je z nekoliko dodatnega truda\footnote{Definicija množice $S$ je enaka kot za primer $A_n$, dodaten trud je potreben le za oceno njene gostote.} posplošljiva na vse podgrupe $G \leq S_n$, ki delujejo tranzitivno na množici $\{ 1,2,\dots, n\}$. Vsaka grupa, ki tranzitivno deluje na množici $n$ točk, ima torej podmnožico brez produktov gostote $\sim n^{-1/2}$. V posebnem to velja za grupo $\PSL_2(\FF_p)$, ki deluje tranzitivno na projektivni premici $\PP^1(\FF_p)$ s $p+1$ točkami. Na ta način dobimo podmnožico v $\PSL_2(\FF_p)$ brez produktov gostote $\sim p^{-1/2}$. Gowersov izrek nam tukaj daje zgornjo mejo $\sim p^{-1/3}$ za gostoto množice brez produktov. V tem primeru optimalna ocena za gostoto ni znana.
 
 \begin{odprtproblem}
-Kolikšna je gostota največje množice brez produktov v $\PSL_2(\FF_p)$?
+Kolikšna je gostota največje množice brez produktov v $\PSL_2(\FF_p)$, ko gre $p$ čez vse meje?
 \end{odprtproblem}
-
-\todo{Omeni aplikacijo Pyber-Nikolov za Babaijevo domnevo, produktni izrek.}
-
 
 
 \section{Prepoznavanje komutatorjev}
