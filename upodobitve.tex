@@ -3293,6 +3293,8 @@ Ali je mogoče z ustrezno posplošitvijo Rothovega izreka dokazati, da praštevi
 
 \section{Podmnožice brez produktov}
 
+\subsection{Antipodgrupe}
+
 Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je podgrupa, če in samo če je zaprta za množenje, se pravi $A \cdot A \subseteq A$. Skrajno diametralno tej strukturi se znajdemo, če predpostavimo, da produkt \emph{nobenih} dveh elementov iz množice $A$ ne pripada $A$, se pravi $A \cdot A \cap A = \emptyset$. Z drugimi besedami, enačba $xy = z$ v množici $A$ nima rešitev. V tem primeru rečemo, da je množica $A$ {\definicija brez produktov}. Če smo v teoriji grup malodane obsedeni s strukturiranimi množicami, nas mora vsaj malo tudi zanimati tudi druga skrajnost. 
 
 Kadar množica $A$ vsebuje kakšno podgrupo, seveda \emph{ni} brez produktov, zato se morajo take množice čim bolj izogniti podgrupam. Osnovno vprašanje v zvezi z množicami brez produktov je, kako velike podmnožice brez produktov dana grupa vsebuje. Za začetek si oglejmo nekaj preprostih zgledov.
@@ -3323,6 +3325,8 @@ Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne nerazcepne
 \end{itemize}
 \end{zgled}
 
+\subsection{Harmonična analiza}
+
 Gowersov izrek bomo dokazali s pomočjo nekoliko močnejše trditve.
 
 \begin{trditev}
@@ -3336,9 +3340,7 @@ Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne nerazcepne
 \]
 \end{trditev}
 
-\begin{dokaz}[Dokaz Gowersovega izreka]
-Uporabimo trditev z $A=B$. Če je $A$ brez produktov in gostote $\alpha$, potem velja $\alpha^3 \leq m^{-1/2} \alpha^{3/2}$, kar je enakovredno $\alpha \leq m^{-1/3}$.
-\end{dokaz}
+Iz trditve hitro izpeljemo Gowersov izrek. Uporabimo jo z $A=B$. Če je $A$ brez produktov in gostote $\alpha$, potem velja $\alpha^3 \leq m^{-1/2} \alpha^{3/2}$, kar je enakovredno $\alpha \leq m^{-1/3}$.
 
 
 \begin{dokaz}[Dokaz trditve]
@@ -3395,6 +3397,8 @@ Naj bo $g \in G$ in naj bo $B = g A^{-1} \subseteq G$. Množici $A$ in $B$ sta o
 
 Ta lastnost velikih množic ima mnogo zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babijeve domeneve o premerih končnih enostavnih grup prek teorije približnih podgrup, kot je razloženo v \href{http://library.msri.org/books/Book61/files/15breu.pdf}{(Breuillard 2013)}.
 
+\subsection{Največja možna gostota}
+
 Z Gowersovo zgornjo mejo za dovoljeno gostoto množice brez produktov se seveda lahko vprašamo, kako optimalna je ta meja. Z drugimi besedami, konstruirati želimo čim večje podmnožice brez produktov. V grupah $A_n$ in $\PSL_2(\FF_p)$ te gotovo ne bodo pozitivne gostote, ko gredo moči grup čez vse meje.
 
 \begin{zgled}[\href{https://www.sciencedirect.com/science/article/pii/S0097316597927151}{Kedlaya 1997}]
@@ -3414,7 +3418,7 @@ S Stirlingovo aproksimacijo za $t = o(n)$ lahko zadnji izraz poenostavimo do
 Optimalno vrednost dosežemo z izbiro $t \sim n^{1/2}$, takrat je gostota množice $S$ v $A_n$ enaka $\sim n^{-1/2}$. 
 \end{zgled}
 
-Gowersov izrek zagotavlja, da gostota množice brez produktov v $A_n$ ne more biti večja od $n^{-1/3}$. Po drugi strani pa imamo zgled podmnožice brez produktov gostote $n^{-1/2}$. Kateri, če sploh kateri, od teh mej je blizu resnični največji možni gostoti podmnožice brez produktov v $A_n$? To vprašanje je bilo razrešeno nedavno v \href{https://arxiv.org/abs/2205.15191}{(Keevash-Lifschitz-Minzer 2022)}, kjer avtorji dokažejo, da je konstrukcija v zadnjem zgledu v resnici optimalna: če je $A \subseteq A_n$ brez produktov največje možne moči, potem je $A$ ali $A^{-1}$ enaka eni od množic iz zadnjega zgleda.
+Gowersov izrek zagotavlja, da gostota množice brez produktov v $A_n$ ne more biti večja od $n^{-1/3}$. Po drugi strani pa imamo zgled podmnožice brez produktov gostote $n^{-1/2}$. Kateri, če sploh kateri, od teh mej je blizu resnični največji možni gostoti podmnožice brez produktov v $A_n$? To vprašanje je bilo razrešeno nedavno v \href{https://arxiv.org/abs/2205.15191}{(Keevash-Lifschitz-Minzer 2022)}, kjer avtorji dokažejo, da je konstrukcija v zadnjem zgledu v resnici optimalna: če je $A \subseteq A_n$ brez produktov največje možne moči, potem je $A$ ali $A^{-1}$ enaka eni od množic iz zadnjega zgleda. Njihov dokaz temelji na ideji, ki smo jo videli v dokazu Rothovega izreka, in sicer bodisi s harmonično analizo dokažemo želeno bodisi ima indikatorska funkcija visoko korelacijo z določenimi nelinearnimi karakterji in je zaradi tega prisotna neka struktura.
 
 Konstrukcija Kedlaya, ki smo jo prikazali, je z nekoliko dodatnega truda\footnote{Definicija množice $S$ je enaka kot za primer $A_n$, dodaten trud je potreben le za oceno njene gostote.} posplošljiva na vse podgrupe $G \leq S_n$, ki delujejo tranzitivno na množici $\{ 1,2,\dots, n\}$. Vsaka grupa, ki tranzitivno deluje na množici $n$ točk, ima torej podmnožico brez produktov gostote $\sim n^{-1/2}$. V posebnem to velja za grupo $\PSL_2(\FF_p)$, ki deluje tranzitivno na projektivni premici $\PP^1(\FF_p)$ s $p+1$ točkami. Na ta način dobimo podmnožico v $\PSL_2(\FF_p)$ brez produktov gostote $\sim p^{-1/2}$. Gowersov izrek nam tukaj daje zgornjo mejo $\sim p^{-1/3}$ za gostoto množice brez produktov. V tem primeru optimalna ocena za gostoto ni znana.
 
@@ -3422,10 +3426,11 @@ Konstrukcija Kedlaya, ki smo jo prikazali, je z nekoliko dodatnega truda\footnot
 Kolikšna je gostota največje množice brez produktov v $\PSL_2(\FF_p)$, ko gre $p$ čez vse meje?
 \end{odprtproblem}
 
-
 \section{Prepoznavanje komutatorjev}
 
-Oglejmo si še en čisto nekomutativen problem, ki na prvi pogled nima veliko skupnega s teorijo upodobitev, nazadnje pa se izkaže, da ga lahko popolnoma razrešimo, če le poznamo tabelo karakterjev grupe. Izpeljava bo sledila Fourierovi inverziji konvolucij iz zadnjega razdelka.
+Oglejmo si še en čisto nekomutativen problem, ki na prvi pogled nima veliko skupnega s teorijo upodobitev, nazadnje pa se izkaže, da ga lahko popolnoma razrešimo, če le poznamo tabelo karakterjev grupe.
+
+\subsection{Množica komutatorjev}
 
 Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, ki so komutatorji\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$.} v $G$, se pravi
 \[
@@ -3447,9 +3452,23 @@ V luči zgleda je teoriji grup vsekakor v interesu, da bi razumela, kdaj dan ele
     N \colon G \to \NN_0, \quad
     g \mapsto |\{ (x,y) \in G \times G \mid g = [x,y] \}|.
 \]
-Funkcijo $N$ obravnavajmo kot element prostora $\fun(G,\CC)$. 
+Dokazali bomo naslednjo formulo za izračun funkcije $N$ s pomočjo teorije upodobitev.
 
-Vsako \emph{razredno} funkcijo razumemo s pomočjo močnih orodij teorije upodobitev. Ni se težko prepričati, da je $N$ razredna funkcija. Za vsak $z \in G$ namreč velja $[z x z^{-1}, z y z^{-1}] = z [x,y] z^{-1}$, torej vsak par $(x,y)$ z lastnostjo $[x,y] = g$ porodi par $(z x z^{-1}, z y z^{-1})$ z lastnostjo $[z x z^{-1}, z y z^{-1}] = z g z^{-1}$. S tem je $N(g) = N(z g z^{-1})$.
+\begin{izrek}[Frobenius]
+Naj bo $G$ končna grupa. Za vsak $g \in G$ velja
+\[
+    N(g) = |G| \cdot \sum_{\pi \in \Irr(G)} \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)}.
+\]
+\end{izrek}
+
+
+\subsection{Harmonična analiza}
+
+Funkcijo $N$ obravnavajmo kot element prostora $\fun(G,\CC)$. Ni se težko prepričati, da je $N$ razredna funkcija. Za vsak $z \in G$ namreč velja
+\[
+    [z x z^{-1}, z y z^{-1}] = z [x,y] z^{-1},
+\]
+torej vsak par $(x,y)$ z lastnostjo $[x,y] = g$ porodi par $(z x z^{-1}, z y z^{-1})$ z lastnostjo $[z x z^{-1}, z y z^{-1}] = z g z^{-1}$. S tem je $N(g) = N(z g z^{-1})$.
 
 Funkcijo $N$ bomo prepisali v malo bolj nenavadno obliko, ki pa nam bo dobro služila v nadaljevanju. Recimo, da za elementa $x,y \in G$ velja $[x,y] = g$. To enakost interpretiramo kot $x^{-1} \cdot y^{-1} x y = g$, torej je $g$ zapisan kot produkt elementa $x^{-1}$ in elementa, ki je konjugiran $x$. Vsakemu takemu paru $(x,y)$ lahko zato priredimo konjugiranostni razred $\conclass = x^G$ in elementa $a = x^{-1} \in \conclass^{-1}$ ter $b = y^{-1} x y \in \conclass$, za katera velja $a \cdot b = g$. S tem smo opisali prirejanje
 \[
@@ -3501,11 +3520,18 @@ Zadnja vsota je ravno enaka $|G| \cdot \langle \chi_{\pi}, \chi_{\pi} \rangle = 
 \[
     N(g) = |G| \cdot \sum_{\pi \in \Irr(G)} \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)}.
 \]
-Dobljen izraz za število načinov, na katere lahko $g$ zapišemo kot komutator v $G$, se imenuje {\definicija Frobeniusova formula}. V posebnem iz nje sklepamo, da za element $g \in G$ velja
+S tem smo izpeljali Frobeniusov izrek.
+
+\subsection{Prepoznavanje komutatorjev}
+
+S Frobeniusovim izrekom lahko komutatorje v grupi prepoznavamo neposredno iz tabele karakterjev grupe.
+
+\begin{posledica}
+Naj bo $G$ končna grupa. Za vsak $g \in G$ velja
 \[
-    g \in K(G) \quad \Longleftrightarrow \quad \sum_{\pi \in \Irr(G)} \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)} \neq 0,
+    g \in K(G) \quad \Longleftrightarrow \quad \sum_{\pi \in \Irr(G)} \frac{\chi_{\pi}(g)}{\chi_{\pi}(1)} \neq 0.
 \]
-slednji pogoj pa lahko preberemo neposredno iz tabele karakterjev grupe.
+\end{posledica}
 
 \begin{zgled}
 Naj bo $G = \langle x, y \rangle$ grupa moči $96$ iz zadnjega zgleda. S predstavljenim algoritmom lahko hitro izračunamo njeno tabelo karakterjev. Grupa ima sicer $12$ razredov za konjugiranje, zato je njena tabela karakterjev kar velika. 
@@ -3552,7 +3578,7 @@ Iz tabele karakterjev grupe $\GL_2(\FF_p)$ razberi, da za $p>2$ velja
 Iz tabele karakterjev grupe $\SL_2(\FF_p)$ razberi, da za $p>3$ množica komutatorjev v $\SL_2(\FF_p)$ vsebuje vse neskalarne elemente. Sklepaj, da je za $p>3$ vsak element grupe $\PSL_2(\FF_p)$ komutator.
 \end{domacanaloga}
 
-Nedavno razrešena Orejeva domneva iz leta 1951 je predvidevala, da je vsak element nekomutativne končne enostavne grupe komutator. Ta domneva je bila potrjena v \href{https://ems.press/journals/jems/articles/3979}{(Liebeck-O'Brien-Shalev-Tiep 2010)}. Dokaz sloni na Frobeniusovi formuli za prepoznavanje komutatorjev. Avtorji z uporabo generičnih tabel karakterjev, Deligne-Lusztigove teorije in kar nekaj računske moči dokažejo, da prispevki nelinearnih karakterjev v Frobeniusovi formuli nikdar ne uspejo izničiti prispevka trivialnega karakterja.
+Nedavno razrešena Orejeva domneva iz leta 1951 je predvidevala, da je vsak element nekomutativne končne enostavne grupe komutator. Ta domneva je bila potrjena v \href{https://ems.press/journals/jems/articles/3979}{(Liebeck-O'Brien-Shalev-Tiep 2010)}. Dokaz sloni na Frobeniusovi formuli za prepoznavanje komutatorjev. Avtorji z uporabo generičnih tabel karakterjev, Deligne-Lusztigove teorije in kar nekaj surove računske moči dokažejo, da prispevki nelinearnih karakterjev v Frobeniusovi formuli nikdar ne uspejo izničiti prispevka trivialnega karakterja.
 
 \section{Slučajni sprehodi}
 
