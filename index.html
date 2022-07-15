@@ -7812,6 +7812,25 @@
             dveh lihi permutacij je soda permutacija, zato je ta množica
             res brez produktov. Njena gostota je <span
             class="math inline">\(\frac12\)</span>.</p></li>
+            <li><p>Naj bo <span class="math inline">\(G\)</span> končna
+            grupa s podgrupo <span class="math inline">\(H \leq
+            G\)</span>. Naj bo <span class="math inline">\(A =
+            Hg\)</span> za nek <span class="math inline">\(g \in G
+            \backslash H\)</span>. Tedaj za <span
+            class="math inline">\(x = h_1 g\)</span> in <span
+            class="math inline">\(y = h_2 g\)</span> velja <span
+            class="math inline">\(Hxy = Hh_1 g h_2 g = H g h_2
+            g\)</span>. Pri tem velja <span class="math inline">\(xy \in
+            A\)</span>, če in samo če je <span class="math inline">\(H g
+            h_2 g = Hg\)</span>, kar se poenostavi do <span
+            class="math inline">\(g h_2 \in H\)</span>, se pravi <span
+            class="math inline">\(g \in H\)</span>, kar je sprto s
+            predpostavko. Množica <span class="math inline">\(A\)</span>
+            je zato brez produktov. Njena gostota v <span
+            class="math inline">\(G\)</span> je <span
+            class="math inline">\(1/|G:H|\)</span>. Ta primer posploši
+            zadnjega, kjer smo obravnavali <span
+            class="math inline">\(A_n \leq S_n\)</span>.</p></li>
             </ul>
             </div>
             <p>Mnogo težje je najti podmnožice brez produktov pozitivne
@@ -7821,9 +7840,11 @@
             Dokazali bomo, da to težavo lahko pojasnimo s teorijo
             updobitev.</p>
             <div class="izrek">
-            <p><strong>Izrek 5.3</strong> (Gowers 2008). Naj bo <span
-            class="math inline">\(G\)</span> končna grupa in naj bo
-            <span class="math inline">\(m\)</span> najmanjša stopnja
+            <p><strong>Izrek 5.3</strong> (<a
+            href="https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/quasirandom-groups/A885920D04E04BC63766C052C666931A">Gowers
+            2008</a>). Naj bo <span class="math inline">\(G\)</span>
+            končna grupa in naj bo <span
+            class="math inline">\(m\)</span> najmanjša stopnja
             netrivialne nerazcepne kompleksne upodobitve <span
             class="math inline">\(G\)</span>. Tedaj je vsaka podmnožica
             brez produktov v <span class="math inline">\(G\)</span>
@@ -7922,6 +7943,32 @@
             neenakosti <span class="math inline">\(\delta \leq
             m^{-1/3}\)</span>. ◻</p>
             </div>
+            <p>Iz Gowersovega izreka sledi nekoliko presenetljiva
+            lastnost dovolj velikih podmnožic.</p>
+            <div class="posledica">
+            <p><strong>Posledica 5.1</strong> (<a
+            href="https://eudml.org/doc/277468">Nikolov-Pyber 2011</a>).
+            Naj bo <span class="math inline">\(G\)</span> končna grupa
+            in naj bo <span class="math inline">\(m\)</span> najmanjša
+            stopnja netrivialne neracepne kompleksne upodobitve <span
+            class="math inline">\(G\)</span>. Če je <span
+            class="math inline">\(A\)</span> podmnožica <span
+            class="math inline">\(G\)</span> gostote vsaj <span
+            class="math inline">\(m^{-1/3}\)</span>, potem je <span
+            class="math inline">\(A \cdot A \cdot A = G\)</span>.</p>
+            </div>
+            <div class="proof">
+            <p><em>Proof.</em> ◻</p>
+            </div>
+            <p>S Gowersovo zgornjo mejo za dovoljeno gostoto množice
+            brez produktov se seveda lahko vprašamo, kako optimalna je
+            ta meja. Z drugimi besedami, konstruirati želimo čim večje
+            podmnožice brez produktov.</p>
+            <div class="zgled">
+            <p><strong>Zgled 5.4</strong> (<a
+            href="https://www.sciencedirect.com/science/article/pii/S0097316597927151">Kedlaya
+            1997</a>). An</p>
+            </div>
             <div class="odprtproblem">
             <p><strong>Odprt problem 5.2</strong>. Kolikšna je gostota
             največje množice brez produktov v <span
@@ -7943,7 +7990,7 @@
             class="math display">\[K(G) = \{ [x,y] \mid x,y \in G
             \}.\]</span> Ta množica v splošnem <em>ni</em> podgrupa.</p>
             <div class="zgled">
-            <p><strong>Zgled 5.4</strong>. V programskem okolju
+            <p><strong>Zgled 5.5</strong>. V programskem okolju
             <code>GAP</code> se ni težko prepričati, da je najmanjša<a
             href="#fn68" class="footnote-ref" id="fnref68"
             role="doc-noteref"><sup>68</sup></a> grupa <span
@@ -8110,7 +8157,7 @@
             pogoj pa lahko preberemo neposredno iz tabele karakterjev
             grupe.</p>
             <div class="zgled">
-            <p><strong>Zgled 5.5</strong>. Naj bo <span
+            <p><strong>Zgled 5.6</strong>. Naj bo <span
             class="math inline">\(G = \langle x, y \rangle\)</span>
             grupa moči <span class="math inline">\(96\)</span> iz
             zadnjega zgleda. S predstavljenim algoritmom lahko hitro
