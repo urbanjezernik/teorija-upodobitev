@@ -8537,6 +8537,185 @@
             karakterjev v Frobeniusovi formuli nikdar ne uspejo izničiti
             prispevka trivialnega karakterja.</p>
             <h2 id="slučajni-sprehodi">Slučajni sprehodi</h2>
+            <p>Naj bo <span class="math inline">\(G\)</span> končna
+            grupa in <span class="math inline">\(S\)</span> neka njena
+            podmnožica, ki generira <span
+            class="math inline">\(G\)</span>. Vsak element v <span
+            class="math inline">\(G\)</span> lahko torej zapišemo kot
+            produkt elementov iz množice <span
+            class="math inline">\(S\)</span>. V tem razdelku bomo
+            raziskali, kaj se zgodi, če elementov iz množice <span
+            class="math inline">\(S\)</span> ne množimo s ciljem, da bi
+            zapisali nek konkreten element, ampak jih namesto tega
+            množimo kar naključno.</p>
+            <h3 id="slučajni-sprehod">Slučajni sprehod</h3>
+            <p>Naj bo <span class="math inline">\(G\)</span> grupa z
+            generirajočo množico <span class="math inline">\(S\)</span>.
+            Enakomerno naključno izberimo element <span
+            class="math inline">\(X_1 = s_1 \in S\)</span>. Za tem še
+            enkrat neodvisno izberimo <span class="math inline">\(s_2
+            \in S\)</span> in izračunajmo <span
+            class="math inline">\(X_2 = s_1 s_2 \in G\)</span>. Ta
+            postopek ponavljamo. Ko že imamo <span
+            class="math inline">\(X_i \in G\)</span>, enakomerno
+            naključno izberemo element <span
+            class="math inline">\(s_{i+1} \in S\)</span> in izračunamo
+            <span class="math inline">\(X_{i+1} = X_i s_{i+1}\)</span>.
+            Če smo torej po nekaj korakih že prišli do elementa <span
+            class="math inline">\(g \in G\)</span>, potem je verjetnost,
+            da bomo po naslednjem koraku v elementu <span
+            class="math inline">\(h \in G\)</span>, enaka <span
+            class="math display">\[p_S(g, h)
+                = \begin{cases}
+                    1/|S| &amp; \exists s \in S \colon h = g s, \\
+                    0 &amp; \text{sicer}
+                \end{cases}\]</span> Po <span
+            class="math inline">\(n\)</span> korakih tega postopka
+            dobimo element <span class="math inline">\(X_n \in
+            G\)</span>, ki je seveda odvisen od izbire vmesnih elementov
+            <span class="math inline">\(s_i \in S\)</span> na vsakem
+            koraku. Temu procesu pravimo <span><strong><em>slučajni
+            sprehod</em></strong></span> na grupi <span
+            class="math inline">\(G\)</span> z generirajočo množico
+            <span class="math inline">\(S\)</span>.</p>
+            <div class="zgled">
+            <p><strong>Zgled 5.7</strong>. Naj bo <span
+            class="math inline">\(G = S_n\)</span> in <span
+            class="math inline">\(S\)</span> množica transpozicij v
+            <span class="math inline">\(S_n\)</span>. Predstavljajmo si,
+            da imamo pred sabo urejen kup kart. Enakomerno naključno
+            izberemo dve različni karti v tem kupu, eno z levo roko in
+            eno z desno, in ju zamenjamo. Ta postopek ponovimo <span
+            class="math inline">\(n\)</span>-krat. Menjava na vsakem
+            koraku ustreza izbiri naključne transpozicije <span
+            class="math inline">\(\sigma \in S\)</span>, s katero
+            pomnožimo trenutno permutacijo, ki opisuje stanje, v katerem
+            je kup kart. Slučajni sprehod v tem primeru torej opisuje
+            slučajno mešanje kupa kart.</p>
+            </div>
+            <p>Nekoliko bolj abstraktno bi lahko na slučajni sprehod
+            gledali kot na zaporedje slučajnih spremenljivk <span
+            class="math inline">\(X_1, X_2, \dots\)</span> z vrednostmi
+            v <span class="math inline">\(G\)</span>, ki pa niso
+            porazdeljene neodvisno, temveč zanje velja
+            <span><strong><em>lastnost Markova</em></strong></span>, to
+            je <span class="math display">\[\mathbf{P}( X_{i+1} = y \mid
+            X_1 = x_1, \dots, X_i = x_i)
+                = p_S(x_i, y)\]</span> za vsak <span
+            class="math inline">\(i \geq 0\)</span> in za vse <span
+            class="math inline">\(x_1, x_2, \dots, x_i \in G\)</span>.
+            Ta lastnost je jasno izpolnjena za slučajni sprehod, kot smo
+            ga opisali zgoraj. Po drugi strani je vsako zaporedje
+            slučajnih spremenljivk z vrednostmi v <span
+            class="math inline">\(G\)</span>, ki zadošča lastnosti
+            Markova, <em>uresničljivo</em> kot slučajni sprehod.
+            Definiciji sta torej ekvivalentni.</p>
+            <p>Slučajna spremenljivka <span
+            class="math inline">\(X_n\)</span> nam pove, v katerem
+            elementu se nahajamo po <span
+            class="math inline">\(n\)</span> korakih slučajnega
+            sprehoda. Naš cilj je analizirati porazdelitev te slučajne
+            spremenljivke v odvisnosti od <span
+            class="math inline">\(n\)</span> in še posebej v limiti, ko
+            gre <span class="math inline">\(n\)</span> čez vse meje. Kot
+            bomo videli, je tudi ta problem izrazljiv v jeziku teorije
+            upodobitev in v nekaterih primerih tudi eksplicitno
+            rešljiv.</p>
+            <h3 id="operator-markova">Operator Markova</h3>
+            <p>Po <span class="math inline">\(n\)</span> korakih
+            slučajnega sprehoda se znajdemo v nedoločenem elementu grupe
+            <span class="math inline">\(G\)</span>. Uvedimo funkcijo
+            <span class="math display">\[p_n \colon G \to \mathbf{C},
+            \quad
+                g \mapsto \mathbf{P}(X_n = g),\]</span> ki meri
+            verjetnost, da smo v danem elementu. Ta funkcija torej ni
+            nič drugega kot porazdelitvena funkcija slučajne
+            spremenljivke <span class="math inline">\(X_n\)</span>.
+            Slučajni sprehod se prične v <span
+            class="math inline">\(1\)</span>, zato je <span
+            class="math inline">\(p_0 = 1_1\)</span>.</p>
+            <p>Vrednosti funkcije <span
+            class="math inline">\(p_n\)</span> lahko izračunamo
+            induktivno na <span class="math inline">\(n\)</span>,
+            upoštevajoč lastnost Markova. Velja <span
+            class="math display">\[p_n(g)
+                = \sum_{h \in G_p} \mathbf{P}(X_n = g \mid X_{n-1} = h)
+            \mathbf{P}(X_{n-1} = h)
+                = \sum_{h \in G_p} p_{S}(h,g) \cdot \mathbf{P}(X_{n-1} =
+            h).\]</span> Vrednosti <span
+            class="math inline">\(p_{S}(h,g)\)</span> so neničelne le,
+            kadar je <span class="math inline">\(g \in h S\)</span>.
+            Dobimo torej <span class="math display">\[p_n(g)
+                = \frac{1}{|S|} \sum_{h \in g S^{-1}} p_{n-1}(h)
+                = \frac{1}{|S|} \sum_{x \in G_p} p_{n-1}(gx^{-1})
+            1_{S}(x),\]</span> Zadnjo vsoto prepoznamo kot konvolucijo
+            <span class="math display">\[\left( p_{n-1} *
+            \frac{1_{S}}{|S|} \right) (g),\]</span> ki jo lahko zapišemo
+            s pomočjo Fourierove transformacije in nazadnje dobimo <span
+            class="math display">\[p_n = \widehat{\frac{1_{S}}{|S|}
+            }(\rho_{\mathop{\mathrm{fun}}}) \cdot p_{n-1}.\]</span>
+            Rekurzivna zveza za izračun porazdelitvene funkcije <span
+            class="math inline">\(p_n\)</span> iz <span
+            class="math inline">\(p_{n-1}\)</span> je torej izrazljiva
+            kot Fourierova transformacija normalizirane karakteristične
+            funkcije generirajoče množice <span
+            class="math inline">\(S\)</span> v regularni upodobitvi. Tej
+            linearni preslikavi pravimo <span><strong><em>operator
+            Markova</em></strong></span> in jo označimo kot <span
+            class="math display">\[M = \widehat{\frac{1_{S}}{|S|}
+            }(\rho_{\mathop{\mathrm{fun}}}) = \frac{1}{|S|} \sum_{x \in
+            S} \rho_{\mathop{\mathrm{fun}}}(x)^*.\]</span></p>
+            <h3 id="naključno-množenje-podobnih-matrik">Naključno
+            množenje podobnih matrik</h3>
+            <p>Namesto abstraktne teorije bomo slučajne sprehode
+            raziskali kar na konkretnem primeru, ki je dovolj
+            reprezentativen za splošen primer. Obravnavajmo grupo <span
+            class="math inline">\(G_p =
+            \mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span> za <span
+            class="math inline">\(p &gt; 3\)</span>, ki smo jo že
+            dodobra spoznali. V njej za generirajočo množico <span
+            class="math inline">\(S\)</span> izberimo konjugiranostni
+            razred regularnih polenostavnih elementov, ki so podobni
+            matriki <span class="math display">\[A = \begin{pmatrix}
+                    \delta &amp; 0 \\ 0 &amp; 1
+                \end{pmatrix},\]</span> kjer je <span
+            class="math inline">\(\delta\)</span> generator ciklične
+            grupe obrnljivih elementov končnega polja <span
+            class="math inline">\(\mathbf{F}_p^*\)</span>. Množica <span
+            class="math inline">\(S\)</span>, ki jo bomo tukaj
+            označevali z bolj standardno oznako <span
+            class="math inline">\(\mathcal{C}\)</span>, sestoji torej iz
+            vseh matrik, ki so v <span
+            class="math inline">\(G_p\)</span> podobne <span
+            class="math inline">\(A\)</span>.</p>
+            <h4 id="generiranje-grupe">Generiranje grupe</h4>
+            <p>Preverimo najprej, da množica <span
+            class="math inline">\(\mathcal{C}\)</span> res generira
+            <span class="math inline">\(G_p\)</span>. Ker je <span
+            class="math inline">\(G_p\)</span> končna grupa, velja <span
+            class="math inline">\(A^{-1} \in \langle
+            \mathcal{C}\rangle\)</span> in zato je vsaka matrika, ki je
+            podobna <span class="math inline">\(A^{-1}\)</span>, tudi v
+            <span class="math inline">\(\langle
+            \mathcal{C}\rangle\)</span>. S tem velja <span
+            class="math display">\[[S_+, A] = (S_+^{-1} A^{-1} S_+) A  =
+            S_+^{\delta^{-1} + 1}
+                \in \langle \mathcal{C}\rangle.\]</span> Ker je <span
+            class="math inline">\(p &gt; 3\)</span>, je <span
+            class="math inline">\(\delta \neq \pm 1\)</span>, zato
+            dobimo <span class="math inline">\(S_+ \in \langle
+            \mathcal{C}\rangle\)</span>. Sorodno sklepamo za matriko
+            <span class="math inline">\(S_-\)</span>. S tem dobimo <span
+            class="math display">\[\textstyle \langle \mathcal{C}\rangle
+            \geq \langle S_+, S_- \rangle =
+            \mathop{\mathrm{SL}}_2(\mathbf{F}_p).\]</span> Ker je <span
+            class="math inline">\(\delta\)</span> generator <span
+            class="math inline">\(\mathbf{F}_p^*\)</span>, grupa <span
+            class="math inline">\(\langle \mathcal{C}\rangle\)</span>
+            vsebuje matrike z vsemi možnimi determinantami. Od tod
+            sledi, da <span class="math inline">\(\mathcal{C}\)</span>
+            res generira grupo <span
+            class="math inline">\(G_p\)</span>.</p>
             <h1 id="upodobitve-linearnih-grup">Upodobitve linearnih
             grup</h1>
             <h2 id="ozaljšane-upodobitve">Ozaljšane upodobitve</h2>

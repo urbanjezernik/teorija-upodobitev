@@ -3582,6 +3582,96 @@ Nedavno razrešena Orejeva domneva iz leta 1951 je predvidevala, da je vsak elem
 
 \section{Slučajni sprehodi}
 
+Naj bo $G$ končna grupa in $S$ neka njena podmnožica, ki generira $G$. Vsak element v $G$ lahko torej zapišemo kot produkt elementov iz množice $S$. V tem razdelku bomo raziskali, kaj se zgodi, če elementov iz množice $S$ ne množimo s ciljem, da bi zapisali nek konkreten element, ampak jih namesto tega množimo kar naključno. 
+
+\subsection{Slučajni sprehod}
+
+Naj bo $G$ grupa z generirajočo množico $S$. Enakomerno naključno izberimo element $X_1 = s_1 \in S$. Za tem še enkrat neodvisno izberimo $s_2 \in S$ in izračunajmo $X_2 = s_1 s_2 \in G$. Ta postopek ponavljamo. Ko že imamo $X_i \in G$, enakomerno naključno izberemo element $s_{i+1} \in S$ in izračunamo $X_{i+1} = X_i s_{i+1}$. Če smo torej po nekaj korakih že prišli do elementa $g \in G$, potem je verjetnost, da bomo po naslednjem koraku v elementu $h \in G$, enaka 
+\[
+p_S(g, h)
+    = \begin{cases}
+        1/|S| & \exists s \in S \colon h = g s, \\
+        0 & \text{sicer}
+    \end{cases}
+\]
+Po $n$ korakih tega postopka dobimo element $X_n \in G$, ki je seveda odvisen od izbire vmesnih elementov $s_i \in S$ na vsakem koraku. Temu procesu pravimo {\definicija slučajni sprehod} na grupi $G$ z generirajočo množico $S$. 
+
+
+\begin{zgled}
+Naj bo $G = S_n$ in $S$ množica transpozicij v $S_n$. Predstavljajmo si, da imamo pred sabo urejen kup kart. Enakomerno naključno izberemo dve različni karti v tem kupu, eno z levo roko in eno z desno, in ju zamenjamo. Ta postopek ponovimo $n$-krat. Menjava na vsakem koraku ustreza izbiri naključne transpozicije $\sigma \in S$, s katero pomnožimo trenutno permutacijo, ki opisuje stanje, v katerem je kup kart. Slučajni sprehod v tem primeru torej opisuje slučajno mešanje kupa kart.
+\end{zgled}
+
+Nekoliko bolj abstraktno bi lahko na slučajni sprehod gledali kot na zaporedje slučajnih spremenljivk $X_1, X_2, \dots$ z vrednostmi v $G$, ki pa niso porazdeljene neodvisno, temveč zanje velja {\definicija lastnost Markova}, to je
+\[
+    \PP( X_{i+1} = y \mid X_1 = x_1, \dots, X_i = x_i)
+    = p_S(x_i, y)
+\]
+za vsak $i \geq 0$ in za vse $x_1, x_2, \dots, x_i \in G$. Ta lastnost je jasno izpolnjena za slučajni sprehod, kot smo ga opisali zgoraj. Po drugi strani je vsako zaporedje slučajnih spremenljivk z vrednostmi v $G$, ki zadošča lastnosti Markova, \emph{uresničljivo} kot slučajni sprehod. Definiciji sta torej ekvivalentni.
+
+Slučajna spremenljivka $X_n$ nam pove, v katerem elementu se nahajamo po $n$ korakih slučajnega sprehoda. Naš cilj je analizirati porazdelitev te slučajne spremenljivke v odvisnosti od $n$ in še posebej v limiti, ko gre $n$ čez vse meje. Kot bomo videli, je tudi ta problem izrazljiv v jeziku teorije upodobitev in v nekaterih primerih tudi eksplicitno rešljiv.
+
+\subsection{Operator Markova}
+
+Po $n$ korakih slučajnega sprehoda se znajdemo v nedoločenem elementu grupe $G$. Uvedimo funkcijo
+\[
+    p_n \colon G \to \CC, \quad
+    g \mapsto \PP(X_n = g),
+\]
+ki meri verjetnost, da smo v danem elementu. Ta funkcija torej ni nič drugega kot porazdelitvena funkcija slučajne spremenljivke $X_n$. Slučajni sprehod se prične v $1$, zato je $p_0 = 1_1$.
+
+Vrednosti funkcije $p_n$ lahko izračunamo induktivno na $n$, upoštevajoč lastnost Markova. Velja
+\[
+    p_n(g) 
+    = \sum_{h \in G_p} \PP(X_n = g \mid X_{n-1} = h) \PP(X_{n-1} = h)
+    = \sum_{h \in G_p} p_{S}(h,g) \cdot \PP(X_{n-1} = h).
+\]
+Vrednosti $p_{S}(h,g)$ so neničelne le, kadar je $g \in h S$. Dobimo torej
+\[
+    p_n(g)
+    = \frac{1}{|S|} \sum_{h \in g S^{-1}} p_{n-1}(h)
+    = \frac{1}{|S|} \sum_{x \in G_p} p_{n-1}(gx^{-1}) 1_{S}(x),
+\]
+Zadnjo vsoto prepoznamo kot konvolucijo
+\[
+    \left( p_{n-1} * \frac{1_{S}}{|S|} \right) (g),
+\]
+ki jo lahko zapišemo s pomočjo Fourierove transformacije in nazadnje dobimo
+\[
+    p_n = \widehat{\frac{1_{S}}{|S|} }(\rho_{\fun}) \cdot p_{n-1}.
+\]
+Rekurzivna zveza za izračun porazdelitvene funkcije $p_n$ iz $p_{n-1}$ je torej izrazljiva kot Fourierova transformacija normalizirane karakteristične funkcije generirajoče množice $S$ v regularni upodobitvi. Tej linearni preslikavi pravimo {\definicija operator Markova} in jo označimo kot
+\[
+    M = \widehat{\frac{1_{S}}{|S|} }(\rho_{\fun}) = \frac{1}{|S|} \sum_{x \in S} \rho_{\fun}(x)^*.
+\]
+
+\todo{diagonalizacija $M$}
+
+\subsection{Naključno množenje podobnih matrik}
+
+Namesto abstraktne teorije bomo slučajne sprehode raziskali kar na konkretnem primeru, ki je dovolj reprezentativen za splošen primer. Obravnavajmo grupo $G_p = \GL_2(\FF_p)$ za $p > 3$, ki smo jo že dodobra spoznali. V njej za generirajočo množico $S$ izberimo konjugiranostni razred regularnih polenostavnih elementov, ki so podobni matriki
+\[
+    A = \begin{pmatrix}
+        \delta & 0 \\ 0 & 1 
+    \end{pmatrix},
+\] 
+kjer je $\delta$ generator ciklične grupe obrnljivih elementov končnega polja $\FF_p^*$. Množica $S$, ki jo bomo tukaj označevali z bolj standardno oznako $\conclass$, sestoji torej iz vseh matrik, ki so v $G_p$ podobne $A$.
+
+\subsubsection{Generiranje grupe}
+
+Preverimo najprej, da množica $\conclass$ res generira $G_p$. Ker je $G_p$ končna grupa, velja $A^{-1} \in \langle \conclass \rangle$ in zato je vsaka matrika, ki je podobna $A^{-1}$, tudi v $\langle \conclass \rangle$. S tem velja
+\[
+    [S_+, A] = (S_+^{-1} A^{-1} S_+) A  = S_+^{\delta^{-1} + 1}
+    \in \langle \conclass \rangle.
+\]
+Ker je $p > 3$, je $\delta \neq \pm 1$, zato dobimo $S_+ \in \langle \conclass \rangle$. Sorodno sklepamo za matriko $S_-$. S tem dobimo
+\[
+    \textstyle \langle \conclass \rangle \geq \langle S_+, S_- \rangle = \SL_2(\FF_p).
+\]
+Ker je $\delta$ generator $\FF_p^*$, grupa $\langle \conclass \rangle$ vsebuje matrike z vsemi možnimi determinantami. Od tod sledi, da $\conclass$ res generira grupo $G_p$.
+
+
+
+
 \todo{RW na $\GL_2(\FF_p)$ konjugiranostnem razredu, zapiši matriko sosednosti, diagonalizira se z lastnimi vrednostmi, ki jih preberemo iz tabele karakterjev. Analiziraj limito.}
 
 
