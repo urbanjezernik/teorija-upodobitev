@@ -3323,58 +3323,91 @@ Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne nerazcepne
 \end{itemize}
 \end{zgled}
 
+Gowersov izrek bomo dokazali s pomočjo nekoliko močnejše trditve.
+
+\begin{trditev}
+Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne nerazcepne kompleksne upodobitve $G$. Naj bosta $A,B \subseteq G$ podmnožici gostote $\alpha, \beta$. Tedaj velja
+\[
+    \left| 
+        \PP_{x,y,z \in G}(x,y \in A, \ z \in B \mid xy = z) - \alpha^2 \beta
+    \right| 
+    \leq
+    m^{-1/2} \alpha \beta^{1/2}.
+\]
+\end{trditev}
+
 \begin{dokaz}[Dokaz Gowersovega izreka]
-Naj bo $A \subseteq G$ brez produktov gostote $\delta$. Število rešitev enačbe $xy = z$ v $A$ lahko izrazimo kot
+Uporabimo trditev z $A=B$. Če je $A$ brez produktov in gostote $\alpha$, potem velja $\alpha^3 \leq m^{-1/2} \alpha^{3/2}$, kar je enakovredno $\alpha \leq m^{-1/3}$.
+\end{dokaz}
+
+
+\begin{dokaz}[Dokaz trditve]
+Verjetnost v trditvi je enaka 
 \[
-    \sum_{x,y,z \in G \colon xy = z} 1_A(x) 1_A(y) 1_A(z)
-    = \sum_{z \in G} (1_A * 1_A)(z) 1_A(z)
-    = |G| \cdot \langle 1_A * 1_A, 1_A \rangle.
+    \frac{|\{ (x,y,z) \in A \times A \times B \mid xy = z \}|}{|G|^2}.
 \]
-Ker je $A$ brez produktov, je torej $\langle 1_A * 1_A, 1_A \rangle = 0$. Po drugi strani lahko skalarni produkt razvijemo s Parsevalovo formulo in dobimo
+Število rešitev enačbe $xy = z$ za $x,y \in A, z \in B$ lahko izrazimo kot
 \[
-    0 = \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \cdot \langle \widehat{1_A}(\pi)^2, \widehat{1_A}(\pi) \rangle_{\HS}.
+    \sum_{x,y,z \in G \colon xy = z} 1_A(x) 1_A(y) 1_B(z)
+    = \sum_{z \in G} (1_A * 1_A)(z) 1_B(z)
+    = |G| \cdot \langle 1_A * 1_A, 1_B \rangle.
 \]
-Prispevek trivialne upodobitve je enak $\langle \widehat{1_A}(\11)^2, \widehat{1_A}(\11) \rangle_{\HS} = |A|^3$. Prispevke netrivialnih upodobitev lahko s trikotniško neenakostjo in Cauchy-Schwartzovo neenakostjo po absolutni vrednosti omejimo navzgor kot
+Skalarni produkt razvijemo s Parsevalovo formulo in dobimo
 \[
-    \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) \left| \langle \widehat{1_A}(\pi)^2, \widehat{1_A}(\pi) \rangle_{\HS} \right|
+    \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \cdot \langle \widehat{1_A}(\pi)^2, \widehat{1_B}(\pi) \rangle_{\HS}.
+\]
+Prispevek trivialne upodobitve je enak
+\[
+    \langle \widehat{1_A}(\11)^2, \widehat{1_B}(\11) \rangle_{\HS}/|G| = |A|^2 |B| / |G| = \alpha^2 \beta |G|^2. 
+\]
+Prispevke netrivialnih upodobitev lahko s trikotniško neenakostjo in Cauchy-Schwartzovo neenakostjo po absolutni vrednosti omejimo navzgor kot
+\[
+    \frac{1}{|G|} \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) \left| \langle \widehat{1_A}(\pi)^2, \widehat{1_B}(\pi) \rangle_{\HS} \right|
     \leq 
-    \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) || \widehat{1_A}(\pi) ||_{\HS}^3.
+    \frac{1}{|G|} \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) || \widehat{1_A}(\pi) ||_{\HS}^2 || \widehat{1_B}(\pi) ||_{\HS}.
 \]
-V zadnji vsoti eno od norm omejimo z maksimumom, da dobimo zgornjo mejo
+V zadnji vsoti zadnjo normo omejimo z maksimumom, da dobimo zgornjo mejo
 \[
-    \max_{\11 \neq \pi \in \Irr(G)} || \widehat{1_A}(\pi) ||_{\HS} \cdot 
-    \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) || \widehat{1_A}(\pi) ||_{\HS}^2,
+    \max_{\11 \neq \pi \in \Irr(G)} || \widehat{1_B}(\pi) ||_{\HS} \cdot 
+    \frac{1}{|G|} \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) || \widehat{1_A}(\pi) ||_{\HS}^2,
 \]
 Prvi člen lahko omejimo z neenakostjo
 \[
-    m \cdot \max_{\11 \neq \pi \in \Irr(G)} || \widehat{1_A}(\pi) ||^2_{\HS}
-    \leq \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) ||\widehat{1_A}(\pi)||_{\HS}^2 
-    \leq |G|^2 ||1_A||^2 = |A||G|
+    m \cdot \max_{\11 \neq \pi \in \Irr(G)} || \widehat{1_B}(\pi) ||^2_{\HS}
+    \leq \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) ||\widehat{1_B}(\pi)||_{\HS}^2 
+    \leq |G|^2 ||1_B||^2 = |B||G|
 \]
 in zadnjo neenakost lahko uporabimo tudi za omejitev drugega člena. S tem dobimo zgornjo mejo
 \[
-  \sqrt{\frac{|A||G|}{m}} \cdot |A||G| = m^{-1/2} \delta^{3/2} |G|^3
+  \sqrt{\frac{|B||G|}{m}} \cdot |A| = m^{-1/2} \alpha \beta^{1/2} |G|^2
 \]
-za prispevke netrivialnih upodobitev. Ker je $A$ brez produktov, sklenemo
-\[
-    |A|^3 \leq m^{-1/2} \delta^{3/2} |G|^3,
-\]
-kar je ekvivalentno želeni neenakosti $\delta \leq m^{-1/3}$.
+za prispevke netrivialnih upodobitev. Trditev je s tem dokazana.
 \end{dokaz}
 
 Iz Gowersovega izreka sledi nekoliko presenetljiva lastnost dovolj velikih podmnožic.
 
 \begin{posledica}[\href{https://eudml.org/doc/277468}{Nikolov-Pyber 2011}]
-Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne neracepne kompleksne upodobitve $G$. Če je $A$ podmnožica $G$ gostote vsaj $m^{-1/3}$, potem je $A \cdot A \cdot A = G$.
+Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne neracepne kompleksne upodobitve $G$. Če je $A$ podmnožica $G$ gostote strogo večje od $m^{-1/3}$, potem je $A \cdot A \cdot A = G$.
 \end{posledica}
 \begin{dokaz}
-
+Naj bo $g \in G$ in naj bo $B = g A^{-1} \subseteq G$. Množici $A$ in $B$ sta obe enake gostote, recimo $\alpha$. Velja $\alpha^3 > m^{-1}$, kar je enakovredno $m^{-1/2} \alpha^{3/2} < \alpha^3$. Iz trditve od tod sledi $A \cdot A \cap B \not \emptyset$, zato je $g \in A \cdot A \cdot A$. Ker je bil $g$ poljuben, je $A \cdot A \cdot A = G$.
 \end{dokaz}
 
-S Gowersovo zgornjo mejo za dovoljeno gostoto množice brez produktov se seveda lahko vprašamo, kako optimalna je ta meja. Z drugimi besedami, konstruirati želimo čim večje podmnožice brez produktov.
+Ta lastnost velikih množic ima mnogo zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babijeve domeneve o premerih končnih enostavnih grup prek teorije približnih podgrup, kot je razloženo v \href{http://library.msri.org/books/Book61/files/15breu.pdf}{(Breuillard 2013)}.
+
+Z Gowersovo zgornjo mejo za dovoljeno gostoto množice brez produktov se seveda lahko vprašamo, kako optimalna je ta meja. Z drugimi besedami, konstruirati želimo čim večje podmnožice brez produktov. V grupah $A_n$ in $\PSL_2(\FF_p)$ te gotovo ne bodo pozitivne gostote, ko gredo moči grup čez vse meje.
 
 \begin{zgled}[\href{https://www.sciencedirect.com/science/article/pii/S0097316597927151}{Kedlaya 1997}]
-An
+Opazujmo alternirajočo grupo $A_n$, ki deluje na množici točk $\{ 1, 2, \dots, n \}$. Naj bo $T \subseteq \{2,3,\dots,n \}$ poljubna podmnožica velikosti $t$. Definirajmo množico permutacij
+\[
+S = \{ \sigma \in A_n \mid \sigma(1) \in T, \ \sigma(T) \cap T = \emptyset \}.
+\]
+Vsaka permutacija v $S \cdot S$ preslika $1$ v $T^c$, zato je $S \cap S \cdot S = \emptyset$ in množica $S$ je brez produktov. Njena gostota v $A_n$ je enaka
+\[
+  \frac{1}{n!/2} \cdot t \cdot \binom{n-t}{t} t! \cdot (n-t-1)! \cdot \frac{1}{2}
+  = \frac{t (n-t)! (n-t-1)!}{n!(n-2t)!}  
+\]
+
 
 \todo{posploši za tranzitivne}
 \end{zgled}
