@@ -3580,6 +3580,8 @@ Iz tabele karakterjev grupe $\SL_2(\FF_p)$ razberi, da za $p>3$ množica komutat
 
 Nedavno razrešena Orejeva domneva iz leta 1951 je predvidevala, da je vsak element nekomutativne končne enostavne grupe komutator. Ta domneva je bila potrjena v \href{https://ems.press/journals/jems/articles/3979}{(Liebeck-O'Brien-Shalev-Tiep 2010)}. Dokaz sloni na Frobeniusovi formuli za prepoznavanje komutatorjev. Avtorji z uporabo generičnih tabel karakterjev, Deligne-Lusztigove teorije in kar nekaj surove računske moči dokažejo, da prispevki nelinearnih karakterjev v Frobeniusovi formuli nikdar ne uspejo izničiti prispevka trivialnega karakterja.
 
+\todo{Thompsonova domneva.}
+
 \section{Slučajni sprehodi}
 
 Naj bo $G$ končna grupa in $S$ neka njena podmnožica, ki generira $G$. Vsak element v $G$ lahko torej zapišemo kot produkt elementov iz množice $S$. V tem razdelku bomo raziskali, kaj se zgodi, če elementov iz množice $S$ ne množimo s ciljem, da bi zapisali nek konkreten element, ampak jih namesto tega množimo kar naključno. 
@@ -3623,7 +3625,7 @@ Vrednosti funkcije $p_n$ lahko izračunamo induktivno na $n$, upoštevajoč last
 \[
     p_n(g) 
     = \sum_{h \in G_p} \PP(X_n = g \mid X_{n-1} = h) \PP(X_{n-1} = h)
-    = \sum_{h \in G_p} p_{S}(h,g) \cdot \PP(X_{n-1} = h).
+    = \sum_{h \in G_p} p_{S}(h,g) \cdot p_{n-1}(h).
 \]
 Vrednosti $p_{S}(h,g)$ so neničelne le, kadar je $g \in h S$. Dobimo torej
 \[
@@ -3643,18 +3645,65 @@ Rekurzivna zveza za izračun porazdelitvene funkcije $p_n$ iz $p_{n-1}$ je torej
 \[
     M = \widehat{\frac{1_{S}}{|S|} }(\rho_{\fun}) = \frac{1}{|S|} \sum_{x \in S} \rho_{\fun}(x)^*.
 \]
+Za poljubno funkcijo $f \in \fun(G,\CC)$ je 
+\[
+    (M \cdot f)(g) = \frac{1}{|S|} \sum_{x \in S} f(g x^{-1}),
+\]
+torej $Mf$ v točki $g \in G$ izračuna povprečje funkcije $f$ po vseh elementih, ki v slučajnem sprehodu lahko vodijo v $g$.
 
-\todo{diagonalizacija $M$}
+\begin{trditev}
+Za slučajni sprehod na grupi z operatorjem Markova $M$ je
+\[
+    p_n = M^n \cdot 1_1.
+\]
+\end{trditev}
+
+Operator Markova lahko zapišemo v naravni bazi karakterističnih funkcij in s tem dobimo matriko razsežnosti $|G| \times |G|$, ki ima v vsakem stolpcu $|S|$ neničelnih vrednosti, vsaka od njih je enaka $1/|S|$. Ob dodatnih predpostavkah na množico $S$ dobimo dodatne lastnosti te matrike. Če je na primer množica $S$ simetrična, kar pomeni, da je za vsak $s \in S$ tudi $s^{-1} \in S$, potem je opisana matrika za $M$ \emph{simetrična} in zato nujno \emph{diagonalizabilna} nad realnimi števili. 
+
+\begin{zgled}
+Opazujmo simetrično grupo $S_3$ z generirajočo množico transpozicij $S = \{ (1 \ 2), (1 \ 3), (2 \ 3)\}$. Ta množica je simetrična. Elemente grupe $S_3$ uredimo po vrsti kot
+\[
+    (),
+    (1 \ 2),
+    (1 \ 3),
+    (2 \ 3),
+    (1 \ 2 \ 3),
+    (1 \ 3 \ 2).
+\]
+Operator Markova je v standardni bazi karakterističnih funkcij 
+elementov grupe enak
+\[
+    M = \frac13 \begin{pmatrix}
+        0 & 1 & 1 & 1 & 0 & 0 \\
+        1 & 0 & 0 & 0 & 1 & 1 \\
+        1 & 0 & 0 & 0 & 1 & 1 \\
+        1 & 0 & 0 & 0 & 1 & 1 \\
+        0 & 1 & 1 & 1 & 0 & 0 \\
+        0 & 1 & 1 & 1 & 0 & 0 \\
+    \end{pmatrix}.
+\]
+Ta matrika je simetrična. Njen karakteristični polinom je enak $\lambda^6 - \lambda^4$, zato dobimo lastne vrednosti $(1,0,0,0,0,-1)$. Lastni vektor lastne vrednosti $1$ je konstantni vektor, ki ustreza konstantni funkciji na $S_3$. Lastni vektor lastne vrednosti $-1$ je vektor, ki ima na množici $S$ vrednosti $-1$, izven množice $S$ pa vrednosti $1$. 
+\end{zgled}
+
+Konstantna funkcija je vselej lastni vektor operatorja Markova z lastno vrednostjo $1$. Preostalih lastnih vrednosti pa v splošnem ni lahko določiti. Zopet pomaga, če se omejimo na kakšne posebne generirajoče množice. Zelo dobro na primer razumemo primer, ko je $S$ konjugiranostni razred v $G$, saj lahko Fourierovo transformacijo razredne funkcije eksplicitno izračunamo v odvisnosti od karakterjev. V tem primeru lahko eksplicitno določimo tudi vse lastne vektorje, ki jih dobimo kot generatorje izotipičnih komponent nerazcepnih upodobitev, ko smo videli v predstavljenem algoritmu za izračun tabele karakterjev.
+
+\begin{trditev}
+Za slučajni sprehod na grupi $G$ z generirajočo množico $\conclass$, kjer je $\conclass$ konjugiranostni razred v $G$, je operator Markova diagonalizabilen z lastnimi vrednostmi
+\[
+    \frac{\overline{\chi_{\pi}(\conclass)}}{\chi_{\pi}(1)}
+\]
+za vsako nerazcepno kompleksno upodobitev $\pi \in \Irr(G)$, pri čemer je večkratnost vsake lastne vrednosti enaka $\chi_{\pi}(1)^2$.
+\end{trditev}
 
 \subsection{Naključno množenje podobnih matrik}
 
-Namesto abstraktne teorije bomo slučajne sprehode raziskali kar na konkretnem primeru, ki je dovolj reprezentativen za splošen primer. Obravnavajmo grupo $G_p = \GL_2(\FF_p)$ za $p > 3$, ki smo jo že dodobra spoznali. V njej za generirajočo množico $S$ izberimo konjugiranostni razred regularnih polenostavnih elementov, ki so podobni matriki
+Oglejmo si konkreten primer slučajnega sprehoda, ki je v resnici dovolj reprezentativen za splošen primer. Obravnavajmo grupo $G_p = \GL_2(\FF_p)$ za $p > 3$, ki smo jo že dodobra spoznali. V njej za generirajočo množico izberimo konjugiranostni razred $\conclass$ regularnih polenostavnih elementov, ki so podobni matriki
 \[
     A = \begin{pmatrix}
         \delta & 0 \\ 0 & 1 
     \end{pmatrix},
 \] 
-kjer je $\delta$ generator ciklične grupe obrnljivih elementov končnega polja $\FF_p^*$. Množica $S$, ki jo bomo tukaj označevali z bolj standardno oznako $\conclass$, sestoji torej iz vseh matrik, ki so v $G_p$ podobne $A$.
+kjer je $\delta$ generator ciklične grupe obrnljivih elementov končnega polja $\FF_p^*$. Generirajoča množica sestoji torej iz vseh matrik, ki so v $G_p$ podobne $A$.
 
 \subsubsection{Generiranje grupe}
 
@@ -3669,7 +3718,46 @@ Ker je $p > 3$, je $\delta \neq \pm 1$, zato dobimo $S_+ \in \langle \conclass \
 \]
 Ker je $\delta$ generator $\FF_p^*$, grupa $\langle \conclass \rangle$ vsebuje matrike z vsemi možnimi determinantami. Od tod sledi, da $\conclass$ res generira grupo $G_p$.
 
+\subsubsection{Operator Markova}
 
+Operator Markova $M$ slučajnega sprehoda na $G_p$ z generirajočo množico $\conclass$ deluje na vsaki od izotipičnih komponent regularne upodobitve kot skalarni večkratnik identitete. Da lahko razumemo $p_n = M^n \cdot 1_1$, moramo najprej razviti funkcijo $1_1$ po izotipičnih komponentah. To naredimo, kot smo že, s pomočjo Fourierovih transformacij nerazcepnih karakterjev in dobimo
+\[
+    1_1 = \frac{1}{|G_p|} \sum_{\pi \in \Irr(G_p)} \chi_{\pi}(1) \cdot \chi_{\pi}.
+\]
+V vsaki od $\pi$-izotipičnih komponent je vektor $v_{\pi} = \chi_{\pi}(1)/|G_p| \cdot \chi_{\pi}$ lastni vektor za $M$ z lastno vrednostjo $\overline{\chi_{\pi}(\conclass)}/\chi_{\pi}(1)$. V tej množici lastnih vektorjev lahko torej funkcijo $p_n$ razvijemo kot
+\[
+    p_n = M^n \cdot 1_1 = \sum_{\pi \in \Irr(G_p)} \left( \frac{\overline{\chi_{\pi}(\conclass)}}{\chi_{\pi}(1)} \right)^n \cdot v_{\pi}.
+\]
+Tabelo karakterjev grupe $G_p$ v celoti poznamo, zato lahko določimo vse relevantne vrednosti.
+
+\begin{table}[ht]
+    \centering
+    \small
+\begin{tabular}{l|*{5}{c}}
+    & 
+    $\chi_{\pi}(1)$
+    &
+    $\overline{\chi_{\pi}(\conclass)}$
+    &
+    $\overline{\chi_{\pi}(\conclass)}/\chi_{\pi}(1)$
+    &
+    $\left| \overline{\chi_{\pi}(\conclass)}/\chi_{\pi}(1) \right|$ \\ \hline
+    $\chi \circ \det$ & $1$ & $\overline{\chi(\delta)}$ &  $\overline{\chi(\delta)}$ & $1$ \\
+    $\St(\chi)$ & $p$ & $\overline{\chi(\delta)}$ & $\overline{\chi(\delta)} / p$ & $1/p$ \\
+    $\pi(\chi_1, \chi_2)$ & $(p+1)$ & $\overline{\chi_1(\delta)} + \overline{\chi_2(\delta)}$ & $(\overline{\chi_1(\delta)} + \overline{\chi_2(\delta)})/(p+1)$ & $< 2/(p+1)$ \\
+    $\zeta_{\theta}$ & $p-1$ & $0$ & $0$ & $0$ \\
+\end{tabular}
+\caption{Lastne vrednosti operatorja Markova grupe $G_p$ z generirajočo množico $\conclass$}
+\end{table}
+
+Opazimo, da je lastna vrednost najvišja pri linearnih karakterjih, pri ostalih pa imamo zgornjo mejo v odvisnosti od $p$. Sklenemo
+\[
+    p_n - \sum_{\chi \in \Irr(\FF_p^*)} v_{\chi \circ \det}
+\]
+
+\todo{$L^1$ norma, $||v_}
+
+\todo{Vprašanja na koncu. Vidimo, da je ključna druga največja lasstna vrednost, ki nadzira hitrost konvergence.}
 
 
 \todo{RW na $\GL_2(\FF_p)$ konjugiranostnem razredu, zapiši matriko sosednosti, diagonalizira se z lastnimi vrednostmi, ki jih preberemo iz tabele karakterjev. Analiziraj limito.}
