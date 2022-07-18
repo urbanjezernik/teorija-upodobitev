@@ -60,7 +60,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 17. 07. 2022
+            Zadnja posodobitev: 18. 07. 2022
           </div>
 
           <div id="spinner" class="text-center">
@@ -8035,13 +8035,16 @@
             class="math inline">\(A_n\)</span> je enaka <span
             class="math display">\[\frac{1}{n!/2} \cdot t \cdot
             \binom{n-t}{t} t! \cdot (n-t-1)! \cdot \frac{1}{2}
-              = \frac{t (n-t)! (n-t-1)!}{n!(n-2t)!}.\]</span> S
-            Stirlingovo aproksimacijo za <span class="math inline">\(t =
-            o(n)\)</span> lahko zadnji izraz poenostavimo do <span
-            class="math display">\[\frac{t}{n} e^{O(t^2/n)}.\]</span>
-            Optimalno vrednost dosežemo z izbiro <span
-            class="math inline">\(t \sim n^{1/2}\)</span>, takrat je
-            gostota množice <span class="math inline">\(S\)</span> v
+              = \frac{t (n-t)! (n-t-1)!}{n!(n-2t)!}
+              = \frac{t}{n} \cdot
+            \frac{\binom{n-t}{t}}{\binom{n-1}{t}}.\]</span> Z
+            aproksimacijo <span class="math inline">\(\binom{n}{t} \sim
+            (\frac{ne}{t})^t e^{O(- t^2/2n)}\)</span> za <span
+            class="math inline">\(t = o(n)\)</span> lahko zadnji izraz
+            poenostavimo do <span class="math display">\[\frac{t}{n}
+            e^{O(t^2/n)}.\]</span> Optimalno vrednost dosežemo z izbiro
+            <span class="math inline">\(t \sim n^{1/2}\)</span>, takrat
+            je gostota množice <span class="math inline">\(S\)</span> v
             <span class="math inline">\(A_n\)</span> enaka <span
             class="math inline">\(\sim n^{-1/2}\)</span>.</p>
             </div>
@@ -8619,8 +8622,7 @@
             class="math inline">\(n\)</span> in še posebej v limiti, ko
             gre <span class="math inline">\(n\)</span> čez vse meje. Kot
             bomo videli, je tudi ta problem izrazljiv v jeziku teorije
-            upodobitev in v nekaterih primerih tudi eksplicitno
-            rešljiv.</p>
+            upodobitev.</p>
             <h3 id="operator-markova">Operator Markova</h3>
             <p>Po <span class="math inline">\(n\)</span> korakih
             slučajnega sprehoda se znajdemo v nedoločenem elementu grupe
@@ -8693,7 +8695,10 @@
             <span class="math inline">\(s^{-1} \in S\)</span>, potem je
             opisana matrika za <span class="math inline">\(M\)</span>
             <em>simetrična</em> in zato nujno <em>diagonalizabilna</em>
-            nad realnimi števili.</p>
+            v ortonormirani bazi nad realnimi števili. V tem primeru ni
+            težko izračunati visokih potenc <span
+            class="math inline">\(M\)</span> in s tem <span
+            class="math inline">\(p_n\)</span>.</p>
             <div class="zgled">
             <p><strong>Zgled 5.8</strong>. Opazujmo simetrično grupo
             <span class="math inline">\(S_3\)</span> z generirajočo
@@ -8720,20 +8725,58 @@
             dobimo lastne vrednosti <span
             class="math inline">\((1,0,0,0,0,-1)\)</span>. Lastni vektor
             lastne vrednosti <span class="math inline">\(1\)</span> je
-            konstantni vektor, ki ustreza konstantni funkciji na <span
+            konstantni vektor <span class="math inline">\(1\)</span>, ki
+            ustreza konstantni funkciji na <span
             class="math inline">\(S_3\)</span>. Lastni vektor lastne
-            vrednosti <span class="math inline">\(-1\)</span> je vektor,
-            ki ima na množici <span class="math inline">\(S\)</span>
-            vrednosti <span class="math inline">\(-1\)</span>, izven
-            množice <span class="math inline">\(S\)</span> pa vrednosti
-            <span class="math inline">\(1\)</span>.</p>
+            vrednosti <span class="math inline">\(-1\)</span> je vektor
+            <span class="math inline">\(\mathop{\mathrm{sgn}}\)</span>.
+            Funkcijo <span class="math inline">\(1_1\)</span> razvijemo
+            po lastnih vektorjih kot <span class="math display">\[1_1 =
+                \left\langle 1_1, 1 \right\rangle +
+                \left\langle 1_1, \mathop{\mathrm{sgn}}\right\rangle
+            \mathop{\mathrm{sgn}}+
+                k,\]</span> kjer je <span class="math inline">\(k \in
+            \ker M\)</span>. Velja torej <span
+            class="math display">\[1_1 =
+                \frac{1}{6} + \frac{1}{6} \mathop{\mathrm{sgn}}+
+            k.\]</span> Za vsak <span class="math inline">\(n\)</span> s
+            tem dobimo <span class="math display">\[p_n = M^n \cdot 1_1
+            = \frac{1}{6} + \frac{(-1)^n}{6} \cdot \mathop{\mathrm{sgn}}
+                = \begin{cases}
+                    \frac{1}{3} \cdot 1_{A_3} &amp; n \equiv 0 \pmod{2},
+            \\
+                    \frac{1}{3} \cdot 1_{S_3 \backslash A_3} &amp; n
+            \equiv 1 \pmod{2}.
+                \end{cases}\]</span> Porazdelitev po sodo mnogo korakih
+            je torej enakomerna na sodih permutacijah <span
+            class="math inline">\(A_3\)</span>, po liho mnogo korakih pa
+            enakomerna na lihih permutacijah <span
+            class="math inline">\(S_3 \backslash A_3\)</span>.</p>
             </div>
             <p>Konstantna funkcija je vselej lastni vektor operatorja
             Markova z lastno vrednostjo <span
             class="math inline">\(1\)</span>. Preostalih lastnih
-            vrednosti pa v splošnem ni lahko določiti. Zopet pomaga, če
-            se omejimo na kakšne posebne generirajoče množice. Zelo
-            dobro na primer razumemo primer, ko je <span
+            vrednosti pa v splošnem ni lahko določiti.</p>
+            <div class="domacanaloga">
+            <p><strong>Domača naloga 5.3</strong>. Naj bo <span
+            class="math inline">\(G\)</span> grupa z generirajočo
+            množico <span class="math inline">\(S\)</span> in
+            operatorjem Markova <span class="math inline">\(M\)</span>.
+            Dokaži, da za vsako funkcijo <span class="math inline">\(f
+            \in \mathop{\mathrm{fun}}(G,\mathbf{C})\)</span> velja <span
+            class="math inline">\(||Mf|| \leq ||f||\)</span>. Sklepaj,
+            da so vse lastne vrednosti <span
+            class="math inline">\(M\)</span> po absolutni vrednosti
+            kvečjemu <span class="math inline">\(1\)</span>. Kaj je
+            lastni vektor za lastno vrednost <span
+            class="math inline">\(1\)</span>? Kdaj je <span
+            class="math inline">\(-1\)</span> lastna vrednost in kaj je
+            pripadajoči lastni vektor?</p>
+            </div>
+            <h3
+            id="slučajni-sprehod-s-konjugiranostnim-razredom">Slučajni
+            sprehod s konjugiranostnim razredom</h3>
+            <p>Zelo dobro razumemo primer, ko je <span
             class="math inline">\(S\)</span> konjugiranostni razred v
             <span class="math inline">\(G\)</span>, saj lahko Fourierovo
             transformacijo razredne funkcije eksplicitno izračunamo v
@@ -8750,17 +8793,150 @@
             konjugiranostni razred v <span
             class="math inline">\(G\)</span>, je operator Markova
             diagonalizabilen z lastnimi vrednostmi <span
-            class="math display">\[\frac{\overline{\chi_{\pi}(\mathcal{C})}}{\chi_{\pi}(1)}\]</span>
+            class="math display">\[r_{\pi}(\mathcal{C}) =
+            \frac{\overline{\chi_{\pi}(\mathcal{C})}}{\chi_{\pi}(1)}\]</span>
             za vsako nerazcepno kompleksno upodobitev <span
             class="math inline">\(\pi \in
             \mathop{\mathrm{Irr}}(G)\)</span>, pri čemer je večkratnost
             vsake lastne vrednosti enaka <span
             class="math inline">\(\chi_{\pi}(1)^2\)</span>.</p>
             </div>
+            <p>Operator Markova <span class="math inline">\(M\)</span>
+            slučajnega sprehoda na <span
+            class="math inline">\(G\)</span> z generirajočo množico
+            <span class="math inline">\(\mathcal{C}\)</span>, kjer je
+            <span class="math inline">\(\mathcal{C}\)</span>
+            konjugiranostni razred v <span
+            class="math inline">\(G\)</span>, deluje na vsaki od
+            izotipičnih komponent regularne upodobitve kot skalarni
+            večkratnik identitete z znamimi skalarji. Da lahko razumemo
+            <span class="math inline">\(p_n = M^n \cdot 1_1\)</span>,
+            moramo najprej razviti funkcijo <span
+            class="math inline">\(1_1\)</span> po izotipičnih
+            komponentah. To naredimo, kot smo že, s pomočjo Fourierovih
+            transformacij nerazcepnih karakterjev in dobimo <span
+            class="math display">\[1_1 = \frac{1}{|G|} \sum_{\pi \in
+            \mathop{\mathrm{Irr}}(G)} \chi_{\pi}(1) \cdot
+            \chi_{\pi}.\]</span> V vsaki od <span
+            class="math inline">\(\pi\)</span>-izotipičnih komponent je
+            vektor <span class="math inline">\(v_{\pi} =
+            \chi_{\pi}(1)/|G| \cdot \chi_{\pi}\)</span> lastni vektor za
+            <span class="math inline">\(M\)</span> z lastno vrednostjo
+            <span class="math inline">\(r_{\pi}(\mathcal{C})\)</span>. V
+            tej množici lastnih vektorjev lahko torej funkcijo <span
+            class="math inline">\(p_n\)</span> razvijemo kot <span
+            class="math display">\[p_n = M^n \cdot 1_1 = \sum_{\pi \in
+            \mathop{\mathrm{Irr}}(G)} r_{\pi}(\mathcal{C})^n \cdot
+            v_{\pi}.\]</span> Za razumevanje asimptotskega obnašanja
+            <span class="math inline">\(p_n\)</span> je pomembno poznati
+            <span
+            class="math inline">\(|r_{\pi}(\mathcal{C})|\)</span>.</p>
+            <div class="lema">
+            <p><strong>Lema 5.1</strong>. Za <span
+            class="math inline">\(\pi \in
+            \mathop{\mathrm{Irr}}(G)\)</span> drži <span
+            class="math inline">\(|r_{\pi}(\mathcal{C})| \leq
+            1\)</span>, pri čemer velja enakost natanko tedaj, ko je
+            <span class="math display">\[\mathcal{C}\ker \pi / \ker \pi
+            \subseteq Z(G / \ker \pi).\]</span></p>
+            </div>
+            <div class="proof">
+            <p><em>Proof.</em> Enakost velja natanko tedaj, ko je <span
+            class="math inline">\(\pi(\mathcal{C})\)</span> skalarna
+            matrika. Taka matrika komutira z vsemi elementi <span
+            class="math inline">\(\pi(g)\)</span>, zato je <span
+            class="math inline">\(\pi([g, \mathcal{C}]) = 1\)</span> za
+            vsak <span class="math inline">\(g \in G\)</span>. To
+            pomeni, da je <span class="math inline">\([G, \mathcal{C}]
+            \subseteq \ker \pi\)</span>, kar je enakovredno
+            trditvi. ◻</p>
+            </div>
+            <p>Zberimo prispevke z maksimalno vrednostjo <span
+            class="math inline">\(r_{\pi}(\mathcal{C})\)</span> v
+            množico <span class="math display">\[X_{\mathcal{C}} = \{
+            \pi \in \mathop{\mathrm{Irr}}(G) \mid |r_{\pi}(\mathcal{C})|
+            = 1 \}.\]</span> Velja torej <span
+            class="math display">\[p_n - \sum_{\pi \in X_{\mathcal{C}}}
+            r_{\pi}(\mathcal{C})^n \cdot v_{\pi}
+                = \sum_{\pi \in \mathop{\mathrm{Irr}}(G) \backslash
+            X_{\mathcal{C}}} r_{\pi}(\mathcal{C})^n \cdot
+            v_{\pi}.\]</span> Prispevki <span
+            class="math inline">\(r_{\pi}(\mathcal{C})\)</span> za <span
+            class="math inline">\(\pi\)</span> izven <span
+            class="math inline">\(X_{\mathcal{C}}\)</span> konvergirajo
+            k <span class="math inline">\(0\)</span> za velike vrednosti
+            <span class="math inline">\(n\)</span> in zatorej dobimo
+            <span class="math display">\[\lim_{n \to \infty} p_n =
+            \lim_{n \to \infty} \sum_{\pi \in X_C}
+            r_{\pi}(\mathcal{C})^n \cdot v_{\pi}.\]</span> Za konkretne
+            grupe lahko s tabelo karakterjev ali upoštevanjem kakšnih
+            dodatnih lastnosti eksplicitno izračunamo zadnjo vsoto in s
+            tem določimo limitno porazdelitev <span
+            class="math inline">\(p_n\)</span>.</p>
+            <div class="domacanaloga">
+            <p><strong>Domača naloga 5.4</strong>. Naj bo <span
+            class="math inline">\(G\)</span> nekomutativna končna
+            enostavna grupa. Dokaži, da vsak konjugiranostni razred
+            <span class="math inline">\(\mathcal{C}\)</span> generira
+            <span class="math inline">\(G\)</span> in da velja <span
+            class="math inline">\(X_{\mathcal{C}} = \{ \mathbf{1}
+            \}\)</span>. Sklepaj, da je <span
+            class="math inline">\(\lim_{n \to \infty} p_n =
+            1/|G|\)</span> enakomerna porazdelitev na <span
+            class="math inline">\(G\)</span>.</p>
+            </div>
+            <p>Hitrost konvergence k limitni porazdelitvi lahko
+            kvantitativno nadziramo, če dobro poznamo vrednosti <span
+            class="math inline">\(r_{\pi}(\mathcal{C})\)</span> za <span
+            class="math inline">\(\pi\)</span> izven <span
+            class="math inline">\(X_{\mathcal{C}}\)</span>. Napako pri
+            aproksimaciji porazdelitev <span
+            class="math inline">\(p_n\)</span> in vsoto prispevkov po
+            <span class="math inline">\(X_{\mathcal{C}}\)</span>
+            izrazimo s pomočjo norme <span class="math inline">\(||f||_1
+            = \sum_{g \in G} |f(g)|\)</span> za funkcijo <span
+            class="math inline">\(f \in
+            \mathop{\mathrm{fun}}(G,\mathbf{C})\)</span>.<a href="#fn71"
+            class="footnote-ref" id="fnref71"
+            role="doc-noteref"><sup>71</sup></a> Velja <span
+            class="math display">\[|| p_n -  \sum_{\pi \in
+            X_{\mathcal{C}}} r_{\pi}(\mathcal{C})^n \cdot v_{\pi} ||_1
+                \leq
+                \sum_{\pi \in \mathop{\mathrm{Irr}}(G) \backslash
+            X_{\mathcal{C}}} |r_{\pi}(\mathcal{C})|^n \cdot
+            ||v_{\pi}||_1.\]</span> Normo baznih vektorjev <span
+            class="math inline">\(v_{\pi}\)</span> lahko omejimo s
+            Cauchy-Schwartzovo neenakostjo kot <span
+            class="math display">\[||v_{\pi}||_1 =
+            \frac{\chi_{\pi}(1)}{|G|} \sum_{g \in G} |\chi_{\pi}(g)|
+                \leq \frac{\chi_{\pi}(1)}{|G|} \sqrt{|G| \cdot \sum_{g
+            \in G} |\chi_{\pi}(g)|^2}
+                = \chi_{\pi}(1).\]</span> S tem velja <span
+            class="math display">\[|| p_n -  \sum_{\pi \in
+            X_{\mathcal{C}}} r_{\pi}(\mathcal{C})^n \cdot v_{\pi} ||_1
+                \leq \left( \max_{\pi \in \mathop{\mathrm{Irr}}(G)
+            \backslash X_{\mathcal{C}}} |r_{\pi}(\mathcal{C})|
+            \right)^n  \cdot \sum_{\pi \in \mathop{\mathrm{Irr}}(G)
+            \backslash X_{\mathcal{C}}} \chi_{\pi}(1).\]</span> Če vsoto
+            karakterjev zelo grobo navzgor ocenimo z <span
+            class="math inline">\(|G|\)</span> in upoštevamo, da je
+            <span class="math display">\[\max_{\pi \in
+            \mathop{\mathrm{Irr}}(G) \backslash X_{\mathcal{C}}}
+            |r_{\pi}(\mathcal{C})|  \leq 1 - \epsilon &lt; 1\]</span> za
+            nek <span class="math inline">\(\epsilon &gt; 0\)</span>,
+            potem velja <span class="math display">\[|| p_n -  \sum_{\pi
+            \in X_{\mathcal{C}}} r_{\pi}(\mathcal{C})^n \cdot v_{\pi}
+            ||_1
+                \leq (1 - \epsilon)^n \cdot |G|.\]</span> Po <span
+            class="math inline">\(2 \log|G| / (- \log (1 - \epsilon)) =
+            O_{\epsilon}(\log |G|)\)</span> korakih slučajnega sprehoda
+            bo napaka med porazdelitvama v normi <span
+            class="math inline">\(||\cdot||_1\)</span> gotovo padla pod
+            <span class="math inline">\(1/|G|\)</span> in takrat bo
+            slučajni sprehod zelo blizu svoje limitne porazdelitve.</p>
             <h3 id="naključno-množenje-podobnih-matrik">Naključno
             množenje podobnih matrik</h3>
-            <p>Oglejmo si konkreten primer slučajnega sprehoda, ki je v
-            resnici dovolj reprezentativen za splošen primer.
+            <p>Oglejmo si konkreten primer slučajnega sprehoda.
             Obravnavajmo grupo <span class="math inline">\(G_p =
             \mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span> za <span
             class="math inline">\(p &gt; 3\)</span>, ki smo jo že
@@ -8805,35 +8981,14 @@
             sledi, da <span class="math inline">\(\mathcal{C}\)</span>
             res generira grupo <span
             class="math inline">\(G_p\)</span>.</p>
-            <h4 id="operator-markova-1">Operator Markova</h4>
-            <p>Operator Markova <span class="math inline">\(M\)</span>
-            slučajnega sprehoda na <span
-            class="math inline">\(G_p\)</span> z generirajočo množico
-            <span class="math inline">\(\mathcal{C}\)</span> deluje na
-            vsaki od izotipičnih komponent regularne upodobitve kot
-            skalarni večkratnik identitete. Da lahko razumemo <span
-            class="math inline">\(p_n = M^n \cdot 1_1\)</span>, moramo
-            najprej razviti funkcijo <span
-            class="math inline">\(1_1\)</span> po izotipičnih
-            komponentah. To naredimo, kot smo že, s pomočjo Fourierovih
-            transformacij nerazcepnih karakterjev in dobimo <span
-            class="math display">\[1_1 = \frac{1}{|G_p|} \sum_{\pi \in
-            \mathop{\mathrm{Irr}}(G_p)} \chi_{\pi}(1) \cdot
-            \chi_{\pi}.\]</span> V vsaki od <span
-            class="math inline">\(\pi\)</span>-izotipičnih komponent je
-            vektor <span class="math inline">\(v_{\pi} =
-            \chi_{\pi}(1)/|G_p| \cdot \chi_{\pi}\)</span> lastni vektor
-            za <span class="math inline">\(M\)</span> z lastno
-            vrednostjo <span
-            class="math inline">\(\overline{\chi_{\pi}(\mathcal{C})}/\chi_{\pi}(1)\)</span>.
-            V tej množici lastnih vektorjev lahko torej funkcijo <span
-            class="math inline">\(p_n\)</span> razvijemo kot <span
-            class="math display">\[p_n = M^n \cdot 1_1 = \sum_{\pi \in
-            \mathop{\mathrm{Irr}}(G_p)} \left(
-            \frac{\overline{\chi_{\pi}(\mathcal{C})}}{\chi_{\pi}(1)}
-            \right)^n \cdot v_{\pi}.\]</span> Tabelo karakterjev grupe
-            <span class="math inline">\(G_p\)</span> v celoti poznamo,
-            zato lahko določimo vse relevantne vrednosti.</p>
+            <h4 id="limitna-porazdelitev-sprehoda">Limitna porazdelitev
+            sprehoda</h4>
+            <p>Za razumevanje limitnega obnašanja porazdelitve <span
+            class="math inline">\(p_n\)</span> moramo najprej določiti
+            vrednosti <span
+            class="math inline">\(r_{\pi}(\mathcal{C})\)</span>. Tabelo
+            karakterjev grupe <span class="math inline">\(G_p\)</span> v
+            celoti poznamo.</p>
             <table>
             <caption>Lastne vrednosti operatorja Markova grupe <span
             class="math inline">\(G_p\)</span> z generirajočo množico
@@ -8846,10 +9001,9 @@
             <th style="text-align: center;"><span
             class="math inline">\(\overline{\chi_{\pi}(\mathcal{C})}\)</span></th>
             <th style="text-align: center;"><span
-            class="math inline">\(\overline{\chi_{\pi}(\mathcal{C})}/\chi_{\pi}(1)\)</span></th>
+            class="math inline">\(r_{\pi}(\mathcal{C})\)</span></th>
             <th style="text-align: center;"><span
-            class="math inline">\(\left|
-            \overline{\chi_{\pi}(\mathcal{C})}/\chi_{\pi}(1)
+            class="math inline">\(\left| r_{\pi}(\mathcal{C})
             \right|\)</span></th>
             <th style="text-align: center;"></th>
             </tr>
@@ -8912,12 +9066,168 @@
             </tr>
             </tbody>
             </table>
-            <p>Opazimo, da je lastna vrednost najvišja pri linearnih
-            karakterjih, pri ostalih pa imamo zgornjo mejo v odvisnosti
-            od <span class="math inline">\(p\)</span>. Sklenemo <span
-            class="math display">\[p_n - \sum_{\chi \in
-            \mathop{\mathrm{Irr}}(\mathbf{F}_p^*)} v_{\chi \circ
-            \det}\]</span></p>
+            <p>Množica <span
+            class="math inline">\(X_{\mathcal{C}}\)</span> v tem primeru
+            sestoji iz linearnih upodobitev. Vsota prispevkov
+            porazdelitev po <span
+            class="math inline">\(X_{\mathcal{C}}\)</span> je zato enaka
+            <span class="math display">\[\sum_{\pi \in X_{\mathcal{C}}}
+            r_{\pi}(\mathcal{C})^n \cdot v_{\pi}
+                = \sum_{\chi \in \mathop{\mathrm{Irr}}(\mathbf{F}_p^*)}
+            \overline{\chi(\delta^{n})} \cdot \frac{1}{|G_p|} \chi \circ
+            \det.\]</span> Upoštevamo drugo ortogonalnostno relacijo in
+            dobimo <span class="math display">\[\frac{1}{|G_p|} \cdot
+            \left( g \mapsto \begin{cases}
+                    |\mathbf{F}_p^*| &amp; \det g = \delta^n \\
+                    0 &amp; \text{sicer.}
+                \end{cases}
+                \right)    
+                = \frac{1}{|\mathop{\mathrm{SL}}_2(\mathbf{F}_p)|} \cdot
+            1_{\det^{-1}(\rho^n)},\]</span> kar je ravno enakomerna
+            porazdelitev na množici <span
+            class="math inline">\(\det^{-1}(\rho^n)\)</span>. Ko je
+            <span class="math inline">\(n\)</span> deljiv s <span
+            class="math inline">\(p-1\)</span>, dobimo torej enakomerno
+            porazdelitev na <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{F}_p)\)</span>.</p>
+            <h4 id="hitrost-konvergence">Hitrost konvergence</h4>
+            <p>Pogovorimo se še o hitrosti konvergence k limitni
+            porazdelitvi. Za <span class="math inline">\(\pi\)</span>
+            izven <span class="math inline">\(X_{\mathcal{C}}\)</span>
+            ocenimo <span class="math display">\[\max_{\pi \in
+            \mathop{\mathrm{Irr}}(G_p) \backslash X_{\mathcal{C}}}
+            |r_{\pi}(\mathcal{C})| &lt; \frac{2}{p}, \quad
+                \sum_{\pi \in \mathop{\mathrm{Irr}}(G_p) \backslash
+            X_{\mathcal{C}}} \chi_{\pi}(1)
+                &lt; p^3.\]</span> Velja torej <span
+            class="math display">\[|| p_n -
+            \frac{1}{|\mathop{\mathrm{SL}}_2(\mathbf{F}_p)|} \cdot
+            1_{\det^{-1}(\rho^n)} ||_1
+                \leq
+                \frac{2^n}{p^{n-3}}.\]</span> Napaka zelo hitro upade,
+            pod <span class="math inline">\(p^{-4} \sim 1/|G_p|\)</span>
+            je že pri <span class="math inline">\(n = 7 \log p / (\log p
+            - \log 2) \sim 7\)</span>.<a href="#fn72"
+            class="footnote-ref" id="fnref72"
+            role="doc-noteref"><sup>72</sup></a> Težava je le ta, da
+            <span class="math inline">\(p_n\)</span> v resnici ne
+            konvergira. Da to popravimo, moramo opazovati obnašanje po
+            aritmetičnih zaporedjih z razliko <span
+            class="math inline">\(p-1\)</span>. Za vse dovolj velike
+            <span class="math inline">\(p\)</span> tako dobimo zelo
+            dobro aproksimacijo <span class="math display">\[p_{p-1}
+            \approx \frac{1}{|\mathop{\mathrm{SL}}_2(\mathbf{F}_p)|}
+            \cdot 1_{\mathop{\mathrm{SL}}_2(\mathbf{F}_p)}.\]</span> Če
+            torej v <span class="math inline">\(G_p\)</span> naključno
+            zmnožimo <span class="math inline">\(p-1\)</span> matrik v
+            <span class="math inline">\(\mathcal{C}\)</span> za dovolj
+            velik <span class="math inline">\(p\)</span>, dobimo
+            (skoraj) naključno matriko v <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{F}_p)\)</span>.
+            Napaka sicer pade ekstremno hitro, a linearni karakterji
+            obremenijo sprehod do te mere, da ne moremo izkoristiti
+            majhne napake že po <span class="math inline">\(7\)</span>
+            korakih, niti ne po <span class="math inline">\(\log |G_p|
+            \sim \log p\)</span> korakih, temveč šele po <span
+            class="math inline">\(p-1 \sim |G_p|^{1/4}\)</span>
+            korakih.</p>
+            <div class="domacanaloga">
+            <p><strong>Domača naloga 5.5</strong>. Obravnavaj slučajni
+            sprehod v <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{F}_p)\)</span>
+            glede na nek konjugiranostni razred <span
+            class="math inline">\(\mathcal{C}\)</span>. V tem primeru bo
+            <span class="math inline">\(\lim_{n \to \infty} p_n\)</span>
+            enakomerna porazdelitev na <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{F}_p)\)</span>.
+            Oceni hitrost konvergence in pokaži, da dosežemo približno
+            naključno matriko v <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{F}_p)\)</span>
+            mnogo hitreje kot po <span
+            class="math inline">\(p-1\)</span> korakih.</p>
+            </div>
+            <h3 id="onkraj-konjugiranostnih-razredov">Onkraj
+            konjugiranostnih razredov</h3>
+            <p>Slučajne sprehode smo dodobra spoznali, če jih ženejo
+            konjugiranostne generirajoče množice. Videli smo, da za
+            nekomutativne končne enostavne grupe to konvergirajo k
+            enakomerni porazdelitvi. Pri tem hitrost konvergence
+            nadzirajo največje netrivialne lastne vrednosti operatorja
+            Markova, ki jih lahko določimo iz tabele karakterjev.</p>
+            <p>Situacija je mnogo težja, kadar generirajoča množica
+            <span class="math inline">\(S\)</span> grupe <span
+            class="math inline">\(G\)</span> ni konjugiranostni razred<a
+            href="#fn73" class="footnote-ref" id="fnref73"
+            role="doc-noteref"><sup>73</sup></a> in sestoji iz malo
+            elementov, recimo <span class="math inline">\(|S| =
+            2\)</span>. Ni se težko prepričati, da v nekomutativnih
+            končnih enostavnih grupah še vedno dobimo konvergenco k
+            enakomerni porazdelitvi, a v tem primeru ni jasno, kako
+            dobro omejiti netrivialne lastne vrednosti operatorja
+            Markova.</p>
+            <p>Za vsako konkretno nekomutativno končno enostavno grupo
+            <span class="math inline">\(G\)</span> seveda velja, da so
+            vse lastne vrednosti operatorja <span
+            class="math inline">\(M\)</span> razen <span
+            class="math inline">\(1\)</span> po absolutni vrednosti
+            kvečjemu <span class="math inline">\(1-\epsilon\)</span> za
+            nek <span class="math inline">\(\epsilon = \epsilon(G) &gt;
+            0\)</span> in s tem se slučajni sprehod dobro premeša po
+            <span class="math inline">\(O_{\epsilon}(\log |G|)\)</span>
+            korakih. Težave nastopijo, ko skušamo ta argument uporabiti
+            za celo družino grup, na primer <span
+            class="math inline">\(A_n\)</span>, saj se lahko zgodi, da z
+            večanjem parametra <span class="math inline">\(n\)</span>
+            vrednost <span class="math inline">\(\epsilon =
+            \epsilon_n\)</span> nujno konvergira k <span
+            class="math inline">\(0\)</span>. V taki situaciji se
+            slučajni sprehodi zmešajo dobro po <span
+            class="math inline">\(O_{\epsilon}(\log |G|)\)</span>
+            korakih, kar je lahko bistveno večje od <span
+            class="math inline">\(O(\log |G|)\)</span>.</p>
+            <p>Družini grup <span class="math inline">\((G_i)_{i \in
+            \mathbf{N}}\)</span> pravimo <span><strong><em>spektralno
+            ekspanzivna družina</em></strong></span>, kadar obstajata
+            konstanti <span class="math inline">\(C, \epsilon &gt;
+            0\)</span>, da je vsaka grupa <span
+            class="math inline">\(G_i\)</span> generirana z neko množico
+            <span class="math inline">\(S_i\)</span> velikosti kvečjemu
+            <span class="math inline">\(C\)</span>, hkrati pa je vsaka
+            netrivialna lastna vrednost operatorja Markova grupe <span
+            class="math inline">\(G_i\)</span> glede na <span
+            class="math inline">\(S_i\)</span> po absolutni vrednosti
+            kvečjemu <span class="math inline">\(1 - \epsilon\)</span>.
+            V spektralno ekspanzivnih družinah se slučajni sprehodi
+            enakomerno zelo hitro dobro premešajo.</p>
+            <div class="izrek">
+            <p><strong>Izrek 5.5</strong> (Kassabov 2007,
+             Kassabov-Lubotzky-Nikolov 2006,  Breuillard-Green-Tao
+            2011). Družina nekomutativnih končnih enostavnih grup je
+            spektralno ekspanzivna družina.</p>
+            </div>
+            <p>Izrek nam zagotavlja obstoj neke ne prevelike
+            generirajoče množice v končnih enostavnih grupah, glede na
+            katere se slučajni sprehodi enakomerno zelo hitro dobro
+            premešajo. Težko pa je povedati kaj bolj konkretnega o teh
+            generirajočih množicah. Za primer <span
+            class="math inline">\(A_n\)</span> so te množice
+            konstruirane s pomočjo neke naključne metode. Dokaz omejitev
+            absolutnih vrednosti lastnih vrednosti operatorja Markova
+            sloni na teoriji upodobitev, a je precej zahteven.</p>
+            <div class="odprtproblem">
+            <p><strong>Odprt problem 5.3</strong>. V vsaki alternirajoči
+            grupi <span class="math inline">\(A_n\)</span> enakomerno
+            naključno izberemo dva elementa <span
+            class="math inline">\(x,y \in A_n\)</span> in tvorimo <span
+            class="math inline">\(S_{n,x,y} = \{ x, x^{-1}, y, y^{-1}
+            \}\)</span>. Naj bo <span
+            class="math inline">\(M_{n,x,y}\)</span> pridruženi operator
+            Markova. Ali obstaja <span class="math inline">\(\epsilon
+            &gt; 0\)</span>, da je <span class="math display">\[\lim_{n
+            \to \infty} \mathbf{P}_{x,y}(\forall \lambda \in
+            \mathop{\mathrm{Spec}}(M_{n,x,y}) \backslash \{ 1 \} \colon
+            \ |\lambda| &lt; 1 - \epsilon) = 1?\]</span></p>
+            </div>
             <h1 id="upodobitve-linearnih-grup">Upodobitve linearnih
             grup</h1>
             <h2 id="ozaljšane-upodobitve">Ozaljšane upodobitve</h2>
@@ -9360,6 +9670,36 @@
             <li id="fn70" role="doc-endnote"><p>Velja namreč zveza <span
             class="math inline">\(b = y^{-1} a^{1} y\)</span>.<a
             href="#fnref70" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn71" role="doc-endnote"><p>Za primerjavo
+            porazdelitev ne uporabljamo standardne norme <span
+            class="math inline">\(||f|| = \langle f, f
+            \rangle^{1/2}\)</span>, ampak normo <span
+            class="math inline">\(||f||_1\)</span>. Razlog za to je
+            naslednji. Opazujmo družino simetričnih grup <span
+            class="math inline">\(S_n\)</span>. Naj bo <span
+            class="math inline">\(p\)</span> enakomerna porazdelitev na
+            <span class="math inline">\(A_n\)</span>. Potem je <span
+            class="math inline">\(||p - 1/|S_n||| = 1/|S_n|\)</span>,
+            kar konvergira k <span class="math inline">\(0\)</span> za
+            <span class="math inline">\(n \to \infty\)</span>, čeprav
+            sta porazdelitvi očitno različni. Norma <span
+            class="math inline">\(||\cdot||_1\)</span> nima te
+            pomanjkljivosti.<a href="#fnref71" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn72" role="doc-endnote"><p>Tako hitra konvergenca
+            je posledica dejstva, da je konjugiranostni razred <span
+            class="math inline">\(\mathcal{C}\)</span> v <span
+            class="math inline">\(G_p\)</span> zelo velik, <span
+            class="math inline">\(\log |\mathcal{C}| \sim \log
+            |G_p|\)</span>, in da imamo zelo dobre ocene za <span
+            class="math inline">\(r_{\pi}(\mathcal{C})\)</span>.<a
+            href="#fnref72" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn73" role="doc-endnote"><p>Natančneje, kadar <span
+            class="math inline">\(S\)</span> ni unija konjugiranostnih
+            razredov, te so še obvladljive z enakimi metodami.<a
+            href="#fnref73" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>

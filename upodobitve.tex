@@ -3409,9 +3409,10 @@ S = \{ \sigma \in A_n \mid \sigma(1) \in T, \ \sigma(T) \cap T = \emptyset \}.
 Vsaka permutacija v $S \cdot S$ preslika $1$ v $T^c$, zato je $S \cap S \cdot S = \emptyset$ in množica $S$ je brez produktov. Njena gostota v $A_n$ je enaka
 \[
   \frac{1}{n!/2} \cdot t \cdot \binom{n-t}{t} t! \cdot (n-t-1)! \cdot \frac{1}{2}
-  = \frac{t (n-t)! (n-t-1)!}{n!(n-2t)!}.
+  = \frac{t (n-t)! (n-t-1)!}{n!(n-2t)!}
+  = \frac{t}{n} \cdot \frac{\binom{n-t}{t}}{\binom{n-1}{t}}.
 \]
-S Stirlingovo aproksimacijo za $t = o(n)$ lahko zadnji izraz poenostavimo do 
+Z aproksimacijo $\binom{n}{t} \sim (\frac{ne}{t})^t e^{O(- t^2/2n)}$ za $t = o(n)$ lahko zadnji izraz poenostavimo do 
 \[
     \frac{t}{n} e^{O(t^2/n)}.
 \]
@@ -3610,7 +3611,7 @@ Nekoliko bolj abstraktno bi lahko na slučajni sprehod gledali kot na zaporedje 
 \]
 za vsak $i \geq 0$ in za vse $x_1, x_2, \dots, x_i \in G$. Ta lastnost je jasno izpolnjena za slučajni sprehod, kot smo ga opisali zgoraj. Po drugi strani je vsako zaporedje slučajnih spremenljivk z vrednostmi v $G$, ki zadošča lastnosti Markova, \emph{uresničljivo} kot slučajni sprehod. Definiciji sta torej ekvivalentni.
 
-Slučajna spremenljivka $X_n$ nam pove, v katerem elementu se nahajamo po $n$ korakih slučajnega sprehoda. Naš cilj je analizirati porazdelitev te slučajne spremenljivke v odvisnosti od $n$ in še posebej v limiti, ko gre $n$ čez vse meje. Kot bomo videli, je tudi ta problem izrazljiv v jeziku teorije upodobitev in v nekaterih primerih tudi eksplicitno rešljiv.
+Slučajna spremenljivka $X_n$ nam pove, v katerem elementu se nahajamo po $n$ korakih slučajnega sprehoda. Naš cilj je analizirati porazdelitev te slučajne spremenljivke v odvisnosti od $n$ in še posebej v limiti, ko gre $n$ čez vse meje. Kot bomo videli, je tudi ta problem izrazljiv v jeziku teorije upodobitev.
 
 \subsection{Operator Markova}
 
@@ -3658,7 +3659,7 @@ Za slučajni sprehod na grupi z operatorjem Markova $M$ je
 \]
 \end{trditev}
 
-Operator Markova lahko zapišemo v naravni bazi karakterističnih funkcij in s tem dobimo matriko razsežnosti $|G| \times |G|$, ki ima v vsakem stolpcu $|S|$ neničelnih vrednosti, vsaka od njih je enaka $1/|S|$. Ob dodatnih predpostavkah na množico $S$ dobimo dodatne lastnosti te matrike. Če je na primer množica $S$ simetrična, kar pomeni, da je za vsak $s \in S$ tudi $s^{-1} \in S$, potem je opisana matrika za $M$ \emph{simetrična} in zato nujno \emph{diagonalizabilna} nad realnimi števili. 
+Operator Markova lahko zapišemo v naravni bazi karakterističnih funkcij in s tem dobimo matriko razsežnosti $|G| \times |G|$, ki ima v vsakem stolpcu $|S|$ neničelnih vrednosti, vsaka od njih je enaka $1/|S|$. Ob dodatnih predpostavkah na množico $S$ dobimo dodatne lastnosti te matrike. Če je na primer množica $S$ simetrična, kar pomeni, da je za vsak $s \in S$ tudi $s^{-1} \in S$, potem je opisana matrika za $M$ \emph{simetrična} in zato nujno \emph{diagonalizabilna} v ortonormirani bazi nad realnimi števili. V tem primeru ni težko izračunati visokih potenc $M$ in s tem $p_n$.
 
 \begin{zgled}
 Opazujmo simetrično grupo $S_3$ z generirajočo množico transpozicij $S = \{ (1 \ 2), (1 \ 3), (2 \ 3)\}$. Ta množica je simetrična. Elemente grupe $S_3$ uredimo po vrsti kot
@@ -3682,22 +3683,117 @@ elementov grupe enak
         0 & 1 & 1 & 1 & 0 & 0 \\
     \end{pmatrix}.
 \]
-Ta matrika je simetrična. Njen karakteristični polinom je enak $\lambda^6 - \lambda^4$, zato dobimo lastne vrednosti $(1,0,0,0,0,-1)$. Lastni vektor lastne vrednosti $1$ je konstantni vektor, ki ustreza konstantni funkciji na $S_3$. Lastni vektor lastne vrednosti $-1$ je vektor, ki ima na množici $S$ vrednosti $-1$, izven množice $S$ pa vrednosti $1$. 
+Ta matrika je simetrična. Njen karakteristični polinom je enak $\lambda^6 - \lambda^4$, zato dobimo lastne vrednosti $(1,0,0,0,0,-1)$. Lastni vektor lastne vrednosti $1$ je konstantni vektor $1$, ki ustreza konstantni funkciji na $S_3$. Lastni vektor lastne vrednosti $-1$ je vektor $\sgn$. Funkcijo $1_1$ razvijemo po lastnih vektorjih kot
+\[
+    1_1 = 
+    \left\langle 1_1, 1 \right\rangle +
+    \left\langle 1_1, \sgn \right\rangle \sgn +
+    k,
+\]
+kjer je $k \in \ker M$. Velja torej
+\[
+    1_1 =
+    \frac{1}{6} + \frac{1}{6} \sgn + k.
+\]
+Za vsak $n$ s tem dobimo
+\[
+    p_n = M^n \cdot 1_1 = \frac{1}{6} + \frac{(-1)^n}{6} \cdot \sgn
+    = \begin{cases}
+        \frac{1}{3} \cdot 1_{A_3} & n \equiv 0 \pmod{2}, \\
+        \frac{1}{3} \cdot 1_{S_3 \backslash A_3} & n \equiv 1 \pmod{2}.
+    \end{cases}
+\]
+Porazdelitev po sodo mnogo korakih je torej enakomerna na sodih permutacijah $A_3$, po liho mnogo korakih pa enakomerna na lihih permutacijah $S_3 \backslash A_3$.
 \end{zgled}
 
-Konstantna funkcija je vselej lastni vektor operatorja Markova z lastno vrednostjo $1$. Preostalih lastnih vrednosti pa v splošnem ni lahko določiti. Zopet pomaga, če se omejimo na kakšne posebne generirajoče množice. Zelo dobro na primer razumemo primer, ko je $S$ konjugiranostni razred v $G$, saj lahko Fourierovo transformacijo razredne funkcije eksplicitno izračunamo v odvisnosti od karakterjev. V tem primeru lahko eksplicitno določimo tudi vse lastne vektorje, ki jih dobimo kot generatorje izotipičnih komponent nerazcepnih upodobitev, ko smo videli v predstavljenem algoritmu za izračun tabele karakterjev.
+Konstantna funkcija je vselej lastni vektor operatorja Markova z lastno vrednostjo $1$. Preostalih lastnih vrednosti pa v splošnem ni lahko določiti.
+
+\begin{domacanaloga}
+Naj bo $G$ grupa z generirajočo množico $S$ in operatorjem Markova $M$. Dokaži, da za vsako funkcijo $f \in \fun(G,\CC)$ velja $||Mf|| \leq ||f||$. Sklepaj, da so vse lastne vrednosti $M$ po absolutni vrednosti kvečjemu $1$. Kaj je lastni vektor za lastno vrednost $1$? Kdaj je $-1$ lastna vrednost in kaj je pripadajoči lastni vektor?
+\end{domacanaloga}
+
+\subsection{Slučajni sprehod s konjugiranostnim razredom}
+
+Zelo dobro razumemo primer, ko je $S$ konjugiranostni razred v $G$, saj lahko Fourierovo transformacijo razredne funkcije eksplicitno izračunamo v odvisnosti od karakterjev. V tem primeru lahko eksplicitno določimo tudi vse lastne vektorje, ki jih dobimo kot generatorje izotipičnih komponent nerazcepnih upodobitev, ko smo videli v predstavljenem algoritmu za izračun tabele karakterjev.
 
 \begin{trditev}
 Za slučajni sprehod na grupi $G$ z generirajočo množico $\conclass$, kjer je $\conclass$ konjugiranostni razred v $G$, je operator Markova diagonalizabilen z lastnimi vrednostmi
 \[
-    \frac{\overline{\chi_{\pi}(\conclass)}}{\chi_{\pi}(1)}
+    r_{\pi}(\conclass) = \frac{\overline{\chi_{\pi}(\conclass)}}{\chi_{\pi}(1)}
 \]
 za vsako nerazcepno kompleksno upodobitev $\pi \in \Irr(G)$, pri čemer je večkratnost vsake lastne vrednosti enaka $\chi_{\pi}(1)^2$.
 \end{trditev}
 
+Operator Markova $M$ slučajnega sprehoda na $G$ z generirajočo množico $\conclass$, kjer je $\conclass$ konjugiranostni razred v $G$, deluje na vsaki od izotipičnih komponent regularne upodobitve kot skalarni večkratnik identitete z znamimi skalarji. Da lahko razumemo $p_n = M^n \cdot 1_1$, moramo najprej razviti funkcijo $1_1$ po izotipičnih komponentah. To naredimo, kot smo že, s pomočjo Fourierovih transformacij nerazcepnih karakterjev in dobimo
+\[
+    1_1 = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \cdot \chi_{\pi}.
+\]
+V vsaki od $\pi$-izotipičnih komponent je vektor $v_{\pi} = \chi_{\pi}(1)/|G| \cdot \chi_{\pi}$ lastni vektor za $M$ z lastno vrednostjo $r_{\pi}(\conclass)$. V tej množici lastnih vektorjev lahko torej funkcijo $p_n$ razvijemo kot
+\[
+    p_n = M^n \cdot 1_1 = \sum_{\pi \in \Irr(G)} r_{\pi}(\conclass)^n \cdot v_{\pi}.
+\]
+Za razumevanje asimptotskega obnašanja $p_n$ je pomembno poznati $|r_{\pi}(\conclass)|$.
+
+\begin{lema}
+Za $\pi \in \Irr(G)$ drži $|r_{\pi}(\conclass)| \leq 1$, pri čemer velja enakost natanko tedaj, ko je 
+\[
+    \conclass \ker \pi / \ker \pi \subseteq Z(G / \ker \pi).
+\]
+\end{lema}
+\begin{dokaz}
+Enakost velja natanko tedaj, ko je $\pi(\conclass)$ skalarna matrika. Taka matrika komutira z vsemi elementi $\pi(g)$, zato je $\pi([g, \conclass]) = 1$ za vsak $g \in G$. To pomeni, da je $[G, \conclass] \subseteq \ker \pi$, kar je enakovredno trditvi.
+\end{dokaz}
+
+Zberimo prispevke z maksimalno vrednostjo $r_{\pi}(\conclass)$ v množico
+\[
+    X_{\conclass} = \{ \pi \in \Irr(G) \mid |r_{\pi}(\conclass)| = 1 \}.
+\]
+Velja torej
+\[
+    p_n - \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi}
+    = \sum_{\pi \in \Irr(G) \backslash X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi}.
+\]
+Prispevki $r_{\pi}(\conclass)$ za $\pi$ izven $X_{\conclass}$ konvergirajo k $0$ za velike vrednosti $n$ in zatorej dobimo
+\[
+    \lim_{n \to \infty} p_n = \lim_{n \to \infty} \sum_{\pi \in X_C} r_{\pi}(\conclass)^n \cdot v_{\pi}.
+\]
+Za konkretne grupe lahko s tabelo karakterjev ali upoštevanjem kakšnih dodatnih lastnosti eksplicitno izračunamo zadnjo vsoto in s tem določimo limitno porazdelitev $p_n$.
+
+\begin{domacanaloga}
+Naj bo $G$ nekomutativna končna enostavna grupa. Dokaži, da vsak konjugiranostni razred $\conclass$ generira $G$ in da velja $X_{\conclass} = \{ \11 \}$. Sklepaj, da je $\lim_{n \to \infty} p_n = 1/|G|$ enakomerna porazdelitev na $G$.
+\end{domacanaloga}
+
+Hitrost konvergence k limitni porazdelitvi lahko kvantitativno nadziramo, če dobro poznamo vrednosti $r_{\pi}(\conclass)$ za $\pi$ izven $X_{\conclass}$. Napako pri aproksimaciji porazdelitev $p_n$ in vsoto prispevkov po $X_{\conclass}$ izrazimo s pomočjo norme $||f||_1 = \sum_{g \in G} |f(g)|$ za funkcijo $f \in \fun(G,\CC)$.\footnote{Za primerjavo porazdelitev ne uporabljamo standardne norme $||f|| = \langle f, f \rangle^{1/2}$, ampak normo $||f||_1$. Razlog za to je naslednji. Opazujmo družino simetričnih grup $S_n$. Naj bo $p$ enakomerna porazdelitev na $A_n$. Potem je $||p - 1/|S_n||| = 1/|S_n|$, kar konvergira k $0$ za $n \to \infty$, čeprav sta porazdelitvi očitno različni. Norma $||\cdot||_1$ nima te pomanjkljivosti.} Velja
+\[
+    || p_n -  \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi} ||_1
+    \leq
+    \sum_{\pi \in \Irr(G) \backslash X_{\conclass}} |r_{\pi}(\conclass)|^n \cdot ||v_{\pi}||_1.
+\]
+Normo baznih vektorjev $v_{\pi}$ lahko omejimo s Cauchy-Schwartzovo neenakostjo kot
+\[
+    ||v_{\pi}||_1 = \frac{\chi_{\pi}(1)}{|G|} \sum_{g \in G} |\chi_{\pi}(g)|
+    \leq \frac{\chi_{\pi}(1)}{|G|} \sqrt{|G| \cdot \sum_{g \in G} |\chi_{\pi}(g)|^2}
+    = \chi_{\pi}(1).
+\]
+S tem velja
+\[
+    || p_n -  \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi} ||_1
+    \leq \left( \max_{\pi \in \Irr(G) \backslash X_{\conclass}} |r_{\pi}(\conclass)| \right)^n  \cdot \sum_{\pi \in \Irr(G) \backslash X_{\conclass}} \chi_{\pi}(1).
+\]
+Če vsoto karakterjev zelo grobo navzgor ocenimo z $|G|$ in upoštevamo, da je 
+\[
+    \max_{\pi \in \Irr(G) \backslash X_{\conclass}} |r_{\pi}(\conclass)|  \leq 1 - \epsilon < 1
+\]
+za nek $\epsilon > 0$, potem velja
+\[
+    || p_n -  \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi} ||_1
+    \leq (1 - \epsilon)^n \cdot |G|.
+\]
+Po $2 \log|G| / (- \log (1 - \epsilon)) = O_{\epsilon}(\log |G|)$ korakih slučajnega sprehoda bo napaka med porazdelitvama v normi $||\cdot||_1$ gotovo padla pod $1/|G|$ in takrat bo slučajni sprehod zelo blizu svoje limitne porazdelitve.
+
 \subsection{Naključno množenje podobnih matrik}
 
-Oglejmo si konkreten primer slučajnega sprehoda, ki je v resnici dovolj reprezentativen za splošen primer. Obravnavajmo grupo $G_p = \GL_2(\FF_p)$ za $p > 3$, ki smo jo že dodobra spoznali. V njej za generirajočo množico izberimo konjugiranostni razred $\conclass$ regularnih polenostavnih elementov, ki so podobni matriki
+Oglejmo si konkreten primer slučajnega sprehoda. Obravnavajmo grupo $G_p = \GL_2(\FF_p)$ za $p > 3$, ki smo jo že dodobra spoznali. V njej za generirajočo množico izberimo konjugiranostni razred $\conclass$ regularnih polenostavnih elementov, ki so podobni matriki
 \[
     A = \begin{pmatrix}
         \delta & 0 \\ 0 & 1 
@@ -3718,17 +3814,9 @@ Ker je $p > 3$, je $\delta \neq \pm 1$, zato dobimo $S_+ \in \langle \conclass \
 \]
 Ker je $\delta$ generator $\FF_p^*$, grupa $\langle \conclass \rangle$ vsebuje matrike z vsemi možnimi determinantami. Od tod sledi, da $\conclass$ res generira grupo $G_p$.
 
-\subsubsection{Operator Markova}
+\subsubsection{Limitna porazdelitev sprehoda}
 
-Operator Markova $M$ slučajnega sprehoda na $G_p$ z generirajočo množico $\conclass$ deluje na vsaki od izotipičnih komponent regularne upodobitve kot skalarni večkratnik identitete. Da lahko razumemo $p_n = M^n \cdot 1_1$, moramo najprej razviti funkcijo $1_1$ po izotipičnih komponentah. To naredimo, kot smo že, s pomočjo Fourierovih transformacij nerazcepnih karakterjev in dobimo
-\[
-    1_1 = \frac{1}{|G_p|} \sum_{\pi \in \Irr(G_p)} \chi_{\pi}(1) \cdot \chi_{\pi}.
-\]
-V vsaki od $\pi$-izotipičnih komponent je vektor $v_{\pi} = \chi_{\pi}(1)/|G_p| \cdot \chi_{\pi}$ lastni vektor za $M$ z lastno vrednostjo $\overline{\chi_{\pi}(\conclass)}/\chi_{\pi}(1)$. V tej množici lastnih vektorjev lahko torej funkcijo $p_n$ razvijemo kot
-\[
-    p_n = M^n \cdot 1_1 = \sum_{\pi \in \Irr(G_p)} \left( \frac{\overline{\chi_{\pi}(\conclass)}}{\chi_{\pi}(1)} \right)^n \cdot v_{\pi}.
-\]
-Tabelo karakterjev grupe $G_p$ v celoti poznamo, zato lahko določimo vse relevantne vrednosti.
+Za razumevanje limitnega obnašanja porazdelitve $p_n$ moramo najprej določiti vrednosti $r_{\pi}(\conclass)$. Tabelo karakterjev grupe $G_p$ v celoti poznamo.
 
 \begin{table}[ht]
     \centering
@@ -3739,9 +3827,9 @@ Tabelo karakterjev grupe $G_p$ v celoti poznamo, zato lahko določimo vse releva
     &
     $\overline{\chi_{\pi}(\conclass)}$
     &
-    $\overline{\chi_{\pi}(\conclass)}/\chi_{\pi}(1)$
+    $r_{\pi}(\conclass)$
     &
-    $\left| \overline{\chi_{\pi}(\conclass)}/\chi_{\pi}(1) \right|$ \\ \hline
+    $\left| r_{\pi}(\conclass) \right|$ \\ \hline
     $\chi \circ \det$ & $1$ & $\overline{\chi(\delta)}$ &  $\overline{\chi(\delta)}$ & $1$ \\
     $\St(\chi)$ & $p$ & $\overline{\chi(\delta)}$ & $\overline{\chi(\delta)} / p$ & $1/p$ \\
     $\pi(\chi_1, \chi_2)$ & $(p+1)$ & $\overline{\chi_1(\delta)} + \overline{\chi_2(\delta)}$ & $(\overline{\chi_1(\delta)} + \overline{\chi_2(\delta)})/(p+1)$ & $< 2/(p+1)$ \\
@@ -3750,12 +3838,71 @@ Tabelo karakterjev grupe $G_p$ v celoti poznamo, zato lahko določimo vse releva
 \caption{Lastne vrednosti operatorja Markova grupe $G_p$ z generirajočo množico $\conclass$}
 \end{table}
 
-Opazimo, da je lastna vrednost najvišja pri linearnih karakterjih, pri ostalih pa imamo zgornjo mejo v odvisnosti od $p$. Sklenemo
+Množica $X_{\conclass}$ v tem primeru sestoji iz linearnih upodobitev. Vsota prispevkov porazdelitev po $X_{\conclass}$ je zato enaka
 \[
-    p_n - \sum_{\chi \in \Irr(\FF_p^*)} v_{\chi \circ \det}
+    \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi}
+    = \sum_{\chi \in \Irr(\FF_p^*)} \overline{\chi(\delta^{n})} \cdot \frac{1}{|G_p|} \chi \circ \det.
 \]
+Upoštevamo drugo ortogonalnostno relacijo in dobimo
+\[
+    \frac{1}{|G_p|} \cdot \left( g \mapsto \begin{cases}
+        |\FF_p^*| & \det g = \delta^n \\
+        0 & \text{sicer.}
+    \end{cases}
+    \right)    
+    = \frac{1}{|\SL_2(\FF_p)|} \cdot 1_{\det^{-1}(\rho^n)},
+\]
+kar je ravno enakomerna porazdelitev na množici $\det^{-1}(\rho^n)$. Ko je $n$ deljiv s $p-1$, dobimo torej enakomerno porazdelitev na $\SL_2(\FF_p)$.
 
-\todo{$L^1$ norma, $||v_}
+\subsubsection{Hitrost konvergence}
+
+Pogovorimo se še o hitrosti konvergence k limitni porazdelitvi. Za $\pi$ izven $X_{\conclass}$ ocenimo
+\[
+    \max_{\pi \in \Irr(G_p) \backslash X_{\conclass}} |r_{\pi}(\conclass)| < \frac{2}{p}, \quad
+    \sum_{\pi \in \Irr(G_p) \backslash X_{\conclass}} \chi_{\pi}(1)
+    < p^3.
+\]
+Velja torej
+\[
+    || p_n - \frac{1}{|\SL_2(\FF_p)|} \cdot 1_{\det^{-1}(\rho^n)} ||_1
+    \leq
+    \frac{2^n}{p^{n-3}}.
+\]
+Napaka zelo hitro upade, pod $p^{-4} \sim 1/|G_p|$ je že pri $n = 7 \log p / (\log p - \log 2) \sim 7$.\footnote{Tako hitra konvergenca je posledica dejstva, da je konjugiranostni razred $\conclass$ v $G_p$ zelo velik, $\log |\conclass| \sim \log |G_p|$, in da imamo zelo dobre ocene za $r_{\pi}(\conclass)$.} Težava je le ta, da $p_n$ v resnici ne konvergira. Da to popravimo, moramo opazovati obnašanje po aritmetičnih zaporedjih z razliko $p-1$. Za vse dovolj velike $p$ tako dobimo zelo dobro aproksimacijo
+\[
+    p_{p-1} \approx \frac{1}{|\SL_2(\FF_p)|} \cdot 1_{\SL_2(\FF_p)}.
+\]
+Če torej v $G_p$ naključno zmnožimo $p-1$ matrik v $\conclass$ za dovolj velik $p$, dobimo (skoraj) naključno matriko v $\SL_2(\FF_p)$. Napaka sicer pade ekstremno hitro, a linearni karakterji obremenijo sprehod do te mere, da ne moremo izkoristiti majhne napake že po $7$ korakih, niti ne po $\log |G_p| \sim \log p$ korakih, temveč šele po $p-1 \sim |G_p|^{1/4}$ korakih. 
+
+\begin{domacanaloga}
+Obravnavaj slučajni sprehod v $\PSL_2(\FF_p)$ glede na nek konjugiranostni razred $\conclass$. V tem primeru bo $\lim_{n \to \infty} p_n$ enakomerna porazdelitev na $\PSL_2(\FF_p)$. Oceni hitrost konvergence in pokaži, da dosežemo približno naključno matriko v $\PSL_2(\FF_p)$ mnogo hitreje kot po $p-1$ korakih.
+\end{domacanaloga}
+
+\subsection{Onkraj konjugiranostnih razredov}
+
+Slučajne sprehode smo dodobra spoznali, če jih ženejo konjugiranostne generirajoče množice. Videli smo, da za nekomutativne končne enostavne grupe to konvergirajo k enakomerni porazdelitvi. Pri tem hitrost konvergence nadzirajo največje netrivialne lastne vrednosti operatorja Markova, ki jih lahko določimo iz tabele karakterjev.
+
+Situacija je mnogo težja, kadar generirajoča množica $S$ grupe $G$ ni konjugiranostni razred\footnote{Natančneje, kadar $S$ ni unija konjugiranostnih razredov, te so še obvladljive z enakimi metodami.} in sestoji iz malo elementov, recimo $|S| = 2$. Ni se težko prepričati, da v nekomutativnih končnih enostavnih grupah še vedno dobimo konvergenco k enakomerni porazdelitvi, a v tem primeru ni jasno, kako dobro omejiti netrivialne lastne vrednosti operatorja Markova.
+
+Za vsako konkretno nekomutativno končno enostavno grupo $G$ seveda velja, da so vse lastne vrednosti operatorja $M$ razen $1$ po absolutni vrednosti kvečjemu $1-\epsilon$ za nek $\epsilon = \epsilon(G) > 0$ in s tem se slučajni sprehod dobro premeša po $O_{\epsilon}(\log |G|)$ korakih. Težave nastopijo, ko skušamo ta argument uporabiti za celo družino grup, na primer $A_n$, saj se lahko zgodi, da z večanjem parametra $n$ vrednost $\epsilon = \epsilon_n$ nujno konvergira k $0$. V taki situaciji se slučajni sprehodi zmešajo dobro po $O_{\epsilon}(\log |G|)$ korakih, kar je lahko bistveno večje od $O(\log |G|)$.
+
+Družini grup $(G_i)_{i \in \NN}$ pravimo {\definicija spektralno ekspanzivna družina}, kadar obstajata konstanti $C, \epsilon > 0$, da je vsaka grupa $G_i$ generirana z neko množico $S_i$ velikosti kvečjemu $C$, hkrati pa je vsaka netrivialna lastna vrednost operatorja Markova grupe $G_i$ glede na $S_i$ po absolutni vrednosti kvečjemu $1 - \epsilon$. V spektralno ekspanzivnih družinah se slučajni sprehodi enakomerno zelo hitro dobro premešajo.
+
+\begin{izrek}[Kassabov 2007, \ Kassabov-Lubotzky-Nikolov 2006, \ Breuillard-Green-Tao 2011]
+Družina nekomutativnih končnih enostavnih grup je spektralno ekspanzivna družina.
+\end{izrek}
+
+Izrek nam zagotavlja obstoj neke ne prevelike generirajoče množice v končnih enostavnih grupah, glede na katere se slučajni sprehodi enakomerno zelo hitro dobro premešajo. Težko pa je povedati kaj bolj konkretnega o teh generirajočih množicah. Za primer $A_n$ so te množice konstruirane s pomočjo neke naključne metode. Dokaz omejitev absolutnih vrednosti lastnih vrednosti operatorja Markova sloni na teoriji upodobitev, a je precej zahteven.
+
+\begin{odprtproblem}
+V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $x,y \in A_n$ in tvorimo $S_{n,x,y} = \{ x, x^{-1}, y, y^{-1} \}$. Naj bo $M_{n,x,y}$ pridruženi operator Markova. Ali obstaja $\epsilon > 0$, da je
+\[
+    \lim_{n \to \infty} \PP_{x,y}(\forall \lambda \in \Eigenvalues(M_{n,x,y}) \backslash \{ 1 \} \colon \ |\lambda| < 1 - \epsilon) = 1?
+\]
+\end{odprtproblem}
+
+
+
 
 \todo{Vprašanja na koncu. Vidimo, da je ključna druga največja lasstna vrednost, ki nadzira hitrost konvergence.}
 
