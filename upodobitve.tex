@@ -1298,7 +1298,7 @@ Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev. Po izbiri baze dob
 \]
 To funkcijo imenujemo {\definicija karakter} upodobitve $\rho$. Kadar je upodobitev $\rho$ nerazcepna, tudi njenemu karakterju dodamo pridevnik \emph{nerazcepen}. 
 
-Karakter je neodvisen od izbire baze, zato za vsaka $x, g \in G$ velja $\chi_{\rho}(x g x^{-1}) = \chi_{\rho}(g)$. Karakterji so torej funkcije na $G$, ki so konstantne na konjugiranostnih razredih.\footnote{{\definicija Konjugiranostni razred} elementa $g \in G$ je množica $\{ x g x^{-1} \mid x \in G \}$. Grupa $G$ je disjunktna unija konjugiranostnih razredov svojih elementov.} Takim funkcijam pravimo {\definicija razredne funkcije} in jih označimo s
+Karakter je neodvisen od izbire baze, zato za vsaka $x, g \in G$ velja $\chi_{\rho}(x g x^{-1}) = \chi_{\rho}(g)$. Karakterji so torej funkcije na $G$, ki so konstantne na konjugiranostnih razredih.\footnote{{\definicija Konjugiranostni razred} elementa $g \in G$ je množica $\{ x g x^{-1} \mid x \in G \}$. Grupa $G$ je disjunktna unija konjugiranostnih razredov svojih elementov. Včasih uporabljamo oznako $g^x = x^{-1} g x$ in s tem oznako $g^G$ za konjugiranostni razred elementa $g$ v $G$.} Takim funkcijam pravimo {\definicija razredne funkcije} in jih označimo s
 \[
     \fun_{\cl}(G,F) = \{ f \in \fun(G,F) \mid \forall x, g \in G \colon f(x g x^{-1}) = f(g) \}.
 \]
@@ -2245,6 +2245,10 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
 \end{itemize}
 \end{zgled}
 
+\begin{domacanaloga}
+    Naj bo $\lambda$ razčlenitev $n$ in $\lambda^\prime$ razčlenitev, ki jo iz $\lambda$ dobimo tako, da transponiramo Youngov diagram. Preveri, da velja $\sgn \otimes \rho_{\lambda} \cong \rho_{\lambda^\prime}$.
+\end{domacanaloga}        
+
 Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vlogo delovanje Youngovega simetrizatorja $\widehat{\youngsym}(\rho_{\fun})$ na prostoru $V_{\lambda}$. V lemi uporabljamo leksikografsko delno urejenost $<$ na množici vseh razčlenitev. 
 
 \begin{lema} \leavevmode
@@ -2338,9 +2342,6 @@ Obravnavajmo modularne upodobitve nad $\FF_p$, kjer je $p \leq n$. Naj bo $\lamb
 \end{odprtproblem}
 
 Ta problem je razrešen le za razčlenitve $\lambda$ z največ dvema deloma, torej s $k \leq 2$. Za $k = 3$ sodobna bilijardna domneva {\literatura \href{https://arxiv.org/pdf/1703.05898.pdf}{(Lusztig-Williamson 2018)}} predvideva, da se te večkratnosti obnašajo po zakonu nekega zakompliciranega \href{https://www.youtube.com/watch?v=Ru0Zys1Vvq4}{dinamičnega sistema}.
-
-\todo{Dodaj Fulton-Harris str. 61 o tem, kaj se zgodi, ko te upodobitve zožimo na $A_n$.}
-
 
 \subsection{Vrednosti karakterjev}
 
@@ -2480,6 +2481,28 @@ Avtor omeni analogno vprašanje glede same tabele karakterjev.
 \begin{odprtproblem}
 Enakomerno naključno izberimo konjugiranostni razred $\conclass$ v $S_n$ in $\pi \in \Irr(S_n)$. Kaj lahko povemo o obnašanju zaporedja $\PP_{\conclass, \pi}\left( \chi_{\pi}(\conclass) = 0 \right)$, ko gre $n$ čez vse meje?
 \end{odprtproblem}
+
+\subsection{Alternirajoča grupa}
+
+Oglejmo si, kako lahko iz tabele karakterjev simetrične grupe skoraj popolnoma določimo tabelo karakterjev alternirajoče grupe $A_n$.
+
+Določimo najprej konjugiranostne razrede. Naj bo $\conclass = \sigma^{A_n} \subseteq A_n$ konjugiranostni razred. Ta množica je torej zaprta za konjugiranje z vsemi sodimi permutacijami. Če velja tudi $\sigma^{(1 \ 2)} \in \conclass$, potem je $\conclass$ celo konjugiranostni razred v $S_n$ in torej ustreza neki razčlenitvi števila $n$. Prav lahko pa se zgodi, da $\conclass$ ni zaprt za konjugiranje z $(1 \ 2)$. V tem primeru je množica $\conclass \cup \conclass^{(1 \ 2)}$ konjugiranostni razred permutacije $\sigma$ v $S_n$ in zato ustreza neki razčlenitvi števila $n$. Konjugiranostne razrede grupe $A_n$ dobimo torej iz konjugiranostnih razredov sodih permutacij v $S_n$, in sicer določeni razredi v $S_n$ ostanejo konjugiranostni razredi v $A_n$, drugi pa se razcepijo na dva konjugiranostna razreda v $A_n$ enake velikosti. Ni težko prepoznati, kateri razredi se razcepijo.
+
+\begin{domacanaloga}
+Naj bo $\conclass$ konjugiranostni razred sode permutacije v $S_n$, ki ustreza razčlenitvi $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$. Dokaži, da se $\conclass$ razcepi v dva konjugiranostna razreda v $A_n$, če in samo če so vsi $\lambda_i$ lihi in različni med sabo.
+\end{domacanaloga}
+
+Poskusimo zdaj na podoben način razumeti še nerazcepne upodobitve grupe $A_n$. Naj bo $\lambda$ razčlenitev $n$, ki ji pritiče nerazcepna upodobitev $\rho_{\lambda}$ na prostoru $V_{\lambda}$ s karakterjem $\chi_{\lambda}$. Opazujmo zožitev karakterja $\chi_{\lambda}|_{A_n}$ na $A_n$. Po ortonormiranosti karakterjev v $S_n$ velja
+\[
+    \langle \chi_{\lambda}|_{A_n}, \chi_{\lambda}|_{A_n} \rangle
+    +
+    \frac{1}{|A_n|} \sum_{\sigma \in S_n \backslash A_n} |\chi_{\lambda}(\sigma)|^2
+    =
+    \frac{1}{|A_n|} \cdot |S_n| \langle \chi_{\lambda}, \chi_{\lambda} \rangle
+    = 2.
+\]
+Torej je $\langle \chi_{\lambda}|_{A_n}, \chi_{\lambda}|_{A_n} \rangle \in \{ 1, 2 \}$, zato je $\rho_{\lambda}|_{A_n}$ bodisi nerazcepna upodobitev bodisi vsota dveh neizomorfnih nerazcepnih upodobitev. Drugi primer nastopi, če in samo če je $\chi_{\lambda}|_{S_n \backslash A_n} = 0$, kar je ekvivalentno izomorfizmu $\rho_{\lambda} \cong \sgn \otimes \rho_{\lambda}$. Zadnja upodobitev je izomorfna $\rho_{\lambda^\prime}$, zato se upodobitev $\rho_{\lambda}$ razcepi na $A_n$, če in samo če je $\lambda = \lambda^\prime$, se pravi da je $\lambda$ simetrična razčlenitev. V tem primeru lahko zapišemo $\chi_{\lambda}|_{A_n} = \alpha + \beta$, kjer sta $\alpha, \beta$ nerazcepna karakterja $A_n$. Ni se težko prepričati, da zanju velja $\beta(\sigma) = \alpha(\sigma^{(1 \ 2)})$ za vsak $\sigma \in A_n$, torej sta v posebnem upodobitvi, na katere razpade $\rho_{\lambda}$, enake razsežnosti.
+
 
 \section{Splošna linearna grupa}
 
@@ -3319,7 +3342,7 @@ Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne nerazcepne
 
 \begin{zgled} \leavevmode
 \begin{itemize}
-    \item Iz rezultatov o upodobitvah simetričnih grup (natančneje, formule o kljukah) sledi, do ima $S_n$ dve nerazcepni upodobitvi stopnje $1$ (to sta $\11$ in $\sgn$) in dve nerazcepni upodobitvi stopnje $n-1$ (to sta $\rho$ in $\rho \otimes \sgn$), vse ostale nerazcepne upodobitve pa so višje stopnje. Oba para upodobitev se zožita v izomorfno nerazcepno upodobitev na $A_n$. Velja torej $m = n-1$. Po izreku v $A_n$ zatorej \emph{ni} podmnožic brez produktov pozitivne gostote, ko gre $n$ čez vse meje. Še več, največja možna gostota je velikostnega reda $m^{-1/3} \sim n^{-1/3}$.
+    \item Iz rezultatov o upodobitvah simetričnih grup (natančneje, formule o kljukah) sledi, do ima $S_n$ dve nerazcepni upodobitvi stopnje $1$ (to sta $\11$ in $\sgn$) in dve nerazcepni upodobitvi stopnje $n-1$ (to sta $\rho$ in $\rho \otimes \sgn$), vse ostale nerazcepne upodobitve pa so višje stopnje (za $n \geq 7$). Oba para upodobitev se zožita v izomorfni nerazcepni upodobitvi na $A_n$. Velja torej $m \sim n$. Po izreku v $A_n$ zatorej \emph{ni} podmnožic brez produktov pozitivne gostote, ko gre $n$ čez vse meje. Še več, največja možna gostota je velikostnega reda $m^{-1/3} \sim n^{-1/3}$.
 
     \item Opazujmo grupo $\PSL_2(\FF_p)$. Iz njene tabele karakterjev razberemo, da zanjo velja $m = (p-1)/2$. Po izreku tudi ta grupa nima podmnožic brez produktov pozitivne gostote, ko gre $p$ čez vse meje. Še več, največja možna gostota, ki jo dopušča izrek, je velikostnega reda $m^{-1/3} \sim p^{-1/3} \sim |\PSL_2(\FF_p)|^{-1/9}$, kar je celo mnogo manjše (relativno glede na velikost grupe) od zgornje meje, ki smo jo videli v primeru alternirajoče grupe.
 \end{itemize}
@@ -3419,7 +3442,7 @@ Z aproksimacijo $\binom{n}{t} \sim (\frac{ne}{t})^t e^{O(- t^2/2n)}$ za $t = o(n
 Optimalno vrednost dosežemo z izbiro $t \sim n^{1/2}$, takrat je gostota množice $S$ v $A_n$ enaka $\sim n^{-1/2}$. 
 \end{zgled}
 
-Gowersov izrek zagotavlja, da gostota množice brez produktov v $A_n$ ne more biti večja od $n^{-1/3}$. Po drugi strani pa imamo zgled podmnožice brez produktov gostote $n^{-1/2}$. Kateri, če sploh kateri, od teh mej je blizu resnični največji možni gostoti podmnožice brez produktov v $A_n$? To vprašanje je bilo razrešeno nedavno v \href{https://arxiv.org/abs/2205.15191}{(Keevash-Lifschitz-Minzer 2022)}, kjer avtorji dokažejo, da je konstrukcija v zadnjem zgledu v resnici optimalna: če je $A \subseteq A_n$ brez produktov največje možne moči, potem je $A$ ali $A^{-1}$ enaka eni od množic iz zadnjega zgleda. Njihov dokaz temelji na ideji, ki smo jo videli v dokazu Rothovega izreka, in sicer bodisi s harmonično analizo dokažemo želeno bodisi ima indikatorska funkcija visoko korelacijo z določenimi nelinearnimi karakterji in je zaradi tega prisotna neka struktura.
+Gowersov izrek zagotavlja, da gostota množice brez produktov v $A_n$ ne more biti večja od $n^{-1/3}$. Po drugi strani pa imamo zgled podmnožice brez produktov gostote $n^{-1/2}$. Katera od teh mej je bližje resnični največji možni gostoti podmnožice brez produktov v $A_n$? To vprašanje je bilo razrešeno nedavno v \href{https://arxiv.org/abs/2205.15191}{(Keevash-Lifschitz-Minzer 2022)}, kjer avtorji dokažejo, da je konstrukcija v zadnjem zgledu v resnici optimalna: če je $A \subseteq A_n$ brez produktov največje možne moči, potem je $A$ ali $A^{-1}$ enaka eni od množic iz zadnjega zgleda. Njihov dokaz temelji na ideji, ki smo jo videli v dokazu Rothovega izreka, in sicer bodisi s harmonično analizo dokažemo želeno bodisi ima indikatorska funkcija visoko korelacijo z določenimi nelinearnimi karakterji in je zaradi tega prisotna neka struktura.
 
 Konstrukcija Kedlaya, ki smo jo prikazali, je z nekoliko dodatnega truda\footnote{Definicija množice $S$ je enaka kot za primer $A_n$, dodaten trud je potreben le za oceno njene gostote.} posplošljiva na vse podgrupe $G \leq S_n$, ki delujejo tranzitivno na množici $\{ 1,2,\dots, n\}$. Vsaka grupa, ki tranzitivno deluje na množici $n$ točk, ima torej podmnožico brez produktov gostote $\sim n^{-1/2}$. V posebnem to velja za grupo $\PSL_2(\FF_p)$, ki deluje tranzitivno na projektivni premici $\PP^1(\FF_p)$ s $p+1$ točkami. Na ta način dobimo podmnožico v $\PSL_2(\FF_p)$ brez produktov gostote $\sim p^{-1/2}$. Gowersov izrek nam tukaj daje zgornjo mejo $\sim p^{-1/3}$ za gostoto množice brez produktov. V tem primeru optimalna ocena za gostoto ni znana.
 
