@@ -302,13 +302,19 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
     \begin{itemize}
         \item Opazujmo grupo ostankov $\ZZ/6\ZZ$ in racionalni vektorski prostor $\QQ^2$. Preslikava
         \[
-            \rho \colon \ZZ/6\ZZ \to \GL(\QQ^2) = \GL_2(\QQ), \quad
+            \rho \colon \ZZ/6\ZZ \to \GL(\QQ^2) = {\textstyle \GL_2(\QQ)}, \quad
             x \mapsto  \begin{pmatrix}
                 1/2 & 1/8 \\
                 -6 & 1/2 \\
             \end{pmatrix}^x
         \]
         je upodobitev grupe $\ZZ/6\ZZ$. Relevantna matrika je namreč reda $6$.
+
+        \item Opazujmo matrično grupo $\GL_2(\CC)$ in vektorski prostor $\CC^2$. Množenje matrik z vektorji podaja upodobitev
+        \[
+            \rho \colon \GL_2(\CC) \to \GL(\CC^2) = \GL_2(\CC), \quad
+            A \mapsto \left( v \mapsto A \cdot v \right) = A.
+        \]
 
         \item Opazujmo grupo realnih števil $\RR^*$ za množenje in vektorski prostor $\CC$. Absolutna vrednost podaja upodobitev
         \[
@@ -354,7 +360,7 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
         
         \item Opazujmo ciklično grupo $\ZZ/p\ZZ$ za praštevilo $p$ nad končnim poljem $\FF_p$. Preslikava
         \[
-          \rho \ZZ/p\ZZ \to \GL(\FF_p^2) = \GL_2(\FF_p), \quad
+          \rho \ZZ/p\ZZ \to \GL(\FF_p^2) = {\textstyle \GL_2(\FF_p)}, \quad
           x \mapsto \begin{pmatrix}
             1 & x \\ 0 & 1
           \end{pmatrix}
@@ -4092,7 +4098,7 @@ V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $
 - unitarne na hilbertovih prostorih (končne, še enkrat se ozremo na Maschkeja in karakterje v luči tega, $SU_2$)
 }
 
-\section{Kompaktne grupe}
+\section{Razširjeni zgledi}
 
 \subsection{$S^1$}
 
@@ -4109,8 +4115,6 @@ V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $
 - dokažemo, da so to vse zvezne nerazcepne: rabimo karakterje
 - Peter-Weyl na tem primeru (samo izrek, da smo s tem pokrili vse unitarne upodobitve)
 }
-
-\section{Liejeve grupe}
 
 \subsection{$\SL_2(\CC)$}
 \subsection{$\SL_2(\ZZ)$}
