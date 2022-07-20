@@ -1461,7 +1461,7 @@ Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitv
 
 \chapter{Upodobitve končnih grup}
 
-V tem poglavju bomo raziskali kategorijo upodobitev končne grupe s posebnim poudarkom na situaciji, ko je karakteristika polja tuja moči grupe. V tem primeru je, kot bomo videli, vsaka upodobitev polenostavna, zato lahko vprežemo karakterje za razumevanje kategorije upodobitev. Ogledali si bomo nekaj konkretnih zgledov in podrobneje analizirali dve pomembni družini grup: linearne grupe nad končnim poljem in simetrične grupe.
+V tem poglavju bomo raziskali kategorijo upodobitev končne grupe s posebnim poudarkom na situaciji, ko je karakteristika polja tuja moči grupe. V tem primeru je, kot bomo videli, vsaka upodobitev polenostavna, zato lahko vprežemo karakterje za razumevanje kategorije upodobitev.
 
 \section{Polenostavnost}
 
@@ -2265,7 +2265,7 @@ to je {\definicija Hilbert-Schmidtov skalarni produkt}. Parsevalov izrek nam tor
     \langle f, h \rangle = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \left\langle \hat{f}(\pi), \hat{h}(\pi) \right\rangle_{\HS}.
 \]
 
-\chapter{Razširjeni zgledi}
+\chapter{Razširjeni zgledi upodobitev končnih grup}
 
 Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo na voljo tabelo karakterjev, izračun te pa je končen problem. S tem smo za konkretne končne grupe dosegli ultimativen cilj teorije upodobitev. Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves ne spregledamo gozda. Grupe namreč praviloma ne nastopajo posamično, temveč kot del večjih družin.\footnote{Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, \dots} V tem poglavju si bomo podrobneje pogledali dve temeljni družini grup, in sicer simetrične grupe ter splošne linearne grupe nad končnim poljem.\footnote{Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, treh neskončnih družin, in sicer cikličnih grup praštevilske moči $\ZZ/p\ZZ$, alternirajočih grup $A_n$ in različnih matričnih grup nad končnimi polji, na primer $\SL_n(\FF_p)/Z(\SL_n(\FF_p))$. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev nekomutativnih končnih enostavnih grup.} Njuno teorijo upodobitev bomo obravnavali celostno.
 
@@ -4084,21 +4084,13 @@ V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $
 \]
 \end{odprtproblem}
 
-\chapter{Upodobitve neskončnih grup}
+\chapter{Razširjeni zgledi upodobitev neskončnih grup}
 
-\section{Ozaljšane upodobitve}
+\todo{Ozaljšane upodobitve}
 
 \todo{Abstraktnih upodobitev je preveč, zgled: $\SL_2(\CC)$ z avtomorfizmi polja, zato se omejimo na posebne, kjer upoštevamo dodatno strukturo grupe.}
 
-\subsection{Zvezne in gladke upodobitve}
-\subsection{Unitarne upodobitve}
-
-\todo[inline]{
-- topološke grupe (zvezne upodobitve)
-- unitarne na hilbertovih prostorih (končne, še enkrat se ozremo na Maschkeja in karakterje v luči tega, $SU_2$)
-}
-
-\section{Razširjeni zgledi}
+\section{Kompaktne grupe}
 
 \subsection{$S^1$}
 
@@ -4108,6 +4100,8 @@ V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $
 
 \subsection{$\SU_2(\CC)$}
 
+\todo{Tole najbrž v celoti izpustimo zaenkrat. Lahko dodamo kasneje.}
+
 \todo[inline]{
 - lahko bi geometrijsko iz $sl_2$, ampak pokažemo alternativen pristop, ker je kompaktna
 - naštejemo upodobitve, so nerazcepne: isti dokaz kot za $SL_2$ bolj ali manj deluje tudi tukaj
@@ -4116,8 +4110,9 @@ V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $
 - Peter-Weyl na tem primeru (samo izrek, da smo s tem pokrili vse unitarne upodobitve)
 }
 
+\section{Liejeve grupe}
+
 \subsection{$\SL_2(\CC)$}
-\subsection{$\SL_2(\ZZ)$}
 
 \todo[inline]{
 - obravnavamo kot Liejevo grupo
@@ -4129,12 +4124,22 @@ V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $
 - zvezne upodobitve $SL_2$: te plus konjugiranke (samo rezultat, glej Example 2.7.41 za karakter)
 - abstraktne upodobitve: divji avtomorfizmi $\CC$
 - dokažemo Clebsch-Gordan (najbrž izpustimo ..)
-- $SL_2(Z)$? (-> \url{https://math.stackexchange.com/questions/786303/the-presentation-of-sl2-mathbbz}, glej zadnji odgovor, kjer poda prezentacijo, napiši na primer enačbe za raznoterost dvorazsežnih realnih upodobitev) 
+}
+
+\section{Mreže}
+\subsection{$\SL_2(\ZZ)$}
+\todo[inline]{
+- $SL_2(Z)$? (-> \url{https://math.stackexchange.com/questions/786303/the-presentation-of-sl2-mathbbz}, glej zadnji odgovor, kjer poda prezentacijo, napiši na primer enačbe za raznoterost dvorazsežnih realnih upodobitev; ima ogromno končnih kvocientov -- nima CSP (stran3 https://arxiv.org/pdf/2203.15701.pdf, lemma a.1 https://arxiv.org/pdf/1201.6644.pdf)) 
+- Theorem 2.6.7 Baumslag-Solitar grupa je končno prezentirana, ni pa linearna
 - random groups, model Gromova \url{https://arxiv.org/abs/1810.01529}
+}
+
+\subsection{$\SL_3(\ZZ)$}
+\todo[inline]{
+- končno prezentirana (https://mathoverflow.net/questions/122891/small-index-subgroups-of-sl3-z), napiši enačbe za 2dim upodobitve, jih je BISTVENO manj kot za SL2
 - $SL_n(Z)$? (-> The representation theory of SLn(Z), Andrew Putman, povezano s $p$-adičnimi števili -- Lubotzky)
 }
 
-\todo[inline]{Theorem 2.6.7 Baumslag-Solitar grupa je končno prezentirana, ni pa linearna (ampak za to bi potrebovali končno prezentirane grupe ...) Ta dokaz bi lahko dodali v del o RASTi, kjer že imamo vse potrebno razvito! Dodaj referenco o obstoju grupe, ki nima upodobitve, tukaj. Po tem lahko še omenimo rezultat Lubotzky o random grupah.}
 
 
 
