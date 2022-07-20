@@ -285,18 +285,37 @@ Naj bo $G$ grupa in $V$ vektorski prostor nad poljem $F$. Upodobitev grupe $G$ n
 \[
     \rho \colon G \to \GL(V).
 \]
-Pri tem razsežnosti prostora $V$ rečemo {\definicija stopnja upodobitve} in jo označimo z $\deg(\rho)$. Ko v prostoru $V$ izberemo bazo in torej izomorfizem $V \cong F^{\deg(\rho)}$, lahko upodobitev $\rho$ enakovredno zapišemo kot homomorfizem
+Pri tem razsežnosti prostora $V$ rečemo {\definicija stopnja upodobitve} in jo označimo z $\deg(\rho)$. 
+
+Ko v prostoru $V$ izberemo bazo in torej izomorfizem $V \cong F^{\deg(\rho)}$, lahko upodobitev $\rho$ enakovredno zapišemo kot homomorfizem
 \[
     \rho \colon G \to \textstyle \GL_{\deg(\rho)}(F)
 \]
 iz grupe $G$ v obrnljive matrike razsežnosti $\deg(\rho)$ nad $F$.
+
+Nad poljem kompleksnih števil $F = \CC$ upodobitvam rečemo {\definicija kompleksne}, nad polji karakteristike $p > 0$, na primer $F = \FF_p$, pa upodobitvam rečemo {\definicija modularne}. 
 
 Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vektorju $v$, se pravi $\rho(g)(v)$, včasih pišemo krajše kot $g \cdot v$ ali kar $gv$.
 
 
 \begin{zgled} \leavevmode
     \begin{itemize}
-        \item Opazujmo grupo celih števil $\ZZ$ in vektorski prostor $\CC$ nad poljem kompleksnih števil. Eksponentna funkcija podaja upodobitev
+        \item Opazujmo grupo ostankov $\ZZ/6\ZZ$ in racionalni vektorski prostor $\QQ^2$. Preslikava
+        \[
+            \rho \colon \ZZ/6\ZZ \to \GL(\QQ^2) = \GL_2(\QQ), \quad
+            x \mapsto  \begin{pmatrix}
+                1/2 & 1/8 \\
+                -6 & 1/2 \\
+            \end{pmatrix}^x
+        \]
+        je upodobitev grupe $\ZZ/6\ZZ$. Relevantna matrika je namreč reda $6$.
+
+        \item Opazujmo grupo realnih števil $\RR^*$ za množenje in vektorski prostor $\CC$. Absolutna vrednost podaja upodobitev
+        \[
+            |\cdot| \colon \RR^* \to \GL(\CC) = \CC^*, \quad
+            x \mapsto |x|.
+        \]
+        \item Opazujmo grupo celih števil $\ZZ$ in vektorski prostor $\CC$. Eksponentna funkcija podaja upodobitev
         \[
             \chi \colon \ZZ \to \GL(\CC) = \CC^*, \quad
             x \mapsto e^x.
@@ -311,7 +330,37 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
             \chi_m \colon \ZZ/q\ZZ \to \GL(\CC) = \CC^*, \quad
             x \mapsto e^{2 \pi i mx/q}.
         \]
-        \todo{Diedrska grupa, $2$-razsežne upodobitve. Dodaj potem tudi v primer po tem, ko vemo, koliko upodobitev iščemo. Dodaj tabelo karakterjev za nek konkreten primer(g := DihedralGroup(IsPermGroup,22);)}
+
+        \item Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta grupa izhaja iz simetrij kvadrata v ravnini, s čimer nam ponuja svojo naravno upodobitev $\rho \colon D_{2n} \to \GL(\RR^2) = \GL_2(\RR)$, ki preslika generatorja kot
+        \[
+            s \mapsto \begin{pmatrix}
+                0 & 1 \\ 1 & 0
+            \end{pmatrix}, \quad
+            r \mapsto \begin{pmatrix}
+                \cos(2 \pi/n) & - \sin(2 \pi/n) \\
+                \sin(2 \pi/n) & \cos(2 \pi/n)
+            \end{pmatrix}.
+        \]
+        Splošneje imamo za vsak parameter $k \in \ZZ$ upodobitev $\rho_k \colon D_{2n} \to \GL(\RR^2) = \GL_2(\RR)$, ki preslika generatorja kot
+        \[
+            s \mapsto \begin{pmatrix}
+                0 & 1 \\ 1 & 0
+            \end{pmatrix}, \quad
+            r \mapsto \begin{pmatrix}
+                \cos(2 \pi k/n) & - \sin(2 \pi k/n) \\
+                \sin(2 \pi k/n) & \cos(2 \pi k/n)
+            \end{pmatrix}.
+        \]
+        
+        \item Opazujmo ciklično grupo $\ZZ/p\ZZ$ za praštevilo $p$ nad končnim poljem $\FF_p$. Preslikava
+        \[
+          \rho \ZZ/p\ZZ \to \GL(\FF_p^2) = \GL_2(\FF_p), \quad
+          x \mapsto \begin{pmatrix}
+            1 & x \\ 0 & 1
+          \end{pmatrix}
+        \]
+        podaja modularno upodobitev grupe $\ZZ/p\ZZ$. Relevantna matrika je namreč reda $p$.
+
         \item Naj bo $G$ grupa in $V$ vektorski prostor nad poljem $F$. {\definicija Trivialna upodobitev} grupe $G$ je homomorfizem
         \[
             \rho \colon G \to \GL(V), \quad
@@ -321,7 +370,8 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
         \item Naj bo $V$ vektorski prostor in naj bo $G$ poljubna podgrupa grupe $\GL(V)$. Tedaj je naravna vložitev $G \to \GL(V)$ upodobitev grupe $G$ na prostoru $V$. 
         
         Za konkreten zgled lahko vzamemo $V = \CC^2$ in $G = \langle \left( \begin{smallmatrix} 1 & 1 \\ 0 & 1 \end{smallmatrix} \right) \rangle \leq \GL(\CC^2)$. Na ta način dobimo upodobitev grupe $G \cong \ZZ$ na prostoru $\CC^2$. Na istem prostoru lahko vzamemo tudi $G = \langle 
-        \left( \begin{smallmatrix} 1 & 1 \\ 0 & 1 \end{smallmatrix} \right), \left( \begin{smallmatrix} 1 & 0 \\ 0 & -1 \end{smallmatrix} \right) \rangle \leq \GL(\CC^2)$. Na ta način dobimo upodobitev neskončne diedrske grupe $G \cong D_\infty$ na prostoru $\CC^2$.
+        \left( \begin{smallmatrix} 1 & 1 \\ 0 & 1 \end{smallmatrix} \right), \left( \begin{smallmatrix} 1 & 0 \\ 0 & -1 \end{smallmatrix} \right) \rangle \leq \GL(\CC^2)$. Grupa $G$ je neskončna diedrska grupa $G \cong D_\infty$.
+
         \item Naj bo $G$ poljubna grupa, opremljena z delovanjem na neki množici $X$. Naj bo $F[X]$ vektorski prostor z bazo $\{ e_x \}_{x \in X}$. Grupa $G$ deluje na $F[X]$ s homomorfizmom
         \[
             \pi \colon G \to \GL(F[X]), \quad
@@ -337,7 +387,6 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
             g \mapsto \left( f \mapsto \left( x \mapsto f(xg) \right) \right),
         \]
         kjer je $f \in \fun(G,F), \ x \in G$. To delovanje izhaja iz (desnega) delovanja grupe $G$ na sebi in ga zato imenujemo {\definicija (desna) regularna upodobitev} grupe $G$ nad $F$.
-        \todo{Primer kakšne modularne upodobitve. Definiraj modularno in definiraj kompleksno.}
     \end{itemize}
 \end{zgled}
 
@@ -356,13 +405,13 @@ Natančneje, {\definicija spletična}\footnote{Angleško \emph{intertwiner}.} me
 Opazujmo grupo $\ZZ$ in dve njeni upodobitvi, ki smo jih že videli. Prva naj bo upodobitev
 \[
     \rho \colon \ZZ \to \GL(\CC^2), \quad
-    x \mapsto \left( \begin{smallmatrix} 1 & 1 \\ 0 & 1 \end{smallmatrix} \right)^x,
+    x \mapsto \begin{pmatrix} 1 & x \\ 0 & 1 \end{pmatrix},
 \]
 druga pa naj bo kar trivialna upodobitev $\11$ na prostoru $\CC$. Predpišimo linearno preslikavo $\Phi \colon \CC \to \CC^2$ v standardni bazi z matriko $\left( \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right)$. Tedaj za vsak vektor $v \in \CC$ in vsako število $x \in \ZZ$ velja
 \[
     \Phi(x \cdot v) 
-    = \left( \begin{smallmatrix} xv \\ 0 \end{smallmatrix} \right)
-    = x \cdot \left( \begin{smallmatrix} v \\ 0 \end{smallmatrix} \right)
+    =  \begin{pmatrix} xv \\ 0 \end{pmatrix} 
+    = x \cdot  \begin{pmatrix} v \\ 0 \end{pmatrix} 
     = x \cdot \Phi(v),
 \]
 zato je $\Phi$ spletična med $\11$ in $\rho$.
@@ -940,8 +989,12 @@ Pogosto nas zanima, ali lahko dano upodobitev $\rho$ grupe $G$ na prostoru $V$ z
 
 Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V \neq 0$. Kadar \emph{ne} obstaja noben $G$-invarianten podprostor prostora $V$ (razen prostorov $0$ in $V$), tedaj rečemo, da je upodobitev $\rho$ {\definicija nerazcepna}.\footnote{Rečemo tudi, da je $V$ {\definicija enostavna} upodobitev. Te terminologija izhaja iz alternativne obravnave upodobitev kot \emph{modulov nad grupnimi algebrami}.} V tem primeru upodobitve seveda ne moremo razstaviti na enostavnejše v smislu direktne vsote.
 
-\begin{zgled}
-Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Premislili smo že, da je ta upodobitev direktna vsota enorazsežne podupodobitve $\11$ in dvorazsežne podupodobitve $\rho$, pri čemer slednja nima nobene enorazsežne podupodobitve. S tem je permutacijska upodobitev razstavljena kot direktna vsota dveh nerazcepnih upodobitev.
+\begin{zgled} \leavevmode
+\begin{itemize}
+\item Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Premislili smo že, da je ta upodobitev direktna vsota enorazsežne podupodobitve $\11$ in dvorazsežne podupodobitve $\rho$, pri čemer slednja nima nobene enorazsežne podupodobitve. S tem je permutacijska upodobitev razstavljena kot direktna vsota dveh nerazcepnih upodobitev.
+
+\item Opazujmo diedrsko grupo $D_{2n}$ z dvorazsežno upodobitvijo $\rho_k$ za $k \in \ZZ$, ki jo obravnavajmo kot kompleksno upodobitev. Matrika $\rho_k(r)$ ima lastni vrednosti $e^{\pm 2 \pi i k / n}$. Ti dve vrednosti sta različni, če in samo če $k$ \emph{ni} deljiv z $n/2$. Za vsak $0 < k < n/2$ ima $\rho_k(r)$ torej različni lastni vrednosti z lastnima vektorjema $\left( \begin{smallmatrix} 1 \\ \mp i \end{smallmatrix} \right)$. Matrika $\rho_k(s)$ zamenja ta dva lastna podprostora med sabo. Upodobitev $\rho_k$ za $0 < k < n/2$ torej nima nobene enorazsežne kompleksne podupodobitve in je zato nerazcepna.
+\end{itemize}
 \end{zgled}
 
 Preverimo, da so nerazcepne upodobitve dane grupe med sabo \emph{neprimerljive}, tudi če so enake razsežnosti. Zatorej si jih lahko predstavljamo kot neodvisne osnovne kose kategorije upodobitev dane grupe.\footnote{Po analogiji s faktorizacijo števil si nerazcepne upodobitve lahko predstavljamo kot praštevila.} 
@@ -1670,8 +1723,60 @@ Za končno grupo $G$ nad algebraično zaprtim poljem karakteristike tuje $|G|$ v
 
 V splošnem \emph{ne} poznamo eksplicitne korespondence\footnote{In najverjetneje taka korespondenca v splošnem \emph{ne} obstaja. Je pa na voljo za kakšne posebne družine grup, kot bomo spoznali kasneje.}  med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Vemo le, da njuno število sovpada.
 
-\begin{zgled}
-Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.\footnote{Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.} Recimo, da so dolžine teh ciklov enake $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_{k}$. Seveda velja $\sum_{i = 1}^{k} \lambda_i = n$. Zaporedju $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ pravimo {\definicija ciklični tip} permutacije $\sigma$. Kadar so kateri od členov cikličnega tipa enaki, ciklični tip pišemo tudi kot $1^{i_1} 2^{i_2} \cdots n^{i_n}$, kjer je $i_m$ število ciklov dolžine $m$ v $\sigma$.
+\begin{zgled} \leavevmode
+\begin{itemize}
+\item Opazujmo diedrsko grupo $D_{2n}$ nad poljem $\CC$. Vsak element te grupe lahko zapišemo v obliki $r^i$ ali $s r^i$ za nek $0 \leq i < n$. Izračunajmo konjugiranostne razrede. Velja
+\[
+    \left( r^i \right)^{r^j} = r^i, \quad
+    \left( r^i \right)^{s r^j} = r^{-i},
+\]
+zato je konjugiranostni razred $r^i$ enak $\{ r^{i}, r^{-i} \}$. Za $i \neq 0, n/2$ ima vsak razred $2$ elementa. Vseh teh konjugiranostnih razredov je torej $\lfloor (n+2)/2 \rfloor$.
+Velja tudi
+\[
+    \left( s r^i \right)^{r^j} = s r^{2j + i}, \quad
+    \left( s r^i \right)^{s r^j} = r^{s r^{2j - i}},   
+\]
+zato je konjugiranostni razred $s$ enak $\{ s r^{2j} \mid j \in \ZZ \}$ in konjugiranostni razred $sr$ je enak $\{ s r^{2j + 1} \mid j \in \ZZ \}$. Če je $n$ sod, sta ta dva razreda disjunktna, če je $n$ lih, pa sovpadata. Skupaj torej dobimo
+\[
+    \kk(D_{2n}) = \begin{cases}
+        n/2 + 3 & n \equiv 0 \pmod{2}, \\
+        (n+3)/2 & n \equiv 1 \pmod{2}. \\
+    \end{cases}
+\]
+
+Določimo zdaj še nerazcepne upodobitve. Poznamo že dvorazsežne nerazcepne upodobitve $\rho_k$ za $0 < k < n/2$, vseh teh je $\lceil n/2 \rceil - 1$. Za karakter take upodobitve velja $\chi_{\rho_k}(r) = 2 \cos(2 \pi k / n)$, zato so vsi ti karakterji različni med sabo in s tem so upodobitve $\rho_k$ neizomorfne. Poleg teh dvorazsežnih upodobitev imamo še linearne upodobitve. Število teh je enako velikosti abelacije $D_{2n}/[D_{2n}, D_{2n}]$. Velja
+\[
+    [r^i, s r^j] = r^{-i} \left( r^i \right)^{s r^j} = r^{-2i}, \quad
+    [s r^i, s r^j] = r^{-i} s \left( s r^i \right)^{s r^j} = s r^{2j - 2i},
+\]
+zato je $[D_{2n}, D_{2n}] = \langle r^2 \rangle$. S tem je 
+\[
+    D_{2n}/[D_{2n}, D_{2n}] \cong \begin{cases}
+        (\ZZ/2\ZZ)^2 & n \equiv 0 \pmod{2}, \\
+        \ZZ/2\ZZ & n \equiv 1 \pmod{2}.
+    \end{cases}
+\]
+Linearne upodobitve so torej oblike
+\[
+    \chi_{\epsilon, \delta} \colon D_{2n} \to \CC^*, \quad
+    s \mapsto \epsilon, \quad
+    r \mapsto \delta
+\]
+za $\epsilon, \delta \in \{ 1, -1 \}$. Ko je $n$ lih, je nujno $\delta = 1$.
+
+Skupaj smo torej našli ravno $\kk(D_{2n})$ nerazcepnih upodobitev, zato so to \emph{vse} nerazcepne upodobitve grupe $D_{2n}$.
+
+\begin{table}[t]
+    \centering
+\begin{tabular}{c|ccc}
+    & $1$ & $r^i$ & $s$ \\ \hline
+    $\chi_{\epsilon}$ & $1$ & $1$ & $\epsilon$ \\
+    $\chi_{\rho_k}$ & $2$ & $2 \cos(2 \pi i k / n)$ & $0$ \\
+\end{tabular}
+\caption{Tabela karakterjev $D_{2n}$ za lih $n$}
+\end{table}
+
+\item Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.\footnote{Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.} Recimo, da so dolžine teh ciklov enake $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_{k}$. Seveda velja $\sum_{i = 1}^{k} \lambda_i = n$. Zaporedju $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ pravimo {\definicija ciklični tip} permutacije $\sigma$. Kadar so kateri od členov cikličnega tipa enaki, ciklični tip pišemo tudi kot $1^{i_1} 2^{i_2} \cdots n^{i_n}$, kjer je $i_m$ število ciklov dolžine $m$ v $\sigma$.
 
 \begin{domacanaloga}
 Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom. Ta konjugiranostni razred ponavadi označimo kot $\conclass_{(\lambda_1, \lambda_2, \dots, \lambda_k)}$.
@@ -1683,7 +1788,8 @@ V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija ra
 \]
 za $n \to \infty$. 
 
-V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 1$. Res smo našli natanko $3$ nerazcepne upodobitve grupe $S_3$. V primeru $n = 4$ pa velja $p(4) = 5$. Temu ustrezajo konjugiranostni razredi identične permutacije $()$ ($4 = 1 + 1 + 1 + 1$), transpozicije $(1 \ 2)$ ($4 = 2 + 1 + 1$), tricikla $(1 \ 2 \ 3)$ ($4 = 3 + 1$), štiricikla $(1 \ 2 \ 3 \ 4)$ ($4 = 4$) in produkta dveh tranzpozicij $(1 \ 2)(3 \ 4)$ ($4 = 2 + 2$). Ti konjugiranostni razredi so zaporedoma velikosti $1$, $6$, $8$, $6$, $3$.
+V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 1$. Res smo našli natanko $3$ nerazcepne upodobitve grupe $S_3$. V primeru $n = 4$ pa velja $p(4) = 5$. Temu ustrezajo konjugiranostni razredi identične permutacije $()$ ($4 = 1 + 1 + 1 + 1$), transpozicije $(1 \ 2)$ ($4 = 2 + 1 + 1$), tricikla $(1 \ 2 \ 3)$ ($4 = 3 + 1$), štiricikla $(1 \ 2 \ 3 \ 4)$ ($4 = 4$) in produkta dveh tranzpozicij $(1 \ 2)(3 \ 4)$ ($4 = 2 + 2$). Ti konjugiranostni razredi so zaporedoma velikosti $1$, $6$, $8$, $6$, $3$. Kmalu bomo s tem podatkom določili tabelo karakterjev grupe $S_4$.
+\end{itemize}
 \end{zgled}
 
 Ker nerazcepni karakterji tvorijo ortonormirano bazo prostora razrednih funkcij, lahko vsako razredno funkcijo $f \in \fun_{\cl}(G,F)$ razvijemo po tej bazi kot
@@ -2501,7 +2607,9 @@ Poskusimo zdaj na podoben način razumeti še nerazcepne upodobitve grupe $A_n$.
     \frac{1}{|A_n|} \cdot |S_n| \langle \chi_{\lambda}, \chi_{\lambda} \rangle
     = 2.
 \]
-Torej je $\langle \chi_{\lambda}|_{A_n}, \chi_{\lambda}|_{A_n} \rangle \in \{ 1, 2 \}$, zato je $\rho_{\lambda}|_{A_n}$ bodisi nerazcepna upodobitev bodisi vsota dveh neizomorfnih nerazcepnih upodobitev. Drugi primer nastopi, če in samo če je $\chi_{\lambda}|_{S_n \backslash A_n} = 0$, kar je ekvivalentno izomorfizmu $\rho_{\lambda} \cong \sgn \otimes \rho_{\lambda}$. Zadnja upodobitev je izomorfna $\rho_{\lambda^\prime}$, zato se upodobitev $\rho_{\lambda}$ razcepi na $A_n$, če in samo če je $\lambda = \lambda^\prime$, se pravi da je $\lambda$ simetrična razčlenitev. V tem primeru lahko zapišemo $\chi_{\lambda}|_{A_n} = \alpha + \beta$, kjer sta $\alpha, \beta$ nerazcepna karakterja $A_n$. Ni se težko prepričati, da zanju velja $\beta(\sigma) = \alpha(\sigma^{(1 \ 2)})$ za vsak $\sigma \in A_n$, torej sta v posebnem upodobitvi, na katere razpade $\rho_{\lambda}$, enake razsežnosti.
+Torej je $\langle \chi_{\lambda}|_{A_n}, \chi_{\lambda}|_{A_n} \rangle \in \{ 1, 2 \}$, zato je $\rho_{\lambda}|_{A_n}$ bodisi nerazcepna upodobitev bodisi vsota dveh neizomorfnih nerazcepnih upodobitev. Drugi primer nastopi, če in samo če je $\chi_{\lambda}|_{S_n \backslash A_n} = 0$, kar je ekvivalentno izomorfizmu $\rho_{\lambda} \cong \sgn \otimes \rho_{\lambda}$. Zadnja upodobitev je izomorfna $\rho_{\lambda^\prime}$, zato se upodobitev $\rho_{\lambda}$ razcepi na $A_n$, če in samo če je $\lambda = \lambda^\prime$, se pravi da je $\lambda$ simetrična razčlenitev. V tem primeru lahko zapišemo $\chi_{\lambda}|_{A_n} = \alpha + \beta$, kjer sta $\alpha, \beta$ nerazcepna karakterja $A_n$. Ni se težko prepričati, da zanju velja $\beta(\sigma) = \alpha(\sigma^{(1 \ 2)})$ za vsak $\sigma \in A_n$, torej sta v posebnem upodobitvi, na katere razpade $\rho_{\lambda}$, enake razsežnosti. Konkretne vrednosti karakterjev $\alpha$ in $\beta$ lahko izračunamo s pomočjo ortogonalnosti karakterjev. 
+
+S štetjem konjugiranostnih razredov v $A_n$ se ni težko prepričati, da na opisan način dobimo vse nerazcepne upodobitve alternirajoče grupe.
 
 
 \section{Splošna linearna grupa}
@@ -3258,7 +3366,7 @@ zato je
 Funkcija $x \mapsto \zeta^{-jx}$ precej oscilira, ko $x$ preteče ves $\FF_p$. Če bi bila ta funkcija približno konstanta, bi lahko sklepali, da je vsota vrednosti $f$ precej velika. Približno konstantnost te funkcije lahko dosežemo tako, da preidemo na neko podmnožico $\FF_p$.\footnote{Argument za to je konceptualno preprost, a poln tehničnih podrobnosti.}
 
 \begin{domacanaloga}
-$(\dag)$ Obstaja konstanta $c \in (0,\frac12)$, za katero velja naslednje. Množico $\FF_p$ lahko razčlenimo kot disjunktno unijo množice podmnožic $P_1, P_2, \dots, P_m$, tako da je vsaka množica $P_i$ aritmetično zaporedje dolžine med $c \sqrt{p}$ in $(1-c) \sqrt{p}$, hkrati pa je $|\zeta^{-jx} - \zeta^{-jy}| < c \delta^2$ za vsaka $x,y \in P_i$.
+Obstaja konstanta $c \in (0,\frac12)$, za katero velja naslednje. Množico $\FF_p$ lahko razčlenimo kot disjunktno unijo množice podmnožic $P_1, P_2, \dots, P_m$, tako da je vsaka množica $P_i$ aritmetično zaporedje dolžine med $c \sqrt{p}$ in $(1-c) \sqrt{p}$, hkrati pa je $|\zeta^{-jx} - \zeta^{-jy}| < c \delta^2$ za vsaka $x,y \in P_i$.
 \end{domacanaloga}
 
 S pomočjo razčlenitve množice $\FF_p$ torej sklepamo
@@ -3921,7 +4029,7 @@ Obravnavaj slučajni sprehod v $\PSL_2(\FF_p)$ glede na nek konjugiranostni razr
 \end{domacanaloga}
 
 \begin{domacanaloga}[\href{https://link.springer.com/article/10.1007/BF00535487}{Diaconis-Shashahani 1981}]
-$(\dag)$ Obravnavaj slučajni sprehod v $S_n$ glede na generirujočo množico $S$, ki sestoji iz transpozicij in enote $()$. To ni konjugiranostni razred, je pa unija dveh razredov. Premisli, kako lahko argumente posplošiš na to situacijo. Določi limitno porazdelitev in oceni hitrost konvergence.
+Obravnavaj slučajni sprehod v $S_n$ glede na generirujočo množico $S$, ki sestoji iz transpozicij in enote $()$. To ni konjugiranostni razred, je pa unija dveh razredov. Premisli, kako lahko argumente posplošiš na to situacijo. Določi limitno porazdelitev in oceni hitrost konvergence.
 \end{domacanaloga}
 
 \subsection{Konvergenca v družinah}
@@ -3970,11 +4078,13 @@ V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $
 \]
 \end{odprtproblem}
 
-\chapter{Upodobitve linearnih grup}
+\chapter{Upodobitve neskončnih grup}
 
 \section{Ozaljšane upodobitve}
 
-\subsection{Zvezne upodobitve}
+\todo{Abstraktnih upodobitev je preveč, zgled: $\SL_2(\CC)$ z avtomorfizmi polja, zato se omejimo na posebne, kjer upoštevamo dodatno strukturo grupe.}
+
+\subsection{Zvezne in gladke upodobitve}
 \subsection{Unitarne upodobitve}
 
 \todo[inline]{

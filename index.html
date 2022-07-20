@@ -60,7 +60,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 19. 07. 2022
+            Zadnja posodobitev: 20. 07. 2022
           </div>
 
           <div id="spinner" class="text-center">
@@ -126,8 +126,8 @@
               <li><a href="#slučajni-sprehodi"
               id="toc-slučajni-sprehodi">Slučajni sprehodi</a></li>
               </ul></li>
-              <li><a href="#upodobitve-linearnih-grup"
-              id="toc-upodobitve-linearnih-grup">Upodobitve linearnih
+              <li><a href="#upodobitve-neskončnih-grup"
+              id="toc-upodobitve-neskončnih-grup">Upodobitve neskončnih
               grup</a>
               <ul>
               <li><a href="#ozaljšane-upodobitve"
@@ -197,17 +197,24 @@
             prostora <span class="math inline">\(V\)</span> rečemo
             <span><strong><em>stopnja upodobitve</em></strong></span> in
             jo označimo z <span
-            class="math inline">\(\deg(\rho)\)</span>. Ko v prostoru
-            <span class="math inline">\(V\)</span> izberemo bazo in
-            torej izomorfizem <span class="math inline">\(V \cong
-            F^{\deg(\rho)}\)</span>, lahko upodobitev <span
-            class="math inline">\(\rho\)</span> enakovredno zapišemo kot
-            homomorfizem <span class="math display">\[\rho \colon G \to
-            \textstyle \mathop{\mathrm{GL}}_{\deg(\rho)}(F)\]</span> iz
-            grupe <span class="math inline">\(G\)</span> v obrnljive
-            matrike razsežnosti <span
-            class="math inline">\(\deg(\rho)\)</span> nad <span
-            class="math inline">\(F\)</span>.</p>
+            class="math inline">\(\deg(\rho)\)</span>.</p>
+            <p>Ko v prostoru <span class="math inline">\(V\)</span>
+            izberemo bazo in torej izomorfizem <span
+            class="math inline">\(V \cong F^{\deg(\rho)}\)</span>, lahko
+            upodobitev <span class="math inline">\(\rho\)</span>
+            enakovredno zapišemo kot homomorfizem <span
+            class="math display">\[\rho \colon G \to \textstyle
+            \mathop{\mathrm{GL}}_{\deg(\rho)}(F)\]</span> iz grupe <span
+            class="math inline">\(G\)</span> v obrnljive matrike
+            razsežnosti <span class="math inline">\(\deg(\rho)\)</span>
+            nad <span class="math inline">\(F\)</span>.</p>
+            <p>Nad poljem kompleksnih števil <span
+            class="math inline">\(F = \mathbf{C}\)</span> upodobitvam
+            rečemo <span><strong><em>kompleksne</em></strong></span>,
+            nad polji karakteristike <span class="math inline">\(p &gt;
+            0\)</span>, na primer <span class="math inline">\(F =
+            \mathbf{F}_p\)</span>, pa upodobitvam rečemo
+            <span><strong><em>modularne</em></strong></span>.</p>
             <p>Za element <span class="math inline">\(g \in G\)</span>
             in vektor <span class="math inline">\(v \in V\)</span>
             rezultat delovanja elementa <span
@@ -219,13 +226,34 @@
             <div class="zgled">
             <p><strong>Zgled 1.1</strong>. </p>
             <ul>
+            <li><p>Opazujmo grupo ostankov <span
+            class="math inline">\(\mathbf{Z}/6\mathbf{Z}\)</span> in
+            racionalni vektorski prostor <span
+            class="math inline">\(\mathbf{Q}^2\)</span>. Preslikava
+            <span class="math display">\[\rho \colon
+            \mathbf{Z}/6\mathbf{Z}\to \mathop{\mathrm{GL}}(\mathbf{Q}^2)
+            = \mathop{\mathrm{GL}}_2(\mathbf{Q}), \quad
+                        x \mapsto  \begin{pmatrix}
+                            1/2 &amp; 1/8 \\
+                            -6 &amp; 1/2 \\
+                        \end{pmatrix}^x\]</span> je upodobitev grupe
+            <span class="math inline">\(\mathbf{Z}/6\mathbf{Z}\)</span>.
+            Relevantna matrika je namreč reda <span
+            class="math inline">\(6\)</span>.</p></li>
+            <li><p>Opazujmo grupo realnih števil <span
+            class="math inline">\(\mathbf{R}^*\)</span> za množenje in
+            vektorski prostor <span
+            class="math inline">\(\mathbf{C}\)</span>. Absolutna
+            vrednost podaja upodobitev <span
+            class="math display">\[|\cdot| \colon \mathbf{R}^* \to
+            \mathop{\mathrm{GL}}(\mathbf{C}) = \mathbf{C}^*, \quad
+                        x \mapsto |x|.\]</span></p></li>
             <li><p>Opazujmo grupo celih števil <span
             class="math inline">\(\mathbf{Z}\)</span> in vektorski
-            prostor <span class="math inline">\(\mathbf{C}\)</span> nad
-            poljem kompleksnih števil. Eksponentna funkcija podaja
-            upodobitev <span class="math display">\[\chi \colon
-            \mathbf{Z}\to \mathop{\mathrm{GL}}(\mathbf{C}) =
-            \mathbf{C}^*, \quad
+            prostor <span class="math inline">\(\mathbf{C}\)</span>.
+            Eksponentna funkcija podaja upodobitev <span
+            class="math display">\[\chi \colon \mathbf{Z}\to
+            \mathop{\mathrm{GL}}(\mathbf{C}) = \mathbf{C}^*, \quad
                         x \mapsto e^x.\]</span> Splošneje imamo za vsak
             parameter <span class="math inline">\(\alpha \in
             \mathbf{C}\)</span> upodobitev <span
@@ -241,6 +269,52 @@
             \mathbf{Z}/q\mathbf{Z}\to \mathop{\mathrm{GL}}(\mathbf{C}) =
             \mathbf{C}^*, \quad
                         x \mapsto e^{2 \pi i mx/q}.\]</span></p></li>
+            <li><p>Opazujmo diedrsko grupo <span
+            class="math inline">\(D_{2n} = \langle s, r
+            \rangle\)</span>, v kateri je <span
+            class="math inline">\(s^2 = 1\)</span>, <span
+            class="math inline">\(r^n = 1\)</span> in <span
+            class="math inline">\(s r s = r^{-1}\)</span>. Ta grupa
+            izhaja iz simetrij kvadrata v ravnini, s čimer nam ponuja
+            svojo naravno upodobitev <span class="math inline">\(\rho
+            \colon D_{2n} \to \mathop{\mathrm{GL}}(\mathbf{R}^2) =
+            \mathop{\mathrm{GL}}_2(\mathbf{R})\)</span>, ki preslika
+            generatorja kot <span class="math display">\[s \mapsto
+            \begin{pmatrix}
+                            0 &amp; 1 \\ 1 &amp; 0
+                        \end{pmatrix}, \quad
+                        r \mapsto \begin{pmatrix}
+                            \cos(2 \pi/n) &amp; - \sin(2 \pi/n) \\
+                            \sin(2 \pi/n) &amp; \cos(2 \pi/n)
+                        \end{pmatrix}.\]</span> Splošneje imamo za vsak
+            parameter <span class="math inline">\(k \in
+            \mathbf{Z}\)</span> upodobitev <span
+            class="math inline">\(\rho_k \colon D_{2n} \to
+            \mathop{\mathrm{GL}}(\mathbf{R}^2) =
+            \mathop{\mathrm{GL}}_2(\mathbf{R})\)</span>, ki preslika
+            generatorja kot <span class="math display">\[s \mapsto
+            \begin{pmatrix}
+                            0 &amp; 1 \\ 1 &amp; 0
+                        \end{pmatrix}, \quad
+                        r \mapsto \begin{pmatrix}
+                            \cos(2 \pi k/n) &amp; - \sin(2 \pi k/n) \\
+                            \sin(2 \pi k/n) &amp; \cos(2 \pi k/n)
+                        \end{pmatrix}.\]</span></p></li>
+            <li><p>Opazujmo ciklično grupo <span
+            class="math inline">\(\mathbf{Z}/p\mathbf{Z}\)</span> za
+            praštevilo <span class="math inline">\(p\)</span> nad
+            končnim poljem <span
+            class="math inline">\(\mathbf{F}_p\)</span>. Preslikava
+            <span class="math display">\[\rho \mathbf{Z}/p\mathbf{Z}\to
+            \mathop{\mathrm{GL}}(\mathbf{F}_p^2) =
+            \mathop{\mathrm{GL}}_2(\mathbf{F}_p), \quad
+                      x \mapsto \begin{pmatrix}
+                        1 &amp; x \\ 0 &amp; 1
+                      \end{pmatrix}\]</span> podaja modularno upodobitev
+            grupe <span
+            class="math inline">\(\mathbf{Z}/p\mathbf{Z}\)</span>.
+            Relevantna matrika je namreč reda <span
+            class="math inline">\(p\)</span>.</p></li>
             <li><p>Naj bo <span class="math inline">\(G\)</span> grupa
             in <span class="math inline">\(V\)</span> vektorski prostor
             nad poljem <span class="math inline">\(F\)</span>.
@@ -278,10 +352,10 @@
                     \left( \begin{smallmatrix} 1 &amp; 1 \\ 0 &amp; 1
             \end{smallmatrix} \right), \left( \begin{smallmatrix} 1
             &amp; 0 \\ 0 &amp; -1 \end{smallmatrix} \right) \rangle \leq
-            \mathop{\mathrm{GL}}(\mathbf{C}^2)\)</span>. Na ta način
-            dobimo upodobitev neskončne diedrske grupe <span
-            class="math inline">\(G \cong D_\infty\)</span> na prostoru
-            <span class="math inline">\(\mathbf{C}^2\)</span>.</p></li>
+            \mathop{\mathrm{GL}}(\mathbf{C}^2)\)</span>. Grupa <span
+            class="math inline">\(G\)</span> je neskončna diedrska grupa
+            <span class="math inline">\(G \cong
+            D_\infty\)</span>.</p></li>
             <li><p>Naj bo <span class="math inline">\(G\)</span>
             poljubna grupa, opremljena z delovanjem na neki množici
             <span class="math inline">\(X\)</span>. Naj bo <span
@@ -382,24 +456,21 @@
             upodobitvi, ki smo jih že videli. Prva naj bo upodobitev
             <span class="math display">\[\rho \colon \mathbf{Z}\to
             \mathop{\mathrm{GL}}(\mathbf{C}^2), \quad
-                x \mapsto \left( \begin{smallmatrix} 1 &amp; 1 \\ 0
-            &amp; 1 \end{smallmatrix} \right)^x,\]</span> druga pa naj
-            bo kar trivialna upodobitev <span
-            class="math inline">\(\mathbf{1}\)</span> na prostoru <span
-            class="math inline">\(\mathbf{C}\)</span>. Predpišimo
-            linearno preslikavo <span class="math inline">\(\Phi \colon
-            \mathbf{C}\to \mathbf{C}^2\)</span> v standardni bazi z
-            matriko <span class="math inline">\(\left(
-            \begin{smallmatrix} 1 \\ 0 \end{smallmatrix}
-            \right)\)</span>. Tedaj za vsak vektor <span
-            class="math inline">\(v \in \mathbf{C}\)</span> in vsako
-            število <span class="math inline">\(x \in
+                x \mapsto \begin{pmatrix} 1 &amp; x \\ 0 &amp; 1
+            \end{pmatrix},\]</span> druga pa naj bo kar trivialna
+            upodobitev <span class="math inline">\(\mathbf{1}\)</span>
+            na prostoru <span class="math inline">\(\mathbf{C}\)</span>.
+            Predpišimo linearno preslikavo <span
+            class="math inline">\(\Phi \colon \mathbf{C}\to
+            \mathbf{C}^2\)</span> v standardni bazi z matriko <span
+            class="math inline">\(\left( \begin{smallmatrix} 1 \\ 0
+            \end{smallmatrix} \right)\)</span>. Tedaj za vsak vektor
+            <span class="math inline">\(v \in \mathbf{C}\)</span> in
+            vsako število <span class="math inline">\(x \in
             \mathbf{Z}\)</span> velja <span
             class="math display">\[\Phi(x \cdot v)
-                = \left( \begin{smallmatrix} xv \\ 0 \end{smallmatrix}
-            \right)
-                = x \cdot \left( \begin{smallmatrix} v \\ 0
-            \end{smallmatrix} \right)
+                =  \begin{pmatrix} xv \\ 0 \end{pmatrix}
+                = x \cdot  \begin{pmatrix} v \\ 0 \end{pmatrix}
                 = x \cdot \Phi(v),\]</span> zato je <span
             class="math inline">\(\Phi\)</span> spletična med <span
             class="math inline">\(\mathbf{1}\)</span> in <span
@@ -1890,9 +1961,10 @@
             upodobitve seveda ne moremo razstaviti na enostavnejše v
             smislu direktne vsote.</p>
             <div class="zgled">
-            <p><strong>Zgled 2.1</strong>. Opazujmo permutacijsko
-            upodobitev simetrične grupe <span
-            class="math inline">\(S_3\)</span> na prostoru <span
+            <p><strong>Zgled 2.1</strong>. </p>
+            <ul>
+            <li><p>Opazujmo permutacijsko upodobitev simetrične grupe
+            <span class="math inline">\(S_3\)</span> na prostoru <span
             class="math inline">\(\mathbf{R}[\{ 1,2,3 \}] =
             \mathbf{R}^3\)</span>. Premislili smo že, da je ta
             upodobitev direktna vsota enorazsežne podupodobitve <span
@@ -1900,7 +1972,29 @@
             podupodobitve <span class="math inline">\(\rho\)</span>, pri
             čemer slednja nima nobene enorazsežne podupodobitve. S tem
             je permutacijska upodobitev razstavljena kot direktna vsota
-            dveh nerazcepnih upodobitev.</p>
+            dveh nerazcepnih upodobitev.</p></li>
+            <li><p>Opazujmo diedrsko grupo <span
+            class="math inline">\(D_{2n}\)</span> z dvorazsežno
+            upodobitvijo <span class="math inline">\(\rho_k\)</span> za
+            <span class="math inline">\(k \in \mathbf{Z}\)</span>, ki jo
+            obravnavajmo kot kompleksno upodobitev. Matrika <span
+            class="math inline">\(\rho_k(r)\)</span> ima lastni
+            vrednosti <span class="math inline">\(e^{\pm 2 \pi i k /
+            n}\)</span>. Ti dve vrednosti sta različni, če in samo če
+            <span class="math inline">\(k\)</span> <em>ni</em> deljiv z
+            <span class="math inline">\(n/2\)</span>. Za vsak <span
+            class="math inline">\(0 &lt; k &lt; n/2\)</span> ima <span
+            class="math inline">\(\rho_k(r)\)</span> torej različni
+            lastni vrednosti z lastnima vektorjema <span
+            class="math inline">\(\left( \begin{smallmatrix} 1 \\ \mp i
+            \end{smallmatrix} \right)\)</span>. Matrika <span
+            class="math inline">\(\rho_k(s)\)</span> zamenja ta dva
+            lastna podprostora med sabo. Upodobitev <span
+            class="math inline">\(\rho_k\)</span> za <span
+            class="math inline">\(0 &lt; k &lt; n/2\)</span> torej nima
+            nobene enorazsežne kompleksne podupodobitve in je zato
+            nerazcepna.</p></li>
+            </ul>
             </div>
             <p>Preverimo, da so nerazcepne upodobitve dane grupe med
             sabo <em>neprimerljive</em>, tudi če so enake razsežnosti.
@@ -3894,8 +3988,121 @@
             konjugiranostnimi razredi in nerazcepnimi upodobitvami. Vemo
             le, da njuno število sovpada.</p>
             <div class="zgled">
-            <p><strong>Zgled 3.4</strong>. Opazujmo simetrično grupo
-            <span class="math inline">\(S_n\)</span> nad poljem <span
+            <p><strong>Zgled 3.4</strong>. </p>
+            <ul>
+            <li><p>Opazujmo diedrsko grupo <span
+            class="math inline">\(D_{2n}\)</span> nad poljem <span
+            class="math inline">\(\mathbf{C}\)</span>. Vsak element te
+            grupe lahko zapišemo v obliki <span
+            class="math inline">\(r^i\)</span> ali <span
+            class="math inline">\(s r^i\)</span> za nek <span
+            class="math inline">\(0 \leq i &lt; n\)</span>. Izračunajmo
+            konjugiranostne razrede. Velja <span
+            class="math display">\[\left( r^i \right)^{r^j} = r^i, \quad
+                \left( r^i \right)^{s r^j} = r^{-i},\]</span> zato je
+            konjugiranostni razred <span
+            class="math inline">\(r^i\)</span> enak <span
+            class="math inline">\(\{ r^{i}, r^{-i} \}\)</span>. Za <span
+            class="math inline">\(i \neq 0, n/2\)</span> ima vsak razred
+            <span class="math inline">\(2\)</span> elementa. Vseh teh
+            konjugiranostnih razredov je torej <span
+            class="math inline">\(\lfloor (n+2)/2 \rfloor\)</span>.
+            Velja tudi <span class="math display">\[\left( s r^i
+            \right)^{r^j} = s r^{2j + i}, \quad
+                \left( s r^i \right)^{s r^j} = r^{s r^{2j -
+            i}},\]</span> zato je konjugiranostni razred <span
+            class="math inline">\(s\)</span> enak <span
+            class="math inline">\(\{ s r^{2j} \mid j \in
+            \mathbf{Z}\}\)</span> in konjugiranostni razred <span
+            class="math inline">\(sr\)</span> je enak <span
+            class="math inline">\(\{ s r^{2j + 1} \mid j \in
+            \mathbf{Z}\}\)</span>. Če je <span
+            class="math inline">\(n\)</span> sod, sta ta dva razreda
+            disjunktna, če je <span class="math inline">\(n\)</span>
+            lih, pa sovpadata. Skupaj torej dobimo <span
+            class="math display">\[\mathop{\mathrm{k}}(D_{2n}) =
+            \begin{cases}
+                    n/2 + 3 &amp; n \equiv 0 \pmod{2}, \\
+                    (n+3)/2 &amp; n \equiv 1 \pmod{2}. \\
+                \end{cases}\]</span></p>
+            <p>Določimo zdaj še nerazcepne upodobitve. Poznamo že
+            dvorazsežne nerazcepne upodobitve <span
+            class="math inline">\(\rho_k\)</span> za <span
+            class="math inline">\(0 &lt; k &lt; n/2\)</span>, vseh teh
+            je <span class="math inline">\(\lceil n/2 \rceil -
+            1\)</span>. Za karakter take upodobitve velja <span
+            class="math inline">\(\chi_{\rho_k}(r) = 2 \cos(2 \pi k /
+            n)\)</span>, zato so vsi ti karakterji različni med sabo in
+            s tem so upodobitve <span
+            class="math inline">\(\rho_k\)</span> neizomorfne. Poleg teh
+            dvorazsežnih upodobitev imamo še linearne upodobitve.
+            Število teh je enako velikosti abelacije <span
+            class="math inline">\(D_{2n}/[D_{2n}, D_{2n}]\)</span>.
+            Velja <span class="math display">\[[r^i, s r^j] = r^{-i}
+            \left( r^i \right)^{s r^j} = r^{-2i}, \quad
+                [s r^i, s r^j] = r^{-i} s \left( s r^i \right)^{s r^j} =
+            s r^{2j - 2i},\]</span> zato je <span
+            class="math inline">\([D_{2n}, D_{2n}] = \langle r^2
+            \rangle\)</span>. S tem je <span
+            class="math display">\[D_{2n}/[D_{2n}, D_{2n}] \cong
+            \begin{cases}
+                    (\mathbf{Z}/2\mathbf{Z})^2 &amp; n \equiv 0
+            \pmod{2}, \\
+                    \mathbf{Z}/2\mathbf{Z}&amp; n \equiv 1 \pmod{2}.
+                \end{cases}\]</span> Linearne upodobitve so torej oblike
+            <span class="math display">\[\chi_{\epsilon, \delta} \colon
+            D_{2n} \to \mathbf{C}^*, \quad
+                s \mapsto \epsilon, \quad
+                r \mapsto \delta\]</span> za <span
+            class="math inline">\(\epsilon, \delta \in \{ 1, -1
+            \}\)</span>. Ko je <span class="math inline">\(n\)</span>
+            lih, je nujno <span class="math inline">\(\delta =
+            1\)</span>.</p>
+            <p>Skupaj smo torej našli ravno <span
+            class="math inline">\(\mathop{\mathrm{k}}(D_{2n})\)</span>
+            nerazcepnih upodobitev, zato so to <em>vse</em> nerazcepne
+            upodobitve grupe <span
+            class="math inline">\(D_{2n}\)</span>.</p>
+            <table>
+            <caption>Tabela karakterjev <span
+            class="math inline">\(D_{2n}\)</span> za lih <span
+            class="math inline">\(n\)</span></caption>
+            <thead>
+            <tr class="header">
+            <th style="text-align: center;"></th>
+            <th style="text-align: center;"><span
+            class="math inline">\(1\)</span></th>
+            <th style="text-align: center;"><span
+            class="math inline">\(r^i\)</span></th>
+            <th style="text-align: center;"><span
+            class="math inline">\(s\)</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="odd">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_{\epsilon}\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(1\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(\epsilon\)</span></td>
+            </tr>
+            <tr class="even">
+            <td style="text-align: center;"><span
+            class="math inline">\(\chi_{\rho_k}\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(2\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(2 \cos(2 \pi i k / n)\)</span></td>
+            <td style="text-align: center;"><span
+            class="math inline">\(0\)</span></td>
+            </tr>
+            </tbody>
+            </table></li>
+            <li><p>Opazujmo simetrično grupo <span
+            class="math inline">\(S_n\)</span> nad poljem <span
             class="math inline">\(\mathbf{C}\)</span>. Vsako njeno
             permutacijo <span class="math inline">\(\sigma \in
             S_n\)</span> lahko zapišemo kot produkt disjunktnih
@@ -3965,7 +4172,10 @@
             class="math inline">\(6\)</span>, <span
             class="math inline">\(8\)</span>, <span
             class="math inline">\(6\)</span>, <span
-            class="math inline">\(3\)</span>.</p>
+            class="math inline">\(3\)</span>. Kmalu bomo s tem podatkom
+            določili tabelo karakterjev grupe <span
+            class="math inline">\(S_4\)</span>.</p></li>
+            </ul>
             </div>
             <p>Ker nerazcepni karakterji tvorijo ortonormirano bazo
             prostora razrednih funkcij, lahko vsako razredno funkcijo
@@ -6148,7 +6358,14 @@
             class="math inline">\(\sigma \in A_n\)</span>, torej sta v
             posebnem upodobitvi, na katere razpade <span
             class="math inline">\(\rho_{\lambda}\)</span>, enake
-            razsežnosti.</p>
+            razsežnosti. Konkretne vrednosti karakterjev <span
+            class="math inline">\(\alpha\)</span> in <span
+            class="math inline">\(\beta\)</span> lahko izračunamo s
+            pomočjo ortogonalnosti karakterjev.</p>
+            <p>S štetjem konjugiranostnih razredov v <span
+            class="math inline">\(A_n\)</span> se ni težko prepričati,
+            da na opisan način dobimo vse nerazcepne upodobitve
+            alternirajoče grupe.</p>
             <h2 id="splošna-linearna-grupa">Splošna linearna grupa</h2>
             <p>Opazujmo <span><strong><em>splošno linearno
             grupo</em></strong></span> <span class="math display">\[G_p
@@ -7702,8 +7919,7 @@
             class="footnote-ref" id="fnref64"
             role="doc-noteref"><sup>64</sup></a></p>
             <div class="domacanaloga">
-            <p><strong>Domača naloga 5.1</strong>. <span
-            class="math inline">\((\dag)\)</span> Obstaja konstanta
+            <p><strong>Domača naloga 5.1</strong>. Obstaja konstanta
             <span class="math inline">\(c \in (0,\frac12)\)</span>, za
             katero velja naslednje. Množico <span
             class="math inline">\(\mathbf{F}_p\)</span> lahko razčlenimo
@@ -9332,8 +9548,7 @@
             <div class="domacanaloga">
             <p><strong>Domača naloga 5.6</strong> (<a
             href="https://link.springer.com/article/10.1007/BF00535487">Diaconis-Shashahani
-            1981</a>). <span class="math inline">\((\dag)\)</span>
-            Obravnavaj slučajni sprehod v <span
+            1981</a>). Obravnavaj slučajni sprehod v <span
             class="math inline">\(S_n\)</span> glede na generirujočo
             množico <span class="math inline">\(S\)</span>, ki sestoji
             iz transpozicij in enote <span
@@ -9509,10 +9724,11 @@
             $\epsilon$-ekspanzivna glede na $S_{n,x,y}$}) = 1
             ?\]</span></p>
             </div>
-            <h1 id="upodobitve-linearnih-grup">Upodobitve linearnih
+            <h1 id="upodobitve-neskončnih-grup">Upodobitve neskončnih
             grup</h1>
             <h2 id="ozaljšane-upodobitve">Ozaljšane upodobitve</h2>
-            <h3 id="zvezne-upodobitve">Zvezne upodobitve</h3>
+            <h3 id="zvezne-in-gladke-upodobitve">Zvezne in gladke
+            upodobitve</h3>
             <h3 id="unitarne-upodobitve">Unitarne upodobitve</h3>
             <h2 id="kompaktne-grupe">Kompaktne grupe</h2>
             <h3 id="s1"><span class="math inline">\(S^1\)</span></h3>
