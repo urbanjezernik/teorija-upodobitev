@@ -9830,9 +9830,151 @@
             \in \mathbf{R}\cdot i\)</span>.</p>
             </div>
             <p>Za neskončne topološke grupe najraje opazujemo zvezne
-            unitarne upodobitve. O teh ponavadi lahko povemo največ.</p>
+            unitarne upodobitve. O teh ponavadi lahko povemo največ, kot
+            bomo videli v nadaljevanju.</p>
             <h2 id="kompaktne-grupe">Kompaktne grupe</h2>
-            <h3 id="s1"><span class="math inline">\(S^1\)</span></h3>
+            <p>Večino rezultatov iz končnih grup lahko prenesemo v svet
+            kompaktnih topoloških grup in njihovih zveznih unitarnih
+            upodobitev.</p>
+            <h3 id="mathopmathrmu_1mathbfc"><span
+            class="math inline">\(\mathop{\mathrm{U}}_1(\mathbf{C})\)</span></h3>
+            <p>Najenostavnejši primer neskončne kompaktne grupe je
+            unitarna grupa <span
+            class="math inline">\(\mathop{\mathrm{U}}_1(\mathbf{C}) =
+            S^1\)</span> kompleksnih števil absolutne vrednosti <span
+            class="math inline">\(1\)</span>. To topološko grupo lahko
+            alternativno vidimo kot <span
+            class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span> s
+            kvocientno topologijo iz grupe <span
+            class="math inline">\(\mathbf{R}\)</span>.</p>
+            <h4 id="nerazcepne-upodobitve-2">Nerazcepne upodobitve</h4>
+            <p>Poznamo že nekaj upodobitev grupe <span
+            class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>, ki jih
+            ponuja grupa <span
+            class="math inline">\(\mathbf{R}\)</span>, in sicer za vsak
+            parameter <span class="math inline">\(k \in
+            \mathbf{Z}\)</span> dobimo upodobitev <span
+            class="math display">\[\chi_k \colon
+            \mathbf{R}/\mathbf{Z}\to \mathbf{C}^*, \quad
+                x \mapsto e^{2 \pi i k x}.\]</span> Velja pa tudi
+            obratno, iz vsake upodobitve <span
+            class="math inline">\(\chi \colon \mathbf{R}/\mathbf{Z}\to
+            \mathop{\mathrm{U}}_1(\mathbf{C})\)</span> z restrikcijo
+            vzdolž <span class="math inline">\(\mathbf{R}\to
+            \mathbf{R}/\mathbf{Z}\)</span> dobimo upodobitev <span
+            class="math inline">\(\mathbf{R}\)</span>. Te upodobitve
+            lahko popolnoma opišemo s pomočjo elementarne analize.</p>
+            <div class="trditev">
+            <p><strong>Trditev 6.1</strong>. Vsaka zvezna upodobitev
+            <span class="math inline">\(\mathbf{R}\to
+            \mathbf{C}^*\)</span> je oblike <span
+            class="math inline">\(\chi_{\zeta}\)</span> za nek <span
+            class="math inline">\(\zeta \in \mathbf{C}\)</span>.</p>
+            </div>
+            <div class="proof">
+            <p><em>Proof.</em> Naj bo <span class="math inline">\(\chi
+            \colon \mathbf{R}\to \mathbf{C}^*\)</span> zvezna. Če je
+            <span class="math inline">\(\chi\)</span> celo
+            <em>odvedljiva</em>, potem za vsak <span
+            class="math inline">\(x \in \mathbf{R}\)</span> velja <span
+            class="math display">\[\chi^\prime(x)
+                = \lim_{t \to 0} \frac{\chi(x + t) - \chi(x)}{t}
+                = \chi(x) \chi^\prime(0).\]</span> Funkcija <span
+            class="math inline">\(\chi\)</span> torej reši diferencialno
+            enačbo <span class="math inline">\(\chi^\prime = \zeta
+            \chi\)</span>, kjer smo označili <span
+            class="math inline">\(\zeta = \chi^\prime(0)\)</span>. Od
+            tod sledi, da je <span class="math inline">\(\chi(x) = A
+            \cdot e^{\zeta x}\)</span> za neko konstanto <span
+            class="math inline">\(A\)</span>. Vstavimo <span
+            class="math inline">\(x = 0\)</span> in sklenemo <span
+            class="math inline">\(A = 1\)</span>, torej je res <span
+            class="math inline">\(\chi = \chi_{\zeta}\)</span>.</p>
+            <p>Prepričajmo se, da je <span
+            class="math inline">\(\chi\)</span> <em>vselej</em>
+            odvedljiva, s čimer bo trditev dokazana. V ta namen jo
+            najprej integrirajmo do odvedljive funkcije <span
+            class="math display">\[X \colon \mathbf{R}\to \mathbf{C},
+            \quad
+                x \mapsto \int_{0}^{x} \chi(t) dt.\]</span> Funkcija
+            <span class="math inline">\(X\)</span> sicer ni nujno
+            homomorfizem, velja pa <span class="math display">\[X(x + y)
+                = X(x) + \int_{x}^{x+y} \chi(t) dt
+                = X(x) + \int_{0}^{y} \chi(t+x) dt
+                = X(x) + \chi(x) X(y)\]</span> za vsaka <span
+            class="math inline">\(x,y \in \mathbf{R}\)</span>. Ker je
+            <span class="math inline">\(X^\prime = \chi\)</span>, seveda
+            obstaja <span class="math inline">\(y_0 \in
+            \mathbf{R}\)</span>, za katerega je <span
+            class="math inline">\(X(y_0) \neq 0\)</span>. Od tod lahko
+            izrazimo <span class="math inline">\(\chi(x)\)</span> kot
+            <span class="math display">\[\chi(x) = \frac{X(x+y_0) -
+            X(x)}{X(y_0)}.\]</span> Ker je funkcija na desni odvedljiva,
+            velja enako tudi za funkcijo na levi. ◻</p>
+            </div>
+            <p>Iz trditve izpeljemo, da vsaka zvezna upodobitev <span
+            class="math inline">\(\mathbf{R}/\mathbf{Z}\to
+            \mathbf{C}^*\)</span> izhaja iz upodobitve <span
+            class="math inline">\(\chi_{\zeta}\)</span> za nek <span
+            class="math inline">\(\zeta\)</span>. Pri tem mora biti
+            <span class="math inline">\(\mathbf{Z}\leq \ker
+            \chi_{\zeta}\)</span>, od koder sledi <span
+            class="math inline">\(\zeta = 2 \pi k\)</span> za nek <span
+            class="math inline">\(k \in \mathbf{Z}\)</span>. Upodobitve
+            <span class="math inline">\(\chi_k\)</span> torej izčrpajo
+            vse končnorazsežne kompleksne upodobitve grupe <span
+            class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>. Te
+            upodobitve so vse tudi unitarne, kar ni naključje, kot bomo
+            pojasnili nekoliko kasneje.</p>
+            <h4 id="fourierova-analiza">Fourierova analiza</h4>
+            <p>Klasična Fourierova analiza periodičnih funkcij se tesno
+            prepleta s teorijo upodobitev grupe <span
+            class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>. Kot
+            vemo, lahko z upodobitvami <span
+            class="math inline">\(\chi_k\)</span> za <span
+            class="math inline">\(k \in \mathbf{Z}\)</span>
+            aproksimiramo poljubno zvezno funkcijo na <span
+            class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>. To
+            naredimo na sledeč način. Prostor funkcij na grupi <span
+            class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>
+            opremimo s skalarnim produktom <span
+            class="math display">\[\langle f, h \rangle = \int_{0}^{1}
+            f(t) \overline{h(t)} dt.\]</span> Fourierovi koeficienti
+            funkcije <span class="math inline">\(f\)</span> so <span
+            class="math display">\[\langle f, \chi_k \rangle = \int_0^1
+            f(t) e^{-2 \pi i k t} dt\]</span> za <span
+            class="math inline">\(k \in \mathbf{Z}\)</span>. Z njimi
+            definiramo delne Fourierove vsote <span
+            class="math display">\[f_N = \sum_{k \in \mathbf{Z}\colon
+            |k| \leq N} \langle f, \chi_k \rangle \chi_k\]</span> za
+            <span class="math inline">\(N \in \mathbf{N}\)</span>. V
+            splošnem delne vsote <span
+            class="math inline">\(f_N\)</span> ne konvergirajo po
+            točkah,<a href="#fn79" class="footnote-ref" id="fnref79"
+            role="doc-noteref"><sup>79</sup></a> je pa temu tako, če
+            dodatno predpostavimo, da obravnavamo le kvadratno
+            integrabilne funkcije <span
+            class="math inline">\(f\)</span>, se pravi <span
+            class="math display">\[\int_0^1 |f(t)|^2 dt &lt;
+            \infty.\]</span> Za te funkcije po osnovnem izreku
+            Fourierove analize velja konvergenca <span
+            class="math display">\[\lim_{N \to \infty} || f - f_N || =
+            0,\]</span> torej lahko <span
+            class="math inline">\(f\)</span> razvijemo v Fourierovo
+            vrsto.<a href="#fn80" class="footnote-ref" id="fnref80"
+            role="doc-noteref"><sup>80</sup></a> Hkrati drži varianta
+            Parsevalove formule <span class="math display">\[||f||^2 =
+            \sum_{k \in \mathbf{Z}} |\langle f, \chi_k
+            \rangle|^2.\]</span> Upodobitve <span
+            class="math inline">\(\chi_k\)</span> za <span
+            class="math inline">\(k \in \mathbf{Z}\)</span> torej
+            tvorijo ortonormiran sistem funkcij, ki je <em>gost</em> v
+            prostoru vseh dovolj lepih funkcij funkcij na <span
+            class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>. To je
+            analogno dekompoziciji regularne upodobitve v primeru
+            končnih grup.</p>
+            <h3 id="upodobitve-kompaktnih-grup">Upodobitve kompaktnih
+            grup</h3>
             <h2 id="zvezne-linearne-grupe">Zvezne linearne grupe</h2>
             <h3 id="mathopmathrmsl_2mathbfc"><span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span></h3>
@@ -10352,6 +10494,17 @@
             class="math inline">\(G \times V \to V\)</span>, <span
             class="math inline">\((g,v) \mapsto \rho(g) \cdot v\)</span>
             zvezna.<a href="#fnref78" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn79" role="doc-endnote"><p>Lahko se celo zgodi, da
+            <span class="math inline">\(f_N\)</span> ne konvergira v
+            <em>nobeni</em> točki.<a href="#fnref79"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn80" role="doc-endnote"><p>Pri tem moramo biti
+            nekoliko previdni, saj opisana konvergenca <em>ne</em>
+            implicira, da vrsta <span class="math inline">\(f_N\)</span>
+            v vseh točkah konvergira k <span
+            class="math inline">\(f\)</span>, temveč le <em>skoraj
+            povsod</em>.<a href="#fnref80" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>

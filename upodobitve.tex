@@ -4124,15 +4124,92 @@ Pri raziskovanju teorije upodobitev končnih grup nam je marsikje prav prišlo d
 Opazujmo grupo $\RR$ in njene upodobitve $\chi_{\zeta}$. Ta upodobitev je unitarna, če in samo če je njena slika vsebovana v $\U(\CC) = S^1 = \{ z \in \CC \mid |z| = 1 \}$, kar se zgodi le za imaginarne parametre $\zeta \in \RR \cdot i$.
 \end{zgled}
 
-Za neskončne topološke grupe najraje opazujemo zvezne unitarne upodobitve. O teh ponavadi lahko povemo največ.
+Za neskončne topološke grupe najraje opazujemo zvezne unitarne upodobitve. O teh ponavadi lahko povemo največ, kot bomo videli v nadaljevanju.
 
 \section{Kompaktne grupe}
 
-\subsection{$S^1$}
+Večino rezultatov iz končnih grup lahko prenesemo v svet kompaktnih topoloških grup in njihovih zveznih unitarnih upodobitev.
 
-\todo[inline]{
-    fourier
-}
+\subsection{$\U_1(\CC)$}
+
+Najenostavnejši primer neskončne kompaktne grupe je unitarna grupa $\U_1(\CC) = S^1$ kompleksnih števil absolutne vrednosti $1$. To topološko grupo lahko alternativno vidimo kot $\RR/\ZZ$ s kvocientno topologijo iz grupe $\RR$. 
+
+\subsubsection{Nerazcepne upodobitve}
+
+Poznamo že nekaj upodobitev grupe $\RR/\ZZ$, ki jih ponuja grupa $\RR$, in sicer za vsak parameter $k \in \ZZ$ dobimo upodobitev
+\[
+    \chi_k \colon \RR/\ZZ \to \CC^*, \quad
+    x \mapsto e^{2 \pi i k x}.
+\]
+Velja pa tudi obratno, iz vsake upodobitve $\chi \colon \RR/\ZZ \to \U_1(\CC)$ z restrikcijo vzdolž $\RR \to \RR/\ZZ$ dobimo upodobitev $\RR$. Te upodobitve lahko popolnoma opišemo s pomočjo elementarne analize.
+
+\begin{trditev}
+Vsaka zvezna upodobitev $\RR \to \CC^*$ je oblike $\chi_{\zeta}$ za nek $\zeta \in \CC$.
+\end{trditev}
+\begin{dokaz}
+Naj bo $\chi \colon \RR \to \CC^*$ zvezna. Če je $\chi$ celo \emph{odvedljiva}, potem za vsak $x \in \RR$ velja
+\[
+    \chi^\prime(x) 
+    = \lim_{t \to 0} \frac{\chi(x + t) - \chi(x)}{t}
+    = \chi(x) \chi^\prime(0).
+\]
+Funkcija $\chi$ torej reši diferencialno enačbo $\chi^\prime = \zeta \chi$, kjer smo označili $\zeta = \chi^\prime(0)$. Od tod sledi, da je $\chi(x) = A \cdot e^{\zeta x}$ za neko konstanto $A$. Vstavimo $x = 0$ in sklenemo $A = 1$, torej je res $\chi = \chi_{\zeta}$.
+
+Prepričajmo se, da je $\chi$ \emph{vselej} odvedljiva, s čimer bo trditev dokazana. V ta namen jo najprej integrirajmo do odvedljive funkcije
+\[
+    X \colon \RR \to \CC, \quad 
+    x \mapsto \int_{0}^{x} \chi(t) dt.
+\]
+Funkcija $X$ sicer ni nujno homomorfizem, velja pa
+\[
+    X(x + y)
+    = X(x) + \int_{x}^{x+y} \chi(t) dt
+    = X(x) + \int_{0}^{y} \chi(t+x) dt
+    = X(x) + \chi(x) X(y)
+\]
+za vsaka $x,y \in \RR$. Ker je $X^\prime = \chi$, seveda obstaja $y_0 \in \RR$, za katerega je $X(y_0) \neq 0$. Od tod lahko izrazimo $\chi(x)$ kot
+\[
+    \chi(x) = \frac{X(x+y_0) - X(x)}{X(y_0)}.
+\] 
+Ker je funkcija na desni odvedljiva, velja enako tudi za funkcijo na levi.
+\end{dokaz}
+
+Iz trditve izpeljemo, da vsaka zvezna upodobitev $\RR/\ZZ \to \CC^*$ izhaja iz upodobitve $\chi_{\zeta}$ za nek $\zeta$. Pri tem mora biti $\ZZ \leq \ker \chi_{\zeta}$, od koder sledi $\zeta = 2 \pi k$ za nek $k \in \ZZ$. Upodobitve $\chi_k$ torej izčrpajo vse končnorazsežne kompleksne upodobitve grupe $\RR/\ZZ$. Te upodobitve so vse tudi unitarne, kar ni naključje, kot bomo pojasnili nekoliko kasneje.
+
+\subsubsection{Fourierova analiza}
+
+Klasična Fourierova analiza periodičnih funkcij se tesno prepleta s teorijo upodobitev grupe $\RR/\ZZ$. Kot vemo, lahko z upodobitvami $\chi_k$ za $k \in \ZZ$ aproksimiramo poljubno zvezno funkcijo na $\RR/\ZZ$. To naredimo na sledeč način. Prostor funkcij na grupi $\RR/\ZZ$ opremimo s skalarnim produktom
+\[
+    \langle f, h \rangle = \int_{0}^{1} f(t) \overline{h(t)} dt.
+\]
+Fourierovi koeficienti funkcije $f$ so
+\[
+    \langle f, \chi_k \rangle = \int_0^1 f(t) e^{-2 \pi i k t} dt
+\]
+za $k \in \ZZ$. Z njimi definiramo delne Fourierove vsote
+\[
+    f_N = \sum_{k \in \ZZ \colon |k| \leq N} \langle f, \chi_k \rangle \chi_k
+\]
+za $N \in \NN$. V splošnem delne vsote $f_N$ ne konvergirajo po točkah,\footnote{Lahko se celo zgodi, da $f_N$ ne konvergira v \emph{nobeni} točki.} je pa temu tako, če dodatno predpostavimo, da obravnavamo le kvadratno integrabilne funkcije $f$, se pravi
+\[
+    \int_0^1 |f(t)|^2 dt < \infty. 
+\]
+Za te funkcije po osnovnem izreku Fourierove analize velja konvergenca
+\[
+    \lim_{N \to \infty} || f - f_N || = 0,
+\]
+torej lahko $f$ razvijemo v Fourierovo vrsto.\footnote{Pri tem moramo biti nekoliko previdni, saj opisana konvergenca \emph{ne} implicira, da vrsta $f_N$ v vseh točkah konvergira k $f$, temveč le \emph{skoraj povsod}.} Hkrati drži varianta Parsevalove formule
+\[
+  ||f||^2 = \sum_{k \in \ZZ} |\langle f, \chi_k \rangle|^2.
+\]
+Upodobitve $\chi_k$ za $k \in \ZZ$ torej tvorijo ortonormiran sistem funkcij, ki je \emph{gost} v prostoru vseh dovolj lepih funkcij funkcij na $\RR/\ZZ$. To je analogno dekompoziciji regularne upodobitve v primeru končnih grup.
+
+% \subsection{$\SU_2(\CC)$}
+% \todo{Samo naštejemo zvezne unitarne upodobitve, brez dokaza, da so te vse.}
+
+\subsection{Upodobitve kompaktnih grup}
+
+
 
 % \subsection{$\SU_2(\CC)$}
 % \todo{Tole najbrž v celoti izpustimo zaenkrat. Lahko dodamo kasneje.}
