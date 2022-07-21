@@ -4202,14 +4202,46 @@ torej lahko $f$ razvijemo v Fourierovo vrsto.\footnote{Pri tem moramo biti nekol
 \[
   ||f||^2 = \sum_{k \in \ZZ} |\langle f, \chi_k \rangle|^2.
 \]
-Upodobitve $\chi_k$ za $k \in \ZZ$ torej tvorijo ortonormiran sistem funkcij, ki je \emph{gost} v prostoru vseh dovolj lepih funkcij funkcij na $\RR/\ZZ$. To je analogno dekompoziciji regularne upodobitve v primeru končnih grup.
+Upodobitve $\chi_k$ za $k \in \ZZ$ torej tvorijo ortonormiran sistem funkcij, ki je \emph{gost} v prostoru vseh dovolj lepih funkcij funkcij na $\RR/\ZZ$. 
+
+Fourierovo analizo lahko torej vidimo kot analog dekompozicije regularne upodobitve v primeru končnih grup za neskončno grupo $\RR/\ZZ$.
 
 % \subsection{$\SU_2(\CC)$}
 % \todo{Samo naštejemo zvezne unitarne upodobitve, brez dokaza, da so te vse.}
 
 \subsection{Upodobitve kompaktnih grup}
 
+Izkaže se, da ima vse, kar smo videli za primer $\U_1(\CC)$, ustrezno posplošitev za poljubno kompaktno grupo $G$. Za natančno obravnavo potrebujemo nekaj \emph{teorije mere}, ki jo bomo prosto uporabili v tem podrazdelku. 
 
+V primeru grupe $\RR/\ZZ$ smo skalarni produkt na prostoru funkcij izrazili s pomočjo integrala. Izkaže se, da ima vsaka kompaktna grupa posebno verjetnostno mero $\mu$, ki jo imenujemo {\definicija Haarova mera}, glede na katero lahko definiramo integral vsake merljive funkcije $f$ po tej meri. S pomočjo tega se nam odprejo vrata orodju povprečenja po grupi, ki ga lahko izkoristimo za različne namene.
+
+\begin{trditev}
+Vsaka zvezna končnorazsežna kompleksna upodobitev kompaktne grupe je unitarizabilna.
+\end{trditev}
+\begin{dokaz}
+Naj bo $\rho \colon G \to \GL(V)$ upodobitev. Izberemo poljuben skalarni produkt $\langle \cdot, \cdot \rangle$ na $V$ in ga povprečimo do
+\[
+    \langle \cdot, \cdot \rangle_0 \colon V \times V \to \CC, \quad
+    \langle v, w \rangle_0 = \int_{G} \langle \rho(g) \cdot v, \rho(g) \cdot w \rangle d \mu (g).
+\]
+Ni težko preveriti, da je $\langle \cdot, \cdot \rangle_0$ skalarni produkt na $V$, glede na katerega je $\rho$ unitarna upodobitev.
+\end{dokaz}
+
+Kot v primeru $\RR/\ZZ$ lahko vse upodobitve najdemo v ustreznem modelu regularne upodobitve. V splošnem opazujemo funkcije na kompaktni grupi $G$, pri čemer se omejimo na prostor kvadratno integrabilnih merljive funkcije in še te opazujemo le do ekvivalence \emph{skoraj povsod} natančno. Prostor ekvivalenčnih razredov takih funkcij je $L^2(G)$. Na tem prostoru deluje grupa $G$ kot regularna upodobitev,
+\[
+    \rho(g) \cdot f = x \mapsto f(x g).
+\]
+Ta prostor je seveda neskončnorazsežen. Znameniti Peter-Weylov izrek razkrije dekompozicijo te upodobitve, ki je popolnoma analogna tisti iz sveta končnih grup.
+
+\begin{izrek}[Peter-Weyl]
+Naj bo $G$ kompaktna grupa s Haarovo mero $\mu$. Regularna upodobitev $G$ na $L^2(G)$ je izomorfna ortogonalni direktni vsoti
+\[
+    L^2(G) \cong \bigoplus_{\pi} \underbrace{\pi \oplus \pi \oplus \cdots \oplus \pi}_{\deg(\pi)},
+\]
+ko $\pi$ preteče vse končnorazsežne nerazcepne zvezne unitarne upodobitve grupe $G$.
+\end{izrek}
+
+Kot v končnih grupah se s pomočjo matričnih koeficientov prepričamo, da je vsaka nerazcepna zvenza unitarna upodobitev vsebovana v regularni, zato je v posebnem vsaka zvezna unitarna upodobitev kompaktne grupe nujno \emph{končnorazsežna}.
 
 % \subsection{$\SU_2(\CC)$}
 % \todo{Tole najbrž v celoti izpustimo zaenkrat. Lahko dodamo kasneje.}
