@@ -1026,7 +1026,7 @@ Množico vseh izomorfnostnih razredov nerazcepnih upodobitev dane grupe $G$ ozna
 \begin{zgled}
 Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad poljem kompleksnih števil. Spletične $\hom_G(\pi, \pi) = \hom(\pi, \pi)^G$ so endomorfizmi vektorskega prostora, ki so $G$-invariatni, se pravi komutirajo z delovanjem grupe $G$. Zglede takih endomorfizmov lahko dobimo iz delovanj centralnih elementov grupe $G$; za vsak $z \in Z(G)$ je $\pi(z) \in \hom_G(\pi, \pi)$. Po Schurovi lemi je zato $\pi(z) = \omega(z) \cdot \id$ za nek skalar $\omega(z)$. Ker je $\pi$ homomorfizem, je $\omega \colon Z(G) \to \CC^*$ enorazsežna upodobitev centra grupe $G$. Tej upodobitvi rečemo {\definicija centralni karakter} upodobitve $\pi$.
 
-Še posebej zanimiv je primer, ko je $G$ \emph{abelova} grupa. Takrat za vsako nerazcepno upodobitev $\pi$ končne razsežnosti nad poljem $\CC$ velja $\pi(g) = \omega(g) \cdot \id$ za \emph{vsak} $g \in G$.  Vsak enorazsežen podprostor je zato avtomatično podupodobitev. Ker je $\pi$ nerazcepna, od tod sklepamo $\deg(\pi) = 1$ in s tem $\pi = \omega$. Upodobitev $\pi$ je tako \emph{enorazsežna}.
+Še posebej zanimiv je primer, ko je $G$ \emph{abelova} grupa. Takrat za vsako nerazcepno upodobitev $\pi$ končne razsežnosti nad poljem $\CC$ velja $\pi(g) = \omega(g) \cdot \id$ za \emph{vsak} $g \in G$.  Vsak enorazsežen podprostor je zato avtomatično podupodobitev. Ker je $\pi$ nerazcepna, od tod sklepamo $\deg(\pi) = 1$ in s tem $\pi = \omega$. Upodobitev $\pi$ je tako \emph{enorazsežna}. Na primer, vsaka končnorazsežna nerazcepna upodobitev grupe $\RR$ je nujno enorazsežna.
 \end{zgled}
 
 \begin{domacanaloga}
@@ -2265,11 +2265,11 @@ to je {\definicija Hilbert-Schmidtov skalarni produkt}. Parsevalov izrek nam tor
     \langle f, h \rangle = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \left\langle \hat{f}(\pi), \hat{h}(\pi) \right\rangle_{\HS}.
 \]
 
-\chapter{Razširjeni zgledi upodobitev končnih grup}
+\chapter{Razširjeni zgledi -- končni}
 
 Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo na voljo tabelo karakterjev, izračun te pa je končen problem. S tem smo za konkretne končne grupe dosegli ultimativen cilj teorije upodobitev. Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves ne spregledamo gozda. Grupe namreč praviloma ne nastopajo posamično, temveč kot del večjih družin.\footnote{Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, \dots} V tem poglavju si bomo podrobneje pogledali dve temeljni družini grup, in sicer simetrične grupe ter splošne linearne grupe nad končnim poljem.\footnote{Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, treh neskončnih družin, in sicer cikličnih grup praštevilske moči $\ZZ/p\ZZ$, alternirajočih grup $A_n$ in različnih matričnih grup nad končnimi polji, na primer $\SL_n(\FF_p)/Z(\SL_n(\FF_p))$. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev nekomutativnih končnih enostavnih grup.} Njuno teorijo upodobitev bomo obravnavali celostno.
 
-\section{Simetrična grupa}
+\section{Simetrične grupe}
 
 Opazujmo simetrično grupo $S_n$ za $n \in \NN$ nad poljem $\CC$. Ogledali smo si že tabele karakterjev za $n \leq 4$ in razložili, da je število nerazcepnih upodobitev enako številu konjugiranostnih razredov, to pa je enako številu razčlenitev $p(n)$. Družina simetričnih grup je posebna, saj zanjo presenetljivo obstaja eksplicitna korespondenca med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Iz dane razčlenitve $(\lambda_1, \lambda_2, \dots, \lambda_k)$ števila $n$ lahko torej konstruiramo nerazcepno upodobitev grupe $S_n$ in za tem z nekoliko več truda določimo vrednosti karakterjev.
 
@@ -2594,7 +2594,7 @@ Avtor omeni analogno vprašanje glede same tabele karakterjev.
 Enakomerno naključno izberimo konjugiranostni razred $\conclass$ v $S_n$ in $\pi \in \Irr(S_n)$. Kaj lahko povemo o obnašanju zaporedja $\PP_{\conclass, \pi}\left( \chi_{\pi}(\conclass) = 0 \right)$, ko gre $n$ čez vse meje?
 \end{odprtproblem}
 
-\subsection{Alternirajoča grupa}
+\subsection{Alternirajoče grupe}
 
 Oglejmo si, kako lahko iz tabele karakterjev simetrične grupe skoraj popolnoma določimo tabelo karakterjev alternirajoče grupe $A_n$.
 
@@ -2618,7 +2618,7 @@ Torej je $\langle \chi_{\lambda}|_{A_n}, \chi_{\lambda}|_{A_n} \rangle \in \{ 1,
 S štetjem konjugiranostnih razredov v $A_n$ se ni težko prepričati, da na opisan način dobimo vse nerazcepne upodobitve alternirajoče grupe.
 
 
-\section{Splošna linearna grupa}
+\section{Splošne linearne grupe}
 
 Opazujmo {\definicija splošno linearno grupo}
 \[
@@ -3499,10 +3499,12 @@ Prispevek trivialne upodobitve je enak
 \[
     \langle \widehat{1_A}(\11)^2, \widehat{1_B}(\11) \rangle_{\HS}/|G| = |A|^2 |B| / |G| = \alpha^2 \beta |G|^2. 
 \]
-Prispevke netrivialnih upodobitev lahko s trikotniško neenakostjo in Cauchy-Schwartzovo neenakostjo po absolutni vrednosti omejimo navzgor kot
+Prispevke netrivialnih upodobitev lahko s trikotniško neenakostjo po absolutni vrednosti omejimo navzgor kot
 \[
-    \frac{1}{|G|} \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) \left| \langle \widehat{1_A}(\pi)^2, \widehat{1_B}(\pi) \rangle_{\HS} \right|
-    \leq 
+    \frac{1}{|G|} \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) \left| \langle \widehat{1_A}(\pi)^2, \widehat{1_B}(\pi) \rangle_{\HS} \right|,
+\]
+kar je po Cauchy-Schwartzovi neenakosti kvečjemu
+\[
     \frac{1}{|G|} \sum_{\11 \neq \pi \in \Irr(G)} \chi_{\pi}(1) || \widehat{1_A}(\pi) ||_{\HS}^2 || \widehat{1_B}(\pi) ||_{\HS}.
 \]
 V zadnji vsoti zadnjo normo omejimo z maksimumom, da dobimo zgornjo mejo
@@ -3944,7 +3946,11 @@ za nek $\epsilon > 0$, potem velja
 \]
 
 
-Napaka med porazdelitvama pade pod konstanto $\theta$, če je le $n \sim (\log |G| - \log \theta)/(- \log (1 - \epsilon)) = O_{\epsilon, \theta}(\log |G|)$. Takrat bo za majhno konstanto $\theta$ slučajni sprehod zelo blizu svoje limitne porazdelitve, če ta sploh obstaja. Čas mešanja je torej logaritmičen v velikosti grupe.
+Napaka med porazdelitvama pade pod konstanto $\theta$, če je le
+\[
+n \sim (\log |G| - \log \theta)/(- \log (1 - \epsilon)) = O_{\epsilon, \theta}(\log |G|).
+\]
+Takrat bo za majhno konstanto $\theta$ slučajni sprehod zelo blizu svoje limitne porazdelitve, če ta sploh obstaja. Čas mešanja je torej logaritmičen v velikosti grupe.
 
 \subsection{Naključno množenje podobnih matrik}
 
@@ -4084,11 +4090,41 @@ V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $
 \]
 \end{odprtproblem}
 
-\chapter{Razširjeni zgledi upodobitev neskončnih grup}
+\chapter{Razširjeni zgledi -- neskončni}
 
-\todo{Ozaljšane upodobitve}
+V tem zaključnem poglavju si bomo pogledali nekaj zgledov iz teorije upodobitev neskončnih grup. Tukaj ni enotne teorije, s katero bi lahko obravnavali vsako grupo, obstajajo pa družine grup, znotraj katerih lahko razumemo upodobitve na enoten način. Tukaj ne bomo razvijali splošne teorije, temveč si bomo ogledali le konkretne predstavnike nekatere izmed pomembnih družin neskončnih grup.
 
-\todo{Abstraktnih upodobitev je preveč, zgled: $\SL_2(\CC)$ z avtomorfizmi polja, zato se omejimo na posebne, kjer upoštevamo dodatno strukturo grupe.}
+\subsection{Ozaljšane upodobitve}
+
+V svetu neskončih grup ponavadi ne obravnavamo čisto vseh abstraktnih upodobitev, ker na ta način dobimo preprosto \emph{preveč} upodobitev, ki niti niso \emph{smiselne}.
+
+\begin{zgled}
+Opazujmo grupo $\RR$. Vemo že, da je vsaka njena končnorazsežna nerazcepna kompleksna upodobitev enorazsežna, torej oblike $\chi \colon \RR \to \CC^*$ za nek homomorfizem $\chi$. Premislimo, da je takih homomorfizmov \emph{ogromno}. Grupa $\RR$ je kot abelova grupa izomorfna neskončni direktni vsoti kopij $\ZZ$. Za vsak nabor realnih števil $x_1, x_2, \dots, x_k$, ki so $\ZZ$-linearno neodvisna, lahko izberemo poljuben nabor kompleksnih števil $z_1, z_2, \dots, z_k$ in dobimo homomorfizem abelovih grup $\chi \colon \RR \to \CC^*$ z lastnostjo $\chi(x_i) = z_i$ za vsak $i$.
+\end{zgled}
+
+To težavo zaobidemo tako, da ne opazujemo poljubnih upodobitev, temveč jih ozaljšamo z dodatnimi restrikcijami v odvisnosti od grupe, ki jo opazujemo. 
+
+\subsubsection{Zveznost}
+
+Grupa $\RR$ ni le abstraktna grupa, temveč je opremljena s topologijo. Abstraktneje je {\definicija topološka grupa} množica, ki je hkrati grupa in topološki prostor, obe strukturi pa sta uglašeni s pogojem, da sta operaciji množenja in invertiranja zvezni. Končnorazsežna\footnote{Če bi želeli obravnavati tudi neskončnorazsežne upodobitve na prostoru $V$, bi morali to definicijo nekoliko popraviti. Najprej bi morali zahtevati, da vsak element grupe $G$ deluje kot zvezen linearen operator na $V$, kar ni avtomatično v neskončnorazsežnih vektorskih prostorih. Za tem bi morali namesto zveznosti preslikave $\rho$ zahtevati, da je le \emph{šibko zvezna}, kar pomeni, da je preslikava $G \times V \to V$, $(g,v) \mapsto \rho(g) \cdot v$ zvezna.} kompleksna upodobitev $\rho \colon G \to \GL_n(\CC)$ topološke grupe $G$ je {\definicija zvezna}, kadar je zvezna kot preslikava, pri čemer prostor $\GL_n(\CC) \subseteq \CC^{n^2}$ opremimo z inducirano topologijo.
+
+\begin{zgled}
+Nore upodobitve grupe $\RR$, ki smo jih konstruirali v zadnjem zgledu, povečini niso zvezne. So pa za vsak parameter $\zeta \in \CC$ zvezne upodobitve oblike
+\[
+    \chi_{\zeta} \colon \RR \to \CC^*, \quad
+    x \mapsto e^{\zeta x}.
+\]
+\end{zgled}
+
+\subsubsection{Unitarnost}
+
+Pri raziskovanju teorije upodobitev končnih grup nam je marsikje prav prišlo dejstvo, da smo vektorske prostore opremili s skalarnim produktom, ki je bil invarianten glede na upodobitev. Z drugimi besedami, opazovali smo {\definicija unitarne} upodobitve, ki slikajo v grupo $\U(V) \leq \GL(V)$. Z metodo povprečenja smo dokazali, da je vsaka upodobitev končne grupe unitarizabilna in torej po ustrezni zamenjavi baze lahko predpostavimo, da je oblike $\rho \colon G \to U_n(\CC)$. Za neskončne grupe tega sklepa ne moremo napraviti in tudi zaključek v splošnem ne drži.
+
+\begin{zgled}
+Opazujmo grupo $\RR$ in njene upodobitve $\chi_{\zeta}$. Ta upodobitev je unitarna, če in samo če je njena slika vsebovana v $\U(\CC) = S^1 = \{ z \in \CC \mid |z| = 1 \}$, kar se zgodi le za imaginarne parametre $\zeta \in \RR \cdot i$.
+\end{zgled}
+
+Za neskončne topološke grupe najraje opazujemo zvezne unitarne upodobitve. O teh ponavadi lahko povemo največ.
 
 \section{Kompaktne grupe}
 
@@ -4098,21 +4134,20 @@ V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $
     fourier
 }
 
-\subsection{$\SU_2(\CC)$}
+% \subsection{$\SU_2(\CC)$}
+% \todo{Tole najbrž v celoti izpustimo zaenkrat. Lahko dodamo kasneje.}
+% \todo[inline]{
+% - lahko bi geometrijsko iz $sl_2$, ampak pokažemo alternativen pristop, ker je kompaktna
+% - naštejemo upodobitve, so nerazcepne: isti dokaz kot za $SL_2$ bolj ali manj deluje tudi tukaj
+% - Clebsch-Gordan je trivialen iz karakterjev
+% - dokažemo, da so to vse zvezne nerazcepne: rabimo karakterje
+% - Peter-Weyl na tem primeru (samo izrek, da smo s tem pokrili vse unitarne upodobitve)
+% }
 
-\todo{Tole najbrž v celoti izpustimo zaenkrat. Lahko dodamo kasneje.}
-
-\todo[inline]{
-- lahko bi geometrijsko iz $sl_2$, ampak pokažemo alternativen pristop, ker je kompaktna
-- naštejemo upodobitve, so nerazcepne: isti dokaz kot za $SL_2$ bolj ali manj deluje tudi tukaj
-- Clebsch-Gordan je trivialen iz karakterjev
-- dokažemo, da so to vse zvezne nerazcepne: rabimo karakterje
-- Peter-Weyl na tem primeru (samo izrek, da smo s tem pokrili vse unitarne upodobitve)
-}
-
-\section{Liejeve grupe}
+\section{Zvezne linearne grupe}
 
 \subsection{$\SL_2(\CC)$}
+\subsection{$\SL_2(\RR)$}
 
 \todo[inline]{
 - obravnavamo kot Liejevo grupo
@@ -4126,7 +4161,7 @@ V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $
 - dokažemo Clebsch-Gordan (najbrž izpustimo ..)
 }
 
-\section{Mreže}
+\section{Diskretne linearne grupe}
 \subsection{$\SL_2(\ZZ)$}
 \todo[inline]{
 - $SL_2(Z)$? (-> \url{https://math.stackexchange.com/questions/786303/the-presentation-of-sl2-mathbbz}, glej zadnji odgovor, kjer poda prezentacijo, napiši na primer enačbe za raznoterost dvorazsežnih realnih upodobitev; ima ogromno končnih kvocientov -- nima CSP (stran3 https://arxiv.org/pdf/2203.15701.pdf, lemma a.1 https://arxiv.org/pdf/1201.6644.pdf)) 
