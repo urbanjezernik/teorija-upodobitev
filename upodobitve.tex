@@ -89,6 +89,8 @@
 
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\GL{GL}
+\DeclareMathOperator\glfrak{\mathfrak{gl}}
+\DeclareMathOperator\slfrak{\mathfrak{sl}}
 \DeclareMathOperator\U{U}
 \DeclareMathOperator\SL{SL}
 \DeclareMathOperator\PSL{PSL}
@@ -4344,10 +4346,78 @@ Upoštevajmo zdaj, da je $W$ invarianten še glede na vse ostale elemente v $\SL
 Na ta način smo torej konstruirali neskončno mnogo nerazcepnih polinomskih upodobitev grupe $\SL_2(\CC)$ poljubne visoke stopnje. Zanimivo je, da te upodobitve \emph{niso} unitarne. Lastne vrednosti unitarnih matrik so namreč nujno absolutne vrednosti $1$, čemur upodobitve $\rho_k$ ne zadoščajo. Kasneje bomo videli preprost argument, da niti njena podgrupa $\SL_2(\RR)$ nima netrivialnih končnorazsežnih unitarnih upodobitev. Upodobitve teh grup so torej bistveno drugačne od upodobitev kompaktnih grup, kjer so \emph{vse} končnorazsežne nerazcepne upodobitve unitarne.
 
 \begin{domacanaloga}
-Grupa $\SU_2(\CC)$ je kompaktna podgrupa $\SL_2(\CC)$. Dokaži, da so zožitve upodobitev $\rho_k$ na $\SU_2(\CC)$ nerazcepne in unitarne.
+Grupa $\SU_2(\CC)$ je kompaktna podgrupa $\SL_2(\CC)$. Dokaži, da so zožitve upodobitev $\rho_k$ na $\SU_2(\CC)$ nerazcepne in unitarne. Izračunaj karakter vsake od teh upodobitev in dokaži, da te funkcije tvorijo gost podprostor $L^2(\SU_2(\CC))$. To so torej vse zvezne unitarne upodobitve grupe $\SU_2(\CC)$.
 \end{domacanaloga}
 
-\subsubsection{Liejeva algebra}
+\subsubsection{Linearizacija upodobitve}
+
+Princip za dokazovanje, da smo z upodobitvami $\rho_k$ izčrpali vse dovolj lepe upodobitve grupe $\SL_2(\CC)$, temelji na \emph{linearizaciji}. Vsako odvedljivo upodobitev $\rho \colon \SL_2(\CC) \to \GL_n(\CC)$ lahko namreč obravnavamo kot preslikavo med mnogoterostmi, zato z njenim {\definicija odvodom} dobimo inducirano linearno preslikavo
+\[
+    D_I \rho \colon T_I \SL_2(\CC) \to T_I \GL_n(\CC)
+\]
+med tangentima prostoroma v identični matriki. Oglejmo si podrobneje, kako izgledata ta dva tangentna prostora.
+
+Opazujmo najprej grupo $\GL_n(\CC)$, ki je odprta podmnožica $\CC^{n^2}$. Njen tangentni prostor v $I$ zato lahko identificiramo z vektorskim prostorom $\CC^{n^2}$, ki ga predstavimo v matrični obliki kot
+\[
+    \glfrak_n(\CC) = \{ X \mid X \in \Mat_{n}(\CC) \}.
+\]
+Ta opis je prikladen, ker omogoča jasen opis majhne okolice $I$ v $\GL_n(\CC)$. Za vsak tangentni vektor $X \in \glfrak_n(\CC)$ imamo preslikavo $\RR \to \glfrak_n(\CC)$, $t \mapsto tX$, ki jo lahko potisnemo v $\GL_n(\CC)$ z {\definicija eksponentno preslikavo} in dobimo gladko pot
+\[
+    \gamma \colon \RR \to \GL_n(\CC), \quad
+    t \mapsto e^{tX} = \sum_{i = 0}^{\infty} t^i X^i / i!
+\]
+v grupi $\GL_n(\CC)$. Res, velja formula $\det(\gamma(t)) = \det e^{tX} = e^{\tr (tX)}$,\footnote{Ta formula je jasna, če matriko $X$ predstavimo v Jordanovi normalni obliki.} zato je $\gamma(t)$ obrnljiva matrika. Tangentni vektor poti $\gamma$ v točki $0$ izračunamo kot
+\[
+    D_0 \gamma 
+    = \lim_{t \to 0} \frac{e^{tX} - I}{t}
+    = \lim_{t \to 0} \frac{I + tX + O(t^2) - I}{t}
+    = X.
+\]
+Pot $\gamma$ je torej gladka pot v $\GL_n(\CC)$ z začetno vrednostjo $\gamma(0) = I$ in tangentnim vektorjem $X$. Vsak tangentni vektor smo torej s pomočjo eksponentne preslikave uresničili kot tengentni vektor neke gladke poti skozi $I$. Vsaj lokalno pa je res tudi obratno: vsaka gladka pot v $\GL_n(\CC)$ v neki okolici $I$ izhaja iz gladke poti v $\glfrak_n(\CC)$, potisnjene v $\GL_n(\CC)$ z eksponentno preslikavo. To sledi neposredno iz naslednje lastnosti eksponentne preslikave.
+
+\begin{trditev}
+Eksponentna preslikava $e \colon \glfrak_n(\CC) \to \GL_n(\CC)$ je difeomorfizem v neki okolici $0$.
+\end{trditev}
+\begin{dokaz}
+Po izreku o inverzni preslikavi bo dovolj preveriti, da je linearna preslikava $D_0 e$ polnega ranga. Za poljuben $X \in \glfrak_n(\CC)$ naj bo $\lambda \colon \RR \to \glfrak_n(\CC)$, $t \mapsto tX$ in naj bo $\gamma = e \circ \lambda$. Po verižnem pravilu velja
+\[
+    D_0 e \cdot X
+    = D_0 e \cdot D_0 \lambda
+    = D_0 \gamma
+    = X.
+\]
+Torej je $D_0 e$ kar identična preslikava. 
+\end{dokaz}
+
+Za vsako gladko pot $\gamma \colon \RR \to \GL_n(\CC)$ z $\gamma(0) = I$ lahko torej najdemo $\epsilon > 0$, da je pot $\gamma |_{(-\epsilon, \epsilon)}$ oblike $e^{\lambda}$, kjer je $\lambda \colon (-\epsilon, \epsilon) \to \glfrak_n(\CC)$ gladka pot v tangentnem prostoru.
+
+S pomočjo eksponentne preslikave lahko dobro razumemo tudi tangentni prostor $T_I \SL_2(\CC)$ in njegovo lokalno povezavo z grupo $\SL_2(\CC)$. Izberimo poljuben tangentni vektor $X \in T_I \SL_2(\CC) \leq \glfrak_2(\CC)$. Obstaja torej gladka pot $\gamma \colon (-\epsilon, \epsilon) \to \SL_2(\CC)$ z odvodom $D_0 \gamma = X$. Po potrebi $\epsilon$ še zmanjšamo in s tem po zadnji trditvi dosežemo, da je $\gamma(t) = e^{\lambda(t)}$, kjer je $\lambda \colon (-\epsilon, \epsilon) \to T_I \SL_2(\CC)$ gladka pot. Pri tem velja
+\[
+    X = D_0 \gamma
+    = D_0 e \cdot D_0 \lambda
+    = D_0 \lambda.
+\]
+Ker $\gamma$ slika v $\SL_2(\CC)$, za vsak $t \in (- \epsilon, \epsilon)$ velja 
+\[
+    1 = \det (\gamma(t)) = e^{\tr(\lambda(t))},
+\]
+zato je $\tr(\lambda(t)) = 0$ za vsak dovolj majhen $t$. To enakost odvedemo v točki $0$ in dobimo $\tr(X) = 0$. Vsak vektor v $T_I \SL_2(\CC)$ zato pripada vektorskemu prostoru
+\[
+    \slfrak_2(\CC) = \{ X \in \glfrak_2(\CC) \mid \tr(X) = 0 \}.
+\]
+Res pa je tudi obratno. Vsak vektor $X$ s sledjo $0$ namreč določa pot $\lambda \colon \RR \to \slfrak_2(\CC)$, $t \mapsto tX$, in za tem pot $\gamma \colon \RR \to \SL_2(\CC)$, $t \mapsto e^{tX}$. Velja $\gamma(0) = I$ in $D_0 \gamma = X$, torej je $X \in T_I \SL_2(\CC)$.
+
+\begin{posledica}
+Velja $T_I \SL_2(\CC) = \slfrak_2(\CC)$.
+\end{posledica}
+
+Pod vsem povedanim lahko odvod upodobitve $\rho \colon \SL_2(\CC) \to \GL_n(\CC)$ torej razumemo kot linearno preslikavo
+\[
+    D_I \rho \colon \slfrak_2(\CC) \to \glfrak_n(\CC), \quad
+    X \mapsto D_0 \rho(e^{tX}).
+\]
+Ta preslikava pa ni čisto poljubna, temveč v sebi skriva še nekaj dodatne informacije glede grup $\SL_2(\CC)$ in $\GL_n(\CC)$.
+
 
 \subsubsection{Teorija upodobitev Liejevih grup}
 
