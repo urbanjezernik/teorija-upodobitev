@@ -92,6 +92,7 @@
 \DeclareMathOperator\U{U}
 \DeclareMathOperator\SL{SL}
 \DeclareMathOperator\PSL{PSL}
+\DeclareMathOperator\SO{SO}
 \DeclareMathOperator\Gal{Gal}
 \DeclareMathOperator\Sym{Sym}
 \DeclareMathOperator\Homeo{Homeo}
@@ -4109,7 +4110,7 @@ To težavo zaobidemo tako, da ne opazujemo poljubnih upodobitev, temveč jih oza
 Grupa $\RR$ ni le abstraktna grupa, temveč je opremljena s topologijo. Abstraktneje je {\definicija topološka grupa} množica, ki je hkrati grupa in topološki prostor, obe strukturi pa sta uglašeni s pogojem, da sta operaciji množenja in invertiranja zvezni. 
 
 \begin{zgled}
-Grupe $\RR$, $\RR^3$, $\RR^*$, $\U_1(\CC) = S^1$, $\GL_3(\CC)$, $\SL_2(\RR)$, $\SL_2(\ZZ)$ so topološke grupe. Vsaka od njih je opremljena z naravno topologijo, ki jo podeduje iz ambientalnega evklidskega prostora. Grupa $\SL_2(\ZZ)$ sicer podeduje le \emph{diskretno} topologijo.
+Grupe $\RR$, $\RR^3$, $\RR^*$, $\U_1(\CC) = S^1$, ,$SU_2(\CC)$, $\SO_3(\RR)$, $\GL_3(\CC)$, $\SL_2(\RR)$, $\SL_2(\ZZ)$ so topološke grupe. Vsaka od njih je opremljena z naravno topologijo, ki jo podeduje iz ambientalnega evklidskega prostora. Grupa $\SL_2(\ZZ)$ sicer podeduje le \emph{diskretno} topologijo.
 \end{zgled}
 
 Končnorazsežna\footnote{Če bi želeli obravnavati tudi neskončnorazsežne upodobitve na prostoru $V$, bi morali to definicijo nekoliko popraviti. Najprej bi morali zahtevati, da vsak element grupe $G$ deluje kot zvezen linearen operator na $V$, kar ni avtomatično v neskončnorazsežnih vektorskih prostorih. Za tem bi morali namesto zveznosti preslikave $\rho$ zahtevati, da je le \emph{šibko zvezna}, kar pomeni, da je preslikava $G \times V \to V$, $(g,v) \mapsto \rho(g) \cdot v$ zvezna.} kompleksna upodobitev $\rho \colon G \to \GL_n(\CC)$ topološke grupe $G$ je {\definicija zvezna}, kadar je zvezna kot preslikava, pri čemer prostor $\GL_n(\CC) \subseteq \CC^{n^2}$ opremimo z inducirano topologijo.
@@ -4121,6 +4122,8 @@ Nore upodobitve grupe $\RR$, ki smo jih konstruirali v zadnjem zgledu, povečini
     x \mapsto e^{\zeta x}.
 \]
 \end{zgled}
+
+Kadar je dana topološka grupa $G$ opremljena z znano topologijo, ki izhaja iz evklidskega prostora, kot se zgodi na primer v grupah $\SO_3(\RR)$ ali $\SL_2(\CC)$, ima smisel govoriti o mnogih dodatnih lastnostih matričnih koeficientov upodobitev. Lahko na primer zathevamo, da so ti koeficienti gladki, analitični ali preprosto polinomi. V teh primerih rečemo, da imamo gladko, analitično oziroma polinomsko upodobitev.
 
 \subsubsection{Unitarnost}
 
@@ -4217,7 +4220,7 @@ Fourierovo analizo lahko torej vidimo kot analog dekompozicije regularne upodobi
 
 \subsection{Poljubne kompaktne grupe}
 
-Izkaže se, da ima vse, kar smo videli za primer $\U_1(\CC)$, ustrezno posplošitev za poljubno kompaktno grupo $G$. Za natančno obravnavo potrebujemo nekaj \emph{teorije mere}, ki jo bomo prosto uporabili v tem podrazdelku. 
+Izkaže se, da ima vse, kar smo videli za primer $\U_1(\CC)$, ustrezno posplošitev za poljubno kompaktno grupo $G$, na primer $\SU_2(\CC)$ ali $\SO_3(\RR)$. Za natančno obravnavo potrebujemo nekaj \emph{teorije mere}, ki jo bomo prosto uporabili v tem podrazdelku. 
 
 V primeru grupe $\RR/\ZZ$ smo skalarni produkt na prostoru funkcij izrazili s pomočjo integrala. Izkaže se, da ima vsaka kompaktna grupa enolično verjetnostno mero $\mu$, ki zadošča pogoju invariantnosti $\mu(U) = \mu(g \cdot U) = \mu(U \cdot g)$ za vsako merljivo množico $U$ in element $g \in G$. To mero imenujemo {\definicija Haarova mera}. Z njo lahko definiramo integral vsake merljive funkcije $f$. S pomočjo tega se nam odprejo vrata orodju povprečenja po grupi, ki ga lahko izkoristimo za različne namene.
 
@@ -4261,13 +4264,94 @@ Kot v končnih grupah se s pomočjo matričnih koeficientov prepričamo, da je v
 
 \section{Zvezne linearne grupe}
 
+V tem razdelku si bomo ogledali, kako lahko razumemo teorijo upodobitev linearnih topoloških grup, ki lokalno izgledajo kot $\RR^n$ ali $\CC^n$. To so na primer grupe $\GL_n(\CC)$, $\SL_2(\CC)$, $\SL_2(\RR)$, $\SO_3(\RR)$, $\SU_2(\CC)$. Zadnji dve grupi sta sicer kompaktni, tako da ju lahko razumemo tudi z orodji zadnjega razdelka. Tu se bomo zato osredotočili na nekompaktne zglede.
+
 \subsection{$\SL_2(\CC)$}
+
+Grupa $\SL_2(\CC)$ je zaprta podmnožica kompleksnega prostora $\CC^4$, dana z enačbo $ad - bc = 1$. Ker je odvod determinantne preslikave v vsaki točki neničeln, je $\SL_2(\CC)$ podmnogoterost kompleksne razsežnosti $3$. Pri opazovanju upodobitev grupe $\SL_2(\CC)$ bomo seveda upoštevali to strukturo, saj sicer dobimo \emph{preveč} updobitev.\footnote{Podobno kot smo že videli v primeru upodobitev grupe $\RR$. Konkretno za vsak avtomorfizem polja $\CC$ dobimo upodobitev $\SL_2(\CC) \to \SL_2(\CC)$, ki aplicira avtomorfizem po členih matrike. Polje $\CC$ ima \emph{mnogo} divjih avtomorfizmov.} Smiselno bo opazovati upodobitve, pri katerih so matrični koeficienti zvezne ali celo gladke funkcije matrike, ki deluje. Glede na to, da je $\SL_2(\CC)$ kompleksna mnogoterost, lahko opazujemo tudi kompleksno analitične upodobitve. Na grupo $\SL_2(\CC)$ lahko gledamo tudi kot na algebraično grupo,\footnote{{\definicija Linearna algebraična grupa} je grupa, ki je hkrati množica skupnih ničel nekih polinomov v prostoru $\CC^n$.} zato ima smisel opazovati tudi le polinomske upodobitve. Kot bomo videli, so si nazadnje vse te različne oblike upodobitev grupe $\SL_2(\CC)$ med sabo zelo podobne.
+
+\subsubsection{Standardna upodobitev in njene potence}
+
+Grupa $\SL_2(\CC)$ naravno deluje na vektorskem prostoru $\CC^2$ z množenjem matrik z vektorji. Označimo bazna vektorja kot $X = e_1$ in $Y = e_2$. Na ta način dobimo {\definicija standardno upodobitev}
+\[
+    \rho_1 \colon \SL_2(\CC) \to \GL_2(\CC), \quad
+    \begin{pmatrix}
+        a & b \\ c & d 
+    \end{pmatrix}
+    \mapsto \left( (X,Y) \mapsto (X,Y) \cdot \begin{pmatrix}
+        a & b \\ c & d 
+    \end{pmatrix} \right).
+\]
+To upodobitev lahko vidimo kot upodobitev na prostoru linearnih polinomov v $X$,$Y$. V tej luči jo lahko naravno razširimo na prostor homogenih polinomov $\CC[X,Y]_k$ stopnje $k \geq 1$. Baza tega prostora so monomi $e_i = X^i Y^{k-i}$ za $0 \leq i \leq k$, torej je $\CC[X,Y]_k$ razsežnosti $k+1$. Formalno za razširitev $\rho_1$ uporabimo simetrično potenco in dobimo
+\[
+    \rho_k = \Sym^k(\rho_1) \colon \SL_2(\CC) \to \GL(\CC[X,Y]_k), \quad
+    g \mapsto \left( f(X,Y) \mapsto f((X,Y) \cdot g) \right).
+\]
+Eksplicitno se bazni monom $e_i = X^i Y^{k-i}$ z upodobitvijo $\rho_k$ preslika v
+\[
+    \rho_k \begin{pmatrix}
+        a & b \\ c & d 
+    \end{pmatrix}
+    \cdot X^i Y^{k-i}
+    = (aX + cY)^i (bX + dY)^{k-i},
+\]
+kar brez težave razvijemo po monomih v $\CC[X,Y]_k$. Pri tem dobimo koeficiente, ki so polinomi v spremenljivkah $a,b,c,d$, zato je upodobitev $\rho_k$ polinomska.
+
+\begin{trditev}
+Polinomske upodobitve $\rho_k \colon \SL_2(\CC) \to \GL_{k+1}(\CC)$ so nerazcepne.
+\end{trditev}
+\begin{dokaz}
+Kot v obravnavi upodobitev splošne linearne grupe nad končnim poljem si oglejmo torus\footnote{Ker je polje $\CC$ algebraično zaprto, tukaj obstaja le en torus.}
+\[
+    T = \left\{ 
+        \begin{pmatrix}
+            \lambda & 0 \\ 0 & \lambda^{-1}
+        \end{pmatrix}        
+        \mid
+        \lambda \in \CC^*
+    \right\} \cong \CC^*.
+\]
+Upodobitev $\rho_k$ zožimo na $T$. Ker je $\CC^*$ abelova grupa, a priori vemo, da je ta zožitev direktna vsota enorazsežnih upodobitev. Te dekompozicije ni težko razumeti, saj velja
+\[
+    \rho_k \begin{pmatrix}
+        \lambda & 0 \\ 0 & \lambda^{-1}
+    \end{pmatrix}
+    \cdot e_i
+    = \lambda^{2i - k} e_i.
+\]
+Naj bo $\chi_i$ upodobitev $T \cong \CC^* \to \CC^*$, $\lambda \mapsto \lambda^i$. Imamo torej zelo preprosto dekompozicijo
+\[
+    {\textstyle \Res^{\SL_2(\CC)}_T(\rho_k)}
+    = 
+    \chi_{-k} \oplus \chi_{-k+2} \oplus \cdots \oplus \chi_{k}.
+\]
+S pomočjo tega bomo dokazali, da je $\rho_k$ nerazcepna upodobitev. Res, naj bo $0 \neq W \leq \CC[X,Y]_k$ poljuben $\SL_2(\CC)$-invarianten podprostor. Ker je $\Res^{\SL_2(\CC)}_T(\rho_k)$ polenostavna upodobitev, v kateri vsaka nerazcepna podupodobitev nastopa z večkratnostjo $1$, podprostor $W$ nujno sestoji iz nekaterih od teh podupodobitev. Za neko množico $I \subseteq \{ 0,1,\dots,k\}$ torej velja
+\[
+    W = \bigoplus_{i \in I} \CC \cdot e_i.
+\]
+Upoštevajmo zdaj, da je $W$ invarianten še glede na vse ostale elemente v $\SL_2(\CC)$. Velja
+\[
+    \rho_k \begin{pmatrix}
+        1 & 1 \\ 0 & 1
+    \end{pmatrix}
+    \cdot e_i
+    = X^i (X+Y)^{k-i}
+    = \sum_{j = i}^k \binom{k-i}{j-i} e_j.
+\]
+Če je $e_{i_0} \in W$, je torej $e_i \in W$ za vsak $i \geq i_0$, saj je $W$ razpet z nekaterimi standardnimi baznimi vektorji. Podoben argument s spodnjetrikotno matriko pokaže, da je $e_i \in W$ za vsak $i \leq i_0$. Sklepamo torej $W = \CC[X,Y]_k$ in $\rho_k$ je res nerazcepna upodobitev.
+\end{dokaz}
+
+Na ta način smo torej konstruirali neskončno mnogo nerazcepnih polinomskih upodobitev grupe $\SL_2(\CC)$ poljubne visoke stopnje. Zanimivo je, da te upodobitve \emph{niso} unitarne. Lastne vrednosti unitarnih matrik so namreč nujno absolutne vrednosti $1$, čemur upodobitve $\rho_k$ ne zadoščajo. Kasneje bomo videli preprost argument, da niti njena podgrupa $\SL_2(\RR)$ nima netrivialnih končnorazsežnih unitarnih upodobitev. Upodobitve teh grup so torej bistveno drugačne od upodobitev kompaktnih grup, kjer so \emph{vse} končnorazsežne nerazcepne upodobitve unitarne.
+
+\begin{domacanaloga}
+Grupa $\SU_2(\CC)$ je kompaktna podgrupa $\SL_2(\CC)$. Dokaži, da so zožitve upodobitev $\rho_k$ na $\SU_2(\CC)$ nerazcepne in unitarne.
+\end{domacanaloga}
+
+\subsubsection{Liejeva algebra}
+
+\subsubsection{Teorija upodobitev Liejevih grup}
+
 \subsection{$\SL_2(\RR)$}
-\subsection{$\SL_2(\ZZ_p)$}
-\todo[inline]{
-    - konstrukcija, je kompaktna grupa, $p$-adično analitična
-    - veliko končnih kvocientov, obstajajo tudi nekongruenčni kvocienti $\SL_2(\ZZ)$
-    - jedro zvezne upodobitve je odprto: https://www.math.purdue.edu/~tongliu/teaching/598/p-adicrep.pdf}
 
 \todo[inline]{
 - obravnavamo kot Liejevo grupo
@@ -4295,15 +4379,16 @@ Kot v končnih grupah se s pomočjo matričnih koeficientov prepričamo, da je v
 - $SL_n(Z)$? (-> The representation theory of SLn(Z), Andrew Putman, povezano s $p$-adičnimi števili -- Lubotzky)
 }
 
+\subsubsection{$\SL_2(\ZZ_p)$}
+\todo[inline]{
+    - konstrukcija, je kompaktna grupa, $p$-adično analitična
+    - veliko končnih kvocientov, obstajajo tudi nekongruenčni kvocienti $\SL_2(\ZZ)$
+    - jedro zvezne upodobitve je odprto: https://www.math.purdue.edu/~tongliu/teaching/598/p-adicrep.pdf}
+
 
 
 
 
 \todo[inline]{$p$-adične grupe. Omenimo lahko na primer rezultat Jaikin (representation growth) in Aizenbud-Avni (Representation Growth and Rational Singularities of the Moduli Space of Local Systems).}
-
-\todo[inline]{
-- ? lastnost $(T)$, dodaj referenco na TGP in expanderje
-- $\SL_2(\RR)$: sorodna $SU$ (imata enako kompleksifikacijo Liejevih algeber), ampak hkrati popolnoma drugačna kar se tiče unitarnih upodobitev.
-}
 
 \end{document}
