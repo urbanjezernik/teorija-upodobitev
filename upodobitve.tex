@@ -4276,7 +4276,7 @@ Grupa $\SL_2(\CC)$ je zaprta podmnožica kompleksnega prostora $\CC^4$, dana z e
 
 Grupa $\SL_2(\CC)$ naravno deluje na vektorskem prostoru $\CC^2$ z množenjem matrik z vektorji. Označimo bazna vektorja kot $X = e_1$ in $Y = e_2$. Na ta način dobimo {\definicija standardno upodobitev}
 \[
-    \rho_1 \colon \SL_2(\CC) \to \GL_2(\CC), \quad
+    \rho_1 \colon {\textstyle \SL_2(\CC) \to \GL_2(\CC)}, \quad
     \begin{pmatrix}
         a & b \\ c & d 
     \end{pmatrix}
@@ -4286,7 +4286,7 @@ Grupa $\SL_2(\CC)$ naravno deluje na vektorskem prostoru $\CC^2$ z množenjem ma
 \]
 To upodobitev lahko vidimo kot upodobitev na prostoru linearnih polinomov v $X$,$Y$. V tej luči jo lahko naravno razširimo na prostor homogenih polinomov $\CC[X,Y]_k$ stopnje $k \geq 1$. Baza tega prostora so monomi $e_i = X^i Y^{k-i}$ za $0 \leq i \leq k$, torej je $\CC[X,Y]_k$ razsežnosti $k+1$. Formalno za razširitev $\rho_1$ uporabimo simetrično potenco in dobimo
 \[
-    \rho_k = \Sym^k(\rho_1) \colon \SL_2(\CC) \to \GL(\CC[X,Y]_k), \quad
+    {\textstyle \rho_k = \Sym^k(\rho_1) \colon \SL_2(\CC) \to \GL(\CC[X,Y]_k),} \quad
     g \mapsto \left( f(X,Y) \mapsto f((X,Y) \cdot g) \right).
 \]
 Eksplicitno se bazni monom $e_i = X^i Y^{k-i}$ z upodobitvijo $\rho_k$ preslika v
@@ -4353,17 +4353,17 @@ Grupa $\SU_2(\CC)$ je kompaktna podgrupa $\SL_2(\CC)$. Dokaži, da so zožitve u
 
 Princip za dokazovanje, da smo z upodobitvami $\rho_k$ izčrpali vse dovolj lepe upodobitve grupe $\SL_2(\CC)$, temelji na \emph{linearizaciji}. Vsako odvedljivo upodobitev $\rho \colon \SL_2(\CC) \to \GL_n(\CC)$ lahko namreč obravnavamo kot preslikavo med mnogoterostmi, zato z njenim {\definicija odvodom} dobimo inducirano linearno preslikavo
 \[
-    D_I \rho \colon T_I \SL_2(\CC) \to T_I \GL_n(\CC)
+    \textstyle D_I \rho \colon T_I \SL_2(\CC) \to T_I \GL_n(\CC)
 \]
 med tangentima prostoroma v identični matriki. Oglejmo si podrobneje, kako izgledata ta dva tangentna prostora.
 
 Opazujmo najprej grupo $\GL_n(\CC)$, ki je odprta podmnožica $\CC^{n^2}$. Njen tangentni prostor v $I$ zato lahko identificiramo z vektorskim prostorom $\CC^{n^2}$, ki ga predstavimo v matrični obliki kot
 \[
-    \glfrak_n(\CC) = \{ X \mid X \in \Mat_{n}(\CC) \}.
+    \textstyle \glfrak_n(\CC) = \{ X \mid X \in \Mat_{n}(\CC) \}.
 \]
 Ta opis je prikladen, ker omogoča jasen opis majhne okolice $I$ v $\GL_n(\CC)$. Za vsak tangentni vektor $X \in \glfrak_n(\CC)$ imamo preslikavo $\RR \to \glfrak_n(\CC)$, $t \mapsto tX$, ki jo lahko potisnemo v $\GL_n(\CC)$ z {\definicija eksponentno preslikavo} in dobimo gladko pot
 \[
-    \gamma \colon \RR \to \GL_n(\CC), \quad
+    \gamma \colon \RR \to {\textstyle \GL_n(\CC)}, \quad
     t \mapsto e^{tX} = \sum_{i = 0}^{\infty} t^i X^i / i!
 \]
 v grupi $\GL_n(\CC)$. Res, velja formula $\det(\gamma(t)) = \det e^{tX} = e^{\tr (tX)}$,\footnote{Ta formula je jasna, če matriko $X$ predstavimo v Jordanovi normalni obliki.} zato je $\gamma(t)$ obrnljiva matrika. Tangentni vektor poti $\gamma$ v točki $0$ izračunamo kot
@@ -4403,9 +4403,9 @@ Ker $\gamma$ slika v $\SL_2(\CC)$, za vsak $t \in (- \epsilon, \epsilon)$ velja
 \]
 zato je $\tr(\lambda(t)) = 0$ za vsak dovolj majhen $t$. To enakost odvedemo v točki $0$ in dobimo $\tr(X) = 0$. Vsak vektor v $T_I \SL_2(\CC)$ zato pripada vektorskemu prostoru
 \[
-    \slfrak_2(\CC) = \{ X \in \glfrak_2(\CC) \mid \tr(X) = 0 \}.
+    \textstyle \slfrak_2(\CC) = \{ X \in \glfrak_2(\CC) \mid \tr(X) = 0 \}.
 \]
-Res pa je tudi obratno. Vsak vektor $X$ s sledjo $0$ namreč določa pot $\lambda \colon \RR \to \slfrak_2(\CC)$, $t \mapsto tX$, in za tem pot $\gamma \colon \RR \to \SL_2(\CC)$, $t \mapsto e^{tX}$. Velja $\gamma(0) = I$ in $D_0 \gamma = X$, torej je $X \in T_I \SL_2(\CC)$.
+Res pa je tudi obratno. Vsak vektor $X$ s sledjo $0$ namreč določa pot $\gamma \colon \RR \to \SL_2(\CC)$, $t \mapsto e^{tX}$. Velja $\gamma(0) = I$ in $D_0 \gamma = X$, torej je $X \in T_I \SL_2(\CC)$.
 
 \begin{posledica}
 Velja $T_I \SL_2(\CC) = \slfrak_2(\CC)$.
@@ -4413,10 +4413,18 @@ Velja $T_I \SL_2(\CC) = \slfrak_2(\CC)$.
 
 Pod vsem povedanim lahko odvod upodobitve $\rho \colon \SL_2(\CC) \to \GL_n(\CC)$ torej razumemo kot linearno preslikavo
 \[
-    D_I \rho \colon \slfrak_2(\CC) \to \glfrak_n(\CC), \quad
-    X \mapsto D_0 \rho(e^{tX}).
+    {\textstyle D_I \rho \colon \slfrak_2(\CC) \to \glfrak_n(\CC),} \quad
+    X \mapsto D_0 \left( t \mapsto \rho(e^{tX}) \right).
 \]
-Ta preslikava pa ni čisto poljubna, temveč v sebi skriva še nekaj dodatne informacije glede grup $\SL_2(\CC)$ in $\GL_n(\CC)$.
+
+\begin{zgled}
+Linearizirajmo upodobitve $\rho_k \colon \SL_2(\CC) \to \GL(\CC[X,Y]_k)$.
+\todo{}
+\end{zgled}
+
+Preslikava $D_I \rho$ ni čisto poljubna linearna preslikava, temveč v sebi skriva še nekaj dodatne informacije glede grup $\SL_2(\CC)$ in $\GL_n(\CC)$.
+
+\todo{Delovanje grupe na Liejevi algebri, $ad$, $D_I\rho$ je Liejev homomorfizem. Vsak Liejev homomorfizem se dvigne do homomorfizma grup.  }
 
 
 \subsubsection{Teorija upodobitev Liejevih grup}
