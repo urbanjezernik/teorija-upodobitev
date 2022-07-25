@@ -4432,7 +4432,7 @@ Pod vsem povedanim lahko odvod upodobitve $\rho \colon \SL_2(\CC) \to \GL_n(\CC)
 \]
 
 \begin{zgled}
-Linearizirajmo upodobitve $\rho_k \colon \SL_2(\CC) \to \GL(\CC[X,Y]_k)$. Najprej določimo slike generatorjev $e,h,f \in \sl_2(\CC)$ z eksponentno preslikavo. Za vsak $t \in \RR$ velja
+Linearizirajmo upodobitve $\rho_k \colon \SL_2(\CC) \to \GL(\CC[X,Y]_k)$. Najprej določimo slike generatorjev $e,h,f \in \slfrak_2(\CC)$ z eksponentno preslikavo. Za vsak $t \in \RR$ velja
 \[
     e^{te} = \begin{pmatrix}
         1 & t \\ 0 & 1
@@ -4577,7 +4577,53 @@ ki je izomorfizem Liejevih upodobitev $\phi$ in $D_I \rho_n$.
 
 \subsubsection{Integracija upodobitve}
 
+Vsaka upodobitev grupe $\SL_2(\CC)$ se odvede v Liejevo upodobitev Liejeve algebre $\slfrak_2(\CC)$. Neverjetno je, da velja tudi obratno: vsaka Liejeva upodobitev se pointegrira do upodobitve grupe.
 
+\begin{trditev}
+Naj bo $\phi \colon \slfrak_2(\CC) \to \glfrak_n(\CC)$ Liejeva upodobitev. Tedaj obstaja analitična upodobitev $\rho \colon \SL_2(\CC) \to \GL_n(\CC)$, za katero velja $D_I \rho = \phi$.
+\end{trditev}
+
+Dokaz te trditve sloni na uporabi eksponentne preslikave in njenega inverza $\log$. Naj bo $U \subseteq \SL_2(\CC)$ dovolj majhna okolica $I$, da je na njej $\log$ difeomorfizem v neko okolico enote $\slfrak_2(\CC)$. Po potrebi $U$ še zmanjšamo, da je $U^{-1} = U$ in da je $\log |_{U \cdot U}$ še vedno difeomorfizem. 
+
+\begin{domacanaloga}
+Dokaži, da množica $U$ generira $\SL_2(\CC)$. Vsaka upodobitev grupe $\SL_2(\CC)$ je zato enolično določena s svojimi vrednostmi na $U$.
+\end{domacanaloga}
+
+Vsaki matriki $A \in U$ lahko lahko priredimo $\log A$, ki jo s $\phi$ preslikavo v $\glfrak_n(\CC)$ in nazadnje dvignemo nazaj do grupe z eksponentno preslikavo. Na ta način dobimo gladko funkcijo
+\[
+    \rho \colon U \subseteq \SL_2(\CC) \to \GL_n(\CC), \quad
+    A \mapsto e^{\phi(\log A)}.
+\]
+Odvod te funkcije v $I$ je na tangentnem vektorju $X \in \slfrak_2(\CC)$ enak
+\[
+    D_I \rho \cdot X
+    = D_0 \rho(e^{tX})
+    = D_0 e^{\phi(\log e^{tX})}
+    = D_0 e^{\phi(tX)}
+    = D_0 e^{t \phi(X)}
+    = \phi(X),
+\]
+torej je $D_I \rho = \phi$ in smo $\phi$ pointegrirali na neko dovolj majhno okolico $I$. 
+
+Prepričajmo se, da je $\rho$ blizu tega, da bi bila homomorfizem. Naj bosta $A,B \in U$ poljubni matriki. Velja
+\[
+    \rho(A) \rho(B) = e^{\phi(\log A)} e^{\phi(\log B)}, \quad
+    \rho(AB) = e^{\phi(\log(AB))}.
+\]
+Če bi logaritem pretvoril produkt v vsoto in eksponentna funkcija vsoto v produkt, potem bi iz linearnosti $\phi$ takoj sledilo, da sta oba izraza enaka. V splošnem žal matrični logaritem in eksponentna funkcija nimata te lastnosti. Za vsaka $X,Y \in \glfrak_n(\CC)$ lahko z nekaj truda z uporabo razvoja v Taylorjevo vrsto izračunamo vrednost
+\[
+    \log(e^X e^Y) = X + Y + \frac{1}{2} [X,Y] - \frac{1}{12}[[X,Y],X] + \frac{1}{12} [[X,Y], Y] + \cdots,
+\]
+ki ji pravimo {\definicija Baker-Campbell-Hausdorffova formula}. Res torej v splošnem ne velja $\log(e^X e^Y) = X+Y$, tolažilna lastnost razvoja pa je, da so vsi členi izrazljivi z Liejevim produktom $[\cdot,\cdot]$ v $\glfrak_n(\CC)$. To pomeni, da za $A = e^X$, $B = e^Y$ velja
+\begin{align*}
+    \phi(\log(AB)) 
+    &= \phi \left( X + Y + \frac{1}{2}[X,Y] + \cdots \right) \\
+    &= \phi(X) + \phi(Y) + \frac{1}{2}[\phi(X), \phi(Y)] + \cdots \\
+    &= \log(\phi(\log A) \phi(\log B)),
+\end{align*}
+kjer smo v srednji enakosti upoštevali, da je $\phi$ Liejev homomorfizem. Od tod sklepamo, da res velja $\rho(A)\rho(B) = \rho(AB)$ za vsaka $A,B \in U$. Preslikava $\rho$ je torej vsaj lokalno homomorfizem. 
+
+Ker $U$ generira grupo $\SL_2(\CC)$, lahko vsak njen element $A \in \SL_2(\CC)$ zapišemo kot produkt $A = U_1 U_2 \cdots U_k$ elementov iz množice $U$. Na tej množici že imamo definiran $\rho$, zato lahko definiramo $\rho(A) = \rho(U_1) \rho(U_2) \cdots \rho(U_k)$. Zdaj bi bilo potrebno preveriti še, da je ta definicija res dobra. Ta premislek standardno temelji na dodatnih lastnostih teorije Liejevih grup, ki bi nam vzele preveč prostora, zato ga izpustimo.\footnote{Natančneje, obravnavati bi morali graf funkcije $\phi$ in ga pointegrirati kot Liejevo podalgebro $\slfrak_2(\CC) \oplus \glfrak_n(\CC)$.}
 
 \subsection{$\SL_2(\RR)$}
 

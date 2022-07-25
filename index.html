@@ -10491,7 +10491,8 @@
             \mathop{\mathrm{SL}}_2(\mathbf{C}) \to
             \mathop{\mathrm{GL}}(\mathbf{C}[X,Y]_k)\)</span>. Najprej
             določimo slike generatorjev <span
-            class="math inline">\(e,h,f \in \sl_2(\mathbf{C})\)</span> z
+            class="math inline">\(e,h,f \in
+            \mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span> z
             eksponentno preslikavo. Za vsak <span
             class="math inline">\(t \in \mathbf{R}\)</span> velja <span
             class="math display">\[e^{te} = \begin{pmatrix}
@@ -10764,6 +10765,126 @@
             class="math inline">\(D_I \rho_n\)</span>. ◻</p>
             </div>
             <h4 id="integracija-upodobitve">Integracija upodobitve</h4>
+            <p>Vsaka upodobitev grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
+            se odvede v Liejevo upodobitev Liejeve algebre <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span>.
+            Neverjetno je, da velja tudi obratno: vsaka Liejeva
+            upodobitev se pointegrira do upodobitve grupe.</p>
+            <div class="trditev">
+            <p><strong>Trditev 6.6</strong>. Naj bo <span
+            class="math inline">\(\phi \colon
+            \mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C}) \to
+            \mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>
+            Liejeva upodobitev. Tedaj obstaja analitična upodobitev
+            <span class="math inline">\(\rho \colon
+            \mathop{\mathrm{SL}}_2(\mathbf{C}) \to
+            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>, za katero velja
+            <span class="math inline">\(D_I \rho = \phi\)</span>.</p>
+            </div>
+            <p>Dokaz te trditve sloni na uporabi eksponentne preslikave
+            in njenega inverza <span
+            class="math inline">\(\log\)</span>. Naj bo <span
+            class="math inline">\(U \subseteq
+            \mathop{\mathrm{SL}}_2(\mathbf{C})\)</span> dovolj majhna
+            okolica <span class="math inline">\(I\)</span>, da je na
+            njej <span class="math inline">\(\log\)</span> difeomorfizem
+            v neko okolico enote <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span>.
+            Po potrebi <span class="math inline">\(U\)</span> še
+            zmanjšamo, da je <span class="math inline">\(U^{-1} =
+            U\)</span> in da je <span class="math inline">\(\log |_{U
+            \cdot U}\)</span> še vedno difeomorfizem.</p>
+            <div class="domacanaloga">
+            <p><strong>Domača naloga 6.2</strong>. Dokaži, da množica
+            <span class="math inline">\(U\)</span> generira <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
+            Vsaka upodobitev grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
+            je zato enolično določena s svojimi vrednostmi na <span
+            class="math inline">\(U\)</span>.</p>
+            </div>
+            <p>Vsaki matriki <span class="math inline">\(A \in
+            U\)</span> lahko lahko priredimo <span
+            class="math inline">\(\log A\)</span>, ki jo s <span
+            class="math inline">\(\phi\)</span> preslikavo v <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>
+            in nazadnje dvignemo nazaj do grupe z eksponentno
+            preslikavo. Na ta način dobimo gladko funkcijo <span
+            class="math display">\[\rho \colon U \subseteq
+            \mathop{\mathrm{SL}}_2(\mathbf{C}) \to
+            \mathop{\mathrm{GL}}_n(\mathbf{C}), \quad
+                A \mapsto e^{\phi(\log A)}.\]</span> Odvod te funkcije v
+            <span class="math inline">\(I\)</span> je na tangentnem
+            vektorju <span class="math inline">\(X \in
+            \mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span> enak
+            <span class="math display">\[D_I \rho \cdot X
+                = D_0 \rho(e^{tX})
+                = D_0 e^{\phi(\log e^{tX})}
+                = D_0 e^{\phi(tX)}
+                = D_0 e^{t \phi(X)}
+                = \phi(X),\]</span> torej je <span
+            class="math inline">\(D_I \rho = \phi\)</span> in smo <span
+            class="math inline">\(\phi\)</span> pointegrirali na neko
+            dovolj majhno okolico <span
+            class="math inline">\(I\)</span>.</p>
+            <p>Prepričajmo se, da je <span
+            class="math inline">\(\rho\)</span> blizu tega, da bi bila
+            homomorfizem. Naj bosta <span class="math inline">\(A,B \in
+            U\)</span> poljubni matriki. Velja <span
+            class="math display">\[\rho(A) \rho(B) = e^{\phi(\log A)}
+            e^{\phi(\log B)}, \quad
+                \rho(AB) = e^{\phi(\log(AB))}.\]</span> Če bi logaritem
+            pretvoril produkt v vsoto in eksponentna funkcija vsoto v
+            produkt, potem bi iz linearnosti <span
+            class="math inline">\(\phi\)</span> takoj sledilo, da sta
+            oba izraza enaka. V splošnem žal matrični logaritem in
+            eksponentna funkcija nimata te lastnosti. Za vsaka <span
+            class="math inline">\(X,Y \in
+            \mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span> lahko
+            z nekaj truda z uporabo razvoja v Taylorjevo vrsto
+            izračunamo vrednost <span class="math display">\[\log(e^X
+            e^Y) = X + Y + \frac{1}{2} [X,Y] - \frac{1}{12}[[X,Y],X] +
+            \frac{1}{12} [[X,Y], Y] + \cdots,\]</span> ki ji pravimo
+            <span><strong><em>Baker-Campbell-Hausdorffova
+            formula</em></strong></span>. Res torej v splošnem ne velja
+            <span class="math inline">\(\log(e^X e^Y) = X+Y\)</span>,
+            tolažilna lastnost razvoja pa je, da so vsi členi izrazljivi
+            z Liejevim produktom <span
+            class="math inline">\([\cdot,\cdot]\)</span> v <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>.
+            To pomeni, da za <span class="math inline">\(A =
+            e^X\)</span>, <span class="math inline">\(B = e^Y\)</span>
+            velja <span class="math display">\[\begin{aligned}
+                \phi(\log(AB))
+                &amp;= \phi \left( X + Y + \frac{1}{2}[X,Y] + \cdots
+            \right) \\
+                &amp;= \phi(X) + \phi(Y) + \frac{1}{2}[\phi(X), \phi(Y)]
+            + \cdots \\
+                &amp;= \log(\phi(\log A) \phi(\log
+            B)),\end{aligned}\]</span> kjer smo v srednji enakosti
+            upoštevali, da je <span class="math inline">\(\phi\)</span>
+            Liejev homomorfizem. Od tod sklepamo, da res velja <span
+            class="math inline">\(\rho(A)\rho(B) = \rho(AB)\)</span> za
+            vsaka <span class="math inline">\(A,B \in U\)</span>.
+            Preslikava <span class="math inline">\(\rho\)</span> je
+            torej vsaj lokalno homomorfizem.</p>
+            <p>Ker <span class="math inline">\(U\)</span> generira grupo
+            <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>,
+            lahko vsak njen element <span class="math inline">\(A \in
+            \mathop{\mathrm{SL}}_2(\mathbf{C})\)</span> zapišemo kot
+            produkt <span class="math inline">\(A = U_1 U_2 \cdots
+            U_k\)</span> elementov iz množice <span
+            class="math inline">\(U\)</span>. Na tej množici že imamo
+            definiran <span class="math inline">\(\rho\)</span>, zato
+            lahko definiramo <span class="math inline">\(\rho(A) =
+            \rho(U_1) \rho(U_2) \cdots \rho(U_k)\)</span>. Zdaj bi bilo
+            potrebno preveriti še, da je ta definicija res dobra. Ta
+            premislek standardno temelji na dodatnih lastnostih teorije
+            Liejevih grup, ki bi nam vzele preveč prostora, zato ga
+            izpustimo.<a href="#fn91" class="footnote-ref" id="fnref91"
+            role="doc-noteref"><sup>91</sup></a></p>
             <h3 id="mathopmathrmsl_2mathbfr"><span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span></h3>
             <h2 id="diskretne-linearne-grupe">Diskretne linearne
@@ -11366,6 +11487,15 @@
             class="math inline">\(v_n\)</span> torej <em>potisnemo
             navzgor</em> z <span class="math inline">\(E\)</span>.<a
             href="#fnref90" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn91" role="doc-endnote"><p>Natančneje, obravnavati
+            bi morali graf funkcije <span
+            class="math inline">\(\phi\)</span> in ga pointegrirati kot
+            Liejevo podalgebro <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})
+            \oplus
+            \mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>.<a
+            href="#fnref91" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>
