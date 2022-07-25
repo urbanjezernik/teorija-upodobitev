@@ -80,7 +80,7 @@
 \def\GAP{\texttt{GAP}}
 \DeclareMathOperator\inv{inv}
 \DeclareMathOperator\Eigenvalues{Spec}
-\DeclareMathOperator\Eigenspace{E}
+\DeclareMathOperator\Eigenspace{ES}
 \DeclareMathOperator\fun{fun}
 \DeclareMathOperator\HS{HS}
 \DeclareMathOperator\St{St}
@@ -106,6 +106,7 @@
 \DeclareMathOperator\Mat{Mat}
 \DeclareMathOperator\Cone{Cone}
 \DeclareMathOperator\diam{diam}
+\DeclareMathOperator\Ad{Ad}
 
 \def\definicija{\color{rdeca}\bf\em}
 \def\vprasanje{\color{oranzna}}
@@ -4284,7 +4285,7 @@ Grupa $\SL_2(\CC)$ naravno deluje na vektorskem prostoru $\CC^2$ z množenjem ma
         a & b \\ c & d 
     \end{pmatrix} \right).
 \]
-To upodobitev lahko vidimo kot upodobitev na prostoru linearnih polinomov v $X$,$Y$. V tej luči jo lahko naravno razširimo na prostor homogenih polinomov $\CC[X,Y]_k$ stopnje $k \geq 1$. Baza tega prostora so monomi $e_i = X^i Y^{k-i}$ za $0 \leq i \leq k$, torej je $\CC[X,Y]_k$ razsežnosti $k+1$. Formalno za razširitev $\rho_1$ uporabimo simetrično potenco in dobimo
+To upodobitev lahko vidimo kot upodobitev na prostoru linearnih polinomov v $X$,$Y$. V tej luči jo lahko naravno razširimo na prostor homogenih polinomov $\CC[X,Y]_k$ stopnje $k \geq 1$.\footnote{Pri $k = 0$ dobimo trivialno upodobitev.} Baza tega prostora so monomi $e_i = X^i Y^{k-i}$ za $0 \leq i \leq k$, torej je $\CC[X,Y]_k$ razsežnosti $k+1$. Formalno za razširitev $\rho_1$ uporabimo simetrično potenco in dobimo
 \[
     {\textstyle \rho_k = \Sym^k(\rho_1) \colon \SL_2(\CC) \to \GL(\CC[X,Y]_k),} \quad
     g \mapsto \left( f(X,Y) \mapsto f((X,Y) \cdot g) \right).
@@ -4389,7 +4390,7 @@ Po izreku o inverzni preslikavi bo dovolj preveriti, da je linearna preslikava $
 Torej je $D_0 e$ kar identična preslikava. 
 \end{dokaz}
 
-Za vsako gladko pot $\gamma \colon \RR \to \GL_n(\CC)$ z $\gamma(0) = I$ lahko torej najdemo $\epsilon > 0$, da je pot $\gamma |_{(-\epsilon, \epsilon)}$ oblike $e^{\lambda}$, kjer je $\lambda \colon (-\epsilon, \epsilon) \to \glfrak_n(\CC)$ gladka pot v tangentnem prostoru.
+Eksponentna preslikava ima torej lokalno inverz, ki ga označimo z $\log$. Za vsako gladko pot $\gamma \colon \RR \to \GL_n(\CC)$ z $\gamma(0) = I$ lahko torej najdemo $\epsilon > 0$, da je pot $\gamma |_{(-\epsilon, \epsilon)}$ oblike $e^{\lambda}$, kjer je $\lambda = \log \gamma \colon (-\epsilon, \epsilon) \to \glfrak_n(\CC)$ gladka pot v tangentnem prostoru.
 
 S pomočjo eksponentne preslikave lahko dobro razumemo tudi tangentni prostor $T_I \SL_2(\CC)$ in njegovo lokalno povezavo z grupo $\SL_2(\CC)$. Izberimo poljuben tangentni vektor $X \in T_I \SL_2(\CC) \leq \glfrak_2(\CC)$. Obstaja torej gladka pot $\gamma \colon (-\epsilon, \epsilon) \to \SL_2(\CC)$ z odvodom $D_0 \gamma = X$. Po potrebi $\epsilon$ še zmanjšamo in s tem po zadnji trditvi dosežemo, da je $\gamma(t) = e^{\lambda(t)}$, kjer je $\lambda \colon (-\epsilon, \epsilon) \to T_I \SL_2(\CC)$ gladka pot. Pri tem velja
 \[
@@ -4408,26 +4409,175 @@ zato je $\tr(\lambda(t)) = 0$ za vsak dovolj majhen $t$. To enakost odvedemo v t
 Res pa je tudi obratno. Vsak vektor $X$ s sledjo $0$ namreč določa pot $\gamma \colon \RR \to \SL_2(\CC)$, $t \mapsto e^{tX}$. Velja $\gamma(0) = I$ in $D_0 \gamma = X$, torej je $X \in T_I \SL_2(\CC)$.
 
 \begin{posledica}
-Velja $T_I \SL_2(\CC) = \slfrak_2(\CC)$.
+Velja $T_I \SL_2(\CC) = \slfrak_2(\CC)$. Ta vektorski prostor je $3$-razsežen z bazo
+\[
+    e = \begin{pmatrix}
+        0 & 1 \\ 0 & 0
+    \end{pmatrix},
+    \quad
+    h = \begin{pmatrix}
+        1 & 0 \\ 0 & -1
+    \end{pmatrix},
+    \quad
+    f = \begin{pmatrix}
+        0 & 0 \\ 1 & 0
+    \end{pmatrix}.
+\]
 \end{posledica}
 
 Pod vsem povedanim lahko odvod upodobitve $\rho \colon \SL_2(\CC) \to \GL_n(\CC)$ torej razumemo kot linearno preslikavo
 \[
     {\textstyle D_I \rho \colon \slfrak_2(\CC) \to \glfrak_n(\CC),} \quad
-    X \mapsto D_0 \left( t \mapsto \rho(e^{tX}) \right).
+    X \mapsto D_0 \rho(e^{tX}).
 \]
 
 \begin{zgled}
-Linearizirajmo upodobitve $\rho_k \colon \SL_2(\CC) \to \GL(\CC[X,Y]_k)$.
-\todo{}
+Linearizirajmo upodobitve $\rho_k \colon \SL_2(\CC) \to \GL(\CC[X,Y]_k)$. Najprej določimo slike generatorjev $e,h,f \in \sl_2(\CC)$ z eksponentno preslikavo. Za vsak $t \in \RR$ velja
+\[
+    e^{te} = \begin{pmatrix}
+        1 & t \\ 0 & 1
+    \end{pmatrix}, \quad
+    e^{th} = \begin{pmatrix}
+        e^t & 0 \\ 0 & e^{-t}
+    \end{pmatrix}, \quad
+    e^{tf} = \begin{pmatrix}
+        1 & 0 \\ t & 1
+    \end{pmatrix}.
+\]
+Naj bodo $E_k, H_k, F_k$ slike $e,h,f$ s preslikavo $D_I \rho_k$. Tangentni prostor $\glfrak_{k+1}(\CC)$ naravno deluje na prostoru $\CC[X,Y]_k$ z bazo $e_i = X^i Y^{k-i}$ za $0 \leq i \leq k$. Velja
+\[
+    H_k \cdot e_i
+    = D_0 \left( \rho_k(e^{th}) \cdot e_i \right)
+    = D_0 \left( (e^t X)^i (e^{-t} Y)^{k-i} \right)
+    = (2i - k) e_i,
+\]
+na enak način izračunamo
+\[
+    E_k \cdot e_i = (k-i) e_{i+1}, \quad
+    F_k \cdot e_i = i e_{i-1}.
+\]
+Element $H_k$ torej deluje diagonalno na $\CC[X,Y]_k$, pri čemer ima vektor $e_k = Y^k$ največjo lastno vrednost, in sicer $k$. Ta vektor je v jedru preslikave $E_k$, z zaporednimi aplikacijami preslikave $F_k$ pa iz njega po vrsti dobimo vse ostale bazne vektorje $e_i$ za $0 \leq i \leq k$.
 \end{zgled}
 
-Preslikava $D_I \rho$ ni čisto poljubna linearna preslikava, temveč v sebi skriva še nekaj dodatne informacije glede grup $\SL_2(\CC)$ in $\GL_n(\CC)$.
+\subsubsection{Liejeva algebra}
 
-\todo{Delovanje grupe na Liejevi algebri, $ad$, $D_I\rho$ je Liejev homomorfizem. Vsak Liejev homomorfizem se dvigne do homomorfizma grup.  }
+Preslikava $D_I \rho$ ni čisto poljubna linearna preslikava med vektorskimi prostori, temveč v sebi skriva še nekaj dodatne informacije glede grup $\SL_2(\CC)$ in $\GL_n(\CC)$.
+
+Grupa $\GL_n(\CC)$ deluje s konjugiranjem na svojem tangentnem prostoru,
+\[
+    \Ad \colon \GL_n(\CC) \to \End(\glfrak_n(\CC)), \quad
+    A \mapsto \left( X \mapsto A X A^{-1} \right).
+\]
+To delovanje imamo tudi z grupo $\SL_2(\CC)$ in njenim tangentim prostorom, saj za vsak $X \in \slfrak_2(\CC)$ velja $\tr(AXA^{-1}) = \tr(X) = 0$.
+
+Ni se težko prepičati, da je za vsak $A \in \SL_2(\CC)$ preslikava $D_I \rho$ \emph{spletična} glede na to delovanje. Za vsak $Y \in \slfrak_2(\CC)$ velja namreč
+\[
+    D_I \rho \cdot \Ad(A) \cdot Y
+    = D_I \left( \rho(e^{t A Y A^{-1}}) \right)
+    % = D_I \left( \rho(A) \rho(e^{t Y}) \rho(A^{-1}) \right)
+    = \Ad(\rho(A)) \cdot D_I \rho \cdot Y.
+\]
+V posebnem za vsak tangentni vektor $X \in \slfrak_2(\CC)$ velja ta formula za $A = e^{tX}$. Izračunajmo odvod leve in desne strani v točki $t = 0$. Z uporabo verižnega pravila leva stran postane
+\[
+    D_I \rho \cdot D_0 \left( e^{tX} Y e^{-tX} \right)
+    = D_I \rho \cdot (XY - YX),
+\]
+desna stran pa postane
+\[
+    D_0 \left( \rho(e^{tX}) (D_I \rho \cdot Y) \rho(e^{-tX}) \right)
+    = (D_I \rho \cdot X) (D_I \rho \cdot Y) -  (D_I \rho \cdot Y) (D_I \rho \cdot X).
+\]
+Označimo $[X,Y] = XY - YX$. Velja torej
+\[
+    D_I \rho \cdot [X,Y] = [D_I \rho \cdot X, D_I \rho \cdot Y],
+\]
+kar pomeni, da preslikva $D_I \rho$ \emph{spoštuje} operaciji $[\cdot, \cdot]$ na $\slfrak_2(\CC)$ in $\glfrak_n(\CC)$.
+
+\begin{zgled}
+V vektorskem prostoru $\slfrak_2(\CC)$ veljajo računi
+\[
+    [h,e] = 2e, \quad
+    [h,f] = -2f, \quad
+    [e,f] = h.
+\]
+Iz vrednosti $E_k$ in $F_k$ lahko zato izračunamo vrednost
+\[
+    H_k \cdot e_i = D_I \rho_k (h) \cdot e_i = [E_k, F_k] \cdot e_i
+    = i (k-(i-1)) e_i - (k-i) (i+1) e_i
+    = (-k + 2i) e_i
+\]
+za $0 \leq i \leq k$, kar se ujema z izračunom iz prejšnjega zgleda.
+\end{zgled}
+
+Na oba tangentna prostora zato gledamo kot na vektorska prostora, ozaljšana z binarno operacijo $[\cdot, \cdot]$. Ta operacija je bilinearna in kratek račun pokaže, da zadošča enakostima
+\[
+    [X,Y] = -[Y,X], \quad [[X,Y], Z] + [[Y,Z], X] + [[Z,X], Y] = 0
+\]
+za vse tangentne vektorje $X,Y,Z$. Abstraktnim vektorskim prostorom s tako binarno operacijo pravimo {\definicija Liejeve algebre}. Te algebre tvorijo kategorijo: morfizmi med dvema algebrama so preslikave, ki spoštujejo vso strukturo, in jim zato upravičeno pravimo {\definicija Liejevi homomorfizmi}.\footnote{Liejev homomorfizem je torej linearna preslikava $\phi \colon L_1 \to L_2$, za katero velja $\phi([x,y]) = [\phi(x), \phi(y)]$ za vsaka $x,y \in L_1$.} Kadar Liejev homomorfizem slika iz dane Liejeve algebre $L$ v $\glfrak_n(\CC)$, po analogiji z grupami rečemo, da imamo {\definicija Liejevo upodobitev}. Te upodobitve lahko primerjamo med sabo s spletičnami in zato govorimo o izomorfnostnih razredih Liejevih upodobitev.\footnote{{\definicija Liejeva spletična} med Liejevima upodobitvama $\phi_1, \phi_2$ Liejeve algebre $L$ na prostoru $V$ je linearna preslikava $\alpha \in \End(V)$ z lastnostjo $\alpha(\phi_1(x) \cdot v) = \phi_2(x) \cdot \alpha(v)$ za vsaka $x \in L$, $v \in V$. Kadar najdemo obrnljivo Liejevo spletično, sta upodobitvi {\definicija izomorfni}.} Prav tako na smiseln način posplošimo pojem nerazcepne upodobitve.\footnote{Liejeva upodobitev $\phi \colon L \to \glfrak_n(\CC)$ je {\definicija nerazcepna}, če prostor $\CC^n$ nima nobenih netrivialnih $L$-invariantnih podprostorov.}
+
+Tangentna prostora $\slfrak_2(\CC)$ in $\glfrak_2(\CC)$ sta torej Liejevi algebri in odvod upodobitve $D_I \rho$ je Liejev homomorfizem, na katerega lahko gledamo kot na Liejevo upodobitev Liejeve algebre $\slfrak_2(\CC)$. Vsaka upodobitev grupe $\SL_2(\CC)$ nam torej da Liejevo upodobitev njene Liejeve algebre. Kadar ima upodobitev grupe kakšen netrivialen invarianten podprostor, je ta invarianten tudi za delovanje Liejeve algebre. Razcepne upodobitve grupe dajo torej razcepne upodobitve Liejeve algebre. Z drugimi besedami, nerazcepne upodobitve Liejeve algebre, ki izhajajo iz upodobitve grupe, lahko izhajajo le iz nerazcepnih upodobitev grupe. Zaradi tega je še posebej pomembno, da opišemo vse nerazcepne upodobitve Liejeve algebre.
+
+\begin{zgled}
+Liejeve upodobitve $D_I \rho_k$ so nerazcepne. Argument za to je podoben tistemu iz grup, a je še lažji. Res, če je $W \leq \CC[X,Y]_k$ netrivialen invarianten $\slfrak_2(\CC)$-podprostor, potem vsebuje vektor $0 \neq w = \sum_{i = 0}^k a_i e_i$. Naj bo $i_0$ največji indeks, za katerega je $a_{i_0} \neq 0$. Potem je $    F_k^{i_0} \cdot w = a_{i_0} i_0! e_0 \in W$. Torej je $e_0 \in W$. Po zaporednih aplikacijah $E_k$ sklenemo $e_i \in W$ za vsak $0 \leq i \leq k$. Torej je res $W = \CC[X,Y]_k$.
+\end{zgled}
+
+\begin{trditev}
+Vsaka nerazcepna Liejeva upodobitev Liejeve algebre $\slfrak_2(\CC)$ je izomorfna $D_I \rho_k$ za nek $k \geq 0$.
+\end{trditev}
+\begin{dokaz}
+Naj bo $\phi \colon \slfrak_2(\CC) \to \glfrak_n(\CC) = \End(V)$ nerazcepna Liejeva upodobitev, kjer je $V = \CC^n$. Naj bodo $E,H,F$ slike $e,h,f$ s preslikavo $\phi$.
+
+Naj bo $\lambda$ lastna vrednost $H$ in $v$ pripadajoči lastni vektor. Velja
+\[
+    HEv = [H,E]v + EHv = 2 E v + \lambda E v = (\lambda + 2) Ev,
+\]
+zato je $E \cdot \Eigenspace_{\lambda}(H) \in \Eigenspace_{\lambda + 2}(H)$. Podobno velja $F \cdot \Eigenspace_{\lambda}(H) \in \Eigenspace_{\lambda - 2}(H)$. 
+
+Izberimo lastno vrednost $\lambda$ preslikave $H$ z največjo možno realno komponento.
+Iz maksimalnosti $\lambda$ sledi $Ev \in \Eigenspace_{\lambda + 2}(H) = 0$. Naj bo $v_i = F^i v$ za $i \geq 0$.\footnote{Vektor $v$ torej \emph{potisnemo navzdol} s $F$.} Velja $v_i \in \Eigenspace_{\lambda - 2i}(H)$. Za nek $n \geq 0$ velja torej $v_n \neq 0$ in $v_{n+1} = 0$. Vektorji $v_0, v_1, \dots, v_n$ so v različnih lastnih podprostorih $H$, zato so linearno neodvisni. Naj bo $W \leq V$ podprostor, ki ga generirajo.
+
+Naj bo $w_i = E v_i$ za $i \geq 0$.\footnote{Vektor $v_n$ torej \emph{potisnemo navzgor} z $E$.} Velja $w_0 = E v_0 = Ev = 0$, za $i \geq 1$ pa izračunamo
+\[
+    w_i 
+    = E F v_{i-1}
+    = [E,F] v_{i-1} + FE v_{i-1}
+    = H v_{i-1} + F w_{i-1}
+    = (\lambda - 2i + 2) v_{i-1} + F w_{i-1}.
+\]
+Velja torej $w_1 = \lambda v_0$. Od tod dobimo
+\[
+    w_2 = (\lambda - 2) v_1 + F w_1
+    = (\lambda - 2) v_1 + \lambda v_1
+    = (2 \lambda - 2) v_1,
+\]
+za tem
+\[
+    w_3 = (\lambda - 4) v_2 + F w_2
+    = (\lambda - 4) v_2 + (2\lambda - 2) v_2
+    = (3 \lambda - 6) v_2
+\]
+in induktivno
+\[
+    w_i = i (\lambda - i + 1) v_{i-1}
+\]
+za vsak $i \geq 1$. Prostor $W$ je torej invarianten za delovanje $\slfrak_2(\CC)$, zato po nerazcepnosti velja $V = W$.
+
+Lastna vrednost $\lambda$ ni čisto poljubna. Velja namreč $\tr(H) = \tr([E,F]) = 0$, zato je vsota vseh lastnih vrednosti $H$ enaka $0$. Ta vsota je ravno
+\[
+    \sum_{i = 0}^n (\lambda - 2i) = (n+1) \lambda - 2 (n+1)n/2
+    = (n+1)(\lambda - n),
+\]
+zato je $\lambda = n$. Od tod dobimo Liejevo spletično
+\[
+    \alpha \colon V \to \CC[X,Y]_n, \quad
+    v_i \mapsto \frac{n!}{(n-i)!} e_{n-i},
+\]
+ki je izomorfizem Liejevih upodobitev $\phi$ in $D_I \rho_n$.
+\end{dokaz}
+
+\subsubsection{Integracija upodobitve}
 
 
-\subsubsection{Teorija upodobitev Liejevih grup}
 
 \subsection{$\SL_2(\RR)$}
 
