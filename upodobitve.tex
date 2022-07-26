@@ -4798,6 +4798,67 @@ zato je v $\SL_2(\ZZ)$ neka beseda v $U_+, U_-$ dolžine $n \geq 2$ enaka $\pm I
 
 \subsubsection{Upodobitve}
 
+Namesto upodobitev grupe $\SL_2(\ZZ)$ opazujmo upodobitve nekoliko enostavnejše grupe $\PSL_2(\ZZ)$. Vsaka upodobitev te grupe v $\GL_n(\CC)$ je določena s sliko generatorjev $a,b$. Glede na enolično predstavitev elementov grupe $\PSL_2(\ZZ)$ pa je res tudi obratno: za vsako izbiro matrik $X,Y \in \GL_n(CC)$ z lastnostjo $X^2 = Y^3 = I$ lahko na enoličen način predpišemo homomorfizem\footnote{To je analog razširjanja lokalnega homomorfizma, ki smo ga videli pri grupi $\SL_2(\CC)$. Tam nismo imeli enoličnosti zapisa kot tukaj, zato smo se morali potruditi z dokazovanjem dobre definiranosti razširitve homomorfizma z $U$ na ves $\SL_2(\CC)$. Tukaj to dobimo zastonj.}
+\[
+    \rho 
+    \colon \PSL_2(\ZZ) \to \GL_n(\CC), \quad
+    a \mapsto X, \ b \mapsto Y.
+\]
+Upodobitve nas zanimajo le do izomorfizma natančno, kar pomeni, da moramo za razumevanje izomorfnostnih razredov upodobitev razumeti kvocientno množico
+\[
+    R_n = \frac{\{ (X, Y) \in \GL_n(\CC) \times \GL_n(\CC) \mid X^2 = Y^3 = I \}}
+    {\GL_n(\CC)},
+\]
+pri čemer grupa $\GL_n(\CC)$ deluje s hkratnim konjugiranjem na parih matrik, se pravi $A \cdot (X,Y) = (A X A^{-1}, A Y A^{-1})$ za $A \in \GL_n(\CC)$.\footnote{Para matrik $(X,Y)$ in $(X', Y')$ sta torej ekvivalentna, če in samo če za neko matriko $A \in \GL_n(\CC)$ velja $(X,Y) = A \cdot (X', Y')$.} Elementi množice $R_n$ predstavljajo ravno vse predstavnike izomorfnostnih razredov $n$-razsežnih upodobitev grupe $\PSL_2(\ZZ)$.
+
+Opišimo najprej enorazsežne upodobitve $R_1$. Za števili $X,Y \in \CC^*$ mora veljati $X \in \{1, -1 \}$ in $Y \in \{ 1, \zeta, \zeta^2 \}$, kjer je $\zeta = e^{2 \pi i / 3}$. Delovanje grupe $\CC^*$ na parih je v tem primeru kar trivialno. Velja torej
+\[
+  R_1 = \{ 1, -1 \} \times \{ 1, \zeta, \zeta^2 \}
+\]
+in imamo $6$ enorazsežnih upodobitev grupe $\PSL_2(\ZZ)$.
+
+Oglejmo si sedaj še dvorazsežne upodobitve. Kot bomo videli, je teh \emph{neštevno} mnogo. Sistematično obravnavajmo vse možnosti za matriki $X,Y$. 
+
+\begin{enumerate}
+    \item Če je $X$ ali $Y$ skalarna matrika, potem lahko s konjugiranjem dosežemo, da sta obe matriki hkrati skalarni. V tem primeru dobimo možnosti
+    \[
+        (X,Y) \in \{ (\alpha I, \beta I) \mid \alpha \in \{ 1, -1 \}, \ \beta \in \{ 1, \zeta, \zeta^2 \} \}.
+    \]
+    Vse te upodobitve so seveda razcepne. Število vseh je $6$.
+
+    \item Če niti $X$ niti $Y$ nista skalarni matriki, potem imata obe dve različni lastni vrednosti. Po konjugiranju lahko matriki $X$, $Y$ zato zapišemo v obliki
+    \[
+        X = \begin{pmatrix}
+            1 & 0 \\ 0 & -1
+        \end{pmatrix}, \quad
+        Y = \begin{pmatrix}
+            a & b \\ c & d
+        \end{pmatrix}
+    \]
+    za neke $a,b,c,d \in \CC$. Centralizator matrike $X$ v $\GL_2(\CC)$ je enak torusu diagonalnih matrik. S temi matrikami lahko torej še dodatno konjugiramo in poenostavimo matriko $Y$. Ločimo več možnosti.
+    \begin{enumerate}
+        \item Če je $c = 0$ in $b = 0$, potem je $Y$ diagonalna matrika. 
+        Njeni lastni vrednosti sta različni števili iz množice $\{ 1, \zeta, \zeta^2 \}$, zato je $Y$ oblike
+        \[
+            Y = \begin{pmatrix}
+                a & 0 \\ 0 & d
+            \end{pmatrix}
+        \]
+        za $a,d\in \{ 1, \zeta, \zeta^2 \}$, $a \neq d$. Vse te upodobitve so seveda razcepne. Število vseh je $6$.
+        
+        \item Če je $c = 0$ in $b \neq 0$, potem je $Y$ zgornjetrikotna matrika. Z dodatnim konjugiranjem z diagonalno matriko dosežemo, da je $b = 1$. Njeni lastni vrednosti sta različni števili iz množice $\{ 1, \zeta, \zeta^2 \}$, zato je $Y$ oblike
+        \[
+            Y = \begin{pmatrix}
+                a & 1 \\ 0 & d
+            \end{pmatrix}
+        \]
+        za $a,d\in \{ 1, \zeta, \zeta^2 \}$, $a \neq d$. Vse te upodobitve so seveda razcepne. Število vseh je $6$.
+
+        Analogno dobimo $6$ razcepnih upodobitev, ko je $c \neq 0$ in $b = 0$.
+
+        \item Če je $c \neq 0$ in $b \neq 0$. \todo{}
+    \end{enumerate}
+\end{enumerate}
 
 \todo[inline]{
 - $SL_2(Z)$? (-> \url{https://math.stackexchange.com/questions/786303/the-presentation-of-sl2-mathbbz}, glej zadnji odgovor, kjer poda prezentacijo, napiši na primer enačbe za raznoterost dvorazsežnih realnih upodobitev; ima ogromno končnih kvocientov -- nima CSP (stran3 https://arxiv.org/pdf/2203.15701.pdf, lemma a.1 https://arxiv.org/pdf/1201.6644.pdf)) 

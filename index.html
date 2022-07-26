@@ -11312,6 +11312,131 @@
             I\)</span>. ◻</p>
             </div>
             <h4 id="upodobitve">Upodobitve</h4>
+            <p>Namesto upodobitev grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span>
+            opazujmo upodobitve nekoliko enostavnejše grupe <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>.
+            Vsaka upodobitev te grupe v <span
+            class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>
+            je določena s sliko generatorjev <span
+            class="math inline">\(a,b\)</span>. Glede na enolično
+            predstavitev elementov grupe <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>
+            pa je res tudi obratno: za vsako izbiro matrik <span
+            class="math inline">\(X,Y \in
+            \mathop{\mathrm{GL}}_n(CC)\)</span> z lastnostjo <span
+            class="math inline">\(X^2 = Y^3 = I\)</span> lahko na
+            enoličen način predpišemo homomorfizem<a href="#fn97"
+            class="footnote-ref" id="fnref97"
+            role="doc-noteref"><sup>97</sup></a> <span
+            class="math display">\[\rho
+                \colon \mathop{\mathrm{PSL}}_2(\mathbf{Z}) \to
+            \mathop{\mathrm{GL}}_n(\mathbf{C}), \quad
+                a \mapsto X, \ b \mapsto Y.\]</span> Upodobitve nas
+            zanimajo le do izomorfizma natančno, kar pomeni, da moramo
+            za razumevanje izomorfnostnih razredov upodobitev razumeti
+            kvocientno množico <span class="math display">\[R_n =
+            \frac{\{ (X, Y) \in \mathop{\mathrm{GL}}_n(\mathbf{C})
+            \times \mathop{\mathrm{GL}}_n(\mathbf{C}) \mid X^2 = Y^3 = I
+            \}}
+                {\mathop{\mathrm{GL}}_n(\mathbf{C})},\]</span> pri čemer
+            grupa <span
+            class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>
+            deluje s hkratnim konjugiranjem na parih matrik, se pravi
+            <span class="math inline">\(A \cdot (X,Y) = (A X A^{-1}, A Y
+            A^{-1})\)</span> za <span class="math inline">\(A \in
+            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>.<a href="#fn98"
+            class="footnote-ref" id="fnref98"
+            role="doc-noteref"><sup>98</sup></a> Elementi množice <span
+            class="math inline">\(R_n\)</span> predstavljajo ravno vse
+            predstavnike izomorfnostnih razredov <span
+            class="math inline">\(n\)</span>-razsežnih upodobitev grupe
+            <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>.</p>
+            <p>Opišimo najprej enorazsežne upodobitve <span
+            class="math inline">\(R_1\)</span>. Za števili <span
+            class="math inline">\(X,Y \in \mathbf{C}^*\)</span> mora
+            veljati <span class="math inline">\(X \in \{1, -1
+            \}\)</span> in <span class="math inline">\(Y \in \{ 1,
+            \zeta, \zeta^2 \}\)</span>, kjer je <span
+            class="math inline">\(\zeta = e^{2 \pi i / 3}\)</span>.
+            Delovanje grupe <span
+            class="math inline">\(\mathbf{C}^*\)</span> na parih je v
+            tem primeru kar trivialno. Velja torej <span
+            class="math display">\[R_1 = \{ 1, -1 \} \times \{ 1, \zeta,
+            \zeta^2 \}\]</span> in imamo <span
+            class="math inline">\(6\)</span> enorazsežnih upodobitev
+            grupe <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>.</p>
+            <p>Oglejmo si sedaj še dvorazsežne upodobitve. Kot bomo
+            videli, je teh <em>neštevno</em> mnogo. Sistematično
+            obravnavajmo vse možnosti za matriki <span
+            class="math inline">\(X,Y\)</span>.</p>
+            <ol>
+            <li><p>Če je <span class="math inline">\(X\)</span> ali
+            <span class="math inline">\(Y\)</span> skalarna matrika,
+            potem lahko s konjugiranjem dosežemo, da sta obe matriki
+            hkrati skalarni. V tem primeru dobimo možnosti <span
+            class="math display">\[(X,Y) \in \{ (\alpha I, \beta I) \mid
+            \alpha \in \{ 1, -1 \}, \ \beta \in \{ 1, \zeta, \zeta^2 \}
+            \}.\]</span> Vse te upodobitve so seveda razcepne. Število
+            vseh je <span class="math inline">\(6\)</span>.</p></li>
+            <li><p>Če niti <span class="math inline">\(X\)</span> niti
+            <span class="math inline">\(Y\)</span> nista skalarni
+            matriki, potem imata obe dve različni lastni vrednosti. Po
+            konjugiranju lahko matriki <span
+            class="math inline">\(X\)</span>, <span
+            class="math inline">\(Y\)</span> zato zapišemo v obliki
+            <span class="math display">\[X = \begin{pmatrix}
+                        1 &amp; 0 \\ 0 &amp; -1
+                    \end{pmatrix}, \quad
+                    Y = \begin{pmatrix}
+                        a &amp; b \\ c &amp; d
+                    \end{pmatrix}\]</span> za neke <span
+            class="math inline">\(a,b,c,d \in \mathbf{C}\)</span>.
+            Centralizator matrike <span class="math inline">\(X\)</span>
+            v <span
+            class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{C})\)</span>
+            je enak torusu diagonalnih matrik. S temi matrikami lahko
+            torej še dodatno konjugiramo in poenostavimo matriko <span
+            class="math inline">\(Y\)</span>. Ločimo več možnosti.</p>
+            <ol>
+            <li><p>Če je <span class="math inline">\(c = 0\)</span> in
+            <span class="math inline">\(b = 0\)</span>, potem je <span
+            class="math inline">\(Y\)</span> diagonalna matrika. Njeni
+            lastni vrednosti sta različni števili iz množice <span
+            class="math inline">\(\{ 1, \zeta, \zeta^2 \}\)</span>, zato
+            je <span class="math inline">\(Y\)</span> oblike <span
+            class="math display">\[Y = \begin{pmatrix}
+                            a &amp; 0 \\ 0 &amp; d
+                        \end{pmatrix}\]</span> za <span
+            class="math inline">\(a,d\in \{ 1, \zeta, \zeta^2
+            \}\)</span>, <span class="math inline">\(a \neq d\)</span>.
+            Vse te upodobitve so seveda razcepne. Število vseh je <span
+            class="math inline">\(6\)</span>.</p></li>
+            <li><p>Če je <span class="math inline">\(c = 0\)</span> in
+            <span class="math inline">\(b \neq 0\)</span>, potem je
+            <span class="math inline">\(Y\)</span> zgornjetrikotna
+            matrika. Z dodatnim konjugiranjem z diagonalno matriko
+            dosežemo, da je <span class="math inline">\(b = 1\)</span>.
+            Njeni lastni vrednosti sta različni števili iz množice <span
+            class="math inline">\(\{ 1, \zeta, \zeta^2 \}\)</span>, zato
+            je <span class="math inline">\(Y\)</span> oblike <span
+            class="math display">\[Y = \begin{pmatrix}
+                            a &amp; 1 \\ 0 &amp; d
+                        \end{pmatrix}\]</span> za <span
+            class="math inline">\(a,d\in \{ 1, \zeta, \zeta^2
+            \}\)</span>, <span class="math inline">\(a \neq d\)</span>.
+            Vse te upodobitve so seveda razcepne. Število vseh je <span
+            class="math inline">\(6\)</span>.</p>
+            <p>Analogno dobimo <span class="math inline">\(6\)</span>
+            razcepnih upodobitev, ko je <span class="math inline">\(c
+            \neq 0\)</span> in <span class="math inline">\(b =
+            0\)</span>.</p></li>
+            <li><p>Če je <span class="math inline">\(c \neq 0\)</span>
+            in <span class="math inline">\(b \neq 0\)</span>.</p></li>
+            </ol></li>
+            </ol>
             <h3 id="mathopmathrmsl_3mathbfz"><span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span></h3>
             <h4 id="mathopmathrmsl_2mathbfz_p"><span
@@ -11950,6 +12075,25 @@
             class="math inline">\(1\)</span> zapišemo na netrivialen
             način v želeni obliki.<a href="#fnref96"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn97" role="doc-endnote"><p>To je analog razširjanja
+            lokalnega homomorfizma, ki smo ga videli pri grupi <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
+            Tam nismo imeli enoličnosti zapisa kot tukaj, zato smo se
+            morali potruditi z dokazovanjem dobre definiranosti
+            razširitve homomorfizma z <span
+            class="math inline">\(U\)</span> na ves <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
+            Tukaj to dobimo zastonj.<a href="#fnref97"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn98" role="doc-endnote"><p>Para matrik <span
+            class="math inline">\((X,Y)\)</span> in <span
+            class="math inline">\((X&#39;, Y&#39;)\)</span> sta torej
+            ekvivalentna, če in samo če za neko matriko <span
+            class="math inline">\(A \in
+            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span> velja <span
+            class="math inline">\((X,Y) = A \cdot (X&#39;,
+            Y&#39;)\)</span>.<a href="#fnref98" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>
 
