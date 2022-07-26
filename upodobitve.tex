@@ -61,6 +61,7 @@
 \def\Fcal{\mathcal{F}}
 \def\EE{\mathbf{E}}
 \def\PP{\mathbf{P}}
+\def\HH{\mathbf{H}}
 \def\youngsym{\sigma_{\lambda}}
 
 \DeclareMathOperator\image{im}
@@ -107,6 +108,7 @@
 \DeclareMathOperator\Cone{Cone}
 \DeclareMathOperator\diam{diam}
 \DeclareMathOperator\Ad{Ad}
+\DeclareMathOperator\imaginary{imaginary}
 
 \def\definicija{\color{rdeca}\bf\em}
 \def\vprasanje{\color{oranzna}}
@@ -275,6 +277,7 @@
 \item {\literatura C. J. Bushnell, G. Henniart, {\em The Local Langlands Conjecture for $\GL(2)$}, Springer Grundlehren der mathematischen Wissenschaften \textbf{335}, 2006.}
 \item {\literatura W. T. Gowers, {\em Generalizations of Fourier analysis, and how to apply them},  Bulletin of the American Mathematical Society \textbf{54}, 1-44 (2017).}
 \item {\literatura S. Eberhard, {\em Product mixing in the alternating group}, Discrete Analysis, 2-18 (2016).}
+\item {\literatura B. C. Hall, {\em Lie groups, Lie algebras, and representations}, Quantum Theory for Mathematicians, Springer, New York, NY, 2013.}
 \end{itemize}
 
 \chapter{Temelji teorije upodobitev}
@@ -2283,7 +2286,7 @@ Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$. Ne
 \[
     P = S_{\lambda_1} \times S_{\lambda_2} \times \cdots \times S_{\lambda_k}.
 \]
-Razčlenitev $\lambda$ si lahko predstavljamo kot zaporedje vrstic diagrama, v katerem je $\lambda_1$ škatlic v $1$. vrstici, $\lambda_2$ škatlic v $2$. vrstici, \dots, $\lambda_k$ škatlic v $k$. vrstici. Pri tem so vrstice poravnane na levo. Takemu shematičnemu prikazu razčlenitve pravimo {\definicija Youngov diagram}. Diagram ima $n$ škatlic, v katere poljubno vpišemo števila od $1$ do $n$. Tako izpolnjenemu diagramu pravimo {\definicija Youngov tablo}. Vsak Youngov tablo nam pravzaprav ponuja vložitev grupe $P$ v $S_n$. Fiksirajmo standardno vložitev, ki ustreza temu, da v škatlice vpišemo po vrsti števila od $1$ do $n$, začenši zgoraj levo in hodeč po $1$. vrstici, nato po $2$. vrstici in tako naprej. Grupa $P$, standardno vložena v $S_n$, predstavlja ravno vse permutacije, ki ohranjajo \emph{vrstice} tabloja. 
+Razčlenitev $\lambda$ si lahko predstavljamo kot zaporedje vrstic diagrama, v katerem je $\lambda_1$ škatlic v $1$. vrstici, $\lambda_2$ škatlic v $2$. vrstici, \dots, $\lambda_k$ škatlic v $k$. vrstici. Pri tem so vrstice poravnane na levo. Takemu shematičnemu prikazu razčlenitve pravimo {\definicija Youngov diagram}. Diagram ima $n$ škatlic, v katere poljubno vpišemo števila od $1$ do $n$. Tako izpolnjenemu diagramu pravimo {\definicija Youngova tabela}. Vsaka Youngova tabela nam pravzaprav ponuja vložitev grupe $P$ v $S_n$. Fiksirajmo standardno vložitev, ki ustreza temu, da v škatlice vpišemo po vrsti števila od $1$ do $n$, začenši zgoraj levo in hodeč po $1$. vrstici, nato po $2$. vrstici in tako naprej. Grupa $P$, standardno vložena v $S_n$, predstavlja ravno vse permutacije, ki ohranjajo \emph{vrstice} tabele. 
 
 Inducirajmo trivialno upodobitev iz $P$ na $S_n$. V razdelku o indukciji smo spoznali, da lahko $\Ind^{S_n}_{P}(\11)$ interpretiramo kot permutacijsko upodobitev $S_n$ na desnih odsekih podgrupe $P$. To interpretacijo lahko vložimo v prostor funkcij $\fun(S_n, \CC)$. Namesto množice $P$ lahko namreč opazujemo indikatorsko funkcijo $1_P$. Element $g \in S_n$ na njej deluje kot
 $\rho_{\fun}(g) \cdot 1_P = 1_{P g^{-1}}$, se pravi kot permutacija desnih odsekov. Na ta način upodobitveni prostor upodobitve $\Ind^{S_n}_{P}(\11)$ vidimo kot 
@@ -2298,7 +2301,7 @@ Ta prostor lahko izrazimo s pomočjo Fourierove transformacije kot
 \]
 Upodobitev $S_n$ na tem prostoru gotovo \emph{ni} nerazcepna, saj na primer vsebuje trivialno z večkratnostjo $\langle \chi_{\11}, \Ind^{S_n}_{P}(\chi_{\11}) \rangle = \langle \chi_{\11}, \chi_{\11} \rangle = 1$. Ta prostor bomo zato še dodatno projicirali na nek podprostor.
 
-Do zdaj smo upoštevali le grupo $P$ permutacij, ki ohranjajo \emph{vrstice} izbranega Youngovega tabloja. Iz tega gledišča je naravno, da obravnavamo tudi grupo permutacij, ki ohranjajo \emph{stolpce} tabloja. Označimo jo s $Q$. Ravno ta podgrupa je dodatek, ki nam bo dodatno reduciral upodobitev zgoraj opisano inducirano upodobitev. Pri tem bomo upoštevali, da je $Q$ sestavljena dualno $P$, zato jo bomo utežili s predznačno upodobitvijo $\sgn$.
+Do zdaj smo upoštevali le grupo $P$ permutacij, ki ohranjajo \emph{vrstice} izbrane Youngove tablele. Iz tega gledišča je naravno, da obravnavamo tudi grupo permutacij, ki ohranjajo \emph{stolpce} tabele. Označimo jo s $Q$. Ravno ta podgrupa je dodatek, ki nam bo dodatno reduciral upodobitev zgoraj opisano inducirano upodobitev. Pri tem bomo upoštevali, da je $Q$ sestavljena dualno $P$, zato jo bomo utežili s predznačno upodobitvijo $\sgn$.
 
 Definirajmo funkcijo
 \[
@@ -2398,7 +2401,7 @@ Preostane nam še dokaz leme.
     \]
     kar lahko prepišemo v $f(qgp) = \sgn(q) \cdot f(g)$. Od tod sledi $f(qp) = \sgn(q) \cdot f(1)$. Na množici $QP$ se torej do skalarja $f(1)$ natančno funkcija $f$ ujema z Youngovim simetrizatorjem $\youngsym$. 
     
-    Preverimo še, da je izven množice $QP$ funkcija $f$ ničelna. V ta namen se spomnimo, da $P$ in $Q$ izhajata iz Youngovega tabloja $T$. Elementi $S_n$ naravno delujejo s permutacijami na množici tablojev. Za $g \in S_n$ naj bo $g \cdot T$ rezultat tega delovanja z elementom $g$.
+    Preverimo še, da je izven množice $QP$ funkcija $f$ ničelna. V ta namen se spomnimo, da $P$ in $Q$ izhajata iz Youngove tabele $T$. Elementi $S_n$ naravno delujejo s permutacijami na množici tabel. Za $g \in S_n$ naj bo $g \cdot T$ rezultat tega delovanja z elementom $g$.
 
     \begin{domacanaloga}
     Za vsak $g \in S_n \backslash QP$ obstajata števili, ki sta zapisani v istem stolpcu $T$ in isti vrstici $g \cdot T$.
@@ -2426,7 +2429,7 @@ Preostane nam še dokaz leme.
     \]
     Zaradi linearnosti te trditve lahko predpostavimo, da je $f = 1_g$ za nek $g \in G$. 
     
-    Naj bosta $T_{\lambda}$, $T_{\mu}$ Youngova tabloja razčlenitev $\lambda$, $\mu$, s katerima smo dobili grupe $P$ in $Q$. Tablo $T_{\lambda}$ zamenjajmo s tablojem $g \cdot T_{\lambda}$; ob tem se $Q_{\lambda}$ zamenja s $g^{-1} Q_{\lambda} g$. Z novimi tabloji je
+    Naj bosta $T_{\lambda}$, $T_{\mu}$ Youngovi tabeli razčlenitev $\lambda$, $\mu$, s katerima smo dobili grupe $P$ in $Q$. Tabelo $T_{\lambda}$ zamenjajmo s tabelo $g \cdot T_{\lambda}$; ob tem se $Q_{\lambda}$ zamenja s $g^{-1} Q_{\lambda} g$. Z novimi tabelami je
     \[
         1_{P_\mu} * (\sgn \cdot 1_{g^{-1} Q_{\lambda} g}) = 1_{P_\mu} * 1_{g^{-1}} * (\sgn \cdot 1_{Q_{\lambda}}) * 1_g.
     \]
@@ -4641,21 +4644,74 @@ Za neodvisnost od izbire poti potrebujemo nekaj \emph{algebraične topologije}.
 Naj bosta $\gamma_1$ in $\gamma_2$ dve poti v $\SL_2(\CC)$, ki povezujeta $I$ z $A$. Ker je $\SL_2(\CC)$ \emph{enostavno povezan} topološki prostor, obstaja \emph{homotopija} $H \colon [0,1] \times [0,1] \to \SL_2(\CC)$ z lastnostmi $H(0,t) = \gamma_1(t)$, $H(1,t) = \gamma_2(t)$, $H(s, 0) = 1$, $H(s,1) = A$. Po enakomerni zveznosti obstaja $N > 0$, da za vse $| s - s' | < 2/N$ in $| t - t'| < 2/N$ velja $H(s,t)H(s',t')^{-1} \in U$. Pokaži, da lahko s pomočjo homotopije $H$ pot $H(0,t) = \gamma_1(t)$ z zaporedjem majhnih perturbacij, ki ne vplivajo na vrednost $\rho(A)$, spremeniš v pot $H(1/N, t)$. Za tem slednjo pot z enakim argumentom spremeniš v pot $H(2/N, t)$ in tako naprej do poti $H(1,t) = \gamma_2(t)$. Vrednost $\rho(A)$ je torej res neodvisna od izbire poti $\gamma$.
 \end{domacanaloga}
 
+S tem je dokaz trditve o integriranju Liejevih upodobitev $\slfrak_2(\CC)$ zaključen. Dobimo torej bijekcijo med analitičnimi upodobitvami grupe $\SL_2(\CC)$ in Liejevimi upodobitvami njene Liejeve algebre, ki ohranja nerazcepnost. Ker že poznamo nerazcepne upodobitve $\slfrak_2(\CC)$, dobimo vse nerazcepne analitične upodobitve grupe.
 
+\begin{posledica}
+Vsaka analitična nerazcepna končnorazsežna kompleksna upodobitev grupe $\SL_2(\CC)$ je izomorfna $\rho_k$ za nek $k \geq 0$.
+\end{posledica}
+
+Na grupo $\SL_2(\CC)$ bi lahko gledali kot na \emph{realno} grupo.\footnote{To je analogno temu, da na kompleksna števila $\CC$ gledamo kot na $\RR^2$.} V tem primeru bi njene \emph{gladke} upodobitve dobili iz Liejevih upodobitev njene Liejeve algebre $\slfrak_2(\CC)$, na katero bi gledali kot na \emph{realno} Liejevo algebro.\footnote{Opazovali bi torej Liejeve homomorfizme $\slfrak_2(\CC) \to \glfrak_n(\CC)$, ki so le $\RR$-linearni.} Teh upodobitev je nekoliko več. Vsako od upodobitev $T_I \rho_k$ lahko namreč še konjugiramo. Izkaže se, ni presenetljivo in ni težko, da vse nerazcepne realne Liejeve upodobitve dobimo kot tenzorske produkte teh.
+
+\begin{posledica}
+Vsaka gladka nerazcepna končnorazsežna kompleksna upodobitev grupe $\SL_2(\CC)$ je izomorfna $\rho_k \otimes \overline{\rho_{\ell}}$ za neka $k, \ell \geq 0$.
+\end{posledica}
+
+Večino od povedanega v tem razdelku je razširljivo na poljubne topološke grupe, ki imajo strukturo realne ali kompleksne mnogoterosti, pri čemer sta množenje in invertiranje zvezni, gladki ali analitični operaciji. Takim grupam pravimo {\definicija Liejeve grupe}. Eksaktno korespondenco med upodobitvami Liejeve grupe in njene prirejene Liejeve algebre izgubimo, če grupa ni enostavno povezana.
 
 \subsection{$\SL_2(\RR)$}
 
-\todo[inline]{
-- obravnavamo kot Liejevo grupo
-- pokažemo povezavo z $sl_2$ (if you have a lie group, you can also liearize the source:: lahko eksplicitno opišemo vse nerazcepne, pokažemo kako so bijektivno (!) povezane z gladkimi upodobitvami $SL_2$, glej Fulton-Harris)
-- naštejemo upodobitve $SL_2$
-- dokažemo, da so nerazcepne (potrebujemo izotipične komponente)
-- diferencial teh upodobitev nam da upodobitve $sl_2$
-- dokažemo, da so to vse upodobitve $sl_2$ (Fulton-Harris)
-- zvezne upodobitve $SL_2$: te plus konjugiranke (samo rezultat, glej Example 2.7.41 za karakter)
-- abstraktne upodobitve: divji avtomorfizmi $\CC$
-- dokažemo Clebsch-Gordan (najbrž izpustimo ..)
-}
+Grupa $\SL_2(\RR)$ se pojavlja vsepočez matematike, predvsem prek svojih delovanj na različnih prostorih. Njene različne plasti odstira knjiga \href{https://link.springer.com/book/10.1007/978-1-4612-5142-2}{(Lang 1985)}. Zelo na kratko si bomo ogledali njeno bogato teorijo upodobitev.
+
+Upodobitve $\rho_k$ grupe $\SL_2(\CC)$ lahko zožimo na podgrupo realnih matrik $\SL_2(\RR)$. Na ta način z analognim razmislekom kot v prejšnjem razdelku dobimo vse dovolj lepe upodobitve. 
+
+\begin{posledica}
+Vsaka gladka nerazcepna končnorazsežna kompleksna upodobitev grupe $\SL_2(\RR)$ je izomorfna $\rho_k$ za nek $k \geq 0$.
+\end{posledica}
+
+V kontekstu realnih Liejevih grup se sicer izkaže, da je vsaka zvezna končnorazsežna upodobitev avtomatično gladka.\footnote{Poseben primer tega fenomena smo videli v razdelku o upodobitvah grupe $\RR/\ZZ$, kjer smo dokazali, da je vsaka zvezna upodobitev grupe $\RR$ odvedljiva.} To seveda ne velja za kompleksne Liejeve grupe, kjer lahko vsako analitično upodobitev konjugiramo in dobimo upodobitev, ki je sicer gladka, a ne nujno analitična. Upodobitve $\rho_k$ torej podajajo vse zvezne končnorazsežne upodobitve grupe $\SL_2(\RR)$. 
+
+Nobena od upodobitev $\rho_k$ ni unitarna. Če želimo konstruirati unitarne upodobitve, moramo poseči po neskončnorazsežnih vektorskih prostorih. Te upodobitve lahko konstruiramo s pomočjo delovanj grupe $\SL_2(\RR)$. Ogledali si bomo en primer take konstrukcije.
+
+Grupa $\SL_2(\RR)$ deluje na {\definicija hiperbolični ravnini}
+\[
+    \HH = \{  z \in \CC \mid \imaginary(z) > 0 \}
+\]
+s predpisom
+\[
+    \begin{pmatrix}
+        a & b \\ c & d
+    \end{pmatrix}
+    \cdot z
+    =
+    \frac{az + b}{cz + d}.
+\]
+To delovanje je tranzitivno. Ni se težko prepričati, da stabilizator točke $i \in \HH$ sestoji iz matrik
+\[
+    \SO_2(\RR) = \left\{ \begin{pmatrix} a & b \\ -b & a \end{pmatrix} \mid a^2 + b^2 = 1 \right\}.
+\]
+Delovanje $\SL_2(\RR)$ na $\HH$ je torej ekvivalentno delovanju $\SL_2(\RR)$ na množici svojih desnih odsekov po kompaktni podgrupi $\SO_2(\RR)$. To permutacijsko delovanje lahko pretvorimo v upodobitev $\rho_k$ za vsak $k \geq 2$ z delovanjem na prostorih holomorfnih integrabilnih funkcij
+\[
+    D_k = \left\{ f \colon \HH \to \CC \mid \text{$f$ homolorfna}, \ \int_{\HH} |f(z)|^2 y^k \frac{dx dy}{y^2} < \infty \right\},
+\]
+in sicer definiramo
+\[
+    \rho_k \colon \SL_2(\RR) \to \GL(D_k), \quad
+    \left( \rho_k \begin{pmatrix}
+        a & b \\ c & d
+    \end{pmatrix}
+    \cdot f \right)(z)
+    = (-cz + a)^{-k} \cdot f\left( \begin{pmatrix}
+        a & b \\ c & d
+    \end{pmatrix}^{-1} \cdot z \right).
+\]
+Izkaže se, da je $\rho_k$ nerazcepna unitarna upodobitev grupe $\SL_2(\RR)$ na neskončnorazsežnem Hilbertovem prostoru $D_k$ in da so te upodobitve med sabo neizomorfne. Na ta način dobimo celo vrsto nerazcepnih unitarnih upodobitev grupe $\SL_2(\RR)$, ki jim pravimo {\definicija upodobitve diskretne vrste}.
+
+Z opazovanjem drugih zanimivih podgrup v $\SL_2(\RR)$ najdemo še kakšne druge unitarne upodobitve. Še posebej zanimiva je diskretna podgrupa $\SL_2(\ZZ)$. Z njo dobimo kvocientno množico $Y = \SL_2(\ZZ) \backslash \SL_2(\RR)$. Na grupo $\SL_2(\RR)$ lahko s pomočjo projekcije $\SL_2(\RR) \to \SO_2(\RR) \backslash \SL_2(\RR) = \HH$ prenesemo mero, ki jo nato potisnemo na $Y$, tako da lahko opazujemo prostor funkcij $L^2(Y)$, na katerem deluje grupa $\SL_2(\RR)$. V tem prostoru lahko najdemo mnogo nerazcepnih unitarnih podupodobitev. Še posebej zanimive so upodobitve, ki so konsturirane s pomočjo indukcije unitarnih upodobitev Borelove podgrupe zgornjetrikotnih matrik. Te imenujemo {\definicija upodobitve glavne vrste} in jih lahko vidimo kot posplošitev upodobitev glavne vrste iz teorije upodobitev grupe $\GL_2(\FF_p)$.
+
+Poleg teh dveh družin upodobitev ima grupa $\SL_2(\RR)$ še eno nekoliko bolj nenavadno družino unitarnih nerazcepnih upodobitev, ki jih dobimo z indukcijo določenih \emph{neunitarnih} upodobitev Borelove podgrupe. Te upodobitve tvorijo družino {\definicija upodobitev komplementarne vrste}.
+
+Izkaže se, da vse netrivialne nerazcepne unitarne upodobitve grupe $\SL_2(\RR)$ lahko dobimo iz ene od opisanih družin upodobitev.
+
 
 \section{Diskretne linearne grupe}
 \subsection{$\SL_2(\ZZ)$}

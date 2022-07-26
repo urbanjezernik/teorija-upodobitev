@@ -171,6 +171,10 @@
             <li><p><span>S. Eberhard, <span><em>Product mixing in the
             alternating group</em></span>, Discrete Analysis, 2-18
             (2016).</span></p></li>
+            <li><p><span>B. C. Hall, <span><em>Lie groups, Lie algebras,
+            and representations</em></span>, Quantum Theory for
+            Mathematicians, Springer, New York, NY,
+            2013.</span></p></li>
             </ul>
             <h1 id="temelji-teorije-upodobitev">Temelji teorije
             upodobitev</h1>
@@ -5511,8 +5515,8 @@
             class="math inline">\(n\)</span> škatlic, v katere poljubno
             vpišemo števila od <span class="math inline">\(1\)</span> do
             <span class="math inline">\(n\)</span>. Tako izpolnjenemu
-            diagramu pravimo <span><strong><em>Youngov
-            tablo</em></strong></span>. Vsak Youngov tablo nam
+            diagramu pravimo <span><strong><em>Youngova
+            tabela</em></strong></span>. Vsaka Youngova tabela nam
             pravzaprav ponuja vložitev grupe <span
             class="math inline">\(P\)</span> v <span
             class="math inline">\(S_n\)</span>. Fiksirajmo standardno
@@ -5524,7 +5528,7 @@
             tako naprej. Grupa <span class="math inline">\(P\)</span>,
             standardno vložena v <span
             class="math inline">\(S_n\)</span>, predstavlja ravno vse
-            permutacije, ki ohranjajo <em>vrstice</em> tabloja.</p>
+            permutacije, ki ohranjajo <em>vrstice</em> tabele.</p>
             <p>Inducirajmo trivialno upodobitev iz <span
             class="math inline">\(P\)</span> na <span
             class="math inline">\(S_n\)</span>. V razdelku o indukciji
@@ -5565,9 +5569,9 @@
             nek podprostor.</p>
             <p>Do zdaj smo upoštevali le grupo <span
             class="math inline">\(P\)</span> permutacij, ki ohranjajo
-            <em>vrstice</em> izbranega Youngovega tabloja. Iz tega
-            gledišča je naravno, da obravnavamo tudi grupo permutacij,
-            ki ohranjajo <em>stolpce</em> tabloja. Označimo jo s <span
+            <em>vrstice</em> izbrane Youngove tablele. Iz tega gledišča
+            je naravno, da obravnavamo tudi grupo permutacij, ki
+            ohranjajo <em>stolpce</em> tabele. Označimo jo s <span
             class="math inline">\(Q\)</span>. Ravno ta podgrupa je
             dodatek, ki nam bo dodatno reduciral upodobitev zgoraj
             opisano inducirano upodobitev. Pri tem bomo upoštevali, da
@@ -5861,10 +5865,10 @@
             class="math inline">\(QP\)</span> funkcija <span
             class="math inline">\(f\)</span> ničelna. V ta namen se
             spomnimo, da <span class="math inline">\(P\)</span> in <span
-            class="math inline">\(Q\)</span> izhajata iz Youngovega
-            tabloja <span class="math inline">\(T\)</span>. Elementi
-            <span class="math inline">\(S_n\)</span> naravno delujejo s
-            permutacijami na množici tablojev. Za <span
+            class="math inline">\(Q\)</span> izhajata iz Youngove tabele
+            <span class="math inline">\(T\)</span>. Elementi <span
+            class="math inline">\(S_n\)</span> naravno delujejo s
+            permutacijami na množici tabel. Za <span
             class="math inline">\(g \in S_n\)</span> naj bo <span
             class="math inline">\(g \cdot T\)</span> rezultat tega
             delovanja z elementom <span
@@ -5911,17 +5915,17 @@
             class="math inline">\(g \in G\)</span>.</p>
             <p>Naj bosta <span
             class="math inline">\(T_{\lambda}\)</span>, <span
-            class="math inline">\(T_{\mu}\)</span> Youngova tabloja
+            class="math inline">\(T_{\mu}\)</span> Youngovi tabeli
             razčlenitev <span class="math inline">\(\lambda\)</span>,
             <span class="math inline">\(\mu\)</span>, s katerima smo
             dobili grupe <span class="math inline">\(P\)</span> in <span
-            class="math inline">\(Q\)</span>. Tablo <span
+            class="math inline">\(Q\)</span>. Tabelo <span
             class="math inline">\(T_{\lambda}\)</span> zamenjajmo s
-            tablojem <span class="math inline">\(g \cdot
+            tabelo <span class="math inline">\(g \cdot
             T_{\lambda}\)</span>; ob tem se <span
             class="math inline">\(Q_{\lambda}\)</span> zamenja s <span
             class="math inline">\(g^{-1} Q_{\lambda} g\)</span>. Z
-            novimi tabloji je <span class="math display">\[1_{P_\mu} *
+            novimi tabelami je <span class="math display">\[1_{P_\mu} *
             (\mathop{\mathrm{sgn}}\cdot 1_{g^{-1} Q_{\lambda} g}) =
             1_{P_\mu} * 1_{g^{-1}} * (\mathop{\mathrm{sgn}}\cdot
             1_{Q_{\lambda}}) * 1_g.\]</span> Če uspemo dokazati, da je
@@ -10965,8 +10969,188 @@
             neodvisna od izbire poti <span
             class="math inline">\(\gamma\)</span>.</p>
             </div>
+            <p>S tem je dokaz trditve o integriranju Liejevih upodobitev
+            <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span>
+            zaključen. Dobimo torej bijekcijo med analitičnimi
+            upodobitvami grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
+            in Liejevimi upodobitvami njene Liejeve algebre, ki ohranja
+            nerazcepnost. Ker že poznamo nerazcepne upodobitve <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span>,
+            dobimo vse nerazcepne analitične upodobitve grupe.</p>
+            <div class="posledica">
+            <p><strong>Posledica 6.2</strong>. Vsaka analitična
+            nerazcepna končnorazsežna kompleksna upodobitev grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
+            je izomorfna <span class="math inline">\(\rho_k\)</span> za
+            nek <span class="math inline">\(k \geq 0\)</span>.</p>
+            </div>
+            <p>Na grupo <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
+            bi lahko gledali kot na <em>realno</em> grupo.<a
+            href="#fn92" class="footnote-ref" id="fnref92"
+            role="doc-noteref"><sup>92</sup></a> V tem primeru bi njene
+            <em>gladke</em> upodobitve dobili iz Liejevih upodobitev
+            njene Liejeve algebre <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span>,
+            na katero bi gledali kot na <em>realno</em> Liejevo
+            algebro.<a href="#fn93" class="footnote-ref" id="fnref93"
+            role="doc-noteref"><sup>93</sup></a> Teh upodobitev je
+            nekoliko več. Vsako od upodobitev <span
+            class="math inline">\(T_I \rho_k\)</span> lahko namreč še
+            konjugiramo. Izkaže se, ni presenetljivo in ni težko, da vse
+            nerazcepne realne Liejeve upodobitve dobimo kot tenzorske
+            produkte teh.</p>
+            <div class="posledica">
+            <p><strong>Posledica 6.3</strong>. Vsaka gladka nerazcepna
+            končnorazsežna kompleksna upodobitev grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
+            je izomorfna <span class="math inline">\(\rho_k \otimes
+            \overline{\rho_{\ell}}\)</span> za neka <span
+            class="math inline">\(k, \ell \geq 0\)</span>.</p>
+            </div>
+            <p>Večino od povedanega v tem razdelku je razširljivo na
+            poljubne topološke grupe, ki imajo strukturo realne ali
+            kompleksne mnogoterosti, pri čemer sta množenje in
+            invertiranje zvezni, gladki ali analitični operaciji. Takim
+            grupam pravimo <span><strong><em>Liejeve
+            grupe</em></strong></span>. Eksaktno korespondenco med
+            upodobitvami Liejeve grupe in njene prirejene Liejeve
+            algebre izgubimo, če grupa ni enostavno povezana.</p>
             <h3 id="mathopmathrmsl_2mathbfr"><span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span></h3>
+            <p>Grupa <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
+            se pojavlja vsepočez matematike, predvsem prek svojih
+            delovanj na različnih prostorih. Njene različne plasti
+            odstira knjiga <a
+            href="https://link.springer.com/book/10.1007/978-1-4612-5142-2">(Lang
+            1985)</a>. Zelo na kratko si bomo ogledali njeno bogato
+            teorijo upodobitev.</p>
+            <p>Upodobitve <span class="math inline">\(\rho_k\)</span>
+            grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
+            lahko zožimo na podgrupo realnih matrik <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>.
+            Na ta način z analognim razmislekom kot v prejšnjem razdelku
+            dobimo vse dovolj lepe upodobitve.</p>
+            <div class="posledica">
+            <p><strong>Posledica 6.4</strong>. Vsaka gladka nerazcepna
+            končnorazsežna kompleksna upodobitev grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
+            je izomorfna <span class="math inline">\(\rho_k\)</span> za
+            nek <span class="math inline">\(k \geq 0\)</span>.</p>
+            </div>
+            <p>V kontekstu realnih Liejevih grup se sicer izkaže, da je
+            vsaka zvezna končnorazsežna upodobitev avtomatično gladka.<a
+            href="#fn94" class="footnote-ref" id="fnref94"
+            role="doc-noteref"><sup>94</sup></a> To seveda ne velja za
+            kompleksne Liejeve grupe, kjer lahko vsako analitično
+            upodobitev konjugiramo in dobimo upodobitev, ki je sicer
+            gladka, a ne nujno analitična. Upodobitve <span
+            class="math inline">\(\rho_k\)</span> torej podajajo vse
+            zvezne končnorazsežne upodobitve grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>.</p>
+            <p>Nobena od upodobitev <span
+            class="math inline">\(\rho_k\)</span> ni unitarna. Če želimo
+            konstruirati unitarne upodobitve, moramo poseči po
+            neskončnorazsežnih vektorskih prostorih. Te upodobitve lahko
+            konstruiramo s pomočjo delovanj grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>.
+            Ogledali si bomo en primer take konstrukcije.</p>
+            <p>Grupa <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
+            deluje na <span><strong><em>hiperbolični
+            ravnini</em></strong></span> <span
+            class="math display">\[\mathbf{H}= \{  z \in \mathbf{C}\mid
+            \mathop{\mathrm{imaginary}}(z) &gt; 0 \}\]</span> s
+            predpisom <span class="math display">\[\begin{pmatrix}
+                    a &amp; b \\ c &amp; d
+                \end{pmatrix}
+                \cdot z
+                =
+                \frac{az + b}{cz + d}.\]</span> To delovanje je
+            tranzitivno. Ni se težko prepričati, da stabilizator točke
+            <span class="math inline">\(i \in \mathbf{H}\)</span>
+            sestoji iz matrik <span
+            class="math display">\[\mathop{\mathrm{SO}}_2(\mathbf{R}) =
+            \left\{ \begin{pmatrix} a &amp; b \\ -b &amp; a
+            \end{pmatrix} \mid a^2 + b^2 = 1 \right\}.\]</span>
+            Delovanje <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
+            na <span class="math inline">\(\mathbf{H}\)</span> je torej
+            ekvivalentno delovanju <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
+            na množici svojih desnih odsekov po kompaktni podgrupi <span
+            class="math inline">\(\mathop{\mathrm{SO}}_2(\mathbf{R})\)</span>.
+            To permutacijsko delovanje lahko pretvorimo v upodobitev
+            <span class="math inline">\(\rho_k\)</span> za vsak <span
+            class="math inline">\(k \geq 2\)</span> z delovanjem na
+            prostorih holomorfnih integrabilnih funkcij <span
+            class="math display">\[D_k = \left\{ f \colon \mathbf{H}\to
+            \mathbf{C}\mid \text{$f$ homolorfna}, \ \int_{\mathbf{H}}
+            |f(z)|^2 y^k \frac{dx dy}{y^2} &lt; \infty
+            \right\},\]</span> in sicer definiramo <span
+            class="math display">\[\rho_k \colon
+            \mathop{\mathrm{SL}}_2(\mathbf{R}) \to
+            \mathop{\mathrm{GL}}(D_k), \quad
+                \left( \rho_k \begin{pmatrix}
+                    a &amp; b \\ c &amp; d
+                \end{pmatrix}
+                \cdot f \right)(z)
+                = (-cz + a)^{-k} \cdot f\left( \begin{pmatrix}
+                    a &amp; b \\ c &amp; d
+                \end{pmatrix}^{-1} \cdot z \right).\]</span> Izkaže se,
+            da je <span class="math inline">\(\rho_k\)</span> nerazcepna
+            unitarna upodobitev grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
+            na neskončnorazsežnem Hilbertovem prostoru <span
+            class="math inline">\(D_k\)</span> in da so te upodobitve
+            med sabo neizomorfne. Na ta način dobimo celo vrsto
+            nerazcepnih unitarnih upodobitev grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>,
+            ki jim pravimo <span><strong><em>upodobitve diskretne
+            vrste</em></strong></span>.</p>
+            <p>Z opazovanjem drugih zanimivih podgrup v <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
+            najdemo še kakšne druge unitarne upodobitve. Še posebej
+            zanimiva je diskretna podgrupa <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span>.
+            Z njo dobimo kvocientno množico <span
+            class="math inline">\(Y = \mathop{\mathrm{SL}}_2(\mathbf{Z})
+            \backslash \mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>. Na
+            grupo <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
+            lahko s pomočjo projekcije <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R}) \to
+            \mathop{\mathrm{SO}}_2(\mathbf{R}) \backslash
+            \mathop{\mathrm{SL}}_2(\mathbf{R}) = \mathbf{H}\)</span>
+            prenesemo mero, ki jo nato potisnemo na <span
+            class="math inline">\(Y\)</span>, tako da lahko opazujemo
+            prostor funkcij <span class="math inline">\(L^2(Y)\)</span>,
+            na katerem deluje grupa <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>.
+            V tem prostoru lahko najdemo mnogo nerazcepnih unitarnih
+            podupodobitev. Še posebej zanimive so upodobitve, ki so
+            konsturirane s pomočjo indukcije unitarnih upodobitev
+            Borelove podgrupe zgornjetrikotnih matrik. Te imenujemo
+            <span><strong><em>upodobitve glavne
+            vrste</em></strong></span> in jih lahko vidimo kot
+            posplošitev upodobitev glavne vrste iz teorije upodobitev
+            grupe <span
+            class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span>.</p>
+            <p>Poleg teh dveh družin upodobitev ima grupa <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
+            še eno nekoliko bolj nenavadno družino unitarnih nerazcepnih
+            upodobitev, ki jih dobimo z indukcijo določenih
+            <em>neunitarnih</em> upodobitev Borelove podgrupe. Te
+            upodobitve tvorijo družino <span><strong><em>upodobitev
+            komplementarne vrste</em></strong></span>.</p>
+            <p>Izkaže se, da vse netrivialne nerazcepne unitarne
+            upodobitve grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
+            lahko dobimo iz ene od opisanih družin upodobitev.</p>
             <h2 id="diskretne-linearne-grupe">Diskretne linearne
             grupe</h2>
             <h3 id="mathopmathrmsl_2mathbfz"><span
@@ -11572,6 +11756,27 @@
             delilnih točk imata namreč skupno pofinitev. Ta sklep je
             podoben kot pri definiciji Riemannovega integrala.<a
             href="#fnref91" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn92" role="doc-endnote"><p>To je analogno temu, da
+            na kompleksna števila <span
+            class="math inline">\(\mathbf{C}\)</span> gledamo kot na
+            <span class="math inline">\(\mathbf{R}^2\)</span>.<a
+            href="#fnref92" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn93" role="doc-endnote"><p>Opazovali bi torej
+            Liejeve homomorfizme <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})
+            \to \mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>,
+            ki so le <span
+            class="math inline">\(\mathbf{R}\)</span>-linearni.<a
+            href="#fnref93" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn94" role="doc-endnote"><p>Poseben primer tega
+            fenomena smo videli v razdelku o upodobitvah grupe <span
+            class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>, kjer
+            smo dokazali, da je vsaka zvezna upodobitev grupe <span
+            class="math inline">\(\mathbf{R}\)</span> odvedljiva.<a
+            href="#fnref94" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>
