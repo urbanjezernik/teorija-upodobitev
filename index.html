@@ -60,7 +60,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 25. 07. 2022
+            Zadnja posodobitev: 26. 07. 2022
           </div>
 
           <div id="spinner" class="text-center">
@@ -10077,7 +10077,7 @@
             mero <span class="math inline">\(\mu\)</span>. Regularna
             upodobitev <span class="math inline">\(G\)</span> na <span
             class="math inline">\(L^2(G)\)</span> je izomorfna
-            ortogonalni direktni vsoti <span
+            ortogonalni direktni vsoti Hilbertovih prostorov <span
             class="math display">\[L^2(G) \cong \bigoplus_{\pi}
             \underbrace{\pi \oplus \pi \oplus \cdots \oplus
             \pi}_{\deg(\pi)},\]</span> ko <span
@@ -10290,8 +10290,8 @@
             class="math inline">\(\rho_k\)</span> na <span
             class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span>
             nerazcepne in unitarne. Izračunaj karakter vsake od teh
-            upodobitev in dokaži, da te funkcije tvorijo gost podprostor
-            <span
+            upodobitev in dokaži, da te funkcije tvorijo gosto bazo
+            prostora <span
             class="math inline">\(L^2(\mathop{\mathrm{SU}}_2(\mathbf{C}))\)</span>.
             To so torej vse zvezne unitarne upodobitve grupe <span
             class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span>.</p>
@@ -10542,7 +10542,7 @@
             <p>Grupa <span
             class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>
             deluje s konjugiranjem na svojem tangentnem prostoru, <span
-            class="math display">\[\mathop{\mathrm{Ad}}\colon
+            class="math display">\[\textstyle \mathop{\mathrm{Ad}}\colon
             \mathop{\mathrm{GL}}_n(\mathbf{C}) \to
             \mathop{\mathrm{End}}(\mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})),
             \quad
@@ -10560,8 +10560,8 @@
             class="math inline">\(D_I \rho\)</span> <em>spletična</em>
             glede na to delovanje. Za vsak <span class="math inline">\(Y
             \in \mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span>
-            velja namreč <span class="math display">\[D_I \rho \cdot
-            \mathop{\mathrm{Ad}}(A) \cdot Y
+            velja namreč <span class="math display">\[\textstyle D_I
+            \rho \cdot \mathop{\mathrm{Ad}}(A) \cdot Y
                 = D_I \left( \rho(e^{t A Y A^{-1}}) \right)
                 % = D_I \left( \rho(A) \rho(e^{t Y}) \rho(A^{-1})
             \right)
@@ -10573,17 +10573,17 @@
             e^{tX}\)</span>. Izračunajmo odvod leve in desne strani v
             točki <span class="math inline">\(t = 0\)</span>. Z uporabo
             verižnega pravila leva stran postane <span
-            class="math display">\[D_I \rho \cdot D_0 \left( e^{tX} Y
-            e^{-tX} \right)
+            class="math display">\[\textstyle D_I \rho \cdot D_0 \left(
+            e^{tX} Y e^{-tX} \right)
                 = D_I \rho \cdot (XY - YX),\]</span> desna stran pa
-            postane <span class="math display">\[D_0 \left( \rho(e^{tX})
-            (D_I \rho \cdot Y) \rho(e^{-tX}) \right)
+            postane <span class="math display">\[\textstyle D_0 \left(
+            \rho(e^{tX}) (D_I \rho \cdot Y) \rho(e^{-tX}) \right)
                 = (D_I \rho \cdot X) (D_I \rho \cdot Y) -  (D_I \rho
             \cdot Y) (D_I \rho \cdot X).\]</span> Označimo <span
             class="math inline">\([X,Y] = XY - YX\)</span>. Velja torej
             <span class="math display">\[D_I \rho \cdot [X,Y] = [D_I
             \rho \cdot X, D_I \rho \cdot Y],\]</span> kar pomeni, da
-            preslikva <span class="math inline">\(D_I \rho\)</span>
+            preslikava <span class="math inline">\(D_I \rho\)</span>
             <em>spoštuje</em> operaciji <span
             class="math inline">\([\cdot, \cdot]\)</span> na <span
             class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span>
@@ -10794,31 +10794,22 @@
             Po potrebi <span class="math inline">\(U\)</span> še
             zmanjšamo, da je <span class="math inline">\(U^{-1} =
             U\)</span> in da je <span class="math inline">\(\log |_{U
-            \cdot U}\)</span> še vedno difeomorfizem.</p>
-            <div class="domacanaloga">
-            <p><strong>Domača naloga 6.2</strong>. Dokaži, da množica
-            <span class="math inline">\(U\)</span> generira <span
-            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
-            Vsaka upodobitev grupe <span
-            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
-            je zato enolično določena s svojimi vrednostmi na <span
-            class="math inline">\(U\)</span>.</p>
-            </div>
-            <p>Vsaki matriki <span class="math inline">\(A \in
-            U\)</span> lahko lahko priredimo <span
-            class="math inline">\(\log A\)</span>, ki jo s <span
-            class="math inline">\(\phi\)</span> preslikavo v <span
+            \cdot U}\)</span> še vedno difeomorfizem. Vsaki matriki
+            <span class="math inline">\(A \in U\)</span> lahko lahko
+            priredimo <span class="math inline">\(\log A\)</span>, ki jo
+            s <span class="math inline">\(\phi\)</span> preslikamo v
+            <span
             class="math inline">\(\mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>
             in nazadnje dvignemo nazaj do grupe z eksponentno
             preslikavo. Na ta način dobimo gladko funkcijo <span
-            class="math display">\[\rho \colon U \subseteq
+            class="math display">\[\textstyle \rho \colon U \subseteq
             \mathop{\mathrm{SL}}_2(\mathbf{C}) \to
             \mathop{\mathrm{GL}}_n(\mathbf{C}), \quad
                 A \mapsto e^{\phi(\log A)}.\]</span> Odvod te funkcije v
             <span class="math inline">\(I\)</span> je na tangentnem
             vektorju <span class="math inline">\(X \in
             \mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span> enak
-            <span class="math display">\[D_I \rho \cdot X
+            <span class="math display">\[\textstyle D_I \rho \cdot X
                 = D_0 \rho(e^{tX})
                 = D_0 e^{\phi(\log e^{tX})}
                 = D_0 e^{\phi(tX)}
@@ -10861,30 +10852,119 @@
             \right) \\
                 &amp;= \phi(X) + \phi(Y) + \frac{1}{2}[\phi(X), \phi(Y)]
             + \cdots \\
-                &amp;= \log(\phi(\log A) \phi(\log
-            B)),\end{aligned}\]</span> kjer smo v srednji enakosti
+                &amp;= \log(e^{\phi(\log A)} e^{\phi(\log
+            B)}),\end{aligned}\]</span> kjer smo v srednji enakosti
             upoštevali, da je <span class="math inline">\(\phi\)</span>
             Liejev homomorfizem. Od tod sklepamo, da res velja <span
             class="math inline">\(\rho(A)\rho(B) = \rho(AB)\)</span> za
             vsaka <span class="math inline">\(A,B \in U\)</span>.
             Preslikava <span class="math inline">\(\rho\)</span> je
             torej vsaj lokalno homomorfizem.</p>
-            <p>Ker <span class="math inline">\(U\)</span> generira grupo
-            <span
+            <p>Pogovorimo se še o tem, kako lahko razširimo <span
+            class="math inline">\(\rho\)</span> na celo grupo <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
+            Prepričajmo se najprej, da množica <span
+            class="math inline">\(U\)</span> generira grupo <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
+            Upodobitev bo torej enolično določena s svojimi vrednostmi
+            na <span class="math inline">\(U\)</span>. Izberimo poljuben
+            <span class="math inline">\(A \in
+            \mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>. Ker je <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
+            povezan topološki prostor, najdemo gladko pot <span
+            class="math inline">\(\gamma \colon [0,1] \to
+            \mathop{\mathrm{SL}}_2(\mathbf{C})\)</span> z <span
+            class="math inline">\(\gamma(0) = I\)</span>, <span
+            class="math inline">\(\gamma(1) = A\)</span>. Ta pot je na
+            kompaktne intervalu enakomerno zvezna, zato obstajajo
+            indeksi <span class="math inline">\(0 = t_0 &lt; t_1 &lt;
+            \cdots &lt; t_m = 1\)</span>, tako da za vsaka <span
+            class="math inline">\(t_i \leq s &lt; t \leq
+            t_{i+1}\)</span> velja <span class="math inline">\(\gamma(t)
+            \gamma(s)^{-1} \in U\)</span>. S tem lahko zapišemo <span
+            class="math display">\[A = \gamma(t_n)
+                = \prod_{i = m}^1 \left( \gamma(t_i)
+            \gamma(t_{i-1})^{-1} \right).\]</span> Ker je <span
+            class="math inline">\(\gamma(t_i) \gamma(t_{i-1})^{-1} \in
+            U\)</span>, kjer že imamo definiran <span
+            class="math inline">\(\rho\)</span>, lahko definicijo
+            razširimo na <span class="math inline">\(A\)</span> s
+            predpisom <span class="math display">\[\rho(A) = \prod_{i =
+            m}^{1} \rho \left( \gamma(t_i) \gamma(t_{i-1})^{-1}
+            \right).\]</span> Seveda moramo preveriti, da je ta
+            definicija neodvisna od izbire delilnih točk <span
+            class="math inline">\(t_0, t_1, \dots, t_m\)</span> in od
+            izbire poti <span class="math inline">\(\gamma\)</span>.</p>
+            <p>Prepričajmo se najprej, da z isto potjo <span
+            class="math inline">\(\gamma\)</span> drugačna izbira
+            delilnih točk privede do enakega rezultata, če je le
+            zadoščeno pogoju <span class="math inline">\(\gamma(t)
+            \gamma(s)^{-1} \in U\)</span> za vsaka <span
+            class="math inline">\(t_i \leq s &lt; t \leq
+            t_{i+1}\)</span>. V ta namen bo dovolj premisliti, da se
+            definicija <span class="math inline">\(\rho(A)\)</span> ne
+            spremeni, če pofinimo izbiro delilnih točk, se pravi če
+            dodamo še nekaj dodatnih točk.<a href="#fn91"
+            class="footnote-ref" id="fnref91"
+            role="doc-noteref"><sup>91</sup></a> V ta namen bo dovolj
+            preveriti, da se definicija <span
+            class="math inline">\(\rho(A)\)</span> ne spremeni, če
+            dodamo eno samo dodatno delilno točko, na primer med <span
+            class="math inline">\(t_i\)</span> in <span
+            class="math inline">\(t_{i-1}\)</span> vrinemo nek <span
+            class="math inline">\(s\)</span>. V tem primeru se v
+            definiciji <span class="math inline">\(\rho(A)\)</span>
+            spremeni le faktor <span
+            class="math inline">\(\rho(\gamma(t_i)
+            \gamma(t_{i-1})^{-1})\)</span>, in sicer ga zamenjamo s
+            produktom <span class="math display">\[\rho(\gamma(t_i)
+            \gamma(s)^{-1})
+                \rho(\gamma(s) \gamma(t_{i-1})^{-1}).\]</span> Ker je
+            <span class="math inline">\(\rho\)</span> homomorfizem na
+            <span class="math inline">\(U\)</span>, je zadnji člen enak
+            <span class="math inline">\(\rho(\gamma(t_i)
+            \gamma(t_{i-1})^{-1})\)</span>, torej se vrednost <span
+            class="math inline">\(\rho(A)\)</span> res ohrani pri
+            dodajanju ene delilne točke. Definicija <span
+            class="math inline">\(\rho(A)\)</span> je zato neodvisna od
+            izbire delilnih točk.</p>
+            <p>Za neodvisnost od izbire poti potrebujemo nekaj
+            <em>algebraične topologije</em>.</p>
+            <div class="domacanaloga">
+            <p><strong>Domača naloga 6.2</strong>. Naj bosta <span
+            class="math inline">\(\gamma_1\)</span> in <span
+            class="math inline">\(\gamma_2\)</span> dve poti v <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>,
-            lahko vsak njen element <span class="math inline">\(A \in
-            \mathop{\mathrm{SL}}_2(\mathbf{C})\)</span> zapišemo kot
-            produkt <span class="math inline">\(A = U_1 U_2 \cdots
-            U_k\)</span> elementov iz množice <span
-            class="math inline">\(U\)</span>. Na tej množici že imamo
-            definiran <span class="math inline">\(\rho\)</span>, zato
-            lahko definiramo <span class="math inline">\(\rho(A) =
-            \rho(U_1) \rho(U_2) \cdots \rho(U_k)\)</span>. Zdaj bi bilo
-            potrebno preveriti še, da je ta definicija res dobra. Ta
-            premislek standardno temelji na dodatnih lastnostih teorije
-            Liejevih grup, ki bi nam vzele preveč prostora, zato ga
-            izpustimo.<a href="#fn91" class="footnote-ref" id="fnref91"
-            role="doc-noteref"><sup>91</sup></a></p>
+            ki povezujeta <span class="math inline">\(I\)</span> z <span
+            class="math inline">\(A\)</span>. Ker je <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
+            <em>enostavno povezan</em> topološki prostor, obstaja
+            <em>homotopija</em> <span class="math inline">\(H \colon
+            [0,1] \times [0,1] \to
+            \mathop{\mathrm{SL}}_2(\mathbf{C})\)</span> z lastnostmi
+            <span class="math inline">\(H(0,t) = \gamma_1(t)\)</span>,
+            <span class="math inline">\(H(1,t) = \gamma_2(t)\)</span>,
+            <span class="math inline">\(H(s, 0) = 1\)</span>, <span
+            class="math inline">\(H(s,1) = A\)</span>. Po enakomerni
+            zveznosti obstaja <span class="math inline">\(N &gt;
+            0\)</span>, da za vse <span class="math inline">\(| s -
+            s&#39; | &lt; 2/N\)</span> in <span class="math inline">\(|
+            t - t&#39;| &lt; 2/N\)</span> velja <span
+            class="math inline">\(H(s,t)H(s&#39;,t&#39;)^{-1} \in
+            U\)</span>. Pokaži, da lahko s pomočjo homotopije <span
+            class="math inline">\(H\)</span> pot <span
+            class="math inline">\(H(0,t) = \gamma_1(t)\)</span> z
+            zaporedjem majhnih perturbacij, ki ne vplivajo na vrednost
+            <span class="math inline">\(\rho(A)\)</span>, spremeniš v
+            pot <span class="math inline">\(H(1/N, t)\)</span>. Za tem
+            slednjo pot z enakim argumentom spremeniš v pot <span
+            class="math inline">\(H(2/N, t)\)</span> in tako naprej do
+            poti <span class="math inline">\(H(1,t) =
+            \gamma_2(t)\)</span>. Vrednost <span
+            class="math inline">\(\rho(A)\)</span> je torej res
+            neodvisna od izbire poti <span
+            class="math inline">\(\gamma\)</span>.</p>
+            </div>
             <h3 id="mathopmathrmsl_2mathbfr"><span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span></h3>
             <h2 id="diskretne-linearne-grupe">Diskretne linearne
@@ -11488,13 +11568,9 @@
             navzgor</em> z <span class="math inline">\(E\)</span>.<a
             href="#fnref90" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn91" role="doc-endnote"><p>Natančneje, obravnavati
-            bi morali graf funkcije <span
-            class="math inline">\(\phi\)</span> in ga pointegrirati kot
-            Liejevo podalgebro <span
-            class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})
-            \oplus
-            \mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>.<a
+            <li id="fn91" role="doc-endnote"><p>Vsaki dve izbiri
+            delilnih točk imata namreč skupno pofinitev. Ta sklep je
+            podoben kot pri definiciji Riemannovega integrala.<a
             href="#fnref91" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             </ol>

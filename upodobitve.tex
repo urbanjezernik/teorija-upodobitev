@@ -4246,7 +4246,7 @@ Kot v primeru $\RR/\ZZ$ lahko vse upodobitve najdemo v ustreznem modelu regularn
 Ta prostor je seveda neskončnorazsežen. Znameniti Peter-Weylov izrek razkrije dekompozicijo te upodobitve, ki je popolnoma analogna tisti iz sveta končnih grup.
 
 \begin{izrek}[Peter-Weyl]
-Naj bo $G$ kompaktna grupa s Haarovo mero $\mu$. Regularna upodobitev $G$ na $L^2(G)$ je izomorfna ortogonalni direktni vsoti
+Naj bo $G$ kompaktna grupa s Haarovo mero $\mu$. Regularna upodobitev $G$ na $L^2(G)$ je izomorfna ortogonalni direktni vsoti Hilbertovih prostorov
 \[
     L^2(G) \cong \bigoplus_{\pi} \underbrace{\pi \oplus \pi \oplus \cdots \oplus \pi}_{\deg(\pi)},
 \]
@@ -4347,7 +4347,7 @@ Upoštevajmo zdaj, da je $W$ invarianten še glede na vse ostale elemente v $\SL
 Na ta način smo torej konstruirali neskončno mnogo nerazcepnih polinomskih upodobitev grupe $\SL_2(\CC)$ poljubne visoke stopnje. Zanimivo je, da te upodobitve \emph{niso} unitarne. Lastne vrednosti unitarnih matrik so namreč nujno absolutne vrednosti $1$, čemur upodobitve $\rho_k$ ne zadoščajo. Kasneje bomo videli preprost argument, da niti njena podgrupa $\SL_2(\RR)$ nima netrivialnih končnorazsežnih unitarnih upodobitev. Upodobitve teh grup so torej bistveno drugačne od upodobitev kompaktnih grup, kjer so \emph{vse} končnorazsežne nerazcepne upodobitve unitarne.
 
 \begin{domacanaloga}
-Grupa $\SU_2(\CC)$ je kompaktna podgrupa $\SL_2(\CC)$. Dokaži, da so zožitve upodobitev $\rho_k$ na $\SU_2(\CC)$ nerazcepne in unitarne. Izračunaj karakter vsake od teh upodobitev in dokaži, da te funkcije tvorijo gost podprostor $L^2(\SU_2(\CC))$. To so torej vse zvezne unitarne upodobitve grupe $\SU_2(\CC)$.
+Grupa $\SU_2(\CC)$ je kompaktna podgrupa $\SL_2(\CC)$. Dokaži, da so zožitve upodobitev $\rho_k$ na $\SU_2(\CC)$ nerazcepne in unitarne. Izračunaj karakter vsake od teh upodobitev in dokaži, da te funkcije tvorijo gosto bazo prostora $L^2(\SU_2(\CC))$. To so torej vse zvezne unitarne upodobitve grupe $\SU_2(\CC)$.
 \end{domacanaloga}
 
 \subsubsection{Linearizacija upodobitve}
@@ -4465,33 +4465,33 @@ Preslikava $D_I \rho$ ni čisto poljubna linearna preslikava med vektorskimi pro
 
 Grupa $\GL_n(\CC)$ deluje s konjugiranjem na svojem tangentnem prostoru,
 \[
-    \Ad \colon \GL_n(\CC) \to \End(\glfrak_n(\CC)), \quad
+    \textstyle \Ad \colon \GL_n(\CC) \to \End(\glfrak_n(\CC)), \quad
     A \mapsto \left( X \mapsto A X A^{-1} \right).
 \]
 To delovanje imamo tudi z grupo $\SL_2(\CC)$ in njenim tangentim prostorom, saj za vsak $X \in \slfrak_2(\CC)$ velja $\tr(AXA^{-1}) = \tr(X) = 0$.
 
 Ni se težko prepičati, da je za vsak $A \in \SL_2(\CC)$ preslikava $D_I \rho$ \emph{spletična} glede na to delovanje. Za vsak $Y \in \slfrak_2(\CC)$ velja namreč
 \[
-    D_I \rho \cdot \Ad(A) \cdot Y
+    \textstyle D_I \rho \cdot \Ad(A) \cdot Y
     = D_I \left( \rho(e^{t A Y A^{-1}}) \right)
     % = D_I \left( \rho(A) \rho(e^{t Y}) \rho(A^{-1}) \right)
     = \Ad(\rho(A)) \cdot D_I \rho \cdot Y.
 \]
 V posebnem za vsak tangentni vektor $X \in \slfrak_2(\CC)$ velja ta formula za $A = e^{tX}$. Izračunajmo odvod leve in desne strani v točki $t = 0$. Z uporabo verižnega pravila leva stran postane
 \[
-    D_I \rho \cdot D_0 \left( e^{tX} Y e^{-tX} \right)
+    \textstyle D_I \rho \cdot D_0 \left( e^{tX} Y e^{-tX} \right)
     = D_I \rho \cdot (XY - YX),
 \]
 desna stran pa postane
 \[
-    D_0 \left( \rho(e^{tX}) (D_I \rho \cdot Y) \rho(e^{-tX}) \right)
+    \textstyle D_0 \left( \rho(e^{tX}) (D_I \rho \cdot Y) \rho(e^{-tX}) \right)
     = (D_I \rho \cdot X) (D_I \rho \cdot Y) -  (D_I \rho \cdot Y) (D_I \rho \cdot X).
 \]
 Označimo $[X,Y] = XY - YX$. Velja torej
 \[
     D_I \rho \cdot [X,Y] = [D_I \rho \cdot X, D_I \rho \cdot Y],
 \]
-kar pomeni, da preslikva $D_I \rho$ \emph{spoštuje} operaciji $[\cdot, \cdot]$ na $\slfrak_2(\CC)$ in $\glfrak_n(\CC)$.
+kar pomeni, da preslikava $D_I \rho$ \emph{spoštuje} operaciji $[\cdot, \cdot]$ na $\slfrak_2(\CC)$ in $\glfrak_n(\CC)$.
 
 \begin{zgled}
 V vektorskem prostoru $\slfrak_2(\CC)$ veljajo računi
@@ -4583,20 +4583,14 @@ Vsaka upodobitev grupe $\SL_2(\CC)$ se odvede v Liejevo upodobitev Liejeve algeb
 Naj bo $\phi \colon \slfrak_2(\CC) \to \glfrak_n(\CC)$ Liejeva upodobitev. Tedaj obstaja analitična upodobitev $\rho \colon \SL_2(\CC) \to \GL_n(\CC)$, za katero velja $D_I \rho = \phi$.
 \end{trditev}
 
-Dokaz te trditve sloni na uporabi eksponentne preslikave in njenega inverza $\log$. Naj bo $U \subseteq \SL_2(\CC)$ dovolj majhna okolica $I$, da je na njej $\log$ difeomorfizem v neko okolico enote $\slfrak_2(\CC)$. Po potrebi $U$ še zmanjšamo, da je $U^{-1} = U$ in da je $\log |_{U \cdot U}$ še vedno difeomorfizem. 
-
-\begin{domacanaloga}
-Dokaži, da množica $U$ generira $\SL_2(\CC)$. Vsaka upodobitev grupe $\SL_2(\CC)$ je zato enolično določena s svojimi vrednostmi na $U$.
-\end{domacanaloga}
-
-Vsaki matriki $A \in U$ lahko lahko priredimo $\log A$, ki jo s $\phi$ preslikavo v $\glfrak_n(\CC)$ in nazadnje dvignemo nazaj do grupe z eksponentno preslikavo. Na ta način dobimo gladko funkcijo
+Dokaz te trditve sloni na uporabi eksponentne preslikave in njenega inverza $\log$. Naj bo $U \subseteq \SL_2(\CC)$ dovolj majhna okolica $I$, da je na njej $\log$ difeomorfizem v neko okolico enote $\slfrak_2(\CC)$. Po potrebi $U$ še zmanjšamo, da je $U^{-1} = U$ in da je $\log |_{U \cdot U}$ še vedno difeomorfizem. Vsaki matriki $A \in U$ lahko lahko priredimo $\log A$, ki jo s $\phi$ preslikamo v $\glfrak_n(\CC)$ in nazadnje dvignemo nazaj do grupe z eksponentno preslikavo. Na ta način dobimo gladko funkcijo
 \[
-    \rho \colon U \subseteq \SL_2(\CC) \to \GL_n(\CC), \quad
+    \textstyle \rho \colon U \subseteq \SL_2(\CC) \to \GL_n(\CC), \quad
     A \mapsto e^{\phi(\log A)}.
 \]
 Odvod te funkcije v $I$ je na tangentnem vektorju $X \in \slfrak_2(\CC)$ enak
 \[
-    D_I \rho \cdot X
+    \textstyle D_I \rho \cdot X
     = D_0 \rho(e^{tX})
     = D_0 e^{\phi(\log e^{tX})}
     = D_0 e^{\phi(tX)}
@@ -4619,11 +4613,35 @@ ki ji pravimo {\definicija Baker-Campbell-Hausdorffova formula}. Res torej v spl
     \phi(\log(AB)) 
     &= \phi \left( X + Y + \frac{1}{2}[X,Y] + \cdots \right) \\
     &= \phi(X) + \phi(Y) + \frac{1}{2}[\phi(X), \phi(Y)] + \cdots \\
-    &= \log(\phi(\log A) \phi(\log B)),
+    &= \log(e^{\phi(\log A)} e^{\phi(\log B)}),
 \end{align*}
 kjer smo v srednji enakosti upoštevali, da je $\phi$ Liejev homomorfizem. Od tod sklepamo, da res velja $\rho(A)\rho(B) = \rho(AB)$ za vsaka $A,B \in U$. Preslikava $\rho$ je torej vsaj lokalno homomorfizem. 
 
-Ker $U$ generira grupo $\SL_2(\CC)$, lahko vsak njen element $A \in \SL_2(\CC)$ zapišemo kot produkt $A = U_1 U_2 \cdots U_k$ elementov iz množice $U$. Na tej množici že imamo definiran $\rho$, zato lahko definiramo $\rho(A) = \rho(U_1) \rho(U_2) \cdots \rho(U_k)$. Zdaj bi bilo potrebno preveriti še, da je ta definicija res dobra. Ta premislek standardno temelji na dodatnih lastnostih teorije Liejevih grup, ki bi nam vzele preveč prostora, zato ga izpustimo.\footnote{Natančneje, obravnavati bi morali graf funkcije $\phi$ in ga pointegrirati kot Liejevo podalgebro $\slfrak_2(\CC) \oplus \glfrak_n(\CC)$.}
+Pogovorimo se še o tem, kako lahko razširimo $\rho$ na celo grupo $\SL_2(\CC)$. Prepričajmo se najprej, da množica $U$ generira grupo $\SL_2(\CC)$. Upodobitev bo torej enolično določena s svojimi vrednostmi na $U$. Izberimo poljuben $A \in \SL_2(\CC)$. Ker je $\SL_2(\CC)$ povezan topološki prostor, najdemo gladko pot $\gamma \colon [0,1] \to \SL_2(\CC)$ z $\gamma(0) = I$, $\gamma(1) = A$. Ta pot je na kompaktne intervalu enakomerno zvezna, zato obstajajo indeksi $0 = t_0 < t_1 < \cdots < t_m = 1$, tako da za vsaka $t_i \leq s < t \leq t_{i+1}$ velja $\gamma(t) \gamma(s)^{-1} \in U$. S tem lahko zapišemo
+\[
+    A = \gamma(t_n)
+    = \prod_{i = m}^1 \left( \gamma(t_i) \gamma(t_{i-1})^{-1} \right).
+\]
+Ker je $\gamma(t_i) \gamma(t_{i-1})^{-1} \in U$, kjer že imamo definiran $\rho$, lahko definicijo razširimo na $A$ s predpisom
+\[
+    \rho(A) = \prod_{i = m}^{1} \rho \left( \gamma(t_i) \gamma(t_{i-1})^{-1} \right).
+\]
+Seveda moramo preveriti, da je ta definicija neodvisna od izbire delilnih točk $t_0, t_1, \dots, t_m$ in od izbire poti $\gamma$. 
+
+Prepričajmo se najprej, da z isto potjo $\gamma$ drugačna izbira delilnih točk privede do enakega rezultata, če je le zadoščeno pogoju $\gamma(t) \gamma(s)^{-1} \in U$ za vsaka $t_i \leq s < t \leq t_{i+1}$. V ta namen bo dovolj premisliti, da se definicija $\rho(A)$ ne spremeni, če pofinimo izbiro delilnih točk, se pravi če dodamo še nekaj dodatnih točk.\footnote{Vsaki dve izbiri delilnih točk imata namreč skupno pofinitev. Ta sklep je podoben kot pri definiciji Riemannovega integrala.} V ta namen bo dovolj preveriti, da se definicija $\rho(A)$ ne spremeni, če dodamo eno samo dodatno delilno točko, na primer med $t_i$ in $t_{i-1}$ vrinemo nek $s$. V tem primeru se v definiciji $\rho(A)$ spremeni le faktor $\rho(\gamma(t_i) \gamma(t_{i-1})^{-1})$, in sicer ga zamenjamo s produktom
+\[
+    \rho(\gamma(t_i) \gamma(s)^{-1}) 
+    \rho(\gamma(s) \gamma(t_{i-1})^{-1}).
+\]
+Ker je $\rho$ homomorfizem na $U$, je zadnji člen enak $\rho(\gamma(t_i) \gamma(t_{i-1})^{-1})$, torej se vrednost $\rho(A)$ res ohrani pri dodajanju ene delilne točke. Definicija $\rho(A)$ je zato neodvisna od izbire delilnih točk.
+
+Za neodvisnost od izbire poti potrebujemo nekaj \emph{algebraične topologije}.
+
+\begin{domacanaloga}
+Naj bosta $\gamma_1$ in $\gamma_2$ dve poti v $\SL_2(\CC)$, ki povezujeta $I$ z $A$. Ker je $\SL_2(\CC)$ \emph{enostavno povezan} topološki prostor, obstaja \emph{homotopija} $H \colon [0,1] \times [0,1] \to \SL_2(\CC)$ z lastnostmi $H(0,t) = \gamma_1(t)$, $H(1,t) = \gamma_2(t)$, $H(s, 0) = 1$, $H(s,1) = A$. Po enakomerni zveznosti obstaja $N > 0$, da za vse $| s - s' | < 2/N$ in $| t - t'| < 2/N$ velja $H(s,t)H(s',t')^{-1} \in U$. Pokaži, da lahko s pomočjo homotopije $H$ pot $H(0,t) = \gamma_1(t)$ z zaporedjem majhnih perturbacij, ki ne vplivajo na vrednost $\rho(A)$, spremeniš v pot $H(1/N, t)$. Za tem slednjo pot z enakim argumentom spremeniš v pot $H(2/N, t)$ in tako naprej do poti $H(1,t) = \gamma_2(t)$. Vrednost $\rho(A)$ je torej res neodvisna od izbire poti $\gamma$.
+\end{domacanaloga}
+
+
 
 \subsection{$\SL_2(\RR)$}
 
