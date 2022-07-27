@@ -278,8 +278,8 @@
 \item {\literatura W. T. Gowers, {\em Generalizations of Fourier analysis, and how to apply them},  Bulletin of the American Mathematical Society \textbf{54}, 1-44 (2017).}
 \item {\literatura S. Eberhard, {\em Product mixing in the alternating group}, Discrete Analysis, 2-18 (2016).}
 \item {\literatura B. C. Hall, {\em Lie groups, Lie algebras, and representations}, Quantum Theory for Mathematicians, Springer, New York, NY, 2013.}
-\item {\literatura K. Conrad, {\em $\SL_2(\ZZ)$}, \url{https://kconrad.math.uconn.edu/blurbs/grouptheory/SL(2,Z).pdf}.}
-\item {\literatura A. Putman, {\em The representation theory of $\SL_n(\ZZ)$}, \url{https://www3.nd.edu/~andyp/notes/RepTheorySLnZ.pdf}.}
+\item {\literatura K. Conrad, {\em \href{https://kconrad.math.uconn.edu/blurbs/grouptheory/SL(2,Z).pdf}{$\SL_2(\ZZ)$}}.}
+\item {\literatura A. Putman, {\em \href{https://www3.nd.edu/~andyp/notes/RepTheorySLnZ.pdf}{The representation theory of $\SL_n(\ZZ)$}}.}
 \end{itemize}
 
 \chapter{Temelji teorije upodobitev}
@@ -4477,9 +4477,8 @@ To delovanje imamo tudi z grupo $\SL_2(\CC)$ in njenim tangentim prostorom, saj 
 
 Ni se težko prepičati, da je za vsak $A \in \SL_2(\CC)$ preslikava $D_I \rho$ \emph{spletična} glede na to delovanje. Za vsak $Y \in \slfrak_2(\CC)$ velja namreč
 \[
-    \textstyle D_I \rho \cdot \Ad(A) \cdot Y
+    D_I \rho \cdot \Ad(A) \cdot Y
     = D_I \left( \rho(e^{t A Y A^{-1}}) \right)
-    % = D_I \left( \rho(A) \rho(e^{t Y}) \rho(A^{-1}) \right)
     = \Ad(\rho(A)) \cdot D_I \rho \cdot Y.
 \]
 V posebnem za vsak tangentni vektor $X \in \slfrak_2(\CC)$ velja ta formula za $A = e^{tX}$. Izračunajmo odvod leve in desne strani v točki $t = 0$. Z uporabo verižnega pravila leva stran postane
@@ -4662,7 +4661,11 @@ Na grupo $\SL_2(\CC)$ bi lahko gledali kot na \emph{realno} grupo.\footnote{To j
 Vsaka gladka nerazcepna končnorazsežna kompleksna upodobitev grupe $\SL_2(\CC)$ je izomorfna $\rho_k \otimes \overline{\rho_{\ell}}$ za neka $k, \ell \geq 0$.
 \end{posledica}
 
-Večino od povedanega v tem razdelku je razširljivo na poljubne topološke grupe, ki imajo strukturo realne ali kompleksne mnogoterosti, pri čemer sta množenje in invertiranje zvezni, gladki ali analitični operaciji. Takim grupam pravimo {\definicija Liejeve grupe}. Eksaktno korespondenco med upodobitvami Liejeve grupe in njene prirejene Liejeve algebre izgubimo, če grupa ni enostavno povezana.
+Večino od povedanega v tem razdelku je razširljivo na poljubne topološke grupe, ki imajo strukturo realne ali kompleksne mnogoterosti, pri čemer sta množenje in invertiranje zvezni, gladki ali analitični operaciji. Takim grupam pravimo {\definicija Liejeve grupe}. Eksaktno korespondenco med upodobitvami Liejeve grupe in njene prirejene Liejeve algebre izgubimo, če grupa ni enostavno povezana. 
+
+\begin{zgled}
+Spomnimo se grupe $\U_1(\CC) \cong \RR/\ZZ$. Njena Liejeva algebra je $\RR$ s trivialnim Liejevim produktom in njene enorazsežne Liejeve upodobitve so linearne preslikave $\RR \to \CC$, torej so oblike $X \mapsto \zeta X$ za nek $\zeta \in \CC$. To upodobitev integriramo do lokalnega homomorfizma $x \mapsto e^{\zeta x}$, ki ga obravnavamo na majhni okolici enote v $\RR/\ZZ$. Ta preslikava se v splošnem \emph{ne} razširi do homomorfizma na celotni grupi $\RR/\ZZ$. Se pa razširi do homomorfizma na \emph{univerzalnem krovu} grupe $\RR/\ZZ$, ki je ravno $\RR$.
+\end{zgled}
 
 \subsection{$\SL_2(\RR)$}
 
@@ -4733,7 +4736,7 @@ Nazadnje si bomo pogledali še nekaj zgledov upodobitev diskretnih neskončnih g
 
 \subsubsection{Osnovne poteze}
 
-Grupa $\SL_2(\ZZ)$ je diskretna podgrupa Liejeve grupe $\SL_2(\CC)$. Ta grupa je opremljena z naravnim homomorfizmom 
+Grupa $\SL_2(\ZZ)$ je diskretna podgrupa Liejeve grupe $\SL_2(\CC)$. Ta grupa je opremljena z naravnim {\definicija kongruenčnim homomorfizmom}
 \[
     \pi_n \colon \SL_2(\ZZ) \to \SL_2(\ZZ/n\ZZ)
 \]
@@ -4798,13 +4801,30 @@ zato je v $\SL_2(\ZZ)$ neka beseda v $U_+, U_-$ dolžine $n \geq 2$ enaka $\pm I
 
 \subsubsection{Upodobitve}
 
-Namesto upodobitev grupe $\SL_2(\ZZ)$ opazujmo upodobitve nekoliko enostavnejše grupe $\PSL_2(\ZZ)$. Vsaka upodobitev te grupe v $\GL_n(\CC)$ je določena s sliko generatorjev $a,b$. Glede na enolično predstavitev elementov grupe $\PSL_2(\ZZ)$ pa je res tudi obratno: za vsako izbiro matrik $X,Y \in \GL_n(CC)$ z lastnostjo $X^2 = Y^3 = I$ lahko na enoličen način predpišemo homomorfizem\footnote{To je analog razširjanja lokalnega homomorfizma, ki smo ga videli pri grupi $\SL_2(\CC)$. Tam nismo imeli enoličnosti zapisa kot tukaj, zato smo se morali potruditi z dokazovanjem dobre definiranosti razširitve homomorfizma z $U$ na ves $\SL_2(\CC)$. Tukaj to dobimo zastonj.}
+Namesto upodobitev grupe $\SL_2(\ZZ)$ opazujmo upodobitve nekoliko enostavnejše grupe $\PSL_2(\ZZ)$. Vsak homomorfizem te grupe v katerokoli grupo $G$ je določen s sliko generatorjev $a,b$. Glede na enolično predstavitev elementov grupe $\PSL_2(\ZZ)$ pa je res tudi obratno: za vsako izbiro elementov $X,Y \in G$ z lastnostjo $X^2 = Y^3 = 1$ lahko na enoličen način predpišemo homomorfizem\footnote{To je analog razširjanja lokalnega homomorfizma, ki smo ga videli pri grupi $\SL_2(\CC)$. Tam nismo imeli enoličnosti zapisa kot tukaj, zato smo se morali potruditi z dokazovanjem dobre definiranosti razširitve homomorfizma z $U$ na ves $\SL_2(\CC)$. Tukaj to dobimo zastonj.}
 \[
     \rho 
-    \colon \PSL_2(\ZZ) \to \GL_n(\CC), \quad
+    \colon \PSL_2(\ZZ) \to G, \quad
     a \mapsto X, \ b \mapsto Y.
 \]
-Upodobitve nas zanimajo le do izomorfizma natančno, kar pomeni, da moramo za razumevanje izomorfnostnih razredov upodobitev razumeti kvocientno množico
+Na ta način dobimo mnogo homomorfizmov v različne grupe $G$.
+
+\begin{zgled}
+Z \GAP~se lahko prepričamo, da je alternirajoča grupa $A_9$ generirana s permutacijama
+\[
+    (1 \ 4)(2 \ 9)(3 \ 7)(5 \ 6), \quad
+    (1 \ 2 \ 3)(4 \ 5 \ 6)(7 \ 8 \ 9).
+\]
+Če torej $a$ preslikamo v prvo permutacijo, $b$ pa v drugo, dobimo surjektivni homomorfizem $\alpha_9 \colon \SL_2(\ZZ) \to A_9$. Splošneje lahko na podoben način konstruiramo surjektivni homomorfizem $\alpha_n$ v grupo $A_n$ za vsak $n \geq 9$. 
+\end{zgled}
+
+\begin{domacanaloga}
+Prepričaj se, da za \emph{nobeno} število $n \geq 2$ ne velja, da se homomorfizem $\alpha_9$ faktorizira prek kongruenčnega homomorfizma $\pi_n$. Natančneje, ne obstaja homomorfizem $h \colon \SL_2(\ZZ/n\ZZ) \to A_9$, da bi veljalo $h \circ \pi_n = \alpha_9$. V pomoč ti bo Kitajski izrek o ostankih. Kvocient $A_9$ grupe $\SL_2(\ZZ)$ je v tem smislu \emph{nekongruenčen}. 
+\end{domacanaloga}
+
+Grupa $\SL_2(\ZZ)$ ima torej končne kvociente $\PSL_2(\FF_p)$ in $A_n$, ki tvorijo standardne predstavnike končnih enostavnih grup. Vsaka od teh končnih grup nam da svoje nerazcepne upodobitve, s čimer po restrikciji dobimo mnogo različnih nerazcepnih upodobitev grupe $\SL_2(\ZZ)$. Teorija upodobitev grupe $\SL_2(\ZZ)$ bo torej zajemala bolj ali manj vso kompleksnost teorije upodobitev končnih enostavnih grup.
+
+Obravnave vseh upodobitev se lotimo sistematično po razsežnostih. Vsaka $n$-razsežna kompleksna upodobitev je določena z izbiro matrik $X,Y \in \GL_n(\CC)$ z lastnostjo $X^2 = Y^3 = I$.Upodobitve nas zanimajo le do izomorfizma natančno, kar pomeni, da moramo za razumevanje izomorfnostnih razredov upodobitev razumeti kvocientno množico
 \[
     R_n = \frac{\{ (X, Y) \in \GL_n(\CC) \times \GL_n(\CC) \mid X^2 = Y^3 = I \}}
     {\GL_n(\CC)},
@@ -4817,7 +4837,7 @@ Opišimo najprej enorazsežne upodobitve $R_1$. Za števili $X,Y \in \CC^*$ mora
 \]
 in imamo $6$ enorazsežnih upodobitev grupe $\PSL_2(\ZZ)$.
 
-Oglejmo si sedaj še dvorazsežne upodobitve. Kot bomo videli, je teh \emph{neštevno} mnogo. Sistematično obravnavajmo vse možnosti za matriki $X,Y$. 
+Oglejmo si sedaj še dvorazsežne upodobitve $R_2$. Kot bomo videli, je teh \emph{neštevno mnogo}. Sistematično obravnavajmo vse možnosti za matriki $X,Y$. 
 
 \begin{enumerate}
     \item Če je $X$ ali $Y$ skalarna matrika, potem lahko s konjugiranjem dosežemo, da sta obe matriki hkrati skalarni. V tem primeru dobimo možnosti
@@ -4835,10 +4855,10 @@ Oglejmo si sedaj še dvorazsežne upodobitve. Kot bomo videli, je teh \emph{neš
             a & b \\ c & d
         \end{pmatrix}
     \]
-    za neke $a,b,c,d \in \CC$. Centralizator matrike $X$ v $\GL_2(\CC)$ je enak torusu diagonalnih matrik. S temi matrikami lahko torej še dodatno konjugiramo in poenostavimo matriko $Y$. Ločimo več možnosti.
+    za neke $a,b,c,d \in \CC$. Centralizator matrike $X$ v $\GL_2(\CC)$ je enak torusu diagonalnih matrik. S temi matrikami lahko torej še dodatno konjugiramo in poenostavimo matriko $Y$. Ločimo več možnosti.\footnote{Obravnava je analogna razumevanju konjugiranostnih razredov v končni grupi $\GL_2(\FF_p)$, le da je tu nekoliko preprostejša, ker ni nerazcepnega torusa.}
     \begin{enumerate}
         \item Če je $c = 0$ in $b = 0$, potem je $Y$ diagonalna matrika. 
-        Njeni lastni vrednosti sta različni števili iz množice $\{ 1, \zeta, \zeta^2 \}$, zato je $Y$ oblike
+        Njeni lastni vrednosti sta različna tretja korena enote, zato je $Y$ oblike
         \[
             Y = \begin{pmatrix}
                 a & 0 \\ 0 & d
@@ -4846,7 +4866,7 @@ Oglejmo si sedaj še dvorazsežne upodobitve. Kot bomo videli, je teh \emph{neš
         \]
         za $a,d\in \{ 1, \zeta, \zeta^2 \}$, $a \neq d$. Vse te upodobitve so seveda razcepne. Število vseh je $6$.
         
-        \item Če je $c = 0$ in $b \neq 0$, potem je $Y$ zgornjetrikotna matrika. Z dodatnim konjugiranjem z diagonalno matriko dosežemo, da je $b = 1$. Njeni lastni vrednosti sta različni števili iz množice $\{ 1, \zeta, \zeta^2 \}$, zato je $Y$ oblike
+        \item Če je $c = 0$ in $b \neq 0$, potem je $Y$ zgornjetrikotna matrika. Njeni lastni vrednosti sta različna tretja korena enote in z dodatnim konjugiranjem z diagonalno matriko dosežemo, da je $b = 1$, zato je $Y$ oblike
         \[
             Y = \begin{pmatrix}
                 a & 1 \\ 0 & d
@@ -4856,9 +4876,21 @@ Oglejmo si sedaj še dvorazsežne upodobitve. Kot bomo videli, je teh \emph{neš
 
         Analogno dobimo $6$ razcepnih upodobitev, ko je $c \neq 0$ in $b = 0$.
 
-        \item Če je $c \neq 0$ in $b \neq 0$. \todo{}
+        \item Če je $c \neq 0$ in $b \neq 0$, potem z dodatnim konjugiranjem z diagonalno matriko dosežemo, da je $Y$ oblike
+        \[
+            Y = \begin{pmatrix}
+                a & b \\ 1 & d
+            \end{pmatrix}            
+        \]
+        za $b \in \CC^*$. Pri tem je determinanta te matrike enaka $\delta = ad-b$, sled pa je enaka $\tau = a + d$. Ker sta lastni vrednosti $Y$ različna tretja korena enota, so edine možnosti
+        \[
+            (\tau, \delta) \in \{ (\zeta + \zeta^2, 1), (1 + \zeta, \zeta), (1 + \zeta^2, \zeta^2) \}.
+        \]
+        Za vsako od teh možnosti števili $a,d$ določimo kot rešitvi enačbe $\lambda^2 - \tau \lambda + \delta + b = 0$. Če je $b = (\tau^2 - 4 \delta)/4$, dobimo eno samo matriko $Y$, sicer pa imamo dve različni možnosti. Vse te upodobitve so nerazcepne, saj $Y$ v nobenem primeru ne ohranja nobenega od standardnih baznih podprostorov. Vseh teh upodobitev je neštevno mnogo.
     \end{enumerate}
 \end{enumerate}
+
+
 
 \todo[inline]{
 - $SL_2(Z)$? (-> \url{https://math.stackexchange.com/questions/786303/the-presentation-of-sl2-mathbbz}, glej zadnji odgovor, kjer poda prezentacijo, napiši na primer enačbe za raznoterost dvorazsežnih realnih upodobitev; ima ogromno končnih kvocientov -- nima CSP (stran3 https://arxiv.org/pdf/2203.15701.pdf, lemma a.1 https://arxiv.org/pdf/1201.6644.pdf)) 

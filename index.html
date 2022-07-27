@@ -60,7 +60,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 26. 07. 2022
+            Zadnja posodobitev: 27. 07. 2022
           </div>
 
           <div id="spinner" class="text-center">
@@ -175,16 +175,13 @@
             and representations</em></span>, Quantum Theory for
             Mathematicians, Springer, New York, NY,
             2013.</span></p></li>
-            <li><p><span>K. Conrad, <span><em><span
-            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span></em></span>,
-            <a
-            href="https://kconrad.math.uconn.edu/blurbs/grouptheory/SL(2,Z).pdf"
-            class="uri">https://kconrad.math.uconn.edu/blurbs/grouptheory/SL(2,Z).pdf</a>.</span></p></li>
-            <li><p><span>A. Putman, <span><em>The representation theory
-            of <span
-            class="math inline">\(\mathop{\mathrm{SL}}_n(\mathbf{Z})\)</span></em></span>,
-            <a href="https://www3.nd.edu/~andyp/notes/RepTheorySLnZ.pdf"
-            class="uri">https://www3.nd.edu/~andyp/notes/RepTheorySLnZ.pdf</a>.</span></p></li>
+            <li><p><span>K. Conrad, <span><em><a
+            href="https://kconrad.math.uconn.edu/blurbs/grouptheory/SL(2,Z).pdf"><span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span></a></em></span>.</span></p></li>
+            <li><p><span>A. Putman, <span><em><a
+            href="https://www3.nd.edu/~andyp/notes/RepTheorySLnZ.pdf">The
+            representation theory of <span
+            class="math inline">\(\mathop{\mathrm{SL}}_n(\mathbf{Z})\)</span></a></em></span>.</span></p></li>
             </ul>
             <h1 id="temelji-teorije-upodobitev">Temelji teorije
             upodobitev</h1>
@@ -10574,11 +10571,9 @@
             class="math inline">\(D_I \rho\)</span> <em>spletična</em>
             glede na to delovanje. Za vsak <span class="math inline">\(Y
             \in \mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span>
-            velja namreč <span class="math display">\[\textstyle D_I
-            \rho \cdot \mathop{\mathrm{Ad}}(A) \cdot Y
+            velja namreč <span class="math display">\[D_I \rho \cdot
+            \mathop{\mathrm{Ad}}(A) \cdot Y
                 = D_I \left( \rho(e^{t A Y A^{-1}}) \right)
-                % = D_I \left( \rho(A) \rho(e^{t Y}) \rho(A^{-1})
-            \right)
                 = \mathop{\mathrm{Ad}}(\rho(A)) \cdot D_I \rho \cdot
             Y.\]</span> V posebnem za vsak tangentni vektor <span
             class="math inline">\(X \in
@@ -11033,6 +11028,28 @@
             grupe</em></strong></span>. Eksaktno korespondenco med
             upodobitvami Liejeve grupe in njene prirejene Liejeve
             algebre izgubimo, če grupa ni enostavno povezana.</p>
+            <div class="zgled">
+            <p><strong>Zgled 6.8</strong>. Spomnimo se grupe <span
+            class="math inline">\(\mathop{\mathrm{U}}_1(\mathbf{C})
+            \cong \mathbf{R}/\mathbf{Z}\)</span>. Njena Liejeva algebra
+            je <span class="math inline">\(\mathbf{R}\)</span> s
+            trivialnim Liejevim produktom in njene enorazsežne Liejeve
+            upodobitve so linearne preslikave <span
+            class="math inline">\(\mathbf{R}\to \mathbf{C}\)</span>,
+            torej so oblike <span class="math inline">\(X \mapsto \zeta
+            X\)</span> za nek <span class="math inline">\(\zeta \in
+            \mathbf{C}\)</span>. To upodobitev integriramo do lokalnega
+            homomorfizma <span class="math inline">\(x \mapsto e^{\zeta
+            x}\)</span>, ki ga obravnavamo na majhni okolici enote v
+            <span class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>.
+            Ta preslikava se v splošnem <em>ne</em> razširi do
+            homomorfizma na celotni grupi <span
+            class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>. Se pa
+            razširi do homomorfizma na <em>univerzalnem krovu</em> grupe
+            <span class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>,
+            ki je ravno <span
+            class="math inline">\(\mathbf{R}\)</span>.</p>
+            </div>
             <h3 id="mathopmathrmsl_2mathbfr"><span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span></h3>
             <p>Grupa <span
@@ -11194,7 +11211,9 @@
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span>
             je diskretna podgrupa Liejeve grupe <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
-            Ta grupa je opremljena z naravnim homomorfizmom <span
+            Ta grupa je opremljena z naravnim
+            <span><strong><em>kongruenčnim
+            homomorfizmom</em></strong></span> <span
             class="math display">\[\pi_n \colon
             \mathop{\mathrm{SL}}_2(\mathbf{Z}) \to
             \mathop{\mathrm{SL}}_2(\mathbf{Z}/n\mathbf{Z})\]</span> za
@@ -11316,29 +11335,82 @@
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span>
             opazujmo upodobitve nekoliko enostavnejše grupe <span
             class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>.
-            Vsaka upodobitev te grupe v <span
-            class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>
-            je določena s sliko generatorjev <span
-            class="math inline">\(a,b\)</span>. Glede na enolično
-            predstavitev elementov grupe <span
+            Vsak homomorfizem te grupe v katerokoli grupo <span
+            class="math inline">\(G\)</span> je določen s sliko
+            generatorjev <span class="math inline">\(a,b\)</span>. Glede
+            na enolično predstavitev elementov grupe <span
             class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>
-            pa je res tudi obratno: za vsako izbiro matrik <span
-            class="math inline">\(X,Y \in
-            \mathop{\mathrm{GL}}_n(CC)\)</span> z lastnostjo <span
-            class="math inline">\(X^2 = Y^3 = I\)</span> lahko na
+            pa je res tudi obratno: za vsako izbiro elementov <span
+            class="math inline">\(X,Y \in G\)</span> z lastnostjo <span
+            class="math inline">\(X^2 = Y^3 = 1\)</span> lahko na
             enoličen način predpišemo homomorfizem<a href="#fn97"
             class="footnote-ref" id="fnref97"
             role="doc-noteref"><sup>97</sup></a> <span
             class="math display">\[\rho
-                \colon \mathop{\mathrm{PSL}}_2(\mathbf{Z}) \to
-            \mathop{\mathrm{GL}}_n(\mathbf{C}), \quad
-                a \mapsto X, \ b \mapsto Y.\]</span> Upodobitve nas
-            zanimajo le do izomorfizma natančno, kar pomeni, da moramo
-            za razumevanje izomorfnostnih razredov upodobitev razumeti
-            kvocientno množico <span class="math display">\[R_n =
-            \frac{\{ (X, Y) \in \mathop{\mathrm{GL}}_n(\mathbf{C})
-            \times \mathop{\mathrm{GL}}_n(\mathbf{C}) \mid X^2 = Y^3 = I
-            \}}
+                \colon \mathop{\mathrm{PSL}}_2(\mathbf{Z}) \to G, \quad
+                a \mapsto X, \ b \mapsto Y.\]</span> Na ta način dobimo
+            mnogo homomorfizmov v različne grupe <span
+            class="math inline">\(G\)</span>.</p>
+            <div class="zgled">
+            <p><strong>Zgled 6.9</strong>. Z <code>GAP</code> se lahko
+            prepričamo, da je alternirajoča grupa <span
+            class="math inline">\(A_9\)</span> generirana s
+            permutacijama <span class="math display">\[(1 \ 4)(2 \ 9)(3
+            \ 7)(5 \ 6), \quad
+                (1 \ 2 \ 3)(4 \ 5 \ 6)(7 \ 8 \ 9).\]</span> Če torej
+            <span class="math inline">\(a\)</span> preslikamo v prvo
+            permutacijo, <span class="math inline">\(b\)</span> pa v
+            drugo, dobimo surjektivni homomorfizem <span
+            class="math inline">\(\alpha_9 \colon
+            \mathop{\mathrm{SL}}_2(\mathbf{Z}) \to A_9\)</span>.
+            Splošneje lahko na podoben način konstruiramo surjektivni
+            homomorfizem <span class="math inline">\(\alpha_n\)</span> v
+            grupo <span class="math inline">\(A_n\)</span> za vsak <span
+            class="math inline">\(n \geq 9\)</span>.</p>
+            </div>
+            <div class="domacanaloga">
+            <p><strong>Domača naloga 6.4</strong>. Prepričaj se, da za
+            <em>nobeno</em> število <span class="math inline">\(n \geq
+            2\)</span> ne velja, da se homomorfizem <span
+            class="math inline">\(\alpha_9\)</span> faktorizira prek
+            kongruenčnega homomorfizma <span
+            class="math inline">\(\pi_n\)</span>. Natančneje, ne obstaja
+            homomorfizem <span class="math inline">\(h \colon
+            \mathop{\mathrm{SL}}_2(\mathbf{Z}/n\mathbf{Z}) \to
+            A_9\)</span>, da bi veljalo <span class="math inline">\(h
+            \circ \pi_n = \alpha_9\)</span>. V pomoč ti bo Kitajski
+            izrek o ostankih. Kvocient <span
+            class="math inline">\(A_9\)</span> grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span>
+            je v tem smislu <em>nekongruenčen</em>.</p>
+            </div>
+            <p>Grupa <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span>
+            ima torej končne kvociente <span
+            class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{F}_p)\)</span>
+            in <span class="math inline">\(A_n\)</span>, ki tvorijo
+            standardne predstavnike končnih enostavnih grup. Vsaka od
+            teh končnih grup nam da svoje nerazcepne upodobitve, s čimer
+            po restrikciji dobimo mnogo različnih nerazcepnih upodobitev
+            grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span>.
+            Teorija upodobitev grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span>
+            bo torej zajemala bolj ali manj vso kompleksnost teorije
+            upodobitev končnih enostavnih grup.</p>
+            <p>Obravnave vseh upodobitev se lotimo sistematično po
+            razsežnostih. Vsaka <span
+            class="math inline">\(n\)</span>-razsežna kompleksna
+            upodobitev je določena z izbiro matrik <span
+            class="math inline">\(X,Y \in
+            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span> z lastnostjo
+            <span class="math inline">\(X^2 = Y^3 =
+            I\)</span>.Upodobitve nas zanimajo le do izomorfizma
+            natančno, kar pomeni, da moramo za razumevanje
+            izomorfnostnih razredov upodobitev razumeti kvocientno
+            množico <span class="math display">\[R_n = \frac{\{ (X, Y)
+            \in \mathop{\mathrm{GL}}_n(\mathbf{C}) \times
+            \mathop{\mathrm{GL}}_n(\mathbf{C}) \mid X^2 = Y^3 = I \}}
                 {\mathop{\mathrm{GL}}_n(\mathbf{C})},\]</span> pri čemer
             grupa <span
             class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>
@@ -11368,9 +11440,10 @@
             class="math inline">\(6\)</span> enorazsežnih upodobitev
             grupe <span
             class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>.</p>
-            <p>Oglejmo si sedaj še dvorazsežne upodobitve. Kot bomo
-            videli, je teh <em>neštevno</em> mnogo. Sistematično
-            obravnavajmo vse možnosti za matriki <span
+            <p>Oglejmo si sedaj še dvorazsežne upodobitve <span
+            class="math inline">\(R_2\)</span>. Kot bomo videli, je teh
+            <em>neštevno mnogo</em>. Sistematično obravnavajmo vse
+            možnosti za matriki <span
             class="math inline">\(X,Y\)</span>.</p>
             <ol>
             <li><p>Če je <span class="math inline">\(X\)</span> ali
@@ -11399,14 +11472,15 @@
             class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{C})\)</span>
             je enak torusu diagonalnih matrik. S temi matrikami lahko
             torej še dodatno konjugiramo in poenostavimo matriko <span
-            class="math inline">\(Y\)</span>. Ločimo več možnosti.</p>
+            class="math inline">\(Y\)</span>. Ločimo več možnosti.<a
+            href="#fn99" class="footnote-ref" id="fnref99"
+            role="doc-noteref"><sup>99</sup></a></p>
             <ol>
             <li><p>Če je <span class="math inline">\(c = 0\)</span> in
             <span class="math inline">\(b = 0\)</span>, potem je <span
             class="math inline">\(Y\)</span> diagonalna matrika. Njeni
-            lastni vrednosti sta različni števili iz množice <span
-            class="math inline">\(\{ 1, \zeta, \zeta^2 \}\)</span>, zato
-            je <span class="math inline">\(Y\)</span> oblike <span
+            lastni vrednosti sta različna tretja korena enote, zato je
+            <span class="math inline">\(Y\)</span> oblike <span
             class="math display">\[Y = \begin{pmatrix}
                             a &amp; 0 \\ 0 &amp; d
                         \end{pmatrix}\]</span> za <span
@@ -11417,11 +11491,10 @@
             <li><p>Če je <span class="math inline">\(c = 0\)</span> in
             <span class="math inline">\(b \neq 0\)</span>, potem je
             <span class="math inline">\(Y\)</span> zgornjetrikotna
-            matrika. Z dodatnim konjugiranjem z diagonalno matriko
-            dosežemo, da je <span class="math inline">\(b = 1\)</span>.
-            Njeni lastni vrednosti sta različni števili iz množice <span
-            class="math inline">\(\{ 1, \zeta, \zeta^2 \}\)</span>, zato
-            je <span class="math inline">\(Y\)</span> oblike <span
+            matrika. Njeni lastni vrednosti sta različna tretja korena
+            enote in z dodatnim konjugiranjem z diagonalno matriko
+            dosežemo, da je <span class="math inline">\(b = 1\)</span>,
+            zato je <span class="math inline">\(Y\)</span> oblike <span
             class="math display">\[Y = \begin{pmatrix}
                             a &amp; 1 \\ 0 &amp; d
                         \end{pmatrix}\]</span> za <span
@@ -11434,7 +11507,31 @@
             \neq 0\)</span> in <span class="math inline">\(b =
             0\)</span>.</p></li>
             <li><p>Če je <span class="math inline">\(c \neq 0\)</span>
-            in <span class="math inline">\(b \neq 0\)</span>.</p></li>
+            in <span class="math inline">\(b \neq 0\)</span>, potem z
+            dodatnim konjugiranjem z diagonalno matriko dosežemo, da je
+            <span class="math inline">\(Y\)</span> oblike <span
+            class="math display">\[Y = \begin{pmatrix}
+                            a &amp; b \\ 1 &amp; d
+                        \end{pmatrix}\]</span> za <span
+            class="math inline">\(b \in \mathbf{C}^*\)</span>. Pri tem
+            je determinanta te matrike enaka <span
+            class="math inline">\(\delta = ad-b\)</span>, sled pa je
+            enaka <span class="math inline">\(\tau = a + d\)</span>. Ker
+            sta lastni vrednosti <span class="math inline">\(Y\)</span>
+            različna tretja korena enota, so edine možnosti <span
+            class="math display">\[(\tau, \delta) \in \{ (\zeta +
+            \zeta^2, 1), (1 + \zeta, \zeta), (1 + \zeta^2, \zeta^2)
+            \}.\]</span> Za vsako od teh možnosti števili <span
+            class="math inline">\(a,d\)</span> določimo kot rešitvi
+            enačbe <span class="math inline">\(\lambda^2 - \tau \lambda
+            + \delta + b = 0\)</span>. Če je <span
+            class="math inline">\(b = (\tau^2 - 4 \delta)/4\)</span>,
+            dobimo eno samo matriko <span
+            class="math inline">\(Y\)</span>, sicer pa imamo dve
+            različni možnosti. Vse te upodobitve so nerazcepne, saj
+            <span class="math inline">\(Y\)</span> v nobenem primeru ne
+            ohranja nobenega od standardnih baznih podprostorov. Vseh
+            teh upodobitev je neštevno mnogo.</p></li>
             </ol></li>
             </ol>
             <h3 id="mathopmathrmsl_3mathbfz"><span
@@ -12093,6 +12190,12 @@
             \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span> velja <span
             class="math inline">\((X,Y) = A \cdot (X&#39;,
             Y&#39;)\)</span>.<a href="#fnref98" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn99" role="doc-endnote"><p>Obravnava je analogna
+            razumevanju konjugiranostnih razredov v končni grupi <span
+            class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span>,
+            le da je tu nekoliko preprostejša, ker ni nerazcepnega
+            torusa.<a href="#fnref99" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>
