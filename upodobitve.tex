@@ -280,6 +280,7 @@
 \item {\literatura B. C. Hall, {\em Lie groups, Lie algebras, and representations}, Quantum Theory for Mathematicians, Springer, New York, NY, 2013.}
 \item {\literatura K. Conrad, {\em \href{https://kconrad.math.uconn.edu/blurbs/grouptheory/SL(2,Z).pdf}{$\SL_2(\ZZ)$}}.}
 \item {\literatura A. Putman, {\em \href{https://www3.nd.edu/~andyp/notes/RepTheorySLnZ.pdf}{The representation theory of $\SL_n(\ZZ)$}}.}
+\item {\literatura K. Choiy, {\em \href{https://www.math.purdue.edu/~tongliu/teaching/598/p-adicrep.pdf}{A note on the image of continuous homomorphisms of locally profinite groups}}.}
 \end{itemize}
 
 \chapter{Temelji teorije upodobitev}
@@ -4890,29 +4891,125 @@ Oglejmo si sedaj še dvorazsežne upodobitve $R_2$. Kot bomo videli, je teh \emp
     \end{enumerate}
 \end{enumerate}
 
+Sorodno obravnavo bi lahko izvedli v poljubni razsežnosti.
 
-
-\todo[inline]{
-- $SL_2(Z)$? (-> \url{https://math.stackexchange.com/questions/786303/the-presentation-of-sl2-mathbbz}, glej zadnji odgovor, kjer poda prezentacijo, napiši na primer enačbe za raznoterost dvorazsežnih realnih upodobitev; ima ogromno končnih kvocientov -- nima CSP (stran3 https://arxiv.org/pdf/2203.15701.pdf, lemma a.1 https://arxiv.org/pdf/1201.6644.pdf)) 
-- Theorem 2.6.7 Baumslag-Solitar grupa je končno prezentirana, ni pa linearna
-- random groups, model Gromova \url{https://arxiv.org/abs/1810.01529}
-}
+\begin{posledica}
+Grupa $\SL_2(\ZZ)$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev poljubne stopnje $>1$.
+\end{posledica}
 
 \subsection{$\SL_3(\ZZ)$}
-\todo[inline]{
-- končno prezentirana (https://mathoverflow.net/questions/122891/small-index-subgroups-of-sl3-z), napiši enačbe za 2dim upodobitve, jih je BISTVENO manj kot za SL2
-- $SL_n(Z)$? (-> The representation theory of SLn(Z), Andrew Putman, povezano s $p$-adičnimi števili -- Lubotzky)
-}
 
-\subsubsection{$\SL_2(\ZZ_p)$}
-\todo[inline]{
-    - konstrukcija, je kompaktna grupa, $p$-adično analitična
-    - veliko končnih kvocientov, obstajajo tudi nekongruenčni kvocienti $\SL_2(\ZZ)$
-    - jedro zvezne upodobitve je odprto: https://www.math.purdue.edu/~tongliu/teaching/598/p-adicrep.pdf}
+Oglejmo si še grupo $\SL_3(\ZZ)$ kot zgled \emph{aritmetične mreže višjega ranga}. 
 
+\subsubsection{Prezentacija}
 
+Upodobitve $\SL_3(\ZZ)$ bi lahko skušali razumeti na podoben način kot $\SL_2(\ZZ)$. Standardna generatorska množica sestoji iz matrik oblike $T_{ij} = I + E_{ij}$ za $1 \leq i, j \leq 3$, $i \neq j$, kjer je $E_{ij}$ matrika z vnosom $1$ na mestu $(i,j)$ in $0$ sicer. Kot v prejšnjem razdelku pa se zadeve poenostavijo z nestandardno izbiro generatorjev
+\[
+    x =
+    \begin{pmatrix}
+        1 &  0 &  1 \\
+        0 & -1 & -1 \\
+        0 &  1 &  0
+    \end{pmatrix}, \quad
+    y =
+    \begin{pmatrix}
+        0 &  1 &  0 \\
+        0 &  0 &  1 \\
+        1 &  0 &  0
+    \end{pmatrix}, \quad
+    z =
+    \begin{pmatrix}
+        0 &  1 &  0 \\
+        1 &  0 &  0 \\
+       -1 & -1 & -1
+    \end{pmatrix}.  
+\]
+Na ta način lahko dobimo precej preprosto {\definicija prezentacijo} te grupe, ki je podobna zelo uporabnemu opisu grupe $\PSL_2(\ZZ)$ z generatorjema $a,b$ iz prejšnjega razdelka. Bistvena razlika je, da ta prezentacija vsebuje nekaj pogojev med generatorji $x,y,z$, ki niso tako zelo enostavne oblike kot v grupi $\PSL_2(\ZZ)$. Izkaže se \href{https://www.ams.org/proc/1992-115-01/S0002-9939-1992-1079696-5/}{(Conder-Robertson-Williams 1992)}, da vse te pogoje lahko zajamemo z naslednjimi enakostmi:\footnote{Rečemo, da je grupa $\SL_3(\ZZ)$ dana s prezentacijo z \emph{generatorji} $x,y,z$ in \emph{relacijami}, ki jih podajajo te enakosti.}
+\[
+    x^3 = y^3 = z^2 = (xz)^3 = (yz)^3 = (x^{-1}zxy)^2 = (y^{-1}zyx)^2 = (xy)^6 = I.
+\]
+Z drugimi besedami, če želimo podati upodobitev $\SL_3(\ZZ)$ v $\GL_n(\CC)$, potem moramo izbrati matrike $X,Y,Z \in \GL_n(\CC)$, ki zadoščajo vsem tem enakostim. Vsaka taka izbira se enolično razširi do upodobitve, ki preslika $x,y,z$ v $X,Y,Z$.
 
+Če naivno skušamo poiskati matrike v $\GL_2(\CC)$ ali $\GL_3(\CC)$, ki zadoščajo tem enakostim, odkrijemo, da zaradi teh dodatnih restriktivnih pogojev dobimo \emph{bistveno manj} rešitev kot v primeru grupe $\PSL_2(\ZZ)$. Teorija upodobitev grupe $\SL_3(\ZZ)$ je, kot bomo videli, precej bolj strukturirana.
 
+\subsubsection{Končni kvocienti}
+
+Razliko med grupo $\SL_2(\ZZ)$ in $\SL_3(\ZZ)$ lahko jasno vidimo v njunih končnih kvocientih. Kot v dvorazsežnem primeru imamo surjektivne {\definicija kongruenčne homomorfizme}
+\[
+    \pi_n \colon \SL_3(\ZZ) \to \SL_3(\ZZ/n\ZZ).
+\]
+Jedra teh homomorfizmov so {\definicija kongruenčne podgrupe}. Izkaže se \href{https://projecteuclid.org/journals/bulletin-of-the-american-mathematical-society-new-series/volume-70/issue-3/Sous-groupes-dindice-fini-dans-SLleft-nZ-right/bams/1183526018.full}{(Bass-Lazard-Serre 1964)}, da pa tukaj (in v vseh $\SL_n(\ZZ)$ za $n \geq 3$) \emph{ni} nobenih bistveno drugačnih homomorfizmov v končne grupe. Natančneje, vsak homomorfizem $\alpha \colon \SL_3(\ZZ) \to G$ v končno grupo $G$ se faktorizira prek nekega kongruenčnega homomorfizma $\pi_n$. Povedano še drugače, vsaka podgrupa $H \leq \SL_3(\ZZ)$ končnega indeksa vsebuje neko kongruenčno podgrupo. Tej lastnosti grupe $\SL_3(\ZZ)$ rečemo {\definicija lastnost kongruenčnih podgrup}.\footnote{Angleško \emph{congruence subgroup property.}}
+
+Vsak končni kvocient $G$ grupe $\SL_3(\ZZ)$ ima svoje nerazcepne upodobitve, ki jih z restrikcijo potegnemo do nerazcepnih upodobitev grupe $\SL_3(\ZZ)$. Po lastnosti kongruenčnih podgrupe je tak $G$ nujno kvocient $\SL_3(\ZZ/n\ZZ)$ za nek $n$, zato bo dovolj opazovati nerazcepne upodobitve kongruenčnih kvocientov. Če je $n$ praštevilo, te zelo dobro razumemo s tehnikami upodobitev končnih grup. V splošnem iz praštevilske faktorizacije $n = p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m}$ z uporabo Kitajskega izreka o ostankih dobimo
+\[
+    \SL_3(\ZZ/n\ZZ) \cong \SL_3(\ZZ/p_1^{k_1}\ZZ) \times \SL_3(\ZZ/p_2^{k_2}\ZZ) \times \cdots \times \SL_3(\ZZ/p_m^{k_m}\ZZ).
+\]
+Razumeti moramo torej upodobitve grup $\SL_3(\ZZ/p^k\ZZ)$ za praštevilo $p$ in vse potence $k \geq 1$. 
+
+Vse kolobarje $\ZZ/p^k\ZZ$ za $k \geq 1$ lahko opazujemo hkrati, in sicer tako, da jih zložimo v ravno vrsto
+\[
+    \cdots \to \ZZ/p^k\ZZ \to \cdots \to \ZZ/p^2\ZZ \to \ZZ/p\ZZ,
+\]
+pri čemer so homomorfizmi $r_k \colon \ZZ/p^k\ZZ \to \ZZ/p^{k-1}\ZZ$ redukcije po modulu $p^{k-1}$. Tvorimo {\definicija inverzno limito} te vrste,
+\[
+    \varprojlim_{k \in \NN} \ZZ/p^k\ZZ
+    = \left\{
+        (\dots, x_k, \dots, x_2, x_1) \in \prod_{k \in \NN} \ZZ/p^k\ZZ \mid
+        \forall k \in \NN \colon \ r_k(x_k) = x_{k-1}
+    \right\}.
+\]
+Ker je vsak $\ZZ/p^k\ZZ$ kolobar, je tudi ta limita kolobar. Pravimo mu kolobar {\definicija $p$-adičnih celih števil} in ga označimo z $\ZZ_p$. Vse končne kolobarje $\ZZ/p^k\ZZ$ opremimo z diskretno topologijo in njihov produkt s produktno topologijo, tako da je $\ZZ_p$ tudi topološki prostor. Po izreku Tihonova je produkt vseh $\ZZ/p^k\ZZ$ kompakten, $\ZZ_p$ pa tvori zaprto množico v tem produktu, zato je tudi $\ZZ_p$ kompakten topološki prostor.\footnote{Topologija na $\ZZ_p$ je nekoliko neobičajna. Dobimo namreč popolnoma nepovezan topološki prostor. Predstavljamo si ga lahko kot Cantorjevo množico.}
+
+Na enak način lahko opazujemo vse grupe $\SL_3(\ZZ/p^k\ZZ)$ hkrati. Zložimo jih v ravno vrsto
+\[
+    \cdots \to \SL_3(\ZZ/p^k\ZZ) \to \cdots \to \SL_3(\ZZ/p^2\ZZ) \to \SL_3(\ZZ/p\ZZ)
+\]
+s prehodnimi homomorfizmi $r_k \colon \SL_3(\ZZ/p^k\ZZ) \to \SL_3(\ZZ/p^{k-1}\ZZ)$ in tvorimo inverzno limito
+\[
+    \varprojlim_{k \in \NN} \SL_3(\ZZ/p^k\ZZ)
+    = \SL_3(\varprojlim_{k \in \NN} \SL_3(\ZZ/p^k\ZZ))
+    = \SL_3(\ZZ_p).
+\]
+Grupa $\SL_3(\ZZ_p)$ podeduje topologijo iz prostora $\ZZ_p^4$, zato je kompaktna topološka grupa. Ta grupa vsebuje $\SL_3(\ZZ)$ in po definiciji je opremljena z zveznimi projekcijami v kongruenčne kvociente 
+\[
+\widetilde{\pi_{p^k}} \colon \SL_3(\ZZ_p) \to \SL_3(\ZZ/p^k\ZZ)
+\]
+za vsak $k \in \NN$. Ker so končni kvocienti opremljeni z diskretno topologijo, so jedra teh homomorfizmov odprte podgrupe v $\SL_3(\ZZ_p)$. Ko $k$ raste, te podgrupe postajajo vedno manjše.
+
+\begin{trditev}
+Podgrupe $\ker \widetilde{\pi_{p^k}}$ za $k \in \NN$ tvorijo bazo okolic enote v $\SL_3(\ZZ_p)$.
+\end{trditev}
+\begin{dokaz}
+Naj bo $U$ odprta okolica enote v $\SL_3(\ZZ_p)$. Velja torej $U = \SL_3(\ZZ_p) \cap V$ za neko odprto množico $V$ v produktu vseh $\SL_3(\ZZ/p^k\ZZ)$. Po definiciji produktne topologije množica $V$ vsebuje odprto množico oblike
+\[
+    \prod_{k \leq N} 1 \times \prod_{k > N} \SL_3(\ZZ/p^k\ZZ).
+\]
+Torej $U$ vsebuje presek te množice z $\SL_3(\ZZ_p)$, kar je natanko $\ker \widetilde{\pi_{p^N}}$.
+\end{dokaz}
+
+Iz te lastnosti je razvidno, da se grupa $\SL_3(\ZZ_p)$ obnaša zelo drugače kot Liejeva grupa $\SL_3(\CC)$.
+
+\begin{domacanaloga}
+S pomočjo eksponentne preslikave dokaži, da v grupi $\GL_n(\CC)$ obstaja odprta okolica enote $U$, ki ne vsebuje nobene netrivialne podgrupe.\footnote{Tej lastnosti pravimo {\definicija brez majhnih podgrup}, angleško \emph{no small subgroups}.}
+\end{domacanaloga}
+
+Kljub tej razliki pa je vendarle zelo plodno gledati na $\SL_3(\ZZ_p)$ kot na podgrupo splošne linearne grupe $\GL_3(\QQ_p)$ poljem kvocientov $\QQ_p$ kolobarja $\ZZ_p$ in jo v tej luči obravnavati kot neke vrste Liejevo grupo nad sicer nenavadnim poljem $\QQ_p$. Grupa $\SL_3(\ZZ_p)$ je na ta način poseben primer {\definicija $p$-adične analitične grupe}. Razviti je mogoče analogno teorijo Liejevih grup nad $p$-adičnimi števili, ki omogoča, da njihove upodobitve razumemo s pomočjo njihovih prirejenih Liejevih algeber. Na ta način je mogoče izpeljati veliko zanimivih rezultatov o upodobitvah teh grup. Na primer \href{https://link.springer.com/article/10.1007/s00222-015-0614-8}{(Aizenbud-Avni 2015)}, obstaja konstanta $C$, da je število nerazcepnih kompleksnih $n$-razsežnih upodobitev grupe $\SL_3(\ZZ_p)$ kvečjemu $C n^{22}$.
+
+Vse upodobitve kongruenčnih kvocientov grupe $\SL_3(\ZZ)$ lahko torej zajamemo tako, da opazujemo le upodobitve $p$-adične kompaktne grupe $\SL_3(\ZZ_p)$. Prepričajmo se še, da na ta način ne bomo zajeli nič drugih upodobitev.
+
+\begin{trditev}
+Vsaka zvezna končnorazsežna kompleksna upodobitev grupe $\SL_3(\ZZ_p)$ se faktorizira prek $\widetilde{\pi_{p^k}}$ za nek $k \in \NN$.
+\end{trditev}
+\begin{dokaz}
+Naj bo $\rho \colon \SL_3(\ZZ_p) \to \GL_n(\CC)$ zvezna upodobitev. Naj bo $U$ odprta okolica enote v $\GL_n(\CC)$, ki ne vsebuje netrivialnih podgrup. Praslika $\rho^{-1}(U)$ je odprta okolica enote v $\SL_3(\ZZ_p)$, zato vsebuje neko kongruenčno jedro $\widetilde{\pi_{p^k}}$. Slika $\rho(\widetilde{\pi_{p^k}})$ je podgrupa v $U$, zato je trivialna. Jedro $\ker \rho$ torej vsebuje to kongruenčno jedro.
+\end{dokaz}
+
+Nazadnje lahko torej vse upodobitve grupe $\SL_3(\ZZ)$, ki se faktorizirajo prek upodobitev končnih grup, razumemo kot zožitve zveznih upodobitev produktov $p$-adičnih grup po vseh praštevilih $p$, se pravi zveznih upodobitev grupe
+\[
+    \prod_{p \in \PP} \SL_3(\ZZ_p).
+\]
+
+\subsubsection{}
 
 \todo[inline]{$p$-adične grupe. Omenimo lahko na primer rezultat Jaikin (representation growth) in Aizenbud-Avni (Representation Growth and Rational Singularities of the Moduli Space of Local Systems).}
 
