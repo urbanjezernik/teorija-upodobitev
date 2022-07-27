@@ -108,7 +108,7 @@
 \DeclareMathOperator\Cone{Cone}
 \DeclareMathOperator\diam{diam}
 \DeclareMathOperator\Ad{Ad}
-\DeclareMathOperator\imaginary{imaginary}
+\DeclareMathOperator\imaginary{Im}
 
 \def\definicija{\color{rdeca}\bf\em}
 \def\vprasanje{\color{oranzna}}
@@ -4701,15 +4701,15 @@ s predpisom
 \]
 To delovanje je tranzitivno. Ni se težko prepričati, da stabilizator točke $i \in \HH$ sestoji iz matrik
 \[
-    \SO_2(\RR) = \left\{ \begin{pmatrix} a & b \\ -b & a \end{pmatrix} \mid a^2 + b^2 = 1 \right\}.
+    {\textstyle \SO_2(\RR)} = \left\{ \begin{pmatrix} a & b \\ -b & a \end{pmatrix} \mid a^2 + b^2 = 1 \right\}.
 \]
 Delovanje $\SL_2(\RR)$ na $\HH$ je torej ekvivalentno delovanju $\SL_2(\RR)$ na množici svojih desnih odsekov po kompaktni podgrupi $\SO_2(\RR)$. To permutacijsko delovanje lahko pretvorimo v upodobitev $\rho_k$ za vsak $k \geq 2$ z delovanjem na prostorih holomorfnih integrabilnih funkcij
 \[
-    D_k = \left\{ f \colon \HH \to \CC \mid \text{$f$ homolorfna}, \ \int_{\HH} |f(z)|^2 y^k \frac{dx dy}{y^2} < \infty \right\},
+    D_k = \left\{ f \colon \HH \to \CC \mid \text{$f$ holomorfna}, \ \int_{\HH} |f(z)|^2 y^k \frac{dx dy}{y^2} < \infty \right\},
 \]
 in sicer definiramo
 \[
-    \rho_k \colon \SL_2(\RR) \to \GL(D_k), \quad
+    \rho_k \colon {\textstyle \SL_2(\RR)} \to \GL(D_k), \quad
     \rho_k \begin{pmatrix}
         a & b \\ c & d
     \end{pmatrix}
@@ -4739,7 +4739,7 @@ Nazadnje si bomo pogledali še nekaj zgledov upodobitev diskretnih neskončnih g
 
 Grupa $\SL_2(\ZZ)$ je diskretna podgrupa Liejeve grupe $\SL_2(\CC)$. Ta grupa je opremljena z naravnim {\definicija kongruenčnim homomorfizmom}
 \[
-    \pi_n \colon \SL_2(\ZZ) \to \SL_2(\ZZ/n\ZZ)
+    \textstyle \pi_n \colon \SL_2(\ZZ) \to \SL_2(\ZZ/n\ZZ)
 \]
 za vsako naravno število $n$, ki vnose matrike reducira po modulu $n$. 
 
@@ -4770,7 +4770,7 @@ generirata grupo $\SL_2(\ZZ)$. V tej neskončni grupi se sicer izkaže, da nam b
 \]
 ki prav tako generirata $\SL_2(\ZZ)$. Za ti dve matriki velja $A^2 = B^3 = -I$. Kot v končnem primeru lahko tvorimo {\definicija modularno grupo}
 \[
-    \PSL_2(\ZZ) = \frac{\SL_2(\ZZ)}{\{ I, -I \}}.
+    {\textstyle \PSL_2(\ZZ)} = \frac{\SL_2(\ZZ)}{\{ I, -I \}}.
 \]
 Naj bosta $a,b$ sliki matrik $A,B$ v $\PSL_2(\ZZ)$. Velja torej $a^2 = b^3 = 1$. Ker matriki $a,b$ generirata grupo $\PSL_2(\ZZ)$, lahko vsak njen element zapišemo kot besedo s črkama $a$ in $b$. Glavna prednost alternativne izbire generatorjev izhaja iz dejstva, da ima vsak element \emph{enoličen} tak zapis.\footnote{Rečemo, da je grupa $\PSL_2(\ZZ)$ {\definicija prosti produkt} podgrup $\langle a \rangle = \ZZ/2\ZZ$ in $\langle b \rangle = \ZZ/3\ZZ$.}
 
@@ -4804,7 +4804,7 @@ zato je v $\SL_2(\ZZ)$ neka beseda v $U_+, U_-$ dolžine $n \geq 2$ enaka $\pm I
 
 Namesto upodobitev grupe $\SL_2(\ZZ)$ opazujmo upodobitve nekoliko enostavnejše grupe $\PSL_2(\ZZ)$. Vsak homomorfizem te grupe v katerokoli grupo $G$ je določen s sliko generatorjev $a,b$. Glede na enolično predstavitev elementov grupe $\PSL_2(\ZZ)$ pa je res tudi obratno: za vsako izbiro elementov $X,Y \in G$ z lastnostjo $X^2 = Y^3 = 1$ lahko na enoličen način predpišemo homomorfizem\footnote{To je analog razširjanja lokalnega homomorfizma, ki smo ga videli pri grupi $\SL_2(\CC)$. Tam nismo imeli enoličnosti zapisa kot tukaj, zato smo se morali potruditi z dokazovanjem dobre definiranosti razširitve homomorfizma z $U$ na ves $\SL_2(\CC)$. Tukaj to dobimo zastonj.}
 \[
-    \rho 
+    \textstyle \rho 
     \colon \PSL_2(\ZZ) \to G, \quad
     a \mapsto X, \ b \mapsto Y.
 \]
@@ -4827,18 +4827,18 @@ Grupa $\SL_2(\ZZ)$ ima torej končne kvociente $\PSL_2(\FF_p)$ in $A_n$, ki tvor
 
 Obravnave vseh upodobitev se lotimo sistematično po razsežnostih. Vsaka $n$-razsežna kompleksna upodobitev je določena z izbiro matrik $X,Y \in \GL_n(\CC)$ z lastnostjo $X^2 = Y^3 = I$.Upodobitve nas zanimajo le do izomorfizma natančno, kar pomeni, da moramo za razumevanje izomorfnostnih razredov upodobitev razumeti kvocientno množico
 \[
-    R_n = \frac{\{ (X, Y) \in \GL_n(\CC) \times \GL_n(\CC) \mid X^2 = Y^3 = I \}}
+    \Rep_n = \frac{\{ (X, Y) \in \GL_n(\CC) \times \GL_n(\CC) \mid X^2 = Y^3 = I \}}
     {\GL_n(\CC)},
 \]
-pri čemer grupa $\GL_n(\CC)$ deluje s hkratnim konjugiranjem na parih matrik, se pravi $A \cdot (X,Y) = (A X A^{-1}, A Y A^{-1})$ za $A \in \GL_n(\CC)$.\footnote{Para matrik $(X,Y)$ in $(X', Y')$ sta torej ekvivalentna, če in samo če za neko matriko $A \in \GL_n(\CC)$ velja $(X,Y) = A \cdot (X', Y')$.} Elementi množice $R_n$ predstavljajo ravno vse predstavnike izomorfnostnih razredov $n$-razsežnih upodobitev grupe $\PSL_2(\ZZ)$.
+pri čemer grupa $\GL_n(\CC)$ deluje s hkratnim konjugiranjem na parih matrik, se pravi $A \cdot (X,Y) = (A X A^{-1}, A Y A^{-1})$ za $A \in \GL_n(\CC)$.\footnote{Para matrik $(X,Y)$ in $(X', Y')$ sta torej ekvivalentna, če in samo če za neko matriko $A \in \GL_n(\CC)$ velja $(X,Y) = A \cdot (X', Y')$.} Elementi množice $\Rep_n$ predstavljajo ravno vse predstavnike izomorfnostnih razredov $n$-razsežnih upodobitev grupe $\PSL_2(\ZZ)$.
 
-Opišimo najprej enorazsežne upodobitve $R_1$. Za števili $X,Y \in \CC^*$ mora veljati $X \in \{1, -1 \}$ in $Y \in \{ 1, \zeta, \zeta^2 \}$, kjer je $\zeta = e^{2 \pi i / 3}$. Delovanje grupe $\CC^*$ na parih je v tem primeru kar trivialno. Velja torej
+Opišimo najprej enorazsežne upodobitve $\Rep_1$. Za števili $X,Y \in \CC^*$ mora veljati $X \in \{1, -1 \}$ in $Y \in \{ 1, \zeta, \zeta^2 \}$, kjer je $\zeta = e^{2 \pi i / 3}$. Delovanje grupe $\CC^*$ na parih je v tem primeru kar trivialno. Velja torej
 \[
-  R_1 = \{ 1, -1 \} \times \{ 1, \zeta, \zeta^2 \}
+  \Rep_1 = \{ 1, -1 \} \times \{ 1, \zeta, \zeta^2 \}
 \]
 in imamo $6$ enorazsežnih upodobitev grupe $\PSL_2(\ZZ)$.
 
-Oglejmo si sedaj še dvorazsežne upodobitve $R_2$. Kot bomo videli, je teh \emph{neštevno mnogo}. Sistematično obravnavajmo vse možnosti za matriki $X,Y$. 
+Oglejmo si sedaj še dvorazsežne upodobitve $\Rep_2$. Kot bomo videli, je teh \emph{neštevno mnogo}. Sistematično obravnavajmo vse možnosti za matriki $X,Y$. 
 
 \begin{enumerate}
     \item Če je $X$ ali $Y$ skalarna matrika, potem lahko s konjugiranjem dosežemo, da sta obe matriki hkrati skalarni. V tem primeru dobimo možnosti
@@ -4936,13 +4936,13 @@ Z drugimi besedami, če želimo podati upodobitev $\SL_3(\ZZ)$ v $\GL_n(\CC)$, p
 
 Razliko med grupo $\SL_2(\ZZ)$ in $\SL_3(\ZZ)$ lahko jasno vidimo v njunih končnih kvocientih. Kot v dvorazsežnem primeru imamo surjektivne {\definicija kongruenčne homomorfizme}
 \[
-    \pi_n \colon \SL_3(\ZZ) \to \SL_3(\ZZ/n\ZZ).
+    \textstyle \pi_n \colon \SL_3(\ZZ) \to \SL_3(\ZZ/n\ZZ).
 \]
 Jedra teh homomorfizmov so {\definicija kongruenčne podgrupe}. Izkaže se \href{https://projecteuclid.org/journals/bulletin-of-the-american-mathematical-society-new-series/volume-70/issue-3/Sous-groupes-dindice-fini-dans-SLleft-nZ-right/bams/1183526018.full}{(Bass-Lazard-Serre 1964)}, da pa tukaj (in v vseh $\SL_n(\ZZ)$ za $n \geq 3$) \emph{ni} nobenih bistveno drugačnih homomorfizmov v končne grupe. Natančneje, vsak homomorfizem $\alpha \colon \SL_3(\ZZ) \to G$ v končno grupo $G$ se faktorizira prek nekega kongruenčnega homomorfizma $\pi_n$. Povedano še drugače, vsaka podgrupa $H \leq \SL_3(\ZZ)$ končnega indeksa vsebuje neko kongruenčno podgrupo. Tej lastnosti grupe $\SL_3(\ZZ)$ rečemo {\definicija lastnost kongruenčnih podgrup}.\footnote{Angleško \emph{congruence subgroup property.}}
 
 Vsak končni kvocient $G$ grupe $\SL_3(\ZZ)$ ima svoje nerazcepne upodobitve, ki jih z restrikcijo potegnemo do nerazcepnih upodobitev grupe $\SL_3(\ZZ)$. Po lastnosti kongruenčnih podgrupe je tak $G$ nujno kvocient $\SL_3(\ZZ/n\ZZ)$ za nek $n$, zato bo dovolj opazovati nerazcepne upodobitve kongruenčnih kvocientov. Če je $n$ praštevilo, te zelo dobro razumemo s tehnikami upodobitev končnih grup. V splošnem iz praštevilske faktorizacije $n = p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m}$ z uporabo Kitajskega izreka o ostankih dobimo
 \[
-    \SL_3(\ZZ/n\ZZ) \cong \SL_3(\ZZ/p_1^{k_1}\ZZ) \times \SL_3(\ZZ/p_2^{k_2}\ZZ) \times \cdots \times \SL_3(\ZZ/p_m^{k_m}\ZZ).
+    \textstyle \SL_3(\ZZ/n\ZZ) \cong \SL_3(\ZZ/p_1^{k_1}\ZZ) \times \SL_3(\ZZ/p_2^{k_2}\ZZ) \times \cdots \times \SL_3(\ZZ/p_m^{k_m}\ZZ).
 \]
 Razumeti moramo torej upodobitve grup $\SL_3(\ZZ/p^k\ZZ)$ za praštevilo $p$ in vse potence $k \geq 1$. 
 
@@ -4954,7 +4954,7 @@ Vse kolobarje $\ZZ/p^k\ZZ$ za $k \geq 1$ lahko opazujemo hkrati, in sicer tako, 
 \]
 pri čemer so homomorfizmi $r_k \colon \ZZ/p^k\ZZ \to \ZZ/p^{k-1}\ZZ$ redukcije po modulu $p^{k-1}$. Tvorimo {\definicija inverzno limito} te vrste,
 \[
-    \varprojlim_{k \in \NN} \ZZ/p^k\ZZ
+    \textstyle \varprojlim_{k \in \NN} \ZZ/p^k\ZZ
     = \left\{
         (\dots, x_k, \dots, x_2, x_1) \in \prod_{k \in \NN} \ZZ/p^k\ZZ \mid
         \forall k \in \NN \colon \ r_k(x_k) = x_{k-1}
@@ -4964,17 +4964,17 @@ Ker je vsak $\ZZ/p^k\ZZ$ kolobar, je tudi ta limita kolobar. Pravimo mu kolobar 
 
 Na enak način lahko opazujemo vse grupe $\SL_3(\ZZ/p^k\ZZ)$ hkrati. Zložimo jih v ravno vrsto
 \[
-    \cdots \to \SL_3(\ZZ/p^k\ZZ) \to \cdots \to \SL_3(\ZZ/p^2\ZZ) \to \SL_3(\ZZ/p\ZZ)
+    \textstyle \cdots \to \SL_3(\ZZ/p^k\ZZ) \to \cdots \to \SL_3(\ZZ/p^2\ZZ) \to \SL_3(\ZZ/p\ZZ)
 \]
 s prehodnimi homomorfizmi $r_k \colon \SL_3(\ZZ/p^k\ZZ) \to \SL_3(\ZZ/p^{k-1}\ZZ)$ in tvorimo inverzno limito
 \[
-    \varprojlim_{k \in \NN} \SL_3(\ZZ/p^k\ZZ)
-    = \SL_3(\varprojlim_{k \in \NN} \SL_3(\ZZ/p^k\ZZ))
+    \textstyle \varprojlim_{k \in \NN} \SL_3(\ZZ/p^k\ZZ)
+    = \SL_3(\varprojlim_{k \in \NN} \ZZ/p^k\ZZ)
     = \SL_3(\ZZ_p).
 \]
 Grupa $\SL_3(\ZZ_p)$ podeduje topologijo iz prostora $\ZZ_p^4$, zato je kompaktna topološka grupa. Ta grupa vsebuje $\SL_3(\ZZ)$ in po definiciji je opremljena z zveznimi projekcijami v kongruenčne kvociente 
 \[
-\widetilde{\pi_{p^k}} \colon \SL_3(\ZZ_p) \to \SL_3(\ZZ/p^k\ZZ)
+    \textstyle \widetilde{\pi_{p^k}} \colon \SL_3(\ZZ_p) \to \SL_3(\ZZ/p^k\ZZ)
 \]
 za vsak $k \in \NN$. Ker so končni kvocienti opremljeni z diskretno topologijo, so jedra teh homomorfizmov odprte podgrupe v $\SL_3(\ZZ_p)$. Ko $k$ raste, te podgrupe postajajo vedno manjše.
 
@@ -4984,7 +4984,7 @@ Podgrupe $\ker \widetilde{\pi_{p^k}}$ za $k \in \NN$ tvorijo bazo okolic enote v
 \begin{dokaz}
 Naj bo $U$ odprta okolica enote v $\SL_3(\ZZ_p)$. Velja torej $U = \SL_3(\ZZ_p) \cap V$ za neko odprto množico $V$ v produktu vseh $\SL_3(\ZZ/p^k\ZZ)$. Po definiciji produktne topologije množica $V$ vsebuje odprto množico oblike
 \[
-    \prod_{k \leq N} 1 \times \prod_{k > N} \SL_3(\ZZ/p^k\ZZ).
+    \prod_{k \leq N} 1 \times \prod_{k > N} {\textstyle \SL_3(\ZZ/p^k\ZZ)}.
 \]
 Torej $U$ vsebuje presek te množice z $\SL_3(\ZZ_p)$, kar je natanko $\ker \widetilde{\pi_{p^N}}$.
 \end{dokaz}
@@ -5008,7 +5008,7 @@ Naj bo $\rho \colon \SL_3(\ZZ_p) \to \GL_n(\CC)$ zvezna upodobitev. Naj bo $U$ o
 
 Nazadnje lahko torej vse upodobitve grupe $\SL_3(\ZZ)$, ki se faktorizirajo prek upodobitev končnih grup, razumemo kot zožitve zveznih upodobitev produktov $p$-adičnih grup po vseh praštevilih $p$, se pravi zveznih upodobitev grupe
 \[
-    \prod_{p \in \PP} \SL_3(\ZZ_p),
+    \prod_{p \in \PP} {\textstyle \SL_3(\ZZ_p)},
 \]
 ki jo označimo kot $\SL_3(\widehat{\ZZ})$.
 
@@ -5019,7 +5019,7 @@ Nerazcepne upodobitve grupe $\SL_3(\ZZ)$ lahko konstruiramo s pomočjo nerazcepn
 \begin{izrek}[Lubotzky 1980]
 Naj bo $\rho \colon \SL_3(\ZZ) \to \GL_n(\CC)$ upodobitev. Tedaj obstaja upodobitev
 \[
-    \tilde \rho \colon \SL_3(\CC) \times \SL_3(\widehat{\ZZ}) \to \GL_n(\CC),  
+    \textstyle \tilde \rho \colon \SL_3(\CC) \times \SL_3(\widehat{\ZZ}) \to \GL_n(\CC),  
 \]
 katere zožitev na diagonalno vloženo podgrupo $\SL_3(\ZZ)$ je ravno $\rho$, zožitev na $\SL_3(\CC)$ je polinomska upodobitev, zožitev na $\SL_3(\widehat{\ZZ})$ pa je zvezna upodobitev.
 \end{izrek}

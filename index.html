@@ -11102,8 +11102,8 @@
             deluje na <span><strong><em>hiperbolični
             ravnini</em></strong></span> <span
             class="math display">\[\mathbf{H}= \{  z \in \mathbf{C}\mid
-            \mathop{\mathrm{imaginary}}(z) &gt; 0 \}\]</span> s
-            predpisom <span class="math display">\[\begin{pmatrix}
+            \mathop{\mathrm{Im}}(z) &gt; 0 \}\]</span> s predpisom <span
+            class="math display">\[\begin{pmatrix}
                     a &amp; b \\ c &amp; d
                 \end{pmatrix}
                 \cdot z
@@ -11111,11 +11111,10 @@
                 \frac{az + b}{cz + d}.\]</span> To delovanje je
             tranzitivno. Ni se težko prepričati, da stabilizator točke
             <span class="math inline">\(i \in \mathbf{H}\)</span>
-            sestoji iz matrik <span
-            class="math display">\[\mathop{\mathrm{SO}}_2(\mathbf{R}) =
-            \left\{ \begin{pmatrix} a &amp; b \\ -b &amp; a
-            \end{pmatrix} \mid a^2 + b^2 = 1 \right\}.\]</span>
-            Delovanje <span
+            sestoji iz matrik <span class="math display">\[{\textstyle
+            \mathop{\mathrm{SO}}_2(\mathbf{R})} = \left\{
+            \begin{pmatrix} a &amp; b \\ -b &amp; a \end{pmatrix} \mid
+            a^2 + b^2 = 1 \right\}.\]</span> Delovanje <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
             na <span class="math inline">\(\mathbf{H}\)</span> je torej
             ekvivalentno delovanju <span
@@ -11127,11 +11126,11 @@
             class="math inline">\(k \geq 2\)</span> z delovanjem na
             prostorih holomorfnih integrabilnih funkcij <span
             class="math display">\[D_k = \left\{ f \colon \mathbf{H}\to
-            \mathbf{C}\mid \text{$f$ homolorfna}, \ \int_{\mathbf{H}}
+            \mathbf{C}\mid \text{$f$ holomorfna}, \ \int_{\mathbf{H}}
             |f(z)|^2 y^k \frac{dx dy}{y^2} &lt; \infty
             \right\},\]</span> in sicer definiramo <span
-            class="math display">\[\rho_k \colon
-            \mathop{\mathrm{SL}}_2(\mathbf{R}) \to
+            class="math display">\[\rho_k \colon {\textstyle
+            \mathop{\mathrm{SL}}_2(\mathbf{R})} \to
             \mathop{\mathrm{GL}}(D_k), \quad
                 \rho_k \begin{pmatrix}
                     a &amp; b \\ c &amp; d
@@ -11218,7 +11217,7 @@
             Ta grupa je opremljena z naravnim
             <span><strong><em>kongruenčnim
             homomorfizmom</em></strong></span> <span
-            class="math display">\[\pi_n \colon
+            class="math display">\[\textstyle \pi_n \colon
             \mathop{\mathrm{SL}}_2(\mathbf{Z}) \to
             \mathop{\mathrm{SL}}_2(\mathbf{Z}/n\mathbf{Z})\]</span> za
             vsako naravno število <span
@@ -11257,7 +11256,8 @@
             Za ti dve matriki velja <span class="math inline">\(A^2 =
             B^3 = -I\)</span>. Kot v končnem primeru lahko tvorimo
             <span><strong><em>modularno grupo</em></strong></span> <span
-            class="math display">\[\mathop{\mathrm{PSL}}_2(\mathbf{Z}) =
+            class="math display">\[{\textstyle
+            \mathop{\mathrm{PSL}}_2(\mathbf{Z})} =
             \frac{\mathop{\mathrm{SL}}_2(\mathbf{Z})}{\{ I, -I
             \}}.\]</span> Naj bosta <span
             class="math inline">\(a,b\)</span> sliki matrik <span
@@ -11350,7 +11350,7 @@
             enoličen način predpišemo homomorfizem<a href="#fn97"
             class="footnote-ref" id="fnref97"
             role="doc-noteref"><sup>97</sup></a> <span
-            class="math display">\[\rho
+            class="math display">\[\textstyle \rho
                 \colon \mathop{\mathrm{PSL}}_2(\mathbf{Z}) \to G, \quad
                 a \mapsto X, \ b \mapsto Y.\]</span> Na ta način dobimo
             mnogo homomorfizmov v različne grupe <span
@@ -11412,9 +11412,10 @@
             I\)</span>.Upodobitve nas zanimajo le do izomorfizma
             natančno, kar pomeni, da moramo za razumevanje
             izomorfnostnih razredov upodobitev razumeti kvocientno
-            množico <span class="math display">\[R_n = \frac{\{ (X, Y)
-            \in \mathop{\mathrm{GL}}_n(\mathbf{C}) \times
-            \mathop{\mathrm{GL}}_n(\mathbf{C}) \mid X^2 = Y^3 = I \}}
+            množico <span class="math display">\[\mathop{\mathrm{Rep}}_n
+            = \frac{\{ (X, Y) \in \mathop{\mathrm{GL}}_n(\mathbf{C})
+            \times \mathop{\mathrm{GL}}_n(\mathbf{C}) \mid X^2 = Y^3 = I
+            \}}
                 {\mathop{\mathrm{GL}}_n(\mathbf{C})},\]</span> pri čemer
             grupa <span
             class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>
@@ -11424,30 +11425,30 @@
             \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>.<a href="#fn98"
             class="footnote-ref" id="fnref98"
             role="doc-noteref"><sup>98</sup></a> Elementi množice <span
-            class="math inline">\(R_n\)</span> predstavljajo ravno vse
-            predstavnike izomorfnostnih razredov <span
-            class="math inline">\(n\)</span>-razsežnih upodobitev grupe
-            <span
+            class="math inline">\(\mathop{\mathrm{Rep}}_n\)</span>
+            predstavljajo ravno vse predstavnike izomorfnostnih razredov
+            <span class="math inline">\(n\)</span>-razsežnih upodobitev
+            grupe <span
             class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>.</p>
             <p>Opišimo najprej enorazsežne upodobitve <span
-            class="math inline">\(R_1\)</span>. Za števili <span
-            class="math inline">\(X,Y \in \mathbf{C}^*\)</span> mora
-            veljati <span class="math inline">\(X \in \{1, -1
-            \}\)</span> in <span class="math inline">\(Y \in \{ 1,
-            \zeta, \zeta^2 \}\)</span>, kjer je <span
-            class="math inline">\(\zeta = e^{2 \pi i / 3}\)</span>.
-            Delovanje grupe <span
+            class="math inline">\(\mathop{\mathrm{Rep}}_1\)</span>. Za
+            števili <span class="math inline">\(X,Y \in
+            \mathbf{C}^*\)</span> mora veljati <span
+            class="math inline">\(X \in \{1, -1 \}\)</span> in <span
+            class="math inline">\(Y \in \{ 1, \zeta, \zeta^2
+            \}\)</span>, kjer je <span class="math inline">\(\zeta =
+            e^{2 \pi i / 3}\)</span>. Delovanje grupe <span
             class="math inline">\(\mathbf{C}^*\)</span> na parih je v
             tem primeru kar trivialno. Velja torej <span
-            class="math display">\[R_1 = \{ 1, -1 \} \times \{ 1, \zeta,
-            \zeta^2 \}\]</span> in imamo <span
+            class="math display">\[\mathop{\mathrm{Rep}}_1 = \{ 1, -1 \}
+            \times \{ 1, \zeta, \zeta^2 \}\]</span> in imamo <span
             class="math inline">\(6\)</span> enorazsežnih upodobitev
             grupe <span
             class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>.</p>
             <p>Oglejmo si sedaj še dvorazsežne upodobitve <span
-            class="math inline">\(R_2\)</span>. Kot bomo videli, je teh
-            <em>neštevno mnogo</em>. Sistematično obravnavajmo vse
-            možnosti za matriki <span
+            class="math inline">\(\mathop{\mathrm{Rep}}_2\)</span>. Kot
+            bomo videli, je teh <em>neštevno mnogo</em>. Sistematično
+            obravnavajmo vse možnosti za matriki <span
             class="math inline">\(X,Y\)</span>.</p>
             <ol>
             <li><p>Če je <span class="math inline">\(X\)</span> ali
@@ -11632,7 +11633,7 @@
             dvorazsežnem primeru imamo surjektivne
             <span><strong><em>kongruenčne
             homomorfizme</em></strong></span> <span
-            class="math display">\[\pi_n \colon
+            class="math display">\[\textstyle \pi_n \colon
             \mathop{\mathrm{SL}}_3(\mathbf{Z}) \to
             \mathop{\mathrm{SL}}_3(\mathbf{Z}/n\mathbf{Z}).\]</span>
             Jedra teh homomorfizmov so <span><strong><em>kongruenčne
@@ -11672,9 +11673,9 @@
             končnih grup. V splošnem iz praštevilske faktorizacije <span
             class="math inline">\(n = p_1^{k_1} p_2^{k_2} \cdots
             p_m^{k_m}\)</span> z uporabo Kitajskega izreka o ostankih
-            dobimo <span
-            class="math display">\[\mathop{\mathrm{SL}}_3(\mathbf{Z}/n\mathbf{Z})
-            \cong \mathop{\mathrm{SL}}_3(\mathbf{Z}/p_1^{k_1}\mathbf{Z})
+            dobimo <span class="math display">\[\textstyle
+            \mathop{\mathrm{SL}}_3(\mathbf{Z}/n\mathbf{Z}) \cong
+            \mathop{\mathrm{SL}}_3(\mathbf{Z}/p_1^{k_1}\mathbf{Z})
             \times
             \mathop{\mathrm{SL}}_3(\mathbf{Z}/p_2^{k_2}\mathbf{Z})
             \times \cdots \times
@@ -11697,8 +11698,8 @@
             \mathbf{Z}/p^{k-1}\mathbf{Z}\)</span> redukcije po modulu
             <span class="math inline">\(p^{k-1}\)</span>. Tvorimo
             <span><strong><em>inverzno limito</em></strong></span> te
-            vrste, <span class="math display">\[\varprojlim_{k \in
-            \mathbf{N}} \mathbf{Z}/p^k\mathbf{Z}
+            vrste, <span class="math display">\[\textstyle
+            \varprojlim_{k \in \mathbf{N}} \mathbf{Z}/p^k\mathbf{Z}
                 = \left\{
                     (\dots, x_k, \dots, x_2, x_1) \in \prod_{k \in
             \mathbf{N}} \mathbf{Z}/p^k\mathbf{Z}\mid
@@ -11725,7 +11726,7 @@
             <p>Na enak način lahko opazujemo vse grupe <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z})\)</span>
             hkrati. Zložimo jih v ravno vrsto <span
-            class="math display">\[\cdots \to
+            class="math display">\[\textstyle \cdots \to
             \mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z}) \to \cdots
             \to \mathop{\mathrm{SL}}_3(\mathbf{Z}/p^2\mathbf{Z}) \to
             \mathop{\mathrm{SL}}_3(\mathbf{Z}/p\mathbf{Z})\]</span> s
@@ -11733,10 +11734,10 @@
             \colon \mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z}) \to
             \mathop{\mathrm{SL}}_3(\mathbf{Z}/p^{k-1}\mathbf{Z})\)</span>
             in tvorimo inverzno limito <span
-            class="math display">\[\varprojlim_{k \in \mathbf{N}}
-            \mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z})
+            class="math display">\[\textstyle \varprojlim_{k \in
+            \mathbf{N}} \mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z})
                 = \mathop{\mathrm{SL}}_3(\varprojlim_{k \in \mathbf{N}}
-            \mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z}))
+            \mathbf{Z}/p^k\mathbf{Z})
                 = \mathop{\mathrm{SL}}_3(\mathbf{Z}_p).\]</span> Grupa
             <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z}_p)\)</span>
@@ -11746,8 +11747,8 @@
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
             in po definiciji je opremljena z zveznimi projekcijami v
             kongruenčne kvociente <span
-            class="math display">\[\widetilde{\pi_{p^k}} \colon
-            \mathop{\mathrm{SL}}_3(\mathbf{Z}_p) \to
+            class="math display">\[\textstyle \widetilde{\pi_{p^k}}
+            \colon \mathop{\mathrm{SL}}_3(\mathbf{Z}_p) \to
             \mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z})\]</span> za
             vsak <span class="math inline">\(k \in \mathbf{N}\)</span>.
             Ker so končni kvocienti opremljeni z diskretno topologijo,
@@ -11775,8 +11776,8 @@
             Po definiciji produktne topologije množica <span
             class="math inline">\(V\)</span> vsebuje odprto množico
             oblike <span class="math display">\[\prod_{k \leq N} 1
-            \times \prod_{k &gt; N}
-            \mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z}).\]</span>
+            \times \prod_{k &gt; N} {\textstyle
+            \mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z})}.\]</span>
             Torej <span class="math inline">\(U\)</span> vsebuje presek
             te množice z <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z}_p)\)</span>,
@@ -11866,8 +11867,8 @@
             class="math inline">\(p\)</span>-adičnih grup po vseh
             praštevilih <span class="math inline">\(p\)</span>, se pravi
             zveznih upodobitev grupe <span
-            class="math display">\[\prod_{p \in \mathbf{P}}
-            \mathop{\mathrm{SL}}_3(\mathbf{Z}_p),\]</span> ki jo
+            class="math display">\[\prod_{p \in \mathbf{P}} {\textstyle
+            \mathop{\mathrm{SL}}_3(\mathbf{Z}_p)},\]</span> ki jo
             označimo kot <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\widehat{\mathbf{Z}})\)</span>.</p>
             <h4 id="nerazcepne-upodobitve-3">Nerazcepne upodobitve</h4>
@@ -11890,8 +11891,9 @@
             class="math inline">\(\rho \colon
             \mathop{\mathrm{SL}}_3(\mathbf{Z}) \to
             \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span> upodobitev.
-            Tedaj obstaja upodobitev <span class="math display">\[\tilde
-            \rho \colon \mathop{\mathrm{SL}}_3(\mathbf{C}) \times
+            Tedaj obstaja upodobitev <span
+            class="math display">\[\textstyle \tilde \rho \colon
+            \mathop{\mathrm{SL}}_3(\mathbf{C}) \times
             \mathop{\mathrm{SL}}_3(\widehat{\mathbf{Z}}) \to
             \mathop{\mathrm{GL}}_n(\mathbf{C}),\]</span> katere zožitev
             na diagonalno vloženo podgrupo <span
