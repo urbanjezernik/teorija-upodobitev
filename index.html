@@ -11683,6 +11683,8 @@
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z})\)</span>
             za praštevilo <span class="math inline">\(p\)</span> in vse
             potence <span class="math inline">\(k \geq 1\)</span>.</p>
+            <h4 id="p-adične-grupe"><span
+            class="math inline">\(p\)</span>-adične grupe</h4>
             <p>Vse kolobarje <span
             class="math inline">\(\mathbf{Z}/p^k\mathbf{Z}\)</span> za
             <span class="math inline">\(k \geq 1\)</span> lahko
@@ -11865,8 +11867,153 @@
             praštevilih <span class="math inline">\(p\)</span>, se pravi
             zveznih upodobitev grupe <span
             class="math display">\[\prod_{p \in \mathbf{P}}
-            \mathop{\mathrm{SL}}_3(\mathbf{Z}_p).\]</span></p>
-            <h4 id="section"></h4>
+            \mathop{\mathrm{SL}}_3(\mathbf{Z}_p),\]</span> ki jo
+            označimo kot <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\widehat{\mathbf{Z}})\)</span>.</p>
+            <h4 id="nerazcepne-upodobitve-3">Nerazcepne upodobitve</h4>
+            <p>Nerazcepne upodobitve grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
+            lahko konstruiramo s pomočjo nerazcepnih upodobitev grupe
+            <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\widehat{\mathbf{Z}})\)</span>
+            ali pa kot restrikcijo nerazcepnih upodobitev običajne
+            Liejeve grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{C})\)</span>.
+            Te upodobitve lahko tenzorsko množimo med sabo. Neverjetno
+            je, da na ta način dobimo <em>vse</em> nerazcepne upodobitve
+            grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>.
+            Koncpetualno lahko to pojasnimo z naslednjo lastnostjo
+            <em>dviganja</em> upodobitev.</p>
+            <div class="izrek">
+            <p><strong>Izrek 6.2</strong> (Lubotzky 1980). Naj bo <span
+            class="math inline">\(\rho \colon
+            \mathop{\mathrm{SL}}_3(\mathbf{Z}) \to
+            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span> upodobitev.
+            Tedaj obstaja upodobitev <span class="math display">\[\tilde
+            \rho \colon \mathop{\mathrm{SL}}_3(\mathbf{C}) \times
+            \mathop{\mathrm{SL}}_3(\widehat{\mathbf{Z}}) \to
+            \mathop{\mathrm{GL}}_n(\mathbf{C}),\]</span> katere zožitev
+            na diagonalno vloženo podgrupo <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
+            je ravno <span class="math inline">\(\rho\)</span>, zožitev
+            na <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{C})\)</span>
+            je polinomska upodobitev, zožitev na <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\widehat{\mathbf{Z}})\)</span>
+            pa je zvezna upodobitev.</p>
+            </div>
+            <p>Izrek sloni na <span><strong><em>Margulisovi
+            superrigidnosti</em></strong></span> diskretnih podgrup v
+            Liejevih grupah. Za grupo <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
+            jo lahko izrazimo na naslednji način.</p>
+            <div class="izrek">
+            <p><strong>Izrek 6.3</strong> (Margulis 1991). Naj bo <span
+            class="math inline">\(\rho \colon
+            \mathop{\mathrm{SL}}_3(\mathbf{Z}) \to
+            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span> upodobitev.
+            Tedaj obstaja polinomska upodobitev <span
+            class="math inline">\(\tilde \rho \colon
+            \mathop{\mathrm{SL}}_3(\mathbf{C}) \to
+            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>, ki se na nekem
+            kongruenčnem jedru <span class="math inline">\(\ker
+            \pi_{n}\)</span> ujema z <span
+            class="math inline">\(\rho\)</span>.</p>
+            </div>
+            <div class="proof">
+            <p><em>Ideja dokaza iz <a
+            href="https://zbmath.org/?q=an:0579.20038">(Steinberg
+            1985)</a>.</em> Grupa <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
+            je generirana z matrikami <span class="math inline">\(T_{ij}
+            = I + E_{ij}\)</span> za <span class="math inline">\(i \neq
+            j\)</span>. Te matrike niso zelo blizu identitete v <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{C})\)</span>,
+            zato jih ne moremo potisniti v Liejevo algebro <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_3(\mathbf{C})\)</span>
+            z logaritmom. Lahko pa vseeno formalno izračunamo njihov
+            logaritem. Ker je <span class="math inline">\(E_{ij}^2 =
+            0\)</span>, je <span class="math inline">\(\log T_{ij} =
+            E_{ij} \in
+            \mathop{\mathrm{\mathfrak{sl}}}_3(\mathbf{C})\)</span>. Z
+            nekaj računanja se prepričamo, da matrike <span
+            class="math inline">\(E_{ij}\)</span> generirajo Liejevo
+            algebro <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_3(\mathbf{C})\)</span>.</p>
+            <p>Nekaj podobnega lahko naredimo v sliki upodobitve <span
+            class="math inline">\(\rho\)</span>. Matrike <span
+            class="math inline">\(\rho(T_{ij})\)</span> so daleč od
+            identitete v <span
+            class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>.
+            Vsako lahko zapišemo v Jordanski obliki kot produkt
+            diagonalne matrike <span
+            class="math inline">\(\rho(T_{ij})_s\)</span>
+            (<em>polenostavni del</em>) in matrike z enicami po
+            diagonali <span
+            class="math inline">\(\rho(T_{ij})_u\)</span>
+            (<em>unipotentni del</em>). Za unipotentni del velja <span
+            class="math inline">\((\rho(T_{ij})_u - I)^n = I\)</span>,
+            zato lahko izračunamo logaritem <span
+            class="math inline">\(\log \rho(T_{ij})_u \in
+            \mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span> z
+            razvojem v končno Taylorjevo vrsto. Z nekaj računanja se
+            prepričamo, da matrike <span class="math inline">\(\log
+            \rho(T_{ij})_u\)</span> generirajo Liejevo algebro <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_3(\mathbf{C})\)</span>
+            znotraj <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>.</p>
+            <p>Obe Liejevi algebri lahko povežemo z Liejevo upodobitvijo
+            <span class="math inline">\(\phi \colon
+            \mathop{\mathrm{\mathfrak{sl}}}_3(\mathbf{C}) \to
+            \mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>, ki
+            jo definiramo kot <span class="math inline">\(E_{ij} \mapsto
+            \log \rho(T_{ij})_u\)</span>. To upodobitev pointegriramo do
+            upodobitve grup <span class="math inline">\(\tilde \rho
+            \colon \mathop{\mathrm{SL}}_3(\mathbf{C}) \to
+            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>.</p>
+            <p>Konstrukcija <span class="math inline">\(\tilde
+            \rho\)</span> sloni le na uporabi unipotenih delov <span
+            class="math inline">\(\rho(T_{ij})\)</span>. Z nekaj
+            računanja se prepričamo, da za število <span
+            class="math inline">\(N = n!\)</span> velja <span
+            class="math inline">\(\rho(T_{ij})_s^N = I\)</span>. Od tod
+            hitro sledi, da na kongruenčnem jedru <span
+            class="math inline">\(\ker \pi_N\)</span> polenostavni del
+            nima vpliva, zato se <span
+            class="math inline">\(\rho\)</span> in <span
+            class="math inline">\(\tilde \rho\)</span> na tem jedru
+            ujemata. ◻</p>
+            </div>
+            <p>Vsaka upodobitev <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
+            torej do končnega kvocienta natančno izhaja iz upodobitve
+            <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{C})\)</span>.
+            Da pokrijemo še vse možne končne kvociente, upoštevamo še
+            zvezne upodobitve <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\widehat{\mathbf{Z}})\)</span>.
+            Z nekaj truda se da s to intuicijo hitro izpeljati
+            Lubotzkyjev izrek.</p>
+            <div class="domacanaloga">
+            <p><strong>Domača naloga 6.6</strong>. Preberi dokaz
+            Lubotzkyjevega izreka v <span>(Putman)</span>.</p>
+            </div>
+            <div class="posledica">
+            <p><strong>Posledica 6.6</strong>. Nerazcepne končnorazsežne
+            kompleksne upodobitve grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
+            so zožitve tenzorskih produktov nerazcepnih polinomskih
+            upodobitev grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{C})\)</span>
+            in nerazcepnih zveznih upodobitev grupe <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\widehat{\mathbf{Z}})\)</span>.</p>
+            </div>
+            <p>V posebnem je vseh nerazcepnih upodobitev <span
+            class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
+            le števno mnogo, kar je v ostrem nasprotju z upodobitvami
+            <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span>.</p>
             <section class="footnotes footnotes-end-of-document"
             role="doc-endnotes">
             <hr />

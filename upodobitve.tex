@@ -4946,6 +4946,8 @@ Vsak končni kvocient $G$ grupe $\SL_3(\ZZ)$ ima svoje nerazcepne upodobitve, ki
 \]
 Razumeti moramo torej upodobitve grup $\SL_3(\ZZ/p^k\ZZ)$ za praštevilo $p$ in vse potence $k \geq 1$. 
 
+\subsubsection{$p$-adične grupe}
+
 Vse kolobarje $\ZZ/p^k\ZZ$ za $k \geq 1$ lahko opazujemo hkrati, in sicer tako, da jih zložimo v ravno vrsto
 \[
     \cdots \to \ZZ/p^k\ZZ \to \cdots \to \ZZ/p^2\ZZ \to \ZZ/p\ZZ,
@@ -5006,11 +5008,47 @@ Naj bo $\rho \colon \SL_3(\ZZ_p) \to \GL_n(\CC)$ zvezna upodobitev. Naj bo $U$ o
 
 Nazadnje lahko torej vse upodobitve grupe $\SL_3(\ZZ)$, ki se faktorizirajo prek upodobitev končnih grup, razumemo kot zožitve zveznih upodobitev produktov $p$-adičnih grup po vseh praštevilih $p$, se pravi zveznih upodobitev grupe
 \[
-    \prod_{p \in \PP} \SL_3(\ZZ_p).
+    \prod_{p \in \PP} \SL_3(\ZZ_p),
 \]
+ki jo označimo kot $\SL_3(\widehat{\ZZ})$.
 
-\subsubsection{}
+\subsubsection{Nerazcepne upodobitve}
 
-\todo[inline]{$p$-adične grupe. Omenimo lahko na primer rezultat Jaikin (representation growth) in Aizenbud-Avni (Representation Growth and Rational Singularities of the Moduli Space of Local Systems).}
+Nerazcepne upodobitve grupe $\SL_3(\ZZ)$ lahko konstruiramo s pomočjo nerazcepnih upodobitev grupe $\SL_3(\widehat{\ZZ})$ ali pa kot restrikcijo nerazcepnih upodobitev običajne Liejeve grupe $\SL_3(\CC)$. Te upodobitve lahko tenzorsko množimo med sabo. Neverjetno je, da na ta način dobimo \emph{vse} nerazcepne upodobitve grupe $\SL_3(\ZZ)$. Koncpetualno lahko to pojasnimo z naslednjo lastnostjo \emph{dviganja} upodobitev.
+
+\begin{izrek}[Lubotzky 1980]
+Naj bo $\rho \colon \SL_3(\ZZ) \to \GL_n(\CC)$ upodobitev. Tedaj obstaja upodobitev
+\[
+    \tilde \rho \colon \SL_3(\CC) \times \SL_3(\widehat{\ZZ}) \to \GL_n(\CC),  
+\]
+katere zožitev na diagonalno vloženo podgrupo $\SL_3(\ZZ)$ je ravno $\rho$, zožitev na $\SL_3(\CC)$ je polinomska upodobitev, zožitev na $\SL_3(\widehat{\ZZ})$ pa je zvezna upodobitev.
+\end{izrek}
+
+Izrek sloni na {\definicija Margulisovi superrigidnosti} diskretnih podgrup v Liejevih grupah. Za grupo $\SL_3(\ZZ)$ jo lahko izrazimo na naslednji način.
+
+\begin{izrek}[Margulis 1991]
+Naj bo $\rho \colon \SL_3(\ZZ) \to \GL_n(\CC)$ upodobitev. Tedaj obstaja polinomska upodobitev $\tilde \rho \colon \SL_3(\CC) \to \GL_n(\CC)$, ki se na nekem kongruenčnem jedru $\ker \pi_{n}$ ujema z $\rho$.
+\end{izrek}
+\begin{dokaz}[Ideja dokaza iz \href{https://zbmath.org/?q=an:0579.20038}{(Steinberg 1985)}]
+Grupa $\SL_3(\ZZ)$ je generirana z matrikami $T_{ij} = I + E_{ij}$ za $i \neq j$. Te matrike niso zelo blizu identitete v $\SL_3(\CC)$, zato jih ne moremo potisniti v Liejevo algebro $\slfrak_3(\CC)$ z logaritmom. Lahko pa vseeno formalno izračunamo njihov logaritem. Ker je $E_{ij}^2 = 0$, je $\log T_{ij} = E_{ij} \in \slfrak_3(\CC)$. Z nekaj računanja se prepričamo, da matrike $E_{ij}$ generirajo  Liejevo algebro $\slfrak_3(\CC)$.
+
+Nekaj podobnega lahko naredimo v sliki upodobitve $\rho$. Matrike $\rho(T_{ij})$ so daleč od identitete v $\GL_n(\CC)$. Vsako lahko zapišemo v Jordanski obliki kot produkt diagonalne matrike $\rho(T_{ij})_s$ (\emph{polenostavni del}) in matrike z enicami po diagonali $\rho(T_{ij})_u$ (\emph{unipotentni del}). Za unipotentni del velja $(\rho(T_{ij})_u - I)^n = I$, zato lahko izračunamo logaritem $\log \rho(T_{ij})_u \in \glfrak_n(\CC)$ z razvojem v končno Taylorjevo vrsto. Z nekaj računanja se prepričamo, da matrike $\log \rho(T_{ij})_u$ generirajo Liejevo algebro $\slfrak_3(\CC)$ znotraj $\glfrak_n(\CC)$. 
+
+Obe Liejevi algebri lahko povežemo z Liejevo upodobitvijo $\phi \colon \slfrak_3(\CC) \to \glfrak_n(\CC)$, ki jo definiramo kot $E_{ij} \mapsto \log \rho(T_{ij})_u$. To upodobitev pointegriramo do upodobitve grup $\tilde \rho \colon \SL_3(\CC) \to \GL_n(\CC)$. 
+
+Konstrukcija $\tilde \rho$ sloni le na uporabi unipotenih delov $\rho(T_{ij})$. Z nekaj računanja se prepričamo, da za število $N = n!$ velja $\rho(T_{ij})_s^N = I$. Od tod hitro sledi, da na kongruenčnem jedru $\ker \pi_N$ polenostavni del nima vpliva, zato se $\rho$ in $\tilde \rho$ na tem jedru ujemata.
+\end{dokaz}
+
+Vsaka upodobitev $\SL_3(\ZZ)$ torej do končnega kvocienta natančno izhaja iz upodobitve $\SL_3(\CC)$. Da pokrijemo še vse možne končne kvociente, upoštevamo še zvezne upodobitve $\SL_3(\widehat{\ZZ})$. Z nekaj truda se da s to intuicijo hitro izpeljati Lubotzkyjev izrek.
+
+\begin{domacanaloga}
+Preberi dokaz Lubotzkyjevega izreka v {\literatura (Putman)}.
+\end{domacanaloga}
+
+\begin{posledica}
+Nerazcepne končnorazsežne kompleksne upodobitve grupe $\SL_3(\ZZ)$ so zožitve tenzorskih produktov nerazcepnih polinomskih upodobitev grupe $\SL_3(\CC)$ in nerazcepnih zveznih upodobitev grupe $\SL_3(\widehat{\ZZ})$.
+\end{posledica}
+
+V posebnem je vseh nerazcepnih upodobitev $\SL_3(\ZZ)$ le števno mnogo, kar je v ostrem nasprotju z upodobitvami $\SL_2(\ZZ)$. 
 
 \end{document}
