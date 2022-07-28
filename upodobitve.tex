@@ -267,16 +267,49 @@
 \subsection*{Kratek opis predmeta}
 
 
+Teorija upodobitev se ukvarja z \emph{linearizacijo} abstraktnih objektov, predvsem grup. Gre za klasično in dobro raziskano vejo matematike, ki ima številne uporabe tudi v drugih znanostih. Dva pomembna cilja, ki ju ta teorija doseže, sta naslednja. 
+
+\begin{enumerate}
+    \item Namesto abstraktne obravnave dano grupo na različne načine uresničimo z obrnljivimi matrikami, kar nam z močnimi orodji linearne algebre omogoča bolj transparenten študij njihovih lastnosti. Tukaj nas zanimajo predvsem najenostavnejši načini predstavitev grup z matrikami.
+    
+    \begin{zgled}
+        Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta abstraktna grupa izhaja iz simetrij $n$-kotnika v ravnini, s čimer lahko uresničimo njena generatora $s,r$ kot matriki
+        \[
+            s \mapsto \begin{pmatrix}
+                0 & 1 \\ 1 & 0
+            \end{pmatrix}, \quad
+            r \mapsto \begin{pmatrix}
+                \cos(2 \pi/n) & - \sin(2 \pi/n) \\
+                \sin(2 \pi/n) & \cos(2 \pi/n)
+            \end{pmatrix}
+        \]
+        in torej poljuben element $D_{2n}$ kot matriko v $\GL_2(\RR)$.
+    \end{zgled}
+
+    \item Mnoge situacije, kjer se pojavljajo grupe prek svojih delovanj, lahko lineariziramo in to linearno strukturo razstavimo na enostavne komponente, ki jih razumemo s pomočjo prejšnje točke.
+    
+    \begin{zgled}
+        Opazujmo simetrično grupo $S_n$, ki naravno deluje na množici $\{ 1, 2, \dots, n \}$ s permutacijami. Temu delovanju lahko priredimo vektorski prostor z bazo $\{ e_1, e_2, \dots, e_n \}$. Permutaciji $\sigma \in S_n$ lahko v tej bazi priredimo permutacijsko matriko v $\GL_n(\CC)$, ki vektor $e_i$ preslika v $e_{\sigma(i)}$. Na ta način lahko uresničimo naravno delovanje simetrične grupe $S_n$ znotraj matrične grupe $\GL_n(\CC)$.
+    \end{zgled}
+\end{enumerate}
+
+Pri predmetu bomo najprej vzpostavili temelje teorije upodobitev (osnovne definicije in zgledi, fundamentalne konstrukcije upodobitev). Pokazali bomo, kako se lahko vsaki konkretni upodobitvi približamo, kot da bi jo pogledali pod mikroskopom (videli bomo, da je vsaka sestavljena iz \emph{celic}, vsaka celica pa iz \emph{organelov}, ki so tesno povezani s Fourierovo transformacijo). Za tem si bomo ogledali dobro razvito teorijo upodobitev končnih grup (tu bomo pod mikroskopom videli in razumeli čudovito strukturo s pomočjo karakterjev upodobitev), podrobneje bomo raziskali upodobitve dveh temeljnih družin končnih grup (simetrične grupe in splošne linearne grupe nad končnim poljem). Ta teorija ima mnogo aplikacij, od katerih bomo izpostavili nekaj sodobnejših (v teoriji števil, kombinatoriki, razumevanju slučajnih procesov na grupah). Nazadnje si bomo ogledali še nekaj zgledov upodobitev pomembnih družin neskončnih grup (kompaktne grupe ter linearne grupe, zvezne in diskretne).
+
+
+\newpage
+
 \subsection*{Literatura}
 
+Pri predstavitvi temeljev teorije upodobitev uporabljamo jezik homomorfizmov grup (in ne modulov), tako da porabimo več časa za osnove, a je snov predstavljena bolj konkretno. To pride prav predvsem pri razstavljanju dane upodobitve na nerazcepne podupodobitve, kjer sledimo pristopu Kowalskega in opazujemo matrične koeficiente. Teorija upodobitev končnih grup temelji na dekompoziciji regularne upodobitve na nerazcepne, kar izvedemo s pomočjo nekomutativne Fourierove transformacije kot Diaconis. S tem tudi pripravimo teren za kasnejše aplikacije teorije upodobitev. Omenimo kolobar virtualnih karakterjev in kot Serre dokažemo Artinov izrek. Razširjena zgleda upodbitev simetričnih grup in splošnih linearnih grup nad končnim poljem pretežno izvedemo s pomočjo monografije Fultona in Harrisa. Pri upodobitvah simetrične grupe določene aspekte izrazimo s Fourierovo transformacijo, pri linearnih grupah pa sledeč Bushnell in Henniart nekoliko bolj naravno predstavimo ostne upodobitve. V aplikacijah teorije upodobitev predstavimo Rothov izrek kot ga elegantno dokaže Gowers in raziščemo soroden problem za nekomutativne grupe, kjer analitične argumente napravimo kot Eberhard. Pri prepoznavanju komutatorjev nam prav pridejo razvita Fourierova orodja, slučajne sprehode pa 
+
 \begin{itemize}
-\item {\literatura E. Kowalski, {\em An Introduction to the Representation Theory of Groups}, American Mathematical Society, 2014.} 
-\item {\literatura W. Fulton, J. Harris, {\em Representation Theory: A First Course}, Springer GTM 129, 2004.}
-\item {\literatura J. P. Serre, {\em Linear Representations of Finite Groups}, Springer GTM 42, 1977.}
+\item {\literatura E. Kowalski, {\em \href{https://people.math.ethz.ch/~kowalski/representation-theory.pdf}{An Introduction to the Representation Theory of Groups}}, American Mathematical Society, 2014.} 
 \item {\literatura P. Diaconis, {\em Group representations in probability and statistics}, Lecture notes - monograph series 11, i-192, 1988.}
+\item {\literatura J. P. Serre, {\em Linear Representations of Finite Groups}, Springer GTM 42, 1977.}
+\item {\literatura W. Fulton, J. Harris, {\em Representation Theory: A First Course}, Springer GTM 129, 2004.}
 \item {\literatura C. J. Bushnell, G. Henniart, {\em The Local Langlands Conjecture for $\GL(2)$}, Springer Grundlehren der mathematischen Wissenschaften \textbf{335}, 2006.}
-\item {\literatura W. T. Gowers, {\em Generalizations of Fourier analysis, and how to apply them},  Bulletin of the American Mathematical Society \textbf{54}, 1-44 (2017).}
-\item {\literatura S. Eberhard, {\em Product mixing in the alternating group}, Discrete Analysis, 2-18 (2016).}
+\item {\literatura W. T. Gowers, {\em \href{https://arxiv.org/abs/1608.04127}{Generalizations of Fourier analysis, and how to apply them}},  Bulletin of the American Mathematical Society \textbf{54}, 1-44 (2017).}
+\item {\literatura S. Eberhard, {\em \href{https://arxiv.org/abs/1512.03517}{Product mixing in the alternating group}}, Discrete Analysis, 2-18 (2016).}
 \item {\literatura B. C. Hall, {\em Lie groups, Lie algebras, and representations}, Quantum Theory for Mathematicians, Springer, New York, NY, 2013.}
 \item {\literatura K. Conrad, {\em \href{https://kconrad.math.uconn.edu/blurbs/grouptheory/SL(2,Z).pdf}{$\SL_2(\ZZ)$}}.}
 \item {\literatura A. Putman, {\em \href{https://www3.nd.edu/~andyp/notes/RepTheorySLnZ.pdf}{The representation theory of $\SL_n(\ZZ)$}}.}
@@ -347,7 +380,7 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
             x \mapsto e^{2 \pi i mx/q}.
         \]
 
-        \item Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta grupa izhaja iz simetrij kvadrata v ravnini, s čimer nam ponuja svojo naravno upodobitev $\rho \colon D_{2n} \to \GL(\RR^2) = \GL_2(\RR)$, ki preslika generatorja kot
+        \item Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta grupa izhaja iz simetrij $n$-kotnika v ravnini, s čimer nam ponuja svojo naravno upodobitev $\rho \colon D_{2n} \to \GL(\RR^2) = \GL_2(\RR)$, ki preslika generatorja kot
         \[
             s \mapsto \begin{pmatrix}
                 0 & 1 \\ 1 & 0
@@ -2463,7 +2496,7 @@ Vsak Spechtov modul $V_{\lambda}$ lahko z redukcijo po modulu $p$ za poljubno pr
 Obravnavajmo modularne upodobitve nad $\FF_p$, kjer je $p \leq n$. Naj bo $\lambda$ razčlenitev $n$. Izračunaj večkratnosti nerazcepnih podupodobitev v redukciji $V_{\lambda}$ po modulu $p$.
 \end{odprtproblem}
 
-Ta problem je razrešen le za razčlenitve $\lambda$ z največ dvema deloma, torej s $k \leq 2$. Za $k = 3$ sodobna bilijardna domneva {\literatura \href{https://arxiv.org/pdf/1703.05898.pdf}{(Lusztig-Williamson 2018)}} predvideva, da se te večkratnosti obnašajo po zakonu nekega zakompliciranega \href{https://www.youtube.com/watch?v=Ru0Zys1Vvq4}{dinamičnega sistema}.
+Ta problem je razrešen le za razčlenitve $\lambda$ z največ dvema deloma, torej s $k \leq 2$. Za $k = 3$ sodobna bilijardna domneva \href{https://arxiv.org/pdf/1703.05898.pdf}{(Lusztig-Williamson 2018)} predvideva, da se te večkratnosti obnašajo po zakonu nekega zakompliciranega \href{https://www.youtube.com/watch?v=Ru0Zys1Vvq4}{dinamičnega sistema}.
 
 \subsection{Vrednosti karakterjev}
 
@@ -4731,7 +4764,7 @@ Razumevanje neskončnorazsežnih nerazcepnih unitarnih upodobitev poljubnih Liej
 
 \section{Diskretne linearne grupe}
 
-Nazadnje si bomo pogledali še nekaj zgledov upodobitev diskretnih neskončnih grup, in sicer $\SL_n(\ZZ)$. V zadnjem zgledu smo videli, da te igrajo vlogo pri opisovanju unitarnih upodobitev Liejevih grup. Te grupe niso ozaljšane z uporabno topologijo, zato bomo opazovali kar običajne abstraktne končnorazsežne kompleksne upodobitve. Kot bomo videli, se te grupe obnašajo bistveno različno za $n = 2$ oziroma za $n \geq 3$.
+Nazadnje si bomo pogledali še nekaj zgledov upodobitev diskretnih neskončnih grup, in sicer $\SL_m(\ZZ)$. V zadnjem zgledu smo videli, da te igrajo vlogo pri opisovanju unitarnih upodobitev Liejevih grup. Te grupe niso ozaljšane z uporabno topologijo, zato bomo opazovali kar običajne abstraktne končnorazsežne kompleksne upodobitve. Kot bomo videli, se te grupe obnašajo bistveno različno za $m = 2$ oziroma za $m \geq 3$.
 
 \subsection{$\SL_2(\ZZ)$}
 
@@ -4739,12 +4772,12 @@ Nazadnje si bomo pogledali še nekaj zgledov upodobitev diskretnih neskončnih g
 
 Grupa $\SL_2(\ZZ)$ je diskretna podgrupa Liejeve grupe $\SL_2(\CC)$. Ta grupa je opremljena z naravnim {\definicija kongruenčnim homomorfizmom}
 \[
-    \textstyle \pi_n \colon \SL_2(\ZZ) \to \SL_2(\ZZ/n\ZZ)
+    \textstyle \pi_N \colon \SL_2(\ZZ) \to \SL_2(\ZZ/N\ZZ)
 \]
-za vsako naravno število $n$, ki vnose matrike reducira po modulu $n$. 
+za vsako naravno število $N$, ki vnose matrike reducira po modulu $N$. 
 
 \begin{domacanaloga}
-Preveri, da je $\pi_n$ surjektivna za vsak $n \in \NN$.
+Preveri, da je $\pi_N$ surjektivna za vsak $N \in \NN$.
 \end{domacanaloga}
 
 V posebnem za vsako praštevilo $p$ dobimo homomorfizem v grupo $\SL_2(\FF_p)$, ki jo že dobro poznamo. Z analognim argumentom kot v primeru tega končnega kvocienta se prepričamo, da matriki
@@ -4820,10 +4853,10 @@ Z \GAP~se lahko prepričamo, da je alternirajoča grupa $A_9$ generirana s permu
 \end{zgled}
 
 \begin{domacanaloga}
-Prepričaj se, da za \emph{nobeno} število $n \geq 2$ ne velja, da se homomorfizem $\alpha_9$ faktorizira prek kongruenčnega homomorfizma $\pi_n$. Natančneje, ne obstaja homomorfizem $h \colon \SL_2(\ZZ/n\ZZ) \to A_9$, da bi veljalo $h \circ \pi_n = \alpha_9$. V pomoč ti bo Kitajski izrek o ostankih. Kvocient $A_9$ grupe $\SL_2(\ZZ)$ je v tem smislu \emph{nekongruenčen}. 
+Prepričaj se, da za \emph{nobeno} število $N \geq 2$ ne velja, da se homomorfizem $\alpha_9$ faktorizira prek kongruenčnega homomorfizma $\pi_N$. Natančneje, ne obstaja homomorfizem $h \colon \SL_2(\ZZ/N\ZZ) \to A_9$, da bi veljalo $h \circ \pi_N = \alpha_9$. V pomoč ti bo Kitajski izrek o ostankih. Kvocient $A_9$ grupe $\SL_2(\ZZ)$ je v tem smislu \emph{nekongruenčen}. 
 \end{domacanaloga}
 
-Grupa $\SL_2(\ZZ)$ ima torej končne kvociente $\PSL_2(\FF_p)$ in $A_n$, ki tvorijo standardne predstavnike končnih enostavnih grup. Vsaka od teh končnih grup nam da svoje nerazcepne upodobitve, s čimer po restrikciji dobimo mnogo različnih nerazcepnih upodobitev grupe $\SL_2(\ZZ)$. Teorija upodobitev grupe $\SL_2(\ZZ)$ bo torej zajemala bolj ali manj vso kompleksnost teorije upodobitev končnih enostavnih grup.
+Grupa $\SL_2(\ZZ)$ ima torej končne kvociente $\PSL_2(\FF_p)$ in $A_n$, ki tvorijo standardne predstavnike končnih enostavnih grup. Vsaka od teh končnih grup nam da svoje nerazcepne upodobitve, s čimer po restrikciji dobimo mnogo različnih nerazcepnih upodobitev grupe $\SL_2(\ZZ)$. Teorija upodobitev grupe $\SL_2(\ZZ)$ bo torej zajemala bolj ali manj vso kompleksnost teorije upodobitev končnih enostavnih grup. Težko si je predstavljati, kako vse te spraviti pod eno streho.
 
 Obravnave vseh upodobitev se lotimo sistematično po razsežnostih. Vsaka $n$-razsežna kompleksna upodobitev je določena z izbiro matrik $X,Y \in \GL_n(\CC)$ z lastnostjo $X^2 = Y^3 = I$.Upodobitve nas zanimajo le do izomorfizma natančno, kar pomeni, da moramo za razumevanje izomorfnostnih razredov upodobitev razumeti kvocientno množico
 \[
@@ -4834,7 +4867,7 @@ pri čemer grupa $\GL_n(\CC)$ deluje s hkratnim konjugiranjem na parih matrik, s
 
 Opišimo najprej enorazsežne upodobitve $\Rep_1$. Za števili $X,Y \in \CC^*$ mora veljati $X \in \{1, -1 \}$ in $Y \in \{ 1, \zeta, \zeta^2 \}$, kjer je $\zeta = e^{2 \pi i / 3}$. Delovanje grupe $\CC^*$ na parih je v tem primeru kar trivialno. Velja torej
 \[
-  \Rep_1 = \{ 1, -1 \} \times \{ 1, \zeta, \zeta^2 \}
+  \textstyle \Rep_1 = \{ 1, -1 \} \times \{ 1, \zeta, \zeta^2 \}
 \]
 in imamo $6$ enorazsežnih upodobitev grupe $\PSL_2(\ZZ)$.
 
@@ -4894,7 +4927,7 @@ Oglejmo si sedaj še dvorazsežne upodobitve $\Rep_2$. Kot bomo videli, je teh \
 Sorodno obravnavo bi lahko izvedli v poljubni razsežnosti.
 
 \begin{posledica}
-Grupa $\SL_2(\ZZ)$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev poljubne stopnje $>1$.
+Grupa $\SL_2(\ZZ)$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev poljubne stopnje, večje od $1$.
 \end{posledica}
 
 \subsection{$\SL_3(\ZZ)$}
@@ -4936,13 +4969,13 @@ Z drugimi besedami, če želimo podati upodobitev $\SL_3(\ZZ)$ v $\GL_n(\CC)$, p
 
 Razliko med grupo $\SL_2(\ZZ)$ in $\SL_3(\ZZ)$ lahko jasno vidimo v njunih končnih kvocientih. Kot v dvorazsežnem primeru imamo surjektivne {\definicija kongruenčne homomorfizme}
 \[
-    \textstyle \pi_n \colon \SL_3(\ZZ) \to \SL_3(\ZZ/n\ZZ).
+    \textstyle \pi_N \colon \SL_3(\ZZ) \to \SL_3(\ZZ/N\ZZ).
 \]
-Jedra teh homomorfizmov so {\definicija kongruenčne podgrupe}. Izkaže se \href{https://projecteuclid.org/journals/bulletin-of-the-american-mathematical-society-new-series/volume-70/issue-3/Sous-groupes-dindice-fini-dans-SLleft-nZ-right/bams/1183526018.full}{(Bass-Lazard-Serre 1964)}, da pa tukaj (in v vseh $\SL_n(\ZZ)$ za $n \geq 3$) \emph{ni} nobenih bistveno drugačnih homomorfizmov v končne grupe. Natančneje, vsak homomorfizem $\alpha \colon \SL_3(\ZZ) \to G$ v končno grupo $G$ se faktorizira prek nekega kongruenčnega homomorfizma $\pi_n$. Povedano še drugače, vsaka podgrupa $H \leq \SL_3(\ZZ)$ končnega indeksa vsebuje neko kongruenčno podgrupo. Tej lastnosti grupe $\SL_3(\ZZ)$ rečemo {\definicija lastnost kongruenčnih podgrup}.\footnote{Angleško \emph{congruence subgroup property.}}
+Jedra teh homomorfizmov so {\definicija kongruenčne podgrupe}. Izkaže se \href{https://projecteuclid.org/journals/bulletin-of-the-american-mathematical-society-new-series/volume-70/issue-3/Sous-groupes-dindice-fini-dans-SLleft-nZ-right/bams/1183526018.full}{(Bass-Lazard-Serre 1964)}, da pa tukaj (in v vseh $\SL_m(\ZZ)$ za $m \geq 3$) \emph{ni} nobenih bistveno drugačnih homomorfizmov v končne grupe. Natančneje, vsak homomorfizem $\alpha \colon \SL_3(\ZZ) \to G$ v končno grupo $G$ se faktorizira prek nekega kongruenčnega homomorfizma $\pi_N$. Povedano še drugače, vsaka podgrupa $H \leq \SL_3(\ZZ)$ končnega indeksa vsebuje neko kongruenčno podgrupo. Tej lastnosti grupe $\SL_3(\ZZ)$ rečemo {\definicija lastnost kongruenčnih podgrup}.\footnote{Angleško \emph{congruence subgroup property.}}
 
-Vsak končni kvocient $G$ grupe $\SL_3(\ZZ)$ ima svoje nerazcepne upodobitve, ki jih z restrikcijo potegnemo do nerazcepnih upodobitev grupe $\SL_3(\ZZ)$. Po lastnosti kongruenčnih podgrupe je tak $G$ nujno kvocient $\SL_3(\ZZ/n\ZZ)$ za nek $n$, zato bo dovolj opazovati nerazcepne upodobitve kongruenčnih kvocientov. Če je $n$ praštevilo, te zelo dobro razumemo s tehnikami upodobitev končnih grup. V splošnem iz praštevilske faktorizacije $n = p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m}$ z uporabo Kitajskega izreka o ostankih dobimo
+Vsak končni kvocient $G$ grupe $\SL_3(\ZZ)$ ima svoje nerazcepne upodobitve, ki jih z restrikcijo potegnemo do nerazcepnih upodobitev grupe $\SL_3(\ZZ)$. Po lastnosti kongruenčnih podgrupe je tak $G$ nujno kvocient $\SL_3(\ZZ/N\ZZ)$ za nek $N$, zato bo dovolj opazovati nerazcepne upodobitve kongruenčnih kvocientov. Če je $N$ praštevilo, te zelo dobro razumemo s tehnikami upodobitev končnih grup. V splošnem iz praštevilske faktorizacije $N = p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m}$ z uporabo Kitajskega izreka o ostankih dobimo
 \[
-    \textstyle \SL_3(\ZZ/n\ZZ) \cong \SL_3(\ZZ/p_1^{k_1}\ZZ) \times \SL_3(\ZZ/p_2^{k_2}\ZZ) \times \cdots \times \SL_3(\ZZ/p_m^{k_m}\ZZ).
+    \textstyle \SL_3(\ZZ/N\ZZ) \cong \SL_3(\ZZ/p_1^{k_1}\ZZ) \times \SL_3(\ZZ/p_2^{k_2}\ZZ) \times \cdots \times \SL_3(\ZZ/p_m^{k_m}\ZZ).
 \]
 Razumeti moramo torej upodobitve grup $\SL_3(\ZZ/p^k\ZZ)$ za praštevilo $p$ in vse potence $k \geq 1$. 
 
@@ -4960,7 +4993,7 @@ pri čemer so homomorfizmi $r_k \colon \ZZ/p^k\ZZ \to \ZZ/p^{k-1}\ZZ$ redukcije 
         \forall k \in \NN \colon \ r_k(x_k) = x_{k-1}
     \right\}.
 \]
-Ker je vsak $\ZZ/p^k\ZZ$ kolobar, je tudi ta limita kolobar. Pravimo mu kolobar {\definicija $p$-adičnih celih števil} in ga označimo z $\ZZ_p$. Vse končne kolobarje $\ZZ/p^k\ZZ$ opremimo z diskretno topologijo in njihov produkt s produktno topologijo, tako da je $\ZZ_p$ tudi topološki prostor. Po izreku Tihonova je produkt vseh $\ZZ/p^k\ZZ$ kompakten, $\ZZ_p$ pa tvori zaprto množico v tem produktu, zato je tudi $\ZZ_p$ kompakten topološki prostor.\footnote{Topologija na $\ZZ_p$ je nekoliko neobičajna. Dobimo namreč popolnoma nepovezan topološki prostor. Predstavljamo si ga lahko kot Cantorjevo množico.}
+Ker je vsak $\ZZ/p^k\ZZ$ kolobar, je tudi ta limita kolobar. Pravimo mu kolobar {\definicija $p$-adičnih celih števil} in ga označimo z $\ZZ_p$. Vse končne kolobarje $\ZZ/p^k\ZZ$ opremimo z diskretno topologijo in njihov produkt s produktno topologijo, tako da je $\ZZ_p$ tudi topološki prostor. Po izreku Tihonova je produkt vseh $\ZZ/p^k\ZZ$ kompakten, $\ZZ_p$ pa tvori zaprto množico v tem produktu, zato je tudi $\ZZ_p$ kompakten topološki prostor.\footnote{Topologija na $\ZZ_p$ je nekoliko neobičajna. Dobimo namreč popolnoma nepovezan topološki prostor. Predstavljamo si ga lahko kot Cantorjevo množico, kot je prikazano \href{https://im.icerm.brown.edu/portfolio/seeing-p-adics/}{tukaj}.}
 
 Na enak način lahko opazujemo vse grupe $\SL_3(\ZZ/p^k\ZZ)$ hkrati. Zložimo jih v ravno vrsto
 \[
@@ -4984,9 +5017,9 @@ Podgrupe $\ker \widetilde{\pi_{p^k}}$ za $k \in \NN$ tvorijo bazo okolic enote v
 \begin{dokaz}
 Naj bo $U$ odprta okolica enote v $\SL_3(\ZZ_p)$. Velja torej $U = \SL_3(\ZZ_p) \cap V$ za neko odprto množico $V$ v produktu vseh $\SL_3(\ZZ/p^k\ZZ)$. Po definiciji produktne topologije množica $V$ vsebuje odprto množico oblike
 \[
-    \prod_{k \leq N} 1 \times \prod_{k > N} {\textstyle \SL_3(\ZZ/p^k\ZZ)}.
+    \prod_{k \leq K} 1 \times \prod_{k > K} {\textstyle \SL_3(\ZZ/p^k\ZZ)}.
 \]
-Torej $U$ vsebuje presek te množice z $\SL_3(\ZZ_p)$, kar je natanko $\ker \widetilde{\pi_{p^N}}$.
+Torej $U$ vsebuje presek te množice z $\SL_3(\ZZ_p)$, kar je natanko $\ker \widetilde{\pi_{p^K}}$.
 \end{dokaz}
 
 Iz te lastnosti je razvidno, da se grupa $\SL_3(\ZZ_p)$ obnaša zelo drugače kot Liejeva grupa $\SL_3(\CC)$.
@@ -4995,7 +5028,7 @@ Iz te lastnosti je razvidno, da se grupa $\SL_3(\ZZ_p)$ obnaša zelo drugače ko
 S pomočjo eksponentne preslikave dokaži, da v grupi $\GL_n(\CC)$ obstaja odprta okolica enote $U$, ki ne vsebuje nobene netrivialne podgrupe.\footnote{Tej lastnosti pravimo {\definicija brez majhnih podgrup}, angleško \emph{no small subgroups}.}
 \end{domacanaloga}
 
-Kljub tej razliki pa je vendarle zelo plodno gledati na $\SL_3(\ZZ_p)$ kot na podgrupo splošne linearne grupe $\GL_3(\QQ_p)$ poljem kvocientov $\QQ_p$ kolobarja $\ZZ_p$ in jo v tej luči obravnavati kot neke vrste Liejevo grupo nad sicer nenavadnim poljem $\QQ_p$. Grupa $\SL_3(\ZZ_p)$ je na ta način poseben primer {\definicija $p$-adične analitične grupe}. Razviti je mogoče analogno teorijo Liejevih grup nad $p$-adičnimi števili, ki omogoča, da njihove upodobitve razumemo s pomočjo njihovih prirejenih Liejevih algeber. Na ta način je mogoče izpeljati veliko zanimivih rezultatov o upodobitvah teh grup. Na primer \href{https://link.springer.com/article/10.1007/s00222-015-0614-8}{(Aizenbud-Avni 2015)}, obstaja konstanta $C$, da je število nerazcepnih kompleksnih $n$-razsežnih upodobitev grupe $\SL_3(\ZZ_p)$ kvečjemu $C n^{22}$.
+Kljub tej razliki pa je vendarle zelo plodno gledati na $\SL_3(\ZZ_p)$ kot na podgrupo splošne linearne grupe $\GL_3(\QQ_p)$ poljem kvocientov $\QQ_p$ kolobarja $\ZZ_p$ in jo v tej luči obravnavati kot neke vrste Liejevo grupo nad sicer nenavadnim poljem $\QQ_p$. Grupa $\SL_3(\ZZ_p)$ je na ta način poseben primer {\definicija $p$-adične analitične grupe}. Razviti je mogoče analogno teorijo Liejevih grup nad $p$-adičnimi števili, ki omogoča, da njihove upodobitve razumemo s pomočjo njihovih prirejenih Liejevih algeber. Na ta način je mogoče izpeljati veliko zanimivih rezultatov o upodobitvah teh grup. Na primer \href{https://link.springer.com/article/10.1007/s00222-015-0614-8}{(Aizenbud-Avni 2015)}, obstaja konstanta $C$, da je število nerazcepnih kompleksnih $n$-razsežnih upodobitev grupe $\SL_m(\ZZ_p)$ kvečjemu $C n^{22}$ za vsak $m \geq 3$.
 
 Vse upodobitve kongruenčnih kvocientov grupe $\SL_3(\ZZ)$ lahko torej zajamemo tako, da opazujemo le upodobitve $p$-adične kompaktne grupe $\SL_3(\ZZ_p)$. Prepričajmo se še, da na ta način ne bomo zajeli nič drugih upodobitev.
 
@@ -5014,9 +5047,9 @@ ki jo označimo kot $\SL_3(\widehat{\ZZ})$.
 
 \subsubsection{Nerazcepne upodobitve}
 
-Nerazcepne upodobitve grupe $\SL_3(\ZZ)$ lahko konstruiramo s pomočjo nerazcepnih upodobitev grupe $\SL_3(\widehat{\ZZ})$ ali pa kot restrikcijo nerazcepnih upodobitev običajne Liejeve grupe $\SL_3(\CC)$. Te upodobitve lahko tenzorsko množimo med sabo. Neverjetno je, da na ta način dobimo \emph{vse} nerazcepne upodobitve grupe $\SL_3(\ZZ)$. Koncpetualno lahko to pojasnimo z naslednjo lastnostjo \emph{dviganja} upodobitev.
+Nerazcepne upodobitve grupe $\SL_3(\ZZ)$ lahko konstruiramo s pomočjo nerazcepnih upodobitev grupe $\SL_3(\widehat{\ZZ})$ ali pa kot restrikcijo nerazcepnih upodobitev običajne Liejeve grupe $\SL_3(\CC)$. Te upodobitve lahko tenzorsko množimo med sabo. Neverjetno je, da na ta način dobimo \emph{vse} nerazcepne upodobitve grupe $\SL_3(\ZZ)$. Konceptualno lahko to pojasnimo z naslednjo lastnostjo \emph{dviganja} upodobitev.
 
-\begin{izrek}[Lubotzky 1980]
+\begin{izrek}[\href{https://www.jstor.org/stable/2374092}{Lubotzky 1980}]
 Naj bo $\rho \colon \SL_3(\ZZ) \to \GL_n(\CC)$ upodobitev. Tedaj obstaja upodobitev
 \[
     \textstyle \tilde \rho \colon \SL_3(\CC) \times \SL_3(\widehat{\ZZ}) \to \GL_n(\CC),  
@@ -5026,8 +5059,8 @@ katere zožitev na diagonalno vloženo podgrupo $\SL_3(\ZZ)$ je ravno $\rho$, zo
 
 Izrek sloni na {\definicija Margulisovi superrigidnosti} diskretnih podgrup v Liejevih grupah. Za grupo $\SL_3(\ZZ)$ jo lahko izrazimo na naslednji način.
 
-\begin{izrek}[Margulis 1991]
-Naj bo $\rho \colon \SL_3(\ZZ) \to \GL_n(\CC)$ upodobitev. Tedaj obstaja polinomska upodobitev $\tilde \rho \colon \SL_3(\CC) \to \GL_n(\CC)$, ki se na nekem kongruenčnem jedru $\ker \pi_{n}$ ujema z $\rho$.
+\begin{izrek}[\href{https://link.springer.com/book/9783642057212}{Margulis 1991}]
+Naj bo $\rho \colon \SL_3(\ZZ) \to \GL_n(\CC)$ upodobitev. Tedaj obstaja polinomska upodobitev $\tilde \rho \colon \SL_3(\CC) \to \GL_n(\CC)$, ki se na nekem kongruenčnem jedru $\ker \pi_{N}$ ujema z $\rho$.
 \end{izrek}
 \begin{dokaz}[Ideja dokaza iz \href{https://zbmath.org/?q=an:0579.20038}{(Steinberg 1985)}]
 Grupa $\SL_3(\ZZ)$ je generirana z matrikami $T_{ij} = I + E_{ij}$ za $i \neq j$. Te matrike niso zelo blizu identitete v $\SL_3(\CC)$, zato jih ne moremo potisniti v Liejevo algebro $\slfrak_3(\CC)$ z logaritmom. Lahko pa vseeno formalno izračunamo njihov logaritem. Ker je $E_{ij}^2 = 0$, je $\log T_{ij} = E_{ij} \in \slfrak_3(\CC)$. Z nekaj računanja se prepričamo, da matrike $E_{ij}$ generirajo  Liejevo algebro $\slfrak_3(\CC)$.
@@ -5042,13 +5075,13 @@ Konstrukcija $\tilde \rho$ sloni le na uporabi unipotenih delov $\rho(T_{ij})$. 
 Vsaka upodobitev $\SL_3(\ZZ)$ torej do končnega kvocienta natančno izhaja iz upodobitve $\SL_3(\CC)$. Da pokrijemo še vse možne končne kvociente, upoštevamo še zvezne upodobitve $\SL_3(\widehat{\ZZ})$. Z nekaj truda se da s to intuicijo hitro izpeljati Lubotzkyjev izrek.
 
 \begin{domacanaloga}
-Preberi dokaz Lubotzkyjevega izreka v {\literatura (Putman)}.
+Preberi dokaz Lubotzkyjevega izreka v \href{https://www3.nd.edu/~andyp/notes/RepTheorySLnZ.pdf}{(Putman)}.
 \end{domacanaloga}
 
 \begin{posledica}
 Nerazcepne končnorazsežne kompleksne upodobitve grupe $\SL_3(\ZZ)$ so zožitve tenzorskih produktov nerazcepnih polinomskih upodobitev grupe $\SL_3(\CC)$ in nerazcepnih zveznih upodobitev grupe $\SL_3(\widehat{\ZZ})$.
 \end{posledica}
 
-V posebnem je vseh nerazcepnih upodobitev $\SL_3(\ZZ)$ le števno mnogo, kar je v ostrem nasprotju z upodobitvami $\SL_2(\ZZ)$. 
+V posebnem je vseh nerazcepnih upodobitev $\SL_3(\ZZ)$ le števno mnogo, kar je v ostrem nasprotju z neštevno mnogo upodobitvami $\SL_2(\ZZ)$. Vse povedano se da razširiti na grupe $\SL_m(\ZZ)$ za $m \geq 3$.
 
 \end{document}
