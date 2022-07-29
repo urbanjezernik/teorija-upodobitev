@@ -273,7 +273,7 @@ Teorija upodobitev se ukvarja z \emph{linearizacijo} abstraktnih objektov, predv
     \item Namesto abstraktne obravnave dano grupo na različne načine uresničimo z obrnljivimi matrikami, kar nam z močnimi orodji linearne algebre omogoča bolj transparenten študij njihovih lastnosti. Tukaj nas zanimajo predvsem najenostavnejši načini predstavitev grup z matrikami.
     
     \begin{zgled}
-        Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta abstraktna grupa izhaja iz simetrij $n$-kotnika v ravnini, s čimer lahko uresničimo njena generatora $s,r$ kot matriki
+        Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta abstraktna grupa izhaja iz simetrij $n$-kotnika v ravnini, s čimer lahko uresničimo njena generatorja $s,r$ kot matriki
         \[
             s \mapsto \begin{pmatrix}
                 0 & 1 \\ 1 & 0
@@ -300,7 +300,7 @@ Pri predmetu bomo najprej vzpostavili temelje teorije upodobitev (osnovne defini
 
 \subsection*{Literatura}
 
-Pri predstavitvi temeljev teorije upodobitev uporabljamo jezik homomorfizmov grup (in ne modulov), tako da porabimo več časa za osnove, a je snov predstavljena bolj konkretno. To pride prav predvsem pri razstavljanju dane upodobitve na nerazcepne podupodobitve, kjer sledimo pristopu Kowalskega in opazujemo matrične koeficiente. Karakterje obdelamo v jeziku nekomutativne Fourierove transformacije kot Diaconis. S tem tudi pripravimo teren za kasnejše aplikacije teorije upodobitev. Omenimo kolobar virtualnih karakterjev in kot Serre dokažemo Artinov izrek. Razširjena zgleda upodbitev simetričnih grup in splošnih linearnih grup nad končnim poljem pretežno izvedemo s pomočjo monografije Fultona in Harrisa. Pri upodobitvah simetrične grupe določene aspekte izrazimo s Fourierovo transformacijo, pri linearnih grupah pa sledeč Bushnell in Henniart nekoliko bolj naravno predstavimo ostne upodobitve. V aplikacijah teorije upodobitev predstavimo Rothov izrek po Gowersovo in raziščemo soroden problem za nekomutativne grupe, kjer analitične argumente napravimo kot Eberhard. Pri prepoznavanju komutatorjev nam prav pridejo razvita Fourierova orodja, slučajne sprehode pa raziščemo podobno kot Diaconis. Kompaktne grupe in povezavo s klasično Fourierovo analizo črpamo iz Kowalskega, upodobitve Liejevih grup pa prikažemo kot Fulton in Harris, pri čemer se za integriranje Liejevih homomorfizmov naslonimo na Hallovo knjigo. Diskretne grupe obdelamo sledeč Conradu in Putmanu, razliko med klasičnimi in $p$-adičnimi Liejevimi grupami prikažemo kot Choiy.
+Pri predstavitvi temeljev teorije upodobitev uporabljamo jezik homomorfizmov grup (in ne modulov), tako da porabimo več časa za osnove, a je snov predstavljena bolj konkretno. To pride prav predvsem pri razstavljanju dane upodobitve na nerazcepne podupodobitve, kjer sledimo pristopu Kowalskega in opazujemo matrične koeficiente. Karakterje obdelamo v jeziku nekomutativne Fourierove transformacije kot Diaconis. S tem tudi pripravimo teren za kasnejše aplikacije teorije upodobitev. Omenimo kolobar virtualnih karakterjev in kot Serre dokažemo Artinov izrek. Razširjena zgleda upodobitev simetričnih grup in splošnih linearnih grup nad končnim poljem pretežno izvedemo s pomočjo monografije Fultona in Harrisa. Pri upodobitvah simetrične grupe določene aspekte izrazimo s Fourierovo transformacijo, pri linearnih grupah pa sledeč Bushnell in Henniart nekoliko bolj naravno predstavimo ostne upodobitve. V aplikacijah teorije upodobitev predstavimo Rothov izrek po Gowersovo in raziščemo soroden problem za nekomutativne grupe, kjer analitične argumente napravimo kot Eberhard. Pri prepoznavanju komutatorjev nam prav pridejo razvita Fourierova orodja, slučajne sprehode pa raziščemo podobno kot Diaconis. Kompaktne grupe in povezavo s klasično Fourierovo analizo črpamo iz Kowalskega, upodobitve Liejevih grup pa prikažemo kot Fulton in Harris, pri čemer se za integriranje Liejevih homomorfizmov naslonimo na Hallovo knjigo. Diskretne grupe obdelamo sledeč Conradu in Putmanu, razliko med klasičnimi in $p$-adičnimi Liejevimi grupami prikažemo kot Choiy.
 
 \begin{itemize}
 \item {\literatura E. Kowalski, {\em \href{https://people.math.ethz.ch/~kowalski/representation-theory.pdf}{An Introduction to the Representation Theory of Groups}}, American Mathematical Society, 2014.} 
@@ -642,7 +642,7 @@ Naj bo $\Phi$ spletična upodobitev grupe $G$. Tedaj prostori $\ker \Phi$, $\ima
 \end{trditev}
 
 \begin{zgled}
-Naj bo $G$ grupa in $\rho$ njena upodobitev na prostoru $V$. Podprostor prostora $V$, na katerem grupa $G$ deluje trivialno, je vselej $G$-invarianten. Največji tak podprostor je ravno prostor vseh fiksnih vektorjev $V^G$. Videli smo že, da lahko ta prostor identifiricamo z množico spletičen $\hom_G(\11, V)$.
+Naj bo $G$ grupa in $\rho$ njena upodobitev na prostoru $V$. Podprostor prostora $V$, na katerem grupa $G$ deluje trivialno, je vselej $G$-invarianten. Največji tak podprostor je ravno prostor vseh fiksnih vektorjev $V^G$. Videli smo že, da lahko ta prostor identificiramo z množico spletičen $\hom_G(\11, V)$.
     
 Oglejmo si sedaj še dual zgodnje konstrukcije. Naj bo $V_1 = \langle \rho(g) \cdot v - v \mid v \in V, \ g \in G \rangle$. Prostor $V_1$ je $G$-invarianten podprostor prostora $V$, zato kvocient $V/V_1$ podeduje linearno delovanje grupe $G$. Po konstrukciji je to delovanje trivialno in prostor $V/V_1$ je največji kvocient prostora $V$, na katerem grupa $G$ deluje trivialno. Kvocient $V/V_1$ označimo z $V_G$ in mu pravimo {\definicija prostor koinvariant} upodobitve $\rho$.
 
@@ -952,7 +952,7 @@ Poseben primer opisane indukcije dobimo z enorazsežnimi upodobitvami grupe $H$.
     za $x,y \in F, \ g \in S_n$. Alternirajoča grupa $A_n$ je v jedru te upodobitve, ki zato izhaja iz kvocienta $S_n/A_n \cong \ZZ/2\ZZ$. Opisana upodobitev je natanko permutacijska upodobitev grupe $\ZZ/2\ZZ$ na prostoru $F[\{ 1, 2 \}]$, inducirana upodobitev pa je ravno restrikcija te upodobitve vzdolž kvocientne projekcije $S_n \to S_n/A_n$. Inducirano upodobitev lahko zapišemo kot vsoto dveh enorazsežnih podupodobitev. Prva je podupodobitev z diagonalnim prostorom $\{ (x,x) \mid x \in F \} \leq F^2$, ta je izomorfna trivialni upodobitvi $\11$. Druga pa je podupodobitev z antidiagonalnim prostorom $\{ (x, -x) \mid x \in F \} \leq F^2$. Ta ni trivialna, saj element $(1 \ 2)$ deluje na $(1, -1)$ kot množenje z $-1 \in F$. Ta podupodobitev je zato izomorfna predznačni upodobitvi $\sgn$. Nazadnje je torej $\Ind^{S_n}_{A_n}(\11) \cong \11 \oplus \sgn$.
 \end{zgled}
 
-Naj bosta $G,H$ grupi s homomorfizmom $\phi \colon H \to G$. Ni težko preveriti, da indukcija naravno presene spletično med dvema upodobitvama grupe $H$ v spletično med induciranima upodobitvama. Indukcija je torej funktor iz kategorije $\Rep_H$ v kategorijo $\Rep_G$.
+Naj bosta $G,H$ grupi s homomorfizmom $\phi \colon H \to G$. Ni težko preveriti, da indukcija naravno prenese spletično med dvema upodobitvama grupe $H$ v spletično med induciranima upodobitvama. Indukcija je torej funktor iz kategorije $\Rep_H$ v kategorijo $\Rep_G$.
 
 Kadar imamo na voljo tri grupe, povezane s homomorfizmoma $\phi_2 \colon H_2 \to H_1$ in $\phi_1 \colon H_1 \to G$, lahko indukcijo izvedemo dvakrat zaporedoma. Upodobitvi $\rho$ v $\Rep_{H_2}$ tako priredimo upodobitev $\Ind^{G}_{H_1}(\Ind^{H_1}_{H_2}(\rho))$ v $\Rep_{G}$. Od grupe $H_2$ do $G$ imamo neposredno povezavo prek homomorfizma $\phi_1 \circ \phi_2$, s čimer dobimo upodobitev $\Ind^G_{H_2}(\rho)$. Ni težko preveriti, da sta dobljeni upodobitvi izomorfni. Tej lastnosti indukcije pravimo {\definicija tranzitivnost}.
 
@@ -960,7 +960,7 @@ Kadar imamo na voljo tri grupe, povezane s homomorfizmoma $\phi_2 \colon H_2 \to
     Dokaži tranzitivnost indukcije.
 \end{domacanaloga}
 
-S tranzitivnostjo indukcije lahko vsako indukcijo vzdolž homomorfizma $\phi \colon H \to G$ razdelimo na tri korake: najprej induciramo vzdolž kvocientne projekcije $H \to H/\ker \phi$, nato vzdolž izomorfizma $H/\ker \phi \to \image \phi$ in nazadnje vzdolž vložitve $\image \phi \to G$. Vsako od teh posameznih indukcij razumemo precej dobro in zato lahko to znanje uporabimo pri razumevanju indukcije vzdolž $\phi$. Na primer, iz povedanega in razmiselekov o preprostejših indukcijah, ki smo jih že naredili, sledi, da je razsežnost inducirane upodobitve $\rho$ grupe $H$ na prostoru $V$ enaka
+S tranzitivnostjo indukcije lahko vsako indukcijo vzdolž homomorfizma $\phi \colon H \to G$ razdelimo na tri korake: najprej induciramo vzdolž kvocientne projekcije $H \to H/\ker \phi$, nato vzdolž izomorfizma $H/\ker \phi \to \image \phi$ in nazadnje vzdolž vložitve $\image \phi \to G$. Vsako od teh posameznih indukcij razumemo precej dobro in zato lahko to znanje uporabimo pri razumevanju indukcije vzdolž $\phi$. Na primer, iz povedanega in razmislekov o preprostejših indukcijah, ki smo jih že naredili, sledi, da je razsežnost inducirane upodobitve $\rho$ grupe $H$ na prostoru $V$ enaka
 \[
     \textstyle \deg(\Ind^G_H(\rho)) = 
     |G:\image \phi| \cdot \dim(V^{\ker \phi}).
@@ -1123,7 +1123,7 @@ $(\Leftarrow)$: Naj bo $\rho \colon G \to \GL(V)$ upodobitev, v kateri je vsaka 
 Naj bo $\rho$ upodobitev, v kateri je vsaka podupodobitev komplementirana. Tedaj ima $\rho$ nerazcepno podupodobitev.
 \end{domacanaloga}
 
-Naj bo $W$ vsota vseh $G$-invariantnih podprostorov v $V$, ki so nerazcepne upodobitve, se pravi $W = \sum_{i \in I} V_i$, a ta vsota ni nujno direktna. Po pomožni trditvi je $W \neq 0$. Po predpostavki je $W$ komplementirana z $G$-invariantnim podprostorom $U$. Po pomožni trditvi ima tudi $U$ nerazcepno podupodobitev, zato je ta vsebovana v $W$, kar implicira $W = V$. Dokažimo zdaj še, da je $W$ \emph{direktna} vsota podprostorov $V_i$. V ta namen naj bo $J$ maksimalna podmnožica indeksne množice $I$, za katero je $\sum_{j \in J} V_j$ direktna vsota. Taka podmnožica obstaj po Zornovi lemi. Označimo $\tilde V = \bigoplus_{j \in J} V_j$. Če velja $\tilde V \neq V$, potem mora za nek $i \in I \backslash J$ po nerazcepnosti veljati $V_i \cap \tilde V$, kar pa je v nasprotju z maksimalnostjo množice $J$. Tako je res $\tilde V = V$ in upodobitev $V$ je polenostavna. \kljuka
+Naj bo $W$ vsota vseh $G$-invariantnih podprostorov v $V$, ki so nerazcepne upodobitve, se pravi $W = \sum_{i \in I} V_i$, a ta vsota ni nujno direktna. Po pomožni trditvi je $W \neq 0$. Po predpostavki je $W$ komplementirana z $G$-invariantnim podprostorom $U$. Po pomožni trditvi ima tudi $U$ nerazcepno podupodobitev, zato je ta vsebovana v $W$, kar implicira $W = V$. Dokažimo zdaj še, da je $W$ \emph{direktna} vsota podprostorov $V_i$. V ta namen naj bo $J$ maksimalna podmnožica indeksne množice $I$, za katero je $\sum_{j \in J} V_j$ direktna vsota. Taka podmnožica obstaja po Zornovi lemi. Označimo $\tilde V = \bigoplus_{j \in J} V_j$. Če velja $\tilde V \neq V$, potem mora za nek $i \in I \backslash J$ po nerazcepnosti veljati $V_i \cap \tilde V$, kar pa je v nasprotju z maksimalnostjo množice $J$. Tako je res $\tilde V = V$ in upodobitev $V$ je polenostavna. \kljuka
 \end{dokaz}
 
 \begin{zgled}
@@ -1369,7 +1369,7 @@ Izpostavimo pomembno posledico, ki nam pove, da lahko vse nerazcepne upodobitve 
 Vsaka končnorazsežna nerazcepna upodobitev dane grupe je uresničljiva kot podupodobitev regularne.
 \end{posledica}
 
-V posebnem smo tekom zadnjega dokaza izpeljali, da so po izbiri baze matrični koeficienti končnorazsežne nerazcepne upodobitve nad algebraično zaprtim poljem $\pi$ vselej linearno neodvisni.\footnote{Temu dejstvu včasih pravimo \emph{Burnsideov izrek o neracepnosti}.} Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodbitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
+V posebnem smo tekom zadnjega dokaza izpeljali, da so po izbiri baze matrični koeficienti končnorazsežne nerazcepne upodobitve nad algebraično zaprtim poljem $\pi$ vselej linearno neodvisni.\footnote{Temu dejstvu včasih pravimo \emph{Burnsideov izrek o nerazcepnosti}.} Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodobitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
 
 Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve \emph{končno mnogo} paroma neizomorfnih nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam po izbiri baze podari svoje matrične koeficiente. Ti razpenjajo prostore, ki so enakim izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med sabo. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$. 
 
@@ -1490,7 +1490,7 @@ zato je sled induciranega delovanja $g$ na $V r_0$ enaka $\chi_{\rho}(r_0 g r_0^
     Ta karakter bi lahko hitreje izračunali s pomočjo znane identifikacije $\rho_{\fun} \cong \Ind^G_1(\11)$. V tem primeru je $R = G$ in za $g \neq 1$ je vsota v formuli za induciran karakter prazna, torej se evalvira v $0$, za $g = 1$ pa dobimo $\sum_{r \in G} \chi_{\11}(1) = |G|$.
 \end{zgled}
 
-Lastnost karakterjev kot srža upodobitve se prenese na končnorazsežne polenostavne upodobitve, \emph{če je le polje ničelne karakeristike}. Karakter dane polenostavne upodobitve $\rho$ namreč lahko razvijemo kot
+Lastnost karakterjev kot srža upodobitve se prenese na končnorazsežne polenostavne upodobitve, \emph{če je le polje ničelne karakteristike}. Karakter dane polenostavne upodobitve $\rho$ namreč lahko razvijemo kot
 \[
     \textstyle \chi_{\rho} = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot \chi_{\pi}.
 \]
@@ -1701,7 +1701,7 @@ V skladu z običajno terminologijo za funkcijo $f \in \fun(G,F)$ označimo $||f|
 
 \subsection{Razredne funkcije}
 
-Karakterji niso poljubne funkcije v $\fun(G,F)$, temveč vselej pripadajo prostoru $\fun_{\cl}(G,F)$ razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev tudi linearno nedovisni. S pomočjo ortonormiranosti karakterjev bomo sedaj dokazali, da tvorijo celo \emph{bazo} prostora razrednih funkcij. 
+Karakterji niso poljubne funkcije v $\fun(G,F)$, temveč vselej pripadajo prostoru $\fun_{\cl}(G,F)$ razrednih funkcij. Vemo že tudi, da so karakterji nerazcepnih upodobitev tudi linearno neodvisni. S pomočjo ortonormiranosti karakterjev bomo sedaj dokazali, da tvorijo celo \emph{bazo} prostora razrednih funkcij. 
 
 \begin{izrek}[o bazi razrednih funkcij]
     Naj bo $G$ grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj karakterji nerazcepnih upodobitev tvorijo ortonormirano bazo prostora $\fun_{\cl}(G,F)$.
@@ -2121,7 +2121,7 @@ ki pa je le \emph{homomorfizem abelovih grup}. Ob koncu razdelka o indukciji smo
     \textstyle \Ind^G_H(\Res^G_H(\rho) \otimes \sigma) \cong
         \rho \otimes \Ind^G_H(\sigma),
 \]
-ki ga zdaj lahko interpretiramo s karakterji teh upodobitev in skelenemo, da je slika $\Ind(R(H))$ \emph{ideal} v $R(G)$.
+ki ga zdaj lahko interpretiramo s karakterji teh upodobitev in sklenemo, da je slika $\Ind(R(H))$ \emph{ideal} v $R(G)$.
 
 \begin{zgled}
 Naj bo $H$ ciklična grupa. Definirajmo indikatorsko funkcijo generatorjev grupe $H$ kot
@@ -3459,7 +3459,7 @@ Množica $A$ ima torej v aritmetičnem zaporedju $P_i$ gostoto za $\frac{c}{2} \
 
 \subsubsection{Iteracija}
 
-Povzemimo. Če množica $A$ gostote $\delta$ nima aritmetičnih zaporedij dolžine $3$, potem smo našli aritmetično zaporedje $P_i$, v katerem ima $A$ gostoto vsaj $\delta + \frac{c}{2} \delta^2$. Ta postopek zdaj iteriramo.\footnote{Ne bomo preveč nantančni glede iteracije. V grobem lahko iz aritmetičnega zaporedja $P_i$ preidemo na ciklično grupo enake moči (morda ne več praštevilske) in potem ponovimo argument v tej ciklični grupi.} Če množica $A \cap P_i$ nima aritmetičnih zaporedij dolžine $3$, potem najdemo aritmetično zaporedje dolžine med $c\sqrt{|P_i|}$ in $(1-c)\sqrt{|P_i|}$, v katerem ima $A$ gostoto vsaj $\delta + 2 \frac{c}{2} \delta^2$, in tako dalje. Ker gostota na nobeni točki ne more preseči vrednosti $1$, se ta postopek gotovo ustavi po končno mnogo korakih. Na tej točki najdemo aritmetično zaporedje dolžine $3$ v $A$, če je le velikost množice $P_i$ do te točke dovolj velika. Iz podrobne analize večanja gostote in spreminjaja velikosti množic $P_i$ se da izpeljati,\footnote{Glej \href{https://arxiv.org/pdf/2206.10037.pdf}{(Peluse 2022)}.} da ta argument res deluje, če je le $\delta \geq C/\log \log p$ za neko konstanto $C$. S tem je Rothov izrek dokazan.
+Povzemimo. Če množica $A$ gostote $\delta$ nima aritmetičnih zaporedij dolžine $3$, potem smo našli aritmetično zaporedje $P_i$, v katerem ima $A$ gostoto vsaj $\delta + \frac{c}{2} \delta^2$. Ta postopek zdaj iteriramo.\footnote{Ne bomo preveč natančni glede iteracije. V grobem lahko iz aritmetičnega zaporedja $P_i$ preidemo na ciklično grupo enake moči (morda ne več praštevilske) in potem ponovimo argument v tej ciklični grupi.} Če množica $A \cap P_i$ nima aritmetičnih zaporedij dolžine $3$, potem najdemo aritmetično zaporedje dolžine med $c\sqrt{|P_i|}$ in $(1-c)\sqrt{|P_i|}$, v katerem ima $A$ gostoto vsaj $\delta + 2 \frac{c}{2} \delta^2$, in tako dalje. Ker gostota na nobeni točki ne more preseči vrednosti $1$, se ta postopek gotovo ustavi po končno mnogo korakih. Na tej točki najdemo aritmetično zaporedje dolžine $3$ v $A$, če je le velikost množice $P_i$ do te točke dovolj velika. Iz podrobne analize večanja gostote in spreminjaja velikosti množic $P_i$ se da izpeljati,\footnote{Glej \href{https://arxiv.org/pdf/2206.10037.pdf}{(Peluse 2022)}.} da ta argument res deluje, če je le $\delta \geq C/\log \log p$ za neko konstanto $C$. S tem je Rothov izrek dokazan.
 
 \subsection{Onkraj Rothovega izreka}
 
