@@ -3471,6 +3471,16 @@ Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiš
 Ali je mogoče z ustrezno posplošitvijo Rothovega izreka dokazati, da praštevila vsebujejo aritmetična zaporedja dolžine $k$ za vsak $k \geq 3$? Obstoj takih zaporedij je sicer znan iz \href{https://en.wikipedia.org/wiki/Green–Tao_theorem}{(Green-Tao 2004)}, ki temelji na razširitvi Szemerédijevega izreka, a ne v smeri nižanja meje gostote, temveč v uporabi izreka na specifičnih redkih podmnožicah.
 \end{odprtproblem}
 
+\begin{domacanaloga}
+S harmonično analizo dokaži, da ima za vsak $n \geq 3$ Fermatova enačba $x^n + y^n = z^n$ netrivialno ($xyz \neq 0$) rešitev v $\FF_p$ za vsako dovolj veliko (v odvisnosti od $n$) praštevilo $p$. Eden izmed pristopov je, da število rešitev enačbe izraziš s Fourierovo inverzijo funkcije $1_0$ v aditivni grupi $\FF_p$ kot
+\[
+    \sum_{x,y,z \in \FF_p} 1_{0}(x^n + y^n - z^n)
+    = \frac{1}{p} \sum_{x, y, z, j \in \FF_p} \zeta^{j(x^n + y^n - z^n)}
+    = \frac{1}{p} \sum_{j \in \FF_p} S_j \cdot S_j \cdot \overline{S_j},
+\]
+kjer je $S_j = \sum_{a \in \FF_p} \zeta^{j a^n}$. Določi glavni del ter omeji prispevke netrivialnih karakterjev.
+\end{domacanaloga}
+
 \section{Podmnožice brez produktov}
 
 \subsection{Antipodgrupe}
