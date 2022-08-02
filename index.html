@@ -60,7 +60,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 01. 08. 2022
+            Zadnja posodobitev: 02. 08. 2022
           </div>
 
           <div id="spinner" class="text-center">
@@ -4251,7 +4251,16 @@
             class="math inline">\(0\)</span></td>
             </tr>
             </tbody>
-            </table></li>
+            </table>
+            <div class="domacanaloga">
+            <p><strong>Domača naloga 3.3</strong>. Izračunaj tabelo
+            kompleksnih karakterjev kvaternionske grupe <span
+            class="math inline">\(Q_8 = \{ \pm 1, \pm i, \pm j, \pm k
+            \}\)</span>, v kateri velja <span class="math inline">\(i^2
+            = j^2 = k^2 = ijk = -1\)</span>. Primerjaj jo s tabelo
+            karakterjev grupe <span
+            class="math inline">\(D_8\)</span>.</p>
+            </div></li>
             <li><p>Opazujmo simetrično grupo <span
             class="math inline">\(S_n\)</span> nad poljem <span
             class="math inline">\(\mathbf{C}\)</span>. Vsako njeno
@@ -4274,7 +4283,7 @@
             <span class="math inline">\(m\)</span> v <span
             class="math inline">\(\sigma\)</span>.</p>
             <div class="domacanaloga">
-            <p><strong>Domača naloga 3.3</strong>. Konjugiranostni
+            <p><strong>Domača naloga 3.4</strong>. Konjugiranostni
             razredi v <span class="math inline">\(S_n\)</span> so
             določeni s cikličnim tipom. Natančneje, če je <span
             class="math inline">\((\lambda_1, \lambda_2, \dots,
@@ -4294,11 +4303,11 @@
             class="math inline">\(p(n) = \mathop{\mathrm{k}}(S_n) =
             |\mathop{\mathrm{Irr}}(S_n)|\)</span>. Splošna eksplicitna
             formula za to število <em>ne</em> obstaja, poznamo pa njeno
-            asimptotsko oceno<a href="#fn39" class="footnote-ref"
-            id="fnref39" role="doc-noteref"><sup>39</sup></a> <span
-            class="math display">\[p(n) \sim \frac{1}{4 n \sqrt{3}}
-            e^{\pi \sqrt{\frac{2n}{3}}}\]</span> za <span
-            class="math inline">\(n \to \infty\)</span>.</p>
+            asimptotsko oceno <span class="math display">\[p(n) \sim
+            \frac{1}{4 n \sqrt{3}} e^{\pi \sqrt{\frac{2n}{3}}}\]</span>
+            za <span class="math inline">\(n \to \infty\)</span> <a
+            href="https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF">(Hardy-Ramanujan
+            1918)</a>.</p>
             <p>V konkretnem primeru <span class="math inline">\(n =
             3\)</span> velja <span class="math inline">\(p(3) =
             3\)</span>, namreč <span class="math inline">\(3 = 3 = 2 + 1
@@ -4338,9 +4347,9 @@
             funkcij sestoji iz karakterističnih funkcij konjugiranostnih
             razredov v <span class="math inline">\(G\)</span>. Razvoj te
             baze po karakterjih nam podaja še eno relacijo med
-            karakterji, ki je ortogonalna<a href="#fn40"
-            class="footnote-ref" id="fnref40"
-            role="doc-noteref"><sup>40</sup></a> ortonormiranosti.</p>
+            karakterji, ki je ortogonalna<a href="#fn39"
+            class="footnote-ref" id="fnref39"
+            role="doc-noteref"><sup>39</sup></a> ortonormiranosti.</p>
             <div class="posledica">
             <p><strong>Posledica 3.3</strong>. Naj bo <span
             class="math inline">\(G\)</span> končna grupa nad
@@ -4492,9 +4501,9 @@
             vrednosti <span class="math inline">\(2,0,-1,0,2\)</span>. S
             tem smo nazadnje določili celotno tabelo karakterjev grupe
             <span class="math inline">\(S_4\)</span> nad <span
-            class="math inline">\(\mathbf{C}\)</span>.<a href="#fn41"
-            class="footnote-ref" id="fnref41"
-            role="doc-noteref"><sup>41</sup></a></p>
+            class="math inline">\(\mathbf{C}\)</span>.<a href="#fn40"
+            class="footnote-ref" id="fnref40"
+            role="doc-noteref"><sup>40</sup></a></p>
             <table>
             <caption>Tabela karakterjev <span
             class="math inline">\(S_4\)</span></caption>
@@ -4673,8 +4682,8 @@
             </div>
             <p>V posebnem je vsaka endospletična regularne upodobitve
             enaka evalvaciji Fourierovi transformacije v neki fiksni
-            funkciji.<a href="#fn42" class="footnote-ref" id="fnref42"
-            role="doc-noteref"><sup>42</sup></a> Nekoliko natančneje si
+            funkciji.<a href="#fn41" class="footnote-ref" id="fnref41"
+            role="doc-noteref"><sup>41</sup></a> Nekoliko natančneje si
             poglejmo, kaj je ta evalvacija. Za funkciji <span
             class="math inline">\(f,g \in
             \mathop{\mathrm{fun}}(G,F)\)</span> je <span
@@ -4969,8 +4978,8 @@
             Implementacija predstavljenega algoritma za izračun tabele
             karakterjev nad <span
             class="math inline">\(\mathbf{C}\)</span> v programskem
-            jeziku <code>GAP</code><a href="#fn43" class="footnote-ref"
-            id="fnref43" role="doc-noteref"><sup>43</sup></a> je
+            jeziku <code>GAP</code><a href="#fn42" class="footnote-ref"
+            id="fnref42" role="doc-noteref"><sup>42</sup></a> je
             dostopna <a
             href="https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g">tukaj</a>.</p>
             <div class="zgled">
@@ -5089,8 +5098,8 @@
             enaka <span class="math inline">\(\chi_{\rho}(1)\)</span>.
             Iz tabele karakterjev grupe <span
             class="math inline">\(A_5\)</span> pa je jasno, da takega
-            karakterja ni.<a href="#fn44" class="footnote-ref"
-            id="fnref44" role="doc-noteref"><sup>44</sup></a></p>
+            karakterja ni.<a href="#fn43" class="footnote-ref"
+            id="fnref43" role="doc-noteref"><sup>43</sup></a></p>
             </div>
             <p>Predstavljeni algoritem ima mnogo pomanjkljivosti. V
             programskem jeziku <code>GAP</code> je za izračun tabele
@@ -5151,9 +5160,9 @@
             komutativen podkolobar v <span
             class="math inline">\(\mathop{\mathrm{fun}}_{\mathop{\mathrm{cl}}}(G,F)\)</span>,
             ki ga imenujemo <span><strong><em>kolobar virtualnih
-            karakterjev</em></strong></span>.<a href="#fn45"
-            class="footnote-ref" id="fnref45"
-            role="doc-noteref"><sup>45</sup></a></p>
+            karakterjev</em></strong></span>.<a href="#fn44"
+            class="footnote-ref" id="fnref44"
+            role="doc-noteref"><sup>44</sup></a></p>
             <p>Naj bo <span class="math inline">\(H\)</span> podgrupa v
             <span class="math inline">\(G\)</span>. Restrikcija vzdolž
             vložitve <span class="math inline">\(H\)</span> v <span
@@ -5305,8 +5314,8 @@
             <p>Najprej si oglejmo nekaj dodatnih lastnosti, ki jih imajo
             karakterji kompleksnih upodobitev. Njihove vrednosti namreč
             niso čisto poljubna kompleksna števila, temveč so
-            algebraična cela števila<a href="#fn46" class="footnote-ref"
-            id="fnref46" role="doc-noteref"><sup>46</sup></a> omejene
+            algebraična cela števila<a href="#fn45" class="footnote-ref"
+            id="fnref45" role="doc-noteref"><sup>45</sup></a> omejene
             absolutne vrednosti.</p>
             <div class="trditev">
             <p><strong>Trditev 3.6</strong>. Naj bo <span
@@ -5326,8 +5335,8 @@
             \mathop{\mathrm{id}}\)</span>, zato je <span
             class="math inline">\(\rho(g)\)</span> linearna preslikava
             končnega reda. Take preslikave so diagonalizabilne.<a
-            href="#fn47" class="footnote-ref" id="fnref47"
-            role="doc-noteref"><sup>47</sup></a> V posebnem je zato
+            href="#fn46" class="footnote-ref" id="fnref46"
+            role="doc-noteref"><sup>46</sup></a> V posebnem je zato
             vsaka lastna vrednost <span class="math inline">\(\lambda
             \in \mathop{\mathrm{Spec}}(\rho(g))\)</span> končnega reda v
             <span class="math inline">\(\mathbf{C}^*\)</span>. S tem je
@@ -5461,6 +5470,31 @@
             class="math inline">\(\mathop{\mathrm{fun}}(G,\mathbf{C})\)</span>
             in koeficienti razvoja razrednih funkcij po karakterjih se
             ne spremenijo.</p>
+            <div class="domacanaloga">
+            <p><strong>Domača naloga 3.5</strong>. Oglejmo si še eno
+            aplikacijo restriktivnih vrednosti kompleksnih karakterjev.
+            Naj bo <span class="math inline">\(G\)</span> končna grupa
+            in <span class="math inline">\(\rho\)</span> njena poljubna
+            <em>zvesta</em> končnorazsežna kompleksna upodobitev. Tedaj
+            obstaja <span class="math inline">\(N\)</span>, tako da je
+            vsaka nerazcepna kompleksna upodobitev grupe <span
+            class="math inline">\(G\)</span> podupodobitev <span
+            class="math inline">\(\rho^{\otimes N}\)</span>.</p>
+            <p>Dokaza se lahko lotiš tako, da fiksiraš nerazcepno
+            upodobitev <span class="math inline">\(\pi \in
+            \mathop{\mathrm{Irr}}(G)\)</span> in opazuješ <em>rodovno
+            funkcijo</em> večkratnosti, se pravi formalno vsoto <span
+            class="math inline">\(F(X) = \sum_{k = 0}^{\infty}
+            \mathop{\mathrm{mult}}_{\rho^{\otimes k}}(\pi) X^k\)</span>.
+            Dovolj bo premisliti, da je ta rodovna funkcija neničelna.
+            Izrazi vsak koeficient <span
+            class="math inline">\(\mathop{\mathrm{mult}}_{\rho^{\otimes
+            k}}(\pi)\)</span> s pomočjo skalarnega produkta in se na ta
+            način prepričaj, da ima <span
+            class="math inline">\(F(X)\)</span> pol pri <span
+            class="math inline">\(X = 1/\deg \rho\)</span>, zato je res
+            neničelna.</p>
+            </div>
             <p>Osredotočimo se sedaj še na upodobitveni prostor. Naj bo
             <span class="math inline">\(\rho\)</span> kompleksna
             upodobitev grupe <span class="math inline">\(G\)</span> na
@@ -5489,8 +5523,8 @@
             prostora <span class="math inline">\(V\)</span> s skalarnim
             produktom <span class="math inline">\(\langle \cdot, \cdot
             \rangle\)</span>. Seveda ni vsaka upodobitev končne grupe
-            unitarna,<a href="#fn48" class="footnote-ref" id="fnref48"
-            role="doc-noteref"><sup>48</sup></a> je pa vsaka upodobitev
+            unitarna,<a href="#fn47" class="footnote-ref" id="fnref47"
+            role="doc-noteref"><sup>47</sup></a> je pa vsaka upodobitev
             <em>unitarizabilna</em>.</p>
             <div class="trditev">
             <p><strong>Trditev 3.7</strong>. Naj bo <span
@@ -5595,13 +5629,13 @@
             končne grupe dosegli ultimativen cilj teorije upodobitev.
             Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves
             ne spregledamo gozda. Grupe namreč praviloma ne nastopajo
-            posamično, temveč kot del večjih družin.<a href="#fn49"
-            class="footnote-ref" id="fnref49"
-            role="doc-noteref"><sup>49</sup></a> V tem poglavju si bomo
+            posamično, temveč kot del večjih družin.<a href="#fn48"
+            class="footnote-ref" id="fnref48"
+            role="doc-noteref"><sup>48</sup></a> V tem poglavju si bomo
             podrobneje pogledali dve temeljni družini grup, in sicer
             simetrične grupe ter splošne linearne grupe nad končnim
-            poljem.<a href="#fn50" class="footnote-ref" id="fnref50"
-            role="doc-noteref"><sup>50</sup></a> Njuno teorijo
+            poljem.<a href="#fn49" class="footnote-ref" id="fnref49"
+            role="doc-noteref"><sup>49</sup></a> Njuno teorijo
             upodobitev bomo obravnavali celostno.</p>
             <h2 id="simetrične-grupe">Simetrične grupe</h2>
             <p>Opazujmo simetrično grupo <span
@@ -5725,8 +5759,8 @@
             S_n\)</span> <em>kvečjemu en</em> zapis v obliki <span
             class="math inline">\(x = qp\)</span> za <span
             class="math inline">\(p \in P, q \in Q\)</span>,<a
-            href="#fn51" class="footnote-ref" id="fnref51"
-            role="doc-noteref"><sup>51</sup></a> torej ima zadnja vsota
+            href="#fn50" class="footnote-ref" id="fnref50"
+            role="doc-noteref"><sup>50</sup></a> torej ima zadnja vsota
             kvečjemu en neničeln člen in je torej enaka karakteristični
             funkciji množice <span class="math inline">\(QP = \{ qp \mid
             q \in Q, p \in P \}\)</span>, uteženi s predznakom člena v
@@ -5741,9 +5775,9 @@
             \mathbf{C}) \rangle,\]</span> ki ga imenujemo
             <span><strong><em>Spechtov modul</em></strong></span>. Na
             tem prostoru naravno deluje grupa <span
-            class="math inline">\(S_n\)</span><a href="#fn52"
-            class="footnote-ref" id="fnref52"
-            role="doc-noteref"><sup>52</sup></a>, dobljeno upodobitev
+            class="math inline">\(S_n\)</span><a href="#fn51"
+            class="footnote-ref" id="fnref51"
+            role="doc-noteref"><sup>51</sup></a>, dobljeno upodobitev
             označimo z <span
             class="math inline">\(\rho_{\lambda}\)</span>.</p>
             <div class="izrek">
@@ -6131,16 +6165,16 @@
             primerih obstaja enoličen <em>kvocient</em> <span
             class="math inline">\(D_{\lambda}\)</span> reducirane
             upodobitve, ki je nerazcepen nad <span
-            class="math inline">\(\mathbf{F}_p\)</span>.<a href="#fn53"
-            class="footnote-ref" id="fnref53"
-            role="doc-noteref"><sup>53</sup></a> Izkaže se, da na ta
+            class="math inline">\(\mathbf{F}_p\)</span>.<a href="#fn52"
+            class="footnote-ref" id="fnref52"
+            role="doc-noteref"><sup>52</sup></a> Izkaže se, da na ta
             način dobimo vse nerazcepne modularne upodobitve simetrične
             grupe. Modularni je mnogo bolj mističen od kompleksnega.
             Sodobna teorija upodobitev se povečini ukvarja s tem, kako
             <em>regularna</em> je kategorija upodobitev v odvisnosti od
             praštevila <span class="math inline">\(p\)</span>.<a
-            href="#fn54" class="footnote-ref" id="fnref54"
-            role="doc-noteref"><sup>54</sup></a> V zvezi s tem obstaja
+            href="#fn53" class="footnote-ref" id="fnref53"
+            role="doc-noteref"><sup>53</sup></a> V zvezi s tem obstaja
             mnogo odprtih problemov.</p>
             <div class="odprtproblem">
             <p><strong>Odprt problem 4.1</strong>. Obravnavajmo
@@ -6292,9 +6326,9 @@
             class="math inline">\(H_{\lambda}(i,j)\)</span> množica
             tistih celic, ki so desno ali pod celico <span
             class="math inline">\((i,j)\)</span>, vključivši celico
-            <span class="math inline">\((i,j)\)</span>.<a href="#fn55"
-            class="footnote-ref" id="fnref55"
-            role="doc-noteref"><sup>55</sup></a>
+            <span class="math inline">\((i,j)\)</span>.<a href="#fn54"
+            class="footnote-ref" id="fnref54"
+            role="doc-noteref"><sup>54</sup></a>
             <span><strong><em>Dolžina kljuke</em></strong></span> <span
             class="math inline">\(H_{\lambda}(i,j)\)</span> je enaka
             številu celic v kljuki, se pravi <span
@@ -6801,8 +6835,8 @@
             razširitvi <span class="math inline">\(F\)</span> tega polja
             z ničlama karakterističnega polinoma. Ker je <span
             class="math inline">\(p &gt; 2\)</span>, sta ti dve ničli
-            različni.<a href="#fn56" class="footnote-ref" id="fnref56"
-            role="doc-noteref"><sup>56</sup></a> Razširitev <span
+            različni.<a href="#fn55" class="footnote-ref" id="fnref55"
+            role="doc-noteref"><sup>55</sup></a> Razširitev <span
             class="math inline">\(F/\mathbf{F}_p\)</span> je stopnje
             <span class="math inline">\(2\)</span>, zato jo lahko
             predstavimo kot <span class="math display">\[F \cong
@@ -6843,8 +6877,8 @@
             \neq (0,0) \right\}.\]</span> Konjugiranostni razred je
             torej velikosti <span class="math inline">\(p(p-1)\)</span>.
             Vseh takih razredov je <span class="math inline">\(p
-            (p-1)/2\)</span>.<a href="#fn57" class="footnote-ref"
-            id="fnref57" role="doc-noteref"><sup>57</sup></a></p></li>
+            (p-1)/2\)</span>.<a href="#fn56" class="footnote-ref"
+            id="fnref56" role="doc-noteref"><sup>56</sup></a></p></li>
             </ol>
             <table>
             <caption>Konjugiranostni razredi v <span
@@ -6925,9 +6959,9 @@
             <span><strong><em>nerazcepni torus</em></strong></span>. Za
             razcepni torus velja <span class="math display">\[T_r \cong
             \mathbf{F}_p^* \times \mathbf{F}_p^*,\]</span> nerazcepni
-            torus pa identificiramo kot<a href="#fn58"
-            class="footnote-ref" id="fnref58"
-            role="doc-noteref"><sup>58</sup></a> <span
+            torus pa identificiramo kot<a href="#fn57"
+            class="footnote-ref" id="fnref57"
+            role="doc-noteref"><sup>57</sup></a> <span
             class="math display">\[T_{nr} \cong
             \mathbf{F}_p(\sqrt{\epsilon})^*, \quad
                 \begin{pmatrix}
@@ -7007,9 +7041,9 @@
             tej permutacijski upodobitvi. Ta komplement je do
             izomorfizma natako enolično določen in mu pravimo
             <span><strong><em>Steinbergova
-            upodobitev</em></strong></span>.<a href="#fn59"
-            class="footnote-ref" id="fnref59"
-            role="doc-noteref"><sup>59</sup></a> Vrednosti karakterjev
+            upodobitev</em></strong></span>.<a href="#fn58"
+            class="footnote-ref" id="fnref58"
+            role="doc-noteref"><sup>58</sup></a> Vrednosti karakterjev
             <span class="math inline">\(\mathop{\mathrm{St}}\)</span> ni
             težko izračunati. Račun pokaže <span
             class="math inline">\(\langle \mathop{\mathrm{St}},
@@ -7199,9 +7233,9 @@
             nerazcepnih upodobitev grupe <span
             class="math inline">\(G_p\)</span>. Tem upodobitvam pravimo
             <span><strong><em>upodobitve glavne
-            vrste</em></strong></span>.<a href="#fn60"
-            class="footnote-ref" id="fnref60"
-            role="doc-noteref"><sup>60</sup></a> V primeru, ko je <span
+            vrste</em></strong></span>.<a href="#fn59"
+            class="footnote-ref" id="fnref59"
+            role="doc-noteref"><sup>59</sup></a> V primeru, ko je <span
             class="math inline">\(\chi_1 = \chi_2\)</span>, iz vrednosti
             karakterjev opazimo izomorfizem <span
             class="math inline">\(\pi(\chi, \chi) \cong
@@ -7562,9 +7596,9 @@
             dobimo nerazcepno upodobitev s karakterjem <span
             class="math inline">\(\zeta_{\theta}\)</span>. Taki
             upodobitvi pravimo <span><strong><em>ostna
-            upodobitev</em></strong></span>.<a href="#fn61"
-            class="footnote-ref" id="fnref61"
-            role="doc-noteref"><sup>61</sup></a> Z izračunom skalarnih
+            upodobitev</em></strong></span>.<a href="#fn60"
+            class="footnote-ref" id="fnref60"
+            role="doc-noteref"><sup>60</sup></a> Z izračunom skalarnih
             produktov se ni težko prepričati, da sta dve taki upodobitvi
             izomorfni, če in samo če sta regularna karakterja v isti
             Galoisjevi orbiti. Število ostnih upodobitev je zato enako
@@ -7573,9 +7607,9 @@
             indukcij. Z nekaj truda bi lahko izpeljali eksplicitno
             konstrukcijo teh upodobitev. Izkaže se, da ostnih upodobitev
             <em>ni</em> mogoče opisati kot neposredno induciranih iz
-            podgrup <span class="math inline">\(G_p\)</span>.
-            Najpreprostejši znan opis je preko Weilove upodobitve
-            <span>(Bushnell-Henniart 2006)</span>.</p>
+            podgrup <span class="math inline">\(G_p\)</span>.<a
+            href="#fn61" class="footnote-ref" id="fnref61"
+            role="doc-noteref"><sup>61</sup></a></p>
             <p>Povzemimo. Skupaj smo našli naslednje upodobitve:</p>
             <ul>
             <li><p>linearne: <span class="math inline">\(p-1\)</span>
@@ -12424,47 +12458,40 @@
             permutacije obravnavamo kot cikle dolžine <span
             class="math inline">\(1\)</span>.<a href="#fnref38"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn39" role="doc-endnote"><p><a
-            href="https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF">G.
-            H. Hardy in S. Ramanujan, <em>Asymptotic formulae in
-            combinatory analysis</em>, Proceedings of the London
-            Mathematical Society, Second Series, <strong>17</strong>
-            (1918) 75–115.</a><a href="#fnref39" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li id="fn40" role="doc-endnote"><p>Relaciji sta ortogonalni
+            <li id="fn39" role="doc-endnote"><p>Relaciji sta ortogonalni
             v smislu tabele karakterjev. Ortonormiranost karakterjev
             preberemo tako, da fiksiramo vrstice. To drugo relacijo pa
             preberemo tako, da fiksiramo stolpce. Tej relaciji včasih
             rečemo <span><strong><em>druga ortogonalnostna
-            relacija</em></strong></span>.<a href="#fnref40"
+            relacija</em></strong></span>.<a href="#fnref39"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn41" role="doc-endnote"><p>Zanimivo je, da smo
+            <li id="fn40" role="doc-endnote"><p>Zanimivo je, da smo
             uspeli določiti tabelo karakterjev, brez da bi eksplicitno
-            poznali vse upodobitve.<a href="#fnref41"
+            poznali vse upodobitve.<a href="#fnref40"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn42" role="doc-endnote"><p>V asociativni algebri to
+            <li id="fn41" role="doc-endnote"><p>V asociativni algebri to
             izrečemo ponavadi takole: vsak levi ideal v polenostavni
-            algebri je glavni.<a href="#fnref42" class="footnote-back"
+            algebri je glavni.<a href="#fnref41" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn43" role="doc-endnote"><p><code>GAP</code> je
+            <li id="fn42" role="doc-endnote"><p><code>GAP</code> je
             programski jezik, ki pride zelo prav pri delu z grupami, saj
             ima implementiranih veliko standardnih konstrukcij grup in
             funkcij za delo z njimi. Dostopen je prosto na naslovu <a
             href="https://www.gap-system.org"
             class="uri">https://www.gap-system.org</a>.<a
-            href="#fnref43" class="footnote-back"
+            href="#fnref42" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn44" role="doc-endnote"><p>Iz argumenta vidimo, da
+            <li id="fn43" role="doc-endnote"><p>Iz argumenta vidimo, da
             velja celo naslednje. Končna grupa <span
             class="math inline">\(G\)</span> je enostavna, če in samo če
             je vsaka njena netrivialna nerazcepna upodobitev zvesta.<a
-            href="#fnref44" class="footnote-back"
+            href="#fnref43" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn45" role="doc-endnote"><p>Virtualnih, ker vsebuje
+            <li id="fn44" role="doc-endnote"><p>Virtualnih, ker vsebuje
             tudi negativne kombinacije nerazcepnih kolobarjev, ki ne
-            ustrezajo karakterjem upodobitev.<a href="#fnref45"
+            ustrezajo karakterjem upodobitev.<a href="#fnref44"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn46"
+            <li id="fn45"
             role="doc-endnote"><p><span><strong><em>Algebraično celo
             število</em></strong></span> je kompleksno število, ki je
             ničla moničnega polinoma s celoštevilskimi koeficienti.
@@ -12474,21 +12501,21 @@
             class="math inline">\(\bar{\mathbf{Z}}\)</span> tvori
             kolobar in da velja <span
             class="math inline">\(\mathbf{Q}\cap \bar{\mathbf{Z}} =
-            \mathbf{Z}\)</span>.<a href="#fnref46" class="footnote-back"
+            \mathbf{Z}\)</span>.<a href="#fnref45" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn47" role="doc-endnote"><p>Diagonalizabilnost sledi
+            <li id="fn46" role="doc-endnote"><p>Diagonalizabilnost sledi
             iz obravnave Jordanove normalne forme preslikave <span
-            class="math inline">\(\rho(g)\)</span>.<a href="#fnref47"
+            class="math inline">\(\rho(g)\)</span>.<a href="#fnref46"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn48" role="doc-endnote"><p>Skalarni produkt na
+            <li id="fn47" role="doc-endnote"><p>Skalarni produkt na
             danem prostoru lahko izberemo na mnogo različnih načinov.<a
-            href="#fnref48" class="footnote-back"
+            href="#fnref47" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn49" role="doc-endnote"><p>Na primer abelove grupe,
+            <li id="fn48" role="doc-endnote"><p>Na primer abelove grupe,
             simetrične grupe, diedrske grupe, splošne linearne grupe,
-            končne enostavne grupe, …<a href="#fnref49"
+            končne enostavne grupe, …<a href="#fnref48"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn50" role="doc-endnote"><p>Vsaka končna grupa je
+            <li id="fn49" role="doc-endnote"><p>Vsaka končna grupa je
             zgrajena iz končnih enostavnih grup, te pa sestojijo iz,
             grobo rečeno, treh neskončnih družin, in sicer cikličnih
             grup praštevilske moči <span
@@ -12499,16 +12526,16 @@
             class="math inline">\(\mathop{\mathrm{SL}}_n(\mathbf{F}_p)/Z(\mathop{\mathrm{SL}}_n(\mathbf{F}_p))\)</span>.
             Zgleda družin, ki si jih bomo ogledali, sta torej do neke
             mere reprezentativna za razumevanje upodobitev
-            nekomutativnih končnih enostavnih grup.<a href="#fnref50"
+            nekomutativnih končnih enostavnih grup.<a href="#fnref49"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn51" role="doc-endnote"><p>Res, če je <span
+            <li id="fn50" role="doc-endnote"><p>Res, če je <span
             class="math inline">\(x = q_1 p_1 = q_2 p_2\)</span>, potem
             je <span class="math inline">\(q_2^{-1} q_1 = p_2 p_1^{-1}
             \in P \cap Q = 1\)</span>, zato je <span
             class="math inline">\(q_1 = q_2\)</span> in <span
-            class="math inline">\(p_1 = p_2\)</span>.<a href="#fnref51"
+            class="math inline">\(p_1 = p_2\)</span>.<a href="#fnref50"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn52" role="doc-endnote"><p>Ker je <span
+            <li id="fn51" role="doc-endnote"><p>Ker je <span
             class="math inline">\(\mathcal{F}(\sigma_{\lambda})\)</span>
             spletična, je to res invarianten podprostor. Ni pa težko
             videti, kako elementi grupe zares delujejo; za <span
@@ -12517,43 +12544,43 @@
             preslika <span class="math inline">\(\sigma_{\lambda}*
             f\)</span> v <span class="math inline">\(\sigma_{\lambda}*
             (\rho_{\mathop{\mathrm{fun}}}(g) \cdot f)\)</span>.<a
-            href="#fnref52" class="footnote-back"
+            href="#fnref51" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn53" role="doc-endnote"><p>Pozor, za nekatere
+            <li id="fn52" role="doc-endnote"><p>Pozor, za nekatere
             razčlenitve <span class="math inline">\(\lambda\)</span> je
             <span class="math inline">\(D_{\lambda} = 0\)</span>. Izkaže
             se, da je število modularnih upodobitev enako številu
             konjugiranostnih razredov elementov, katerih red je
             <em>tuj</em> <span class="math inline">\(p\)</span>.<a
-            href="#fnref53" class="footnote-back"
+            href="#fnref52" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn54" role="doc-endnote"><p>Na primer, mnogo dela je
+            <li id="fn53" role="doc-endnote"><p>Na primer, mnogo dela je
             osredotočenega na <a
             href="https://mathoverflow.net/questions/138310/what-to-do-now-that-lusztigs-and-james-conjectures-have-been-shown-to-be-false">Lusztigovo
-            in Jamesovo domnevo</a>.<a href="#fnref54"
+            in Jamesovo domnevo</a>.<a href="#fnref53"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn55" role="doc-endnote"><p><span
+            <li id="fn54" role="doc-endnote"><p><span
             class="math inline">\(H_{\lambda}(i,j)\)</span> torej
             sestoji iz tistih celic <span
             class="math inline">\((a,b)\)</span>, za katere je <span
             class="math inline">\(a = i\)</span> in <span
             class="math inline">\(b \geq j\)</span> ali <span
             class="math inline">\(b = j\)</span> in <span
-            class="math inline">\(a \geq i\)</span>.<a href="#fnref55"
+            class="math inline">\(a \geq i\)</span>.<a href="#fnref54"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn56" role="doc-endnote"><p>Ponovljena ničla bi bila
+            <li id="fn55" role="doc-endnote"><p>Ponovljena ničla bi bila
             ničla odvoda karakterističnega polinoma, ki pa je linearen
             in ima vse ničle v <span
             class="math inline">\(\mathbf{F}_p\)</span>.<a
-            href="#fnref56" class="footnote-back"
+            href="#fnref55" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn57" role="doc-endnote"><p>Če zamenjamo v zgornji
+            <li id="fn56" role="doc-endnote"><p>Če zamenjamo v zgornji
             matriki <span class="math inline">\(b\)</span> z <span
             class="math inline">\(-b\)</span>, dobimo podobno matriko.
             To ravno ustreza delovanju <span
-            class="math inline">\(\sigma\)</span>.<a href="#fnref57"
+            class="math inline">\(\sigma\)</span>.<a href="#fnref56"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn58" role="doc-endnote"><p>Element <span
+            <li id="fn57" role="doc-endnote"><p>Element <span
             class="math inline">\(x + \sqrt{\epsilon} y\)</span> deluje
             na <span
             class="math inline">\(\mathbf{F}_p(\sqrt{\epsilon})\)</span>
@@ -12562,20 +12589,27 @@
             class="math inline">\(\mathbf{F}_p\)</span>, potem je
             matrika tega delovanja v bazi <span class="math inline">\(\{
             1, \sqrt{\epsilon} \}\)</span> ravno ta, ki je prikazana.<a
-            href="#fnref58" class="footnote-back"
+            href="#fnref57" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn59" role="doc-endnote"><p>Steinbergovo upodobitev
+            <li id="fn58" role="doc-endnote"><p>Steinbergovo upodobitev
             dobimo torej tako, da <span
             class="math inline">\(\Pi\)</span> podaljšamo s standardno
             upodobitvijo simetrične grupe <span
-            class="math inline">\(S_{p+1}\)</span>.<a href="#fnref59"
+            class="math inline">\(S_{p+1}\)</span>.<a href="#fnref58"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn60" role="doc-endnote"><p>Angleško <em>principal
-            series representations</em>.<a href="#fnref60"
+            <li id="fn59" role="doc-endnote"><p>Angleško <em>principal
+            series representations</em>.<a href="#fnref59"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn61" role="doc-endnote"><p>Angleško <em>cuspidal
-            representation</em>.<a href="#fnref61" class="footnote-back"
+            <li id="fn60" role="doc-endnote"><p>Angleško <em>cuspidal
+            representation</em>.<a href="#fnref60" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
+            <li id="fn61" role="doc-endnote"><p>Najpreprostejši znan
+            opis je preko Weilove upodobitve <span>(Bushnell-Henniart
+            2006)</span>, ki ostne upodobitve uresniči na določenih
+            podprostorih v <span
+            class="math inline">\(\mathop{\mathrm{fun}}(\mathbf{F}_p(\sqrt{\epsilon}),
+            \mathbf{C})\)</span>.<a href="#fnref61"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
             <li id="fn62" role="doc-endnote"><p>Računanje teh tabel
             specifičnih končnih enostavnih grup je zbrano v <a
             href="http://brauer.maths.qmul.ac.uk/Atlas/v3/">ATLAS</a>.

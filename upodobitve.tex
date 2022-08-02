@@ -1829,17 +1829,21 @@ Skupaj smo torej našli ravno $\kk(D_{2n})$ nerazcepnih upodobitev, zato so to \
 \caption{Tabela karakterjev $D_{2n}$ za lih $n$}
 \end{table}
 
+\begin{domacanaloga}
+Izračunaj tabelo kompleksnih karakterjev kvaternionske grupe $Q_8 = \{ \pm 1, \pm i, \pm j, \pm k \}$, v kateri velja $i^2 = j^2 = k^2 = ijk = -1$. Primerjaj jo s tabelo karakterjev grupe $D_8$.
+\end{domacanaloga}
+
 \item Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.\footnote{Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.} Recimo, da so dolžine teh ciklov enake $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_{k}$. Seveda velja $\sum_{i = 1}^{k} \lambda_i = n$. Zaporedju $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ pravimo {\definicija ciklični tip} permutacije $\sigma$. Kadar so kateri od členov cikličnega tipa enaki, ciklični tip pišemo tudi kot $1^{i_1} 2^{i_2} \cdots n^{i_n}$, kjer je $i_m$ število ciklov dolžine $m$ v $\sigma$.
 
 \begin{domacanaloga}
 Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom. Ta konjugiranostni razred ponavadi označimo kot $\conclass_{(\lambda_1, \lambda_2, \dots, \lambda_k)}$.
 \end{domacanaloga}
 
-V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija razčlenitve} števila $n$. Število vseh razčlenitev označimo s $p(n)$. Velja torej $p(n) = \kk(S_n) = |\Irr(S_n)|$. Splošna eksplicitna formula za to število \emph{ne} obstaja, poznamo pa njeno asimptotsko oceno\footnote{\href{https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF}{G. H. Hardy in S. Ramanujan, \emph{Asymptotic formulae in combinatory analysis}, Proceedings of the London Mathematical Society, Second Series, \textbf{17} (1918) 75--115.}}
+V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija razčlenitve} števila $n$. Število vseh razčlenitev označimo s $p(n)$. Velja torej $p(n) = \kk(S_n) = |\Irr(S_n)|$. Splošna eksplicitna formula za to število \emph{ne} obstaja, poznamo pa njeno asimptotsko oceno
 \[
     p(n) \sim \frac{1}{4 n \sqrt{3}} e^{\pi \sqrt{\frac{2n}{3}}}
 \]
-za $n \to \infty$. 
+za $n \to \infty$ \href{https://academic.oup.com/plms/article-abstract/s2-17/1/75/1536632?redirectedFrom=PDF}{(Hardy-Ramanujan 1918)}. 
 
 V konkretnem primeru $n = 3$ velja $p(3) = 3$, namreč $3 = 3 = 2 + 1 = 1 + 1 + 1$. Res smo našli natanko $3$ nerazcepne upodobitve grupe $S_3$. V primeru $n = 4$ pa velja $p(4) = 5$. Temu ustrezajo konjugiranostni razredi identične permutacije $()$ ($4 = 1 + 1 + 1 + 1$), transpozicije $(1 \ 2)$ ($4 = 2 + 1 + 1$), tricikla $(1 \ 2 \ 3)$ ($4 = 3 + 1$), štiricikla $(1 \ 2 \ 3 \ 4)$ ($4 = 4$) in produkta dveh tranzpozicij $(1 \ 2)(3 \ 4)$ ($4 = 2 + 2$). Ti konjugiranostni razredi so zaporedoma velikosti $1$, $6$, $8$, $6$, $3$. Kmalu bomo s tem podatkom določili tabelo karakterjev grupe $S_4$.
 \end{itemize}
@@ -2257,6 +2261,12 @@ za $f,h \in \fun(G,\CC)$. Za vsako končnorazsežno kompleksno upodobitev $\rho$
     [f, \chi_{\rho}] = \langle f, \chi_{\rho} \rangle,
 \]
 zato se večina rezultatov, ki smo jih izpeljali za skalarni produkt $[\cdot, \cdot]$, prenese na skalarni produkt $\langle \cdot, \cdot \rangle$. V posebnem  karakterji še vedno tvorijo ortonormiran sistem vektorjev v $\fun(G,\CC)$ in koeficienti razvoja razrednih funkcij po karakterjih se ne spremenijo.
+
+\begin{domacanaloga}
+Oglejmo si še eno aplikacijo restriktivnih vrednosti kompleksnih karakterjev. Naj bo $G$ končna grupa in $\rho$ njena poljubna \emph{zvesta} končnorazsežna kompleksna upodobitev. Tedaj obstaja $N$, tako da je vsaka nerazcepna kompleksna upodobitev grupe $G$ podupodobitev $\rho^{\otimes N}$. 
+
+Dokaza se lahko lotiš tako, da fiksiraš nerazcepno upodobitev $\pi \in \Irr(G)$ in opazuješ \emph{rodovno funkcijo} večkratnosti, se pravi formalno vsoto $F(X) = \sum_{k = 0}^{\infty} \mult_{\rho^{\otimes k}}(\pi) X^k$. Dovolj bo premisliti, da je ta rodovna funkcija neničelna. Izrazi vsak koeficient $\mult_{\rho^{\otimes k}}(\pi)$ s pomočjo skalarnega produkta in se na ta način prepričaj, da ima $F(X)$ pol pri $X = 1/\deg \rho$, zato je res neničelna.
+\end{domacanaloga}
 
 Osredotočimo se sedaj še na upodobitveni prostor. Naj bo $\rho$ kompleksna upodobitev grupe $G$ na končnorazsežnem prostoru $V$. Izberimo bazo prostora $\{ v_i \}_{i}$ in z njo kompleksen skalarni produkt
 \[
@@ -3206,7 +3216,7 @@ Torej je bodisi $\zeta_{\theta}$ bodisi $-\zeta_{\theta}$ nerazcepen karakter. K
 \caption{Karakter $\zeta_{\theta}$ grupe $G_p$}
 \end{table}
 
-Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo {\definicija ostna upodobitev}.\footnote{Angleško \emph{cuspidal representation}.} Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti Galoisjevi orbiti. Število ostnih upodobitev je zato enako $p(p-1)/2$. Poudarimo, da smo ostne upodobitve konstruirali le implicitno prek indukcij. Z nekaj truda bi lahko izpeljali eksplicitno konstrukcijo teh upodobitev. Izkaže se, da ostnih upodobitev \emph{ni} mogoče opisati kot neposredno induciranih iz podgrup $G_p$. Najpreprostejši znan opis je preko Weilove upodobitve {\literatura (Bushnell-Henniart 2006)}.
+Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo {\definicija ostna upodobitev}.\footnote{Angleško \emph{cuspidal representation}.} Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti Galoisjevi orbiti. Število ostnih upodobitev je zato enako $p(p-1)/2$. Poudarimo, da smo ostne upodobitve konstruirali le implicitno prek indukcij. Z nekaj truda bi lahko izpeljali eksplicitno konstrukcijo teh upodobitev. Izkaže se, da ostnih upodobitev \emph{ni} mogoče opisati kot neposredno induciranih iz podgrup $G_p$.\footnote{Najpreprostejši znan opis je preko Weilove upodobitve {\literatura (Bushnell-Henniart 2006)}, ki ostne upodobitve uresniči na določenih podprostorih v $\fun(\FF_p(\sqrt{\epsilon}), \CC)$.}
 
 Povzemimo. Skupaj smo našli naslednje upodobitve:
 \begin{itemize}
