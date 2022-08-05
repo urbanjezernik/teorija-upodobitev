@@ -4419,7 +4419,7 @@ Princip za dokazovanje, da smo z upodobitvami $\rho_k$ izčrpali vse dovolj lepe
 \[
     \textstyle D_I \rho \colon T_I \SL_2(\CC) \to T_I \GL_n(\CC)
 \]
-med tangentima prostoroma v identični matriki. Oglejmo si podrobneje, kako izgledata ta dva tangentna prostora.
+med tangentima prostoroma v identični matriki. Oglejmo si podrobneje, kako izgledata ta dva tangentna prostora in kaj točno je $D_I \rho$.
 
 Opazujmo najprej grupo $\GL_n(\CC)$, ki je odprta podmnožica $\CC^{n^2}$. Njen tangentni prostor v $I$ zato lahko identificiramo z vektorskim prostorom $\CC^{n^2}$, ki ga predstavimo v matrični obliki kot
 \[
@@ -4437,7 +4437,7 @@ v grupi $\GL_n(\CC)$. Res, velja formula $\det(\gamma(t)) = \det e^{tX} = e^{\tr
     = \lim_{t \to 0} \frac{I + tX + O(t^2) - I}{t}
     = X.
 \]
-Pot $\gamma$ je torej gladka pot v $\GL_n(\CC)$ z začetno vrednostjo $\gamma(0) = I$ in tangentnim vektorjem $X$. Vsak tangentni vektor smo torej s pomočjo eksponentne preslikave uresničili kot tengentni vektor neke gladke poti skozi $I$. Vsaj lokalno pa je res tudi obratno: vsaka gladka pot v $\GL_n(\CC)$ v neki okolici $I$ izhaja iz gladke poti v $\glfrak_n(\CC)$, potisnjene v $\GL_n(\CC)$ z eksponentno preslikavo. To sledi neposredno iz naslednje lastnosti eksponentne preslikave.
+Pot $\gamma$ je torej gladka pot v $\GL_n(\CC)$ z začetno vrednostjo $\gamma(0) = I$ in tangentnim vektorjem $X$. Vsak tangentni vektor smo torej s pomočjo eksponentne preslikave uresničili kot tangentni vektor neke gladke poti skozi $I$. Vsaj lokalno pa je res tudi obratno: vsaka gladka pot v $\GL_n(\CC)$ v neki okolici $I$ izhaja iz gladke poti v $\glfrak_n(\CC)$, potisnjene v $\GL_n(\CC)$ z eksponentno preslikavo. To sledi neposredno iz naslednje lastnosti eksponentne preslikave.
 
 \begin{trditev}
 Eksponentna preslikava $e \colon \glfrak_n(\CC) \to \GL_n(\CC)$ je difeomorfizem v neki okolici $0$.
@@ -4488,11 +4488,12 @@ Velja $T_I \SL_2(\CC) = \slfrak_2(\CC)$. Ta vektorski prostor je $3$-razsežen z
 \]
 \end{posledica}
 
-Pod vsem povedanim lahko odvod upodobitve $\rho \colon \SL_2(\CC) \to \GL_n(\CC)$ torej razumemo kot linearno preslikavo
+Pod vsem povedanim lahko {\definicija odvod upodobitve} $\rho \colon \SL_2(\CC) \to \GL_n(\CC)$ torej razumemo kot linearno preslikavo
 \[
     {\textstyle D_I \rho \colon \slfrak_2(\CC) \to \glfrak_n(\CC),} \quad
-    X \mapsto D_0 \rho(e^{tX}).
+    X \mapsto D_0 \rho(e^{tX}),
 \]
+ki tangentni vektor $X \in \slfrak_2(\CC)$ najprej pointegrira v pot $\gamma(t) = e^{tX}$ v $\SL_2(\CC)$ za vrednosti $t$ blizu $0$, to pot preslika z upodobitvijo $\rho$ v pot v $\GL_n(\CC)$ in izračuna odvod slednje poti, ki je tangentni vektor v $\glfrak_n(\CC)$.
 
 \begin{zgled}
 Linearizirajmo upodobitve $\rho_k \colon \SL_2(\CC) \to \GL(\CC[X,Y]_k)$. Najprej določimo slike generatorjev $e,h,f \in \slfrak_2(\CC)$ z eksponentno preslikavo. Za vsak $t \in \RR$ velja
