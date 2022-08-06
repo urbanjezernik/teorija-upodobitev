@@ -3930,6 +3930,11 @@ Enakomerno porazdelitev na množici $A \subseteq G$ označimo z $U_A$. Velja $U_
 Naj bo $G$ končna grupa z generirajočo množico $S$ in operatorjem Markova $M$. Dokaži, da za vsako funkcijo $f \in \fun(G,\CC)$ velja $||Mf|| \leq ||f||$. Sklepaj, da so vse lastne vrednosti $M$ po absolutni vrednosti kvečjemu $1$. Kaj je lastni vektor za lastno vrednost $1$? Kdaj je $-1$ lastna vrednost in kaj je pripadajoči lastni vektor?
 \end{domacanaloga}
 
+\begin{domacanaloga}
+Naj bo $p$ praštevilo in  $S \subseteq \FF_p$ z $|S| < p$. Za vsak $i \in \FF_p$ naj bo $R_i$ število rešitev enačbe $x_1 + x_2 + \cdots + x_p = i$ v $\FF_p$. Dokaži, da je $R_0 \equiv |S| \pmod{p}$ in $R_i \equiv 0 \pmod{p}$ za $i \neq 0$.\footnote{S tem si le slučajni korak stran od rešitve \href{https://www.imc-math.org.uk/imc2022/imc2022day1questions.pdf}{naloge I/3} s tekmovanja IMC 2022.}
+Lahko si pomagaš s slučajnimi sprehodi, saj je normalizirano število rešitev $R_i / |S|^{p}$ enako verjetnosti, da se naključno zaporedje $x_1, x_2, \dots, x_p$ sešteje v $i$, kar lahko interpretiraš kot verjetnost, da je slučajni sprehod na $\FF_p$ z množico $S$ po $p$ korakih v elementu $i$, se pravi $R_i / |S|^p = \mu_p(i)$. Slednjo verjetnost izračunaj tako, da določiš $p$-to potenco operatorja Markova po modulu $p$.
+\end{domacanaloga}    
+
 \subsection{Slučajni sprehod s konjugiranostnim razredom}
 
 Zelo dobro razumemo primer, ko je $S$ konjugiranostni razred v $G$, saj lahko Fourierovo transformacijo razredne funkcije eksplicitno izračunamo v odvisnosti od karakterjev. V tem primeru lahko eksplicitno določimo tudi vse lastne vektorje, ki jih dobimo kot generatorje izotipičnih komponent nerazcepnih upodobitev, ko smo videli v predstavljenem algoritmu za izračun tabele karakterjev.
