@@ -92,6 +92,7 @@
 \DeclareMathOperator\GL{GL}
 \DeclareMathOperator\glfrak{\mathfrak{gl}}
 \DeclareMathOperator\slfrak{\mathfrak{sl}}
+\DeclareMathOperator\sufrak{\mathfrak{su}}
 \DeclareMathOperator\U{U}
 \DeclareMathOperator\SL{SL}
 \DeclareMathOperator\PSL{PSL}
@@ -4182,7 +4183,7 @@ To težavo zaobidemo tako, da ne opazujemo poljubnih upodobitev, temveč jih oza
 Grupa $\RR$ ni le abstraktna grupa, temveč je opremljena s topologijo. Abstraktneje je {\definicija topološka grupa} množica, ki je hkrati grupa in topološki prostor, obe strukturi pa sta uglašeni s pogojem, da sta operaciji množenja in invertiranja zvezni. 
 
 \begin{zgled}
-Grupe $\RR$, $\RR^3$, $\RR^*$, $\U_1(\CC) = S^1$, ,$SU_2(\CC)$, $\SO_3(\RR)$, $\GL_3(\CC)$, $\SL_2(\RR)$, $\SL_2(\ZZ)$ so topološke grupe. Vsaka od njih je opremljena z naravno topologijo, ki jo podeduje iz ambientalnega evklidskega prostora. Grupa $\SL_2(\ZZ)$ sicer podeduje le \emph{diskretno} topologijo.
+Grupe $\RR$, $\RR^3$, $\RR^*$, $\U_1(\CC) = S^1$, $\SU_2(\CC)$, $\SO_3(\RR)$, $\GL_3(\CC)$, $\SL_2(\RR)$, $\SL_2(\ZZ)$ so topološke grupe. Vsaka od njih je opremljena z naravno topologijo, ki jo podeduje iz ambientalnega evklidskega prostora. Grupa $\SL_2(\ZZ)$ sicer podeduje le \emph{diskretno} topologijo.
 \end{zgled}
 
 Končnorazsežna\footnote{Če bi želeli obravnavati tudi neskončnorazsežne upodobitve na prostoru $V$, bi morali to definicijo nekoliko popraviti. Najprej bi morali zahtevati, da vsak element grupe $G$ deluje kot zvezen linearen operator na $V$, kar ni avtomatično v neskončnorazsežnih vektorskih prostorih. Za tem bi morali namesto zveznosti preslikave $\rho$ zahtevati, da je le \emph{šibko zvezna}, kar pomeni, da je preslikava $G \times V \to V$, $(g,v) \mapsto \rho(g) \cdot v$ zvezna.} kompleksna upodobitev $\rho \colon G \to \GL_n(\CC)$ topološke grupe $G$ je {\definicija zvezna}, kadar je zvezna kot preslikava, pri čemer prostor $\GL_n(\CC) \subseteq \CC^{n^2}$ opremimo z inducirano topologijo.
@@ -4732,6 +4733,38 @@ Večino od povedanega v tem razdelku je razširljivo na poljubne topološke grup
 
 \begin{zgled}
 Spomnimo se grupe $\U_1(\CC) \cong \RR/\ZZ$. Njena Liejeva algebra je $\RR$ s trivialnim Liejevim produktom in njene enorazsežne Liejeve upodobitve so linearne preslikave $\RR \to \CC$, torej so oblike $X \mapsto \zeta X$ za nek $\zeta \in \CC$. To upodobitev integriramo do lokalnega homomorfizma $x \mapsto e^{\zeta x}$, ki ga obravnavamo na majhni okolici enote v $\RR/\ZZ$. Ta preslikava se v splošnem \emph{ne} razširi do homomorfizma na celotni grupi $\RR/\ZZ$. Se pa razširi do homomorfizma na \emph{univerzalnem krovu} grupe $\RR/\ZZ$, ki je ravno $\RR$.
+\end{zgled}
+
+\begin{zgled}
+Opazujmo grupo $\SU_2(\CC)$. Njeni elementi so matrike oblike
+\[
+    \begin{pmatrix}
+        \alpha & - \overline{\beta} \\
+        \beta & \overline{\alpha}
+    \end{pmatrix}
+\]
+za $\alpha, \beta \in \CC^2$ z lastnostjo $|\alpha|^2 + |\beta|^2 = 1$. Podamo lahko torej homeomorfizem
+\[
+    S^3 \to \SU_2(\CC), \quad
+    (a,b,c,d) \mapsto     
+    \begin{pmatrix}
+        a + i b & - c + i d \\
+        c + i d & a - i b
+    \end{pmatrix},
+\]
+zato je grupa $\SU_2(\CC)$ enostavno povezana realna Liejeva grupa. Podobno kot za grupo $\SL_2(\CC)$ se lahko prepričamo, da je Liejeva algebra $\sufrak_2(\CC)$ Liejeve grupe $\SU_2(\CC)$ enaka
+    \[
+        \sufrak_2(\CC) = \left\{ \begin{pmatrix} i b & -c + i d \\ c + i d & - i b \\  \end{pmatrix} \mid b,c,d \in \RR \right\}.
+    \]
+Grupa $\SU_2(\CC)$ deluje s konjugiranjem na $\sufrak_2(\CC)$. Če v slednjem prostoru izberemo bazo, dobimo upodobitev
+\[
+    \Ad \colon \SU_2(\CC) \to \GL(\sufrak_2(\CC)) \cong \GL_3(\RR).
+\]
+
+\begin{domacanaloga}
+    Prepričaj se, da je $\ker \Ad = \{ I, -I \}$ in da je $\image \Ad \cong \SO_3(\RR)$. Upodobitve grupe $\SO_3(\RR)$ so torej ravno upodobitve enostavno povezane grupe $\SU_2(\CC)$, ki imajo v jedru $-I$.
+\end{domacanaloga}
+
 \end{zgled}
 
 \subsection{$\SL_2(\RR)$}

@@ -9998,8 +9998,9 @@
             class="math inline">\(\mathbf{R}^3\)</span>, <span
             class="math inline">\(\mathbf{R}^*\)</span>, <span
             class="math inline">\(\mathop{\mathrm{U}}_1(\mathbf{C}) =
-            S^1\)</span>, ,<span
-            class="math inline">\(SU_2(\mathbf{C})\)</span>, <span
+            S^1\)</span>, <span
+            class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span>,
+            <span
             class="math inline">\(\mathop{\mathrm{SO}}_3(\mathbf{R})\)</span>,
             <span
             class="math inline">\(\mathop{\mathrm{GL}}_3(\mathbf{C})\)</span>,
@@ -11276,6 +11277,60 @@
             ki je ravno <span
             class="math inline">\(\mathbf{R}\)</span>.</p>
             </div>
+            <div class="zgled">
+            <p><strong>Zgled 6.9</strong>. Opazujmo grupo <span
+            class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span>.
+            Njeni elementi so matrike oblike <span
+            class="math display">\[\begin{pmatrix}
+                    \alpha &amp; - \overline{\beta} \\
+                    \beta &amp; \overline{\alpha}
+                \end{pmatrix}\]</span> za <span
+            class="math inline">\(\alpha, \beta \in
+            \mathbf{C}^2\)</span> z lastnostjo <span
+            class="math inline">\(|\alpha|^2 + |\beta|^2 = 1\)</span>.
+            Podamo lahko torej homeomorfizem <span
+            class="math display">\[S^3 \to
+            \mathop{\mathrm{SU}}_2(\mathbf{C}), \quad
+                (a,b,c,d) \mapsto     
+                \begin{pmatrix}
+                    a + i b &amp; - c + i d \\
+                    c + i d &amp; a - i b
+                \end{pmatrix},\]</span> zato je grupa <span
+            class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span>
+            enostavno povezana realna Liejeva grupa. Podobno kot za
+            grupo <span
+            class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
+            se lahko prepričamo, da je Liejeva algebra <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{su}}}_2(\mathbf{C})\)</span>
+            Liejeve grupe <span
+            class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span>
+            enaka <span
+            class="math display">\[\mathop{\mathrm{\mathfrak{su}}}_2(\mathbf{C})
+            = \left\{ \begin{pmatrix} i b &amp; -c + i d \\ c + i d
+            &amp; - i b \\  \end{pmatrix} \mid b,c,d \in
+            \mathbf{R}\right\}.\]</span> Grupa <span
+            class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span>
+            deluje s konjugiranjem na <span
+            class="math inline">\(\mathop{\mathrm{\mathfrak{su}}}_2(\mathbf{C})\)</span>.
+            Če v slednjem prostoru izberemo bazo, dobimo upodobitev
+            <span class="math display">\[\mathop{\mathrm{Ad}}\colon
+            \mathop{\mathrm{SU}}_2(\mathbf{C}) \to
+            \mathop{\mathrm{GL}}(\mathop{\mathrm{\mathfrak{su}}}_2(\mathbf{C}))
+            \cong \mathop{\mathrm{GL}}_3(\mathbf{R}).\]</span></p>
+            <div class="domacanaloga">
+            <p><strong>Domača naloga 6.3</strong>. Prepričaj se, da je
+            <span class="math inline">\(\ker \mathop{\mathrm{Ad}}= \{ I,
+            -I \}\)</span> in da je <span
+            class="math inline">\(\mathop{\mathrm{im}}\mathop{\mathrm{Ad}}\cong
+            \mathop{\mathrm{SO}}_3(\mathbf{R})\)</span>. Upodobitve
+            grupe <span
+            class="math inline">\(\mathop{\mathrm{SO}}_3(\mathbf{R})\)</span>
+            so torej ravno upodobitve enostavno povezane grupe <span
+            class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span>,
+            ki imajo v jedru <span
+            class="math inline">\(-I\)</span>.</p>
+            </div>
+            </div>
             <h3 id="mathopmathrmsl_2mathbfr"><span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span></h3>
             <p>Grupa <span
@@ -11446,7 +11501,7 @@
             class="math inline">\(N\)</span>, ki vnose matrike reducira
             po modulu <span class="math inline">\(N\)</span>.</p>
             <div class="domacanaloga">
-            <p><strong>Domača naloga 6.3</strong>. Preveri, da je <span
+            <p><strong>Domača naloga 6.4</strong>. Preveri, da je <span
             class="math inline">\(\pi_N\)</span> surjektivna za vsak
             <span class="math inline">\(N \in \mathbf{N}\)</span>.</p>
             </div>
@@ -11578,7 +11633,7 @@
             mnogo homomorfizmov v različne grupe <span
             class="math inline">\(G\)</span>.</p>
             <div class="zgled">
-            <p><strong>Zgled 6.9</strong>. Z <code>GAP</code> se lahko
+            <p><strong>Zgled 6.10</strong>. Z <code>GAP</code> se lahko
             prepričamo, da je alternirajoča grupa <span
             class="math inline">\(A_9\)</span> generirana s
             permutacijama <span class="math display">\[(1 \ 4)(2 \ 9)(3
@@ -11595,7 +11650,7 @@
             class="math inline">\(n \geq 9\)</span>.</p>
             </div>
             <div class="domacanaloga">
-            <p><strong>Domača naloga 6.4</strong>. Prepričaj se, da za
+            <p><strong>Domača naloga 6.5</strong>. Prepričaj se, da za
             <em>nobeno</em> število <span class="math inline">\(N \geq
             2\)</span> ne velja, da se homomorfizem <span
             class="math inline">\(\alpha_9\)</span> faktorizira prek
@@ -12012,7 +12067,7 @@
             obnaša zelo drugače kot Liejeva grupa <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{C})\)</span>.</p>
             <div class="domacanaloga">
-            <p><strong>Domača naloga 6.5</strong>. S pomočjo eksponentne
+            <p><strong>Domača naloga 6.6</strong>. S pomočjo eksponentne
             preslikave dokaži, da v grupi <span
             class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>
             obstaja odprta okolica enote <span
@@ -12224,7 +12279,7 @@
             Z nekaj truda se da s to intuicijo hitro izpeljati
             Lubotzkyjev izrek.</p>
             <div class="domacanaloga">
-            <p><strong>Domača naloga 6.6</strong>. Preberi dokaz
+            <p><strong>Domača naloga 6.7</strong>. Preberi dokaz
             Lubotzkyjevega izreka v <a
             href="https://www3.nd.edu/~andyp/notes/RepTheorySLnZ.pdf">(Putman)</a>.</p>
             </div>
