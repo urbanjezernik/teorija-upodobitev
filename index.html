@@ -3830,17 +3830,17 @@
             class="math inline">\(\{ f_j \}_j\)</span> baza prostora
             <span class="math inline">\(V_2\)</span>. Vzemimo <span
             class="math display">\[A_{i,l} \colon V_1 \to V_2, \quad
-                v \mapsto [ e_i^*, v ] f_l.\]</span> S to izbiro
-            dosežemo enakost <span class="math display">\[0 =
+                v \mapsto \langle e_i^*, v \rangle f_l.\]</span> S to
+            izbiro dosežemo enakost <span class="math display">\[0 =
             \frac{1}{|G|} \sum_{g \in G} g \cdot A_{i,l}(g^{-1} \cdot
             e_j) =
-                \frac{1}{|G|} \sum_{g \in G} [ e_i^*, g^{-1} \cdot e_j ]
-            g \cdot f_l =
+                \frac{1}{|G|} \sum_{g \in G} \langle e_i^*, g^{-1} \cdot
+            e_j \rangle g \cdot f_l =
                 \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) g
             \cdot f_l.\]</span> Na zadnjem uporabimo še <span
             class="math inline">\(f_k^*\)</span>, pa dobimo <span
             class="math display">\[0 = \frac{1}{|G|} \sum_{g \in G}
-            f_{i,j}^{\pi_1}(g^{-1}) [ f_k^*, g \cdot f_l ] =
+            f_{i,j}^{\pi_1}(g^{-1}) \langle f_k^*, g \cdot f_l \rangle =
                 \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1})
             f_{k,l}^{\pi_2}(g),\]</span> kar je enakovredno <span
             class="math inline">\([ f_{i,j}^{\pi_1}, f_{k,l}^{\pi_2} ] =
@@ -3880,16 +3880,16 @@
             class="math display">\[\lambda_A =
             \frac{\mathop{\mathrm{tr}}(A)}{\deg(\pi)}.\]</span> Kot v
             zadnjem dokazu dobljeno uporabimo s preslikavo <span
-            class="math inline">\(A_{i,l}(v) = [ e_i^*, v ] e_l\)</span>
-            za neko izbrano bazo <span class="math inline">\(\{ e_i
-            \}_i\)</span> prostora <span
+            class="math inline">\(A_{i,l}(v) = \langle e_i^*, v \rangle
+            e_l\)</span> za neko izbrano bazo <span
+            class="math inline">\(\{ e_i \}_i\)</span> prostora <span
             class="math inline">\(V\)</span>. Velja <span
-            class="math inline">\(\mathop{\mathrm{tr}}(A_{i,l}) = [
-            e_i^*, e_l ] = 1_{i = l}\)</span>, od koder kot v zadnjem
-            dokazu izpeljemo <span class="math display">\[[ f_{i,j},
-            f_{k,l} ] = [ e_k^*, e_j ] \frac{1_{i = l}}{\deg(\pi)} =
-            \frac{1_{i = l, j = k}}{\deg(\pi)},\]</span> kar je natanko
-            želeno. ◻</p>
+            class="math inline">\(\mathop{\mathrm{tr}}(A_{i,l}) =
+            \langle e_i^*, e_l \rangle = 1_{i = l}\)</span>, od koder
+            kot v zadnjem dokazu izpeljemo <span
+            class="math display">\[[ f_{i,j}, f_{k,l} ] = \langle e_k^*,
+            e_j \rangle \frac{1_{i = l}}{\deg(\pi)} = \frac{1_{i = l, j
+            = k}}{\deg(\pi)},\]</span> kar je natanko želeno. ◻</p>
             </div>
             <h2 id="karakterji-1">Karakterji</h2>
             <p>Iz rezultatov zadnjega razdelka sledi, da je nad
@@ -4592,7 +4592,7 @@
             konjugiranostnem razredu elementa <span
             class="math inline">\((1 \ 2)(3 \ 4)\)</span> in je zato
             pravzaprav restrikcija upodobitve kvocientne grupe <span
-            class="math inline">\(S_4w\)</span> po edinki, generirani s
+            class="math inline">\(S_4\)</span> po edinki, generirani s
             tem konjugiranostnim razredom. Slednjo kvocientno grupo
             identificiramo kot <span class="math inline">\(S_3\)</span>
             prek epimorfizma <span class="math display">\[\psi \colon

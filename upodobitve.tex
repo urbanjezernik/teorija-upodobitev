@@ -1635,17 +1635,17 @@ Naj upodobitvi $\pi_1$, $\pi_2$ delujeta na prostorih $V_1$, $V_2$. Grupa $G$ de
 Konkretizirajmo preslikavo $A$. Naj bo $\{ e_i \}_i$ baza prostora $V_1$ in $\{ f_j \}_j$ baza prostora $V_2$. Vzemimo
 \[
     A_{i,l} \colon V_1 \to V_2, \quad
-    v \mapsto [ e_i^*, v ] f_l.
+    v \mapsto \langle e_i^*, v \rangle f_l.
 \]
 S to izbiro dosežemo enakost
 \[
     0 = \frac{1}{|G|} \sum_{g \in G} g \cdot A_{i,l}(g^{-1} \cdot e_j) =
-    \frac{1}{|G|} \sum_{g \in G} [ e_i^*, g^{-1} \cdot e_j ] g \cdot f_l =
+    \frac{1}{|G|} \sum_{g \in G} \langle e_i^*, g^{-1} \cdot e_j \rangle g \cdot f_l =
     \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) g \cdot f_l.
 \]
 Na zadnjem uporabimo še $f_k^*$, pa dobimo
 \[
-    0 = \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) [ f_k^*, g \cdot f_l ] =
+    0 = \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) \langle f_k^*, g \cdot f_l \rangle =
     \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) f_{k,l}^{\pi_2}(g),
 \]
 kar je enakovredno $[ f_{i,j}^{\pi_1}, f_{k,l}^{\pi_2} ] = 0$, se pravi ortogonalnosti matričnih koeficientov.
@@ -1673,9 +1673,9 @@ $, zato je $\tr(g \cdot A) = \tr(A)$, od koder izpeljemo
 \[
     \lambda_A = \frac{\tr(A)}{\deg(\pi)}.
 \]
-Kot v zadnjem dokazu dobljeno uporabimo s preslikavo $A_{i,l}(v) = [ e_i^*, v ] e_l$ za neko izbrano bazo $\{ e_i \}_i$ prostora $V$. Velja $\tr(A_{i,l}) = [ e_i^*, e_l ] = 1_{i = l}$, od koder kot v zadnjem dokazu izpeljemo
+Kot v zadnjem dokazu dobljeno uporabimo s preslikavo $A_{i,l}(v) = \langle e_i^*, v \rangle e_l$ za neko izbrano bazo $\{ e_i \}_i$ prostora $V$. Velja $\tr(A_{i,l}) = \langle e_i^*, e_l \rangle = 1_{i = l}$, od koder kot v zadnjem dokazu izpeljemo
 \[
-    [ f_{i,j}, f_{k,l} ] = [ e_k^*, e_j ] \frac{1_{i = l}}{\deg(\pi)} = \frac{1_{i = l, j = k}}{\deg(\pi)},
+    [ f_{i,j}, f_{k,l} ] = \langle e_k^*, e_j \rangle \frac{1_{i = l}}{\deg(\pi)} = \frac{1_{i = l, j = k}}{\deg(\pi)},
 \]
 kar je natanko želeno.
 \end{dokaz}
@@ -1933,7 +1933,7 @@ Zaenkrat imamo tri nerazcepne upodobitve stopenj $1,1,3$. Iščemo torej še dve
 \caption{Tabela karakterjev $S_4$}
 \end{table}
 
-Upodobitve $\tau$ ni težko eksplicitno določiti. Vemo, da je stopnje $2$. Njena vrednost $\tau((1 \ 2)(3 \ 4))$ je matrika v $\GL_2(\CC)$ reda $2$ s sledjo $2$. Taka matrika je lahko le identiteta. Torej je $\tau$ trivialna v konjugiranostnem razredu elementa $(1 \ 2)(3 \ 4)$ in je zato pravzaprav restrikcija upodobitve kvocientne grupe $S_4w$ po edinki, generirani s tem konjugiranostnim razredom. Slednjo kvocientno grupo identificiramo kot $S_3$ prek epimorfizma
+Upodobitve $\tau$ ni težko eksplicitno določiti. Vemo, da je stopnje $2$. Njena vrednost $\tau((1 \ 2)(3 \ 4))$ je matrika v $\GL_2(\CC)$ reda $2$ s sledjo $2$. Taka matrika je lahko le identiteta. Torej je $\tau$ trivialna v konjugiranostnem razredu elementa $(1 \ 2)(3 \ 4)$ in je zato pravzaprav restrikcija upodobitve kvocientne grupe $S_4$ po edinki, generirani s tem konjugiranostnim razredom. Slednjo kvocientno grupo identificiramo kot $S_3$ prek epimorfizma
 \[
     \psi \colon S_4 \to S_3, \quad
     (1 \ 2) \mapsto (1 \ 2), \
