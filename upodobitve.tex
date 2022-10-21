@@ -611,7 +611,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL(V)$. Denimo, da obstaja v
     \[
         \left( \rho_{\fun}(g) \cdot \Phi(e_h) \right)(x)
         = 1_{h^{-1}}(xg)
-        = 1_{g^{-1} h^{-1}}(x),
+        = 1_{h^{-1} g^{-1}}(x),
     \]
     zato je $\Phi$ tudi spletična.
 
@@ -900,7 +900,7 @@ ki je spletična glede na regularno delovanje $G$ na $\fun(G,V)$. S tem imamo to
     Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\phi \colon G \to G/N$ kvocientna projekcija za neko podgrupo edinko $N$ v $G$. Dokaži, da je $\Ind^{G/N}_G(\rho)$ izomorfna upodobitvi $G/N$ na prostoru $V^N$, ki izhaja iz upodobitve $\rho$.
 \end{domacanaloga}
 
-Najpomembnejši primer indukcije, čeravno ne tudi najbolj preprost, je {\definicija indukcija iz podgrupe končnega indeksa}. Naj bo $G$ grupa s podgrupo $H$ in naj bo $\phi$ vložitev $H$ v $G$. Predpostavimo, da je $|G:H| < \infty$. Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$. Premislimo, kako izgleda upodobitev $\Ind^G_H(\rho)$. 
+Najpomembnejši primer indukcije, čeravno ne tudi najbolj preprost, je {\definicija indukcija iz podgrupe končnega indeksa}. Naj bo $G$ grupa s podgrupo $H$ in naj bo $\phi$ vložitev $H$ v $G$. Predpostavimo, da je $|G:H| < \infty$. Naj bo $\rho$ upodobitev grupe $H$ na prostoru $V$. Premislimo, kako izgleda upodobitev $\Ind^G_H(\rho)$. 
     
 Naj bo $R$ neka izbrana množica predstavnikov desnih odsekov $H$ v $G$. Vsaka funkcija $f \in \fun(G,V)^H$ je določena z vrednostmi $f(r)$ za $r \in R$ in dodatnih restrikcij za te vrednosti ni, zato dobimo izomorfizem vektorskih prostorov\footnote{Množico funkcij $\fun(R,V)$ lahko vidimo kot direktno vsoto prostorov $V$, indeksirano z množico $R$.}
     \[
@@ -1556,7 +1556,7 @@ za katero velja $Q|_W = \id_W$ in $\image Q = W$. Torej je $Q$ projekcijska sple
 
 $(\Rightarrow):$ Predpostavimo, da $\characteristic(F) \mid |G|$.\footnote{V tem primeru sicer nimamo dostopa do povprečenja v celoti, lahko pa uporabimo \emph{delno} povprečenje, ki izračuna le vsoto po grupi.} Opazujmo regularno upodobitev $\rho_{\fun}$ na prostoru $\fun(G,F)$. Ta prostor ima vselej $G$-invarianten podprostor
 \[
-    \textstyle \hom_0(G,F) = \left\{ f \in \fun(G,F) \mid \sum_{g \in G} f(g) = 0 \right\}
+    \textstyle \fun_0(G,F) = \left\{ f \in \fun(G,F) \mid \sum_{g \in G} f(g) = 0 \right\}
 \]
 korazsežnosti $1$ v $\fun(G,F)$. Dokažimo, da upodobitev na tem podprostoru \emph{ni} komplementirana in da torej vsaka upodobitev ni polenostavna. 
 
@@ -1578,7 +1578,7 @@ kar zopet implicira $\sum_{g \in G} \chi(g) = 0$. \kljuka
 \begin{zgled}
 V ekstremni situaciji, ko je $\characteristic(F) = p > 0$ in $|G| = p^n$ za nek $n \in \NN$, kategorija upodobitev izgleda precej nenavadno. V takih neugodnih razmerah \emph{netrivialnih nerazcepnih upodobitev ni}. Poglejmo si, zakaj je temu tako v primeru $F = \FF_p$ za neko praštevilo $p$.\footnote{Splošen primer hitro sledi iz tega posebnega. Če je namreč $F$ karakteristike $p$, ima prapolje $\FF_p$. Upodobitev v tem primeru obravnavamo nad tem prapoljem.}
 
-Imejmo netrivialno nerazcepno upodobitev $p$-grupe $G$ na prostoru $V$ nad poljem $\FF_p$. Vemo že, da je $V$ nujno končnorazsežen, zato je $|V| = p^k$ za nek $k \in \NN$. Grupa $G$ permutacijsko deluje na množici neničelnih vektorjev $V \backslash \{ 0 \}$. Po lemi o orbiti in stabilizatorju je velikost orbite vsakega neničelnega vektorja enaka indeksu stabilizatorja, ki je po predpostavki o moči grupe nujno potenca praštevila $p$. Ker pa moč $|V \backslash \{ 0 \}|$ ni deljiva s $p$, mora obstajati vektor $0 \neq v \in V$ z orbito moči $1$. Ta vektor je torej fiksen za delovanje grupe $G$ in zato razpenja enorazsežen podprostor $\FF_p \cdot v$, ki je kot upodobitev izomorfen $\11$. To je seveda sprto s predpostavko o nerazcepnosti upodobitve $G$ na $V$.
+Imejmo nerazcepno upodobitev $p$-grupe $G$ na prostoru $V$ nad poljem $\FF_p$. Vemo že, da je $V$ nujno končnorazsežen, zato je $|V| = p^k$ za nek $k \in \NN$. Grupa $G$ permutacijsko deluje na množici neničelnih vektorjev $V \backslash \{ 0 \}$. Po lemi o orbiti in stabilizatorju je velikost orbite vsakega neničelnega vektorja enaka indeksu stabilizatorja, ki je po predpostavki o moči grupe nujno potenca praštevila $p$. Ker pa moč $|V \backslash \{ 0 \}|$ ni deljiva s $p$, mora obstajati vektor $0 \neq v \in V$ z orbito moči $1$. Ta vektor je torej fiksen za delovanje grupe $G$ in zato razpenja enorazsežen podprostor $\FF_p \cdot v$, ki je kot upodobitev izomorfen $\11$. Torej je $V = \11$ in upodobitev je res trivialna.
 \end{zgled}
 
 \subsection{Dekompozicija regularne upodobitve}
