@@ -43,7 +43,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 21. 10. 2022
+            Zadnja posodobitev: 07. 11. 2022
           </div>
 
           <div id="spinner" class="text-center">
@@ -4143,8 +4143,8 @@
             class="math inline">\(\lfloor (n+2)/2 \rfloor\)</span>.
             Velja tudi <span class="math display">\[\left( s r^i
             \right)^{r^j} = s r^{2j + i}, \quad
-                \left( s r^i \right)^{s r^j} = r^{s r^{2j -
-            i}},\]</span> zato je konjugiranostni razred <span
+                \left( s r^i \right)^{s r^j} = s r^{2j - i},\]</span>
+            zato je konjugiranostni razred <span
             class="math inline">\(s\)</span> enak <span
             class="math inline">\(\{ s r^{2j} \mid j \in
             \mathbf{Z}\}\)</span> in konjugiranostni razred <span
@@ -4808,10 +4808,10 @@
             tabele karakterjev</h3>
             <p>Naj bo <span class="math inline">\(G\)</span> končna
             grupa in <span class="math inline">\(F\)</span> algebraično
-            zaprto polje karakteristike <span
-            class="math inline">\(0\)</span>. Kategorijo <span
-            class="math inline">\(\mathop{\mathrm{Rep}}(G)\)</span> v
-            tem primeru razumemo zelo dobro, če le poznamo tabelo
+            zaprto polje karakteristike tuje <span
+            class="math inline">\(|G|\)</span>. Kategorijo <span
+            class="math inline">\(\mathop{\mathrm{Rep}}_G\)</span> v tem
+            primeru razumemo zelo dobro, če le poznamo tabelo
             karakterjev. Za zdaj smo si pogledali nekaj zgledov, kako to
             tabelo izračunati za posebne primere grupe. Pri tem smo si
             sicer res pomagali z razvito teorijo, a je bil večji del
@@ -4898,7 +4898,7 @@
             možni lastni vrednosti: <span
             class="math inline">\(0\)</span> in <span
             class="math inline">\(1\)</span>. Ker je po predpostavki
-            <span class="math inline">\(W \neq 0\)</span>, ne mora biti
+            <span class="math inline">\(W \neq 0\)</span>, ne more biti
             za vse <span class="math inline">\(\pi \in
             \mathop{\mathrm{Irr}}(G)\)</span> projekcija na <span
             class="math inline">\(\pi\)</span>-izotipično komponento
@@ -4923,11 +4923,12 @@
             <p>S to karakterizacijo izotipičnih komponent lahko opišemo
             algoritem za izračun tabele karakterjev. Najprej oštevilčimo
             elemente grupe <span class="math inline">\(G\)</span> kot
-            <span class="math inline">\(g_1, g_2, \dots, g_|G|\)</span>
-            in pripravimo vektorski prostor <span
-            class="math inline">\(F^{|G|} \cong \hom(G,F)\)</span> s
-            standardno bazo <span class="math inline">\(e_i\)</span>, ki
-            ustreza karakteristični funkciji <span
+            <span class="math inline">\(g_1, g_2, \dots,
+            g_{|G|}\)</span> in pripravimo vektorski prostor <span
+            class="math inline">\(F^{|G|} \cong
+            \mathop{\mathrm{fun}}(G,F)\)</span> s standardno bazo <span
+            class="math inline">\(e_i\)</span>, ki ustreza
+            karakteristični funkciji <span
             class="math inline">\(1_{g_i}\)</span>. Izračunamo še
             konjugiranostne razrede grupe <span
             class="math inline">\(G\)</span> in iz vsakega izberemo
@@ -4937,7 +4938,7 @@
             v poljubnem elementu <span class="math inline">\(x \in
             G\)</span>, in za tem še funkcijo, ki izračuna matriko
             Fourierove transformacije <span
-            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\hom})\)</span>
+            class="math inline">\(\widehat{1_{\mathcal{C}}}(\rho_{\mathop{\mathrm{fun}}})\)</span>
             za konjugiranostni razred <span
             class="math inline">\(\mathcal{C}\)</span>. Izračunamo
             lastne podprostore vseh teh matrik in za tem vse njihove
@@ -5072,11 +5073,11 @@
             class="math inline">\(A_5/N\)</span> imel kakšno netrivialno
             nerazcepno upodobitev <span
             class="math inline">\(\rho\)</span>. Restrikcija <span
-            class="math inline">\(\mathop{\mathrm{Res}}^G_{G/N}(\rho)\)</span>
+            class="math inline">\(\mathop{\mathrm{Res}}^{A_5/N}_{A_5}(\rho)\)</span>
             je zato netrivialna nerazcepna upodobitev grupe <span
-            class="math inline">\(A_5\)</span> z netrivialnim jedrom
-            <span class="math inline">\(N\)</span>. Vrednost karakterja
-            <span class="math inline">\(\chi_{\rho}\)</span> v poljubnem
+            class="math inline">\(A_5\)</span> z netrivialnim jedrom.
+            Vrednost karakterja <span
+            class="math inline">\(\chi_{\rho}\)</span> v poljubnem
             elementu <span class="math inline">\(N\)</span> je torej
             enaka <span class="math inline">\(\chi_{\rho}(1)\)</span>.
             Iz tabele karakterjev grupe <span

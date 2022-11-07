@@ -1788,7 +1788,7 @@ zato je konjugiranostni razred $r^i$ enak $\{ r^{i}, r^{-i} \}$. Za $i \neq 0, n
 Velja tudi
 \[
     \left( s r^i \right)^{r^j} = s r^{2j + i}, \quad
-    \left( s r^i \right)^{s r^j} = r^{s r^{2j - i}},   
+    \left( s r^i \right)^{s r^j} = s r^{2j - i},   
 \]
 zato je konjugiranostni razred $s$ enak $\{ s r^{2j} \mid j \in \ZZ \}$ in konjugiranostni razred $sr$ je enak $\{ s r^{2j + 1} \mid j \in \ZZ \}$. Če je $n$ sod, sta ta dva razreda disjunktna, če je $n$ lih, pa sovpadata. Skupaj torej dobimo
 \[
@@ -2037,7 +2037,7 @@ kar je le posledica dejstva $\hat{f}(\chi) = |A| \cdot [ f, \chi ]$.
 
 \subsection{Izračunljivost tabele karakterjev}
 
-Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike $0$. Kategorijo $\Rep(G)$ v tem primeru razumemo zelo dobro, če le poznamo tabelo karakterjev. Za zdaj smo si pogledali nekaj zgledov, kako to tabelo izračunati za posebne primere grupe. Pri tem smo si sicer res pomagali z razvito teorijo, a je bil večji del izračuna tabele opravljen z metodo ostrega pogleda. V splošnem se temu lahko izognemo; obstaja namreč več algoritmov, ki le z uporabo linearne algebre izračunajo tabelo karakterjev.
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Kategorijo $\Rep_G$ v tem primeru razumemo zelo dobro, če le poznamo tabelo karakterjev. Za zdaj smo si pogledali nekaj zgledov, kako to tabelo izračunati za posebne primere grupe. Pri tem smo si sicer res pomagali z razvito teorijo, a je bil večji del izračuna tabele opravljen z metodo ostrega pogleda. V splošnem se temu lahko izognemo; obstaja namreč več algoritmov, ki le z uporabo linearne algebre izračunajo tabelo karakterjev.
 
 Pogledali si bomo enega takih algoritmov, ki uporablja projekcije na izotipične komponente iz zadnjega razdelka. Algoritem temelji na Fourierovi transformaciji karakteristične funkcije $1_{\conclass}$ konjugiranostnega razreda $\conclass$ grupe $G$ v regularni upodobitvi $\rho_{\fun}$. Po lemi o Fourierovi transformaciji razredne funkcije je namreč zožitev $\widehat{1_{\conclass}}(\rho_{\fun})$ na $\pi$-izotipično komponento skalarno množenje s številom
 \[
@@ -2068,14 +2068,14 @@ kjer smo v enakosti upoštevali, da je $w \in W$. Od tod sledi
 \[
     \textstyle W \leq \Eigenspace_{\frac{\chi_{\pi}(1)}{|G|} \sum_{\conclass} \chi_{\pi}(\conclass) \lambda_{\conclass}}(P_{\pi}).
 \]
-Projektor $P_{\pi}$ ima seveda le dve možni lastni vrednosti: $0$ in $1$. Ker je po predpostavki $W \neq 0$, ne mora biti za vse $\pi \in \Irr(G)$ projekcija na $\pi$-izotipično komponento ničelna na $W$. Torej je za nek $\pi$ nujno
+Projektor $P_{\pi}$ ima seveda le dve možni lastni vrednosti: $0$ in $1$. Ker je po predpostavki $W \neq 0$, ne more biti za vse $\pi \in \Irr(G)$ projekcija na $\pi$-izotipično komponento ničelna na $W$. Torej je za nek $\pi$ nujno
 \[
     \textstyle W \leq \Eigenspace_{1}(P_{\pi}) = \Izotip_{\rho_{\fun}}(\pi).
 \]
 Vemo že, kako deluje $\widehat{1_{\conclass}}(\rho_{\fun})$ na $\pi$-izotipični komponenti, od koder določimo skalarje kot $\lambda_{\conclass} = |\conclass| \cdot \chi_{\pi}(\conclass^{-1})/\chi_{\pi}(1)$. Iz definicije $W$ zdaj sledi, da je $\pi$-izotipična komponenta vsebovana v $W$, s čimer smo nazadnje izpeljali $W = \Izotip_{\rho_{\fun}}(\pi)$.
 \end{dokaz}
 
-S to karakterizacijo izotipičnih komponent lahko opišemo algoritem za izračun tabele karakterjev. Najprej oštevilčimo elemente grupe $G$ kot $g_1, g_2, \dots, g_|G|$ in pripravimo vektorski prostor $F^{|G|} \cong \hom(G,F)$ s standardno bazo $e_i$, ki ustreza karakteristični funkciji $1_{g_i}$. Izračunamo še konjugiranostne razrede grupe $G$ in iz vsakega izberemo predstavnika. Pripravimo funkcijo, ki izračuna matriko regularne upodobitve $\rho_{\fun}$ v poljubnem elementu $x \in G$, in za tem še funkcijo, ki izračuna matriko Fourierove transformacije $\widehat{1_{\conclass}}(\rho_{\hom})$ za konjugiranostni razred $\conclass$. Izračunamo lastne podprostore vseh teh matrik in za tem vse njihove netrivialne preseke. Te so ravno izotipične komponente. V vsaki komponenti $W$ izberemo bazo, v kateri izračunamo sled zožitve matrike $\rho_{\fun}(x)$ na $W$. Ker je $W$ kot upodobitev izomorfen direktni vsoti $\deg(\pi)$ kopij neke nerazcepne upodobitve $\pi$, velja $\dim(W) = \deg(\pi)^2$ in zato
+S to karakterizacijo izotipičnih komponent lahko opišemo algoritem za izračun tabele karakterjev. Najprej oštevilčimo elemente grupe $G$ kot $g_1, g_2, \dots, g_{|G|}$ in pripravimo vektorski prostor $F^{|G|} \cong \fun(G,F)$ s standardno bazo $e_i$, ki ustreza karakteristični funkciji $1_{g_i}$. Izračunamo še konjugiranostne razrede grupe $G$ in iz vsakega izberemo predstavnika. Pripravimo funkcijo, ki izračuna matriko regularne upodobitve $\rho_{\fun}$ v poljubnem elementu $x \in G$, in za tem še funkcijo, ki izračuna matriko Fourierove transformacije $\widehat{1_{\conclass}}(\rho_{\fun})$ za konjugiranostni razred $\conclass$. Izračunamo lastne podprostore vseh teh matrik in za tem vse njihove netrivialne preseke. Te so ravno izotipične komponente. V vsaki komponenti $W$ izberemo bazo, v kateri izračunamo sled zožitve matrike $\rho_{\fun}(x)$ na $W$. Ker je $W$ kot upodobitev izomorfen direktni vsoti $\deg(\pi)$ kopij neke nerazcepne upodobitve $\pi$, velja $\dim(W) = \deg(\pi)^2$ in zato
 \[
     \tr(\rho_{\fun}(x) |_W) = \sqrt{\dim(W)} \cdot \chi_{\pi}(x).
 \]
@@ -2097,7 +2097,7 @@ Opazujmo alternirajočo grupo $A_5$ nad poljem $\CC$. Z opisanim algoritmom hitr
 \caption{Tabela karakterjev $A_5$, kjer je $\zeta = e^{2 \pi i / 5}$}
 \end{table}
 
-Iz tabele lahko razberemo kar nekaj lastnosti grupe. Poglejmo si, kako hitro premislimo, da je $A_5$ \emph{enostavna} grupa. Če bi namreč $A_5$ imela kakšno pravo netrivialno edinko $N$, potem bi kvocient $A_5/N$ imel kakšno netrivialno nerazcepno upodobitev $\rho$. Restrikcija $\Res^G_{G/N}(\rho)$ je zato netrivialna nerazcepna upodobitev grupe $A_5$ z netrivialnim jedrom $N$. Vrednost karakterja $\chi_{\rho}$ v poljubnem elementu $N$ je torej enaka $\chi_{\rho}(1)$. Iz tabele karakterjev grupe $A_5$ pa je jasno, da takega karakterja ni.\footnote{Iz argumenta vidimo, da velja celo naslednje. Končna grupa $G$ je enostavna, če in samo če je vsaka njena netrivialna nerazcepna upodobitev zvesta.}
+Iz tabele lahko razberemo kar nekaj lastnosti grupe. Poglejmo si, kako hitro premislimo, da je $A_5$ \emph{enostavna} grupa. Če bi namreč $A_5$ imela kakšno pravo netrivialno edinko $N$, potem bi kvocient $A_5/N$ imel kakšno netrivialno nerazcepno upodobitev $\rho$. Restrikcija $\Res^{A_5/N}_{A_5}(\rho)$ je zato netrivialna nerazcepna upodobitev grupe $A_5$ z netrivialnim jedrom. Vrednost karakterja $\chi_{\rho}$ v poljubnem elementu $N$ je torej enaka $\chi_{\rho}(1)$. Iz tabele karakterjev grupe $A_5$ pa je jasno, da takega karakterja ni.\footnote{Iz argumenta vidimo, da velja celo naslednje. Končna grupa $G$ je enostavna, če in samo če je vsaka njena netrivialna nerazcepna upodobitev zvesta.}
 \end{zgled}
 
 Predstavljeni algoritem ima mnogo pomanjkljivosti. V programskem jeziku \GAP~je za izračun tabele karakterjev implementiran algoritem \href{https://www.sciencedirect.com/science/article/pii/S0747717108800776}{(Dixon 1967, Schneider 1990)}, ki izboljša predstavljenega na naslednja dva načina.
