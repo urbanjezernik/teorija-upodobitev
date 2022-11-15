@@ -2163,20 +2163,20 @@ Ko torej seštejemo prispevke po vseh cikličnih podgrupah, dobimo
 \[
   \sum_{H \in C} {\textstyle \Ind^G_H(c_H)(g)} = \sum_{x \in G} \sum_{H \in C} 1_{\langle x g x^{-1} \rangle = C} = \sum_{x \in G} 1 = |G|.  
 \]
-Konstantna funkcija $|G|$ je torej element ideala $\sum_{H \in C} \Ind(R(H))$ v $R(G)$. Od tod seveda sledi enakost 
+Konstantna funkcija $|G|$ je torej element ideala $\sum_{H \in C} \Ind(R(H))$ v $R(G)$. Od tod seveda sledi vsebovanost 
 \[
-    |G| \cdot R(G) = \sum_{H \in C} \Ind(R(H)).
+    |G| \cdot R(G) \leq \sum_{H \in C} \Ind(R(H)).
 \]
 Vsak virtualni karakter v $R(G)$ je zato linearna kombinacija induciranih virtualnih karakterjev cikličnih podgrup, pri čemer so koeficienti racionalna števila z imenovalcem kvečjemu $|G|$. Povzemimo to presenetljivo ugotovitev.
 
 \begin{izrek}[Artinov izrek]
-Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev nad algebraično zaprtim poljem karakteristike $0$. Tedaj je $\chi_{\rho}$ \emph{racionalna} linearna kombinacija indukcij nerazcepnih karakterjev cikličnih podgrup grupe $G$.
+Naj bo $G$ končna grupa in $\rho$ njena končnorazsežna upodobitev nad poljem karakteristike tuje $|G|$. Tedaj je $\chi_{\rho}$ \emph{racionalna} linearna kombinacija indukcij nerazcepnih karakterjev cikličnih podgrup grupe $G$.
 \end{izrek}
 
 Racionalnim kombinacijam se lahko izognemo, če razširimo razred podgrup s cikličnih na {\definicija $p$-elementarne podgrupe} grupe $G$. To so podgrupe, ki so izomorfne direktnemu produktu ciklične grupe in $p$-grupe.
 
 \begin{izrek}[Brauerjev izrek]
-Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev nad algebraično zaprtim poljem karakteristike $0$. Tedaj je $\chi_{\rho}$ \emph{celoštevilska} linearna kombinacija indukcij nerazcepnih karakterjev $p$-elementarnih podgrup grupe $G$, ko $p$ preteče vse praštevilske delitelje moči $G$.
+Naj bo $G$ končna grupa in $\rho$ njena končnorazsežna upodobitev nad algebraično zaprtim poljem karakteristike $0$. Tedaj je $\chi_{\rho}$ \emph{celoštevilska} linearna kombinacija indukcij nerazcepnih karakterjev $p$-elementarnih podgrup grupe $G$, ko $p$ preteče vse praštevilske delitelje moči $G$.
 \end{izrek}
 
 Dokaz Brauerjevega izreka je nekoliko bolj zapleten kot preprost argument, ki nas je pripeljal do Artinovega izreka. Bralec ga lahko najde v {\literatura (Serre 1977)}. 
