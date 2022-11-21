@@ -2368,7 +2368,7 @@ Vzdolž Youngovega simetrizatorja dobimo endospletično $\Fcal(\youngsym)$ regul
 \[
     V_{\lambda} = \image \Fcal(\youngsym) = \langle \youngsym * f \mid f \in \fun(S_n, \CC) \rangle,
 \]
-ki ga imenujemo {\definicija Spechtov modul}. Na tem prostoru naravno deluje grupa $S_n$\footnote{Ker je $\Fcal(\youngsym)$ spletična, je to res invarianten podprostor. Ni pa težko videti, kako elementi grupe zares delujejo; za $g \in S_n$ element $\rho_{\fun}(g)$ preslika $\youngsym * f$ v $\youngsym * (\rho_{\fun}(g) \cdot f)$.}, dobljeno upodobitev označimo z $\rho_{\lambda}$.
+ki ga imenujemo {\definicija Spechtov modul}. Na tem prostoru naravno deluje grupa $S_n$\footnote{Ker je $\Fcal(\youngsym)$ spletična, je to res invarianten podprostor. Ni pa težko videti, kako elementi grupe zares delujejo; za $g \in S_n$ element $\rho_{\fun}(g)$ preslika $\youngsym * f$ v $\youngsym * (\rho_{\fun}(g) \cdot f)$.}, dobljeno upodobitev označimo z $\rho_{\lambda}$. Velja $V_{\lambda} \neq 0$, saj je $\youngsym = \youngsym * 1_1 \in V_{\lambda}$.
 
 \begin{izrek}[o nerazcepnih upodobitvah simetrične grupe] \leavevmode
 \begin{enumerate}
@@ -2402,14 +2402,14 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
     \[
         \left( 1_P * f \right) (x) = \sum_{p \in P} f(p^{-1} x) = \sum_{g \in Px} f(g),
     \]
-    torej $1_P * f$ izračuna vsoto funkcije $f$ po odseku $Px$. Prostor $\image \Fcal(1_P)$ lahko zato identificiramo s podprostorom funkcij $\fun_{S \backslash S_n}(S_n, \CC)$, ki so konstantne na desnih odsekih $S \backslash S_n$. Delovanje $S_n$ na tem prostoru ni nič drugega kot $\Ind^{S_n}_P(\11)$, kar prepoznamo kot standardno permutacijska upodobitev grupe $S_n$ njenega delovanja na $\{ 1, 2, \dots, n \}$. Uporabimo zdaj še konvolucijo s funkcijo $\sgn \cdot 1_Q$. Dobimo linearno preslikavo
+    torej $1_P * f$ izračuna vsoto funkcije $f$ po odseku $Px$. Prostor $\image \Fcal(1_P)$ lahko zato identificiramo s podprostorom funkcij $\fun_{P \backslash S_n}(S_n, \CC)$, ki so konstantne na desnih odsekih $P \backslash S_n$. Delovanje $S_n$ na tem prostoru ni nič drugega kot $\Ind^{S_n}_P(\11)$, kar prepoznamo kot standardno permutacijska upodobitev grupe $S_n$ njenega delovanja na $\{ 1, 2, \dots, n \}$. Uporabimo zdaj še konvolucijo s funkcijo $\sgn \cdot 1_Q$. Dobimo linearno preslikavo
     \[
-        \textstyle \fun_{S \backslash S_n}(S_n, \CC) \to \fun_{S \backslash S_n}(S_n, \CC), \quad
+        \textstyle \fun_{P \backslash S_n}(S_n, \CC) \to \fun_{P \backslash S_n}(S_n, \CC), \quad
         \psi \mapsto \left( x \mapsto \psi(x) - \psi((1 \ n) \cdot x) \right).
     \]
     Njeno jedro sestoji iz funkcij $\psi$, ki so konstantne na odsekih $S$ in povrhu zadoščajo še enakosti $\psi(x) = \psi((1 \ n) \cdot x)$ za vsak $x \in S_n$. Ko ta pogoj uporabimo s transpozicijami $(i \ n)$ za $1 \leq i < n$, sklenemo, da je vsaka taka funkcija $\psi$ nujno konstantna. Nazadnje je torej
     \[
-        V_{\lambda} = \image \Fcal(\youngsym) \cong \frac{\textstyle \fun_{S \backslash S_n}(S_n, \CC)}{\CC}.
+        V_{\lambda} = \image \Fcal(\youngsym) \cong \frac{\textstyle \fun_{P \backslash S_n}(S_n, \CC)}{\CC}.
     \]
     Ta prostor je razsežnosti $n-1$. Prirejeno upodobitev imenujemo {\definicija standardna upodobitev} simetrične grupe $S_n$. Kot smo videli, jo lahko dobimo tako, da iz standardne permutacijske upodobitve odstanimo trivialno upodobitev.
 \end{itemize}
@@ -2419,7 +2419,7 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
     Naj bo $\lambda$ razčlenitev $n$ in $\lambda^\prime$ razčlenitev, ki jo iz $\lambda$ dobimo tako, da transponiramo Youngov diagram. Preveri, da velja $\sgn \otimes \rho_{\lambda} \cong \rho_{\lambda^\prime}$.
 \end{domacanaloga}        
 
-Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vlogo delovanje Youngovega simetrizatorja $\widehat{\youngsym}(\rho_{\fun})$ na prostoru $V_{\lambda}$. V lemi uporabljamo leksikografsko delno urejenost $<$ na množici vseh razčlenitev. 
+Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vlogo delovanje Fourierove transformacije Youngovega simetrizatorja $\widehat{\youngsym}(\rho_{\fun})$ na prostoru $V_{\lambda}$. V lemi uporabljamo leksikografsko delno urejenost $<$ na množici vseh razčlenitev. 
 
 \begin{lema} \leavevmode
 \begin{enumerate}
@@ -2495,7 +2495,34 @@ Preostane nam še dokaz leme.
 \end{enumerate}
 \end{dokaz}
 
-Tekom dokaza izreka smo premislili, da je $\youngsym * \youngsym = n_{\lambda} \cdot \youngsym$ za nek $n_{\lambda} \neq 0$. Od tod sledi, da je $V_{\lambda}$ slika \emph{projektorske} spletične $\Fcal(\youngsym / n_{\lambda})$. Youngov simetrizator nam torej prek Fourierove transformacije izdaja nerazcepno upodobitev $V_{\lambda}$. Projektor $\Fcal(\youngsym / n_{\lambda})$ lahko zapišemo z matriko z \emph{racionalnimi} koeficienti, zato v prostoru $V_{\lambda}$ lahko izberemo bazo, glede na katero ima delovanje vsakega elementa $g \in G$ \emph{racionalne} matrične koeficiente. Vsaka nerazcepna upodobitev $\rho_{\lambda}$ je zato definirana nad poljem $\QQ$.
+Tekom dokaza izreka smo premislili, da je $\youngsym * \youngsym = n_{\lambda} \cdot \youngsym$ za nek skalar $n_{\lambda} \in \CC$. Linearna preslikava $\Fcal(\youngsym)$ slika v vektorski podprostor $V_{\lambda}$, na tem podprostoru pa deluje kot
+\[
+    \Fcal(\youngsym) \cdot (\youngsym * f) 
+    = \youngsym * \youngsym * f
+    = n_{\lambda} \cdot (\youngsym * f),
+\]
+torej kot skalarno množenje z $n_{\lambda}$. Ta skalar lahko izračunamo iz sledi preslikave $\Fcal(\youngsym)$. V standardni bazi iz karakterističnih funkcij namreč velja
+\[
+    \Fcal(\youngsym) \cdot 1_g
+    = \youngsym * 1_g
+    = \left( x \mapsto \youngsym(x g^{-1}) \right)
+    = \sum_{x \in S_n} \youngsym(x g^{-1}) \cdot 1_x
+\]
+za vsak $g \in S_n$, torej so diagonalni členi prirejene matrike $\Fcal(\youngsym)$ enaki $\youngsym(1) = 1$. Od tod izračunamo sled preslikave $\Fcal(\youngsym)$ kot
+\[
+    n_{\lambda} \cdot \dim V_{\lambda} 
+    = \tr \Fcal(\youngsym)
+    = \sum_{g \in S_n} 1
+    = n!,
+\]
+zato v posebnem velja $n_{\lambda} = n! / \dim V_{\lambda}$. Skalar $n_{\lambda}$ je torej neničelno racionalno število.
+
+V posebnem lahko tvorimo endospletično $\Fcal(\youngsym / n_{\lambda})$ regularne upodobitve, ki je \emph{projektorska spletična}\footnote{Velja namreč $\youngsym/n_{\lambda} * \youngsym/n_{\lambda} * f = \youngsym/n_{\lambda} * f$.} na prostor $V_{\lambda}$. V tej posebni situaciji dobimo torej eksplicitno projekcijo z regularne na nerazcepno upodobitev $V_{\lambda}$. V standardni bazi ima matrika preslikave $\Fcal(\youngsym/n_{\lambda})$ racionalne koeficiente. Ker njeni stolpci razpenjajo prostor $V_{\lambda}$, lahko torej izberemo ortogonalno\footnote{Če izbrana baza ni ortogonalna, na njej uporabimo Gram-Schmidtovo ortogonalizacijo.} bazo $B_{\lambda} = \{ b_1, b_2, \dots, b_r \}$ prostora $V_{\lambda}$, v kateri ima vsak vektor $b_i$ racionalne koeficiente v standardni bazi. Ker grupa $S_n$ regularno deluje s permutacijami na standardni bazi, imajo torej tudi slike $\rho_{\fun}(g) \cdot b_i$ racionalne koeficiente v standardni bazi za vsak $g \in S_n$. Vsako od teh slik pa lahko razvijemo tudi po bazi $B_{\lambda}$ kot
+\[
+    \rho_{\fun}(g) \cdot b_i
+    = \sum_{b_j \in B_{\lambda}} \frac{\langle \rho_{\fun}(g) \cdot b_i, b_j \rangle}{\langle b_j, b_j \rangle} b_j,
+\]
+in pri tem so koeficienti razvoja racionalni. V bazi $B_{\lambda}$ ima torej vsaka matrika $\rho_{\fun}(g)$ za $g \in S_n$ racionalne koeficiente. Upodobitev $\rho_{\lambda}$ je torej definirana nad poljem $\QQ$.
 
 \begin{domacanaloga}
 Naj bo $G$ končna grupa z upodobitvijo nad $\QQ$. Dokaži, da obstaja baza vektorskega prostora, v kateri je dana upodobitev definirana nad $\ZZ$.
@@ -2505,10 +2532,20 @@ Naj bo $G$ končna grupa z upodobitvijo nad $\QQ$. Dokaži, da obstaja baza vekt
 Vsaka nerazcepna upodobitev simetrične grupe je definirana nad $\ZZ$.
 \end{posledica}    
 
-Vsak Spechtov modul $V_{\lambda}$ lahko z redukcijo po modulu $p$ za poljubno praštevilo $p$ reduciramo do vektorskega prostora nad končnim poljem $\FF_p$. Na ta način dobimo mnogo modularnih upodobitev simetrične grupe. Kot smo videli že v primeru $p = 3$, te upodobitve niso nujno nerazcepne. V takih primerih obstaja enoličen \emph{kvocient} $D_{\lambda}$ reducirane upodobitve, ki je nerazcepen nad $\FF_p$.\footnote{Pozor, za nekatere razčlenitve $\lambda$ je $D_{\lambda} = 0$. Izkaže se, da je število modularnih upodobitev enako številu konjugiranostnih razredov elementov, katerih red je \emph{tuj} $p$.} Izkaže se, da na ta način dobimo vse nerazcepne modularne upodobitve simetrične grupe. Modularni je mnogo bolj mističen od kompleksnega. Sodobna teorija upodobitev se povečini ukvarja s tem, kako \emph{regularna} je kategorija upodobitev v odvisnosti od praštevila $p$.\footnote{Na primer, mnogo dela je osredotočenega na \href{https://mathoverflow.net/questions/138310/what-to-do-now-that-lusztigs-and-james-conjectures-have-been-shown-to-be-false}{Lusztigovo in Jamesovo domnevo}.} V zvezi s tem obstaja mnogo odprtih problemov.
+Vsak Spechtov modul $V_{\lambda}$ lahko z redukcijo po modulu $p$ za poljubno praštevilo $p$ reduciramo do vektorskega prostora nad končnim poljem $\FF_p$. Na ta način dobimo modularno upodobitev $\rho_{\lambda} \mod{p}$ simetrične grupe. Kot smo videli že v primeru $p = 3$, te upodobitve niso nujno nerazcepne. Izkaže se, da pa ima taka modularna upodobitev \emph{enoličen nerazcepen kvocient} $D_{\lambda}$, če za razčlenitev $\lambda = 1^{i_1} 2^{i_2} \cdots n^{i_n}$ velja $i_j < p$ za vsak $j$. Takim ugodnim razčlenitvam pravimo {\definicija $p$-regularne razčlenitve}. Izkaže se, da je število $p$-regularnih razčlenitev ravno enako številu konjugiranostnih razredov elementov v $S_n$, katerih red je \emph{tuj} $p$. Na ta način dobimo vse modularne upodobitve simetrične grupe, a tega ne bomo dokazali.
+
+\begin{izrek}
+    Vsaka nerazcepna upodobitev $S_n$ nad $\FF_p$ je izomorfna $D_{\lambda}$ za neko $p$-regularno razčlenitev $\lambda$ števila $n$. Pri tem za različni razčlenitvi $\lambda , \mu$ velja $D_{\lambda} \not\cong D_{\mu}$.
+\end{izrek}
+
+\begin{zgled}
+Opazujmo grupo $S_3$. Njene nerazcepne upodobitve nad $\CC$ dobimo iz razčlenitev $3^1$, $2^1 1^1$ in $1^3$, in sicer zaporedoma $\11$, $\rho$ in $\sgn$. Opazujmo praštevilo $p = 3$. Prvi dve od teh razčlenitev sta $3$-regularni, tretja pa ni. Iz prve dobimo nerazcepno upodobitev $\11$ nad $\FF_3$, druga upodobitev $\rho$ pa, kot smo videli, ni nerazcepna nad $\FF_3$, temveč ima podupodobitev $\11$ s kvocientom $\rho / \11 \cong \sgn$. Dobimo torej dve nerazcepni upodobitvi nad $\FF_3$, in sicer $\11$ in $\sgn$. Nekoliko nenavadno je, da smo predznačno upodobitev nad $\FF_3$ pri tem dobili iz standardne upodobitve $S_3$ in \emph{ne} iz predznačne upodobitve.
+\end{zgled}
+
+Modularni svet je mnogo bolj mističen od kompleksnega. Sodobna teorija upodobitev se povečini ukvarja s tem, kako \emph{regularna} je kategorija upodobitev v odvisnosti od praštevila $p$.\footnote{Na primer, mnogo dela je osredotočenega na \href{https://mathoverflow.net/questions/138310/what-to-do-now-that-lusztigs-and-james-conjectures-have-been-shown-to-be-false}{Lusztigovo in Jamesovo domnevo}.} V zvezi s tem obstaja mnogo odprtih problemov.
 
 \begin{odprtproblem}
-Obravnavajmo modularne upodobitve nad $\FF_p$, kjer je $p \leq n$. Naj bo $\lambda$ razčlenitev $n$. Izračunaj večkratnosti nerazcepnih podupodobitev v redukciji $V_{\lambda}$ po modulu $p$.
+Naj bo $p \leq n$ in naj bo $\lambda$ $p$-regularna razčlenitev $n$. Izračunaj večkratnosti $\mult_{\pi}(\rho_{\lambda} \mod{p})$ nerazcepnih upodobitev $\pi$ nad $\FF_p$.
 \end{odprtproblem}
 
 Ta problem je razrešen le za razčlenitve $\lambda$ z največ dvema deloma, torej s $k \leq 2$. Za $k = 3$ sodobna bilijardna domneva \href{https://arxiv.org/pdf/1703.05898.pdf}{(Lusztig-Williamson 2018)} predvideva, da se te večkratnosti obnašajo po zakonu nekega zakompliciranega \href{https://www.youtube.com/watch?v=Ru0Zys1Vvq4}{dinamičnega sistema}.
