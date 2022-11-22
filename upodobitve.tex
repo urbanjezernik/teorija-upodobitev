@@ -2545,7 +2545,7 @@ Opazujmo grupo $S_3$. Njene nerazcepne upodobitve nad $\CC$ dobimo iz razčlenit
 Modularni svet je mnogo bolj mističen od kompleksnega. Sodobna teorija upodobitev se povečini ukvarja s tem, kako \emph{regularna} je kategorija upodobitev v odvisnosti od praštevila $p$.\footnote{Na primer, mnogo dela je osredotočenega na \href{https://mathoverflow.net/questions/138310/what-to-do-now-that-lusztigs-and-james-conjectures-have-been-shown-to-be-false}{Lusztigovo in Jamesovo domnevo}.} V zvezi s tem obstaja mnogo odprtih problemov.
 
 \begin{odprtproblem}
-Naj bo $p \leq n$ in naj bo $\lambda$ $p$-regularna razčlenitev $n$. Izračunaj večkratnosti $\mult_{\pi}(\rho_{\lambda} \mod{p})$ nerazcepnih upodobitev $\pi$ nad $\FF_p$.
+Naj bo $p \leq n$ in naj bo $\lambda$ $p$-regularna razčlenitev $n$. Izračunaj večkratnosti $\mult_{\rho_{\lambda} \mod{p}}(\pi)$ nerazcepnih upodobitev $\pi$ nad $\FF_p$.
 \end{odprtproblem}
 
 Ta problem je razrešen le za razčlenitve $\lambda$ z največ dvema deloma, torej s $k \leq 2$. Za $k = 3$ sodobna bilijardna domneva \href{https://arxiv.org/pdf/1703.05898.pdf}{(Lusztig-Williamson 2018)} predvideva, da se te večkratnosti obnašajo po zakonu nekega zakompliciranega \href{https://www.youtube.com/watch?v=Ru0Zys1Vvq4}{dinamičnega sistema}.
@@ -2616,6 +2616,10 @@ Vrednost karakterja v dolgem ciklu je torej neničelna le za kljuke, v katerih p
 \end{itemize}
 \end{zgled}
 
+\begin{domacanaloga}
+    Izračunaj vrednost poljubnega karakterja $\chi_{\lambda}$ v konjugiranostnem razredu transpozicij.
+\end{domacanaloga}
+
 S Frobeniusovo formulo lahko določimo stopnje nerazcepnih upodobitev simetrične grupe. Za to bomo potrebovali koncept kljuke, ki je malo splošnejši od tiste, ki smo jo videli v zadnjem zgledu. Opazujmo Youngov diagram razčlenitve $\lambda$. Za vsako celico $(i,j)$ diagrama, kjer $i$ predstavlja vrstico in $j$ stopec, je {\definicija kljuka} $H_{\lambda}(i,j)$ množica tistih celic, ki so desno ali pod celico $(i,j)$, vključivši celico $(i,j)$.\footnote{$H_{\lambda}(i,j)$ torej sestoji iz tistih celic $(a,b)$, za katere je $a = i$ in $b \geq j$ ali $b = j$ in $a \geq i$.} {\definicija Dolžina kljuke} $H_{\lambda}(i,j)$ je enaka številu celic v kljuki, se pravi $|H_{\lambda}(i,j)|$.
 
 \begin{posledica}[formula o dolžinah kljuk]
@@ -2656,7 +2660,7 @@ Ta determinanta je enaka Vandermondovi determinanti, zato je iskani koeficient e
     \frac{n!}{n! (n-1)! \cdots 1!} \cdot \prod_{1 < j \leq n} (j-1)! =
     1,
 \]
-kot mora biti, saj že vemo, da je v tem primeru $V_{\lambda} \cong \11$. Dolžine kljuk so $|H_{\lambda}(i,1)| = n - i + 1$, zato formula o kljukah za ta trivialen primer drži. Splošnega primera ni težko izpeljati z indukcijo.
+kot mora biti, saj že vemo, da je v tem primeru $V_{\lambda} \cong \sgn$. Dolžine kljuk so $|H_{\lambda}(i,1)| = n - i + 1$, zato formula o kljukah za ta trivialen primer drži. Splošnega primera ni težko izpeljati z indukcijo.
 
 \begin{domacanaloga}
 Z indukcijo na število stolpcev Youngovega diagrama $\lambda$ dokaži, da je
@@ -2674,10 +2678,6 @@ Iz formule o dolžinah kljuk takoj izračunamo stopnjo standardne upodobitve. Us
     \frac{n!}{1 \cdot 2 \cdot \cdots \cdot (n-2) \cdot n \cdot 1} = n-1.
 \]
 \end{zgled}
-
-\begin{domacanaloga}
-Izračunaj vrednost poljubnega karakterja $\chi_{\lambda}$ v konjugiranostnem razredu transpozicij.
-\end{domacanaloga}
 
 V zvezi s tabelo karakterjev simetrične grupe omenimo še sodobnejši presenetljiv rezultat \href{https://link.springer.com/article/10.1007/s00209-014-1290-x}{(Miller 2014)}, v katerem avtor dokaže, da so vrednosti skoraj vseh karakterjev v skoraj vseh grupnih elementih ničelne. Natančneje, če enakomerno naključno izberemo $g \in S_n$ in $\pi \in \Irr(S_n)$, potem je
 \[
