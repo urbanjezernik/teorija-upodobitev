@@ -2532,7 +2532,7 @@ Naj bo $G$ končna grupa z upodobitvijo nad $\QQ$. Dokaži, da obstaja baza vekt
 Vsaka nerazcepna upodobitev simetrične grupe je definirana nad $\ZZ$.
 \end{posledica}    
 
-Vsak Spechtov modul $V_{\lambda}$ lahko z redukcijo po modulu $p$ za poljubno praštevilo $p$ reduciramo do vektorskega prostora nad končnim poljem $\FF_p$. Na ta način dobimo modularno upodobitev $\rho_{\lambda} \mod{p}$ simetrične grupe. Kot smo videli že v primeru $p = 3$, te upodobitve niso nujno nerazcepne. Izkaže se, da pa ima taka modularna upodobitev \emph{enoličen nerazcepen kvocient} $D_{\lambda}$, če za razčlenitev $\lambda = 1^{i_1} 2^{i_2} \cdots n^{i_n}$ velja $i_j < p$ za vsak $j$. Takim ugodnim razčlenitvam pravimo {\definicija $p$-regularne razčlenitve}. Izkaže se, da je število $p$-regularnih razčlenitev ravno enako številu konjugiranostnih razredov elementov v $S_n$, katerih red je \emph{tuj} $p$. Na ta način dobimo vse modularne upodobitve simetrične grupe, a tega ne bomo dokazali.
+Vsak Spechtov modul $V_{\lambda}$ lahko z redukcijo po modulu $p$ za poljubno praštevilo $p$ reduciramo do vektorskega prostora nad končnim poljem $\FF_p$. Na ta način dobimo modularno upodobitev $\rho_{\lambda,p}$ simetrične grupe. Kot smo videli že v primeru $p = 3$, te upodobitve niso nujno nerazcepne. Izkaže se, da pa ima taka modularna upodobitev \emph{enoličen nerazcepen kvocient} $D_{\lambda}$, če za razčlenitev $\lambda = 1^{i_1} 2^{i_2} \cdots n^{i_n}$ velja $i_j < p$ za vsak $j$. Takim ugodnim razčlenitvam pravimo {\definicija $p$-regularne razčlenitve}. Izkaže se, da je število $p$-regularnih razčlenitev ravno enako številu konjugiranostnih razredov elementov v $S_n$, katerih red je \emph{tuj} $p$. Na ta način dobimo vse modularne upodobitve simetrične grupe, a tega ne bomo dokazali.
 
 \begin{izrek}
     Vsaka nerazcepna upodobitev $S_n$ nad $\FF_p$ je izomorfna $D_{\lambda}$ za neko $p$-regularno razčlenitev $\lambda$ števila $n$. Pri tem za različni razčlenitvi $\lambda , \mu$ velja $D_{\lambda} \not\cong D_{\mu}$.
@@ -2545,7 +2545,7 @@ Opazujmo grupo $S_3$. Njene nerazcepne upodobitve nad $\CC$ dobimo iz razčlenit
 Modularni svet je mnogo bolj mističen od kompleksnega. Sodobna teorija upodobitev se povečini ukvarja s tem, kako \emph{regularna} je kategorija upodobitev v odvisnosti od praštevila $p$.\footnote{Na primer, mnogo dela je osredotočenega na \href{https://mathoverflow.net/questions/138310/what-to-do-now-that-lusztigs-and-james-conjectures-have-been-shown-to-be-false}{Lusztigovo in Jamesovo domnevo}.} V zvezi s tem obstaja mnogo odprtih problemov.
 
 \begin{odprtproblem}
-Naj bo $p \leq n$ in naj bo $\lambda$ $p$-regularna razčlenitev $n$. Izračunaj večkratnosti $\mult_{\rho_{\lambda} \mod{p}}(\pi)$ nerazcepnih upodobitev $\pi$ nad $\FF_p$.
+Naj bo $p \leq n$ in naj bo $\lambda$ $p$-regularna razčlenitev $n$. Izračunaj večkratnosti $\mult_{\rho_{\lambda,p}}(\pi)$ nerazcepnih upodobitev $\pi$ nad $\FF_p$.
 \end{odprtproblem}
 
 Ta problem je razrešen le za razčlenitve $\lambda$ z največ dvema deloma, torej s $k \leq 2$. Za $k = 3$ sodobna bilijardna domneva \href{https://arxiv.org/pdf/1703.05898.pdf}{(Lusztig-Williamson 2018)} predvideva, da se te večkratnosti obnašajo po zakonu nekega zakompliciranega \href{https://www.youtube.com/watch?v=Ru0Zys1Vvq4}{dinamičnega sistema}.
@@ -2710,7 +2710,7 @@ Poskusimo zdaj na podoben način razumeti še nerazcepne upodobitve grupe $A_n$.
 \]
 Torej je $\langle \chi_{\lambda}|_{A_n}, \chi_{\lambda}|_{A_n} \rangle \in \{ 1, 2 \}$, zato je $\rho_{\lambda}|_{A_n}$ bodisi nerazcepna upodobitev bodisi vsota dveh neizomorfnih nerazcepnih upodobitev. Drugi primer nastopi, če in samo če je $\chi_{\lambda}|_{S_n \backslash A_n} = 0$, kar je ekvivalentno izomorfizmu $\rho_{\lambda} \cong \sgn \otimes \rho_{\lambda}$. Zadnja upodobitev je izomorfna $\rho_{\lambda^\prime}$, zato se upodobitev $\rho_{\lambda}$ razcepi na $A_n$, če in samo če je $\lambda = \lambda^\prime$, se pravi da je $\lambda$ simetrična razčlenitev. V tem primeru lahko zapišemo $\chi_{\lambda}|_{A_n} = \alpha + \beta$, kjer sta $\alpha, \beta$ nerazcepna karakterja $A_n$. Ni se težko prepričati, da zanju velja $\beta(\sigma) = \alpha(\sigma^{(1 \ 2)})$ za vsak $\sigma \in A_n$, torej sta v posebnem upodobitvi, na katere razpade $\rho_{\lambda}$, enake razsežnosti. Konkretne vrednosti karakterjev $\alpha$ in $\beta$ lahko izračunamo s pomočjo ortogonalnosti karakterjev. 
 
-S štetjem konjugiranostnih razredov v $A_n$ se ni težko prepričati, da na opisan način dobimo vse nerazcepne upodobitve alternirajoče grupe.
+S štetjem konjugiranostnih razredov v $A_n$ se ni težko prepričati, da na opisan način dobimo vse nerazcepne upodobitve alternirajoče grupe. Podrobnosti so podrobno prikazane v {\literatura (Fulton-Harris 2004)}.
 
 
 \section{Splošne linearne grupe}
@@ -3296,7 +3296,7 @@ S tem smo našteli $p^2-1$ nerazcepnih upodobitev in zatorej vse nerazcepne upod
 Izračunano tabelo karakterjev grupe $G_p$ lahko uporabimo, da z njo določimo še tabelo karakterjev grupe $\PSL_2(\FF_p)$.
 
 \begin{domacanaloga}
-Izračunaj tabelo karakterjev grupe $\SL(\FF_p)$ in grupe $\PSL_2(\FF_p)$. S tabelo se prepričaj, da je grupa $\PSL_2(\FF_p)$ enostavna za $p > 3$.
+Izračunaj tabelo karakterjev grupe $\SL(\FF_p)$ in grupe $\PSL_2(\FF_p)$. S tabelo se prepričaj, da je grupa $\PSL_2(\FF_p)$ enostavna za $p > 3$. V pomoč ti je lahko obravnava v {\literatura (Fulton-Harris 2004)}.
 \end{domacanaloga}
 
 \subsection{Matrike višjih razsežnosti}
