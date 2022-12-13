@@ -9568,15 +9568,32 @@
             \subseteq Z(G / \ker \pi).\]</span></p>
             </div>
             <div class="proof">
-            <p><em>Proof.</em> Enakost velja natanko tedaj, ko je <span
-            class="math inline">\(\pi(\mathcal{C})\)</span> skalarna
-            matrika. Taka matrika komutira z vsemi elementi <span
-            class="math inline">\(\pi(g)\)</span>, zato je <span
+            <p><em>Proof.</em> Naj bo <span class="math inline">\(x \in
+            \mathcal{C}\)</span>. Enakost <span
+            class="math inline">\(|r_{\pi}(x)| = 1\)</span> velja
+            natanko tedaj, ko je <span
+            class="math inline">\(\pi(x)\)</span> skalarna matrika. Taka
+            matrika komutira z vsemi elementi <span
+            class="math inline">\(\pi(g)\)</span> za <span
+            class="math inline">\(g \in G\)</span>. Velja torej <span
             class="math inline">\(\pi([g, \mathcal{C}]) = 1\)</span> za
             vsak <span class="math inline">\(g \in G\)</span>. To
             pomeni, da je <span class="math inline">\([G, \mathcal{C}]
-            \subseteq \ker \pi\)</span>, kar je enakovredno
-            trditvi. ◻</p>
+            \subseteq \ker \pi\)</span>, kar je enakovredno vsebovanosti
+            v trditvi. Premislimo še, da za matriko <span
+            class="math inline">\(A\)</span> velja <span
+            class="math inline">\([A, \pi(g)] = 1\)</span> za vse <span
+            class="math inline">\(g \in G\)</span>, če in samo če je
+            <span class="math inline">\(A\)</span> skalarna matrika.
+            Vektorski prostor, ki ga razpenjajo matrike <span
+            class="math inline">\(\pi(g)\)</span> za <span
+            class="math inline">\(g \in G\)</span>, je enak prostoru
+            matrik <span
+            class="math inline">\(M_{\deg(\pi)}(\mathbf{C})\)</span>,<a
+            href="#fn77" class="footnote-ref" id="fnref77"
+            role="doc-noteref"><sup>77</sup></a> v tej algebri pa so
+            centralne matrike ravno skalarne matrike. Dokaz je s tem
+            zaključen. ◻</p>
             </div>
             <p>Zberimo prispevke z maksimalno vrednostjo <span
             class="math inline">\(r_{\pi}(\mathcal{C})\)</span> v
@@ -9594,13 +9611,13 @@
             k <span class="math inline">\(0\)</span> za velike vrednosti
             <span class="math inline">\(n\)</span> in zatorej dobimo
             <span class="math display">\[\lim_{n \to \infty} \left(
-            \mu_n - \sum_{\pi \in X_C} r_{\pi}(\mathcal{C})^n \cdot
-            v_{\pi} \right) = 0.\]</span> Za konkretne grupe lahko s
-            tabelo karakterjev ali upoštevanjem kakšnih dodatnih
-            lastnosti eksplicitno izračunamo zadnjo vsoto in s tem
-            določimo limitno porazdelitev <span
-            class="math inline">\(\mu_n\)</span>, če ta sploh
-            obstaja.</p>
+            \mu_n - \sum_{\pi \in X_{\mathcal{C}}}
+            r_{\pi}(\mathcal{C})^n \cdot v_{\pi} \right) = 0.\]</span>
+            Za konkretne grupe lahko s tabelo karakterjev ali
+            upoštevanjem kakšnih dodatnih lastnosti eksplicitno
+            izračunamo zadnjo vsoto in s tem določimo limitno
+            porazdelitev <span class="math inline">\(\mu_n\)</span>, če
+            ta sploh obstaja.</p>
             <div class="domacanaloga">
             <p><strong>Domača naloga 5.6</strong>. Naj bo <span
             class="math inline">\(G\)</span> nekomutativna končna
@@ -9618,14 +9635,14 @@
             izrazimo s pomočjo norme <span class="math inline">\(||f||_1
             = \sum_{g \in G} |f(g)|\)</span> za funkcijo <span
             class="math inline">\(f \in
-            \mathop{\mathrm{fun}}(G,\mathbf{C})\)</span>.<a href="#fn77"
-            class="footnote-ref" id="fnref77"
-            role="doc-noteref"><sup>77</sup></a> Naj bo <span
+            \mathop{\mathrm{fun}}(G,\mathbf{C})\)</span>.<a href="#fn78"
+            class="footnote-ref" id="fnref78"
+            role="doc-noteref"><sup>78</sup></a> Naj bo <span
             class="math inline">\(0 &lt; \theta &lt; 1\)</span>
             konstanta. <span><strong><em>Čas
-            mešanja</em></strong></span><a href="#fn78"
-            class="footnote-ref" id="fnref78"
-            role="doc-noteref"><sup>78</sup></a> <span
+            mešanja</em></strong></span><a href="#fn79"
+            class="footnote-ref" id="fnref79"
+            role="doc-noteref"><sup>79</sup></a> <span
             class="math inline">\(t_{mix}(\theta)\)</span> je najmanjše
             število <span class="math inline">\(n\)</span>, pri katerem
             je <span class="math display">\[|| \mu_n -  \sum_{\pi \in
@@ -9848,9 +9865,9 @@
                 \frac{2^n}{p^{n-3}}.\]</span> Napaka zelo hitro upade,
             pod <span class="math inline">\(\theta\)</span> je že pri
             <span class="math inline">\(n = (3 \log p - \log \theta) /
-            (\log p - \log 2) \sim 3\)</span>.<a href="#fn79"
-            class="footnote-ref" id="fnref79"
-            role="doc-noteref"><sup>79</sup></a> Težava je le ta, da
+            (\log p - \log 2) \sim 3\)</span>.<a href="#fn80"
+            class="footnote-ref" id="fnref80"
+            role="doc-noteref"><sup>80</sup></a> Težava je le ta, da
             <span class="math inline">\(\mu_n\)</span> v resnici ne
             konvergira. Da to popravimo, moramo opazovati obnašanje po
             aritmetičnih zaporedjih z razliko <span
@@ -9946,9 +9963,9 @@
             \in \mathbf{N}}\)</span>, kjer je <span
             class="math inline">\(G_i = \langle S_i \rangle\)</span>,
             pravimo <span><strong><em>ekspanzivna
-            družina</em></strong></span>,<a href="#fn80"
-            class="footnote-ref" id="fnref80"
-            role="doc-noteref"><sup>80</sup></a> kadar obstaja konstanta
+            družina</em></strong></span>,<a href="#fn81"
+            class="footnote-ref" id="fnref81"
+            role="doc-noteref"><sup>81</sup></a> kadar obstaja konstanta
             <span class="math inline">\(\epsilon &gt; 0\)</span>, za
             katero je vsaka grupa <span
             class="math inline">\(G_i\)</span> <span
@@ -10031,9 +10048,9 @@
             kot bi pričakovali. Omejenost absolutnih vrednosti
             netrivialnih lastnih vrednosti operatorja Markova namreč
             lahko dokažemo, če premislimo, da se slučajni sprehodi
-            enakomerno zelo hitro premešajo.<a href="#fn81"
-            class="footnote-ref" id="fnref81"
-            role="doc-noteref"><sup>81</sup></a> Primer uporabe te
+            enakomerno zelo hitro premešajo.<a href="#fn82"
+            class="footnote-ref" id="fnref82"
+            role="doc-noteref"><sup>82</sup></a> Primer uporabe te
             tehnike par excellence je naslednji rezultat, ki med drugim
             presenetljivo sloni na Gowersovem rezultatu o zgornji meji
             gostote množic brez produktov.</p>
@@ -10151,8 +10168,8 @@
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{Z})\)</span>
             sicer podeduje le <em>diskretno</em> topologijo.</p>
             </div>
-            <p>Končnorazsežna<a href="#fn82" class="footnote-ref"
-            id="fnref82" role="doc-noteref"><sup>82</sup></a> kompleksna
+            <p>Končnorazsežna<a href="#fn83" class="footnote-ref"
+            id="fnref83" role="doc-noteref"><sup>83</sup></a> kompleksna
             upodobitev <span class="math inline">\(\rho \colon G \to
             \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span> topološke grupe
             <span class="math inline">\(G\)</span> je
@@ -10337,8 +10354,8 @@
             <span class="math inline">\(N \in \mathbf{N}\)</span>. V
             splošnem delne vsote <span
             class="math inline">\(f_N\)</span> ne konvergirajo po
-            točkah,<a href="#fn83" class="footnote-ref" id="fnref83"
-            role="doc-noteref"><sup>83</sup></a> je pa temu tako, če
+            točkah,<a href="#fn84" class="footnote-ref" id="fnref84"
+            role="doc-noteref"><sup>84</sup></a> je pa temu tako, če
             dodatno predpostavimo, da obravnavamo le kvadratno
             integrabilne funkcije <span
             class="math inline">\(f\)</span>, se pravi <span
@@ -10348,8 +10365,8 @@
             class="math display">\[\lim_{N \to \infty} || f - f_N || =
             0,\]</span> torej lahko <span
             class="math inline">\(f\)</span> razvijemo v Fourierovo
-            vrsto.<a href="#fn84" class="footnote-ref" id="fnref84"
-            role="doc-noteref"><sup>84</sup></a> Hkrati drži varianta
+            vrsto.<a href="#fn85" class="footnote-ref" id="fnref85"
+            role="doc-noteref"><sup>85</sup></a> Hkrati drži varianta
             Parsevalove formule <span class="math display">\[||f||^2 =
             \sum_{k \in \mathbf{Z}} |\langle f, \chi_k
             \rangle|^2.\]</span> Upodobitve <span
@@ -10477,9 +10494,9 @@
             grupe <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
             bomo seveda upoštevali to strukturo, saj sicer dobimo
-            <em>preveč</em> updobitev.<a href="#fn85"
-            class="footnote-ref" id="fnref85"
-            role="doc-noteref"><sup>85</sup></a> Smiselno bo opazovati
+            <em>preveč</em> updobitev.<a href="#fn86"
+            class="footnote-ref" id="fnref86"
+            role="doc-noteref"><sup>86</sup></a> Smiselno bo opazovati
             upodobitve, pri katerih so matrični koeficienti zvezne ali
             celo gladke funkcije matrike, ki deluje. Glede na to, da je
             <span
@@ -10487,9 +10504,9 @@
             kompleksna mnogoterost, lahko opazujemo tudi kompleksno
             analitične upodobitve. Na grupo <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
-            lahko gledamo tudi kot na algebraično grupo,<a href="#fn86"
-            class="footnote-ref" id="fnref86"
-            role="doc-noteref"><sup>86</sup></a> zato ima smisel
+            lahko gledamo tudi kot na algebraično grupo,<a href="#fn87"
+            class="footnote-ref" id="fnref87"
+            role="doc-noteref"><sup>87</sup></a> zato ima smisel
             opazovati tudi le polinomske upodobitve. Kot bomo videli, so
             si nazadnje vse te različne oblike upodobitev grupe <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
@@ -10519,8 +10536,8 @@
             naravno razširimo na prostor homogenih polinomov <span
             class="math inline">\(\mathbf{C}[X,Y]_k\)</span> stopnje
             <span class="math inline">\(k \geq 1\)</span>.<a
-            href="#fn87" class="footnote-ref" id="fnref87"
-            role="doc-noteref"><sup>87</sup></a> Baza tega prostora so
+            href="#fn88" class="footnote-ref" id="fnref88"
+            role="doc-noteref"><sup>88</sup></a> Baza tega prostora so
             monomi <span class="math inline">\(e_i = X^i
             Y^{k-i}\)</span> za <span class="math inline">\(0 \leq i
             \leq k\)</span>, torej je <span
@@ -10557,8 +10574,8 @@
             <div class="proof">
             <p><em>Proof.</em> Kot v obravnavi upodobitev splošne
             linearne grupe nad končnim poljem si oglejmo torus<a
-            href="#fn88" class="footnote-ref" id="fnref88"
-            role="doc-noteref"><sup>88</sup></a> <span
+            href="#fn89" class="footnote-ref" id="fnref89"
+            role="doc-noteref"><sup>89</sup></a> <span
             class="math display">\[T = \left\{
                     \begin{pmatrix}
                         \lambda &amp; 0 \\ 0 &amp; \lambda^{-1}
@@ -10698,9 +10715,9 @@
             class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>.
             Res, velja formula <span
             class="math inline">\(\det(\gamma(t)) = \det e^{tX} =
-            e^{\mathop{\mathrm{tr}}(tX)}\)</span>,<a href="#fn89"
-            class="footnote-ref" id="fnref89"
-            role="doc-noteref"><sup>89</sup></a> zato je <span
+            e^{\mathop{\mathrm{tr}}(tX)}\)</span>,<a href="#fn90"
+            class="footnote-ref" id="fnref90"
+            role="doc-noteref"><sup>90</sup></a> zato je <span
             class="math inline">\(\gamma(t)\)</span> obrnljiva matrika.
             Tangentni vektor poti <span
             class="math inline">\(\gamma\)</span> v točki <span
@@ -10984,9 +11001,9 @@
             morfizmi med dvema algebrama so preslikave, ki spoštujejo
             vso strukturo, in jim zato upravičeno pravimo
             <span><strong><em>Liejevi
-            homomorfizmi</em></strong></span>.<a href="#fn90"
-            class="footnote-ref" id="fnref90"
-            role="doc-noteref"><sup>90</sup></a> Kadar Liejev
+            homomorfizmi</em></strong></span>.<a href="#fn91"
+            class="footnote-ref" id="fnref91"
+            role="doc-noteref"><sup>91</sup></a> Kadar Liejev
             homomorfizem slika iz dane Liejeve algebre <span
             class="math inline">\(L\)</span> v <span
             class="math inline">\(\mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>,
@@ -10994,11 +11011,11 @@
             <span><strong><em>Liejevo upodobitev</em></strong></span>.
             Te upodobitve lahko primerjamo med sabo s spletičnami in
             zato govorimo o izomorfnostnih razredih Liejevih
-            upodobitev.<a href="#fn91" class="footnote-ref" id="fnref91"
-            role="doc-noteref"><sup>91</sup></a> Prav tako na smiseln
-            način posplošimo pojem nerazcepne upodobitve.<a href="#fn92"
-            class="footnote-ref" id="fnref92"
-            role="doc-noteref"><sup>92</sup></a></p>
+            upodobitev.<a href="#fn92" class="footnote-ref" id="fnref92"
+            role="doc-noteref"><sup>92</sup></a> Prav tako na smiseln
+            način posplošimo pojem nerazcepne upodobitve.<a href="#fn93"
+            class="footnote-ref" id="fnref93"
+            role="doc-noteref"><sup>93</sup></a></p>
             <p>Tangentna prostora <span
             class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span>
             in <span
@@ -11075,8 +11092,8 @@
             class="math inline">\(Ev \in \mathop{\mathrm{ES}}_{\lambda +
             2}(H) = 0\)</span>. Naj bo <span class="math inline">\(v_i =
             F^i v\)</span> za <span class="math inline">\(i \geq
-            0\)</span>.<a href="#fn93" class="footnote-ref" id="fnref93"
-            role="doc-noteref"><sup>93</sup></a> Velja <span
+            0\)</span>.<a href="#fn94" class="footnote-ref" id="fnref94"
+            role="doc-noteref"><sup>94</sup></a> Velja <span
             class="math inline">\(v_i \in \mathop{\mathrm{ES}}_{\lambda
             - 2i}(H)\)</span>. Za nek <span class="math inline">\(n \geq
             0\)</span> velja torej <span class="math inline">\(v_n \neq
@@ -11088,8 +11105,8 @@
             V\)</span> podprostor, ki ga generirajo.</p>
             <p>Naj bo <span class="math inline">\(w_i = E v_i\)</span>
             za <span class="math inline">\(i \geq 0\)</span>.<a
-            href="#fn94" class="footnote-ref" id="fnref94"
-            role="doc-noteref"><sup>94</sup></a> Velja <span
+            href="#fn95" class="footnote-ref" id="fnref95"
+            role="doc-noteref"><sup>95</sup></a> Velja <span
             class="math inline">\(w_0 = E v_0 = Ev = 0\)</span>, za
             <span class="math inline">\(i \geq 1\)</span> pa izračunamo
             <span class="math display">\[w_i
@@ -11270,9 +11287,9 @@
             t_{i+1}\)</span>. V ta namen bo dovolj premisliti, da se
             definicija <span class="math inline">\(\rho(A)\)</span> ne
             spremeni, če pofinimo izbiro delilnih točk, se pravi če
-            dodamo še nekaj dodatnih točk.<a href="#fn95"
-            class="footnote-ref" id="fnref95"
-            role="doc-noteref"><sup>95</sup></a> V ta namen bo dovolj
+            dodamo še nekaj dodatnih točk.<a href="#fn96"
+            class="footnote-ref" id="fnref96"
+            role="doc-noteref"><sup>96</sup></a> V ta namen bo dovolj
             preveriti, da se definicija <span
             class="math inline">\(\rho(A)\)</span> ne spremeni, če
             dodamo eno samo dodatno delilno točko, na primer med <span
@@ -11371,14 +11388,14 @@
             <p>Na grupo <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>
             bi lahko gledali kot na <em>realno</em> grupo.<a
-            href="#fn96" class="footnote-ref" id="fnref96"
-            role="doc-noteref"><sup>96</sup></a> V tem primeru bi njene
+            href="#fn97" class="footnote-ref" id="fnref97"
+            role="doc-noteref"><sup>97</sup></a> V tem primeru bi njene
             <em>gladke</em> upodobitve dobili iz Liejevih upodobitev
             njene Liejeve algebre <span
             class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span>,
             na katero bi gledali kot na <em>realno</em> Liejevo
-            algebro.<a href="#fn97" class="footnote-ref" id="fnref97"
-            role="doc-noteref"><sup>97</sup></a> Teh upodobitev je
+            algebro.<a href="#fn98" class="footnote-ref" id="fnref98"
+            role="doc-noteref"><sup>98</sup></a> Teh upodobitev je
             nekoliko več. Vsako od upodobitev <span
             class="math inline">\(T_I \rho_k\)</span> lahko namreč še
             konjugiramo. Izkaže se, ni presenetljivo in ni težko, da vse
@@ -11482,8 +11499,8 @@
             \mathop{\mathrm{SO}}_3(\mathbf{R})\)</span>. Upodobitve
             grupe <span
             class="math inline">\(\mathop{\mathrm{SO}}_3(\mathbf{R})\)</span><a
-            href="#fn98" class="footnote-ref" id="fnref98"
-            role="doc-noteref"><sup>98</sup></a> so torej ravno
+            href="#fn99" class="footnote-ref" id="fnref99"
+            role="doc-noteref"><sup>99</sup></a> so torej ravno
             upodobitve enostavno povezane grupe <span
             class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span>,
             ki imajo v jedru <span
@@ -11517,8 +11534,8 @@
             </div>
             <p>V kontekstu realnih Liejevih grup se sicer izkaže, da je
             vsaka zvezna končnorazsežna upodobitev avtomatično gladka.<a
-            href="#fn99" class="footnote-ref" id="fnref99"
-            role="doc-noteref"><sup>99</sup></a> To seveda ne velja za
+            href="#fn100" class="footnote-ref" id="fnref100"
+            role="doc-noteref"><sup>100</sup></a> To seveda ne velja za
             kompleksne Liejeve grupe, kjer lahko vsako analitično
             upodobitev konjugiramo in dobimo upodobitev, ki je sicer
             gladka, a ne nujno analitična. Upodobitve <span
@@ -11712,9 +11729,9 @@
             class="math inline">\(a\)</span> in <span
             class="math inline">\(b\)</span>. Glavna prednost
             alternativne izbire generatorjev izhaja iz dejstva, da ima
-            vsak element <em>enoličen</em> tak zapis.<a href="#fn100"
-            class="footnote-ref" id="fnref100"
-            role="doc-noteref"><sup>100</sup></a></p>
+            vsak element <em>enoličen</em> tak zapis.<a href="#fn101"
+            class="footnote-ref" id="fnref101"
+            role="doc-noteref"><sup>101</sup></a></p>
             <div class="trditev">
             <p><strong>Trditev 6.7</strong>. Vsak element v <span
             class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>
@@ -11734,9 +11751,9 @@
             Preverimo še enoličnost. Predpostavimo, da je <span
             class="math inline">\(n\)</span> najmanjše število, za
             katero je izraz kot zgoraj enak <span
-            class="math inline">\(1\)</span>.<a href="#fn101"
-            class="footnote-ref" id="fnref101"
-            role="doc-noteref"><sup>101</sup></a> Seveda je tedaj <span
+            class="math inline">\(1\)</span>.<a href="#fn102"
+            class="footnote-ref" id="fnref102"
+            role="doc-noteref"><sup>102</sup></a> Seveda je tedaj <span
             class="math inline">\(n \neq 0\)</span> in kratek račun
             pokaže tudi, da je <span class="math inline">\(n \neq
             1\)</span>. Za <span class="math inline">\(n \geq 2\)</span>
@@ -11788,9 +11805,9 @@
             pa je res tudi obratno: za vsako izbiro elementov <span
             class="math inline">\(X,Y \in G\)</span> z lastnostjo <span
             class="math inline">\(X^2 = Y^3 = 1\)</span> lahko na
-            enoličen način predpišemo homomorfizem<a href="#fn102"
-            class="footnote-ref" id="fnref102"
-            role="doc-noteref"><sup>102</sup></a> <span
+            enoličen način predpišemo homomorfizem<a href="#fn103"
+            class="footnote-ref" id="fnref103"
+            role="doc-noteref"><sup>103</sup></a> <span
             class="math display">\[\textstyle \rho
                 \colon \mathop{\mathrm{PSL}}_2(\mathbf{Z}) \to G, \quad
                 a \mapsto X, \ b \mapsto Y.\]</span> Na ta način dobimo
@@ -11864,9 +11881,9 @@
             deluje s hkratnim konjugiranjem na parih matrik, se pravi
             <span class="math inline">\(A \cdot (X,Y) = (A X A^{-1}, A Y
             A^{-1})\)</span> za <span class="math inline">\(A \in
-            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>.<a href="#fn103"
-            class="footnote-ref" id="fnref103"
-            role="doc-noteref"><sup>103</sup></a> Elementi množice <span
+            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>.<a href="#fn104"
+            class="footnote-ref" id="fnref104"
+            role="doc-noteref"><sup>104</sup></a> Elementi množice <span
             class="math inline">\(\mathop{\mathrm{Rep}}_n\)</span>
             predstavljajo ravno vse predstavnike izomorfnostnih razredov
             <span class="math inline">\(n\)</span>-razsežnih upodobitev
@@ -11920,8 +11937,8 @@
             je enak torusu diagonalnih matrik. S temi matrikami lahko
             torej še dodatno konjugiramo in poenostavimo matriko <span
             class="math inline">\(Y\)</span>. Ločimo več možnosti.<a
-            href="#fn104" class="footnote-ref" id="fnref104"
-            role="doc-noteref"><sup>104</sup></a></p>
+            href="#fn105" class="footnote-ref" id="fnref105"
+            role="doc-noteref"><sup>105</sup></a></p>
             <ol>
             <li><p>Če je <span class="math inline">\(c = 0\)</span> in
             <span class="math inline">\(b = 0\)</span>, potem je <span
@@ -12040,8 +12057,8 @@
             Izkaže se <a
             href="https://www.ams.org/proc/1992-115-01/S0002-9939-1992-1079696-5/">(Conder-Robertson-Williams
             1992)</a>, da vse te pogoje lahko zajamemo z naslednjimi
-            enakostmi:<a href="#fn105" class="footnote-ref"
-            id="fnref105" role="doc-noteref"><sup>105</sup></a> <span
+            enakostmi:<a href="#fn106" class="footnote-ref"
+            id="fnref106" role="doc-noteref"><sup>106</sup></a> <span
             class="math display">\[x^3 = y^3 = z^2 = (xz)^3 = (yz)^3 =
             (x^{-1}zxy)^2 = (y^{-1}zyx)^2 = (xy)^6 = I.\]</span> Z
             drugimi besedami, če želimo podati upodobitev <span
@@ -12096,9 +12113,9 @@
             vsebuje neko kongruenčno podgrupo. Tej lastnosti grupe <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
             rečemo <span><strong><em>lastnost kongruenčnih
-            podgrup</em></strong></span>.<a href="#fn106"
-            class="footnote-ref" id="fnref106"
-            role="doc-noteref"><sup>106</sup></a></p>
+            podgrup</em></strong></span>.<a href="#fn107"
+            class="footnote-ref" id="fnref107"
+            role="doc-noteref"><sup>107</sup></a></p>
             <p>Vsak končni kvocient <span
             class="math inline">\(G\)</span> grupe <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
@@ -12168,8 +12185,8 @@
             kompakten, <span class="math inline">\(\mathbf{Z}_p\)</span>
             pa tvori zaprto množico v tem produktu, zato je tudi <span
             class="math inline">\(\mathbf{Z}_p\)</span> kompakten
-            topološki prostor.<a href="#fn107" class="footnote-ref"
-            id="fnref107" role="doc-noteref"><sup>107</sup></a></p>
+            topološki prostor.<a href="#fn108" class="footnote-ref"
+            id="fnref108" role="doc-noteref"><sup>108</sup></a></p>
             <p>Na enak način lahko opazujemo vse grupe <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z})\)</span>
             hkrati. Zložimo jih v ravno vrsto <span
@@ -12241,8 +12258,8 @@
             class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>
             obstaja odprta okolica enote <span
             class="math inline">\(U\)</span>, ki ne vsebuje nobene
-            netrivialne podgrupe.<a href="#fn108" class="footnote-ref"
-            id="fnref108" role="doc-noteref"><sup>108</sup></a></p>
+            netrivialne podgrupe.<a href="#fn109" class="footnote-ref"
+            id="fnref109" role="doc-noteref"><sup>109</sup></a></p>
             </div>
             <p>Kljub tej razliki pa je vendarle zelo plodno gledati na
             <span
@@ -12954,7 +12971,17 @@
             href="https://www.imc-math.org.uk/imc2022/imc2022day1questions.pdf">naloge
             I/3</a> s tekmovanja IMC 2022.<a href="#fnref76"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn77" role="doc-endnote"><p>Za primerjavo
+            <li id="fn77" role="doc-endnote"><p>Če namreč ne razpenjajo
+            celotnega prostora matrik, potem obstaja neka netrivialna
+            linearna kombinacija matričnih koeficientov <span
+            class="math inline">\(\{ f_{i,j} \mid 1 \leq i, j \leq
+            \deg(\pi) \}\)</span>, ki je v vseh elementih <span
+            class="math inline">\(g \in G\)</span> ničelna. To je
+            protislovje z linearno neodvisnostjo matričnih koeficientov
+            nerazcepne upodobitve <span
+            class="math inline">\(\pi\)</span>.<a href="#fnref77"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn78" role="doc-endnote"><p>Za primerjavo
             porazdelitev ne uporabljamo standardne norme <span
             class="math inline">\(||f|| = \langle f, f
             \rangle^{1/2}\)</span>, ampak normo <span
@@ -12968,9 +12995,9 @@
             porazdelitvi očitno različni. Norma <span
             class="math inline">\(||\cdot||_1\)</span> nima te
             pomanjkljivosti; velja <span class="math inline">\(||U_{A_n}
-            - U_{S_n}||_1 = 1\)</span>.<a href="#fnref77"
+            - U_{S_n}||_1 = 1\)</span>.<a href="#fnref78"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn78" role="doc-endnote"><p>Rečemo tudi, da se
+            <li id="fn79" role="doc-endnote"><p>Rečemo tudi, da se
             slučajni sprehod <span><strong><em>dobro
             premeša</em></strong></span> po času <span
             class="math inline">\(t_{mix}(\theta)\)</span>. Ta koncept
@@ -12979,28 +13006,28 @@
             class="math inline">\(\theta\)</span> vzamemo kar neko
             majhno konstanto, na primer <span
             class="math inline">\(\theta = 10^{-2}\)</span>.<a
-            href="#fnref78" class="footnote-back"
+            href="#fnref79" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn79" role="doc-endnote"><p>Tako hitra konvergenca
+            <li id="fn80" role="doc-endnote"><p>Tako hitra konvergenca
             je posledica dejstva, da je konjugiranostni razred <span
             class="math inline">\(\mathcal{C}\)</span> v <span
             class="math inline">\(G_p\)</span> zelo velik, <span
             class="math inline">\(\log |\mathcal{C}| \sim \log
             |G_p|\)</span>, in da imamo zelo dobre ocene za <span
             class="math inline">\(r_{\pi}(\mathcal{C})\)</span>.<a
-            href="#fnref79" class="footnote-back"
+            href="#fnref80" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn80" role="doc-endnote"><p>Angleško <em>expander
+            <li id="fn81" role="doc-endnote"><p>Angleško <em>expander
             family</em>. Ime izhaja iz alternativne karakterizacije teh
-            družin v teoriji grafov.<a href="#fnref80"
+            družin v teoriji grafov.<a href="#fnref81"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn81" role="doc-endnote"><p>Ni težko premisliti, da
+            <li id="fn82" role="doc-endnote"><p>Ni težko premisliti, da
             sta ta dva koncepta ekvivalentna. Čas mešanja v vsaki
             članici družine <span class="math inline">\(G_i\)</span> je
             <span class="math inline">\(O(\log |G_i|)\)</span>, če in
-            samo če je družina ekspanzivna.<a href="#fnref81"
+            samo če je družina ekspanzivna.<a href="#fnref82"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn82" role="doc-endnote"><p>Če bi želeli obravnavati
+            <li id="fn83" role="doc-endnote"><p>Če bi želeli obravnavati
             tudi neskončnorazsežne upodobitve na prostoru <span
             class="math inline">\(V\)</span>, bi morali to definicijo
             nekoliko popraviti. Najprej bi morali zahtevati, da vsak
@@ -13013,20 +13040,20 @@
             <em>šibko zvezna</em>, kar pomeni, da je preslikava <span
             class="math inline">\(G \times V \to V\)</span>, <span
             class="math inline">\((g,v) \mapsto \rho(g) \cdot v\)</span>
-            zvezna.<a href="#fnref82" class="footnote-back"
+            zvezna.<a href="#fnref83" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn83" role="doc-endnote"><p>Lahko se celo zgodi, da
+            <li id="fn84" role="doc-endnote"><p>Lahko se celo zgodi, da
             <span class="math inline">\(f_N\)</span> ne konvergira v
-            <em>nobeni</em> točki.<a href="#fnref83"
+            <em>nobeni</em> točki.<a href="#fnref84"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn84" role="doc-endnote"><p>Pri tem moramo biti
+            <li id="fn85" role="doc-endnote"><p>Pri tem moramo biti
             nekoliko previdni, saj opisana konvergenca <em>ne</em>
             implicira, da vrsta <span class="math inline">\(f_N\)</span>
             v vseh točkah konvergira k <span
             class="math inline">\(f\)</span>, temveč le <em>skoraj
-            povsod</em>.<a href="#fnref84" class="footnote-back"
+            povsod</em>.<a href="#fnref85" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn85" role="doc-endnote"><p>Podobno kot smo že
+            <li id="fn86" role="doc-endnote"><p>Podobno kot smo že
             videli v primeru upodobitev grupe <span
             class="math inline">\(\mathbf{R}\)</span>. Konkretno za vsak
             avtomorfizem polja <span
@@ -13036,35 +13063,35 @@
             \mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>, ki aplicira
             avtomorfizem po členih matrike. Polje <span
             class="math inline">\(\mathbf{C}\)</span> ima <em>mnogo</em>
-            divjih avtomorfizmov.<a href="#fnref85"
+            divjih avtomorfizmov.<a href="#fnref86"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn86"
+            <li id="fn87"
             role="doc-endnote"><p><span><strong><em>Linearna algebraična
             grupa</em></strong></span> je grupa, ki je hkrati množica
             skupnih ničel nekih polinomov v prostoru <span
             class="math inline">\(\mathbf{C}^n\)</span>.<a
-            href="#fnref86" class="footnote-back"
+            href="#fnref87" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn87" role="doc-endnote"><p>Pri <span
+            <li id="fn88" role="doc-endnote"><p>Pri <span
             class="math inline">\(k = 0\)</span> dobimo trivialno
-            upodobitev.<a href="#fnref87" class="footnote-back"
+            upodobitev.<a href="#fnref88" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn88" role="doc-endnote"><p>Ker je polje <span
+            <li id="fn89" role="doc-endnote"><p>Ker je polje <span
             class="math inline">\(\mathbf{C}\)</span> algebraično
-            zaprto, tukaj obstaja le en torus.<a href="#fnref88"
+            zaprto, tukaj obstaja le en torus.<a href="#fnref89"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn89" role="doc-endnote"><p>Ta formula je jasna, če
+            <li id="fn90" role="doc-endnote"><p>Ta formula je jasna, če
             matriko <span class="math inline">\(X\)</span> predstavimo v
-            Jordanovi normalni obliki.<a href="#fnref89"
+            Jordanovi normalni obliki.<a href="#fnref90"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn90" role="doc-endnote"><p>Liejev homomorfizem je
+            <li id="fn91" role="doc-endnote"><p>Liejev homomorfizem je
             torej linearna preslikava <span class="math inline">\(\phi
             \colon L_1 \to L_2\)</span>, za katero velja <span
             class="math inline">\(\phi([x,y]) = [\phi(x),
             \phi(y)]\)</span> za vsaka <span class="math inline">\(x,y
-            \in L_1\)</span>.<a href="#fnref90" class="footnote-back"
+            \in L_1\)</span>.<a href="#fnref91" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn91"
+            <li id="fn92"
             role="doc-endnote"><p><span><strong><em>Liejeva
             spletična</em></strong></span> med Liejevima upodobitvama
             <span class="math inline">\(\phi_1, \phi_2\)</span> Liejeve
@@ -13078,76 +13105,76 @@
             class="math inline">\(v \in V\)</span>. Kadar najdemo
             obrnljivo Liejevo spletično, sta upodobitvi
             <span><strong><em>izomorfni</em></strong></span>.<a
-            href="#fnref91" class="footnote-back"
+            href="#fnref92" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn92" role="doc-endnote"><p>Liejeva upodobitev <span
+            <li id="fn93" role="doc-endnote"><p>Liejeva upodobitev <span
             class="math inline">\(\phi \colon L \to
             \mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span> je
             <span><strong><em>nerazcepna</em></strong></span>, če
             prostor <span class="math inline">\(\mathbf{C}^n\)</span>
             nima nobenih netrivialnih <span
             class="math inline">\(L\)</span>-invariantnih
-            podprostorov.<a href="#fnref92" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li id="fn93" role="doc-endnote"><p>Vektor <span
-            class="math inline">\(v\)</span> torej <em>potisnemo
-            navzdol</em> s <span class="math inline">\(F\)</span>.<a
-            href="#fnref93" class="footnote-back"
+            podprostorov.<a href="#fnref93" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
             <li id="fn94" role="doc-endnote"><p>Vektor <span
-            class="math inline">\(v_n\)</span> torej <em>potisnemo
-            navzgor</em> z <span class="math inline">\(E\)</span>.<a
+            class="math inline">\(v\)</span> torej <em>potisnemo
+            navzdol</em> s <span class="math inline">\(F\)</span>.<a
             href="#fnref94" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn95" role="doc-endnote"><p>Vsaki dve izbiri
-            delilnih točk imata namreč skupno pofinitev. Ta sklep je
-            podoben kot pri definiciji Riemannovega integrala.<a
+            <li id="fn95" role="doc-endnote"><p>Vektor <span
+            class="math inline">\(v_n\)</span> torej <em>potisnemo
+            navzgor</em> z <span class="math inline">\(E\)</span>.<a
             href="#fnref95" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn96" role="doc-endnote"><p>To je analogno temu, da
+            <li id="fn96" role="doc-endnote"><p>Vsaki dve izbiri
+            delilnih točk imata namreč skupno pofinitev. Ta sklep je
+            podoben kot pri definiciji Riemannovega integrala.<a
+            href="#fnref96" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn97" role="doc-endnote"><p>To je analogno temu, da
             na kompleksna števila <span
             class="math inline">\(\mathbf{C}\)</span> gledamo kot na
             <span class="math inline">\(\mathbf{R}^2\)</span>.<a
-            href="#fnref96" class="footnote-back"
+            href="#fnref97" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn97" role="doc-endnote"><p>Opazovali bi torej
+            <li id="fn98" role="doc-endnote"><p>Opazovali bi torej
             Liejeve homomorfizme <span
             class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})
             \to \mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>,
             ki so le <span
             class="math inline">\(\mathbf{R}\)</span>-linearni.<a
-            href="#fnref97" class="footnote-back"
+            href="#fnref98" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn98" role="doc-endnote"><p>Grupa <span
+            <li id="fn99" role="doc-endnote"><p>Grupa <span
             class="math inline">\(\mathop{\mathrm{SO}}_3(\mathbf{R})\)</span>
             <em>ni</em> enostavno povezana. Homeomorfna je projektivnemu
             prostoru <span
             class="math inline">\(\mathbf{R}P^3\)</span>.<a
-            href="#fnref98" class="footnote-back"
+            href="#fnref99" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn99" role="doc-endnote"><p>Poseben primer tega
+            <li id="fn100" role="doc-endnote"><p>Poseben primer tega
             fenomena smo videli v razdelku o upodobitvah grupe <span
             class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>, kjer
             smo dokazali, da je vsaka zvezna upodobitev grupe <span
             class="math inline">\(\mathbf{R}\)</span> odvedljiva.<a
-            href="#fnref99" class="footnote-back"
+            href="#fnref100" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn100" role="doc-endnote"><p>Rečemo, da je grupa
+            <li id="fn101" role="doc-endnote"><p>Rečemo, da je grupa
             <span
             class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>
             <span><strong><em>prosti produkt</em></strong></span>
             podgrup <span class="math inline">\(\langle a \rangle =
             \mathbf{Z}/2\mathbf{Z}\)</span> in <span
             class="math inline">\(\langle b \rangle =
-            \mathbf{Z}/3\mathbf{Z}\)</span>.<a href="#fnref100"
+            \mathbf{Z}/3\mathbf{Z}\)</span>.<a href="#fnref101"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn101" role="doc-endnote"><p>Če nek element lahko
+            <li id="fn102" role="doc-endnote"><p>Če nek element lahko
             zapišemo v želeni obliki na dva načina, potem vse črke
             prenesemo na eno stran enakosti in s tem tudi <span
             class="math inline">\(1\)</span> zapišemo na netrivialen
-            način v želeni obliki.<a href="#fnref101"
+            način v želeni obliki.<a href="#fnref102"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn102" role="doc-endnote"><p>To je analog
+            <li id="fn103" role="doc-endnote"><p>To je analog
             razširjanja lokalnega homomorfizma, ki smo ga videli pri
             grupi <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
@@ -13156,24 +13183,24 @@
             razširitve homomorfizma z <span
             class="math inline">\(U\)</span> na ves <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
-            Tukaj to dobimo zastonj.<a href="#fnref102"
+            Tukaj to dobimo zastonj.<a href="#fnref103"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn103" role="doc-endnote"><p>Para matrik <span
+            <li id="fn104" role="doc-endnote"><p>Para matrik <span
             class="math inline">\((X,Y)\)</span> in <span
             class="math inline">\((X&#39;, Y&#39;)\)</span> sta torej
             ekvivalentna, če in samo če za neko matriko <span
             class="math inline">\(A \in
             \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span> velja <span
             class="math inline">\((X,Y) = A \cdot (X&#39;,
-            Y&#39;)\)</span>.<a href="#fnref103" class="footnote-back"
+            Y&#39;)\)</span>.<a href="#fnref104" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn104" role="doc-endnote"><p>Obravnava je analogna
+            <li id="fn105" role="doc-endnote"><p>Obravnava je analogna
             razumevanju konjugiranostnih razredov v končni grupi <span
             class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span>,
             le da je tu nekoliko preprostejša, ker ni nerazcepnega
-            torusa.<a href="#fnref104" class="footnote-back"
+            torusa.<a href="#fnref105" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn105" role="doc-endnote"><p>Rečemo, da je grupa
+            <li id="fn106" role="doc-endnote"><p>Rečemo, da je grupa
             <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
             dana s prezentacijo z <em>generatorji</em> <span
@@ -13181,22 +13208,22 @@
             ki jih podajajo te enakosti. Glej <a
             href="https://urbanjezernik.github.io/teorija-grup">Teorijo
             grup</a> za podrobnosti glede te konstrukcije in več
-            zgledov.<a href="#fnref105" class="footnote-back"
+            zgledov.<a href="#fnref106" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn106" role="doc-endnote"><p>Angleško <em>congruence
-            subgroup property.</em><a href="#fnref106"
+            <li id="fn107" role="doc-endnote"><p>Angleško <em>congruence
+            subgroup property.</em><a href="#fnref107"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn107" role="doc-endnote"><p>Topologija na <span
+            <li id="fn108" role="doc-endnote"><p>Topologija na <span
             class="math inline">\(\mathbf{Z}_p\)</span> je nekoliko
             neobičajna. Dobimo namreč popolnoma nepovezan topološki
             prostor. Predstavljamo si ga lahko kot Cantorjevo množico,
             kot je prikazano <a
             href="http://roice3.org/padics/">tukaj</a>.<a
-            href="#fnref107" class="footnote-back"
+            href="#fnref108" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn108" role="doc-endnote"><p>Tej lastnosti pravimo
+            <li id="fn109" role="doc-endnote"><p>Tej lastnosti pravimo
             <span><strong><em>brez majhnih podgrup</em></strong></span>,
-            angleško <em>no small subgroups</em>.<a href="#fnref108"
+            angleško <em>no small subgroups</em>.<a href="#fnref109"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>

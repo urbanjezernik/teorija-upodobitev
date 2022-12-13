@@ -4001,7 +4001,7 @@ Za $\pi \in \Irr(G)$ drži $|r_{\pi}(\conclass)| \leq 1$, pri čemer velja enako
 \]
 \end{lema}
 \begin{dokaz}
-Enakost velja natanko tedaj, ko je $\pi(\conclass)$ skalarna matrika. Taka matrika komutira z vsemi elementi $\pi(g)$, zato je $\pi([g, \conclass]) = 1$ za vsak $g \in G$. To pomeni, da je $[G, \conclass] \subseteq \ker \pi$, kar je enakovredno trditvi.
+Naj bo $x \in \conclass$. Enakost $|r_{\pi}(x)| = 1$ velja natanko tedaj, ko je $\pi(x)$ skalarna matrika. Taka matrika komutira z vsemi elementi $\pi(g)$ za $g \in G$. Velja torej $\pi([g, \conclass]) = 1$ za vsak $g \in G$. To pomeni, da je $[G, \conclass] \subseteq \ker \pi$, kar je enakovredno vsebovanosti v trditvi. Premislimo še, da za matriko $A$ velja $[A, \pi(g)] = 1$ za vse $g \in G$, če in samo če je $A$ skalarna matrika. Vektorski prostor, ki ga razpenjajo matrike $\pi(g)$ za $g \in G$, je enak prostoru matrik $M_{\deg(\pi)}(\CC)$,\footnote{Če namreč ne razpenjajo celotnega prostora matrik, potem obstaja neka netrivialna linearna kombinacija matričnih koeficientov $\{ f_{i,j} \mid 1 \leq i, j \leq \deg(\pi) \}$, ki je v vseh elementih $g \in G$ ničelna. To je protislovje z linearno neodvisnostjo matričnih koeficientov nerazcepne upodobitve $\pi$.} v tej algebri pa so centralne matrike ravno skalarne matrike. Dokaz je s tem zaključen.
 \end{dokaz}
 
 Zberimo prispevke z maksimalno vrednostjo $r_{\pi}(\conclass)$ v množico
@@ -4015,7 +4015,7 @@ Velja torej
 \]
 Prispevki $r_{\pi}(\conclass)^n$ za $\pi$ izven $X_{\conclass}$ konvergirajo k $0$ za velike vrednosti $n$ in zatorej dobimo
 \[
-    \lim_{n \to \infty} \left( \mu_n - \sum_{\pi \in X_C} r_{\pi}(\conclass)^n \cdot v_{\pi} \right) = 0.
+    \lim_{n \to \infty} \left( \mu_n - \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi} \right) = 0.
 \]
 Za konkretne grupe lahko s tabelo karakterjev ali upoštevanjem kakšnih dodatnih lastnosti eksplicitno izračunamo zadnjo vsoto in s tem določimo limitno porazdelitev $\mu_n$, če ta sploh obstaja.
 
