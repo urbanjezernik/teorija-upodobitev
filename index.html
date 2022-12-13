@@ -43,7 +43,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 02. 12. 2022
+            Zadnja posodobitev: 13. 12. 2022
           </div>
 
           <div id="spinner" class="text-center">
@@ -10202,11 +10202,19 @@
             class="math inline">\(\mathbf{R}\)</span> in njene
             upodobitve <span
             class="math inline">\(\chi_{\zeta}\)</span>. Ta upodobitev
-            je unitarna, če in samo če je njena slika vsebovana v <span
+            je unitarna, če in samo če za nek skalarni produkt na <span
+            class="math inline">\(\mathbf{C}\)</span> velja <span
+            class="math display">\[\langle u, v \rangle = \langle
+            e^{\zeta x} u, e^{\zeta x} v \rangle\]</span> za vsak <span
+            class="math inline">\(x \in \mathbf{R}\)</span> in vse <span
+            class="math inline">\(u,v \in \mathbf{C}\)</span>. Ta pogoj
+            je enakovreden <span class="math inline">\(|e^{\zeta x}| =
+            1\)</span>, se pravi <span class="math inline">\(\zeta \in
+            \mathbf{R}\cdot i\)</span>. V tem primeru upodobitev <span
+            class="math inline">\(\chi_{\zeta}\)</span> nujno slika v
+            enotsko krožnico <span
             class="math inline">\(\mathop{\mathrm{U}}(\mathbf{C}) = S^1
-            = \{ z \in \mathbf{C}\mid |z| = 1 \}\)</span>, kar se zgodi
-            le za imaginarne parametre <span class="math inline">\(\zeta
-            \in \mathbf{R}\cdot i\)</span>.</p>
+            = \{ z \in \mathbf{C}\mid |z| = 1 \}\)</span>.</p>
             </div>
             <p>Za neskončne topološke grupe najraje opazujemo zvezne
             unitarne upodobitve. O teh ponavadi lahko povemo največ, kot
@@ -10922,7 +10930,7 @@
             \in \mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})\)</span>
             velja namreč <span class="math display">\[D_I \rho \cdot
             \mathop{\mathrm{Ad}}(A) \cdot Y
-                = D_I \left( \rho(e^{t A Y A^{-1}}) \right)
+                = D_0 \left( \rho(e^{t A Y A^{-1}}) \right)
                 = \mathop{\mathrm{Ad}}(\rho(A)) \cdot D_I \rho \cdot
             Y.\]</span> V posebnem za vsak tangentni vektor <span
             class="math inline">\(X \in
@@ -11445,12 +11453,24 @@
             class="math display">\[\mathop{\mathrm{\mathfrak{su}}}_2(\mathbf{C})
             = \left\{ \begin{pmatrix} i b &amp; -c + i d \\ c + i d
             &amp; - i b \\  \end{pmatrix} \mid b,c,d \in
-            \mathbf{R}\right\}.\]</span> Grupa <span
+            \mathbf{R}\right\}.\]</span> Kot vektorski prostor je to
+            <span class="math inline">\(3\)</span>-razsežen realni
+            vektorski prostor z bazo <span
+            class="math display">\[\begin{pmatrix}
+                    i &amp; 0 \\ 0 &amp; -1
+                \end{pmatrix}, \quad
+                \begin{pmatrix}
+                    0 &amp; -1 \\
+                    1 &amp; 0
+                \end{pmatrix}, \quad
+                \begin{pmatrix}
+                    0 &amp; i \\ i &amp; 0
+                \end{pmatrix}.\]</span> Grupa <span
             class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span>
             deluje s konjugiranjem na <span
             class="math inline">\(\mathop{\mathrm{\mathfrak{su}}}_2(\mathbf{C})\)</span>.
-            Če v slednjem prostoru izberemo bazo, dobimo upodobitev
-            <span class="math display">\[\mathop{\mathrm{Ad}}\colon
+            Na ta način dobimo upodobitev <span
+            class="math display">\[\mathop{\mathrm{Ad}}\colon
             \mathop{\mathrm{SU}}_2(\mathbf{C}) \to
             \mathop{\mathrm{GL}}(\mathop{\mathrm{\mathfrak{su}}}_2(\mathbf{C}))
             \cong \mathop{\mathrm{GL}}_3(\mathbf{R}).\]</span></p>
@@ -11461,8 +11481,10 @@
             class="math inline">\(\mathop{\mathrm{im}}\mathop{\mathrm{Ad}}\cong
             \mathop{\mathrm{SO}}_3(\mathbf{R})\)</span>. Upodobitve
             grupe <span
-            class="math inline">\(\mathop{\mathrm{SO}}_3(\mathbf{R})\)</span>
-            so torej ravno upodobitve enostavno povezane grupe <span
+            class="math inline">\(\mathop{\mathrm{SO}}_3(\mathbf{R})\)</span><a
+            href="#fn98" class="footnote-ref" id="fnref98"
+            role="doc-noteref"><sup>98</sup></a> so torej ravno
+            upodobitve enostavno povezane grupe <span
             class="math inline">\(\mathop{\mathrm{SU}}_2(\mathbf{C})\)</span>,
             ki imajo v jedru <span
             class="math inline">\(-I\)</span>.</p>
@@ -11495,8 +11517,8 @@
             </div>
             <p>V kontekstu realnih Liejevih grup se sicer izkaže, da je
             vsaka zvezna končnorazsežna upodobitev avtomatično gladka.<a
-            href="#fn98" class="footnote-ref" id="fnref98"
-            role="doc-noteref"><sup>98</sup></a> To seveda ne velja za
+            href="#fn99" class="footnote-ref" id="fnref99"
+            role="doc-noteref"><sup>99</sup></a> To seveda ne velja za
             kompleksne Liejeve grupe, kjer lahko vsako analitično
             upodobitev konjugiramo in dobimo upodobitev, ki je sicer
             gladka, a ne nujno analitična. Upodobitve <span
@@ -11525,18 +11547,23 @@
                 \frac{az + b}{cz + d}.\]</span> To delovanje je
             tranzitivno. Ni se težko prepričati, da stabilizator točke
             <span class="math inline">\(i \in \mathbf{H}\)</span>
-            sestoji iz matrik <span class="math display">\[{\textstyle
+            sestoji iz kompaktne množice matrik <span
+            class="math display">\[{\textstyle
             \mathop{\mathrm{SO}}_2(\mathbf{R})} = \left\{
             \begin{pmatrix} a &amp; b \\ -b &amp; a \end{pmatrix} \mid
-            a^2 + b^2 = 1 \right\}.\]</span> Delovanje <span
+            a^2 + b^2 = 1 \right\}
+                \cong \mathop{\mathrm{U}}_1(\mathbf{C}) = S^1.\]</span>
+            Delovanje <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
             na <span class="math inline">\(\mathbf{H}\)</span> je torej
             ekvivalentno delovanju <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
             na množici svojih desnih odsekov po kompaktni podgrupi <span
             class="math inline">\(\mathop{\mathrm{SO}}_2(\mathbf{R})\)</span>.
-            To permutacijsko delovanje lahko pretvorimo v upodobitev
-            <span class="math inline">\(\rho_k\)</span> za vsak <span
+            To permutacijsko delovanje na prostoru <span
+            class="math inline">\(\mathbf{C}[\mathop{\mathrm{SL}}_2(\mathbf{R})/\mathop{\mathrm{SO}}_2(\mathbf{R})]\)</span>
+            lahko pretvorimo v upodobitev <span
+            class="math inline">\(\rho_k\)</span> za vsak <span
             class="math inline">\(k \geq 2\)</span> z delovanjem na
             prostorih holomorfnih integrabilnih funkcij <span
             class="math display">\[D_k = \left\{ f \colon \mathbf{H}\to
@@ -11575,12 +11602,12 @@
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>
             lahko s pomočjo projekcije <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R}) \to
-            \mathop{\mathrm{SO}}_2(\mathbf{R}) \backslash
-            \mathop{\mathrm{SL}}_2(\mathbf{R}) = \mathbf{H}\)</span>
-            prenesemo mero, ki jo nato potisnemo na <span
-            class="math inline">\(Y\)</span>, tako da lahko opazujemo
-            prostor funkcij <span class="math inline">\(L^2(Y)\)</span>,
-            na katerem deluje grupa <span
+            \mathop{\mathrm{SL}}_2(\mathbf{R})/\mathop{\mathrm{SO}}_2(\mathbf{R})
+            = \mathbf{H}\)</span> prenesemo mero, ki jo nato potisnemo
+            na <span class="math inline">\(Y\)</span>, tako da lahko
+            opazujemo prostor funkcij <span
+            class="math inline">\(L^2(Y)\)</span>, na katerem deluje
+            grupa <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{R})\)</span>.
             V tem prostoru lahko najdemo mnogo nerazcepnih unitarnih
             podupodobitev. Še posebej zanimive so upodobitve, ki so
@@ -11685,9 +11712,9 @@
             class="math inline">\(a\)</span> in <span
             class="math inline">\(b\)</span>. Glavna prednost
             alternativne izbire generatorjev izhaja iz dejstva, da ima
-            vsak element <em>enoličen</em> tak zapis.<a href="#fn99"
-            class="footnote-ref" id="fnref99"
-            role="doc-noteref"><sup>99</sup></a></p>
+            vsak element <em>enoličen</em> tak zapis.<a href="#fn100"
+            class="footnote-ref" id="fnref100"
+            role="doc-noteref"><sup>100</sup></a></p>
             <div class="trditev">
             <p><strong>Trditev 6.7</strong>. Vsak element v <span
             class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>
@@ -11707,9 +11734,9 @@
             Preverimo še enoličnost. Predpostavimo, da je <span
             class="math inline">\(n\)</span> najmanjše število, za
             katero je izraz kot zgoraj enak <span
-            class="math inline">\(1\)</span>.<a href="#fn100"
-            class="footnote-ref" id="fnref100"
-            role="doc-noteref"><sup>100</sup></a> Seveda je tedaj <span
+            class="math inline">\(1\)</span>.<a href="#fn101"
+            class="footnote-ref" id="fnref101"
+            role="doc-noteref"><sup>101</sup></a> Seveda je tedaj <span
             class="math inline">\(n \neq 0\)</span> in kratek račun
             pokaže tudi, da je <span class="math inline">\(n \neq
             1\)</span>. Za <span class="math inline">\(n \geq 2\)</span>
@@ -11761,9 +11788,9 @@
             pa je res tudi obratno: za vsako izbiro elementov <span
             class="math inline">\(X,Y \in G\)</span> z lastnostjo <span
             class="math inline">\(X^2 = Y^3 = 1\)</span> lahko na
-            enoličen način predpišemo homomorfizem<a href="#fn101"
-            class="footnote-ref" id="fnref101"
-            role="doc-noteref"><sup>101</sup></a> <span
+            enoličen način predpišemo homomorfizem<a href="#fn102"
+            class="footnote-ref" id="fnref102"
+            role="doc-noteref"><sup>102</sup></a> <span
             class="math display">\[\textstyle \rho
                 \colon \mathop{\mathrm{PSL}}_2(\mathbf{Z}) \to G, \quad
                 a \mapsto X, \ b \mapsto Y.\]</span> Na ta način dobimo
@@ -11837,9 +11864,9 @@
             deluje s hkratnim konjugiranjem na parih matrik, se pravi
             <span class="math inline">\(A \cdot (X,Y) = (A X A^{-1}, A Y
             A^{-1})\)</span> za <span class="math inline">\(A \in
-            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>.<a href="#fn102"
-            class="footnote-ref" id="fnref102"
-            role="doc-noteref"><sup>102</sup></a> Elementi množice <span
+            \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>.<a href="#fn103"
+            class="footnote-ref" id="fnref103"
+            role="doc-noteref"><sup>103</sup></a> Elementi množice <span
             class="math inline">\(\mathop{\mathrm{Rep}}_n\)</span>
             predstavljajo ravno vse predstavnike izomorfnostnih razredov
             <span class="math inline">\(n\)</span>-razsežnih upodobitev
@@ -11893,8 +11920,8 @@
             je enak torusu diagonalnih matrik. S temi matrikami lahko
             torej še dodatno konjugiramo in poenostavimo matriko <span
             class="math inline">\(Y\)</span>. Ločimo več možnosti.<a
-            href="#fn103" class="footnote-ref" id="fnref103"
-            role="doc-noteref"><sup>103</sup></a></p>
+            href="#fn104" class="footnote-ref" id="fnref104"
+            role="doc-noteref"><sup>104</sup></a></p>
             <ol>
             <li><p>Če je <span class="math inline">\(c = 0\)</span> in
             <span class="math inline">\(b = 0\)</span>, potem je <span
@@ -12013,8 +12040,8 @@
             Izkaže se <a
             href="https://www.ams.org/proc/1992-115-01/S0002-9939-1992-1079696-5/">(Conder-Robertson-Williams
             1992)</a>, da vse te pogoje lahko zajamemo z naslednjimi
-            enakostmi:<a href="#fn104" class="footnote-ref"
-            id="fnref104" role="doc-noteref"><sup>104</sup></a> <span
+            enakostmi:<a href="#fn105" class="footnote-ref"
+            id="fnref105" role="doc-noteref"><sup>105</sup></a> <span
             class="math display">\[x^3 = y^3 = z^2 = (xz)^3 = (yz)^3 =
             (x^{-1}zxy)^2 = (y^{-1}zyx)^2 = (xy)^6 = I.\]</span> Z
             drugimi besedami, če želimo podati upodobitev <span
@@ -12069,9 +12096,9 @@
             vsebuje neko kongruenčno podgrupo. Tej lastnosti grupe <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
             rečemo <span><strong><em>lastnost kongruenčnih
-            podgrup</em></strong></span>.<a href="#fn105"
-            class="footnote-ref" id="fnref105"
-            role="doc-noteref"><sup>105</sup></a></p>
+            podgrup</em></strong></span>.<a href="#fn106"
+            class="footnote-ref" id="fnref106"
+            role="doc-noteref"><sup>106</sup></a></p>
             <p>Vsak končni kvocient <span
             class="math inline">\(G\)</span> grupe <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
@@ -12125,8 +12152,13 @@
             <span><strong><em><span
             class="math inline">\(p\)</span>-adičnih celih
             števil</em></strong></span> in ga označimo z <span
-            class="math inline">\(\mathbf{Z}_p\)</span>. Vse končne
-            kolobarje <span
+            class="math inline">\(\mathbf{Z}_p\)</span>. Kolobar celih
+            števil <span class="math inline">\(\mathbf{Z}\)</span> se
+            naravno vloži v <span
+            class="math inline">\(\mathbf{Z}_p\)</span> s preslikavo
+            <span class="math inline">\(n \mapsto (n)_{k \in
+            \mathbf{N}}\)</span>.</p>
+            <p>Vse končne kolobarje <span
             class="math inline">\(\mathbf{Z}/p^k\mathbf{Z}\)</span>
             opremimo z diskretno topologijo in njihov produkt s
             produktno topologijo, tako da je <span
@@ -12136,8 +12168,8 @@
             kompakten, <span class="math inline">\(\mathbf{Z}_p\)</span>
             pa tvori zaprto množico v tem produktu, zato je tudi <span
             class="math inline">\(\mathbf{Z}_p\)</span> kompakten
-            topološki prostor.<a href="#fn106" class="footnote-ref"
-            id="fnref106" role="doc-noteref"><sup>106</sup></a></p>
+            topološki prostor.<a href="#fn107" class="footnote-ref"
+            id="fnref107" role="doc-noteref"><sup>107</sup></a></p>
             <p>Na enak način lahko opazujemo vse grupe <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z}/p^k\mathbf{Z})\)</span>
             hkrati. Zložimo jih v ravno vrsto <span
@@ -12158,7 +12190,7 @@
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z}_p)\)</span>
             podeduje topologijo iz prostora <span
             class="math inline">\(\mathbf{Z}_p^4\)</span>, zato je
-            kompaktna topološka grupa. Ta grupa vsebuje <span
+            kompaktna topološka grupa. Ta grupa naravno vsebuje <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
             in po definiciji je opremljena z zveznimi projekcijami v
             kongruenčne kvociente <span
@@ -12209,8 +12241,8 @@
             class="math inline">\(\mathop{\mathrm{GL}}_n(\mathbf{C})\)</span>
             obstaja odprta okolica enote <span
             class="math inline">\(U\)</span>, ki ne vsebuje nobene
-            netrivialne podgrupe.<a href="#fn107" class="footnote-ref"
-            id="fnref107" role="doc-noteref"><sup>107</sup></a></p>
+            netrivialne podgrupe.<a href="#fn108" class="footnote-ref"
+            id="fnref108" role="doc-noteref"><sup>108</sup></a></p>
             </div>
             <p>Kljub tej razliki pa je vendarle zelo plodno gledati na
             <span
@@ -13086,29 +13118,36 @@
             class="math inline">\(\mathbf{R}\)</span>-linearni.<a
             href="#fnref97" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn98" role="doc-endnote"><p>Poseben primer tega
+            <li id="fn98" role="doc-endnote"><p>Grupa <span
+            class="math inline">\(\mathop{\mathrm{SO}}_3(\mathbf{R})\)</span>
+            <em>ni</em> enostavno povezana. Homeomorfna je projektivnemu
+            prostoru <span
+            class="math inline">\(\mathbf{R}P^3\)</span>.<a
+            href="#fnref98" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn99" role="doc-endnote"><p>Poseben primer tega
             fenomena smo videli v razdelku o upodobitvah grupe <span
             class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>, kjer
             smo dokazali, da je vsaka zvezna upodobitev grupe <span
             class="math inline">\(\mathbf{R}\)</span> odvedljiva.<a
-            href="#fnref98" class="footnote-back"
+            href="#fnref99" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn99" role="doc-endnote"><p>Rečemo, da je grupa
+            <li id="fn100" role="doc-endnote"><p>Rečemo, da je grupa
             <span
             class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>
             <span><strong><em>prosti produkt</em></strong></span>
             podgrup <span class="math inline">\(\langle a \rangle =
             \mathbf{Z}/2\mathbf{Z}\)</span> in <span
             class="math inline">\(\langle b \rangle =
-            \mathbf{Z}/3\mathbf{Z}\)</span>.<a href="#fnref99"
+            \mathbf{Z}/3\mathbf{Z}\)</span>.<a href="#fnref100"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn100" role="doc-endnote"><p>Če nek element lahko
+            <li id="fn101" role="doc-endnote"><p>Če nek element lahko
             zapišemo v želeni obliki na dva načina, potem vse črke
             prenesemo na eno stran enakosti in s tem tudi <span
             class="math inline">\(1\)</span> zapišemo na netrivialen
-            način v želeni obliki.<a href="#fnref100"
+            način v želeni obliki.<a href="#fnref101"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn101" role="doc-endnote"><p>To je analog
+            <li id="fn102" role="doc-endnote"><p>To je analog
             razširjanja lokalnega homomorfizma, ki smo ga videli pri
             grupi <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
@@ -13117,24 +13156,24 @@
             razširitve homomorfizma z <span
             class="math inline">\(U\)</span> na ves <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
-            Tukaj to dobimo zastonj.<a href="#fnref101"
+            Tukaj to dobimo zastonj.<a href="#fnref102"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn102" role="doc-endnote"><p>Para matrik <span
+            <li id="fn103" role="doc-endnote"><p>Para matrik <span
             class="math inline">\((X,Y)\)</span> in <span
             class="math inline">\((X&#39;, Y&#39;)\)</span> sta torej
             ekvivalentna, če in samo če za neko matriko <span
             class="math inline">\(A \in
             \mathop{\mathrm{GL}}_n(\mathbf{C})\)</span> velja <span
             class="math inline">\((X,Y) = A \cdot (X&#39;,
-            Y&#39;)\)</span>.<a href="#fnref102" class="footnote-back"
+            Y&#39;)\)</span>.<a href="#fnref103" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn103" role="doc-endnote"><p>Obravnava je analogna
+            <li id="fn104" role="doc-endnote"><p>Obravnava je analogna
             razumevanju konjugiranostnih razredov v končni grupi <span
             class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span>,
             le da je tu nekoliko preprostejša, ker ni nerazcepnega
-            torusa.<a href="#fnref103" class="footnote-back"
+            torusa.<a href="#fnref104" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn104" role="doc-endnote"><p>Rečemo, da je grupa
+            <li id="fn105" role="doc-endnote"><p>Rečemo, da je grupa
             <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
             dana s prezentacijo z <em>generatorji</em> <span
@@ -13142,22 +13181,22 @@
             ki jih podajajo te enakosti. Glej <a
             href="https://urbanjezernik.github.io/teorija-grup">Teorijo
             grup</a> za podrobnosti glede te konstrukcije in več
-            zgledov.<a href="#fnref104" class="footnote-back"
+            zgledov.<a href="#fnref105" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn105" role="doc-endnote"><p>Angleško <em>congruence
-            subgroup property.</em><a href="#fnref105"
+            <li id="fn106" role="doc-endnote"><p>Angleško <em>congruence
+            subgroup property.</em><a href="#fnref106"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn106" role="doc-endnote"><p>Topologija na <span
+            <li id="fn107" role="doc-endnote"><p>Topologija na <span
             class="math inline">\(\mathbf{Z}_p\)</span> je nekoliko
             neobičajna. Dobimo namreč popolnoma nepovezan topološki
             prostor. Predstavljamo si ga lahko kot Cantorjevo množico,
             kot je prikazano <a
             href="http://roice3.org/padics/">tukaj</a>.<a
-            href="#fnref106" class="footnote-back"
+            href="#fnref107" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn107" role="doc-endnote"><p>Tej lastnosti pravimo
+            <li id="fn108" role="doc-endnote"><p>Tej lastnosti pravimo
             <span><strong><em>brez majhnih podgrup</em></strong></span>,
-            angleško <em>no small subgroups</em>.<a href="#fnref107"
+            angleško <em>no small subgroups</em>.<a href="#fnref108"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>

@@ -4240,7 +4240,11 @@ Kadar je dana topološka grupa $G$ opremljena z znano topologijo, ki izhaja iz e
 Pri raziskovanju teorije upodobitev končnih grup nam je marsikje prav prišlo dejstvo, da smo vektorske prostore opremili s skalarnim produktom, ki je bil invarianten glede na upodobitev. Z drugimi besedami, opazovali smo {\definicija unitarne} upodobitve, ki slikajo v grupo $\U(V) \leq \GL(V)$. Z metodo povprečenja smo dokazali, da je vsaka upodobitev končne grupe unitarizabilna in torej po ustrezni zamenjavi baze lahko predpostavimo, da je oblike $\rho \colon G \to U_n(\CC)$. Za neskončne grupe tega sklepa ne moremo napraviti in tudi zaključek v splošnem ne drži.
 
 \begin{zgled}
-Opazujmo grupo $\RR$ in njene upodobitve $\chi_{\zeta}$. Ta upodobitev je unitarna, če in samo če je njena slika vsebovana v $\U(\CC) = S^1 = \{ z \in \CC \mid |z| = 1 \}$, kar se zgodi le za imaginarne parametre $\zeta \in \RR \cdot i$.
+Opazujmo grupo $\RR$ in njene upodobitve $\chi_{\zeta}$. Ta upodobitev je unitarna, če in samo če za nek skalarni produkt na $\CC$ velja
+\[
+    \langle u, v \rangle = \langle e^{\zeta x} u, e^{\zeta x} v \rangle
+\]
+za vsak $x \in \RR$ in vse $u,v \in \CC$. Ta pogoj je enakovreden $|e^{\zeta x}| = 1$, se pravi $\zeta \in \RR \cdot i$. V tem primeru upodobitev $\chi_{\zeta}$ nujno slika v enotsko krožnico $\U(\CC) = S^1 = \{ z \in \CC \mid |z| = 1 \}$.
 \end{zgled}
 
 Za neskončne topološke grupe najraje opazujemo zvezne unitarne upodobitve. O teh ponavadi lahko povemo največ, kot bomo videli v nadaljevanju.
@@ -4581,7 +4585,7 @@ To delovanje imamo tudi z grupo $\SL_2(\CC)$ in njenim tangentim prostorom, saj 
 Ni se težko prepičati, da je za vsak $A \in \SL_2(\CC)$ preslikava $D_I \rho$ \emph{spletična} glede na to delovanje. Za vsak $Y \in \slfrak_2(\CC)$ velja namreč
 \[
     D_I \rho \cdot \Ad(A) \cdot Y
-    = D_I \left( \rho(e^{t A Y A^{-1}}) \right)
+    = D_0 \left( \rho(e^{t A Y A^{-1}}) \right)
     = \Ad(\rho(A)) \cdot D_I \rho \cdot Y.
 \]
 V posebnem za vsak tangentni vektor $X \in \slfrak_2(\CC)$ velja ta formula za $A = e^{tX}$. Izračunajmo odvod leve in desne strani v točki $t = 0$. Z uporabo verižnega pravila leva stran postane
@@ -4793,13 +4797,26 @@ zato je grupa $\SU_2(\CC)$ enostavno povezana realna Liejeva grupa. Podobno kot 
     \[
         \sufrak_2(\CC) = \left\{ \begin{pmatrix} i b & -c + i d \\ c + i d & - i b \\  \end{pmatrix} \mid b,c,d \in \RR \right\}.
     \]
-Grupa $\SU_2(\CC)$ deluje s konjugiranjem na $\sufrak_2(\CC)$. Če v slednjem prostoru izberemo bazo, dobimo upodobitev
+Kot vektorski prostor je to $3$-razsežen realni vektorski prostor z bazo
+\[
+    \begin{pmatrix}
+        i & 0 \\ 0 & -1
+    \end{pmatrix}, \quad
+    \begin{pmatrix}
+        0 & -1 \\
+        1 & 0
+    \end{pmatrix}, \quad
+    \begin{pmatrix}
+        0 & i \\ i & 0
+    \end{pmatrix}.
+\]
+Grupa $\SU_2(\CC)$ deluje s konjugiranjem na $\sufrak_2(\CC)$. Na ta način dobimo upodobitev
 \[
     \Ad \colon \SU_2(\CC) \to \GL(\sufrak_2(\CC)) \cong \GL_3(\RR).
 \]
 
 \begin{domacanaloga}
-    Prepričaj se, da je $\ker \Ad = \{ I, -I \}$ in da je $\image \Ad \cong \SO_3(\RR)$. Upodobitve grupe $\SO_3(\RR)$ so torej ravno upodobitve enostavno povezane grupe $\SU_2(\CC)$, ki imajo v jedru $-I$.
+    Prepričaj se, da je $\ker \Ad = \{ I, -I \}$ in da je $\image \Ad \cong \SO_3(\RR)$. Upodobitve grupe $\SO_3(\RR)$\footnote{Grupa $\SO_3(\RR)$ \emph{ni} enostavno povezana. Homeomorfna je projektivnemu prostoru $\RR P^3$.} so torej ravno upodobitve enostavno povezane grupe $\SU_2(\CC)$, ki imajo v jedru $-I$.
 \end{domacanaloga}
 
 \end{zgled}
@@ -4835,11 +4852,12 @@ s predpisom
     =
     \frac{az + b}{cz + d}.
 \]
-To delovanje je tranzitivno. Ni se težko prepričati, da stabilizator točke $i \in \HH$ sestoji iz matrik
+To delovanje je tranzitivno. Ni se težko prepričati, da stabilizator točke $i \in \HH$ sestoji iz kompaktne množice matrik
 \[
-    {\textstyle \SO_2(\RR)} = \left\{ \begin{pmatrix} a & b \\ -b & a \end{pmatrix} \mid a^2 + b^2 = 1 \right\}.
+    {\textstyle \SO_2(\RR)} = \left\{ \begin{pmatrix} a & b \\ -b & a \end{pmatrix} \mid a^2 + b^2 = 1 \right\}
+    \cong \U_1(\CC) = S^1.
 \]
-Delovanje $\SL_2(\RR)$ na $\HH$ je torej ekvivalentno delovanju $\SL_2(\RR)$ na množici svojih desnih odsekov po kompaktni podgrupi $\SO_2(\RR)$. To permutacijsko delovanje lahko pretvorimo v upodobitev $\rho_k$ za vsak $k \geq 2$ z delovanjem na prostorih holomorfnih integrabilnih funkcij
+Delovanje $\SL_2(\RR)$ na $\HH$ je torej ekvivalentno delovanju $\SL_2(\RR)$ na množici svojih desnih odsekov po kompaktni podgrupi $\SO_2(\RR)$. To permutacijsko delovanje na prostoru $\CC[\SL_2(\RR)/\SO_2(\RR)]$ lahko pretvorimo v upodobitev $\rho_k$ za vsak $k \geq 2$ z delovanjem na prostorih holomorfnih integrabilnih funkcij
 \[
     D_k = \left\{ f \colon \HH \to \CC \mid \text{$f$ holomorfna}, \ \int_{\HH} |f(z)|^2 y^k \frac{dx dy}{y^2} < \infty \right\},
 \]
@@ -4856,7 +4874,7 @@ in sicer definiramo
 \]
 Izkaže se, da je $\rho_k$ nerazcepna unitarna upodobitev grupe $\SL_2(\RR)$ na neskončnorazsežnem Hilbertovem prostoru $D_k$ in da so te upodobitve med sabo neizomorfne. Na ta način dobimo celo vrsto nerazcepnih unitarnih upodobitev grupe $\SL_2(\RR)$, ki jim pravimo {\definicija upodobitve diskretne vrste}.
 
-Z opazovanjem drugih zanimivih podgrup v $\SL_2(\RR)$ najdemo še kakšne druge unitarne upodobitve. Še posebej zanimiva je diskretna podgrupa $\SL_2(\ZZ)$. Z njo dobimo kvocientno množico $Y = \SL_2(\ZZ) \backslash \SL_2(\RR)$. Na grupo $\SL_2(\RR)$ lahko s pomočjo projekcije $\SL_2(\RR) \to \SO_2(\RR) \backslash \SL_2(\RR) = \HH$ prenesemo mero, ki jo nato potisnemo na $Y$, tako da lahko opazujemo prostor funkcij $L^2(Y)$, na katerem deluje grupa $\SL_2(\RR)$. V tem prostoru lahko najdemo mnogo nerazcepnih unitarnih podupodobitev. Še posebej zanimive so upodobitve, ki so konsturirane s pomočjo indukcije unitarnih upodobitev Borelove podgrupe zgornjetrikotnih matrik. Te imenujemo {\definicija upodobitve glavne vrste} in jih lahko vidimo kot posplošitev upodobitev glavne vrste iz teorije upodobitev grupe $\GL_2(\FF_p)$.
+Z opazovanjem drugih zanimivih podgrup v $\SL_2(\RR)$ najdemo še kakšne druge unitarne upodobitve. Še posebej zanimiva je diskretna podgrupa $\SL_2(\ZZ)$. Z njo dobimo kvocientno množico $Y = \SL_2(\ZZ) \backslash \SL_2(\RR)$. Na grupo $\SL_2(\RR)$ lahko s pomočjo projekcije $\SL_2(\RR) \to \SL_2(\RR)/\SO_2(\RR) = \HH$ prenesemo mero, ki jo nato potisnemo na $Y$, tako da lahko opazujemo prostor funkcij $L^2(Y)$, na katerem deluje grupa $\SL_2(\RR)$. V tem prostoru lahko najdemo mnogo nerazcepnih unitarnih podupodobitev. Še posebej zanimive so upodobitve, ki so konsturirane s pomočjo indukcije unitarnih upodobitev Borelove podgrupe zgornjetrikotnih matrik. Te imenujemo {\definicija upodobitve glavne vrste} in jih lahko vidimo kot posplošitev upodobitev glavne vrste iz teorije upodobitev grupe $\GL_2(\FF_p)$.
 
 Poleg teh dveh družin upodobitev ima grupa $\SL_2(\RR)$ še eno nekoliko bolj nenavadno družino unitarnih nerazcepnih upodobitev, ki jih dobimo z indukcijo določenih \emph{neunitarnih} upodobitev Borelove podgrupe. Te upodobitve tvorijo družino {\definicija upodobitev komplementarne vrste}.
 
@@ -5096,7 +5114,9 @@ pri čemer so homomorfizmi $r_k \colon \ZZ/p^k\ZZ \to \ZZ/p^{k-1}\ZZ$ redukcije 
         \forall k \in \NN \colon \ r_k(x_k) = x_{k-1}
     \right\}.
 \]
-Ker je vsak $\ZZ/p^k\ZZ$ kolobar, je tudi ta limita kolobar. Pravimo mu kolobar {\definicija $p$-adičnih celih števil} in ga označimo z $\ZZ_p$. Vse končne kolobarje $\ZZ/p^k\ZZ$ opremimo z diskretno topologijo in njihov produkt s produktno topologijo, tako da je $\ZZ_p$ tudi topološki prostor. Po izreku Tihonova je produkt vseh $\ZZ/p^k\ZZ$ kompakten, $\ZZ_p$ pa tvori zaprto množico v tem produktu, zato je tudi $\ZZ_p$ kompakten topološki prostor.\footnote{Topologija na $\ZZ_p$ je nekoliko neobičajna. Dobimo namreč popolnoma nepovezan topološki prostor. Predstavljamo si ga lahko kot Cantorjevo množico, kot je prikazano \href{http://roice3.org/padics/}{tukaj}.}
+Ker je vsak $\ZZ/p^k\ZZ$ kolobar, je tudi ta limita kolobar. Pravimo mu kolobar {\definicija $p$-adičnih celih števil} in ga označimo z $\ZZ_p$. Kolobar celih števil $\ZZ$ se naravno vloži v $\ZZ_p$ s preslikavo $n \mapsto (n)_{k \in \NN}$.
+
+Vse končne kolobarje $\ZZ/p^k\ZZ$ opremimo z diskretno topologijo in njihov produkt s produktno topologijo, tako da je $\ZZ_p$ tudi topološki prostor. Po izreku Tihonova je produkt vseh $\ZZ/p^k\ZZ$ kompakten, $\ZZ_p$ pa tvori zaprto množico v tem produktu, zato je tudi $\ZZ_p$ kompakten topološki prostor.\footnote{Topologija na $\ZZ_p$ je nekoliko neobičajna. Dobimo namreč popolnoma nepovezan topološki prostor. Predstavljamo si ga lahko kot Cantorjevo množico, kot je prikazano \href{http://roice3.org/padics/}{tukaj}.}
 
 Na enak način lahko opazujemo vse grupe $\SL_3(\ZZ/p^k\ZZ)$ hkrati. Zložimo jih v ravno vrsto
 \[
@@ -5108,7 +5128,7 @@ s prehodnimi homomorfizmi $r_k \colon \SL_3(\ZZ/p^k\ZZ) \to \SL_3(\ZZ/p^{k-1}\ZZ
     = \SL_3(\varprojlim_{k \in \NN} \ZZ/p^k\ZZ)
     = \SL_3(\ZZ_p).
 \]
-Grupa $\SL_3(\ZZ_p)$ podeduje topologijo iz prostora $\ZZ_p^4$, zato je kompaktna topološka grupa. Ta grupa vsebuje $\SL_3(\ZZ)$ in po definiciji je opremljena z zveznimi projekcijami v kongruenčne kvociente 
+Grupa $\SL_3(\ZZ_p)$ podeduje topologijo iz prostora $\ZZ_p^4$, zato je kompaktna topološka grupa. Ta grupa naravno vsebuje $\SL_3(\ZZ)$ in po definiciji je opremljena z zveznimi projekcijami v kongruenčne kvociente 
 \[
     \textstyle \widetilde{\pi_{p^k}} \colon \SL_3(\ZZ_p) \to \SL_3(\ZZ/p^k\ZZ)
 \]
