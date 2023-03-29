@@ -118,6 +118,8 @@
 % \def\kljuka{$\checkmark\kern-0.7em\checkmark$}
 \def\kljuka{$\checkmark$}
 
+\newtheorem{theorem}{Theorem}[section]
+
 \theoremstyle{definition}
 
 \newtheoremstyle{zgled}
@@ -129,7 +131,7 @@
  { }{}
 
 \theoremstyle{zgled}
-\newtheorem*{zgled}{Zgled}
+\newtheorem{zgled}[theorem]{Zgled}
 
 \newtheoremstyle{odprtproblem}
  {}{}%
@@ -140,7 +142,7 @@
  { }{}
 
 \theoremstyle{odprtproblem}
-\newtheorem*{odprtproblem}{Odprt problem}
+\newtheorem{odprtproblem}[theorem]{Odprt problem}
 
 \newtheoremstyle{domacanaloga}
  {}{}%
@@ -151,7 +153,7 @@
  { }{}
 
 \theoremstyle{domacanaloga}
-\newtheorem*{domacanaloga}{Domača naloga}
+\newtheorem{domacanaloga}[theorem]{Domača naloga}
 
 \newenvironment{dokaz}
     {\color{siva}\begin{proof}}
@@ -172,7 +174,7 @@
  { }{}
 
 \theoremstyle{izrek}
-\newtheorem*{izrek}{Izrek}
+\newtheorem{izrek}[theorem]{Izrek}
 
 % \newenvironment{izrek}
 %     {\smallskip\begin{center}\noindent\begin{tabular}{|p{0.9\textwidth}|}
@@ -183,8 +185,8 @@
 %     \end{tabular}\end{center}\smallskip
 %     }
 
-\newtheorem*{trditev}{Trditev}
-\newtheorem*{pomoznatrditev}{Pomožna trditev}
+\newtheorem{trditev}[theorem]{Trditev}
+\newtheorem{pomoznatrditev}[theorem]{Pomožna trditev}
 
 % \newenvironment{trditev}
 %     {\smallskip\begin{center}\noindent\begin{tabular}{|p{0.9\textwidth}|}
@@ -195,7 +197,7 @@
 %     \end{tabular}\end{center}\smallskip
 %     }
 
-\newtheorem*{lema}{Lema}
+\newtheorem{lema}[theorem]{Lema}
 
 % \newenvironment{lema}
 %     {\smallskip\begin{center}\noindent\begin{tabular}{|p{0.9\textwidth}|}
@@ -206,7 +208,7 @@
 %     \end{tabular}\end{center}\smallskip
 %     }
 
-\newtheorem*{posledica}{Posledica}
+\newtheorem{posledica}[theorem]{Posledica}
 
 % \newenvironment{posledica}
 %     {\smallskip\begin{center}\noindent\begin{tabular}{|p{0.9\textwidth}|}
