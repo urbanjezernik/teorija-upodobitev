@@ -33,6 +33,83 @@
 
   <body>
     
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Teorija upodobitev</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="#temelji-teorije-upodobitev" role="button" data-bs-toggle="dropdown" aria-expanded="false">Temelji teorije
+              upodobitev</a>
+<ul class="dropdown-menu" aria-labelledby="#temelji-teorije-upodobitev">
+<li><a class="dropdown-item" href="#osnovni-pojmi">Osnovni pojmi</a></li>
+<li><a class="dropdown-item" href="#fundamentalne-konstrukcije">Fundamentalne
+              konstrukcije</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="#upodobitev-pod-mikroskopom" role="button" data-bs-toggle="dropdown" aria-expanded="false">Upodobitev pod
+              mikroskopom</a>
+<ul class="dropdown-menu" aria-labelledby="#upodobitev-pod-mikroskopom">
+<li><a class="dropdown-item" href="#razstavljanje-upodobitve">Razstavljanje
+              upodobitve</a></li>
+<li><a class="dropdown-item" href="#matrični-koeficienti">Matrični
+              koeficienti</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="#upodobitve-končnih-grup" role="button" data-bs-toggle="dropdown" aria-expanded="false">Upodobitve končnih
+              grup</a>
+<ul class="dropdown-menu" aria-labelledby="#upodobitve-končnih-grup">
+<li><a class="dropdown-item" href="#polenostavnost-1">Polenostavnost</a></li>
+<li><a class="dropdown-item" href="#karakterji-1">Karakterji</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="#razširjeni-zgledi-končni" role="button" data-bs-toggle="dropdown" aria-expanded="false">Razširjeni zgledi –
+              končni</a>
+<ul class="dropdown-menu" aria-labelledby="#razširjeni-zgledi-končni">
+<li><a class="dropdown-item" href="#simetrične-grupe">Simetrične grupe</a></li>
+<li><a class="dropdown-item" href="#splošne-linearne-grupe">Splošne linearne
+              grupe</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="#aplikacije" role="button" data-bs-toggle="dropdown" aria-expanded="false">Aplikacije</a>
+<ul class="dropdown-menu" aria-labelledby="#aplikacije">
+<li><a class="dropdown-item" href="#aritmetična-zaporedja">Aritmetična
+              zaporedja</a></li>
+<li><a class="dropdown-item" href="#podmnožice-brez-produktov">Podmnožice brez
+              produktov</a></li>
+<li><a class="dropdown-item" href="#prepoznavanje-komutatorjev">Prepoznavanje
+              komutatorjev</a></li>
+<li><a class="dropdown-item" href="#slučajni-sprehodi">Slučajni sprehodi</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="#razširjeni-zgledi-neskončni" role="button" data-bs-toggle="dropdown" aria-expanded="false">Razširjeni zgledi –
+              neskončni</a>
+<ul class="dropdown-menu" aria-labelledby="#razširjeni-zgledi-neskončni">
+<li><a class="dropdown-item" href="#kompaktne-grupe">Kompaktne grupe</a></li>
+<li><a class="dropdown-item" href="#zvezne-linearne-grupe">Zvezne linearne
+              grupe</a></li>
+<li><a class="dropdown-item" href="#diskretne-linearne-grupe">Diskretne linearne
+              grupe</a></li>
+</ul>
+</li>
+</ul>
+            <!-- Python script will populate this -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end of Navbar -->
+
+
     <div class="container-fluid">
       <div class="row flex-nowrap">
         <div class="col-lg-7 mx-auto p-4">
@@ -43,7 +120,7 @@
             <strong> Urban Jezernik <br>
               Univerza v Ljubljani, Fakulteta za matematiko in fiziko </strong> <br>
 
-            Zadnja posodobitev: 29. 03. 2023
+            Zadnja posodobitev: 23. 11. 2023
           </div>
 
           <div id="spinner" class="text-center">
@@ -52,79 +129,7 @@
 
           <div id="hidden_contents" style="display:none">
 
-            <div class="kazalo">
-              <h3>Kazalo</h3>
-              <ul>
-              <li><a href="#temelji-teorije-upodobitev"
-              id="toc-temelji-teorije-upodobitev">Temelji teorije
-              upodobitev</a>
-              <ul>
-              <li><a href="#osnovni-pojmi"
-              id="toc-osnovni-pojmi">Osnovni pojmi</a></li>
-              <li><a href="#fundamentalne-konstrukcije"
-              id="toc-fundamentalne-konstrukcije">Fundamentalne
-              konstrukcije</a></li>
-              </ul></li>
-              <li><a href="#upodobitev-pod-mikroskopom"
-              id="toc-upodobitev-pod-mikroskopom">Upodobitev pod
-              mikroskopom</a>
-              <ul>
-              <li><a href="#razstavljanje-upodobitve"
-              id="toc-razstavljanje-upodobitve">Razstavljanje
-              upodobitve</a></li>
-              <li><a href="#matrični-koeficienti"
-              id="toc-matrični-koeficienti">Matrični
-              koeficienti</a></li>
-              </ul></li>
-              <li><a href="#upodobitve-končnih-grup"
-              id="toc-upodobitve-končnih-grup">Upodobitve končnih
-              grup</a>
-              <ul>
-              <li><a href="#polenostavnost-1"
-              id="toc-polenostavnost-1">Polenostavnost</a></li>
-              <li><a href="#karakterji-1"
-              id="toc-karakterji-1">Karakterji</a></li>
-              </ul></li>
-              <li><a href="#razširjeni-zgledi-končni"
-              id="toc-razširjeni-zgledi-končni">Razširjeni zgledi –
-              končni</a>
-              <ul>
-              <li><a href="#simetrične-grupe"
-              id="toc-simetrične-grupe">Simetrične grupe</a></li>
-              <li><a href="#splošne-linearne-grupe"
-              id="toc-splošne-linearne-grupe">Splošne linearne
-              grupe</a></li>
-              </ul></li>
-              <li><a href="#aplikacije"
-              id="toc-aplikacije">Aplikacije</a>
-              <ul>
-              <li><a href="#aritmetična-zaporedja"
-              id="toc-aritmetična-zaporedja">Aritmetična
-              zaporedja</a></li>
-              <li><a href="#podmnožice-brez-produktov"
-              id="toc-podmnožice-brez-produktov">Podmnožice brez
-              produktov</a></li>
-              <li><a href="#prepoznavanje-komutatorjev"
-              id="toc-prepoznavanje-komutatorjev">Prepoznavanje
-              komutatorjev</a></li>
-              <li><a href="#slučajni-sprehodi"
-              id="toc-slučajni-sprehodi">Slučajni sprehodi</a></li>
-              </ul></li>
-              <li><a href="#razširjeni-zgledi-neskončni"
-              id="toc-razširjeni-zgledi-neskončni">Razširjeni zgledi –
-              neskončni</a>
-              <ul>
-              <li><a href="#kompaktne-grupe"
-              id="toc-kompaktne-grupe">Kompaktne grupe</a></li>
-              <li><a href="#zvezne-linearne-grupe"
-              id="toc-zvezne-linearne-grupe">Zvezne linearne
-              grupe</a></li>
-              <li><a href="#diskretne-linearne-grupe"
-              id="toc-diskretne-linearne-grupe">Diskretne linearne
-              grupe</a></li>
-              </ul></li>
-              </ul>
-            </div>
+            
 
             <h3 class="unnumbered" id="kratek-opis-predmeta">Kratek opis
             predmeta</h3>
@@ -6682,8 +6687,8 @@
                 D_p &amp;= \left\{ \begin{pmatrix} a &amp; 0 \\ 0 &amp;
             d \end{pmatrix} \mid a,d \in \mathbf{F}_p^* \right\}, \\
                 U_p &amp;= \left\{ \begin{pmatrix} 1 &amp; b \\ 0 &amp;
-            1 \end{pmatrix} \mid b \in \mathbf{F}_p
-            \right\}.\end{aligned}\]</span> Grupa <span
+            1 \end{pmatrix} \mid b \in \mathbf{F}_p \right\}.
+            \end{aligned}\]</span> Grupa <span
             class="math inline">\(B_p\)</span> je
             <span><strong><em>Borelova podgrupa</em></strong></span>,
             grupa <span class="math inline">\(U_p\)</span> pa
@@ -11235,8 +11240,8 @@
             \right) \\
                 &amp;= \phi(X) + \phi(Y) + \frac{1}{2}[\phi(X), \phi(Y)]
             + \cdots \\
-                &amp;= \log(e^{\phi(\log A)} e^{\phi(\log
-            B)}),\end{aligned}\]</span> kjer smo v srednji enakosti
+                &amp;= \log(e^{\phi(\log A)} e^{\phi(\log B)}),
+            \end{aligned}\]</span> kjer smo v srednji enakosti
             upoštevali, da je <span class="math inline">\(\phi\)</span>
             Liejev homomorfizem. Od tod sklepamo, da res velja <span
             class="math inline">\(\rho(A)\rho(B) = \rho(AB)\)</span> za
@@ -12495,11 +12500,12 @@
             Vse povedano se da razširiti na grupe <span
             class="math inline">\(\mathop{\mathrm{SL}}_m(\mathbf{Z})\)</span>
             za <span class="math inline">\(m \geq 3\)</span>.</p>
-            <section class="footnotes footnotes-end-of-document"
+            <aside id="footnotes"
+            class="footnotes footnotes-end-of-document"
             role="doc-endnotes">
             <hr />
             <ol>
-            <li id="fn1" role="doc-endnote"><p>Prostor <span
+            <li id="fn1"><p>Prostor <span
             class="math inline">\(F[G]\)</span> je vektorski prostor nad
             <span class="math inline">\(F\)</span>, generiran z množico
             <span class="math inline">\(G\)</span>. Običajno mu pravimo
@@ -12508,87 +12514,83 @@
             grupe <span class="math inline">\(G\)</span>.<a
             href="#fnref1" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn2" role="doc-endnote"><p>Angleško
-            <em>intertwiner</em>.<a href="#fnref2" class="footnote-back"
+            <li id="fn2"><p>Angleško <em>intertwiner</em>.<a
+            href="#fnref2" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn3" role="doc-endnote"><p>Z opustitvijo
-            eksplicitnih oznak za delovanja lahko ta pogoj pišemo krajše
-            kot <span class="math inline">\(\Phi(gv) =
-            g\Phi(v)\)</span>.<a href="#fnref3" class="footnote-back"
+            <li id="fn3"><p>Z opustitvijo eksplicitnih oznak za
+            delovanja lahko ta pogoj pišemo krajše kot <span
+            class="math inline">\(\Phi(gv) = g\Phi(v)\)</span>.<a
+            href="#fnref3" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn4" role="doc-endnote"><p>Generator <span
-            class="math inline">\(\bar 1 = 1 + n\mathbf{Z}\in
-            \mathbf{Z}/n\mathbf{Z}\)</span> deluje kot cikel <span
-            class="math inline">\((1 \ 2 \ \cdots \ n)\)</span>.<a
-            href="#fnref4" class="footnote-back"
+            <li id="fn4"><p>Generator <span class="math inline">\(\bar 1
+            = 1 + n\mathbf{Z}\in \mathbf{Z}/n\mathbf{Z}\)</span> deluje
+            kot cikel <span class="math inline">\((1 \ 2 \ \cdots \
+            n)\)</span>.<a href="#fnref4" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn5" role="doc-endnote"><p>Pozor, karakteristična
-            funkcija je zasidrana pri <span><em>inverzu</em></span>
-            elementa <span class="math inline">\(\bar x\)</span> v <span
+            <li id="fn5"><p>Pozor, karakteristična funkcija je zasidrana
+            pri <span><em>inverzu</em></span> elementa <span
+            class="math inline">\(\bar x\)</span> v <span
             class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span>.<a
             href="#fnref5" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn6" role="doc-endnote"><p>Na primer, <em>precej
-            dobro</em> bomo opisali upodobitve poljubne končne grupe nad
-            poljem kompleksnih števil.<a href="#fnref6"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn7" role="doc-endnote"><p>Kadar je <span
-            class="math inline">\(\chi(g) = 1\)</span> za vsak <span
-            class="math inline">\(g \in G\)</span>, je ta upodobitev
-            izomorfna <span class="math inline">\(\mathbf{1}\)</span>.
-            Kadar je <span class="math inline">\(\chi(g) \neq 1\)</span>
-            za vsaj kak <span class="math inline">\(g \in G\)</span>, pa
-            ta upodobitev <em>ni</em> trivialna.<a href="#fnref7"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn8" role="doc-endnote"><p>Namreč, <span
-            class="math inline">\(v = \Phi(1)\)</span> in <span
-            class="math inline">\(\chi(g) = \rho(g) \cdot 1\)</span>.<a
-            href="#fnref8" class="footnote-back"
+            <li id="fn6"><p>Na primer, <em>precej dobro</em> bomo
+            opisali upodobitve poljubne končne grupe nad poljem
+            kompleksnih števil.<a href="#fnref6" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn9" role="doc-endnote"><p>Poseben primer te
-            preslikave smo videli za grupo <span
+            <li id="fn7"><p>Kadar je <span class="math inline">\(\chi(g)
+            = 1\)</span> za vsak <span class="math inline">\(g \in
+            G\)</span>, je ta upodobitev izomorfna <span
+            class="math inline">\(\mathbf{1}\)</span>. Kadar je <span
+            class="math inline">\(\chi(g) \neq 1\)</span> za vsaj kak
+            <span class="math inline">\(g \in G\)</span>, pa ta
+            upodobitev <em>ni</em> trivialna.<a href="#fnref7"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn8"><p>Namreč, <span class="math inline">\(v =
+            \Phi(1)\)</span> in <span class="math inline">\(\chi(g) =
+            \rho(g) \cdot 1\)</span>.<a href="#fnref8"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn9"><p>Poseben primer te preslikave smo videli za
+            grupo <span
             class="math inline">\(\mathbf{Z}/n\mathbf{Z}\)</span>, kjer
             smo premislili, da je celo bijektivna.<a href="#fnref9"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn10" role="doc-endnote"><p>Slika <span
+            <li id="fn10"><p>Slika <span
             class="math inline">\(\mathop{\mathrm{im}}\Phi\)</span>
             namreč sestoji iz funkcij, ki so neničelne le v končno mnogo
             elementih grupe <span class="math inline">\(G\)</span>.<a
             href="#fnref10" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn11" role="doc-endnote"><p>To sledi na primer iz
-            dejstva, da prostora <span
-            class="math inline">\(F[G]^G\)</span> in <span
+            <li id="fn11"><p>To sledi na primer iz dejstva, da prostora
+            <span class="math inline">\(F[G]^G\)</span> in <span
             class="math inline">\(\mathop{\mathrm{fun}}(G,F)^G\)</span>
             nista izomorfna.<a href="#fnref11" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn12" role="doc-endnote"><p>Prehodna matrika iz baze
-            <span class="math inline">\(e_i\)</span> v bazo <span
+            <li id="fn12"><p>Prehodna matrika iz baze <span
+            class="math inline">\(e_i\)</span> v bazo <span
             class="math inline">\(f_j\)</span> je ravno Vandermondova
             matrika.<a href="#fnref12" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn13" role="doc-endnote"><p>Na primer, generator
-            <span class="math inline">\((1 \ 3 \ 2)\)</span> preslika
-            vektor <span class="math inline">\(e_1 - e_2\)</span> v
-            <span class="math inline">\(e_3 - e_1\)</span>, kar lahko
-            zapišemo kot <span class="math inline">\(-(e_1 - e_2) - (e_2
-            - e_3)\)</span>.<a href="#fnref13" class="footnote-back"
+            <li id="fn13"><p>Na primer, generator <span
+            class="math inline">\((1 \ 3 \ 2)\)</span> preslika vektor
+            <span class="math inline">\(e_1 - e_2\)</span> v <span
+            class="math inline">\(e_3 - e_1\)</span>, kar lahko zapišemo
+            kot <span class="math inline">\(-(e_1 - e_2) - (e_2 -
+            e_3)\)</span>.<a href="#fnref13" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn14" role="doc-endnote"><p>Na primer polja
-            kompleksnih števil.<a href="#fnref14" class="footnote-back"
+            <li id="fn14"><p>Na primer polja kompleksnih števil.<a
+            href="#fnref14" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn15" role="doc-endnote"><p>Na primer <span
-            class="math inline">\(E = \mathbf{C}\)</span> in <span
-            class="math inline">\(F = \mathbf{Q}\)</span>.<a
-            href="#fnref15" class="footnote-back"
+            <li id="fn15"><p>Na primer <span class="math inline">\(E =
+            \mathbf{C}\)</span> in <span class="math inline">\(F =
+            \mathbf{Q}\)</span>.<a href="#fnref15" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn16" role="doc-endnote"><p>Delovanje <span
+            <li id="fn16"><p>Delovanje <span
             class="math inline">\(H\)</span> na <span
             class="math inline">\(\mathop{\mathrm{fun}}(G,V)\)</span> je
             konstruirano analogno delovanju grupe na prostoru linearnih
             preslikav.<a href="#fnref16" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn17" role="doc-endnote"><p>Če je <span
+            <li id="fn17"><p>Če je <span
             class="math inline">\(R\)</span> množica predstavnikov
             desnih odsekov <span
             class="math inline">\(\mathop{\mathrm{im}}\phi\)</span> v
@@ -12601,8 +12603,7 @@
             f(r)\)</span> za <span class="math inline">\(x = \phi(y) \in
             \mathop{\mathrm{im}}\phi\)</span>.<a href="#fnref17"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn18" role="doc-endnote"><p>Če je <span
-            class="math inline">\(f \in
+            <li id="fn18"><p>Če je <span class="math inline">\(f \in
             \mathop{\mathrm{fun}}(G,V)^H\)</span>, potem pogoj <span
             class="math inline">\(H\)</span>-invariantnosti uporabimo z
             elementi <span class="math inline">\(h \in \ker
@@ -12610,35 +12611,35 @@
             \cdot f(x) = f(x)\)</span>, torej je <span
             class="math inline">\(f \in V^h\)</span>.<a href="#fnref18"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn19" role="doc-endnote"><p>Množico funkcij <span
+            <li id="fn19"><p>Množico funkcij <span
             class="math inline">\(\mathop{\mathrm{fun}}(R,V)\)</span>
             lahko vidimo kot direktno vsoto prostorov <span
             class="math inline">\(V\)</span>, indeksirano z množico
             <span class="math inline">\(R\)</span>.<a href="#fnref19"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn20" role="doc-endnote"><p>V nadaljevanju bomo
-            spoznali presenetljivo uporabnost tega navidez naključnega
-            dejstva.<a href="#fnref20" class="footnote-back"
+            <li id="fn20"><p>V nadaljevanju bomo spoznali presenetljivo
+            uporabnost tega navidez naključnega dejstva.<a
+            href="#fnref20" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn21" role="doc-endnote"><p>Rečemo tudi, da je <span
+            <li id="fn21"><p>Rečemo tudi, da je <span
             class="math inline">\(V\)</span>
             <span><strong><em>enostavna</em></strong></span> upodobitev.
             Te terminologija izhaja iz alternativne obravnave upodobitev
             kot <em>modulov nad grupnimi algebrami</em>.<a
             href="#fnref21" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn22" role="doc-endnote"><p>Po analogiji s
-            faktorizacijo števil si nerazcepne upodobitve lahko
-            predstavljamo kot praštevila.<a href="#fnref22"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn23" role="doc-endnote"><p>Če komplementarna
-            podupodobitev obstaja, potem je enolično določena (do
-            izomorfizma upodobitev), saj je izomorfna kvocientu <span
+            <li id="fn22"><p>Po analogiji s faktorizacijo števil si
+            nerazcepne upodobitve lahko predstavljamo kot praštevila.<a
+            href="#fnref22" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn23"><p>Če komplementarna podupodobitev obstaja,
+            potem je enolično določena (do izomorfizma upodobitev), saj
+            je izomorfna kvocientu <span
             class="math inline">\(\rho/\tilde\rho\)</span>.<a
             href="#fnref23" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn24" role="doc-endnote"><p>Linearna preslikava
-            <span class="math inline">\(A \colon X \to X\)</span> je
+            <li id="fn24"><p>Linearna preslikava <span
+            class="math inline">\(A \colon X \to X\)</span> je
             projekcija na podprostor <span class="math inline">\(Y \leq
             X\)</span>, če je <span class="math inline">\(A^2 =
             A\)</span> in <span
@@ -12646,53 +12647,49 @@
             Projekcijska spletična je torej spletična, ki je hkrati
             projekcija na nek podprostor.<a href="#fnref24"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn25" role="doc-endnote"><p>V nadaljevanju bomo
-            pokazali, da so upodobitve <em>končnih</em> grup nad poljem
-            karakteristike <span class="math inline">\(0\)</span> vselej
-            poenostavne.<a href="#fnref25" class="footnote-back"
+            <li id="fn25"><p>V nadaljevanju bomo pokazali, da so
+            upodobitve <em>končnih</em> grup nad poljem karakteristike
+            <span class="math inline">\(0\)</span> vselej poenostavne.<a
+            href="#fnref25" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn26" role="doc-endnote"><p>Ta argument je soroden
-            premisleku o obstoju Hirschove dolžine v policikličnih
-            grupah iz <a
+            <li id="fn26"><p>Ta argument je soroden premisleku o obstoju
+            Hirschove dolžine v policikličnih grupah iz <a
             href="https://urbanjezernik.github.io/teorija-grup/">Teorije
             grup</a>.<a href="#fnref26" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn27" role="doc-endnote"><p>Na primer, kadar je
-            upodobitev trivialna, se pravi <span class="math inline">\(V
-            = \mathbf{1}^k\)</span> za nek <span class="math inline">\(k
+            <li id="fn27"><p>Na primer, kadar je upodobitev trivialna,
+            se pravi <span class="math inline">\(V =
+            \mathbf{1}^k\)</span> za nek <span class="math inline">\(k
             &gt; 1\)</span>, lahko izberemo poljubno bazo prostora <span
             class="math inline">\(V\)</span> in prek nje dobimo nek drug
             izomorfizem <span class="math inline">\(V \cong
             \mathbf{1}^k\)</span>.<a href="#fnref27"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn28" role="doc-endnote"><p>Vsaka neničelna
-            spletična v <span class="math inline">\(\hom_G(\pi,
-            \rho)\)</span> je namreč injektivna.<a href="#fnref28"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn29" role="doc-endnote"><p>Prostor <span
+            <li id="fn28"><p>Vsaka neničelna spletična v <span
+            class="math inline">\(\hom_G(\pi, \rho)\)</span> je namreč
+            injektivna.<a href="#fnref28" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn29"><p>Prostor <span
             class="math inline">\(\mathop{\mathrm{MK}}(\pi)\)</span> je
             enak prostoru, ki ga razpenjajo posplošeni matrični
             koeficienti upodobitve <span
             class="math inline">\(\pi\)</span>, zato je neodvisen od
             izbire baze.<a href="#fnref29" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn30" role="doc-endnote"><p>Preslikava <span
+            <li id="fn30"><p>Preslikava <span
             class="math inline">\(\Sigma_{\pi,
             \rho_{\mathop{\mathrm{fun}}}}\)</span> je injektivna, ker je
             <span class="math inline">\(\dim \hom_G(\pi,
             \rho_{\mathop{\mathrm{fun}}}) = \deg(\pi) &lt;
             \infty\)</span>.<a href="#fnref30" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn31" role="doc-endnote"><p>Temu dejstvu včasih
-            pravimo <em>Burnsideov izrek o nerazcepnosti</em>.<a
-            href="#fnref31" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li id="fn32" role="doc-endnote"><p>V resnici je sled do
-            skalarja natančno <em>edina</em> taka funkcija.<a
-            href="#fnref32" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li id="fn33"
-            role="doc-endnote"><p><span><strong><em>Konjugiranostni
+            <li id="fn31"><p>Temu dejstvu včasih pravimo <em>Burnsideov
+            izrek o nerazcepnosti</em>.<a href="#fnref31"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn32"><p>V resnici je sled do skalarja natančno
+            <em>edina</em> taka funkcija.<a href="#fnref32"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn33"><p><span><strong><em>Konjugiranostni
             razred</em></strong></span> elementa <span
             class="math inline">\(g \in G\)</span> je množica <span
             class="math inline">\(\{ x g x^{-1} \mid x \in G
@@ -12704,72 +12701,70 @@
             elementa <span class="math inline">\(g\)</span> v <span
             class="math inline">\(G\)</span>.<a href="#fnref33"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn34" role="doc-endnote"><p>Tukaj uporabljamo
-            verjetnostno oznako za povprečno vrednost. Mislimo si, da
-            enakomerno naključno izberemo element <span
-            class="math inline">\(X\)</span> iz grupe <span
-            class="math inline">\(G\)</span> in v njem izračunamo
-            vrednost <span class="math inline">\(f\)</span>. Število
-            <span class="math inline">\(\mathbf{E}(f)\)</span> je
-            pričakovana vrednost slučajne spremenljivke <span
+            <li id="fn34"><p>Tukaj uporabljamo verjetnostno oznako za
+            povprečno vrednost. Mislimo si, da enakomerno naključno
+            izberemo element <span class="math inline">\(X\)</span> iz
+            grupe <span class="math inline">\(G\)</span> in v njem
+            izračunamo vrednost <span class="math inline">\(f\)</span>.
+            Število <span class="math inline">\(\mathbf{E}(f)\)</span>
+            je pričakovana vrednost slučajne spremenljivke <span
             class="math inline">\(f(X)\)</span>.<a href="#fnref34"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn35" role="doc-endnote"><p>V tem primeru sicer
-            nimamo dostopa do povprečenja v celoti, lahko pa uporabimo
-            <em>delno</em> povprečenje, ki izračuna le vsoto po grupi.<a
+            <li id="fn35"><p>V tem primeru sicer nimamo dostopa do
+            povprečenja v celoti, lahko pa uporabimo <em>delno</em>
+            povprečenje, ki izračuna le vsoto po grupi.<a
             href="#fnref35" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn36" role="doc-endnote"><p>Splošen primer hitro
-            sledi iz tega posebnega. Če je namreč <span
+            <li id="fn36"><p>Splošen primer hitro sledi iz tega
+            posebnega. Če je namreč <span
             class="math inline">\(F\)</span> karakteristike <span
             class="math inline">\(p\)</span>, ima prapolje <span
             class="math inline">\(\mathbf{F}_p\)</span>. Upodobitev v
             tem primeru obravnavamo nad tem prapoljem.<a href="#fnref36"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn37" role="doc-endnote"><p>In najverjetneje taka
-            korespondenca v splošnem <em>ne</em> obstaja. Je pa na voljo
-            za kakšne posebne družine grup, kot bomo spoznali kasneje.<a
+            <li id="fn37"><p>In najverjetneje taka korespondenca v
+            splošnem <em>ne</em> obstaja. Je pa na voljo za kakšne
+            posebne družine grup, kot bomo spoznali kasneje.<a
             href="#fnref37" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn38" role="doc-endnote"><p>Pri tem fiksne točke
-            permutacije obravnavamo kot cikle dolžine <span
+            <li id="fn38"><p>Pri tem fiksne točke permutacije
+            obravnavamo kot cikle dolžine <span
             class="math inline">\(1\)</span>.<a href="#fnref38"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn39" role="doc-endnote"><p>Relaciji sta ortogonalni
-            v smislu tabele karakterjev. Ortonormiranost karakterjev
-            preberemo tako, da fiksiramo vrstice. To drugo relacijo pa
-            preberemo tako, da fiksiramo stolpce. Tej relaciji včasih
-            rečemo <span><strong><em>druga ortogonalnostna
+            <li id="fn39"><p>Relaciji sta ortogonalni v smislu tabele
+            karakterjev. Ortonormiranost karakterjev preberemo tako, da
+            fiksiramo vrstice. To drugo relacijo pa preberemo tako, da
+            fiksiramo stolpce. Tej relaciji včasih rečemo
+            <span><strong><em>druga ortogonalnostna
             relacija</em></strong></span>.<a href="#fnref39"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn40" role="doc-endnote"><p>Zanimivo je, da smo
-            uspeli določiti tabelo karakterjev, brez da bi eksplicitno
-            poznali vse upodobitve.<a href="#fnref40"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn41" role="doc-endnote"><p>V asociativni algebri to
-            izrečemo ponavadi takole: vsak levi ideal v polenostavni
-            algebri je glavni.<a href="#fnref41" class="footnote-back"
+            <li id="fn40"><p>Zanimivo je, da smo uspeli določiti tabelo
+            karakterjev, brez da bi eksplicitno poznali vse
+            upodobitve.<a href="#fnref40" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn42" role="doc-endnote"><p><code>GAP</code> je
-            programski jezik, ki pride zelo prav pri delu z grupami, saj
-            ima implementiranih veliko standardnih konstrukcij grup in
-            funkcij za delo z njimi. Dostopen je prosto na naslovu <a
+            <li id="fn41"><p>V asociativni algebri to izrečemo ponavadi
+            takole: vsak levi ideal v polenostavni algebri je glavni.<a
+            href="#fnref41" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn42"><p><code>GAP</code> je programski jezik, ki
+            pride zelo prav pri delu z grupami, saj ima implementiranih
+            veliko standardnih konstrukcij grup in funkcij za delo z
+            njimi. Dostopen je prosto na naslovu <a
             href="https://www.gap-system.org"
             class="uri">https://www.gap-system.org</a>.<a
             href="#fnref42" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn43" role="doc-endnote"><p>Iz argumenta vidimo, da
-            velja celo naslednje. Končna grupa <span
+            <li id="fn43"><p>Iz argumenta vidimo, da velja celo
+            naslednje. Končna grupa <span
             class="math inline">\(G\)</span> je enostavna, če in samo če
             je vsaka njena netrivialna nerazcepna upodobitev zvesta.<a
             href="#fnref43" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn44" role="doc-endnote"><p>Virtualnih, ker vsebuje
-            tudi negativne kombinacije nerazcepnih kolobarjev, ki ne
-            ustrezajo karakterjem upodobitev.<a href="#fnref44"
+            <li id="fn44"><p>Virtualnih, ker vsebuje tudi negativne
+            kombinacije nerazcepnih kolobarjev, ki ne ustrezajo
+            karakterjem upodobitev.<a href="#fnref44"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn45"
-            role="doc-endnote"><p><span><strong><em>Algebraično celo
+            <li id="fn45"><p><span><strong><em>Algebraično celo
             število</em></strong></span> je kompleksno število, ki je
             ničla moničnega polinoma s celoštevilskimi koeficienti.
             Množico algebraičnih celih števil označimo z <span
@@ -12780,23 +12775,21 @@
             class="math inline">\(\mathbf{Q}\cap \bar{\mathbf{Z}} =
             \mathbf{Z}\)</span>.<a href="#fnref45" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn46" role="doc-endnote"><p>Diagonalizabilnost sledi
-            iz obravnave Jordanove normalne forme preslikave <span
+            <li id="fn46"><p>Diagonalizabilnost sledi iz obravnave
+            Jordanove normalne forme preslikave <span
             class="math inline">\(\rho(g)\)</span>.<a href="#fnref46"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn47" role="doc-endnote"><p>Skalarni produkt na
-            danem prostoru lahko izberemo na mnogo različnih načinov.<a
-            href="#fnref47" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li id="fn48" role="doc-endnote"><p>Na primer abelove grupe,
-            simetrične grupe, diedrske grupe, splošne linearne grupe,
-            končne enostavne grupe, …<a href="#fnref48"
+            <li id="fn47"><p>Skalarni produkt na danem prostoru lahko
+            izberemo na mnogo različnih načinov.<a href="#fnref47"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn49" role="doc-endnote"><p>Vsaka končna grupa je
-            zgrajena iz končnih enostavnih grup, te pa sestojijo iz,
-            grobo rečeno, treh neskončnih družin, in sicer cikličnih
-            grup praštevilske moči <span
-            class="math inline">\(\mathbf{Z}/p\mathbf{Z}\)</span>,
+            <li id="fn48"><p>Na primer abelove grupe, simetrične grupe,
+            diedrske grupe, splošne linearne grupe, končne enostavne
+            grupe, …<a href="#fnref48" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn49"><p>Vsaka končna grupa je zgrajena iz končnih
+            enostavnih grup, te pa sestojijo iz, grobo rečeno, treh
+            neskončnih družin, in sicer cikličnih grup praštevilske moči
+            <span class="math inline">\(\mathbf{Z}/p\mathbf{Z}\)</span>,
             alternirajočih grup <span class="math inline">\(A_n\)</span>
             in različnih matričnih grup nad končnimi polji, na primer
             <span
@@ -12805,14 +12798,14 @@
             mere reprezentativna za razumevanje upodobitev
             nekomutativnih končnih enostavnih grup.<a href="#fnref49"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn50" role="doc-endnote"><p>Res, če je <span
-            class="math inline">\(x = q_1 p_1 = q_2 p_2\)</span>, potem
-            je <span class="math inline">\(q_2^{-1} q_1 = p_2 p_1^{-1}
-            \in P \cap Q = 1\)</span>, zato je <span
-            class="math inline">\(q_1 = q_2\)</span> in <span
-            class="math inline">\(p_1 = p_2\)</span>.<a href="#fnref50"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn51" role="doc-endnote"><p>Ker je <span
+            <li id="fn50"><p>Res, če je <span class="math inline">\(x =
+            q_1 p_1 = q_2 p_2\)</span>, potem je <span
+            class="math inline">\(q_2^{-1} q_1 = p_2 p_1^{-1} \in P \cap
+            Q = 1\)</span>, zato je <span class="math inline">\(q_1 =
+            q_2\)</span> in <span class="math inline">\(p_1 =
+            p_2\)</span>.<a href="#fnref50" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn51"><p>Ker je <span
             class="math inline">\(\mathcal{F}(\sigma_{\lambda})\)</span>
             spletična, je to res invarianten podprostor. Ni pa težko
             videti, kako elementi grupe zares delujejo; za <span
@@ -12823,21 +12816,21 @@
             (\rho_{\mathop{\mathrm{fun}}}(g) \cdot f)\)</span>.<a
             href="#fnref51" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn52" role="doc-endnote"><p>Velja namreč <span
+            <li id="fn52"><p>Velja namreč <span
             class="math inline">\(\sigma_{\lambda}/n_{\lambda} *
             \sigma_{\lambda}/n_{\lambda} * f =
             \sigma_{\lambda}/n_{\lambda} * f\)</span>.<a href="#fnref52"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn53" role="doc-endnote"><p>Če izbrana baza ni
-            ortogonalna, na njej uporabimo Gram-Schmidtovo
-            ortogonalizacijo.<a href="#fnref53" class="footnote-back"
+            <li id="fn53"><p>Če izbrana baza ni ortogonalna, na njej
+            uporabimo Gram-Schmidtovo ortogonalizacijo.<a
+            href="#fnref53" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn54" role="doc-endnote"><p>Na primer, mnogo dela je
-            osredotočenega na <a
+            <li id="fn54"><p>Na primer, mnogo dela je osredotočenega na
+            <a
             href="https://mathoverflow.net/questions/138310/what-to-do-now-that-lusztigs-and-james-conjectures-have-been-shown-to-be-false">Lusztigovo
             in Jamesovo domnevo</a>.<a href="#fnref54"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn55" role="doc-endnote"><p><span
+            <li id="fn55"><p><span
             class="math inline">\(H_{\lambda}(i,j)\)</span> torej
             sestoji iz tistih celic <span
             class="math inline">\((a,b)\)</span>, za katere je <span
@@ -12846,21 +12839,19 @@
             class="math inline">\(b = j\)</span> in <span
             class="math inline">\(a \geq i\)</span>.<a href="#fnref55"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn56" role="doc-endnote"><p>Ponovljena ničla bi bila
-            ničla odvoda karakterističnega polinoma, ki pa je linearen
-            in ima vse ničle v <span
-            class="math inline">\(\mathbf{F}_p\)</span>.<a
+            <li id="fn56"><p>Ponovljena ničla bi bila ničla odvoda
+            karakterističnega polinoma, ki pa je linearen in ima vse
+            ničle v <span class="math inline">\(\mathbf{F}_p\)</span>.<a
             href="#fnref56" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn57" role="doc-endnote"><p>Če zamenjamo v zgornji
-            matriki <span class="math inline">\(b\)</span> z <span
+            <li id="fn57"><p>Če zamenjamo v zgornji matriki <span
+            class="math inline">\(b\)</span> z <span
             class="math inline">\(-b\)</span>, dobimo podobno matriko.
             To ravno ustreza delovanju <span
             class="math inline">\(\sigma\)</span>.<a href="#fnref57"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn58" role="doc-endnote"><p>Element <span
-            class="math inline">\(x + \sqrt{\epsilon} y\)</span> deluje
-            na <span
+            <li id="fn58"><p>Element <span class="math inline">\(x +
+            \sqrt{\epsilon} y\)</span> deluje na <span
             class="math inline">\(\mathbf{F}_p(\sqrt{\epsilon})\)</span>
             z množenjem z leve. Če to grupo obravnavamo kot vektorski
             prostor nad <span
@@ -12869,65 +12860,59 @@
             1, \sqrt{\epsilon} \}\)</span> ravno ta, ki je prikazana.<a
             href="#fnref58" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn59" role="doc-endnote"><p>Steinbergovo upodobitev
-            dobimo torej tako, da <span
-            class="math inline">\(\Pi\)</span> podaljšamo s standardno
-            upodobitvijo simetrične grupe <span
+            <li id="fn59"><p>Steinbergovo upodobitev dobimo torej tako,
+            da <span class="math inline">\(\Pi\)</span> podaljšamo s
+            standardno upodobitvijo simetrične grupe <span
             class="math inline">\(S_{p+1}\)</span>.<a href="#fnref59"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn60" role="doc-endnote"><p>Angleško <em>principal
-            series representations</em>.<a href="#fnref60"
+            <li id="fn60"><p>Angleško <em>principal series
+            representations</em>.<a href="#fnref60"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn61" role="doc-endnote"><p>Angleško <em>cuspidal
+            <li id="fn61"><p>Angleško <em>cuspidal
             representation</em>.<a href="#fnref61" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn62" role="doc-endnote"><p>Najpreprostejši znan
-            opis je preko Weilove upodobitve <span>(Bushnell-Henniart
-            2006)</span>, ki ostne upodobitve uresniči na določenih
-            podprostorih v <span
+            <li id="fn62"><p>Najpreprostejši znan opis je preko Weilove
+            upodobitve <span>(Bushnell-Henniart 2006)</span>, ki ostne
+            upodobitve uresniči na določenih podprostorih v <span
             class="math inline">\(\mathop{\mathrm{fun}}(\mathbf{F}_p(\sqrt{\epsilon}),
             \mathbf{C})\)</span>.<a href="#fnref62"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn63" role="doc-endnote"><p>Računanje teh tabel
-            specifičnih končnih enostavnih grup je zbrano v <a
+            <li id="fn63"><p>Računanje teh tabel specifičnih končnih
+            enostavnih grup je zbrano v <a
             href="http://brauer.maths.qmul.ac.uk/Atlas/v3/">ATLAS</a>.
             Ti izračuni so močno pripomogli k dokazu izreka o <a
             href="https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups">klasifikaciji
             končnih enostavnih grup</a>.<a href="#fnref63"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn64" role="doc-endnote"><p>Na ta način torej
-            izbiramo aritmetična zaporedja v <span
+            <li id="fn64"><p>Na ta način torej izbiramo aritmetična
+            zaporedja v <span
             class="math inline">\(\mathbf{F}_p\)</span> dolžine <span
             class="math inline">\(3\)</span>.<a href="#fnref64"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn65" role="doc-endnote"><p>Argument za to je
-            konceptualno preprost, a poln tehničnih podrobnosti.<a
-            href="#fnref65" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li id="fn66" role="doc-endnote"><p>Ne bomo preveč natančni
-            glede iteracije. V grobem lahko iz aritmetičnega zaporedja
-            <span class="math inline">\(P_i\)</span> preidemo na
-            ciklično grupo enake moči (morda ne več praštevilske) in
-            potem ponovimo argument v tej ciklični grupi.<a
-            href="#fnref66" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li id="fn67" role="doc-endnote"><p>Glej <a
+            <li id="fn65"><p>Argument za to je konceptualno preprost, a
+            poln tehničnih podrobnosti.<a href="#fnref65"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn66"><p>Ne bomo preveč natančni glede iteracije. V
+            grobem lahko iz aritmetičnega zaporedja <span
+            class="math inline">\(P_i\)</span> preidemo na ciklično
+            grupo enake moči (morda ne več praštevilske) in potem
+            ponovimo argument v tej ciklični grupi.<a href="#fnref66"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn67"><p>Glej <a
             href="https://arxiv.org/pdf/2206.10037.pdf">(Peluse
             2022)</a>.<a href="#fnref67" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn68" role="doc-endnote"><p>Lahko bi naredili sicer
-            enak razmislek kot v dokazu Rothovega izreka, a nam od tiste
-            točke, ko harmonična analiza odpove, ne bi obstoj
-            aritmetičnih zaporedij <span
-            class="math inline">\(P_i\)</span> koristil za reševanje
-            enačbe <span class="math inline">\(x+y=z\)</span>.<a
-            href="#fnref68" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li id="fn69" role="doc-endnote"><p>Za funkciji <span
-            class="math inline">\(f, g \colon \mathbf{N}\to
-            \mathbf{R}\)</span> pišemo <span class="math inline">\(f \ll
-            g\)</span>, če obstaja konstanta <span
-            class="math inline">\(C\)</span>, da je <span
+            <li id="fn68"><p>Lahko bi naredili sicer enak razmislek kot
+            v dokazu Rothovega izreka, a nam od tiste točke, ko
+            harmonična analiza odpove, ne bi obstoj aritmetičnih
+            zaporedij <span class="math inline">\(P_i\)</span> koristil
+            za reševanje enačbe <span
+            class="math inline">\(x+y=z\)</span>.<a href="#fnref68"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn69"><p>Za funkciji <span class="math inline">\(f,
+            g \colon \mathbf{N}\to \mathbf{R}\)</span> pišemo <span
+            class="math inline">\(f \ll g\)</span>, če obstaja konstanta
+            <span class="math inline">\(C\)</span>, da je <span
             class="math inline">\(f(n) \leq C g(n)\)</span> za vse <span
             class="math inline">\(n\)</span>. V primeru, ko za funkciji
             <span class="math inline">\(f,g\)</span> velja hkrati <span
@@ -12938,53 +12923,50 @@
             class="math inline">\(g\)</span> sta torej asimptotsko do
             konstante natančno enaki.<a href="#fnref69"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn70" role="doc-endnote"><p>Del tega si bomo
-            ogledali nekoliko kasneje.<a href="#fnref70"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn71" role="doc-endnote"><p>Za funkciji <span
-            class="math inline">\(f,g \colon \mathbf{N}\to
-            \mathbf{R}\)</span> pišemo <span class="math inline">\(f
-            \sim g\)</span>, če velja <span
+            <li id="fn70"><p>Del tega si bomo ogledali nekoliko
+            kasneje.<a href="#fnref70" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn71"><p>Za funkciji <span class="math inline">\(f,g
+            \colon \mathbf{N}\to \mathbf{R}\)</span> pišemo <span
+            class="math inline">\(f \sim g\)</span>, če velja <span
             class="math inline">\(\lim_{n \to \infty} f(n)/g(n) =
             1\)</span>.<a href="#fnref71" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn72" role="doc-endnote"><p>Definicija množice <span
+            <li id="fn72"><p>Definicija množice <span
             class="math inline">\(S\)</span> je enaka kot za primer
             <span class="math inline">\(A_n\)</span>, dodaten trud je
             potreben le za oceno njene gostote.<a href="#fnref72"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn73"
-            role="doc-endnote"><p><span><strong><em>Komutator</em></strong></span>
+            <li
+            id="fn73"><p><span><strong><em>Komutator</em></strong></span>
             elementov <span class="math inline">\(x,y \in G\)</span> je
             element <span class="math inline">\([x,y] = x^{-1} y^{-1} x
             y\)</span>.<a href="#fnref73" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn74" role="doc-endnote"><p>Natančneje, obstajata
-            dve taki neizomorfni grupi.<a href="#fnref74"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn75" role="doc-endnote"><p>Velja namreč zveza <span
+            <li id="fn74"><p>Natančneje, obstajata dve taki neizomorfni
+            grupi.<a href="#fnref74" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn75"><p>Velja namreč zveza <span
             class="math inline">\(b = y^{-1} a^{1} y\)</span>.<a
             href="#fnref75" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn76" role="doc-endnote"><p>S tem si le slučajni
-            korak stran od rešitve <a
+            <li id="fn76"><p>S tem si le slučajni korak stran od rešitve
+            <a
             href="https://www.imc-math.org.uk/imc2022/imc2022day1questions.pdf">naloge
             I/3</a> s tekmovanja IMC 2022.<a href="#fnref76"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn77" role="doc-endnote"><p>Če namreč ne razpenjajo
-            celotnega prostora matrik, potem obstaja neka netrivialna
-            linearna kombinacija matričnih koeficientov <span
-            class="math inline">\(\{ f_{i,j} \mid 1 \leq i, j \leq
-            \deg(\pi) \}\)</span>, ki je v vseh elementih <span
-            class="math inline">\(g \in G\)</span> ničelna. To je
-            protislovje z linearno neodvisnostjo matričnih koeficientov
-            nerazcepne upodobitve <span
+            <li id="fn77"><p>Če namreč ne razpenjajo celotnega prostora
+            matrik, potem obstaja neka netrivialna linearna kombinacija
+            matričnih koeficientov <span class="math inline">\(\{
+            f_{i,j} \mid 1 \leq i, j \leq \deg(\pi) \}\)</span>, ki je v
+            vseh elementih <span class="math inline">\(g \in G\)</span>
+            ničelna. To je protislovje z linearno neodvisnostjo
+            matričnih koeficientov nerazcepne upodobitve <span
             class="math inline">\(\pi\)</span>.<a href="#fnref77"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn78" role="doc-endnote"><p>Za primerjavo
-            porazdelitev ne uporabljamo standardne norme <span
-            class="math inline">\(||f|| = \langle f, f
-            \rangle^{1/2}\)</span>, ampak normo <span
+            <li id="fn78"><p>Za primerjavo porazdelitev ne uporabljamo
+            standardne norme <span class="math inline">\(||f|| = \langle
+            f, f \rangle^{1/2}\)</span>, ampak normo <span
             class="math inline">\(||f||_1\)</span>. Razlog za to je
             naslednji. Opazujmo družino simetričnih grup <span
             class="math inline">\(S_n\)</span>. Potem je <span
@@ -12997,19 +12979,18 @@
             pomanjkljivosti; velja <span class="math inline">\(||U_{A_n}
             - U_{S_n}||_1 = 1\)</span>.<a href="#fnref78"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn79" role="doc-endnote"><p>Rečemo tudi, da se
-            slučajni sprehod <span><strong><em>dobro
-            premeša</em></strong></span> po času <span
-            class="math inline">\(t_{mix}(\theta)\)</span>. Ta koncept
-            je seveda odvisen od izbire konstante <span
+            <li id="fn79"><p>Rečemo tudi, da se slučajni sprehod
+            <span><strong><em>dobro premeša</em></strong></span> po času
+            <span class="math inline">\(t_{mix}(\theta)\)</span>. Ta
+            koncept je seveda odvisen od izbire konstante <span
             class="math inline">\(\theta\)</span>, a ponavadi za <span
             class="math inline">\(\theta\)</span> vzamemo kar neko
             majhno konstanto, na primer <span
             class="math inline">\(\theta = 10^{-2}\)</span>.<a
             href="#fnref79" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn80" role="doc-endnote"><p>Tako hitra konvergenca
-            je posledica dejstva, da je konjugiranostni razred <span
+            <li id="fn80"><p>Tako hitra konvergenca je posledica
+            dejstva, da je konjugiranostni razred <span
             class="math inline">\(\mathcal{C}\)</span> v <span
             class="math inline">\(G_p\)</span> zelo velik, <span
             class="math inline">\(\log |\mathcal{C}| \sim \log
@@ -13017,18 +12998,18 @@
             class="math inline">\(r_{\pi}(\mathcal{C})\)</span>.<a
             href="#fnref80" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn81" role="doc-endnote"><p>Angleško <em>expander
-            family</em>. Ime izhaja iz alternativne karakterizacije teh
-            družin v teoriji grafov.<a href="#fnref81"
+            <li id="fn81"><p>Angleško <em>expander family</em>. Ime
+            izhaja iz alternativne karakterizacije teh družin v teoriji
+            grafov.<a href="#fnref81" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn82"><p>Ni težko premisliti, da sta ta dva koncepta
+            ekvivalentna. Čas mešanja v vsaki članici družine <span
+            class="math inline">\(G_i\)</span> je <span
+            class="math inline">\(O(\log |G_i|)\)</span>, če in samo če
+            je družina ekspanzivna.<a href="#fnref82"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn82" role="doc-endnote"><p>Ni težko premisliti, da
-            sta ta dva koncepta ekvivalentna. Čas mešanja v vsaki
-            članici družine <span class="math inline">\(G_i\)</span> je
-            <span class="math inline">\(O(\log |G_i|)\)</span>, če in
-            samo če je družina ekspanzivna.<a href="#fnref82"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn83" role="doc-endnote"><p>Če bi želeli obravnavati
-            tudi neskončnorazsežne upodobitve na prostoru <span
+            <li id="fn83"><p>Če bi želeli obravnavati tudi
+            neskončnorazsežne upodobitve na prostoru <span
             class="math inline">\(V\)</span>, bi morali to definicijo
             nekoliko popraviti. Najprej bi morali zahtevati, da vsak
             element grupe <span class="math inline">\(G\)</span> deluje
@@ -13042,19 +13023,18 @@
             class="math inline">\((g,v) \mapsto \rho(g) \cdot v\)</span>
             zvezna.<a href="#fnref83" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn84" role="doc-endnote"><p>Lahko se celo zgodi, da
-            <span class="math inline">\(f_N\)</span> ne konvergira v
+            <li id="fn84"><p>Lahko se celo zgodi, da <span
+            class="math inline">\(f_N\)</span> ne konvergira v
             <em>nobeni</em> točki.<a href="#fnref84"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn85" role="doc-endnote"><p>Pri tem moramo biti
-            nekoliko previdni, saj opisana konvergenca <em>ne</em>
-            implicira, da vrsta <span class="math inline">\(f_N\)</span>
-            v vseh točkah konvergira k <span
-            class="math inline">\(f\)</span>, temveč le <em>skoraj
-            povsod</em>.<a href="#fnref85" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li id="fn86" role="doc-endnote"><p>Podobno kot smo že
-            videli v primeru upodobitev grupe <span
+            <li id="fn85"><p>Pri tem moramo biti nekoliko previdni, saj
+            opisana konvergenca <em>ne</em> implicira, da vrsta <span
+            class="math inline">\(f_N\)</span> v vseh točkah konvergira
+            k <span class="math inline">\(f\)</span>, temveč le
+            <em>skoraj povsod</em>.<a href="#fnref85"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn86"><p>Podobno kot smo že videli v primeru
+            upodobitev grupe <span
             class="math inline">\(\mathbf{R}\)</span>. Konkretno za vsak
             avtomorfizem polja <span
             class="math inline">\(\mathbf{C}\)</span> dobimo upodobitev
@@ -13065,34 +13045,31 @@
             class="math inline">\(\mathbf{C}\)</span> ima <em>mnogo</em>
             divjih avtomorfizmov.<a href="#fnref86"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn87"
-            role="doc-endnote"><p><span><strong><em>Linearna algebraična
+            <li id="fn87"><p><span><strong><em>Linearna algebraična
             grupa</em></strong></span> je grupa, ki je hkrati množica
             skupnih ničel nekih polinomov v prostoru <span
             class="math inline">\(\mathbf{C}^n\)</span>.<a
             href="#fnref87" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn88" role="doc-endnote"><p>Pri <span
-            class="math inline">\(k = 0\)</span> dobimo trivialno
-            upodobitev.<a href="#fnref88" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li id="fn89" role="doc-endnote"><p>Ker je polje <span
+            <li id="fn88"><p>Pri <span class="math inline">\(k =
+            0\)</span> dobimo trivialno upodobitev.<a href="#fnref88"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn89"><p>Ker je polje <span
             class="math inline">\(\mathbf{C}\)</span> algebraično
             zaprto, tukaj obstaja le en torus.<a href="#fnref89"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn90" role="doc-endnote"><p>Ta formula je jasna, če
-            matriko <span class="math inline">\(X\)</span> predstavimo v
-            Jordanovi normalni obliki.<a href="#fnref90"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn91" role="doc-endnote"><p>Liejev homomorfizem je
-            torej linearna preslikava <span class="math inline">\(\phi
-            \colon L_1 \to L_2\)</span>, za katero velja <span
+            <li id="fn90"><p>Ta formula je jasna, če matriko <span
+            class="math inline">\(X\)</span> predstavimo v Jordanovi
+            normalni obliki.<a href="#fnref90" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn91"><p>Liejev homomorfizem je torej linearna
+            preslikava <span class="math inline">\(\phi \colon L_1 \to
+            L_2\)</span>, za katero velja <span
             class="math inline">\(\phi([x,y]) = [\phi(x),
             \phi(y)]\)</span> za vsaka <span class="math inline">\(x,y
             \in L_1\)</span>.<a href="#fnref91" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn92"
-            role="doc-endnote"><p><span><strong><em>Liejeva
+            <li id="fn92"><p><span><strong><em>Liejeva
             spletična</em></strong></span> med Liejevima upodobitvama
             <span class="math inline">\(\phi_1, \phi_2\)</span> Liejeve
             algebre <span class="math inline">\(L\)</span> na prostoru
@@ -13107,7 +13084,7 @@
             <span><strong><em>izomorfni</em></strong></span>.<a
             href="#fnref92" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn93" role="doc-endnote"><p>Liejeva upodobitev <span
+            <li id="fn93"><p>Liejeva upodobitev <span
             class="math inline">\(\phi \colon L \to
             \mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span> je
             <span><strong><em>nerazcepna</em></strong></span>, če
@@ -13116,51 +13093,49 @@
             class="math inline">\(L\)</span>-invariantnih
             podprostorov.<a href="#fnref93" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn94" role="doc-endnote"><p>Vektor <span
+            <li id="fn94"><p>Vektor <span
             class="math inline">\(v\)</span> torej <em>potisnemo
             navzdol</em> s <span class="math inline">\(F\)</span>.<a
             href="#fnref94" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn95" role="doc-endnote"><p>Vektor <span
+            <li id="fn95"><p>Vektor <span
             class="math inline">\(v_n\)</span> torej <em>potisnemo
             navzgor</em> z <span class="math inline">\(E\)</span>.<a
             href="#fnref95" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn96" role="doc-endnote"><p>Vsaki dve izbiri
-            delilnih točk imata namreč skupno pofinitev. Ta sklep je
-            podoben kot pri definiciji Riemannovega integrala.<a
-            href="#fnref96" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li id="fn97" role="doc-endnote"><p>To je analogno temu, da
-            na kompleksna števila <span
-            class="math inline">\(\mathbf{C}\)</span> gledamo kot na
-            <span class="math inline">\(\mathbf{R}^2\)</span>.<a
+            <li id="fn96"><p>Vsaki dve izbiri delilnih točk imata namreč
+            skupno pofinitev. Ta sklep je podoben kot pri definiciji
+            Riemannovega integrala.<a href="#fnref96"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn97"><p>To je analogno temu, da na kompleksna
+            števila <span class="math inline">\(\mathbf{C}\)</span>
+            gledamo kot na <span
+            class="math inline">\(\mathbf{R}^2\)</span>.<a
             href="#fnref97" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn98" role="doc-endnote"><p>Opazovali bi torej
-            Liejeve homomorfizme <span
+            <li id="fn98"><p>Opazovali bi torej Liejeve homomorfizme
+            <span
             class="math inline">\(\mathop{\mathrm{\mathfrak{sl}}}_2(\mathbf{C})
             \to \mathop{\mathrm{\mathfrak{gl}}}_n(\mathbf{C})\)</span>,
             ki so le <span
             class="math inline">\(\mathbf{R}\)</span>-linearni.<a
             href="#fnref98" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn99" role="doc-endnote"><p>Grupa <span
+            <li id="fn99"><p>Grupa <span
             class="math inline">\(\mathop{\mathrm{SO}}_3(\mathbf{R})\)</span>
             <em>ni</em> enostavno povezana. Homeomorfna je projektivnemu
             prostoru <span
             class="math inline">\(\mathbf{R}P^3\)</span>.<a
             href="#fnref99" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn100" role="doc-endnote"><p>Poseben primer tega
-            fenomena smo videli v razdelku o upodobitvah grupe <span
+            <li id="fn100"><p>Poseben primer tega fenomena smo videli v
+            razdelku o upodobitvah grupe <span
             class="math inline">\(\mathbf{R}/\mathbf{Z}\)</span>, kjer
             smo dokazali, da je vsaka zvezna upodobitev grupe <span
             class="math inline">\(\mathbf{R}\)</span> odvedljiva.<a
             href="#fnref100" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn101" role="doc-endnote"><p>Rečemo, da je grupa
-            <span
+            <li id="fn101"><p>Rečemo, da je grupa <span
             class="math inline">\(\mathop{\mathrm{PSL}}_2(\mathbf{Z})\)</span>
             <span><strong><em>prosti produkt</em></strong></span>
             podgrup <span class="math inline">\(\langle a \rangle =
@@ -13168,15 +13143,14 @@
             class="math inline">\(\langle b \rangle =
             \mathbf{Z}/3\mathbf{Z}\)</span>.<a href="#fnref101"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn102" role="doc-endnote"><p>Če nek element lahko
-            zapišemo v želeni obliki na dva načina, potem vse črke
-            prenesemo na eno stran enakosti in s tem tudi <span
+            <li id="fn102"><p>Če nek element lahko zapišemo v želeni
+            obliki na dva načina, potem vse črke prenesemo na eno stran
+            enakosti in s tem tudi <span
             class="math inline">\(1\)</span> zapišemo na netrivialen
             način v želeni obliki.<a href="#fnref102"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn103" role="doc-endnote"><p>To je analog
-            razširjanja lokalnega homomorfizma, ki smo ga videli pri
-            grupi <span
+            <li id="fn103"><p>To je analog razširjanja lokalnega
+            homomorfizma, ki smo ga videli pri grupi <span
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
             Tam nismo imeli enoličnosti zapisa kot tukaj, zato smo se
             morali potruditi z dokazovanjem dobre definiranosti
@@ -13185,7 +13159,7 @@
             class="math inline">\(\mathop{\mathrm{SL}}_2(\mathbf{C})\)</span>.
             Tukaj to dobimo zastonj.<a href="#fnref103"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn104" role="doc-endnote"><p>Para matrik <span
+            <li id="fn104"><p>Para matrik <span
             class="math inline">\((X,Y)\)</span> in <span
             class="math inline">\((X&#39;, Y&#39;)\)</span> sta torej
             ekvivalentna, če in samo če za neko matriko <span
@@ -13194,14 +13168,13 @@
             class="math inline">\((X,Y) = A \cdot (X&#39;,
             Y&#39;)\)</span>.<a href="#fnref104" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn105" role="doc-endnote"><p>Obravnava je analogna
-            razumevanju konjugiranostnih razredov v končni grupi <span
+            <li id="fn105"><p>Obravnava je analogna razumevanju
+            konjugiranostnih razredov v končni grupi <span
             class="math inline">\(\mathop{\mathrm{GL}}_2(\mathbf{F}_p)\)</span>,
             le da je tu nekoliko preprostejša, ker ni nerazcepnega
             torusa.<a href="#fnref105" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn106" role="doc-endnote"><p>Rečemo, da je grupa
-            <span
+            <li id="fn106"><p>Rečemo, da je grupa <span
             class="math inline">\(\mathop{\mathrm{SL}}_3(\mathbf{Z})\)</span>
             dana s prezentacijo z <em>generatorji</em> <span
             class="math inline">\(x,y,z\)</span> in <em>relacijami</em>,
@@ -13210,10 +13183,10 @@
             grup</a> za podrobnosti glede te konstrukcije in več
             zgledov.<a href="#fnref106" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn107" role="doc-endnote"><p>Angleško <em>congruence
-            subgroup property.</em><a href="#fnref107"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn108" role="doc-endnote"><p>Topologija na <span
+            <li id="fn107"><p>Angleško <em>congruence subgroup
+            property.</em><a href="#fnref107" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn108"><p>Topologija na <span
             class="math inline">\(\mathbf{Z}_p\)</span> je nekoliko
             neobičajna. Dobimo namreč popolnoma nepovezan topološki
             prostor. Predstavljamo si ga lahko kot Cantorjevo množico,
@@ -13221,12 +13194,12 @@
             href="http://roice3.org/padics/">tukaj</a>.<a
             href="#fnref108" class="footnote-back"
             role="doc-backlink">↩︎</a></p></li>
-            <li id="fn109" role="doc-endnote"><p>Tej lastnosti pravimo
+            <li id="fn109"><p>Tej lastnosti pravimo
             <span><strong><em>brez majhnih podgrup</em></strong></span>,
             angleško <em>no small subgroups</em>.<a href="#fnref109"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
             </ol>
-            </section>
+            </aside>
 
           </div>
         </div>
