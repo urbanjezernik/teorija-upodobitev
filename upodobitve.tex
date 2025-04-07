@@ -81,7 +81,7 @@
 \def\GAP{\texttt{GAP}}
 \DeclareMathOperator\inv{inv}
 \DeclareMathOperator\Eigenvalues{Spec}
-\DeclareMathOperator\Eigenspace{ES}
+\DeclareMathOperator\Eigenspace{LP}
 \DeclareMathOperator\fun{fun}
 \DeclareMathOperator\HS{HS}
 \DeclareMathOperator\St{St}
@@ -1355,12 +1355,12 @@ Naj bo $\pi$ upodobitev na prostoru $W$. Spomnimo se, da je $\pi$-izotipična ko
     \textstyle \hom_G(\pi, \rho_{\fun}) \cong \hom_1(\Res^G_1(\pi), \11)
     \cong \hom(\11^{\deg(\pi)}, \11).
 \]
-Standardna dualna baza $\{ e_i^* \mid 1 \leq i \leq \deg(\pi) \}$ v zadnjem vektorskem prostoru nam po tej adjunkciji porodi bazo
+Naj bo $\{ e_i \mid 1 \leq i \leq \deg(\pi) \}$ neka izbrana baza prostora $W$. Po zgornji adjunkciji s tem dobimo bazo
 \[
     \Phi_i \colon W \to \fun(G,F), \quad
     w \mapsto \left( g \mapsto \langle e_i^*, \pi(g) \cdot w \rangle \right) = f_{e_i^*, w}
 \]
-za $1 \leq i \leq \deg(\pi)$ prostora spletičen $\hom_G(\pi, \rho_{\fun})$. Ko te bazne spletične evalviramo na neki izbrani bazi $\{ f_j \mid 1 \leq j \leq \deg(\pi) \}$ prostora $W$, dobimo torej ravno prostor $\MK(\pi)$. Nad algebraično zaprtim poljem te evalvacije tvorijo celo bazo\footnote{Preslikava $\Sigma_{\pi, \rho_{\fun}}$ je injektivna, ker je $\dim \hom_G(\pi, \rho_{\fun}) = \deg(\pi) < \infty$.}
+prostora spletičen $\hom_G(\pi, \rho_{\fun})$ za $1 \leq i \leq \deg(\pi)$. Ko te bazne spletične evalviramo na izbrani bazi prostora $W$, dobimo torej ravno prostor $\MK(\pi)$. Nad algebraično zaprtim poljem te evalvacije tvorijo celo bazo\footnote{Preslikava $\Sigma_{\pi, \rho_{\fun}}$ je injektivna, ker je $\dim \hom_G(\pi, \rho_{\fun}) = \deg(\pi) < \infty$.}
 \[
     \Phi_i(f_j) = f_{i,j}
 \]
@@ -1551,7 +1551,7 @@ Preveri, da je $\EE(\rho) \in \hom_G(V,V)$ projekcijska spletična na podprostor
 \end{domacanaloga}
 
 \begin{dokaz}[Dokaz Maschkejevega izreka]
-$(\Leftarrow):$ Predpostavimo $\characteristic(F) \nmid |G|$. Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$ in naj bo $W$ poljuben $G$-invarianten podprostor. Naj bo $P \in \hom(V,V)$ projektor na $W$. Grupa $G$ deluje na prostoru linearnih preslikav $\hom(V,V)$. Povprečna vrednost tega delovanja je projekcijska spletična na podprostor spletičen $\hom(V,V)^G = \hom_G(V,V)$. Ko to povprečno vrednost uporabimo na projektorju $P$, dobimo torej linearno preslikavo
+$(\Leftarrow):$ Predpostavimo $\characteristic(F) \nmid |G|$. Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$ in naj bo $W$ poljuben $G$-invarianten podprostor. Naj bo $P \in \hom(V,V)$ projektor na $W$. Grupa $G$ deluje na prostoru linearnih preslikav $\hom(V,V)$.\footnote{Spomnimo se, da je delovanje $G$ na $\hom(V,V)$ dano kot $g \cdot \Phi = \rho(g) \Phi \rho(g)^{-1}$ za $g \in G$, $\Phi \in \hom(V,V)$.} Povprečna vrednost tega delovanja je projekcijska spletična na podprostor spletičen $\hom(V,V)^G = \hom_G(V,V)$. Ko to povprečno vrednost uporabimo na projektorju $P$, dobimo torej linearno preslikavo
 \[
     Q = \frac{1}{|G|} \sum_{g \in G} g \cdot P \in \hom_G(V,V),
 \]
@@ -1642,7 +1642,7 @@ Konkretizirajmo preslikavo $A$. Naj bo $\{ e_i \}_i$ baza prostora $V_1$ in $\{ 
 \]
 S to izbiro dosežemo enakost
 \[
-    0 = \frac{1}{|G|} \sum_{g \in G} g \cdot A_{i,l}(g^{-1} \cdot e_j) =
+    0 = \frac{1}{|G|} \sum_{g \in G} (g \cdot A_{i,l})(e_j) =
     \frac{1}{|G|} \sum_{g \in G} \langle e_i^*, g^{-1} \cdot e_j \rangle g \cdot f_l =
     \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) g \cdot f_l.
 \]
@@ -1671,7 +1671,7 @@ Pristopimo kot pri zadnjem dokazu, pri čemer prostor spletičen $\hom_G(V,V)$ p
 \[
     \frac{1}{|G|} \sum_{g \in G} g \cdot A = \lambda_A \cdot \id_V
 \]
-za nek $\lambda_A \in F^*$. Velja $g \cdot A = \pi(g) A \pi(g)^{-1}
+za nek $\lambda_A \in F$. Velja $g \cdot A = \pi(g) A \pi(g)^{-1}
 $, zato je $\tr(g \cdot A) = \tr(A)$, od koder izpeljemo
 \[
     \lambda_A = \frac{\tr(A)}{\deg(\pi)}.
@@ -1801,7 +1801,7 @@ zato je konjugiranostni razred $s$ enak $\{ s r^{2j} \mid j \in \ZZ \}$ in konju
     \end{cases}
 \]
 
-Določimo zdaj še nerazcepne upodobitve. Poznamo že dvorazsežne nerazcepne upodobitve $\rho_k$ za $0 < k < n/2$, vseh teh je $\lceil n/2 \rceil - 1$. Za karakter take upodobitve velja $\chi_{\rho_k}(r) = 2 \cos(2 \pi k / n)$, zato so vsi ti karakterji različni med sabo in s tem so upodobitve $\rho_k$ neizomorfne. Poleg teh dvorazsežnih upodobitev imamo še linearne upodobitve. Število teh je enako velikosti abelacije $D_{2n}/[D_{2n}, D_{2n}]$. Velja
+Določimo zdaj še nerazcepne upodobitve. Poznamo že dvorazsežne nerazcepne upodobitve $\rho_k$ za $0 < k < n/2$, vseh teh je $\lceil n/2 \rceil - 1$. Za karakter take upodobitve velja $\chi_{\rho_k}(r) = 2 \cos(2 \pi k / n)$, zato so vsi ti karakterji različni med sabo in s tem so upodobitve $\rho_k$ neizomorfne. Poleg teh dvorazsežnih upodobitev imamo še linearne upodobitve. Število teh je enako velikosti abelacije $D_{2n}/[D_{2n}, D_{2n}]$.\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$. {\definicija Komutatorska podgrupa} grupe $G$ je $[G,G] = \langle [x,y] \mid x,y \in G \rangle$.} Velja
 \[
     [r^i, s r^j] = r^{-i} \left( r^i \right)^{s r^j} = r^{-2i}, \quad
     [s r^i, s r^j] = r^{-i} s \left( s r^i \right)^{s r^j} = s r^{2j - 2i},
@@ -1921,7 +1921,7 @@ torej $\pi$ vsebuje $\11$ z večkratnostjo $1$, kar je povsem analogno temu, kar
 \]
 zato je upodobitev $\rho$ nerazcepna. 
 
-Zaenkrat imamo tri nerazcepne upodobitve stopenj $1,1,3$. Iščemo torej še dve nerazcepni upodobitvi, katerih vsote kvadratov stopenj so enake $24 - (1^2 + 1^2 + 3^2) = 13$. Stopnji teh dveh neznanih upodobitev sta zato nujno enaki $2$ in $3$. Ker že imamo eno nerazcepno upodobitev stopnje $3$, lahko iz nje pridelamo novo s tenzoriranjem z upodobitvijo stopnje $1$. Dobimo upodobitev $\sgn \otimes \rho$. Njen karakter ima vrednosti $3,-1,0,1,-1$ in s tem normo $1$, zato je upodobitev $\sgn \otimes \rho$ res nerazcepna. Nazadnje nam torej manjka le še ena upodobitev stopnje $2$. Imenujmo jo $\tau$. Čeprav je ne poznamo, lahko iz ortonormiranosti karakterjev določimo njen karakter $\chi_{\tau}$ kot natanko tisto razredno funkcijo, ki je ortogonalna na vse poznane neracepne karakterje in je norme $1$. Na ta način dobimo vrednosti $2,0,-1,0,2$. S tem smo nazadnje določili celotno tabelo karakterjev grupe $S_4$ nad $\CC$.\footnote{Zanimivo je, da smo uspeli določiti tabelo karakterjev, brez da bi eksplicitno poznali vse upodobitve. }
+Zaenkrat imamo tri nerazcepne upodobitve stopenj $1,1,3$. Iščemo torej še dve nerazcepni upodobitvi, katerih vsote kvadratov stopenj so enake $24 - (1^2 + 1^2 + 3^2) = 13$. Stopnji teh dveh neznanih upodobitev sta zato nujno enaki $2$ in $3$. Ker že imamo eno nerazcepno upodobitev stopnje $3$, lahko iz nje pridelamo novo s tenzoriranjem z upodobitvijo stopnje $1$. Dobimo upodobitev $\sgn \otimes \rho$. Njen karakter ima vrednosti $3,-1,0,1,-1$ in s tem normo $1$, zato je upodobitev $\sgn \otimes \rho$ res nerazcepna. Nazadnje nam torej manjka le še ena upodobitev stopnje $2$. Imenujmo jo $\tau$. Čeprav je ne poznamo, lahko iz ortonormiranosti karakterjev določimo njen karakter $\chi_{\tau}$ kot natanko tisto razredno funkcijo, ki je ortogonalna na vse poznane neracepne karakterje in je norme $1$ ter pozitivne stopnje. Na ta način dobimo vrednosti $2,0,-1,0,2$. S tem smo nazadnje določili celotno tabelo karakterjev grupe $S_4$ nad $\CC$.\footnote{Zanimivo je, da smo uspeli določiti tabelo karakterjev, brez da bi eksplicitno poznali vse upodobitve. }
 
 \begin{table}[t]
     \centering
@@ -2057,7 +2057,7 @@ Naj bo
 \[
     \textstyle W = \bigcap_{\conclass} \Eigenspace_{\lambda_{\conclass}}\left(\widehat{1_{\conclass}}(\rho_{\fun})\right) \leq \fun(G,F)
 \]
-presek lastnih podprostorov za neke skalarje $\lambda_{\conclass}$, kjer presek teče po vseh konjugiranostnih razredih grupe $G$. Predpostavimo, da je $W \neq 0$. Naj bo $w \in W$. Za $\pi \in \Irr(G)$ naj bo $P_{\pi}$ projekcija na $\pi$-izotipično komponento. Velja
+presek lastnih podprostorov\footnote{Za endomorfizem $A$ je $\Eigenspace_\lambda(A)$ lastni podprostor $A$ za lastno vrednost $\lambda$.} za neke skalarje $\lambda_{\conclass}$, kjer presek teče po vseh konjugiranostnih razredih grupe $G$. Predpostavimo, da je $W \neq 0$. Naj bo $w \in W$. Za $\pi \in \Irr(G)$ naj bo $P_{\pi}$ projekcija na $\pi$-izotipično komponento. Velja
 \[
     P_{\pi} \cdot w = \frac{\chi_{\pi}(1)}{|G|} \widehat{\chi_{\pi}}(\rho_{\fun}) \cdot w =
     \frac{\chi_{\pi}(1)}{|G|} \sum_{g \in G} \chi_{\pi}(g) \rho_{\fun}(g^{-1}) \cdot w.
@@ -2078,7 +2078,7 @@ Projektor $P_{\pi}$ ima seveda le dve možni lastni vrednosti: $0$ in $1$. Ker j
 Vemo že, kako deluje $\widehat{1_{\conclass}}(\rho_{\fun})$ na $\pi$-izotipični komponenti, od koder določimo skalarje kot $\lambda_{\conclass} = |\conclass| \cdot \chi_{\pi}(\conclass^{-1})/\chi_{\pi}(1)$. Iz definicije $W$ zdaj sledi, da je $\pi$-izotipična komponenta vsebovana v $W$, s čimer smo nazadnje izpeljali $W = \Izotip_{\rho_{\fun}}(\pi)$.
 \end{dokaz}
 
-S to karakterizacijo izotipičnih komponent lahko opišemo algoritem za izračun tabele karakterjev. Najprej oštevilčimo elemente grupe $G$ kot $g_1, g_2, \dots, g_{|G|}$ in pripravimo vektorski prostor $F^{|G|} \cong \fun(G,F)$ s standardno bazo $e_i$, ki ustreza karakteristični funkciji $1_{g_i}$. Izračunamo še konjugiranostne razrede grupe $G$ in iz vsakega izberemo predstavnika. Pripravimo funkcijo, ki izračuna matriko regularne upodobitve $\rho_{\fun}$ v poljubnem elementu $x \in G$, in za tem še funkcijo, ki izračuna matriko Fourierove transformacije $\widehat{1_{\conclass}}(\rho_{\fun})$ za konjugiranostni razred $\conclass$. Izračunamo lastne podprostore vseh teh matrik in za tem vse njihove netrivialne preseke. Te so ravno izotipične komponente. V vsaki komponenti $W$ izberemo bazo, v kateri izračunamo sled zožitve matrike $\rho_{\fun}(x)$ na $W$. Ker je $W$ kot upodobitev izomorfen direktni vsoti $\deg(\pi)$ kopij neke nerazcepne upodobitve $\pi$, velja $\dim(W) = \deg(\pi)^2$ in zato
+S to karakterizacijo izotipičnih komponent lahko opišemo algoritem za izračun tabele karakterjev.\footnote{Na podoben način lahko določimo tudi upodobitve same, ne le karakterje.} Najprej oštevilčimo elemente grupe $G$ kot $g_1, g_2, \dots, g_{|G|}$ in pripravimo vektorski prostor $F^{|G|} \cong \fun(G,F)$ s standardno bazo $e_i$, ki ustreza karakteristični funkciji $1_{g_i}$. Izračunamo še konjugiranostne razrede grupe $G$ in iz vsakega izberemo predstavnika. Pripravimo funkcijo, ki izračuna matriko regularne upodobitve $\rho_{\fun}$ v poljubnem elementu $x \in G$, in za tem še funkcijo, ki izračuna matriko Fourierove transformacije $\widehat{1_{\conclass}}(\rho_{\fun})$ za konjugiranostni razred $\conclass$. Izračunamo lastne podprostore vseh teh matrik in za tem vse njihove netrivialne preseke. Te so ravno izotipične komponente. V vsaki komponenti $W$ izberemo bazo, v kateri izračunamo sled zožitve matrike $\rho_{\fun}(x)$ na $W$. Ker je $W$ kot upodobitev izomorfen direktni vsoti $\deg(\pi)$ kopij neke nerazcepne upodobitve $\pi$, velja $\dim(W) = \deg(\pi)^2$ in zato
 \[
     \tr(\rho_{\fun}(x) |_W) = \sqrt{\dim(W)} \cdot \chi_{\pi}(x).
 \]
@@ -2122,11 +2122,11 @@ Množica $R(G)$ je najprej očitno abelova podgrupa razrednih funkcij. Za tem je
 
 Naj bo $H$ podgrupa v $G$. Restrikcija vzdolž vložitve $H$ v $G$ porodi \emph{homomorfizem kolobarjev}
 \[
-    \textstyle \Res \colon R(G) \to R(H), \quad \chi_{\pi} \mapsto \Res^G_H(\chi_{\pi}).
+    \textstyle \Res \colon R(G) \to R(H), \quad \chi_{\pi} \mapsto \chi_{\Res^G_H(\pi)}.
 \]
 Sorodno dobimo z indukcijo preslikavo
 \[
-    \textstyle \Ind \colon R(H) \to R(G), \quad \chi_{\pi} \mapsto \Ind^G_H(\chi_{\pi}),
+    \textstyle \Ind \colon R(H) \to R(G), \quad \chi_{\pi} \mapsto \chi_{\Ind^G_H(\pi)},
 \]
 ki pa je le \emph{homomorfizem abelovih grup}. Ob koncu razdelka o indukciji smo za upodobitvi $\rho$ v $\Rep_G$ in $\sigma$ v $\Rep_H$ zapisali izomorfizem
 \[
@@ -2164,7 +2164,7 @@ Naj bo $C$ množica vseh cikličnih pogrup grupe $G$ in izberimo $H \in C$. Naj 
 \]
 Ko torej seštejemo prispevke po vseh cikličnih podgrupah, dobimo
 \[
-  \sum_{H \in C} {\textstyle \Ind^G_H(c_H)(g)} = \sum_{x \in G} \sum_{H \in C} 1_{\langle x g x^{-1} \rangle = C} = \sum_{x \in G} 1 = |G|.  
+  \sum_{H \in C} {\textstyle \Ind^G_H(c_H)(g)} = \sum_{x \in G} \sum_{H \in C} 1_{\langle x g x^{-1} \rangle = H} = \sum_{x \in G} 1 = |G|.  
 \]
 Konstantna funkcija $|G|$ je torej element ideala $\sum_{H \in C} \Ind(R(H))$ v $R(G)$. Od tod seveda sledi vsebovanost 
 \[
@@ -2299,7 +2299,7 @@ V kontekstu kompleksnih upodobitev končnih grup lahko torej brez škode predpos
 \begin{zgled}
 Končna grupa deluje z regularno upodobitvijo $\rho_{\fun}$ na prostoru funkcij $\fun(G, \CC)$. Ta prostor je opremljen s standardnim kompleksnim skalarnim produktom. Glede na ta skalarni produkt je $\rho_{\fun}$ unitarna upodobitev, saj za vsaka $f,h \in \fun(G,\CC)$ in $x \in G$ velja
 \[
-    \left\langle \rho_{\fun}(G,\CC)(x) \cdot f, \rho_{\fun}(G,\CC)(x) \cdot h  \right\rangle =
+    \left\langle \rho_{\fun}(x) \cdot f, \rho_{\fun}(x) \cdot h  \right\rangle =
     \frac{1}{|G|} \sum_{g \in G} f(gx) \overline{h(gx)}
     = \langle f, h \rangle.
 \]
@@ -3680,7 +3680,7 @@ Oglejmo si še en čisto nekomutativen problem, ki na prvi pogled nima veliko sk
 
 \subsection{Množica komutatorjev}
 
-Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, ki so komutatorji\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$.} v $G$, se pravi
+Naj bo $G$ končna grupa in $K(G)$ njena podmnožica, ki sestoji iz elementov, ki so komutatorji v $G$, se pravi
 \[
     K(G) = \{ [x,y] \mid x,y \in G \}.
 \]
