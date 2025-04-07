@@ -26,6 +26,9 @@ a {
 	color: #478AD6;
   text-decoration: none;
 }
+nav {
+  background-color: white;
+}
 .domacanaloga {
 	color: #7D4DC9;
 }
@@ -59,4 +62,14 @@ a {
 .math.display {
   overflow-x: auto;
   display: block;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+figure {
+  text-align: center;
 }
