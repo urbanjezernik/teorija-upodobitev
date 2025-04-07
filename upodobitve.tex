@@ -406,7 +406,7 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
         
         \item Opazujmo ciklično grupo $\ZZ/p\ZZ$ za praštevilo $p$ nad končnim poljem $\FF_p$. Preslikava
         \[
-          \rho \ZZ/p\ZZ \to \GL(\FF_p^2) = {\textstyle \GL_2(\FF_p)}, \quad
+          \rho \colon \ZZ/p\ZZ \to \GL(\FF_p^2) = {\textstyle \GL_2(\FF_p)}, \quad
           x \mapsto \begin{pmatrix}
             1 & x \\ 0 & 1
           \end{pmatrix}
@@ -1211,11 +1211,11 @@ Prepričaj se, da velja
 S tem smo za vsak $0 \leq i < n$ našli natanko določen $j$, da je $V_{i+1}/V_i \cong W_{j+1}/W_j$. Premislimo še, da je to prirejanje injektivno. Indeks $j$ je enolično določen s pogojem, da je $V_{i,j+1}/V_{i,j} \neq 0$, kar je po gornjem izomorfizmu enakovredno pogoju $W_{j,i+1}/W_{j,i} \neq 0$. Ker je $W_{j+1}/W_j$ nerazcepen, je slednji pogoj lahko izpolnjen le za \emph{en} indeks $i$.
 \end{dokaz}
 
-Iz izreka sledi, da lahko za vsako upodobitev $\rho$ grupe $G$ na končno razsežnem prostoru najdemo bazo prostora, v kateri imajo vse matrike $\rho(g)$ za $g \in G$ \emph{bločnozgornjetrikotno} obliko. Po drugi strani lahko za \emph{polenostavno} upodobitev najdemo bazo prostora, v kateri imajo vse matrike \emph{bločnodiagonalno} obliko.
+Iz izreka sledi, da lahko za vsako upodobitev $\rho$ grupe $G$ na končno razsežnem prostoru najdemo bazo prostora, v kateri imajo vse matrike $\rho(g)$ za $g \in G$ \emph{bločnozgornjetrikotno} obliko (pri čemer je število blokov enako dolžini kompozicijske vrste). Po drugi strani lahko za \emph{polenostavno} upodobitev najdemo bazo prostora, v kateri imajo vse matrike \emph{bločnodiagonalno} obliko.
 
 \subsection{Izotipične komponente}
 
-Po zadnjem izreku je za dano upodobitev $\rho$ in nerazcepno upodobitev $\pi$ število kompozicijskih faktorjev, ki so izomorfni $\pi$, neodvisno od kompozicijske vrste. Temu številu pravimo {\definicija večkratnost} $\pi$ v $\rho$ in ga označimo z $\mult_{\rho}(\pi)$. 
+Po zadnjem izreku je za dano upodobitev $\rho$ na končnorazsežnem prostoru in nerazcepno upodobitev $\pi$ število kompozicijskih faktorjev, ki so izomorfni $\pi$, neodvisno od kompozicijske vrste. Temu številu pravimo {\definicija večkratnost} $\pi$ v $\rho$ in ga označimo z $\mult_{\rho}(\pi)$. 
 
 Kadar je dana upodobitev \emph{polenostavna}, je do izomorfizma natančno enolično določena s svojimi večkratnostmi. Če je $\rho = \bigoplus_{i \in I} \rho_i$, potem je
 \[
@@ -1261,7 +1261,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in nerazcepno upodobitvij
     \Sigma_{\pi, \rho} \colon \hom_G(\pi, \rho) \otimes W \to V, \quad
     \Phi \otimes w \mapsto \Phi(w).
 \]
-S tem je $\image \Sigma_{\pi, \rho} = \Izotip_{\rho}{\pi}$. Grupa $G$ deluje na $\hom_G(\pi, \sigma) = \hom(W,V)^G$ trivialno, na $W$ pa prek $\pi$. Na ta način je $\Sigma_{\pi, \rho}$ celo spletična upodobitev.
+S tem je $\image \Sigma_{\pi, \rho} = \Izotip_{\rho}{\pi}$. Grupa $G$ deluje na $\hom_G(\pi, \rho) = \hom(W,V)^G$ trivialno, na $W$ pa prek $\pi$. Na ta način je $\Sigma_{\pi, \rho}$ celo spletična upodobitev.
 
 \begin{trditev}
 Naj bo $G$ grupa z upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem. Predpostavimo, da je $\dim \hom_G(\pi, \rho) < \infty$. Tedaj je $\Sigma_{\pi, \rho}$ injektivna. 
@@ -1288,7 +1288,7 @@ Iz injektivnosti $\Sigma_{\pi, \rho}$ sledi $\Izotip_{\rho}(\pi) \cong \hom_G(\p
 \end{dokaz}
 
 \begin{domacanaloga}
-Naj bo $G$ grupa s končnorazsežno upodobitvijo $\rho$ na prostoru $V$. Premisli, da se izotipične komponente, ki pripadajo paroma neizomorfnim nerazcepnim upodobitvam, sekajo trivialno.
+Naj bo $G$ grupa s končnorazsežno upodobitvijo $\rho$ na prostoru $V$ nad algebraično zaprtim poljem. Premisli, da se izotipične komponente, ki pripadajo paroma neizomorfnim nerazcepnim upodobitvam, sekajo trivialno.
 \end{domacanaloga}
 
 \begin{zgled} \leavevmode
@@ -1301,8 +1301,9 @@ Za konkreten zgled lahko vzamemo ciklično grupo $\ZZ/n\ZZ$ in njeno regularno u
 
 \item Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\pi$ neka njena enorazsežna upodobitev. Taka upodobitev je seveda nerazcepna. Vektor $v \in V$ pripada izotipični komponenti $\Izotip_{\rho}(\pi)$, če in samo če grupa $G$ na prostoru $\langle v \rangle$ deluje kot s $\pi$, se pravi
 \[
-    \textstyle \Izotip_{\rho}(\pi) = \left\{ v \in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v \right\}.
+    \textstyle \Izotip_{\rho}(\pi) = \left\{ v \in V \mid \forall g \in G \colon \ \rho(g) \cdot v = \pi(g) v \right\},
 \]
+pri čemer $\pi$ interpretiramo kot preslikavo v polje.
 
 Kadar je grupa $G$ abelova, je vsaka njena nerazcepna upodobitev nad algebraično zaprtim poljem enorazsežna. Vsaka polenostavna upodobitev take grupe je zato direktna vsota podprostorov, na katerih grupa deluje s skalarnimi množenji prek svojih enorazsežnih upodobitev.
 \end{itemize}
