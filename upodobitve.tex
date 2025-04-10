@@ -471,11 +471,11 @@ zato je $\Phi$ spletična med $\11$ in $\rho$.
 
 Množica vseh spletičen med $\rho_1$ in $\rho_2$ je podmnožica množice linearnih preslikav $\hom(V_1, V_2)$, za katero uporabimo oznako $\hom_G(\rho_1, \rho_2)$ ali kar $\hom_G(V_1, V_2)$.
 
-Za dano upodobitev $\rho$ grupe $G$ na vektorskem prostoru $V$ je identična preslikava $\id_V$ seveda spletična med $\rho$ in $\rho$. Prav tako lahko vsaki dve spletični $\Phi_1$ med $\rho_1$ in $\rho_2$ ter $\Phi_2$ med $\rho_2$ in $\rho_3$ skomponiramo do spletične $\Phi_2 \circ \Phi_1$ med $\rho_1$ in $\rho_3$. Množica vseh upodobitev dane grupe $G$ nad poljem $F$ torej tvoji {\definicija kategorijo upodobitev}, katere objekti so upodobitve grupe $G$ nad $F$, morfizmi pa so spletične med upodobitvami. To kategorijo označimo z $\Rep_G$.
+Za dano upodobitev $\rho$ grupe $G$ na vektorskem prostoru $V$ je identična preslikava $\id_V$ seveda spletična med $\rho$ in $\rho$. Prav tako lahko vsaki dve spletični $\Phi_1$ med $\rho_1$ in $\rho_2$ ter $\Phi_2$ med $\rho_2$ in $\rho_3$ skomponiramo do spletične $\Phi_2 \circ \Phi_1$ med $\rho_1$ in $\rho_3$. Množica vseh upodobitev dane grupe $G$ nad poljem $F$ torej tvori {\definicija kategorijo upodobitev}, katere objekti so upodobitve grupe $G$ nad $F$, morfizmi pa so spletične med upodobitvami. To kategorijo označimo z $\Rep_G$.
 
 \subsection{Izomorfnost upodobitev}
 
-Naj bo $G$ grupa in $F$ polje. Kadar je spletična $\Phi \colon V_1 \to V_2$ med $\rho_1$ in $\rho_2$ obrnljiva kot linearna preslikava, je tudi njen inverz $\Phi^{-1}$ spletična med $\rho_2$ in $\rho_1$. V tem primeru spletični $\Phi$ rečemo {\definicija izomorfizem} upodobitev $\rho_1$ in $\rho_2$. 
+Kadar je spletična $\Phi \colon V_1 \to V_2$ med $\rho_1$ in $\rho_2$ obrnljiva kot linearna preslikava, je tudi njen inverz $\Phi^{-1}$ spletična med $\rho_2$ in $\rho_1$. V tem primeru spletični $\Phi$ rečemo {\definicija izomorfizem} upodobitev $\rho_1$ in $\rho_2$. 
 
 \begin{zgled}
     Opazujmo ciklično grupo $\ZZ/n\ZZ$ za poljuben $n > 1$.
@@ -575,7 +575,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL(V)$. Denimo, da obstaja v
         Naj bo $G$ grupa in $F$ polje. Določi upodobitvi $F[G]^G$ in $\fun(G,F)^G$.
     \end{domacanaloga}
 
-    Prostor $V^G$ lahko razumemo še na naslednji alternativen način, ki nam bo prišel zelo prav v nadaljevanju. Iz vsakega vektorja $v \in V^G$ izhaja injektivna spletična
+    Prostor $V^G$ lahko razumemo še na naslednji alternativen način, ki nam bo prišel zelo prav v nadaljevanju. Iz vsakega vektorja $v \in V^G$ izhaja spletična
     \[
         \Phi_v \colon \11 \to V, \quad
         x \mapsto x v
@@ -653,7 +653,7 @@ Oglejmo si sedaj še dual zgodnje konstrukcije. Naj bo $V_1 = \langle \rho(g) \c
     Izračunaj prostor koinvariant regularne upodobitve ciklične grupe $\ZZ/n\ZZ$.
 \end{domacanaloga}
 
-Prostor koinvariant je po konstrukciji dualen prostoru fiksnih vektorjev, zato lahko nanj prenesemo tudi interpretacijo s spletičnami. Opazujmo množico $\hom_G(V, \11)$. Spletične iz te množice so ravno homomorfizmi $\lambda \colon V \to F$ z lastnostjo $\lambda(\rho(g) \cdot v) = \lambda(v)$ za vsaka $v \in V, \ g \in G$, kar je ekvivalentno pogoju $\lambda(V_1) = 0$. Vsako tako spletično lahko zato interpretiramo kot linearno preslikavo iz $V/V_1 = V_G$ v $F$. Na ta način je vzpostavljena bijektivna korespondenca med množico spletičen $\hom_G(V,\11)$ in množico linearnih preslikav $\hom_F(V_G, F)$, slednja množica pa je ravno dual $V_G^*$ prostora koinvariant $V_G$.
+Prostor koinvariant je po konstrukciji dualen prostoru fiksnih vektorjev, zato lahko nanj prenesemo tudi interpretacijo s spletičnami. Opazujmo množico $\hom_G(V, \11)$. Spletične iz te množice so ravno linearne preslikave $\lambda \colon V \to F$ z lastnostjo $\lambda(\rho(g) \cdot v) = \lambda(v)$ za vsaka $v \in V, \ g \in G$, kar je ekvivalentno pogoju $\lambda(V_1) = 0$. Vsako tako spletično lahko zato interpretiramo kot linearno preslikavo iz $V/V_1 = V_G$ v $F$. Na ta način je vzpostavljena bijektivna korespondenca med množico spletičen $\hom_G(V,\11)$ in množico linearnih preslikav $\hom_F(V_G, F)$, slednja množica pa je ravno dual $V_G^*$ prostora koinvariant $V_G$.
 \end{zgled}
 
 \subsection{Direktna vsota}
@@ -928,7 +928,7 @@ Opisan postopek si lahko nekoliko lažje predstavljamo tako, da množico $\fun(R
     \]
 kar ravno ustreza bolj zakompliciranemu zapisu zgoraj.
 
-Poseben primer opisane indukcije dobimo z enorazsežnimi upodobitvami grupe $H$. Vsak homomorfizem $\rho \colon H \to F^*$ porodi prostor $\fun(G,F)^H$ razsežnosti $|G:H|$, ki je podprostor prostora funkcij $\fun(G,F)$ in na katerem torej grupa $G$ deluje z regularno upodobitvjo. Inducirana upodobitev je v tem primeru podupodobitev regularne upodobitve $\rho_{\fun}$. Na ta način lahko dobimo mnogo različnih upodobitev grupe $G$.
+Poseben primer opisane indukcije dobimo z enorazsežnimi upodobitvami grupe $H$. Vsak homomorfizem $\rho \colon H \to F^*$ porodi prostor $\fun(G,F)^H$ razsežnosti $|G:H|$, ki je podprostor prostora funkcij $\fun(G,F)$ in na katerem torej grupa $G$ deluje z regularno upodobitvijo. Inducirana upodobitev je v tem primeru podupodobitev regularne upodobitve $\rho_{\fun}$. Na ta način lahko dobimo mnogo različnih upodobitev grupe $G$.
 
 \begin{zgled}
     Opazujmo grupo $S_n$ in njeno podgrupo $A_n$ indeksa $2$. Za $n \geq 5$ je grupa $A_n$ enostavna, zato je $A_n = [A_n, A_n]$ in ni netrivialnih enorazsežnih upodobitev. Oglejmo si inducirano upodobitev $\Ind^{S_n}_{A_n}(\11)$. A priori vemo, da je to dvorazsežna upodobitev. Za množico predstavnikov odsekov vzamemo $R = \{ (), (1 \ 2) \}$. V domačih oznakah je vektorski prostor upodobitve enak $F ()\oplus F (1 \ 2)$, na katerem deluje grupa $S_n$ s predpisom
@@ -983,11 +983,11 @@ Indukcija in restrikcija vsekakor nista inverzna funktorja. Na primer, če je $H
 \begin{dokaz}
 Naj bo $\rho$ upodobitev na prostoru $V$ in $\sigma$ upodobitev na prostoru $W$. Naj bo
 \[
-    \Phi \in \hom_H(\Res^G_H(\rho), \sigma) = \hom_H(V, W).
+    \textstyle \Phi \in \hom_H(\Res^G_H(\rho), \sigma) = \hom_H(V, W).
 \]
 Sestavimo pripadajočo spletično
 \[
-    \Psi \in \hom_G(\rho, \Ind^G_H(\sigma)) = \hom_G(V, \fun(G,W)^H).
+    \textstyle \Psi \in \hom_G(\rho, \Ind^G_H(\sigma)) = \hom_G(V, \fun(G,W)^H).
     \]
 Za vektor $v \in V$ definirajmo
 \[
@@ -1070,9 +1070,9 @@ Naj bo $0 \neq \Phi \in \hom_G(\pi, \pi)$. Ker je polje algebraično zaprto, ima
 Množico vseh izomorfnostnih razredov nerazcepnih upodobitev dane grupe $G$ označimo z $\Irr(G)$.
 
 \begin{zgled}
-Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad poljem kompleksnih števil. Spletične $\hom_G(\pi, \pi) = \hom(\pi, \pi)^G$ so endomorfizmi vektorskega prostora, ki so $G$-invariatni, se pravi komutirajo z delovanjem grupe $G$. Zglede takih endomorfizmov lahko dobimo iz delovanj centralnih elementov grupe $G$; za vsak $z \in Z(G)$ je $\pi(z) \in \hom_G(\pi, \pi)$. Po Schurovi lemi je zato $\pi(z) = \omega(z) \cdot \id$ za nek skalar $\omega(z)$. Ker je $\pi$ homomorfizem, je $\omega \colon Z(G) \to \CC^*$ enorazsežna upodobitev centra grupe $G$. Tej upodobitvi rečemo {\definicija centralni karakter} upodobitve $\pi$.
+Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad poljem kompleksnih števil. Spletične $\hom_G(\pi, \pi) = \hom(\pi, \pi)^G$ so endomorfizmi vektorskega prostora, ki so $G$-invariantni, se pravi komutirajo z delovanjem grupe $G$. Zglede takih endomorfizmov lahko dobimo iz delovanj centralnih elementov grupe $G$; za vsak $z \in Z(G)$ je $\pi(z) \in \hom_G(\pi, \pi)$. Po Schurovi lemi je zato $\pi(z) = \omega(z) \cdot \id$ za nek skalar $\omega(z)$. Ker je $\pi$ homomorfizem, je $\omega \colon Z(G) \to \CC^*$ enorazsežna upodobitev centra grupe $G$. Tej upodobitvi rečemo {\definicija centralni karakter} upodobitve $\pi$.
 
-Še posebej zanimiv je primer, ko je $G$ \emph{abelova} grupa. Takrat za vsako nerazcepno upodobitev $\pi$ končne razsežnosti nad poljem $\CC$ velja $\pi(g) = \omega(g) \cdot \id$ za \emph{vsak} $g \in G$.  Vsak enorazsežen podprostor je zato avtomatično podupodobitev. Ker je $\pi$ nerazcepna, od tod sklepamo $\deg(\pi) = 1$ in s tem $\pi = \omega$. Upodobitev $\pi$ je tako \emph{enorazsežna}. Na primer, vsaka končnorazsežna nerazcepna upodobitev grupe $\RR$ je nujno enorazsežna.
+Še posebej zanimiv je primer, ko je $G$ \emph{abelova} grupa. Takrat za vsako nerazcepno upodobitev $\pi$ končne razsežnosti nad poljem $\CC$ velja $\pi(g) = \omega(g) \cdot \id$ za \emph{vsak} $g \in G$.  Vsak enorazsežen podprostor je zato avtomatično podupodobitev. Ker je $\pi$ nerazcepna, od tod sklepamo $\deg(\pi) = 1$ in s tem $\pi = \omega$. Upodobitev $\pi$ je tako \emph{enorazsežna}. Na primer, vsaka končnorazsežna nerazcepna kompleksna upodobitev grupe $\RR$ je nujno enorazsežna.
 \end{zgled}
 
 \begin{domacanaloga}
@@ -1095,10 +1095,10 @@ Naj grupa $\RR$ deluje na realnem prostoru $\RR^2$ s homomorfizmom
 Oglejmo si enorazsežne podupodobitve. Premislili smo že, da te ustrezajo skupnim lastnim vektorjem vseh preslikav $\rho(x)$ za $x \in \RR$. Pri $x = 1$ imamo linearno preslikavo $\rho(1)$ z enim samim lastnim vektorjem, in sicer $e_1 \in \RR^2$. Hkrati je $e_1$ lastni vektor vseh preslikav $\rho(x)$ za $x \in \RR$. Torej ima $\rho$ \emph{eno samo} enorazsežno podupodobitev, in sicer je to $\RR \cdot e_1 \leq \RR^2$. Ta vektorski podprostor ima mnogo komplementov v $\RR^2$, noben od teh pa ni hkrati enorazsežna podupodobitev $\rho$.
 \end{zgled}
 
-Ni težko preveriti, da obstoj komplementirane podupodobitve vselej izhaja iz {\definicija projekcijskih spletičen}.\footnote{Linearna preslikava $A \colon X \to X$ je projekcija na podprostor $Y \leq X$, če je $A^2 = A$ in $\image A = Y$. Projekcijska spletična je torej spletična, ki je hkrati projekcija na nek podprostor.}
+Ni težko preveriti, da obstoj komplementarne podupodobitve vselej izhaja iz {\definicija projekcijskih spletičen}.\footnote{Linearna preslikava $A \colon X \to X$ je projekcija na podprostor $Y \leq X$, če je $A^2 = A$ in $\image A = Y$. Projekcijska spletična je torej spletična, ki je hkrati projekcija na nek podprostor.}
 
 \begin{trditev}
-Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\tilde \rho$ njena podupodobitev na prostoru $W \leq V$. Tedaj ima $\tilde \rho$ komplementirano podupodobitev, če in samo če obstaja spletična $\Phi \in \hom_G(V,V)$, ki je projekcija na $W$. V tem primeru je $\ker \Phi$ komplementirana upodobitev.
+Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\tilde \rho$ njena podupodobitev na prostoru $W \leq V$. Tedaj ima $\tilde \rho$ komplementarno podupodobitev, če in samo če obstaja spletična $\Phi \in \hom_G(V,V)$, ki je projekcija na $W$. V tem primeru je $\ker \Phi$ komplementarna upodobitev.
 \end{trditev}
 
 \subsection{Polenostavnost}
@@ -1112,13 +1112,13 @@ Vrnimo se k začetni ideji o \emph{razstavljanju} dane upodobitve. Kadar lahko d
     \end{itemize}
 \end{zgled}
 
-Vseh upodobitev žal ne moremo razstaviti na direktno vsoto nerazcepnih.\footnote{V nadaljevanju bomo pokazali, da so upodobitve \emph{končnih} grup nad poljem karakteristike $0$ vselej poenostavne.} Polenostavnost dane upodobitve je namreč tesno povezana z obstojem komplementiranih podupodobitev.
+Vseh upodobitev žal ne moremo razstaviti na direktno vsoto nerazcepnih.\footnote{V nadaljevanju bomo pokazali, da so upodobitve \emph{končnih} grup nad poljem karakteristike $0$ vselej poenostavne.} Polenostavnost dane upodobitve je namreč tesno povezana z obstojem komplementarnih podupodobitev.
 
 \begin{trditev}
-Upodobitev grupe $G$ je polenostavna, če in samo če ima vsaka njena podupodobitev komplementirano podupodobitev.
+Upodobitev grupe $G$ je polenostavna, če in samo če ima vsaka njena podupodobitev komplementarno podupodobitev.
 \end{trditev}
 \begin{dokaz}
-$(\Rightarrow)$: Naj bo najprej $\rho \colon G \to \GL(V)$ polenostavna upodobitev, pri kateri je $V = \bigoplus_{i \in I} V_i$ in upodobitve $G$ na podprostorih $V_i$ so nerazcepne. Naj bo $W \leq V$ poljuben $G$-invarianten podprostor. Po Zornovi lemi obstaja maksimalen $G$-invarianten podprostor $U \leq V$ z lastnostjo $U \cap W = 0$. Izberimo poljuben $i \in I$. Presek $(U \oplus W) \cap V_i$ je $G$-invarianten podprostor prostora $V_i$, zato je po nerazcepnosti bodisi trivialen bodisi enak $V_i$. Če bi bil trivialen, bi lahko $U$ povečali do prostora $U \oplus V_i$, kar je v nasprotju z maksimalnostjo izbire $U$. Zatorej je $(U \oplus W) \cap V_i = V_i$ in tako $(U \oplus W) \geq V_i$. Ker je bil $i$ poljuben, od tod sledi $U \oplus W = V$. Podupodobitev $W$ ima torej komplementirano podupodobitev $U$. \kljuka
+$(\Rightarrow)$: Naj bo najprej $\rho \colon G \to \GL(V)$ polenostavna upodobitev, pri kateri je $V = \bigoplus_{i \in I} V_i$ in upodobitve $G$ na podprostorih $V_i$ so nerazcepne. Naj bo $W \leq V$ poljuben $G$-invarianten podprostor. Po Zornovi lemi obstaja maksimalen $G$-invarianten podprostor $U \leq V$ z lastnostjo $U \cap W = 0$. Izberimo poljuben $i \in I$. Presek $(U \oplus W) \cap V_i$ je $G$-invarianten podprostor prostora $V_i$, zato je po nerazcepnosti bodisi trivialen bodisi enak $V_i$. Če bi bil trivialen, bi lahko $U$ povečali do prostora $U \oplus V_i$, kar je v nasprotju z maksimalnostjo izbire $U$. Zatorej je $(U \oplus W) \cap V_i = V_i$ in tako $(U \oplus W) \geq V_i$. Ker je bil $i$ poljuben, od tod sledi $U \oplus W = V$. Podupodobitev $W$ ima torej komplementarno podupodobitev $U$. \kljuka
 
 $(\Leftarrow)$: Naj bo $\rho \colon G \to \GL(V)$ upodobitev, v kateri je vsaka podupodobitev komplementirana. Dokazati želimo, da je $\rho$ polenostavna. Uporabili bomo naslednjo pomožno trditev, ki je ni težko preveriti.
 
@@ -1126,7 +1126,7 @@ $(\Leftarrow)$: Naj bo $\rho \colon G \to \GL(V)$ upodobitev, v kateri je vsaka 
 Naj bo $\rho$ upodobitev, v kateri je vsaka podupodobitev komplementirana. Tedaj ima $\rho$ nerazcepno podupodobitev.
 \end{domacanaloga}
 
-Naj bo $W$ vsota vseh $G$-invariantnih podprostorov v $V$, ki so nerazcepne upodobitve, se pravi $W = \sum_{i \in I} V_i$, a ta vsota ni nujno direktna. Po pomožni trditvi je $W \neq 0$. Po predpostavki je $W$ komplementirana z $G$-invariantnim podprostorom $U$. Po pomožni trditvi ima tudi $U$ nerazcepno podupodobitev, zato je ta vsebovana v $W$, kar implicira $W = V$. Dokažimo zdaj še, da je $W$ \emph{direktna} vsota podprostorov $V_i$. V ta namen naj bo $J$ maksimalna podmnožica indeksne množice $I$, za katero je $\sum_{j \in J} V_j$ direktna vsota. Taka podmnožica obstaja po Zornovi lemi. Označimo $\tilde V = \bigoplus_{j \in J} V_j$. Če velja $\tilde V \neq V$, potem mora za nek $i \in I \backslash J$ po nerazcepnosti veljati $V_i \cap \tilde V$, kar pa je v nasprotju z maksimalnostjo množice $J$. Tako je res $\tilde V = V$ in upodobitev $V$ je polenostavna. \kljuka
+Naj bo $W$ vsota vseh $G$-invariantnih podprostorov v $V$, ki so nerazcepne upodobitve, se pravi $W = \sum_{i \in I} V_i$, a ta vsota ni nujno direktna. Po pomožni trditvi je $W \neq 0$. Po predpostavki je $W$ komplementirana z $G$-invariantnim podprostorom $U$. Po pomožni trditvi ima tudi $U$ nerazcepno podupodobitev, zato je ta vsebovana v $W$, kar implicira $W = V$. Dokažimo zdaj še, da je $W$ \emph{direktna} vsota podprostorov $V_i$. V ta namen naj bo $J$ maksimalna podmnožica indeksne množice $I$, za katero je $\sum_{j \in J} V_j$ direktna vsota. Taka podmnožica obstaja po Zornovi lemi. Označimo $\tilde V = \bigoplus_{j \in J} V_j$. Če velja $\tilde V \neq V$, potem mora za nek $i \in I \backslash J$ po nerazcepnosti veljati $V_i \cap \tilde V = 0$, kar pa je v nasprotju z maksimalnostjo množice $J$. Tako je res $\tilde V = V$ in upodobitev $V$ je polenostavna. \kljuka
 \end{dokaz}
 
 \begin{zgled}
@@ -1139,22 +1139,22 @@ Z uporabo zadnjega kriterija lahko dokažemo, da je polenostavnost zaprta za osn
 Podupodobitve, kvocienti in direktne vsote polenostavnih upodobitev dane grupe so polenostavne.
 \end{posledica}
 \begin{dokaz}
-Preverimo le zaprtost za podupodobitve. Naj bo $\rho$ polenostavna upodobitev grupe $G$ na prostoru $V$ in naj bo $W \leq V$ podupodobitev. Naj bo $U \leq W$ poljubna podupodobitev upodobitve na $W$. Po polenostavnosti obstaja komplementirana podupodobitev $\tilde U \leq V$ upodobitve $U \leq V$. Tedaj je $\tilde U \cap W$ podupodobitev, ki je komplementirana podupodobitvi $U$ v $W$.
+Preverimo le zaprtost za podupodobitve. Naj bo $\rho$ polenostavna upodobitev grupe $G$ na prostoru $V$ in naj bo $W \leq V$ podupodobitev. Naj bo $U \leq W$ poljubna podupodobitev upodobitve na $W$. Po polenostavnosti obstaja komplementarna podupodobitev $\tilde U \leq V$ upodobitve $U \leq V$. Tedaj je $\tilde U \cap W$ podupodobitev, ki je komplementirana podupodobitvi $U$ v $W$.
 \end{dokaz}
 
 Nazadnje lahko s pomočjo projekcijskih spletičen naredimo še en korak naprej pri razumevanju simetrij upodobitev. Premislili smo že, da so osnovni kosi brez netrivialnih simetrij. V primeru polenostavnih upodobitev drži tudi obratno.
 
 \begin{posledica}
-Naj bo $G$ grupa s \emph{polenostavno} upodobitvijo $\rho$ končne razsežnosti nad \emph{algebraično zaprtim poljem}. Če je $\dim \hom_G(\rho, \rho) = 1$, potem je $\rho$ nerazcepna.
+Naj bo $G$ grupa s \emph{polenostavno} upodobitvijo $\rho$ končne razsežnosti. Če je $\dim \hom_G(\rho, \rho) = 1$, potem je $\rho$ nerazcepna.
 \end{posledica}
 \begin{dokaz}
-Naj $\rho$ upodablja grupo $G$ na prostoru $V$. Naj bo $W \leq V$ nerazcepna podupodobitev in naj bo $U$ njena komplementirana podupodobitev. Naj bo $\Phi \colon V \to V$ pripadajoča projekcija na podprostor $W$ z jedrom $U$. Ker je $\Phi \in \hom_G(\rho, \rho)$, iz predpostavke sledi, da je $\Phi$ skalarni večkratnik identitete. To je mogoče le v primeru, ko je $V = W$ in $U = 0$, torej je $\rho$ nerazcepna. 
+Naj $\rho$ upodablja grupo $G$ na prostoru $V$. Naj bo $W \leq V$ nerazcepna podupodobitev in naj bo $U$ njena komplementarna podupodobitev. Naj bo $\Phi \colon V \to V$ pripadajoča projekcija na podprostor $W$ z jedrom $U$. Ker je $\Phi \in \hom_G(\rho, \rho)$, iz predpostavke sledi, da je $\Phi$ skalarni večkratnik identitete. To je mogoče le v primeru, ko je $V = W$ in $U = 0$, torej je $\rho$ nerazcepna. 
 \end{dokaz}
 
 
 \subsection{Kompozicijska vrsta}
 
-Vsake upodobitve ne moremo razstaviti kot direktno vsoto nerazcepnih upodobitev. Kljub temu pa je res, da lahko vsako upodobitev (na končno razsežnem prostoru) razstavimo na nerazcepne upodobitve, le da moramo pri tem poseči po nekoliko zahtevnejšem načinu razstavljanja.
+Vsake upodobitve ne moremo razstaviti kot direktno vsoto nerazcepnih upodobitev. Kljub temu pa je res, da lahko vsako upodobitev (na končnorazsežnem prostoru) razstavimo na nerazcepne upodobitve, le da moramo pri tem poseči po nekoliko zahtevnejšem načinu razstavljanja.
 
 Naj bo $G$ grupa z upodobitvijo na prostoru $V$. Predpostavimo, da obstaja zaporedje $G$-invariantnih podprostorov
 \[
@@ -1171,10 +1171,10 @@ katere kompozicijska faktorja sta kot upodobitvi izomorfna $\11$. Sama upodobite
 \end{zgled}
 
 \begin{izrek}[Jordan-Hölder-Noether]
-Vsaka upodobitev na končno razsežnem prostoru ima kompozicijsko vrsto. Vsaki dve kompozicijski vrsti imata enako število členov in do permutacije natančno enake kompozicijske faktorje.
+Vsaka upodobitev na končnorazsežnem prostoru ima kompozicijsko vrsto. Vsaki dve kompozicijski vrsti imata enako število členov in do permutacije ter izomorfizma natančno enake kompozicijske faktorje.
 \end{izrek}
 \begin{dokaz}
-Naj grupa deluje linearno na končno razsežnem prostoru $V$. Da kompozicijska vrsta res obstaja, ni težko preveriti. Najprej izberemo neko nerazcepno podupodobitev $V_1$. Če je $V_1 < V$, potem izberemo podupodobitev $V_2$, ki vsebuje $V_1$ in je med vsemi takimi minimalne razsežnosti. S tem je $V_2/V_1$ nerazcepna. Induktivno nadaljujemo z grajenjem kompozicijske vrste. Ker je $V$ končno razsežen, se ta postopek ustavi.
+Naj grupa deluje linearno na končnorazsežnem prostoru $V$. Da kompozicijska vrsta res obstaja, ni težko preveriti. Najprej izberemo neko nerazcepno podupodobitev $V_1$. Če je $V_1 < V$, potem izberemo podupodobitev $V_2$, ki vsebuje $V_1$ in je med vsemi takimi minimalne razsežnosti. S tem je $V_2/V_1$ nerazcepna. Induktivno nadaljujemo z grajenjem kompozicijske vrste. Ker je $V$ končnorazsežen, se ta postopek ustavi.
 
 Premislimo še, kako lahko vsaki dve kompozicijski vrsti povežemo med sabo. Opazujmo dve taki vrsti,
 \[
@@ -1188,7 +1188,7 @@ S pomočjo druge vrste bomo skušali \emph{pofiniti} prvo vrsto in obratno.\foot
 \]
 S tem dobimo verigo
 \[
-    V_i = V_{i,0} \leq V_{i,1} \leq \cdots V_{i,m} = V_{i+1}
+    V_i = V_{i,0} \leq V_{i,1} \leq \cdots \leq V_{i,m} = V_{i+1}
 \]
 med $V_i$ in $V_{i+1}$. Ker je kvocient $V_{i+1}/V_i$ nerazcepen in je vsak $V_{i,j}$ podupodobitev, mora za natanko en indeks $j$ veljati $V_i = V_{i,j}$ in $V_{i+1} = V_{i,j+1}$. Kompozicijski faktor $V_{i+1}/V_i$ je tedaj izomorfen kvocientu
 \[
@@ -1211,7 +1211,7 @@ Prepričaj se, da velja
 S tem smo za vsak $0 \leq i < n$ našli natanko določen $j$, da je $V_{i+1}/V_i \cong W_{j+1}/W_j$. Premislimo še, da je to prirejanje injektivno. Indeks $j$ je enolično določen s pogojem, da je $V_{i,j+1}/V_{i,j} \neq 0$, kar je po gornjem izomorfizmu enakovredno pogoju $W_{j,i+1}/W_{j,i} \neq 0$. Ker je $W_{j+1}/W_j$ nerazcepen, je slednji pogoj lahko izpolnjen le za \emph{en} indeks $i$.
 \end{dokaz}
 
-Iz izreka sledi, da lahko za vsako upodobitev $\rho$ grupe $G$ na končno razsežnem prostoru najdemo bazo prostora, v kateri imajo vse matrike $\rho(g)$ za $g \in G$ \emph{bločnozgornjetrikotno} obliko (pri čemer je število blokov enako dolžini kompozicijske vrste). Po drugi strani lahko za \emph{polenostavno} upodobitev najdemo bazo prostora, v kateri imajo vse matrike \emph{bločnodiagonalno} obliko.
+Iz izreka sledi, da lahko za vsako upodobitev $\rho$ grupe $G$ na končnorazsežnem prostoru najdemo bazo prostora, v kateri imajo vse matrike $\rho(g)$ za $g \in G$ \emph{bločnozgornjetrikotno} obliko (pri čemer je število blokov enako dolžini kompozicijske vrste). Po drugi strani lahko za \emph{polenostavno} upodobitev najdemo bazo prostora, v kateri imajo vse matrike \emph{bločnodiagonalno} obliko.
 
 \subsection{Izotipične komponente}
 
@@ -1234,7 +1234,7 @@ Po Schurovi lemi je (nad algebraično zaprtim poljem) vsak od zadnjih prostorov 
 
     Upodobitev $\tilde \rho$ \emph{ni} nerazcepna, saj ima invarianten podprostor $\langle u_1 - u_2 = e_1 + e_2 + e_3 \rangle$. Na tem podprostoru grupa $S_3$ deluje trivialno. V kvocientu $(\ZZ/3\ZZ)^2/\langle u_1 - u_2 \rangle \cong \ZZ/3\ZZ$ generatorja $(1\ 2)$ in $(1 \ 2 \ 3)$ grupe $S_3$ preslikata odsek vektorja $u_1$ v odsek $-u_1$ oziroma $u_1$. V tem prepoznamo predznačno upodobitev, interpretirano kot homomorfizem $\sgn \colon S_3 \to \GL_1(\ZZ/3\ZZ) \cong \{ 1, -1 \}$. Nad poljem $\ZZ/3\ZZ$ za permutacijsko upodobitev $\pi$ tako velja $\mult_{\pi}(\11) = 2$ in $\mult_{\pi}(\sgn) = 1$.
 
-    Premislimo, da upodobitev $\pi$ nad $\ZZ/3\ZZ$ \emph{ni} polenostavna. Če bi namreč bila, bi po zgornjem morala biti izmorfna direktni vsoti $\11 \oplus \11 \oplus \sgn$. Prostor $(\ZZ/3\ZZ)^3$ bi zatorej imel bazo, v kateri bi matriki za $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$ bili hkrati diagonalni. Ti dve matriki bi zato komutirali, kar pomeni, da bi morali komutirati tudi linearni preslikavi $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$. Temu pa ni tako, saj na primer velja $\pi((1 \ 2 \ 3)(1 \ 2)) e_1 = e_3$ in $\pi((1 \ 2)(1 \ 2 \ 3)) e_1 = e_1$.
+    Premislimo, da upodobitev $\pi$ nad $\ZZ/3\ZZ$ \emph{ni} polenostavna. Če bi namreč bila, bi po zgornjem morala biti izomorfna direktni vsoti $\11 \oplus \11 \oplus \sgn$. Prostor $(\ZZ/3\ZZ)^3$ bi zatorej imel bazo, v kateri bi matriki za $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$ bili hkrati diagonalni. Ti dve matriki bi zato komutirali, kar pomeni, da bi morali komutirati tudi linearni preslikavi $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$. Temu pa ni tako, saj na primer velja $\pi((1 \ 2 \ 3)(1 \ 2)) e_1 = e_3$ in $\pi((1 \ 2)(1 \ 2 \ 3)) e_1 = e_1$.
 \end{itemize}
 \end{zgled}
 
@@ -1256,12 +1256,12 @@ Naj bo $G$ grupa s polenostavno upodobitvijo $\rho = \bigoplus_{i \in I} \rho_i$
 Naj bo $W$ direktna vsota podprostorov $V_i$, ki so kot upodobitev izomorfni $\pi$. Seveda je $W \leq \Izotip_{\rho}(\pi)$. Dokažimo, da velja tudi obratna neenakost. Naj bo $U$ direktna vsota tistih prostorov $V_i$, ki kot upodobitev \emph{niso} izomorfni $\pi$. Velja $V = W \oplus U$. Opazujmo projekcijo $p \colon V \to U$ z jedrom $W$. Naj bo $Z \leq \Izotip_{\rho}(\pi)$ podprostor, ki je kot upodobitev izomorfen $\pi$. Zožitev $p|_Z$ je spletična v $\hom_G(Z, U)$, ki je po Schurovi lemi ničeln prostor. Torej je $p(Z) = 0$ in s tem $Z \leq W$. Ker je bil $Z$ poljuben, smo s tem dokazali $\Izotip_{\rho}(\pi) \leq W$.
 \end{dokaz}
 
-Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in nerazcepno upodobitvijo $\pi$ na prostoru $W$. Vsak $G$-invarianten podprostor v $V$, ki je kot upodobitev izomorfen $\pi$, lahko dobimo kot sliko prostora $W$ z neko spletično v $\hom_G(\pi, \rho)$.\footnote{Vsaka neničelna spletična v $\hom_G(\pi, \rho)$ je namreč injektivna.} Vsoto vseh takih $G$-invariatnih podprostorov lahko torej zajamemo kot sliko linearne preslikave
+Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in nerazcepno upodobitvijo $\pi$ na prostoru $W$. Vsak $G$-invarianten podprostor v $V$, ki je kot upodobitev izomorfen $\pi$, lahko dobimo kot sliko prostora $W$ z neko spletično v $\hom_G(\pi, \rho)$.\footnote{Vsaka neničelna spletična v $\hom_G(\pi, \rho)$ je namreč injektivna.} Vsoto vseh takih $G$-invariantnih podprostorov lahko torej zajamemo kot sliko linearne preslikave
 \[
     \Sigma_{\pi, \rho} \colon \hom_G(\pi, \rho) \otimes W \to V, \quad
     \Phi \otimes w \mapsto \Phi(w).
 \]
-S tem je $\image \Sigma_{\pi, \rho} = \Izotip_{\rho}{\pi}$. Grupa $G$ deluje na $\hom_G(\pi, \rho) = \hom(W,V)^G$ trivialno, na $W$ pa prek $\pi$. Na ta način je $\Sigma_{\pi, \rho}$ celo spletična upodobitev.
+S tem je $\image \Sigma_{\pi, \rho} = \Izotip_{\rho}(\pi)$. Grupa $G$ deluje na $\hom_G(\pi, \rho) = \hom(W,V)^G$ trivialno, na $W$ pa prek $\pi$. Na ta način je $\Sigma_{\pi, \rho}$ celo spletična upodobitev.
 
 \begin{trditev}
 Naj bo $G$ grupa z upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem. Predpostavimo, da je $\dim \hom_G(\pi, \rho) < \infty$. Tedaj je $\Sigma_{\pi, \rho}$ injektivna. 
@@ -1277,14 +1277,14 @@ Po nerazcepnosti $\pi$ je spletična $\Phi_k$ injektivna, zato je $\image \Phi_k
 \[
     \Phi_k \in \hom_G(W, \bigoplus_{j \in J \backslash \{ k \}} \image \Phi_j).
 \]
-Slednji prostor je direktna vsota prostorov $\hom_G(W, \image \Phi_j)$. Po Schurovi lemi je vsak od teh bodisi ničeln bodisi enorazsežen. V neničelnem primeru je seveda $\hom_G(W, \image \Phi_j)$ generiran s spletično $\Phi_j$. Od tod sledi, da je $\Phi_k$ linearna kombinacija spletičen $\Phi_j$ za $j \in J \backslash \{ k \}$. To je protislovno z dejstvom, da je $\{ \Phi_i \}_{i \in I}$ baza prostora $\hom_G(\pi, \rho)$.
+Slednji prostor je direktna vsota prostorov $\hom_G(W, \image \Phi_j)$. Po Schurovi lemi je vsak od teh enorazsežen, zato je $\hom_G(W, \image \Phi_j)$ generiran s spletično $\Phi_j$. Od tod sledi, da je $\Phi_k$ linearna kombinacija spletičen $\Phi_j$ za $j \in J \backslash \{ k \}$. To je protislovno z dejstvom, da je $\{ \Phi_i \}_{i \in I}$ baza prostora $\hom_G(\pi, \rho)$.
 \end{dokaz}
 
 \begin{posledica}
 Naj bo $G$ grupa z upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$ nad algebraično zaprtim poljem. Predpostavimo, da je $\hom_G(\pi, \rho) < \infty$. Izotipična komponenta $\Izotip_{\rho}(\pi)$ je polenostavna, $\pi$-izotipična in vsebuje $\pi$ z večkratnostjo $\dim \hom_G(\pi, \rho)$.
 \end{posledica}
 \begin{dokaz}
-Iz injektivnosti $\Sigma_{\pi, \rho}$ sledi $\Izotip_{\rho}(\pi) \cong \hom_G(\pi, \sigma) \otimes W$. Ker grupa $G$ deluje trivialno na $\hom_G(\pi, \sigma)$, je prostor $\hom_G(\pi, \sigma) \otimes W$ kot upodobitev izomorfen direktni vsoti $\dim \hom_G(\pi, \sigma)$ kopij prostora $W$, na katerem $G$ deluje s $\pi$.
+Iz injektivnosti $\Sigma_{\pi, \rho}$ sledi $\Izotip_{\rho}(\pi) \cong \hom_G(\pi, \rho) \otimes W$. Ker grupa $G$ deluje trivialno na $\hom_G(\pi, \rho)$, je prostor $\hom_G(\pi, \rho) \otimes W$ kot upodobitev izomorfen direktni vsoti $\dim \hom_G(\pi, \rho)$ kopij prostora $W$, na katerem $G$ deluje s $\pi$.
 \end{dokaz}
 
 \begin{domacanaloga}
@@ -1333,7 +1333,7 @@ $\MK(\pi)$ je $G$-invarianten podprostor.
 \begin{dokaz}
 Naj bo $g \in G$ in $f_{v, \lambda}$ posplošen matrični koeficient. Velja
 \[
-    g \cdot f_{v, \lambda} \colon x \mapsto f_{v, \lambda}(xg) =
+    (g \cdot f_{v, \lambda}) \colon x \mapsto f_{v, \lambda}(xg) =
     \langle \lambda, \pi(xg) \cdot v \rangle =
     f_{\pi(g) \cdot v, \lambda}(x),
 \]
@@ -1669,7 +1669,7 @@ Naj bo $G$ končna grupa z nerazcepno upodobitvijo $\pi$ nad algebraično zaprti
 \begin{dokaz}
 Pristopimo kot pri zadnjem dokazu, pri čemer prostor spletičen $\hom_G(V,V)$ po Schurovi lemi zdaj sestoji le iz skalarnih večkratnikov identitete. Za linearno preslikavo $A \in \hom(V,V)$ je zato
 \[
-    \frac{1}{|G|} \sum_{g \in G} g \cdot A = \lambda_A \cdot \id_V
+    \frac{1}{|G|} \sum_{g \in G} g \cdot A = \textstyle \lambda_A \cdot \id_V
 \]
 za nek $\lambda_A \in F$. Velja $g \cdot A = \pi(g) A \pi(g)^{-1}
 $, zato je $\tr(g \cdot A) = \tr(A)$, od koder izpeljemo
@@ -1804,7 +1804,7 @@ zato je konjugiranostni razred $s$ enak $\{ s r^{2j} \mid j \in \ZZ \}$ in konju
 Določimo zdaj še nerazcepne upodobitve. Poznamo že dvorazsežne nerazcepne upodobitve $\rho_k$ za $0 < k < n/2$, vseh teh je $\lceil n/2 \rceil - 1$. Za karakter take upodobitve velja $\chi_{\rho_k}(r) = 2 \cos(2 \pi k / n)$, zato so vsi ti karakterji različni med sabo in s tem so upodobitve $\rho_k$ neizomorfne. Poleg teh dvorazsežnih upodobitev imamo še linearne upodobitve. Število teh je enako velikosti abelacije $D_{2n}/[D_{2n}, D_{2n}]$.\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$. {\definicija Komutatorska podgrupa} grupe $G$ je $[G,G] = \langle [x,y] \mid x,y \in G \rangle$.} Velja
 \[
     [r^i, s r^j] = r^{-i} \left( r^i \right)^{s r^j} = r^{-2i}, \quad
-    [s r^i, s r^j] = r^{-i} s \left( s r^i \right)^{s r^j} = s r^{2j - 2i},
+    [s r^i, s r^j] = r^{-i} s \left( s r^i \right)^{s r^j} = r^{2j - 2i},
 \]
 zato je $[D_{2n}, D_{2n}] = \langle r^2 \rangle$. S tem je 
 \[
@@ -1911,7 +1911,7 @@ Vemo že, da imamo natanko dve enorazsežni upodobitvi, in sicer $\11$ in $\sgn$
     ||\chi_{\pi}||^2 = \frac{1}{4!} \left( 1 \cdot 4^2 + 6 \cdot 2^2 + 8 \cdot 1^2  \right)
     = 2.
 \]
-Upodobitev $\chi_{\pi}$ torej \emph{ni} nerazcepna. Velja
+Upodobitev $\pi$ torej \emph{ni} nerazcepna. Velja
 \[
     [ \chi_{\pi}, \chi_{\11} ] = \frac{1}{4!} \left( 1 \cdot 4 + 6 \cdot 2 + 8 \cdot 1 \right) = 1,
 \]
@@ -1950,7 +1950,7 @@ z jedrom $\{ (), (1 \ 2)(3 \ 4), (1 \ 3)(2 \ 4), (1 \ 4)(2 \ 3) \}$. Upodobitev 
 
 Dekompozicijo regularne upodobitve smo dobili iz matričnih koeficientov nerazcepnih upodobitev, torej gre za nekakšno \emph{notranjo} dekompozicijo. Obstaja pa tudi \emph{zunanja} dekompozicija, pri kateri iz upodobitve same s pomočjo ustreznih projekcijskih spletičen najdemo izotipične komponente upodobitve.
 
-Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Naj bo $\rho$ podupodobitev regularne upodobitve $\rho_{\fun}$ na prostoru $V \leq \fun(G,F)$. Ta prostor lahko predstavimo kot sliko neke projekcijske spletične $\Phi \in \hom_G(\rho_{\fun}, \rho)$. Res je tudi obratno, vsaka spletična $\Phi \in \hom_G(\rho_{\fun}, \rho_{\fun})$, ki zadošča $\Phi^2 = \Phi$, podaja prek svoje slike podupodobitev regularne upodobitve. Podupodobitve so torej parametrizirane s spletičnami. Izkaže se, da te vselej izhajajo iz Fourierovih transformacij.
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Naj bo $\rho$ podupodobitev regularne upodobitve $\rho_{\fun}$ na prostoru $V \leq \fun(G,F)$. Ta prostor lahko predstavimo kot sliko neke projekcijske spletične $\Phi \in \hom_G(\rho_{\fun}, \rho)$. Res je tudi obratno, vsaka spletična $\Phi \in \hom_G(\rho_{\fun}, \rho_{\fun})$ podaja prek svoje slike podupodobitev regularne upodobitve. Podupodobitve so torej parametrizirane s spletičnami. Izkaže se, da te vselej izhajajo iz Fourierovih transformacij.
 
 \begin{trditev}
 Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Preslikava
@@ -1964,7 +1964,7 @@ je izomorfizem vektorskih prostorov.
 Ni težko preveriti, da je $\Fcal$ dobro definirana preslikava. Očitno je linearna. Za $f \in \fun(G,F)$ je $\Fcal(f) \cdot 1_1 = \widehat{1_1}(\rho_{\fun}) \cdot f = f$, zato je $\Fcal$ injektivna. Oba prostora sta enake razsežnosti, namreč $|G|$, zato je $\Fcal$ izomorfizem.
 \end{dokaz}
 
-V posebnem je vsaka endospletična regularne upodobitve enaka evalvaciji Fourierovi transformacije v neki fiksni funkciji.\footnote{V asociativni algebri to izrečemo ponavadi takole: vsak levi ideal v polenostavni algebri je glavni.} Nekoliko natančneje si poglejmo, kaj je ta evalvacija. Za funkciji $f,g \in \fun(G,F)$ je
+V posebnem je vsaka endospletična regularne upodobitve enaka evalvaciji Fourierovi transformacije v neki fiksni funkciji.\footnote{V asociativni algebri to izrečemo ponavadi takole: vsak levi ideal v polenostavni algebri je glavni.} Nekoliko natančneje si poglejmo, kaj je ta evalvacija. Za funkciji $f,h \in \fun(G,F)$ je
 \[
     \hat{h}(\rho_{\fun}) \cdot f = \sum_{g \in G} h(g) \rho_{\fun}(g^{-1}) \cdot f =
     \left( x \mapsto \sum_{g \in G} h(g) f(x g^{-1}) \right).
@@ -2020,7 +2020,7 @@ s čimer dobimo razvoj
 \]
 \end{zgled}
 
-Vsako funkcijo $f \in \fun(G,F)$ lahko razvijemo po karakterističnih funkcijah kot $f = \sum_{x \in G} f(x) 1_x$. Ker že poznamo razvoj vsake od karaterističnih funkcij po $\pi$-izotipičnih komponentah, od tod izpeljemo
+Vsako funkcijo $f \in \fun(G,F)$ lahko razvijemo po karakterističnih funkcijah kot $f = \sum_{x \in G} f(x) 1_x$. Ker že poznamo razvoj vsake od karakterističnih funkcij po $\pi$-izotipičnih komponentah, od tod izpeljemo
 \[
     f(g) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \sum_{x \in G} f(x) \chi_{\pi}(1) \tr \left( \pi(x^{-1}) \cdot \pi(g) \right),
 \]
@@ -2031,7 +2031,7 @@ kar lahko po upoštevanju linearnosti sledi izrazimo kot
 Temu razvoju funkcije $f$ po $\pi$-izotipičnih komponentah rečemo {\definicija Fourierova inverzija}, saj nam ekplicitno pove, kako lahko $f$ izračunamo iz njenih Fourierovih transformacij v nerazcepnih upodobitvah.
 
 \begin{zgled}
-Naj bo $A$ končna abelova grupa. Vemo že, da so vse njene kompleksne upodobitve enorazsežne. V tem primeru so upodobitve kar enake svojim karakterjem. Za dano funkcijo $f \in \fun(A,\CC)$ lahko Fourierovo inverzijo zapišemo kot
+Naj bo $A$ končna abelova grupa. Vemo že, da so vse njene kompleksne nerazcepne upodobitve enorazsežne. V tem primeru so upodobitve kar enake svojim karakterjem. Za dano funkcijo $f \in \fun(A,\CC)$ lahko Fourierovo inverzijo zapišemo kot
 \[
     f = \frac{1}{|A|} \sum_{\chi \in \Irr(A)} \hat{f}(\chi) \cdot \chi,
 \]
@@ -2235,7 +2235,7 @@ Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, 
     \]
     Preveriti moramo torej, da je to algebraično celo število. Funkcijo $f$ lahko razvijemo kot vsoto karakterističnih funkcij konjugiranostnih razredov s koeficienti v $\bar{\ZZ}$. Ker $\bar{\ZZ}$ tvori kolobar, bo torej trditev dovolj preveriti za primer, ko je $f = 1_{\conclass}$ za nek konjugiranostni razred $\conclass$ v $G$.
     
-    Vse narazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in s tem linearno preslikavo $\widehat{1_{\conclass}}(\rho_{\fun})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, ta preslikava deluje kot $\widehat{1_{\conclass}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\widehat{1_{\conclass}}(\rho_{\fun})$.
+    Vse nerazcepne upodobitve lahko obravnavamo v enem zamahu, in sicer tako, da opazujemo regularno upodobitev in s tem linearno preslikavo $\widehat{1_{\conclass}}(\rho_{\fun})$. Na vsaki od podupodobitev, ki je izomorfna $\pi$, ta preslikava deluje kot $\widehat{1_{\conclass}}(\pi)$, torej kot skalarno množenje z gornjim številom. To število je zato lastna vrednost preslikave $\widehat{1_{\conclass}}(\rho_{\fun})$.
     
     Vemo že, da $\widehat{1_{\conclass}}(\rho_{\fun})$ deluje na naravni bazi iz karakterističnih funkcij $1_x$ za $x \in G$ kot
     \[
@@ -2274,7 +2274,7 @@ Dokaza se lahko lotiš tako, da fiksiraš nerazcepno upodobitev $\pi \in \Irr(G)
 
 Osredotočimo se sedaj še na upodobitveni prostor. Naj bo $\rho$ kompleksna upodobitev grupe $G$ na končnorazsežnem prostoru $V$. Izberimo bazo prostora $\{ v_i \}_{i}$ in z njo kompleksen skalarni produkt
 \[
-    \left\langle \sum_i \alpha_i v_i, \sum_i \beta_i v_j \right\rangle = \sum_i \alpha_i \overline{\beta_i}.
+    \left\langle \sum_i \alpha_i v_i, \sum_i \beta_i v_i \right\rangle = \sum_i \alpha_i \overline{\beta_i}.
 \]
 Prostor $V$ je opremljen z linearnim delovanjem grupe $G$. Zdaj smo na ta prostor dodali strukturo skalarnega produkta in ni jasno, ali je grupa $G$ kompatibilna s to dodatno strukturo. Kadar je temu tako, se pravi
 \[
@@ -2345,7 +2345,7 @@ Razčlenitev $\lambda$ si lahko predstavljamo kot zaporedje vrstic diagrama, v k
 Inducirajmo trivialno upodobitev iz $P$ na $S_n$. V razdelku o indukciji smo spoznali, da lahko $\Ind^{S_n}_{P}(\11)$ interpretiramo kot permutacijsko upodobitev $S_n$ na desnih odsekih podgrupe $P$. To interpretacijo lahko vložimo v prostor funkcij $\fun(S_n, \CC)$. Namesto množice $P$ lahko namreč opazujemo indikatorsko funkcijo $1_P$. Element $g \in S_n$ na njej deluje kot
 $\rho_{\fun}(g) \cdot 1_P = 1_{P g^{-1}}$, se pravi kot permutacija desnih odsekov. Na ta način upodobitveni prostor upodobitve $\Ind^{S_n}_{P}(\11)$ vidimo kot 
 \[
-    \langle \rho_{\fun}(g) \cdot 1_{P} \mid g \in G \rangle.
+    \langle \rho_{\fun}(g) \cdot 1_{P} \mid g \in S_n \rangle.
 \]
 Ta prostor lahko izrazimo s pomočjo Fourierove transformacije kot
 \[
@@ -2355,7 +2355,7 @@ Ta prostor lahko izrazimo s pomočjo Fourierove transformacije kot
 \]
 Upodobitev $S_n$ na tem prostoru gotovo \emph{ni} nerazcepna, saj na primer vsebuje trivialno z večkratnostjo $\langle \chi_{\11}, \Ind^{S_n}_{P}(\chi_{\11}) \rangle = \langle \chi_{\11}, \chi_{\11} \rangle = 1$. Ta prostor bomo zato še dodatno projicirali na nek podprostor.
 
-Do zdaj smo upoštevali le grupo $P$ permutacij, ki ohranjajo \emph{vrstice} izbrane Youngove tablele. Iz tega gledišča je naravno, da obravnavamo tudi grupo permutacij, ki ohranjajo \emph{stolpce} tabele. Označimo jo s $Q$. Ravno ta podgrupa je dodatek, ki nam bo dodatno reduciral upodobitev zgoraj opisano inducirano upodobitev. Pri tem bomo upoštevali, da je $Q$ sestavljena dualno $P$, zato jo bomo utežili s predznačno upodobitvijo $\sgn$.
+Do zdaj smo upoštevali le grupo $P$ permutacij, ki ohranjajo \emph{vrstice} izbrane Youngove tabele. Iz tega gledišča je naravno, da obravnavamo tudi grupo permutacij, ki ohranjajo \emph{stolpce} tabele. Označimo jo s $Q$. Ravno ta podgrupa je dodatek, ki nam bo dodatno reduciral zgoraj opisano inducirano upodobitev. Pri tem bomo upoštevali, da je $Q$ sestavljena dualno $P$, zato jo bomo utežili s predznačno upodobitvijo $\sgn$.
 
 Definirajmo funkcijo
 \[
@@ -2405,7 +2405,7 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
     \[
         \left( 1_P * f \right) (x) = \sum_{p \in P} f(p^{-1} x) = \sum_{g \in Px} f(g),
     \]
-    torej $1_P * f$ izračuna vsoto funkcije $f$ po odseku $Px$. Prostor $\image \Fcal(1_P)$ lahko zato identificiramo s podprostorom funkcij $\fun_{P \backslash S_n}(S_n, \CC)$, ki so konstantne na desnih odsekih $P \backslash S_n$. Delovanje $S_n$ na tem prostoru ni nič drugega kot $\Ind^{S_n}_P(\11)$, kar prepoznamo kot standardno permutacijska upodobitev grupe $S_n$ njenega delovanja na $\{ 1, 2, \dots, n \}$. Uporabimo zdaj še konvolucijo s funkcijo $\sgn \cdot 1_Q$. Dobimo linearno preslikavo
+    torej $1_P * f$ izračuna vsoto funkcije $f$ po odseku $Px$. Prostor $\image \Fcal(1_P)$ lahko zato identificiramo s podprostorom funkcij $\fun_{P \backslash S_n}(S_n, \CC)$, ki so konstantne na desnih odsekih $P \backslash S_n$. Delovanje $S_n$ na tem prostoru ni nič drugega kot $\Ind^{S_n}_P(\11)$, kar prepoznamo kot standardno permutacijsko upodobitev grupe $S_n$ njenega delovanja na $\{ 1, 2, \dots, n \}$. Uporabimo zdaj še konvolucijo s funkcijo $\sgn \cdot 1_Q$. Dobimo linearno preslikavo
     \[
         \textstyle \fun_{P \backslash S_n}(S_n, \CC) \to \fun_{P \backslash S_n}(S_n, \CC), \quad
         \psi \mapsto \left( x \mapsto \psi(x) - \psi((1 \ n) \cdot x) \right).
@@ -2414,7 +2414,7 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
     \[
         V_{\lambda} = \image \Fcal(\youngsym) \cong \frac{\textstyle \fun_{P \backslash S_n}(S_n, \CC)}{\CC}.
     \]
-    Ta prostor je razsežnosti $n-1$. Prirejeno upodobitev imenujemo {\definicija standardna upodobitev} simetrične grupe $S_n$. Kot smo videli, jo lahko dobimo tako, da iz standardne permutacijske upodobitve odstanimo trivialno upodobitev.
+    Ta prostor je razsežnosti $n-1$. Prirejeno upodobitev imenujemo {\definicija standardna upodobitev} simetrične grupe $S_n$. Kot smo videli, jo lahko dobimo tako, da iz standardne permutacijske upodobitve odstranimo trivialno upodobitev.
 \end{itemize}
 \end{zgled}
 
@@ -2435,7 +2435,7 @@ Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vl
 \begin{enumerate}
     \item Naj bo $W \leq V_{\lambda}$ podupodobitev. Po lemi je $\widehat{\youngsym}(\rho_{\fun}) \cdot W$ bodisi $\CC \cdot \youngsym$ bodisi $0$. 
     
-    V prvem primeru sledi, da je $\youngsym \in W$, od koder iz nerazcepnosti $W$ sklenemo $W = \image \Fcal(\youngsym) = V_{\lambda}$. \kljuka
+    V prvem primeru sledi, da je $\youngsym \in W$, od koder sklenemo $W \geq \langle \rho_{\fun}(g) \cdot \sigma_\lambda \mid g \in S_n \rangle$, kar je ravno enako $\image \Fcal(\youngsym) = V_{\lambda}$. \kljuka
     
     Privzemimo zdaj, da je $\widehat{\youngsym}(\rho_{\fun}) \cdot W = 0$, kar lahko zapišemo kot $W * \youngsym = 0$. Od tod sledi $W * V_{\lambda} = 0$ in zato $W * W = 0$. Naj bo $W = \image P$ za neko projektorsko endospletično $P$ regularne upodobitve. Vemo že, da so vse take preslikave oblike $P = \Fcal(w)$ za neko funkcijo $w \in \fun(S_n, \CC)$. Ker je $P \cdot 1_1 = \widehat{1_1}(\rho_{\fun}) \cdot w = w$, sledi $w \in W$. Še več, ker je $P^2 = P$, izračunamo $w = P \cdot w = \widehat{w}(\rho_{\fun}) \cdot w = w * w$. Ker je $W * W = 0$, sledi $w = 0$ in s tem $W = 0$. \kljuka
 
@@ -2469,7 +2469,7 @@ Preostane nam še dokaz leme.
 
     Dokazano uporabimo z elementom $\youngsym * f * \youngsym$, kjer je $f$ poljubna funkcija. Vrednost $\sgn \cdot 1_q * (\youngsym * f * \youngsym) * 1_p$ izračunamo kot
     \[
-        (\sgn \cdot 1_q * \sgn \cdot 1_Q * 1_P) * f * (\sgn * 1_Q * 1_P * 1_p) =
+        (\sgn \cdot 1_q * \sgn \cdot 1_Q * 1_P) * f * (\sgn \cdot 1_Q * 1_P * 1_p) =
         \youngsym * f * \youngsym,
     \]
     od koder sledi želeno
@@ -2584,13 +2584,13 @@ kjer je
 \]
 \end{izrek}
 
-Dokaz temelji na poznavanju osnov teorije simetričnih funkcij, ki jih študent-ka ponavadi spozna pri kombinatoričnih predmetih, zato ga brez prehude žalosti izpustimo. Poglejmo pa si nekaj primerov uporabe izreka.
+Dokaz temelji na poznavanju osnov teorije simetričnih funkcij, ki jih ponavadi spoznamo pri kombinatoričnih predmetih, zato ga brez prehude žalosti izpustimo. Poglejmo pa si nekaj primerov uporabe izreka.
 
 \begin{zgled} \leavevmode
 \begin{itemize}
 \item Naj bo $n = 7$ in $\lambda = (4,3)$. Izračunajmo vrednost karakterja v permutaciji $(1 \ 2)(3 \ 4)$. Velja $i_1 = 3$, $i_2 = 2$, $\ell_1 = 5$, $\ell_2 = 3$ in s tem
 \[
-    \chi_{(4,5)}(\conclass_{1^3 2^2}) = 
+    \chi_{(4,3)}(\conclass_{1^3 2^2}) = 
     \left[ (x_1 - x_2) \cdot (x_1 + x_2)^3 (x_1^2 + x_2^2)^2 \right]_{(5,3)} =
     2.
 \]
@@ -2637,7 +2637,7 @@ Velja
     \dim V_{\lambda} = \chi_{\lambda}(\conclass_{1^n}) =
     \left[ \Delta(\mathbf{x}) \cdot (x_1 + x_2 + \cdots + x_k)^n \right]_{(\ell_1, \ell_2, \dots, \ell_k)}.
 \]
-Diskriminanto razvijemo kot v zadnjem zgledu, drugi člen pa po binomski formuli kot
+Diskriminanto razvijemo kot v zadnjem zgledu, drugi člen pa po multinomski formuli kot
 \[
     (x_1 + x_2 + \cdots + x_k)^n = \sum_{j_1 + j_2 + \cdots + j_k = n} \frac{n!}{j_1! j_2! \cdots j_k!} x_1^{j_1} x_2^{j_2} \cdots x_k^{j_k}.
 \]
@@ -2741,13 +2741,13 @@ Borelova podgrupa \emph{ni} edinka v $G_p$, ima pa kvocientna množica $G_p/B_p$
 \[
     \PP^1(\FF_p) = \{ \ell \leq \FF_p^2 \mid \dim \ell = 1 \},
 \]
-čemur pravimo {\definicija projektiva premica} nad $\FF_p$. Grupa $G_p$ deluje na tej premici tranzitivno in stabilizator premice $e_1$ je ravno Borelova podgrupa $B_p$. Projektivno premico lahko zato enačimo z množico $G_p/B_p$. V posebnem tako dobimo homomorfizem 
+čemur pravimo {\definicija projektivna premica} nad $\FF_p$. Grupa $G_p$ deluje na tej premici tranzitivno in stabilizator premice $e_1$ je ravno Borelova podgrupa $B_p$. Projektivno premico lahko zato enačimo z množico $G_p/B_p$. V posebnem tako dobimo homomorfizem 
 \[
     \Pi \colon G_p \to \Sym(\PP^1(\FF_p)) = S_{p+1},
 \]
 o katerem bomo več povedali nekoliko kasneje. Za zdaj ne spreglejmo, da od tod takoj izračunamo $|G_p/B_p| = p+1$ in s tem 
 \[
-    |G_p| = |G_p/B_p| \cdot |B_p/U_p| \cdot |U_p| = (p+1) \cdot (p-1)^2 \cdot p.
+    |G_p| = |G_p/B_p| \cdot |B_p| = (p+1) \cdot (p-1)^2 p.
 \]
 
 Grupa $G_p$ je opremljena tudi z determinantnim homomorfizmom
@@ -2893,7 +2893,7 @@ Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnost
             a & \epsilon b \\ b & a
         \end{pmatrix},
     \]
-    kjer je $a = (\lambda + \lambda^{\sigma})/2 \in \FF_p$ in $b = \sqrt{\epsilon} (\lambda - \lambda^{\sigma})/2 \in \FF_p^*$. Centralizator vsakega takega elementa je enak
+    kjer je $a = (\lambda + \lambda^{\sigma})/2 \in \FF_p$ in $b = (\lambda - \lambda^{\sigma})/(2 \sqrt{\epsilon}) \in \FF_p^*$. Centralizator vsakega takega elementa je enak
     \[
         T_{nr} = \left\{ \begin{pmatrix}
             x & \epsilon y \\ y & x
@@ -3003,7 +3003,7 @@ Nadaljujmo s pomočjo homomorfizma $\Pi \colon G_p \to S_{p+1}$, ki opisuje perm
 \caption{Steinbergov karakter $G_p$}
 \end{table}
 
-Steinbergovo upodobitev lahko tenzoriramo s poljubno enorazsežno in dobimo $\St \otimes (\chi \circ \det)$, kar označimo krajše kot $\St(\chi)$. Za $\chi = \11$ dobimo običajno Steibergovo upodobitev. Vse te upodobitve so tudi nerazcepne.
+Steinbergovo upodobitev lahko tenzoriramo s poljubno enorazsežno in dobimo $\St \otimes (\chi \circ \det)$, kar označimo krajše kot $\St(\chi)$. Za $\chi = \11$ dobimo običajno Steinbergovo upodobitev. Vse te upodobitve so tudi nerazcepne.
 
 \begin{table}[ht]
     \centering
@@ -3300,7 +3300,7 @@ S tem smo našteli $p^2-1$ nerazcepnih upodobitev in zatorej vse nerazcepne upod
 Izračunano tabelo karakterjev grupe $G_p$ lahko uporabimo, da z njo določimo še tabelo karakterjev grupe $\PSL_2(\FF_p)$.
 
 \begin{domacanaloga}
-Izračunaj tabelo karakterjev grupe $\SL(\FF_p)$ in grupe $\PSL_2(\FF_p)$. S tabelo se prepričaj, da je grupa $\PSL_2(\FF_p)$ enostavna za $p > 3$. V pomoč ti je lahko obravnava v {\literatura (Fulton-Harris 2004)}.
+Izračunaj tabelo karakterjev grupe $\SL_2(\FF_p)$ in grupe $\PSL_2(\FF_p)$. S tabelo se prepričaj, da je grupa $\PSL_2(\FF_p)$ enostavna za $p > 3$. V pomoč ti je lahko obravnava v {\literatura (Fulton-Harris 2004)}.
 \end{domacanaloga}
 
 \subsection{Matrike višjih razsežnosti}
@@ -3428,15 +3428,15 @@ Brez pogojne omejitve bi bila zgornja verjetnost seveda enaka $\delta^3$. Srčik
 
 Za omejitev netrivialnih prispevkov najprej uporabimo trikotniško neenakost,
 \[
-    \left| \sum_{j \in \FF_p^*} \widehat{1_A(\chi_j)}^2 \widehat{1_A}(\chi_{-2j}) \right|
-    \leq \max_{j \in \FF_p^*} |\widehat{1_A(\chi_j)}| \cdot 
+    \left| \sum_{j \in \FF_p^*} \widehat{1_A}^2(\chi_j) \widehat{1_A}(\chi_{-2j}) \right|
+    \leq \max_{j \in \FF_p^*} |\widehat{1_A}(\chi_j)| \cdot 
     \sum_{j \in \FF_p^*} 
     |\widehat{1_A}(\chi_j)|
     |\widehat{1_A}(\chi_{-2j})|.
 \]
 Zadnjo vsoto ocenimo s Cauchy-Schwartzovo neenakostjo, tako da dobimo zgornjo mejo
 \[
-    \max_{j \in \FF_p^*} |\widehat{1_A(\chi_j)}| \cdot 
+    \max_{j \in \FF_p^*} |\widehat{1_A}(\chi_j)| \cdot 
     \sqrt{\sum_{j \in \FF_p} |\widehat{1_A}(\chi_j)|^2} \cdot \sqrt{\sum_{j \in \FF_p} |\widehat{1_A}(\chi_{-2j})|^2}.
 \]
 Vsota pod korenoma je v obeh primerih enaka, in sicer jo po Parsevalu lahko izrazimo kot
@@ -3547,17 +3547,17 @@ Kadar množica $A$ vsebuje kakšno podgrupo, seveda \emph{ni} brez produktov, za
 
 \begin{zgled} \leavevmode
 \begin{itemize}
-\item Naj bo $G = \ZZ/n\ZZ$ in $A$ neka njena podmnožica. Množica $A$ je brez produktov, če in samo če enačba $x+y=z$ nima rešitve v $A$. To vprašanje je ravno obratno sorodni lastnosti, ki smo jo opazovali v prejšnjem razdelku. Tam smo reševali le malo drugačno enačbo $x+y=2z$ in dokazali, da ima vselej rešitve v podmnožicah pozitivne gostote. Zanimovo je, da je situacija precej drugačna za enačbo $x+y = z$.\footnote{Lahko bi naredili sicer enak razmislek kot v dokazu Rothovega izreka, a nam od tiste točke, ko harmonična analiza odpove, ne bi obstoj aritmetičnih zaporedij $P_i$ koristil za reševanje enačbe $x+y=z$.} Za množico $A$ lahko vzamemo na primer vsa števila v $\ZZ/n\ZZ$, ki so strogo med $\frac{1}{3}n$ in $\frac{2}{3}n$. Ta množica je jasno brez produktov in je gostote približno $\frac{1}{3}$ v $\ZZ/n\ZZ$ za velike vrednosti $n$. 
+\item Naj bo $G = \ZZ/n\ZZ$ in $A$ neka njena podmnožica. Množica $A$ je brez produktov, če in samo če enačba $x+y=z$ nima rešitve v $A$. To vprašanje je ravno obratno sorodni lastnosti, ki smo jo opazovali v prejšnjem razdelku. Tam smo reševali le malo drugačno enačbo $x+y=2z$ in dokazali, da ima vselej rešitve v podmnožicah pozitivne gostote. Zanimivo je, da je situacija precej drugačna za enačbo $x+y = z$.\footnote{Lahko bi naredili sicer enak razmislek kot v dokazu Rothovega izreka, a nam od tiste točke, ko harmonična analiza odpove, ne bi obstoj aritmetičnih zaporedij $P_i$ koristil za reševanje enačbe $x+y=z$.} Za množico $A$ lahko vzamemo na primer vsa števila v $\ZZ/n\ZZ$, ki so strogo med $\frac{1}{3}n$ in $\frac{2}{3}n$. Ta množica je jasno brez produktov in je gostote približno $\frac{1}{3}$ v $\ZZ/n\ZZ$ za velike vrednosti $n$. 
 
 To konstrukcijo lahko posplošimo na poljubno končno abelovo grupo. Ob tem se ni težko prepričati, da vselej obstaja podmnožica brez produktov gostote vsaj $\frac{2}{7}$.
 
-\item Simetrična grupa $S_n$ vsebuje ogromno množico brez produktov, in sicer množico vseh lihih permutacij $S_n \backslash A_n$. Produkt dveh lihi permutacij je soda permutacija, zato je ta množica res brez produktov. Njena gostota je $\frac12$.
+\item Simetrična grupa $S_n$ vsebuje ogromno množico brez produktov, in sicer množico vseh lihih permutacij $S_n \backslash A_n$. Produkt dveh lihih permutacij je soda permutacija, zato je ta množica res brez produktov. Njena gostota je $\frac12$.
 
 \item Naj bo $G$ končna grupa s podgrupo $H \leq G$. Naj bo $A = Hg$ za nek $g \in G \backslash H$. Tedaj za $x = h_1 g$ in $y = h_2 g$ velja $Hxy = Hh_1 g h_2 g = H g h_2 g$. Pri tem velja $xy \in A$, če in samo če je $H g h_2 g = Hg$, kar se poenostavi do $g h_2 \in H$, se pravi $g \in H$, kar je sprto s predpostavko. Množica $A$ je zato brez produktov. Njena gostota v $G$ je $1/|G:H|$. Ta primer posploši zadnjega, kjer smo obravnavali $A_n \leq S_n$.
 \end{itemize}
 \end{zgled}
 
-Mnogo težje je najti podmnožice brez produktov pozitivne gostote v alternirajoči grupi $A_n$ ali linearni grupi $\PSL_2(\FF_p)$. Dokazali bomo, da to težavo lahko pojasnimo s teorijo updobitev.
+Mnogo težje je najti podmnožice brez produktov pozitivne gostote v alternirajoči grupi $A_n$ (ko gre $n$ proti neskončnosti) ali linearni grupi $\PSL_2(\FF_p)$ (ko gre $p$ proti neskončnosti). Dokazali bomo, da to težavo lahko pojasnimo s teorijo updobitev.
 
 \begin{izrek}[\href{https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/quasirandom-groups/A885920D04E04BC63766C052C666931A}{Gowers 2008}]
 Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne nerazcepne kompleksne upodobitve $G$. Tedaj je vsaka podmnožica brez produktov v $G$ gostote kvečjemu $m^{-1/3}$.
@@ -4001,7 +4001,7 @@ Za razumevanje asimptotskega obnašanja $\mu_n$ je pomembno poznati $|r_{\pi}(\c
 \begin{lema}
 Za $\pi \in \Irr(G)$ drži $|r_{\pi}(\conclass)| \leq 1$, pri čemer velja enakost natanko tedaj, ko je 
 \[
-    \conclass \ker \pi / \ker \pi \subseteq Z(G / \ker \pi).
+    \{ [g,c] \mid g \in G, c \in \conclass \} \subseteq \ker \pi.
 \]
 \end{lema}
 \begin{dokaz}
@@ -4124,8 +4124,8 @@ Upoštevamo drugo ortogonalnostno relacijo in dobimo
         0 & \text{sicer.}
     \end{cases}
     \right)    
-    = \frac{1}{|\SL_2(\FF_p)|} \cdot 1_{\det^{-1}(\rho^n)}
-    = U_{\det^{-1}(\rho^n)}.
+    = \frac{1}{|\SL_2(\FF_p)|} \cdot 1_{\det^{-1}(\delta^n)}
+    = U_{\det^{-1}(\delta^n)}.
 \]
 V tem primeru kandidat za limitno porazdelitev v resnici ne konvergira, saj za različne vrednosti $n$ po modulu $p-1$ dobimo bistveno različne porazdelitve. Ko je $n$ deljiv s $p-1$, dobimo enakomerno porazdelitev na $\SL_2(\FF_p)$. 
 
@@ -4237,7 +4237,7 @@ Nore upodobitve grupe $\RR$, ki smo jih konstruirali v zadnjem zgledu, povečini
 \]
 \end{zgled}
 
-Kadar je dana topološka grupa $G$ opremljena z znano topologijo, ki izhaja iz evklidskega prostora, kot se zgodi na primer v grupah $\SO_3(\RR)$ ali $\SL_2(\CC)$, ima smisel govoriti o mnogih dodatnih lastnostih matričnih koeficientov upodobitev. Lahko na primer zathevamo, da so ti koeficienti gladki, analitični ali preprosto polinomi. V teh primerih rečemo, da imamo gladko, analitično oziroma polinomsko upodobitev.
+Kadar je dana topološka grupa $G$ opremljena z znano topologijo, ki izhaja iz evklidskega prostora, kot se zgodi na primer v grupah $\SO_3(\RR)$ ali $\SL_2(\CC)$, ima smisel govoriti o mnogih dodatnih lastnostih matričnih koeficientov upodobitev. Lahko na primer zahtevamo, da so ti koeficienti gladki, analitični ali preprosto polinomi. V teh primerih rečemo, da imamo gladko, analitično oziroma polinomsko upodobitev.
 
 \subsubsection{Unitarnost}
 
@@ -4301,7 +4301,7 @@ za vsaka $x,y \in \RR$. Ker je $X^\prime = \chi$, seveda obstaja $y_0 \in \RR$, 
 Ker je funkcija na desni odvedljiva, velja enako tudi za funkcijo na levi.
 \end{dokaz}
 
-Iz trditve izpeljemo, da vsaka zvezna upodobitev $\RR/\ZZ \to \CC^*$ izhaja iz upodobitve $\chi_{\zeta}$ za nek $\zeta$. Pri tem mora biti $\ZZ \leq \ker \chi_{\zeta}$, od koder sledi $\zeta = 2 \pi i k$ za nek $k \in \ZZ$. Upodobitve $\chi_k$ torej izčrpajo vse končnorazsežne kompleksne upodobitve grupe $\RR/\ZZ$. Te upodobitve so vse tudi unitarne, kar ni naključje, kot bomo pojasnili nekoliko kasneje.
+Iz trditve izpeljemo, da vsaka zvezna upodobitev $\RR/\ZZ \to \CC^*$ izhaja iz upodobitve $\chi_{\zeta}$ za nek $\zeta$. Pri tem mora biti $\ZZ \leq \ker \chi_{\zeta}$, od koder sledi $\zeta = 2 \pi i k$ za nek $k \in \ZZ$. Upodobitve $\chi_k$ torej izčrpajo vse končnorazsežne zvezne kompleksne upodobitve grupe $\RR/\ZZ$. Te upodobitve so vse tudi unitarne, kar ni naključje, kot bomo pojasnili nekoliko kasneje.
 
 \subsubsection{Fourierova analiza}
 
@@ -4368,7 +4368,7 @@ Naj bo $G$ kompaktna grupa s Haarovo mero $\mu$. Regularna upodobitev $G$ na $L^
 ko $\pi$ preteče vse končnorazsežne nerazcepne zvezne unitarne upodobitve grupe $G$.
 \end{izrek}
 
-Kot v končnih grupah se s pomočjo matričnih koeficientov prepričamo, da je vsaka nerazcepna zvenza unitarna upodobitev vsebovana v regularni. V posebnem je zato vsaka zvezna unitarna upodobitev kompaktne grupe nujno \emph{končnorazsežna}.
+Kot v končnih grupah se s pomočjo matričnih koeficientov prepričamo, da je vsaka nerazcepna zvezna unitarna upodobitev vsebovana v regularni. V posebnem je zato vsaka zvezna unitarna upodobitev kompaktne grupe nujno \emph{končnorazsežna}.
 
 % \subsection{$\SU_2(\CC)$}
 % \todo{Tole najbrž v celoti izpustimo zaenkrat. Lahko dodamo kasneje.}
@@ -4462,7 +4462,7 @@ Upoštevajmo zdaj, da je $W$ invarianten še glede na vse ostale elemente v $\SL
 Na ta način smo torej konstruirali neskončno mnogo nerazcepnih polinomskih upodobitev grupe $\SL_2(\CC)$ poljubne visoke stopnje. Zanimivo je, da te upodobitve \emph{niso} unitarne. Lastne vrednosti unitarnih matrik so namreč nujno absolutne vrednosti $1$, čemur upodobitve $\rho_k$ ne zadoščajo. Kasneje bomo videli preprost argument, da niti njena podgrupa $\SL_2(\RR)$ nima netrivialnih končnorazsežnih unitarnih upodobitev. Upodobitve teh grup so torej bistveno drugačne od upodobitev kompaktnih grup, kjer so \emph{vse} končnorazsežne nerazcepne upodobitve unitarne.
 
 \begin{domacanaloga}
-Grupa $\SU_2(\CC)$ je kompaktna podgrupa $\SL_2(\CC)$. Dokaži, da so zožitve upodobitev $\rho_k$ na $\SU_2(\CC)$ nerazcepne in unitarne. Izračunaj karakter vsake od teh upodobitev in dokaži, da te funkcije tvorijo gosto bazo prostora $L^2(\SU_2(\CC))$. To so torej vse zvezne unitarne upodobitve grupe $\SU_2(\CC)$.
+Grupa $\SU_2(\CC)$ je kompaktna podgrupa $\SL_2(\CC)$. Dokaži, da so zožitve upodobitev $\rho_k$ na $\SU_2(\CC)$ nerazcepne in unitarne. Izračunaj karakter vsake od teh upodobitev in dokaži, da te funkcije tvorijo gosto bazo prostora $L^2(\SU_2(\CC))$. To so torej vse zvezne nerazcepne unitarne upodobitve grupe $\SU_2(\CC)$.
 \end{domacanaloga}
 
 \subsubsection{Linearizacija upodobitve}
@@ -4471,7 +4471,7 @@ Princip za dokazovanje, da smo z upodobitvami $\rho_k$ izčrpali vse dovolj lepe
 \[
     \textstyle D_I \rho \colon T_I \SL_2(\CC) \to T_I \GL_n(\CC)
 \]
-med tangentima prostoroma v identični matriki. Oglejmo si podrobneje, kako izgledata ta dva tangentna prostora in kaj točno je $D_I \rho$.
+med tangentnima prostoroma v identični matriki. Oglejmo si podrobneje, kako izgledata ta dva tangentna prostora in kaj točno je $D_I \rho$.
 
 Opazujmo najprej grupo $\GL_n(\CC)$, ki je odprta podmnožica $\CC^{n^2}$. Njen tangentni prostor v $I$ zato lahko identificiramo z vektorskim prostorom $\CC^{n^2}$, ki ga predstavimo v matrični obliki kot
 \[
@@ -4584,7 +4584,7 @@ Grupa $\GL_n(\CC)$ deluje s konjugiranjem na svojem tangentnem prostoru,
     \textstyle \Ad \colon \GL_n(\CC) \to \End(\glfrak_n(\CC)), \quad
     A \mapsto \left( X \mapsto A X A^{-1} \right).
 \]
-To delovanje imamo tudi z grupo $\SL_2(\CC)$ in njenim tangentim prostorom, saj za vsak $X \in \slfrak_2(\CC)$ velja $\tr(AXA^{-1}) = \tr(X) = 0$.
+To delovanje imamo tudi z grupo $\SL_2(\CC)$ in njenim tangentnim prostorom, saj za vsak $X \in \slfrak_2(\CC)$ velja $\tr(AXA^{-1}) = \tr(X) = 0$.
 
 Ni se težko prepičati, da je za vsak $A \in \SL_2(\CC)$ preslikava $D_I \rho$ \emph{spletična} glede na to delovanje. Za vsak $Y \in \slfrak_2(\CC)$ velja namreč
 \[
@@ -4640,7 +4640,7 @@ Liejeve upodobitve $D_I \rho_k$ so nerazcepne. Argument za to je podoben tistemu
 Vsaka nerazcepna Liejeva upodobitev Liejeve algebre $\slfrak_2(\CC)$ je izomorfna $D_I \rho_k$ za nek $k \geq 0$.
 \end{trditev}
 \begin{dokaz}
-Naj bo $\phi \colon \slfrak_2(\CC) \to \glfrak_n(\CC) = \End(V)$ nerazcepna Liejeva upodobitev, kjer je $V = \CC^n$. Naj bodo $E,H,F$ slike $e,h,f$ s preslikavo $\phi$.
+Naj bo $\phi \colon \slfrak_2(\CC) \to \glfrak_m(\CC) = \End(V)$ nerazcepna Liejeva upodobitev, kjer je $V = \CC^m$. Naj bodo $E,H,F$ slike $e,h,f$ s preslikavo $\phi$.
 
 Naj bo $\lambda$ lastna vrednost $H$ in $v$ pripadajoči lastni vektor. Velja
 \[
@@ -4734,7 +4734,7 @@ kjer smo v srednji enakosti upoštevali, da je $\phi$ Liejev homomorfizem. Od to
 
 Pogovorimo se še o tem, kako lahko razširimo $\rho$ na celo grupo $\SL_2(\CC)$. Prepričajmo se najprej, da množica $U$ generira grupo $\SL_2(\CC)$. Upodobitev bo torej enolično določena s svojimi vrednostmi na $U$. Izberimo poljuben $A \in \SL_2(\CC)$. Ker je $\SL_2(\CC)$ povezan topološki prostor, najdemo gladko pot $\gamma \colon [0,1] \to \SL_2(\CC)$ z $\gamma(0) = I$, $\gamma(1) = A$. Ta pot je na kompaktne intervalu enakomerno zvezna, zato obstajajo indeksi $0 = t_0 < t_1 < \cdots < t_m = 1$, tako da za vsaka $t_i \leq s < t \leq t_{i+1}$ velja $\gamma(t) \gamma(s)^{-1} \in U$. S tem lahko zapišemo
 \[
-    A = \gamma(t_n)
+    A = \gamma(t_m)
     = \prod_{i = m}^1 \left( \gamma(t_i) \gamma(t_{i-1})^{-1} \right).
 \]
 Ker je $\gamma(t_i) \gamma(t_{i-1})^{-1} \in U$, kjer že imamo definiran $\rho$, lahko definicijo razširimo na $A$ s predpisom
@@ -4768,7 +4768,7 @@ Vzpostavili smo bijekcijo med analitičnimi upodobitvami grupe $\SL_2(\CC)$ in L
 Vsaka analitična nerazcepna končnorazsežna kompleksna upodobitev grupe $\SL_2(\CC)$ je izomorfna $\rho_k$ za nek $k \geq 0$.
 \end{posledica}
 
-Na grupo $\SL_2(\CC)$ bi lahko gledali kot na \emph{realno} grupo.\footnote{To je analogno temu, da na kompleksna števila $\CC$ gledamo kot na $\RR^2$.} V tem primeru bi njene \emph{gladke} upodobitve dobili iz Liejevih upodobitev njene Liejeve algebre $\slfrak_2(\CC)$, na katero bi gledali kot na \emph{realno} Liejevo algebro.\footnote{Opazovali bi torej Liejeve homomorfizme $\slfrak_2(\CC) \to \glfrak_n(\CC)$, ki so le $\RR$-linearni.} Teh upodobitev je nekoliko več. Vsako od upodobitev $T_I \rho_k$ lahko namreč še konjugiramo. Izkaže se, ni presenetljivo in ni težko, da vse nerazcepne realne Liejeve upodobitve dobimo kot tenzorske produkte teh.
+Na grupo $\SL_2(\CC)$ bi lahko gledali kot na \emph{realno} grupo.\footnote{To je analogno temu, da na kompleksna števila $\CC$ gledamo kot na $\RR^2$.} V tem primeru bi njene \emph{gladke} upodobitve dobili iz Liejevih upodobitev njene Liejeve algebre $\slfrak_2(\CC)$, na katero bi gledali kot na \emph{realno} Liejevo algebro.\footnote{Opazovali bi torej Liejeve homomorfizme $\slfrak_2(\CC) \to \glfrak_n(\CC)$, ki so le $\RR$-linearni.} Teh upodobitev je nekoliko več. Vsako od upodobitev $\rho_k$ lahko namreč še konjugiramo. Izkaže se, ni presenetljivo in ni težko, da vse nerazcepne realne Liejeve upodobitve dobimo kot tenzorske produkte teh.
 
 \begin{posledica}
 Vsaka gladka nerazcepna končnorazsežna kompleksna upodobitev grupe $\SL_2(\CC)$ je izomorfna $\rho_k \otimes \overline{\rho_{\ell}}$ za neka $k, \ell \geq 0$.
@@ -4788,9 +4788,9 @@ Opazujmo grupo $\SU_2(\CC)$. Njeni elementi so matrike oblike
         \beta & \overline{\alpha}
     \end{pmatrix}
 \]
-za $\alpha, \beta \in \CC^2$ z lastnostjo $|\alpha|^2 + |\beta|^2 = 1$. Podamo lahko torej homeomorfizem
+za $\alpha, \beta \in \CC$ z lastnostjo $|\alpha|^2 + |\beta|^2 = 1$. Podamo lahko torej homeomorfizem
 \[
-    S^3 \to \SU_2(\CC), \quad
+    S^3 \to {\textstyle \SU_2(\CC)}, \quad
     (a,b,c,d) \mapsto     
     \begin{pmatrix}
         a + i b & - c + i d \\
@@ -4799,7 +4799,7 @@ za $\alpha, \beta \in \CC^2$ z lastnostjo $|\alpha|^2 + |\beta|^2 = 1$. Podamo l
 \]
 zato je grupa $\SU_2(\CC)$ enostavno povezana realna Liejeva grupa. Podobno kot za grupo $\SL_2(\CC)$ se lahko prepričamo, da je Liejeva algebra $\sufrak_2(\CC)$ Liejeve grupe $\SU_2(\CC)$ enaka
     \[
-        \sufrak_2(\CC) = \left\{ \begin{pmatrix} i b & -c + i d \\ c + i d & - i b \\  \end{pmatrix} \mid b,c,d \in \RR \right\}.
+        {\textstyle \sufrak_2(\CC)} = \left\{ \begin{pmatrix} i b & -c + i d \\ c + i d & - i b \\  \end{pmatrix} \mid b,c,d \in \RR \right\}.
     \]
 Kot vektorski prostor je to $3$-razsežen realni vektorski prostor z bazo
 \[
@@ -4816,7 +4816,7 @@ Kot vektorski prostor je to $3$-razsežen realni vektorski prostor z bazo
 \]
 Grupa $\SU_2(\CC)$ deluje s konjugiranjem na $\sufrak_2(\CC)$. Na ta način dobimo upodobitev
 \[
-    \Ad \colon \SU_2(\CC) \to \GL(\sufrak_2(\CC)) \cong \GL_3(\RR).
+    \textstyle \Ad \colon \SU_2(\CC) \to \GL(\sufrak_2(\CC)) \cong \GL_3(\RR).
 \]
 
 \begin{domacanaloga}
@@ -4999,11 +4999,7 @@ in imamo $6$ enorazsežnih upodobitev grupe $\PSL_2(\ZZ)$.
 Oglejmo si sedaj še dvorazsežne upodobitve $\Rep_2$. Kot bomo videli, je teh \emph{neštevno mnogo}. Sistematično obravnavajmo vse možnosti za matriki $X,Y$. 
 
 \begin{enumerate}
-    \item Če je $X$ ali $Y$ skalarna matrika, potem lahko s konjugiranjem dosežemo, da sta obe matriki hkrati skalarni. V tem primeru dobimo možnosti
-    \[
-        (X,Y) \in \{ (\alpha I, \beta I) \mid \alpha \in \{ 1, -1 \}, \ \beta \in \{ 1, \zeta, \zeta^2 \} \}.
-    \]
-    Vse te upodobitve so seveda razcepne. Število vseh je $6$.
+    \item Če je $X$ ali $Y$ skalarna matrika, potem lahko s konjugiranjem dosežemo, da sta obe matriki hkrati diagonalni. Predpostavimo najprej, da je $X$ skalarna. Zaradi pogoja $X^2 = I$ to pomeni, da je $X = \alpha I$ za $\alpha \in \{ 1, -1 \}$. Po konjugiranju lahko dosežemo, da je $Y$ diagonalna matrika z diagonalnima členoma $a, b \in \{ 1, \zeta, \zeta^2 \}$ (upoštevajoč $Y^3 = I$). Imamo torej dve možnosti za $X$ in šest možnosti za $Y$. Oglejmo si zdaj še možnost, ko je $Y$ skalarna, $X$ pa ni skalarna. To pomeni $Y = \beta I$ za $\beta \in \{ 1, \zeta, \zeta^2 \}$. Po konjugiranju lahko dosežemo, da je $X$ diagonalna matrika z diagonalnima členoma $1, -1$ ($X$ ni skalarna in $X^2 = I$). Imamo torej tri možnosti za $Y$ in eno samo za $X$. Skupaj dobimo $15$ upodobitev. Vse te upodobitve so seveda razcepne.
 
     \item Če niti $X$ niti $Y$ nista skalarni matriki, potem imata obe dve različni lastni vrednosti. Po konjugiranju lahko matriki $X$, $Y$ zato zapišemo v obliki
     \[
@@ -5132,7 +5128,7 @@ s prehodnimi homomorfizmi $r_k \colon \SL_3(\ZZ/p^k\ZZ) \to \SL_3(\ZZ/p^{k-1}\ZZ
     = \SL_3(\varprojlim_{k \in \NN} \ZZ/p^k\ZZ)
     = \SL_3(\ZZ_p).
 \]
-Grupa $\SL_3(\ZZ_p)$ podeduje topologijo iz prostora $\ZZ_p^4$, zato je kompaktna topološka grupa. Ta grupa naravno vsebuje $\SL_3(\ZZ)$ in po definiciji je opremljena z zveznimi projekcijami v kongruenčne kvociente 
+Grupa $\SL_3(\ZZ_p)$ podeduje topologijo iz prostora $\ZZ_p^9$, zato je kompaktna topološka grupa. Ta grupa naravno vsebuje $\SL_3(\ZZ)$ in po definiciji je opremljena z zveznimi projekcijami v kongruenčne kvociente 
 \[
     \textstyle \widetilde{\pi_{p^k}} \colon \SL_3(\ZZ_p) \to \SL_3(\ZZ/p^k\ZZ)
 \]
@@ -5172,6 +5168,14 @@ Nazadnje lahko torej vse upodobitve grupe $\SL_3(\ZZ)$, ki se faktorizirajo prek
 \]
 ki jo označimo kot $\SL_3(\widehat{\ZZ})$.
 
+\begin{domacanaloga}
+Postojmo pri skrivnostnem objektu $\widehat{\ZZ}$. Za vsako praštevilo $p$ smo definirali kolobar $\ZZ_p$ kot inverzno limito kolobarjev $\ZZ/p^k\ZZ$ glede na naravne prehodne homomorfizme med temi končnimi kolobarji. Na soroden način definiramo kolobar $\widehat{\ZZ}$ kot inverzno limito končnih kolobarjev $\ZZ/n\ZZ$ za vse $n \in \NN$ glede na naravno prehodne homomorfizme med temi končnimi kolobarji (zdaj ti končni kolobarji niso več zloženi v vrsto, ampak v neko mrežo). Kolobar $\widehat{\ZZ}$ lahko gledamo kot podkolobar produkta $\prod_{n \in \NN} \ZZ/n\ZZ$, opremljenega s produktno topologijo. Kolobar celih števil $\ZZ$ se na naraven način vloži v $\widehat{\ZZ}$.
+
+S pomočjo Kitajskega izreka o ostankih se prepričaj, da imamo izomorfizem kolobarjev $\widehat{\ZZ} \cong \prod_{p \in \PP} \ZZ_p$, ki je hkrati homeomorfizem topoloških prostorov (pri čemer na desni uporabimo produktno topologijo).
+
+Premisli, da so obrnljivi elementi v $\widehat{\ZZ}$ ravno množica $\overline{\PP} \setminus \PP$, kjer smo s simbolom $\overline{\PP}$ označili topološko zaprtje množice vseh praštevil v $\widehat{\ZZ}$.
+\end{domacanaloga}
+
 \subsubsection{Nerazcepne upodobitve}
 
 Nerazcepne upodobitve grupe $\SL_3(\ZZ)$ lahko konstruiramo s pomočjo nerazcepnih upodobitev grupe $\SL_3(\widehat{\ZZ})$ ali pa kot restrikcijo nerazcepnih upodobitev običajne Liejeve grupe $\SL_3(\CC)$. Te upodobitve lahko tenzorsko množimo med sabo. Neverjetno je, da na ta način dobimo \emph{vse} nerazcepne upodobitve grupe $\SL_3(\ZZ)$. Konceptualno lahko to pojasnimo z naslednjo lastnostjo \emph{dviganja} upodobitev.
@@ -5192,7 +5196,7 @@ Naj bo $\rho \colon \SL_3(\ZZ) \to \GL_n(\CC)$ upodobitev. Tedaj obstaja polinom
 \begin{dokaz}[Ideja dokaza iz \href{https://zbmath.org/?q=an:0579.20038}{(Steinberg 1985)}]
 Grupa $\SL_3(\ZZ)$ je generirana z matrikami $T_{ij} = I + E_{ij}$ za $i \neq j$. Te matrike niso zelo blizu identitete v $\SL_3(\CC)$, zato jih ne moremo potisniti v Liejevo algebro $\slfrak_3(\CC)$ z logaritmom. Lahko pa vseeno formalno izračunamo njihov logaritem. Ker je $E_{ij}^2 = 0$, je $\log T_{ij} = E_{ij} \in \slfrak_3(\CC)$. Z nekaj računanja se prepričamo, da matrike $E_{ij}$ generirajo  Liejevo algebro $\slfrak_3(\CC)$.
 
-Nekaj podobnega lahko naredimo v sliki upodobitve $\rho$. Matrike $\rho(T_{ij})$ so daleč od identitete v $\GL_n(\CC)$. Vsako lahko zapišemo v Jordanski obliki kot produkt diagonalne matrike $\rho(T_{ij})_s$ (\emph{polenostavni del}) in matrike z enicami po diagonali $\rho(T_{ij})_u$ (\emph{unipotentni del}). Za unipotentni del velja $(\rho(T_{ij})_u - I)^n = I$, zato lahko izračunamo logaritem $\log \rho(T_{ij})_u \in \glfrak_n(\CC)$ z razvojem v končno Taylorjevo vrsto. Z nekaj računanja se prepričamo, da matrike $\log \rho(T_{ij})_u$ generirajo Liejevo algebro $\slfrak_3(\CC)$ znotraj $\glfrak_n(\CC)$. 
+Nekaj podobnega lahko naredimo v sliki upodobitve $\rho$. Matrike $\rho(T_{ij})$ so daleč od identitete v $\GL_n(\CC)$. Vsako lahko zapišemo v Jordanski obliki kot produkt diagonalne matrike $\rho(T_{ij})_s$ (\emph{polenostavni del}) in matrike z enicami po diagonali $\rho(T_{ij})_u$ (\emph{unipotentni del}). Za unipotentni del velja $(\rho(T_{ij})_u - I)^n = 0$, zato lahko izračunamo logaritem $\log \rho(T_{ij})_u \in \glfrak_n(\CC)$ z razvojem v končno Taylorjevo vrsto. Z nekaj računanja se prepričamo, da matrike $\log \rho(T_{ij})_u$ generirajo Liejevo algebro $\slfrak_3(\CC)$ znotraj $\glfrak_n(\CC)$. 
 
 Obe Liejevi algebri lahko povežemo z Liejevo upodobitvijo $\phi \colon \slfrak_3(\CC) \to \glfrak_n(\CC)$, ki jo definiramo kot $E_{ij} \mapsto \log \rho(T_{ij})_u$. To upodobitev pointegriramo do upodobitve grup $\tilde \rho \colon \SL_3(\CC) \to \GL_n(\CC)$. 
 
