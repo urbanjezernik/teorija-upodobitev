@@ -2528,7 +2528,7 @@ V posebnem lahko tvorimo endospletično $\Fcal(\youngsym / n_{\lambda})$ regular
 in pri tem so koeficienti razvoja racionalni. V bazi $B_{\lambda}$ ima torej vsaka matrika $\rho_{\fun}(g)$ za $g \in S_n$ racionalne koeficiente. Upodobitev $\rho_{\lambda}$ je torej definirana nad poljem $\QQ$.
 
 \begin{domacanaloga}
-Naj bo $G$ končna grupa z upodobitvijo nad $\QQ$. Dokaži, da obstaja baza vektorskega prostora, v kateri je dana upodobitev definirana nad $\ZZ$.
+Naj bo $G$ končna grupa z upodobitvijo nad $\QQ$. Dokaži, da obstaja baza vektorskega prostora, v kateri je dana upodobitev definirana nad $\ZZ$. Nasvet: izberi neko bazo prostora in jo povpreči z grupo $G$.
 \end{domacanaloga}
 
 \begin{posledica}
@@ -2947,6 +2947,7 @@ nerazcepni torus pa identificiramo kot\footnote{Element $x + \sqrt{\epsilon} y$ 
     \end{pmatrix}
     \mapsto x + \sqrt{\epsilon} y.
 \]
+Obe grupi, $\FF_p^*$ in $\FF_p(\sqrt{\epsilon})^*$, sta ciklični grupi. Prva je moči $p-1$, druga pa moči $p^2 - 1$. 
 
 \subsection{Tabela karakterjev, 1. del}
 
@@ -3146,9 +3147,9 @@ kar se poenostavi do
 \]
 Upodobitev $\Ind_{T_{nr}}^{G_p}(\theta)$ je torej daleč od nerazcepne.
 
-Pred nadaljevanjem postojmo pri pogoju $\theta = \theta^{\sigma}$, ki razdeli inducirane upodobitve na dva naravna razreda. Ta pogoj lahko enakovredno zapišemo kot $\theta(x) = \theta(x^{p})$ za vsak $x \in \FF_p(\sqrt{\epsilon})^*$, kar je enakovredno $\theta(x^{p-1}) = 1$. Vrednost $\theta$ je torej trivialna na množici $\{ x^{p-1} \mid x \in \FF_p(\sqrt{\epsilon})^* \}$, ki jo prepoznamo ravno kot jedro determinante $\ker(\det) = \{ x \in \FF_p(\sqrt{\epsilon})^* \mid x^{p+1} = 1 \}$. Pogoj $\theta = \theta^{\sigma}$ je torej enakovreden temu, da se $\theta$ \emph{faktorizira prek determinante}, se pravi da je oblike $\theta = \chi \circ \det$ za nek karakter $\chi \colon \FF_p^* \to \CC^*$. Vseh takih upodobitev je $p-1$. Upodobitve $\theta$, ki se \emph{ne} faktorizirajo prek determinante, torej za katere velja $\theta \neq \theta^{\sigma}$, se imenujejo {\definicija regularne}. Regularne upodobitve prihajajo torej v parih $(\theta, \theta^\sigma)$. Število Galoisjevih orbit regularnih upodobitev je zato enako $((p^2 - 1) - (p-1))/2 = p(p-1)/2$.
+Pred nadaljevanjem postojmo pri pogoju $\theta = \theta^{\sigma}$, ki razdeli inducirane upodobitve na dva naravna razreda. Ta pogoj lahko enakovredno zapišemo kot $\theta(x) = \theta(x^{p})$ za vsak $x \in \FF_p(\sqrt{\epsilon})^*$, kar je, ker je $\FF_p(\sqrt{\epsilon})^*$ ciklična grupa, enako kot $\theta(x^{p-1}) = 1$. Vrednost $\theta$ je torej trivialna na množici $\{ x^{p-1} \mid x \in \FF_p(\sqrt{\epsilon})^* \}$, ki jo prepoznamo ravno kot jedro determinante $\ker(\det) = \{ x \in \FF_p(\sqrt{\epsilon})^* \mid x^{p+1} = 1 \}$. Pogoj $\theta = \theta^{\sigma}$ je torej enakovreden temu, da se $\theta$ \emph{faktorizira prek determinante}, se pravi da je oblike $\theta = \chi \circ \det$ za nek karakter $\chi \colon \FF_p^* \to \CC^*$. Vseh takih upodobitev je $p-1$. Upodobitve $\theta$, ki se \emph{ne} faktorizirajo prek determinante, torej za katere velja $\theta \neq \theta^{\sigma}$, se imenujejo {\definicija regularne}. Regularne upodobitve prihajajo torej v parih $(\theta, \theta^\sigma)$. Število Galoisjevih orbit regularnih upodobitev je zato enako $((p^2 - 1) - (p-1))/2 = p(p-1)/2$.
 
-Glede na to, da inducirana upodobitev iz nerazcepnega torusa ni nerazcepna, lahko poskusimo inducirati še iz kakšne druge podgrupe. Naravni kandidat, ki nam še preostane, je centralizator nediagonalizabilnega elementa, se pravi grupa $C_p = S_p \times U_p$. Ta sestoji iz vseh elementov v $G_p$, katerih karakteristični polinom ima dvojno ničlo v $\FF_p$. Izberimo upodobitvi
+Glede na to, da inducirana upodobitev iz nerazcepnega torusa ni nerazcepna, lahko poskusimo inducirati še iz kakšne druge podgrupe. Naravni kandidat, ki nam še preostane, je centralizator nediagonalizabilnega elementa, se pravi grupa $C_p = S_p \times U_p$. Izberimo upodobitvi
 \[
     \chi \colon S_p \cong \FF_p^* \to \CC^*, \quad
     \psi \colon U_p \cong \FF_p \to \CC^*
@@ -3229,7 +3230,7 @@ kar prepoznamo kot
 Po že opravljenih računih je norma tega virtualnega karakterja res minimalna,
 \[
     \textstyle \langle \zeta_{\theta}, \zeta_{\theta} \rangle 
-    = ||\Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi)||^2 + ||\Ind_{T_{nr}}^{G_p}(\theta)||^2 - 2 \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\chi \times \psi) \rangle = 1.
+    = ||\Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi)||^2 + ||\Ind_{T_{nr}}^{G_p}(\theta)||^2 - 2 \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi) \rangle = 1.
 \]
 Torej je bodisi $\zeta_{\theta}$ bodisi $-\zeta_{\theta}$ nerazcepen karakter. Ker velja $\zeta_{\theta}(1) = p-1$, je $\zeta_{\theta}$ nerazcepen karakter.
 
@@ -3482,7 +3483,7 @@ S pomočjo razčlenitve množice $\FF_p$ torej sklepamo
 kjer smo v vsakem $P_i$ izbrali nek element $x_0$. Po trikotniški neenakosti in upoštevanju približne konstantnosti funkcije $x \mapsto \zeta^{-jx}$ na $P_i$ lahko zadnjo vsoto omejimo navzgor kot
 \[
     \sum_{i = 1}^m \left| \sum_{x \in P_i} f(x) \right| + 
-    \sum_{i = 1}^m \left| \sum_{x \in P_i} f(x) \right| c \delta^2
+    \sum_{i = 1}^m \sum_{x \in P_i} | f(x) | c \delta^2
     \leq \sum_{i = 1}^m \left| \sum_{x \in P_i} f(x) \right| + c p \delta^2.
 \]
 S tem nazadnje dobimo neenakost
@@ -3723,7 +3724,7 @@ Funkcijo $N$ bomo prepisali v malo bolj nenavadno obliko, ki pa nam bo dobro slu
     \psi \colon \{ (x,y) \in G \times G \mid g = [x,y] \} \to 
     \{ (\conclass, a, b) \mid \conclass = (a^{-1})^G, \ b \in \conclass,\ a \cdot b = g \}.
 \]
-To prirejanje \emph{ni} injektivno, saj s trojico $(\conclass,a,b)$ element $y$ ni enolično določen, pač pa le do odseka po centralizatorju $C_G(a^{-1}) = C_G(a)$ natančno.\footnote{Velja namreč zveza $b = y^{-1} a^{1} y$.} Torej je $|\psi^{-1}(\conclass,a,b)| = |C_G(a)| = |G|/|\conclass|$. S tem lahko izrazimo
+To prirejanje \emph{ni} injektivno, saj s trojico $(\conclass,a,b)$ element $y$ ni enolično določen, pač pa le do odseka po centralizatorju $C_G(a^{-1}) = C_G(a)$ natančno.\footnote{Velja namreč zveza $b = y^{-1} a^{-1} y$.} Torej je $|\psi^{-1}(\conclass,a,b)| = |C_G(a)| = |G|/|\conclass|$. S tem lahko izrazimo
 \[
     N(g) = \sum_{\conclass} \frac{|G|}{|\conclass|} \cdot |\{ (a,b) \in G \times G \mid a \in \conclass^{-1}, \ b \in \conclass, \ a \cdot b = g \}|,
 \]
@@ -3972,7 +3973,7 @@ Naj bo $G$ končna grupa z generirajočo množico $S$ in operatorjem Markova $M$
 \end{domacanaloga}
 
 \begin{domacanaloga}
-Naj bo $p$ praštevilo in  $S \subseteq \FF_p$ z $|S| < p$. Za vsak $i \in \FF_p$ naj bo $R_i$ število rešitev enačbe $x_1 + x_2 + \cdots + x_p = i$, kjer so vse spremenljivke v $S$. Dokaži, da je $R_i / |S|^p = \mu_p(i)$, kjer je $\mu_p$ porazdelitvena funkcija slučajnega sprehoda v grupi $\FF_p$ z množico $S$. Sklepaj, da je $R_0 \equiv |S| \pmod{p}$ in $R_i \equiv 0 \pmod{p}$ za $i \neq 0$.\footnote{S tem si le slučajni korak stran od rešitve \href{https://www.imc-math.org.uk/imc2022/imc2022day1questions.pdf}{naloge I/3} s tekmovanja IMC 2022.}
+Naj bo $p$ praštevilo in $S \subseteq \FF_p$. Za vsak $i \in \FF_p$ naj bo $R_i$ število rešitev enačbe $x_1 + x_2 + \cdots + x_p = i$, kjer so vse spremenljivke v $S$. Dokaži, da je $R_i / |S|^p = \mu_p(i)$, kjer je $\mu_p$ porazdelitvena funkcija slučajnega sprehoda v grupi $\FF_p$ z množico $S$. Sklepaj, da je $R_0 \equiv |S| \pmod{p}$ in $R_i \equiv 0 \pmod{p}$ za $i \neq 0$.\footnote{S tem si le slučajni korak stran od rešitve \href{https://www.imc-math.org.uk/imc2022/imc2022day1questions.pdf}{naloge I/3} s tekmovanja IMC 2022.}
 \end{domacanaloga}    
 
 \subsection{Slučajni sprehod s konjugiranostnim razredom}
@@ -4026,7 +4027,7 @@ Za konkretne grupe lahko s tabelo karakterjev ali upoštevanjem kakšnih dodatni
 Naj bo $G$ nekomutativna končna enostavna grupa. Dokaži, da vsak netrivialen konjugiranostni razred $\conclass$ generira $G$ in da velja $X_{\conclass} = \{ \11 \}$. Sklepaj, da je $\lim_{n \to \infty} \mu_n = U_G$.
 \end{domacanaloga}
 
-Napako pri aproksimaciji porazdelitev $\mu_n$ in vsoto prispevkov po $X_{\conclass}$ izrazimo s pomočjo norme $||f||_1 = \sum_{g \in G} |f(g)|$ za funkcijo $f \in \fun(G,\CC)$.\footnote{Za primerjavo porazdelitev ne uporabljamo standardne norme $||f|| = \langle f, f \rangle^{1/2}$, ampak normo $||f||_1$. Razlog za to je naslednji. Opazujmo družino simetričnih grup $S_n$. Potem je $||U_{A_n} - U_{S_n}||^2 = 1/|S_n|^2$, kar konvergira k $0$ za $n \to \infty$, čeprav sta porazdelitvi očitno različni. Norma $||\cdot||_1$ nima te pomanjkljivosti; velja $||U_{A_n} - U_{S_n}||_1 = 1$.} Naj bo $0 < \theta < 1$ konstanta. {\definicija Čas mešanja}\footnote{Rečemo tudi, da se slučajni sprehod {\definicija dobro premeša} po času $t_{mix}(\theta)$. Ta koncept je seveda odvisen od izbire konstante $\theta$, a ponavadi za $\theta$ vzamemo kar neko majhno konstanto, na primer $\theta = 10^{-2}$.} $t_{mix}(\theta)$ je  najmanjše število $n$, pri katerem je 
+Napako pri aproksimaciji porazdelitev $\mu_n$ in vsoto prispevkov po $X_{\conclass}$ izrazimo s pomočjo norme $||f||_1 = \sum_{g \in G} |f(g)|$ za funkcijo $f \in \fun(G,\CC)$.\footnote{Za primerjavo porazdelitev ne uporabljamo standardne norme $||f|| = \langle f, f \rangle^{1/2}$, ampak normo $||f||_1$. Razlog za to je naslednji. Opazujmo družino simetričnih grup $S_n$. Potem je $||U_{A_n} - U_{S_n}||^2 = 1/|S_n|$, kar konvergira k $0$ za $n \to \infty$, čeprav sta porazdelitvi očitno različni. Norma $||\cdot||_1$ nima te pomanjkljivosti; velja $||U_{A_n} - U_{S_n}||_1 = 1$.} Naj bo $0 < \theta < 1$ konstanta. {\definicija Čas mešanja}\footnote{Rečemo tudi, da se slučajni sprehod {\definicija dobro premeša} po času $t_{mix}(\theta)$. Ta koncept je seveda odvisen od izbire konstante $\theta$, a ponavadi za $\theta$ vzamemo kar neko majhno konstanto, na primer $\theta = 10^{-2}$.} $t_{mix}(\theta)$ je  najmanjše število $n$, pri katerem je 
 \[
     || \mu_n -  \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi} ||_1  \leq \theta.
 \]
@@ -4078,7 +4079,7 @@ kjer je $\delta$ generator ciklične grupe obrnljivih elementov končnega polja 
 
 Preverimo najprej, da množica $\conclass$ res generira $G_p$. Ker je $G_p$ končna grupa, velja $A^{-1} \in \langle \conclass \rangle$ in zato je vsaka matrika, ki je podobna $A^{-1}$, tudi v $\langle \conclass \rangle$. S tem velja
 \[
-    [S_+, A] = (S_+^{-1} A^{-1} S_+) A  = S_+^{\delta^{-1} + 1}
+    [S_+, A] = (S_+^{-1} A^{-1} S_+) A  = S_+^{\delta^{-1} - 1}
     \in \langle \conclass \rangle.
 \]
 Ker je $p > 3$, je $\delta \neq \pm 1$, zato dobimo $S_+ \in \langle \conclass \rangle$. Sorodno sklepamo za matriko $S_-$. S tem dobimo
@@ -4300,7 +4301,7 @@ za vsaka $x,y \in \RR$. Ker je $X^\prime = \chi$, seveda obstaja $y_0 \in \RR$, 
 Ker je funkcija na desni odvedljiva, velja enako tudi za funkcijo na levi.
 \end{dokaz}
 
-Iz trditve izpeljemo, da vsaka zvezna upodobitev $\RR/\ZZ \to \CC^*$ izhaja iz upodobitve $\chi_{\zeta}$ za nek $\zeta$. Pri tem mora biti $\ZZ \leq \ker \chi_{\zeta}$, od koder sledi $\zeta = 2 \pi k$ za nek $k \in \ZZ$. Upodobitve $\chi_k$ torej izčrpajo vse končnorazsežne kompleksne upodobitve grupe $\RR/\ZZ$. Te upodobitve so vse tudi unitarne, kar ni naključje, kot bomo pojasnili nekoliko kasneje.
+Iz trditve izpeljemo, da vsaka zvezna upodobitev $\RR/\ZZ \to \CC^*$ izhaja iz upodobitve $\chi_{\zeta}$ za nek $\zeta$. Pri tem mora biti $\ZZ \leq \ker \chi_{\zeta}$, od koder sledi $\zeta = 2 \pi i k$ za nek $k \in \ZZ$. Upodobitve $\chi_k$ torej izčrpajo vse končnorazsežne kompleksne upodobitve grupe $\RR/\ZZ$. Te upodobitve so vse tudi unitarne, kar ni naključje, kot bomo pojasnili nekoliko kasneje.
 
 \subsubsection{Fourierova analiza}
 
@@ -4328,7 +4329,7 @@ torej lahko $f$ razvijemo v Fourierovo vrsto.\footnote{Pri tem moramo biti nekol
 \[
   ||f||^2 = \sum_{k \in \ZZ} |\langle f, \chi_k \rangle|^2.
 \]
-Upodobitve $\chi_k$ za $k \in \ZZ$ torej tvorijo ortonormiran sistem funkcij, ki je \emph{gost} v prostoru vseh dovolj lepih funkcij funkcij na $\RR/\ZZ$. 
+Upodobitve $\chi_k$ za $k \in \ZZ$ torej tvorijo ortonormiran sistem funkcij, ki je \emph{gost} v prostoru vseh dovolj lepih funkcij na $\RR/\ZZ$. 
 
 Fourierovo analizo lahko torej vidimo kot analog dekompozicije regularne upodobitve v primeru končnih grup za neskončno grupo $\RR/\ZZ$.
 
@@ -4353,7 +4354,7 @@ Naj bo $\rho \colon G \to \GL(V)$ upodobitev. Izberemo poljuben skalarni produkt
 Ni težko preveriti, da je $\langle \cdot, \cdot \rangle_0$ skalarni produkt na $V$, glede na katerega je $\rho$ unitarna upodobitev.
 \end{dokaz}
 
-Kot v primeru $\RR/\ZZ$ lahko vse upodobitve najdemo v ustreznem modelu regularne upodobitve. V splošnem opazujemo funkcije na kompaktni grupi $G$, pri čemer se omejimo na prostor kvadratno integrabilnih merljive funkcije in še te opazujemo le do ekvivalence \emph{skoraj povsod} natančno. Prostor ekvivalenčnih razredov takih funkcij je $L^2(G)$. Na tem prostoru deluje grupa $G$ kot regularna upodobitev,
+Kot v primeru $\RR/\ZZ$ lahko vse upodobitve najdemo v ustreznem modelu regularne upodobitve. V splošnem opazujemo funkcije na kompaktni grupi $G$, pri čemer se omejimo na prostor kvadratno integrabilnih merljivih funkcij in še te opazujemo le do ekvivalence \emph{skoraj povsod} natančno. Prostor ekvivalenčnih razredov takih funkcij je $L^2(G)$. Na tem prostoru deluje grupa $G$ kot regularna upodobitev,
 \[
     \rho(g) \cdot f = x \mapsto f(x g).
 \]
@@ -4428,7 +4429,7 @@ Kot v obravnavi upodobitev splošne linearne grupe nad končnim poljem si oglejm
         \lambda \in \CC^*
     \right\} \cong \CC^*.
 \]
-Upodobitev $\rho_k$ zožimo na $T$. Ker je $\CC^*$ abelova grupa, a priori vemo, da je ta zožitev direktna vsota enorazsežnih upodobitev. Te dekompozicije ni težko razumeti, saj velja
+Upodobitev $\rho_k$ zožimo na $T$. Velja
 \[
     \rho_k \begin{pmatrix}
         \lambda & 0 \\ 0 & \lambda^{-1}
@@ -4494,7 +4495,7 @@ Pot $\gamma$ je torej gladka pot v $\GL_n(\CC)$ z začetno vrednostjo $\gamma(0)
 Eksponentna preslikava $e \colon \glfrak_n(\CC) \to \GL_n(\CC)$ je difeomorfizem v neki okolici $0$.
 \end{trditev}
 \begin{dokaz}
-Po izreku o inverzni preslikavi bo dovolj preveriti, da je linearna preslikava $D_0 e$ polnega ranga. Za poljuben $X \in \glfrak_n(\CC)$ naj bo $\lambda \colon \RR \to \glfrak_n(\CC)$, $t \mapsto tX$ in naj bo $\gamma = e \circ \lambda$. Po verižnem pravilu velja
+Na vsaki kompaktni podmnožici $\Omega \subseteq \glfrak_n(\CC)$ je vsak člen matrike $X$ absolutno omejen, recimo z $\alpha$, zato je tudi vsak člen matrike $X^k$ omejen z $n^{k-1} \alpha^k$. Po Weierstrassovem M-testu zato vrsta, ki definira eksponentno preslikavo, enakomerno konvergentna po kompaktih v $\glfrak_n(\CC)$. Delne vsote te vrste $\sum_{i = 0}^{k} X^i / i!$ so polinomske funkcije, zato so odvedljive. Iz povedanega sledi, da je eksponentna preslikava diferenciabilna v okolici $0$. Po izreku o inverzni preslikavi bo zdaj dovolj preveriti, da je linearna preslikava $D_0 e$ polnega ranga. Za poljuben $X \in \glfrak_n(\CC)$ naj bo $\lambda \colon \RR \to \glfrak_n(\CC)$, $t \mapsto tX$ in naj bo $\gamma = e \circ \lambda$. Po verižnem pravilu velja
 \[
     D_0 e \cdot X
     = D_0 e \cdot D_0 \lambda
@@ -4571,7 +4572,7 @@ na enak način izračunamo
     E_k \cdot e_i = (k-i) e_{i+1}, \quad
     F_k \cdot e_i = i e_{i-1}.
 \]
-Element $H_k$ torej deluje diagonalno na $\CC[X,Y]_k$, pri čemer ima vektor $e_k = Y^k$ največjo lastno vrednost, in sicer $k$. Ta vektor je v jedru preslikave $E_k$, z zaporednimi aplikacijami preslikave $F_k$ pa iz njega po vrsti dobimo vse ostale bazne vektorje $e_i$ za $0 \leq i \leq k$.
+Element $H_k$ torej deluje diagonalno na $\CC[X,Y]_k$, pri čemer ima vektor $e_k = X^k$ največjo lastno vrednost, in sicer $k$. Ta vektor je v jedru preslikave $E_k$, z zaporednimi aplikacijami preslikave $F_k$ pa iz njega po vrsti dobimo vse ostale bazne vektorje $e_i$ za $0 \leq i \leq k$.
 \end{zgled}
 
 \subsubsection{Liejeva algebra}
@@ -4645,7 +4646,7 @@ Naj bo $\lambda$ lastna vrednost $H$ in $v$ pripadajoči lastni vektor. Velja
 \[
     HEv = [H,E]v + EHv = 2 E v + \lambda E v = (\lambda + 2) Ev,
 \]
-zato je $E \cdot \Eigenspace_{\lambda}(H) \in \Eigenspace_{\lambda + 2}(H)$. Podobno velja $F \cdot \Eigenspace_{\lambda}(H) \in \Eigenspace_{\lambda - 2}(H)$. 
+zato je $E \cdot \Eigenspace_{\lambda}(H) \subseteq \Eigenspace_{\lambda + 2}(H)$. Podobno velja $F \cdot \Eigenspace_{\lambda}(H) \subseteq \Eigenspace_{\lambda - 2}(H)$. 
 
 Izberimo lastno vrednost $\lambda$ preslikave $H$ z največjo možno realno komponento.
 Iz maksimalnosti $\lambda$ sledi $Ev \in \Eigenspace_{\lambda + 2}(H) = 0$. Naj bo $v_i = F^i v$ za $i \geq 0$.\footnote{Vektor $v$ torej \emph{potisnemo navzdol} s $F$.} Velja $v_i \in \Eigenspace_{\lambda - 2i}(H)$. Za nek $n \geq 0$ velja torej $v_n \neq 0$ in $v_{n+1} = 0$. Vektorji $v_0, v_1, \dots, v_n$ so v različnih lastnih podprostorih $H$, zato so linearno neodvisni. Naj bo $W \leq V$ podprostor, ki ga generirajo.
@@ -4742,7 +4743,7 @@ Ker je $\gamma(t_i) \gamma(t_{i-1})^{-1} \in U$, kjer že imamo definiran $\rho$
 \]
 Seveda moramo preveriti, da je ta definicija neodvisna od izbire delilnih točk $t_0, t_1, \dots, t_m$ in od izbire poti $\gamma$. 
 
-Prepričajmo se najprej, da z isto potjo $\gamma$ drugačna izbira delilnih točk privede do enakega rezultata, če je le zadoščeno pogoju $\gamma(t) \gamma(s)^{-1} \in U$ za vsaka $t_i \leq s < t \leq t_{i+1}$. V ta namen bo dovolj premisliti, da se definicija $\rho(A)$ ne spremeni, če pofinimo izbiro delilnih točk, se pravi če dodamo še nekaj dodatnih točk.\footnote{Vsaki dve izbiri delilnih točk imata namreč skupno pofinitev. Ta sklep je podoben kot pri definiciji Riemannovega integrala.} V ta namen bo dovolj preveriti, da se definicija $\rho(A)$ ne spremeni, če dodamo eno samo dodatno delilno točko, na primer med $t_i$ in $t_{i-1}$ vrinemo nek $s$. V tem primeru se v definiciji $\rho(A)$ spremeni le faktor $\rho(\gamma(t_i) \gamma(t_{i-1})^{-1})$, in sicer ga zamenjamo s produktom
+Prepričajmo se najprej, da z isto potjo $\gamma$ drugačna izbira delilnih točk privede do enakega rezultata, če je le zadoščeno pogoju $\gamma(t) \gamma(s)^{-1} \in U$ za vsaka $t_i \leq s < t \leq t_{i+1}$. V ta namen bo dovolj premisliti, da se definicija $\rho(A)$ ne spremeni, če pofinimo izbiro delilnih točk, se pravi če dodamo še nekaj dodatnih točk.\footnote{Vsaki dve izbiri delilnih točk imata namreč skupno pofinitev. Ta sklep je podoben kot pri definiciji Riemannovega integrala.} Za to pa bo dovolj preveriti, da se definicija $\rho(A)$ ne spremeni, če dodamo eno samo dodatno delilno točko, na primer med $t_i$ in $t_{i-1}$ vrinemo nek $s$. V tem primeru se v definiciji $\rho(A)$ spremeni le faktor $\rho(\gamma(t_i) \gamma(t_{i-1})^{-1})$, in sicer ga zamenjamo s produktom
 \[
     \rho(\gamma(t_i) \gamma(s)^{-1}) 
     \rho(\gamma(s) \gamma(t_{i-1})^{-1}).
@@ -4803,7 +4804,7 @@ zato je grupa $\SU_2(\CC)$ enostavno povezana realna Liejeva grupa. Podobno kot 
 Kot vektorski prostor je to $3$-razsežen realni vektorski prostor z bazo
 \[
     \begin{pmatrix}
-        i & 0 \\ 0 & -1
+        i & 0 \\ 0 & -i
     \end{pmatrix}, \quad
     \begin{pmatrix}
         0 & -1 \\
@@ -4948,13 +4949,13 @@ Jasno ima vsak element tak zapis, saj $a,b$ generirata $\PSL_2(\ZZ)$ in velja $a
     AB = \begin{pmatrix}
         -1 & -1 \\ 0 & -1
     \end{pmatrix}
-    = - U_+, \quad
+    = - S_+, \quad
     AB^2 = \begin{pmatrix}
         -1 & 0 \\ -1 & -1
     \end{pmatrix}
-    = - U_-,
+    = - S_-,
 \]
-zato je v $\SL_2(\ZZ)$ neka beseda v $U_+, U_-$ dolžine $n \geq 2$ enaka $\pm I$. To pa je protislovje, saj se pri množenju matrik $U_+, U_-$ vsota vseh koeficientov matrike povečuje, torej zagotovo ne moremo dobiti matrike $\pm I$.
+zato je v $\SL_2(\ZZ)$ neka beseda v $S_+, S_-$ dolžine $n \geq 2$ enaka $\pm I$. To pa je protislovje, saj se pri množenju matrik $S_+, S_-$ vsota vseh koeficientov matrike povečuje, torej zagotovo ne moremo dobiti matrike $\pm I$.
 \end{dokaz}
 
 \subsubsection{Upodobitve}
@@ -4982,7 +4983,7 @@ Prepričaj se, da za \emph{nobeno} število $N \geq 2$ ne velja, da se homomorfi
 
 Grupa $\SL_2(\ZZ)$ ima torej končne kvociente $\PSL_2(\FF_p)$ in $A_n$, ki tvorijo standardne predstavnike končnih enostavnih grup. Vsaka od teh končnih grup nam da svoje nerazcepne upodobitve, s čimer po restrikciji dobimo mnogo različnih nerazcepnih upodobitev grupe $\SL_2(\ZZ)$. Teorija upodobitev grupe $\SL_2(\ZZ)$ bo torej zajemala bolj ali manj vso kompleksnost teorije upodobitev končnih enostavnih grup. Težko si je predstavljati, kako vse te spraviti pod eno streho.
 
-Obravnave vseh upodobitev se lotimo sistematično po razsežnostih. Vsaka $n$-razsežna kompleksna upodobitev je določena z izbiro matrik $X,Y \in \GL_n(\CC)$ z lastnostjo $X^2 = Y^3 = I$.Upodobitve nas zanimajo le do izomorfizma natančno, kar pomeni, da moramo za razumevanje izomorfnostnih razredov upodobitev razumeti kvocientno množico
+Obravnave vseh upodobitev se lotimo sistematično po razsežnostih. Vsaka $n$-razsežna kompleksna upodobitev je določena z izbiro matrik $X,Y \in \GL_n(\CC)$ z lastnostjo $X^2 = Y^3 = I$. Upodobitve nas zanimajo le do izomorfizma natančno, kar pomeni, da moramo za razumevanje izomorfnostnih razredov upodobitev razumeti kvocientno množico
 \[
     {\textstyle \Rep_n} = \frac{\{ (X, Y) \in \GL_n(\CC) \times \GL_n(\CC) \mid X^2 = Y^3 = I \}}
     {\GL_n(\CC)},
@@ -5162,7 +5163,7 @@ Vse upodobitve kongruenčnih kvocientov grupe $\SL_3(\ZZ)$ lahko torej zajamemo 
 Vsaka zvezna končnorazsežna kompleksna upodobitev grupe $\SL_3(\ZZ_p)$ se faktorizira prek $\widetilde{\pi_{p^k}}$ za nek $k \in \NN$.
 \end{trditev}
 \begin{dokaz}
-Naj bo $\rho \colon \SL_3(\ZZ_p) \to \GL_n(\CC)$ zvezna upodobitev. Naj bo $U$ odprta okolica enote v $\GL_n(\CC)$, ki ne vsebuje netrivialnih podgrup. Praslika $\rho^{-1}(U)$ je odprta okolica enote v $\SL_3(\ZZ_p)$, zato vsebuje neko kongruenčno jedro $\widetilde{\pi_{p^k}}$. Slika $\rho(\widetilde{\pi_{p^k}})$ je podgrupa v $U$, zato je trivialna. Jedro $\ker \rho$ torej vsebuje to kongruenčno jedro.
+Naj bo $\rho \colon \SL_3(\ZZ_p) \to \GL_n(\CC)$ zvezna upodobitev. Naj bo $U$ odprta okolica enote v $\GL_n(\CC)$, ki ne vsebuje netrivialnih podgrup. Praslika $\rho^{-1}(U)$ je odprta okolica enote v $\SL_3(\ZZ_p)$, zato vsebuje neko kongruenčno jedro $\ker \widetilde{\pi_{p^k}}$. Slika $\rho(\ker \widetilde{\pi_{p^k}})$ je podgrupa v $U$, zato je trivialna. Jedro $\ker \rho$ torej vsebuje to kongruenčno jedro.
 \end{dokaz}
 
 Nazadnje lahko torej vse upodobitve grupe $\SL_3(\ZZ)$, ki se faktorizirajo prek upodobitev končnih grup, razumemo kot zožitve zveznih upodobitev produktov $p$-adičnih grup po vseh praštevilih $p$, se pravi zveznih upodobitev grupe
