@@ -29,6 +29,8 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  baseurl: /teorija-upodobitev/
+
 
 myst_enable_extensions:
   - dollarmath
@@ -46,6 +48,7 @@ sphinx:
       use_sidenotes: true      # <-- activates margin/sidenotes
       # secondary_sidebar_items: []  
       show_nav_level: 2          # <- expand headings down to <h2>
+      show_toc_level: 2
     html_sidebars:
       "**":                              # match every page
         # - search-field.html       # 🔍  built-in search input
