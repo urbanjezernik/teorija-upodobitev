@@ -1,0 +1,1321 @@
+
+<!DOCTYPE html>
+
+
+<html lang="sl" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Razširjeni zgledi – končni &#8212; Teorija upodobitev</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=40923982" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=a3a20203"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=852ec8ec"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"tex": {"macros": {"NN": "\\mathbf{N}", "ZZ": "\\mathbf{Z}", "QQ": "\\mathbf{Q}", "RR": "\\mathbf{R}", "CC": "\\mathbf{C}", "FF": "\\mathbf{F}", "EE": "\\mathbf{E}", "PP": "\\mathbf{P}", "HH": "\\mathbf{H}", "oneone": "\\mathbf{1}", "Fcal": "\\mathcal{F}", "conclass": "\\mathcal{C}", "image": "\\operatorname{im}", "sgn": "\\operatorname{sgn}", "Res": "\\operatorname{Res}", "Ind": "\\operatorname{Ind}", "Rep": "\\operatorname{Rep}", "mult": "\\operatorname{mult}", "Izotip": "\\operatorname{Izotip}", "MK": "\\operatorname{MK}", "tr": "\\operatorname{tr}", "Irr": "\\operatorname{Irr}", "SU": "\\mathrm{SU}", "characteristic": "\\operatorname{char}", "kk": "\\operatorname{k}", "cl": "\\operatorname{cl}", "inv": "\\operatorname{inv}", "Eigenvalues": "\\operatorname{Spec}", "Eigenspace": "\\operatorname{LP}", "fun": "\\operatorname{fun}", "HS": "\\operatorname{HS}", "St": "\\operatorname{St}", "Realpart": "\\operatorname{Re}", "Aut": "\\operatorname{Aut}", "GL": "\\operatorname{GL}", "SL": "\\operatorname{SL}", "PSL": "\\operatorname{PSL}", "U": "\\operatorname{U}", "SO": "\\operatorname{SO}", "Gal": "\\operatorname{Gal}", "Sym": "\\operatorname{Sym}", "Homeo": "\\operatorname{Homeo}", "Cay": "\\operatorname{Cay}", "Isom": "\\operatorname{Isom}", "id": "\\operatorname{id}", "supp": "\\operatorname{supp}", "End": "\\operatorname{End}", "Mat": "\\operatorname{Mat}", "Cone": "\\operatorname{Cone}", "diam": "\\operatorname{diam}", "Ad": "\\operatorname{Ad}", "imaginary": "\\operatorname{Im}", "glfrak": "\\mathfrak{gl}", "slfrak": "\\mathfrak{sl}", "sufrak": "\\mathfrak{su}", "GAP": ["\\texttt{GAP}", 0], "youngsym": "\\sigma_{\\lambda}", "mat": ["\\begin{pmatrix} #1 & #2\\\\ #3 & #4 \\end{pmatrix}", 4]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/chapter04';</script>
+    <script src="../_static/bs-table-wrapper.js?v=8f7ea02a"></script>
+    <script src="../_static/fix-pipe-tables.js?v=5aeff36a"></script>
+    <link rel="index" title="Abecedni seznam" href="../genindex.html" />
+    <link rel="search" title="Išči" href="../search.html" />
+    <link rel="next" title="Aplikacije" href="chapter05.html" />
+    <link rel="prev" title="Upodobitve končnih grup" href="chapter03.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="sl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Teorija upodobitev
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter01.html">Temelji teorije upodobitev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter02.html">Upodobitev pod mikroskopom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter03.html">Upodobitve končnih grup</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Razširjeni zgledi – končni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter05.html">Aplikacije</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter06.html">Razširjeni zgledi – neskončni</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Prenesite to stran">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/chapter04.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Prenesite izvorno datoteko"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Natisni v PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Celozaslonski način"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Razširjeni zgledi – končni</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Vsebina </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simetricne-grupe">Simetrične grupe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nerazcepne-upodobitve">Nerazcepne upodobitve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vrednosti-karakterjev">Vrednosti karakterjev</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternirajoce-grupe">Alternirajoče grupe</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#splosne-linearne-grupe">Splošne linearne grupe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#osnovne-poteze">Osnovne poteze</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konjugiranostni-razredi">Konjugiranostni razredi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabela-karakterjev-1-del">Tabela karakterjev, 1. del</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabela-karakterjev-2-del">Tabela karakterjev, 2. del</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrike-visjih-razseznosti">Matrike višjih razsežnosti</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <style>
+  body { counter-reset: chapter 3 izrek 0 zgled 0 domacanaloga 0
+                 lema 0 trditev 0 definicija 0 dokaz 0; }
+</style><section class="tex2jax_ignore mathjax_ignore" id="razsirjeni-zgledi-koncni">
+<h1>Razširjeni zgledi – končni<a class="headerlink" href="#razsirjeni-zgledi-koncni" title="Link to this heading">#</a></h1>
+<p>Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo na voljo tabelo karakterjev, izračun te pa je končen problem. S tem smo za konkretne končne grupe dosegli ultimativen cilj teorije upodobitev. Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves ne spregledamo gozda. Grupe namreč praviloma ne nastopajo posamično, temveč kot del večjih družin.<label for='sidenote-role-1' class='margin-toggle'><span id="id1">
+<sup>1</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-1' name='sidenote-role-1' class='margin-toggle'><span class="sidenote"><sup>1</sup>Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, …</span> V tem poglavju si bomo podrobneje pogledali dve temeljni družini grup, in sicer simetrične grupe ter splošne linearne grupe nad končnim poljem.<label for='sidenote-role-2' class='margin-toggle'><span id="id2">
+<sup>2</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-2' name='sidenote-role-2' class='margin-toggle'><span class="sidenote"><sup>2</sup>Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, treh neskončnih družin, in sicer cikličnih grup praštevilske moči <span class="math notranslate nohighlight">\(\ZZ/p\ZZ\)</span>, alternirajočih grup <span class="math notranslate nohighlight">\(A_n\)</span> in različnih matričnih grup nad končnimi polji, na primer <span class="math notranslate nohighlight">\(\SL_n(\FF_p)/Z(\SL_n(\FF_p))\)</span>. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev nekomutativnih končnih enostavnih grup.</span> Njuno teorijo upodobitev bomo obravnavali celostno.</p>
+<section id="simetricne-grupe">
+<h2>Simetrične grupe<a class="headerlink" href="#simetricne-grupe" title="Link to this heading">#</a></h2>
+<p>Opazujmo simetrično grupo <span class="math notranslate nohighlight">\(S_n\)</span> za <span class="math notranslate nohighlight">\(n \in \NN\)</span> nad poljem <span class="math notranslate nohighlight">\(\CC\)</span>. Ogledali smo si že tabele karakterjev za <span class="math notranslate nohighlight">\(n \leq 4\)</span> in razložili, da je število nerazcepnih upodobitev enako številu konjugiranostnih razredov, to pa je enako številu razčlenitev <span class="math notranslate nohighlight">\(p(n)\)</span>. Družina simetričnih grup je posebna, saj zanjo presenetljivo obstaja eksplicitna korespondenca med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Iz dane razčlenitve <span class="math notranslate nohighlight">\((\lambda_1, \lambda_2, \dots, \lambda_k)\)</span> števila <span class="math notranslate nohighlight">\(n\)</span> lahko torej konstruiramo nerazcepno upodobitev grupe <span class="math notranslate nohighlight">\(S_n\)</span> in za tem z nekoliko več truda določimo vrednosti karakterjev.</p>
+<section id="nerazcepne-upodobitve">
+<h3>Nerazcepne upodobitve<a class="headerlink" href="#nerazcepne-upodobitve" title="Link to this heading">#</a></h3>
+<p>Naj bo <span class="math notranslate nohighlight">\(\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)\)</span> razčlenitev <span class="math notranslate nohighlight">\(n\)</span>. Nerazcepno upodobitev grupe <span class="math notranslate nohighlight">\(S_n\)</span>, prirejeno <span class="math notranslate nohighlight">\(\lambda\)</span>, kot ponavadi iščemo z indukcijo iz podgrup. Razčlenitev <span class="math notranslate nohighlight">\(\lambda\)</span> lahko interpretiramo kot ciklični tip permutacij, zato se naravno ponuja <span class="definicija">Youngova grupa</span></p>
+<div class="math notranslate nohighlight">
+\[P = S_{\lambda_1} \times S_{\lambda_2} \times \cdots \times S_{\lambda_k}.\]</div>
+<p>Razčlenitev <span class="math notranslate nohighlight">\(\lambda\)</span> si lahko predstavljamo kot zaporedje vrstic diagrama, v katerem je <span class="math notranslate nohighlight">\(\lambda_1\)</span> škatlic v <span class="math notranslate nohighlight">\(1\)</span>. vrstici, <span class="math notranslate nohighlight">\(\lambda_2\)</span> škatlic v <span class="math notranslate nohighlight">\(2\)</span>. vrstici, …, <span class="math notranslate nohighlight">\(\lambda_k\)</span> škatlic v <span class="math notranslate nohighlight">\(k\)</span>. vrstici. Pri tem so vrstice poravnane na levo. Takemu shematičnemu prikazu razčlenitve pravimo <span class="definicija">Youngov diagram</span>. Diagram ima <span class="math notranslate nohighlight">\(n\)</span> škatlic, v katere poljubno vpišemo števila od <span class="math notranslate nohighlight">\(1\)</span> do <span class="math notranslate nohighlight">\(n\)</span>. Tako izpolnjenemu diagramu pravimo <span class="definicija">Youngova tabela</span>. Vsaka Youngova tabela nam pravzaprav ponuja vložitev grupe <span class="math notranslate nohighlight">\(P\)</span> v <span class="math notranslate nohighlight">\(S_n\)</span>. Fiksirajmo standardno vložitev, ki ustreza temu, da v škatlice vpišemo po vrsti števila od <span class="math notranslate nohighlight">\(1\)</span> do <span class="math notranslate nohighlight">\(n\)</span>, začenši zgoraj levo in hodeč po <span class="math notranslate nohighlight">\(1\)</span>. vrstici, nato po <span class="math notranslate nohighlight">\(2\)</span>. vrstici in tako naprej. Grupa <span class="math notranslate nohighlight">\(P\)</span>, standardno vložena v <span class="math notranslate nohighlight">\(S_n\)</span>, predstavlja ravno vse permutacije, ki ohranjajo <em>vrstice</em> tabele.</p>
+<p>Inducirajmo trivialno upodobitev iz <span class="math notranslate nohighlight">\(P\)</span> na <span class="math notranslate nohighlight">\(S_n\)</span>. V razdelku o indukciji smo spoznali, da lahko <span class="math notranslate nohighlight">\(\Ind^{S_n}_{P}(\oneone)\)</span> interpretiramo kot permutacijsko upodobitev <span class="math notranslate nohighlight">\(S_n\)</span> na desnih odsekih podgrupe <span class="math notranslate nohighlight">\(P\)</span>. To interpretacijo lahko vložimo v prostor funkcij <span class="math notranslate nohighlight">\(\fun(S_n, \CC)\)</span>. Namesto množice <span class="math notranslate nohighlight">\(P\)</span> lahko namreč opazujemo indikatorsko funkcijo <span class="math notranslate nohighlight">\(1_P\)</span>. Element <span class="math notranslate nohighlight">\(g \in S_n\)</span> na njej deluje kot <span class="math notranslate nohighlight">\(\rho_{\fun}(g) \cdot 1_P = 1_{P g^{-1}}\)</span>, se pravi kot permutacija desnih odsekov. Na ta način upodobitveni prostor upodobitve <span class="math notranslate nohighlight">\(\Ind^{S_n}_{P}(\oneone)\)</span> vidimo kot</p>
+<div class="math notranslate nohighlight">
+\[\langle \rho_{\fun}(g) \cdot 1_{P} \mid g \in S_n \rangle.\]</div>
+<p>Ta prostor lahko izrazimo s pomočjo Fourierove transformacije kot</p>
+<div class="math notranslate nohighlight">
+\[\langle \hat{f}(\rho_{\fun}) \cdot 1_P \mid f \in \fun(S_n, \CC) \rangle
+    = \image \Fcal(1_P)
+    = \langle 1_P * f \mid f \in \fun(S_n, \CC) \rangle.\]</div>
+<p>Upodobitev <span class="math notranslate nohighlight">\(S_n\)</span> na tem prostoru gotovo <em>ni</em> nerazcepna, saj na primer vsebuje trivialno z večkratnostjo <span class="math notranslate nohighlight">\(\langle \chi_{\oneone}, \Ind^{S_n}_{P}(\chi_{\oneone}) \rangle = \langle \chi_{\oneone}, \chi_{\oneone} \rangle = 1\)</span>. Ta prostor bomo zato še dodatno projicirali na nek podprostor.</p>
+<p>Do zdaj smo upoštevali le grupo <span class="math notranslate nohighlight">\(P\)</span> permutacij, ki ohranjajo <em>vrstice</em> izbrane Youngove tabele. Iz tega gledišča je naravno, da obravnavamo tudi grupo permutacij, ki ohranjajo <em>stolpce</em> tabele. Označimo jo s <span class="math notranslate nohighlight">\(Q\)</span>. Ravno ta podgrupa je dodatek, ki nam bo dodatno reduciral zgoraj opisano inducirano upodobitev. Pri tem bomo upoštevali, da je <span class="math notranslate nohighlight">\(Q\)</span> sestavljena dualno <span class="math notranslate nohighlight">\(P\)</span>, zato jo bomo utežili s predznačno upodobitvijo <span class="math notranslate nohighlight">\(\sgn\)</span>.</p>
+<p>Definirajmo funkcijo</p>
+<div class="math notranslate nohighlight">
+\[\youngsym = (\sgn \cdot 1_Q) * 1_P \in \fun(S_n, \CC),\]</div>
+<p>ki ji pravimo <span class="definicija">Youngov simetrizator</span>. Njene vrednosti so</p>
+<div class="math notranslate nohighlight">
+\[\youngsym(x) = \sum_{p \in P, q \in Q \colon qp = x} \sgn(q).\]</div>
+<p>Ker velja <span class="math notranslate nohighlight">\(P \cap Q = 1\)</span>, ima vsak element <span class="math notranslate nohighlight">\(x \in S_n\)</span> <em>kvečjemu en</em> zapis v obliki <span class="math notranslate nohighlight">\(x = qp\)</span> za <span class="math notranslate nohighlight">\(p \in P, q \in Q\)</span>,<label for='sidenote-role-3' class='margin-toggle'><span id="id3">
+<sup>3</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-3' name='sidenote-role-3' class='margin-toggle'><span class="sidenote"><sup>3</sup>Res, če je <span class="math notranslate nohighlight">\(x = q_1 p_1 = q_2 p_2\)</span>, potem je <span class="math notranslate nohighlight">\(q_2^{-1} q_1 = p_2 p_1^{-1} \in P \cap Q = 1\)</span>, zato je <span class="math notranslate nohighlight">\(q_1 = q_2\)</span> in <span class="math notranslate nohighlight">\(p_1 = p_2\)</span>.</span> torej ima zadnja vsota kvečjemu en neničeln člen in je torej enaka karakteristični funkciji množice <span class="math notranslate nohighlight">\(QP = \{ qp \mid q \in Q, p \in P \}\)</span>, uteženi s predznakom člena v <span class="math notranslate nohighlight">\(Q\)</span>.</p>
+<p>Vzdolž Youngovega simetrizatorja dobimo endospletično <span class="math notranslate nohighlight">\(\Fcal(\youngsym)\)</span> regularne upodobitve, katere slika je vektorski prostor</p>
+<div class="math notranslate nohighlight">
+\[V_{\lambda} = \image \Fcal(\youngsym) = \langle \youngsym * f \mid f \in \fun(S_n, \CC) \rangle,\]</div>
+<p>ki ga imenujemo <span class="definicija">Spechtov modul</span>. Na tem prostoru naravno deluje grupa <span class="math notranslate nohighlight">\(S_n\)</span><label for='sidenote-role-4' class='margin-toggle'><span id="id4">
+<sup>4</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-4' name='sidenote-role-4' class='margin-toggle'><span class="sidenote"><sup>4</sup>Ker je <span class="math notranslate nohighlight">\(\Fcal(\youngsym)\)</span> spletična, je to res invarianten podprostor. Ni pa težko videti, kako elementi grupe zares delujejo; za <span class="math notranslate nohighlight">\(g \in S_n\)</span> element <span class="math notranslate nohighlight">\(\rho_{\fun}(g)\)</span> preslika <span class="math notranslate nohighlight">\(\youngsym * f\)</span> v <span class="math notranslate nohighlight">\(\youngsym * (\rho_{\fun}(g) \cdot f)\)</span>.</span>, dobljeno upodobitev označimo z <span class="math notranslate nohighlight">\(\rho_{\lambda}\)</span>. Velja <span class="math notranslate nohighlight">\(V_{\lambda} \neq 0\)</span>, saj je <span class="math notranslate nohighlight">\(\youngsym = \youngsym * 1_1 \in V_{\lambda}\)</span>.</p>
+<div class="izrek">
+<ol class="arabic simple">
+<li><p>Za vsako razčlenitev <span class="math notranslate nohighlight">\(\lambda\)</span> je <span class="math notranslate nohighlight">\(\rho_{\lambda}\)</span> nerazcepna.</p></li>
+<li><p>Za različni razčlenitvi <span class="math notranslate nohighlight">\(\lambda, \mu\)</span> je <span class="math notranslate nohighlight">\(\rho_{\lambda} \not\cong \rho_{\mu}\)</span>.</p></li>
+<li><p>Vsaka nerazcepna upodobitev simetrične grupe je izomorfna <span class="math notranslate nohighlight">\(\rho_{\lambda}\)</span> za neko razčlenitev <span class="math notranslate nohighlight">\(\lambda\)</span>.</p></li>
+</ol>
+</div>
+<p>Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev ravno enako številu razčlenitev <span class="math notranslate nohighlight">\(n\)</span>. Pred dokazom izreka si oglejmo nekaj zgledov.</p>
+<div class="zgled">
+<ul>
+<li><p>Naj bo <span class="math notranslate nohighlight">\(\lambda = (n)\)</span>. Tedaj je <span class="math notranslate nohighlight">\(P = S_n\)</span> in <span class="math notranslate nohighlight">\(Q = 1\)</span>, zato je <span class="math notranslate nohighlight">\(\youngsym = 1\)</span>. Za funkcijo <span class="math notranslate nohighlight">\(f \in \fun(S_n, \CC)\)</span> je <span class="math notranslate nohighlight">\(\Fcal(1) \cdot f = 1 * f = |G| \cdot \EE(f)\)</span> in grupa <span class="math notranslate nohighlight">\(S_n\)</span> deluje trivialno na tej funkciji. S tem je</p>
+<div class="math notranslate nohighlight">
+\[V_{\lambda} = \image \Fcal(1) = \CC\]</div>
+<p>in dobimo trivialno upodobitev.</p>
+</li>
+<li><p>Naj bo <span class="math notranslate nohighlight">\(\lambda = (1,1,\dots,1)\)</span>. Tedaj je <span class="math notranslate nohighlight">\(P = 1\)</span> in <span class="math notranslate nohighlight">\(Q = S_n\)</span>, zato je <span class="math notranslate nohighlight">\(\youngsym = \sgn\)</span>. Za funkcijo <span class="math notranslate nohighlight">\(f \in \fun(S_n, \CC)\)</span> je</p>
+<div class="math notranslate nohighlight">
+\[\Fcal(\sgn) \cdot f = \sgn * f = \left( x \mapsto \sum_{g \in G} \sgn(xg^{-1}) f(g) \right) = (\sgn * f)(1) \cdot \sgn,\]</div>
+<p>zato je</p>
+<div class="math notranslate nohighlight">
+\[V_{\lambda} = \image \Fcal(\sgn) = \langle \sgn \rangle.\]</div>
+<p>Na funkciji <span class="math notranslate nohighlight">\(\sgn\)</span> grupa <span class="math notranslate nohighlight">\(S_n\)</span> deluje kot <span class="math notranslate nohighlight">\(\rho_{\fun}(g) \cdot \sgn = \sgn(g) \cdot \sgn\)</span>, torej je <span class="math notranslate nohighlight">\(\rho_{\lambda}\)</span> predznačna upodobitev.</p>
+</li>
+<li><p>Naj bo <span class="math notranslate nohighlight">\(\lambda = (n-1,1)\)</span>. Tedaj je <span class="math notranslate nohighlight">\(P = S_{n-1}\)</span> in <span class="math notranslate nohighlight">\(Q = \{ (), (1 \ n)\}\)</span>. Za funkcijo <span class="math notranslate nohighlight">\(f \in \fun(S_n, \CC)\)</span> velja najprej</p>
+<div class="math notranslate nohighlight">
+\[\left( 1_P * f \right) (x) = \sum_{p \in P} f(p^{-1} x) = \sum_{g \in Px} f(g),\]</div>
+<p>torej <span class="math notranslate nohighlight">\(1_P * f\)</span> izračuna vsoto funkcije <span class="math notranslate nohighlight">\(f\)</span> po odseku <span class="math notranslate nohighlight">\(Px\)</span>. Prostor <span class="math notranslate nohighlight">\(\image \Fcal(1_P)\)</span> lahko zato identificiramo s podprostorom funkcij <span class="math notranslate nohighlight">\(\fun_{P \backslash S_n}(S_n, \CC)\)</span>, ki so konstantne na desnih odsekih <span class="math notranslate nohighlight">\(P \backslash S_n\)</span>. Delovanje <span class="math notranslate nohighlight">\(S_n\)</span> na tem prostoru ni nič drugega kot <span class="math notranslate nohighlight">\(\Ind^{S_n}_P(\oneone)\)</span>, kar prepoznamo kot standardno permutacijsko upodobitev grupe <span class="math notranslate nohighlight">\(S_n\)</span> njenega delovanja na <span class="math notranslate nohighlight">\(\{ 1, 2, \dots, n \}\)</span>. Uporabimo zdaj še konvolucijo s funkcijo <span class="math notranslate nohighlight">\(\sgn \cdot 1_Q\)</span>. Dobimo linearno preslikavo</p>
+<div class="math notranslate nohighlight">
+\[\textstyle \fun_{P \backslash S_n}(S_n, \CC) \to \fun_{P \backslash S_n}(S_n, \CC), \quad
+        \psi \mapsto \left( x \mapsto \psi(x) - \psi((1 \ n) \cdot x) \right).\]</div>
+<p>Njeno jedro sestoji iz funkcij <span class="math notranslate nohighlight">\(\psi\)</span>, ki so konstantne na odsekih <span class="math notranslate nohighlight">\(P \backslash S_n\)</span> in povrhu zadoščajo še enakosti <span class="math notranslate nohighlight">\(\psi(x) = \psi((1 \ n) \cdot x)\)</span> za vsak <span class="math notranslate nohighlight">\(x \in S_n\)</span>. Ko ta pogoj uporabimo s transpozicijami <span class="math notranslate nohighlight">\((i \ n)\)</span> za <span class="math notranslate nohighlight">\(1 \leq i &lt; n\)</span>, sklenemo, da je vsaka taka funkcija <span class="math notranslate nohighlight">\(\psi\)</span> nujno konstantna. Nazadnje je torej</p>
+<div class="math notranslate nohighlight">
+\[V_{\lambda} = \image \Fcal(\youngsym) \cong \frac{\textstyle \fun_{P \backslash S_n}(S_n, \CC)}{\CC}.\]</div>
+<p>Ta prostor je razsežnosti <span class="math notranslate nohighlight">\(n-1\)</span>. Prirejeno upodobitev imenujemo <span class="definicija">standardna upodobitev</span> simetrične grupe <span class="math notranslate nohighlight">\(S_n\)</span>. Kot smo videli, jo lahko dobimo tako, da iz standardne permutacijske upodobitve odstranimo trivialno upodobitev.</p>
+</li>
+</ul>
+</div>
+<div class="domacanaloga">
+<p>Naj bo <span class="math notranslate nohighlight">\(\lambda\)</span> razčlenitev <span class="math notranslate nohighlight">\(n\)</span> in <span class="math notranslate nohighlight">\(\lambda^\prime\)</span> razčlenitev, ki jo iz <span class="math notranslate nohighlight">\(\lambda\)</span> dobimo tako, da transponiramo Youngov diagram. Preveri, da velja <span class="math notranslate nohighlight">\(\sgn \otimes \rho_{\lambda} \cong \rho_{\lambda^\prime}\)</span>.</p>
+</div>
+<p>Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vlogo delovanje Fourierove transformacije Youngovega simetrizatorja <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun})\)</span> na prostoru <span class="math notranslate nohighlight">\(V_{\lambda}\)</span>. V lemi uporabljamo leksikografsko delno urejenost <span class="math notranslate nohighlight">\(&lt;\)</span> na množici vseh razčlenitev.</p>
+<div class="lema">
+<ol class="arabic simple">
+<li><p>Za vsako razčlenitev <span class="math notranslate nohighlight">\(\lambda\)</span> je <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda} \subseteq \CC \cdot \youngsym\)</span>.</p></li>
+<li><p>Za razčlenitvi <span class="math notranslate nohighlight">\(\lambda &gt; \mu\)</span> je <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\mu} = 0\)</span>.</p></li>
+</ol>
+</div>
+<div class="dokaz">
+<ol class="arabic">
+<li><p>Naj bo <span class="math notranslate nohighlight">\(W \leq V_{\lambda}\)</span> podupodobitev. Po lemi je <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun}) \cdot W\)</span> bodisi <span class="math notranslate nohighlight">\(\CC \cdot \youngsym\)</span> bodisi <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>V prvem primeru sledi, da je <span class="math notranslate nohighlight">\(\youngsym \in W\)</span>, od koder sklenemo <span class="math notranslate nohighlight">\(W \geq \langle \rho_{\fun}(g) \cdot \sigma_\lambda \mid g \in S_n \rangle\)</span>, kar je ravno enako <span class="math notranslate nohighlight">\(\image \Fcal(\youngsym) = V_{\lambda}\)</span>.</p>
+<p>Privzemimo zdaj, da je <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun}) \cdot W = 0\)</span>, kar lahko zapišemo kot <span class="math notranslate nohighlight">\(W * \youngsym = 0\)</span>. Od tod sledi <span class="math notranslate nohighlight">\(W * V_{\lambda} = 0\)</span> in zato <span class="math notranslate nohighlight">\(W * W = 0\)</span>. Naj bo <span class="math notranslate nohighlight">\(W = \image P\)</span> za neko projektorsko endospletično <span class="math notranslate nohighlight">\(P\)</span> regularne upodobitve. Vemo že, da so vse take preslikave oblike <span class="math notranslate nohighlight">\(P = \Fcal(w)\)</span> za neko funkcijo <span class="math notranslate nohighlight">\(w \in \fun(S_n, \CC)\)</span>. Ker je <span class="math notranslate nohighlight">\(P \cdot 1_1 = \widehat{1_1}(\rho_{\fun}) \cdot w = w\)</span>, sledi <span class="math notranslate nohighlight">\(w \in W\)</span>. Še več, ker je <span class="math notranslate nohighlight">\(P^2 = P\)</span>, izračunamo <span class="math notranslate nohighlight">\(w = P \cdot w = \widehat{w}(\rho_{\fun}) \cdot w = w * w\)</span>. Ker je <span class="math notranslate nohighlight">\(W * W = 0\)</span>, sledi <span class="math notranslate nohighlight">\(w = 0\)</span> in s tem <span class="math notranslate nohighlight">\(W = 0\)</span>.</p>
+</li>
+<li><p>Za različni razčlenitvi <span class="math notranslate nohighlight">\(\lambda\)</span>, <span class="math notranslate nohighlight">\(\mu\)</span> lahko brez škode predpostavimo <span class="math notranslate nohighlight">\(\lambda &gt; \mu\)</span>, saj je <span class="math notranslate nohighlight">\(&lt;\)</span> linearna urejenost. Po lemi je <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\mu} = 0\)</span>. Hkrati je <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda}\)</span> bodisi <span class="math notranslate nohighlight">\(\CC \cdot \youngsym\)</span> bodisi <span class="math notranslate nohighlight">\(0\)</span>. V slednjem primeru pristopimo kot zgoraj: velja <span class="math notranslate nohighlight">\(V_{\lambda} * V_{\lambda} = 0\)</span> in projektorska endospletična regularne upodobitve na <span class="math notranslate nohighlight">\(V_{\lambda}\)</span> je oblike <span class="math notranslate nohighlight">\(\Fcal(v)\)</span> za nek <span class="math notranslate nohighlight">\(v \in V_{\lambda}\)</span> z lastnostjo <span class="math notranslate nohighlight">\(v = v * v\)</span>, kar implicira <span class="math notranslate nohighlight">\(v = 0\)</span> in s tem <span class="math notranslate nohighlight">\(V_{\lambda} = 0\)</span>, protislovje. Torej je <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda} \neq 0\)</span> in zato <span class="math notranslate nohighlight">\(V_{\lambda} \not\cong V_{\mu}\)</span>.</p></li>
+</ol>
+</div>
+<p>Preostane nam še dokaz leme.</p>
+<div class="dokaz">
+<ol class="arabic">
+<li><p>Za vsaka <span class="math notranslate nohighlight">\(p \in P\)</span>, <span class="math notranslate nohighlight">\(q \in Q\)</span> je <span class="math notranslate nohighlight">\(\sgn \cdot 1_q * \youngsym * 1_p = \youngsym\)</span>. Dokažimo najprej, da je Youngov simetrizator do skalarja natančno <em>edina</em> funkcija s to lastnostjo.</p>
+<p>Res, naj funkcija <span class="math notranslate nohighlight">\(f \in \hom(S_n, \CC)\)</span> zadošča <span class="math notranslate nohighlight">\(\sgn \cdot 1_q * f * 1_p = f\)</span>. To pomeni, da za vsak <span class="math notranslate nohighlight">\(g \in G\)</span> velja</p>
+<div class="math notranslate nohighlight">
+\[f(g) = \sum_{x \in S_n \colon q x p = g} \sgn(q) \cdot f(g) = \sgn(q) \cdot f(q^{-1} g p^{-1}),\]</div>
+<p>kar lahko prepišemo v <span class="math notranslate nohighlight">\(f(qgp) = \sgn(q) \cdot f(g)\)</span>. Od tod sledi <span class="math notranslate nohighlight">\(f(qp) = \sgn(q) \cdot f(1)\)</span>. Na množici <span class="math notranslate nohighlight">\(QP\)</span> se torej do skalarja <span class="math notranslate nohighlight">\(f(1)\)</span> natančno funkcija <span class="math notranslate nohighlight">\(f\)</span> ujema z Youngovim simetrizatorjem <span class="math notranslate nohighlight">\(\youngsym\)</span>.</p>
+<p>Preverimo še, da je izven množice <span class="math notranslate nohighlight">\(QP\)</span> funkcija <span class="math notranslate nohighlight">\(f\)</span> ničelna. V ta namen se spomnimo, da <span class="math notranslate nohighlight">\(P\)</span> in <span class="math notranslate nohighlight">\(Q\)</span> izhajata iz Youngove tabele <span class="math notranslate nohighlight">\(T\)</span>. Elementi <span class="math notranslate nohighlight">\(S_n\)</span> naravno delujejo s permutacijami na množici tabel. Za <span class="math notranslate nohighlight">\(g \in S_n\)</span> naj bo <span class="math notranslate nohighlight">\(g \cdot T\)</span> rezultat tega delovanja z elementom <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<div class="domacanaloga">
+<p>Za vsak <span class="math notranslate nohighlight">\(g \in S_n \backslash QP\)</span> obstajata števili, ki sta zapisani v istem stolpcu <span class="math notranslate nohighlight">\(T\)</span> in isti vrstici <span class="math notranslate nohighlight">\(g \cdot T\)</span>.</p>
+</div>
+<p>Naj bo <span class="math notranslate nohighlight">\(t\)</span> transpozicija, ki zamenja ti dve števili. Zanjo torej velja <span class="math notranslate nohighlight">\(t \in Q\)</span> in <span class="math notranslate nohighlight">\(g^{-1} t g \in P\)</span>. S tem je</p>
+<div class="math notranslate nohighlight">
+\[f(g) = f(t \cdot g \cdot g^{-1} t g) = \sgn(t) \cdot f(g) = - f(g),\]</div>
+<p>zato je <span class="math notranslate nohighlight">\(f(g) = 0\)</span>.</p>
+<p>Dokazano uporabimo z elementom <span class="math notranslate nohighlight">\(\youngsym * f * \youngsym\)</span>, kjer je <span class="math notranslate nohighlight">\(f\)</span> poljubna funkcija. Vrednost <span class="math notranslate nohighlight">\(\sgn \cdot 1_q * (\youngsym * f * \youngsym) * 1_p\)</span> izračunamo kot</p>
+<div class="math notranslate nohighlight">
+\[(\sgn \cdot 1_q * \sgn \cdot 1_Q * 1_P) * f * (\sgn \cdot 1_Q * 1_P * 1_p) =
+        \youngsym * f * \youngsym,\]</div>
+<p>od koder sledi želeno</p>
+<div class="math notranslate nohighlight">
+\[\widehat{\youngsym}(\rho_{\fun}) \cdot (\youngsym * f) = \youngsym * f * \youngsym \in \CC \cdot \youngsym.\]</div>
+</li>
+<li><p>Trdimo, da za vsako funkcijo <span class="math notranslate nohighlight">\(f \in \fun(S_n, \CC)\)</span> velja enakost</p>
+<div class="math notranslate nohighlight">
+\[1_{P_\mu} * f * (\sgn \cdot 1_{Q_{\lambda}}) = 0.\]</div>
+<p>Zaradi linearnosti te trditve lahko predpostavimo, da je <span class="math notranslate nohighlight">\(f = 1_g\)</span> za nek <span class="math notranslate nohighlight">\(g \in G\)</span>.</p>
+<p>Naj bosta <span class="math notranslate nohighlight">\(T_{\lambda}\)</span>, <span class="math notranslate nohighlight">\(T_{\mu}\)</span> Youngovi tabeli razčlenitev <span class="math notranslate nohighlight">\(\lambda\)</span>, <span class="math notranslate nohighlight">\(\mu\)</span>, s katerima smo dobili grupe <span class="math notranslate nohighlight">\(P\)</span> in <span class="math notranslate nohighlight">\(Q\)</span>. Tabelo <span class="math notranslate nohighlight">\(T_{\lambda}\)</span> zamenjajmo s tabelo <span class="math notranslate nohighlight">\(g^{-1} \cdot T_{\lambda}\)</span>; ob tem se <span class="math notranslate nohighlight">\(Q_{\lambda}\)</span> zamenja s <span class="math notranslate nohighlight">\(g^{-1} Q_{\lambda} g\)</span>. Z novimi tabelami je</p>
+<div class="math notranslate nohighlight">
+\[1_{P_\mu} * (\sgn \cdot 1_{g^{-1} Q_{\lambda} g}) = 1_{P_\mu} * 1_{g^{-1}} * (\sgn \cdot 1_{Q_{\lambda}}) * 1_g.\]</div>
+<p>Če uspemo dokazati, da je leva stran ničelna, bo taka tudi desna, od koder po dodatni konvoluciji z <span class="math notranslate nohighlight">\(1_{g^{-1}}\)</span> z desne sledi želena enakost.</p>
+<p>Predpostavimo torej lahko, da je <span class="math notranslate nohighlight">\(g = 1\)</span>. Kot v dokazu prejšnje točke najdemo transpozicijo <span class="math notranslate nohighlight">\(t \in Q_{\lambda} \cap P_{\mu}\)</span>. Z njo velja</p>
+<div class="math notranslate nohighlight">
+\[1_{P_{\mu}} * (\sgn \cdot 1_{Q_{\lambda}}) = 
+        \left( 1_{P_{\mu}} * 1_t \right) * \left( 1_{t^{-1}} * (\sgn \cdot 1_{Q_{\lambda}}) \right).\]</div>
+<p>Ker je <span class="math notranslate nohighlight">\(1_{P_{\mu}} * 1_t = 1_{P_{\mu}}\)</span> in <span class="math notranslate nohighlight">\(1_{t^{-1}} * (\sgn \cdot 1_{Q_{\lambda}}) = - (\sgn \cdot 1_{Q_{\lambda}})\)</span>, je zadnja konvolucija enaka svoji negativni vrednosti, torej je ničelna.</p>
+</li>
+</ol>
+</div>
+<p>Tekom dokaza izreka smo premislili, da je <span class="math notranslate nohighlight">\(\youngsym * \youngsym = n_{\lambda} \cdot \youngsym\)</span> za nek skalar <span class="math notranslate nohighlight">\(n_{\lambda} \in \CC\)</span>. Linearna preslikava <span class="math notranslate nohighlight">\(\Fcal(\youngsym)\)</span> slika v vektorski podprostor <span class="math notranslate nohighlight">\(V_{\lambda}\)</span>, na tem podprostoru pa deluje kot</p>
+<div class="math notranslate nohighlight">
+\[\Fcal(\youngsym) \cdot (\youngsym * f) 
+    = \youngsym * \youngsym * f
+    = n_{\lambda} \cdot (\youngsym * f),\]</div>
+<p>torej kot skalarno množenje z <span class="math notranslate nohighlight">\(n_{\lambda}\)</span>. Ta skalar lahko izračunamo iz sledi preslikave <span class="math notranslate nohighlight">\(\Fcal(\youngsym)\)</span>. V standardni bazi iz karakterističnih funkcij namreč velja</p>
+<div class="math notranslate nohighlight">
+\[\Fcal(\youngsym) \cdot 1_g
+    = \youngsym * 1_g
+    = \left( x \mapsto \youngsym(x g^{-1}) \right)
+    = \sum_{x \in S_n} \youngsym(x g^{-1}) \cdot 1_x\]</div>
+<p>za vsak <span class="math notranslate nohighlight">\(g \in S_n\)</span>, torej so diagonalni členi prirejene matrike <span class="math notranslate nohighlight">\(\Fcal(\youngsym)\)</span> enaki <span class="math notranslate nohighlight">\(\youngsym(1) = 1\)</span>. Od tod izračunamo sled preslikave <span class="math notranslate nohighlight">\(\Fcal(\youngsym)\)</span> kot</p>
+<div class="math notranslate nohighlight">
+\[n_{\lambda} \cdot \dim V_{\lambda} 
+    = \tr \Fcal(\youngsym)
+    = \sum_{g \in S_n} 1
+    = n!,\]</div>
+<p>zato v posebnem velja <span class="math notranslate nohighlight">\(n_{\lambda} = n! / \dim V_{\lambda}\)</span>. Skalar <span class="math notranslate nohighlight">\(n_{\lambda}\)</span> je torej neničelno racionalno število.</p>
+<p>V posebnem lahko tvorimo endospletično <span class="math notranslate nohighlight">\(\Fcal(\youngsym / n_{\lambda})\)</span> regularne upodobitve, ki je <em>projektorska spletična</em><label for='sidenote-role-5' class='margin-toggle'><span id="id5">
+<sup>5</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-5' name='sidenote-role-5' class='margin-toggle'><span class="sidenote"><sup>5</sup>Velja namreč <span class="math notranslate nohighlight">\(\youngsym/n_{\lambda} * \youngsym/n_{\lambda} * f = \youngsym/n_{\lambda} * f\)</span>.</span> na prostor <span class="math notranslate nohighlight">\(V_{\lambda}\)</span>. V tej posebni situaciji dobimo torej eksplicitno projekcijo z regularne na nerazcepno upodobitev <span class="math notranslate nohighlight">\(V_{\lambda}\)</span>. V standardni bazi ima matrika preslikave <span class="math notranslate nohighlight">\(\Fcal(\youngsym/n_{\lambda})\)</span> racionalne koeficiente. Ker njeni stolpci razpenjajo prostor <span class="math notranslate nohighlight">\(V_{\lambda}\)</span>, lahko torej izberemo ortogonalno<label for='sidenote-role-6' class='margin-toggle'><span id="id6">
+<sup>6</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-6' name='sidenote-role-6' class='margin-toggle'><span class="sidenote"><sup>6</sup>Če izbrana baza ni ortogonalna, na njej uporabimo Gram-Schmidtovo ortogonalizacijo.</span> bazo <span class="math notranslate nohighlight">\(B_{\lambda} = \{ b_1, b_2, \dots, b_r \}\)</span> prostora <span class="math notranslate nohighlight">\(V_{\lambda}\)</span>, v kateri ima vsak vektor <span class="math notranslate nohighlight">\(b_i\)</span> racionalne koeficiente v standardni bazi. Ker grupa <span class="math notranslate nohighlight">\(S_n\)</span> regularno deluje s permutacijami na standardni bazi, imajo torej tudi slike <span class="math notranslate nohighlight">\(\rho_{\fun}(g) \cdot b_i\)</span> racionalne koeficiente v standardni bazi za vsak <span class="math notranslate nohighlight">\(g \in S_n\)</span>. Vsako od teh slik pa lahko razvijemo tudi po bazi <span class="math notranslate nohighlight">\(B_{\lambda}\)</span> kot</p>
+<div class="math notranslate nohighlight">
+\[\rho_{\fun}(g) \cdot b_i
+    = \sum_{b_j \in B_{\lambda}} \frac{\langle \rho_{\fun}(g) \cdot b_i, b_j \rangle}{\langle b_j, b_j \rangle} b_j,\]</div>
+<p>in pri tem so koeficienti razvoja racionalni. V bazi <span class="math notranslate nohighlight">\(B_{\lambda}\)</span> ima torej vsaka matrika <span class="math notranslate nohighlight">\(\rho_{\fun}(g)\)</span> za <span class="math notranslate nohighlight">\(g \in S_n\)</span> racionalne koeficiente. Upodobitev <span class="math notranslate nohighlight">\(\rho_{\lambda}\)</span> je torej definirana nad poljem <span class="math notranslate nohighlight">\(\QQ\)</span>.</p>
+<div class="domacanaloga">
+<p>Naj bo <span class="math notranslate nohighlight">\(G\)</span> končna grupa z upodobitvijo nad <span class="math notranslate nohighlight">\(\QQ\)</span>. Dokaži, da obstaja baza vektorskega prostora, v kateri je dana upodobitev definirana nad <span class="math notranslate nohighlight">\(\ZZ\)</span>. Nasvet: izberi neko bazo prostora in jo povpreči z grupo <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</div>
+<div class="posledica">
+<p>Vsaka nerazcepna upodobitev simetrične grupe je definirana nad <span class="math notranslate nohighlight">\(\ZZ\)</span>.</p>
+</div>
+<p>Vsak Spechtov modul <span class="math notranslate nohighlight">\(V_{\lambda}\)</span> lahko z redukcijo po modulu <span class="math notranslate nohighlight">\(p\)</span> za poljubno praštevilo <span class="math notranslate nohighlight">\(p\)</span> reduciramo do vektorskega prostora nad končnim poljem <span class="math notranslate nohighlight">\(\FF_p\)</span>. Na ta način dobimo modularno upodobitev <span class="math notranslate nohighlight">\(\rho_{\lambda,p}\)</span> simetrične grupe. Kot smo videli že v primeru <span class="math notranslate nohighlight">\(p = 3\)</span>, te upodobitve niso nujno nerazcepne. Izkaže se, da pa ima taka modularna upodobitev <em>enoličen nerazcepen kvocient</em> <span class="math notranslate nohighlight">\(D_{\lambda}\)</span>, če za razčlenitev <span class="math notranslate nohighlight">\(\lambda = 1^{i_1} 2^{i_2} \cdots n^{i_n}\)</span> velja <span class="math notranslate nohighlight">\(i_j &lt; p\)</span> za vsak <span class="math notranslate nohighlight">\(j\)</span>. Takim ugodnim razčlenitvam pravimo <span class="definicija"><span class="math notranslate nohighlight">\(p\)</span>-regularne razčlenitve</span>. Izkaže se, da je število <span class="math notranslate nohighlight">\(p\)</span>-regularnih razčlenitev ravno enako številu konjugiranostnih razredov elementov v <span class="math notranslate nohighlight">\(S_n\)</span>, katerih red je <em>tuj</em> <span class="math notranslate nohighlight">\(p\)</span>. Na ta način dobimo vse modularne upodobitve simetrične grupe, a tega ne bomo dokazali.</p>
+<div class="izrek">
+<p>Vsaka nerazcepna upodobitev <span class="math notranslate nohighlight">\(S_n\)</span> nad <span class="math notranslate nohighlight">\(\FF_p\)</span> je izomorfna <span class="math notranslate nohighlight">\(D_{\lambda}\)</span> za neko <span class="math notranslate nohighlight">\(p\)</span>-regularno razčlenitev <span class="math notranslate nohighlight">\(\lambda\)</span> števila <span class="math notranslate nohighlight">\(n\)</span>. Pri tem za različni razčlenitvi <span class="math notranslate nohighlight">\(\lambda , \mu\)</span> velja <span class="math notranslate nohighlight">\(D_{\lambda} \not\cong D_{\mu}\)</span>.</p>
+</div>
+<div class="zgled">
+<p>Opazujmo grupo <span class="math notranslate nohighlight">\(S_3\)</span>. Njene nerazcepne upodobitve nad <span class="math notranslate nohighlight">\(\CC\)</span> dobimo iz razčlenitev <span class="math notranslate nohighlight">\(3^1\)</span>, <span class="math notranslate nohighlight">\(2^1 1^1\)</span> in <span class="math notranslate nohighlight">\(1^3\)</span>, in sicer zaporedoma <span class="math notranslate nohighlight">\(\oneone\)</span>, <span class="math notranslate nohighlight">\(\rho\)</span> in <span class="math notranslate nohighlight">\(\sgn\)</span>. Opazujmo praštevilo <span class="math notranslate nohighlight">\(p = 3\)</span>. Prvi dve od teh razčlenitev sta <span class="math notranslate nohighlight">\(3\)</span>-regularni, tretja pa ni. Iz prve dobimo nerazcepno upodobitev <span class="math notranslate nohighlight">\(\oneone\)</span> nad <span class="math notranslate nohighlight">\(\FF_3\)</span>, druga upodobitev <span class="math notranslate nohighlight">\(\rho\)</span> pa, kot smo videli, ni nerazcepna nad <span class="math notranslate nohighlight">\(\FF_3\)</span>, temveč ima podupodobitev <span class="math notranslate nohighlight">\(\oneone\)</span> s kvocientom <span class="math notranslate nohighlight">\(\rho / \oneone \cong \sgn\)</span>. Dobimo torej dve nerazcepni upodobitvi nad <span class="math notranslate nohighlight">\(\FF_3\)</span>, in sicer <span class="math notranslate nohighlight">\(\oneone\)</span> in <span class="math notranslate nohighlight">\(\sgn\)</span>. Nekoliko nenavadno je, da smo predznačno upodobitev nad <span class="math notranslate nohighlight">\(\FF_3\)</span> pri tem dobili iz standardne upodobitve <span class="math notranslate nohighlight">\(S_3\)</span> in <em>ne</em> iz predznačne upodobitve.</p>
+</div>
+<p>Modularni svet je mnogo bolj mističen od kompleksnega. Sodobna teorija upodobitev se povečini ukvarja s tem, kako <em>regularna</em> je kategorija upodobitev v odvisnosti od praštevila <span class="math notranslate nohighlight">\(p\)</span>.<label for='sidenote-role-7' class='margin-toggle'><span id="id7">
+<sup>7</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-7' name='sidenote-role-7' class='margin-toggle'><span class="sidenote"><sup>7</sup>Na primer, mnogo dela je osredotočenega na <a class="reference external" href="https://mathoverflow.net/questions/138310/what-to-do-now-that-lusztigs-and-james-conjectures-have-been-shown-to-be-false">Lusztigovo in Jamesovo domnevo</a>.</span> V zvezi s tem obstaja mnogo odprtih problemov.</p>
+<div class="odprtproblem">
+<p>Naj bo <span class="math notranslate nohighlight">\(p \leq n\)</span> in naj bo <span class="math notranslate nohighlight">\(\lambda\)</span> <span class="math notranslate nohighlight">\(p\)</span>-regularna razčlenitev <span class="math notranslate nohighlight">\(n\)</span>. Izračunaj večkratnosti <span class="math notranslate nohighlight">\(\mult_{\rho_{\lambda,p}}(\pi)\)</span> nerazcepnih upodobitev <span class="math notranslate nohighlight">\(\pi\)</span> nad <span class="math notranslate nohighlight">\(\FF_p\)</span>.</p>
+</div>
+<p>Ta problem je razrešen le za razčlenitve <span class="math notranslate nohighlight">\(\lambda\)</span> z največ dvema deloma, torej s <span class="math notranslate nohighlight">\(k \leq 2\)</span>. Za <span class="math notranslate nohighlight">\(k = 3\)</span> sodobna bilijardna domneva <a class="reference external" href="https://arxiv.org/pdf/1703.05898.pdf">(Lusztig-Williamson 2018)</a> predvideva, da se te večkratnosti obnašajo po zakonu nekega zakompliciranega <a class="reference external" href="https://www.youtube.com/watch?v=Ru0Zys1Vvq4">dinamičnega sistema</a>.</p>
+</section>
+<section id="vrednosti-karakterjev">
+<h3>Vrednosti karakterjev<a class="headerlink" href="#vrednosti-karakterjev" title="Link to this heading">#</a></h3>
+<p>Premislili smo že, da so vsi Spechtovi moduli definirani nad <span class="math notranslate nohighlight">\(\ZZ\)</span>, zato so vrednosti karakterjev simetrične grupe vselej cela števila. Poznamo pa celo dokaj preprost način, kako lahko eksplicitno določimo vse vrednosti karakterjev nerazcepnih upodobitev. Izrekli ga bomo v jeziku polinomskega kolobarja <span class="math notranslate nohighlight">\(\CC[\mathbf{x}] = \CC[x_1, x_2, \dots, x_k]\)</span>. Potrebovali bomo nekaj posebnih polinomov iz tega kolobarja, in sicer <span class="definicija">diskriminanto</span></p>
+<div class="math notranslate nohighlight">
+\[\Delta(\mathbf{x}) = \prod_{1 \leq i &lt; j \leq k} (x_i - x_j)\]</div>
+<p>ter <span class="definicija">potenčne vsote</span></p>
+<div class="math notranslate nohighlight">
+\[P_j(\mathbf{x}) = x_1^j + x_2^j + \cdots + x_k^j\]</div>
+<p>za <span class="math notranslate nohighlight">\(j \in \NN\)</span>. Za dan polinom <span class="math notranslate nohighlight">\(P(\mathbf{x}) \in \CC[\mathbf{x}]\)</span> označimo s</p>
+<div class="math notranslate nohighlight">
+\[[P(\mathbf{x})]_{(\ell_1, \ell_2, \dots, \ell_k)}\]</div>
+<p>njegov koeficient pred monomom <span class="math notranslate nohighlight">\(x_1^{\ell_1} x_2^{\ell_2} \cdots x_k^{\ell_k}\)</span>.</p>
+<div class="izrek">
+<p>Naj bo <span class="math notranslate nohighlight">\(\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)\)</span> razčlenitev <span class="math notranslate nohighlight">\(n\)</span> in <span class="math notranslate nohighlight">\(\chi_{\lambda}\)</span> pripadajoči karakter. Naj bo <span class="math notranslate nohighlight">\(\conclass_{1^{i_1} 2^{i_2} \cdots n^{i_n}}\)</span> konjugiranostni razred. Tedaj je</p>
+<div class="math notranslate nohighlight">
+\[\chi_{\lambda}\left(\conclass_{1^{i_1} 2^{i_2} \cdots n^{i_n}}\right) =
+    \left[ \Delta(\mathbf{x}) \cdot P_1(\mathbf{x})^{i_1} P_2(\mathbf{x})^{i_2} \cdots P_n(\mathbf{x})^{i_n} \right]_{(\ell_1, \ell_2, \dots, \ell_k)},\]</div>
+<p>kjer je</p>
+<div class="math notranslate nohighlight">
+\[\ell_1 = \lambda_1 + k - 1, \quad
+    \ell_2 = \lambda_2 + k - 2, \quad
+    \dots, \quad
+    \ell_k = \lambda_k.\]</div>
+</div>
+<p>Dokaz temelji na poznavanju osnov teorije simetričnih funkcij, ki jih ponavadi spoznamo pri kombinatoričnih predmetih, zato ga brez prehude žalosti izpustimo. Poglejmo pa si nekaj primerov uporabe izreka.</p>
+<div class="zgled">
+<ul>
+<li><p>Naj bo <span class="math notranslate nohighlight">\(n = 7\)</span> in <span class="math notranslate nohighlight">\(\lambda = (4,3)\)</span>. Izračunajmo vrednost karakterja v permutaciji <span class="math notranslate nohighlight">\((1 \ 2)(3 \ 4)\)</span>. Velja <span class="math notranslate nohighlight">\(i_1 = 3\)</span>, <span class="math notranslate nohighlight">\(i_2 = 2\)</span>, <span class="math notranslate nohighlight">\(\ell_1 = 5\)</span>, <span class="math notranslate nohighlight">\(\ell_2 = 3\)</span> in s tem</p>
+<div class="math notranslate nohighlight">
+\[\chi_{(4,3)}(\conclass_{1^3 2^2}) = 
+    \left[ (x_1 - x_2) \cdot (x_1 + x_2)^3 (x_1^2 + x_2^2)^2 \right]_{(5,3)} =
+    2.\]</div>
+</li>
+<li><p>Izračunajmo vrednost poljubnega karakterja <span class="math notranslate nohighlight">\(\chi_{\lambda}\)</span> v dolgem ciklu <span class="math notranslate nohighlight">\((1 \ 2 \ \cdots \ n) \in S_n\)</span>. Konjugiranostni razred je torej <span class="math notranslate nohighlight">\(\conclass_{n^1}\)</span> in izračunati moramo koeficient</p>
+<div class="math notranslate nohighlight">
+\[\left[ \Delta(\mathbf{x}) \cdot (x_1^n + x_2^n + \cdots + x_k^n) \right]_{(\ell_1, \ell_2, \dots, \ell_k)}.\]</div>
+<p>Diskriminanta <span class="math notranslate nohighlight">\(\Delta(\mathbf{x})\)</span> je enaka Vandermondovi determinanti</p>
+<div class="math notranslate nohighlight">
+\[\Delta(\mathbf{x}) = \sum_{\sigma \in S_k} \sgn(\sigma) \cdot x_1^{\sigma(k) - 1} x_2^{\sigma(k-1) - 1} \cdots x_k^{\sigma(1) - 1}.\]</div>
+<p>Opazujmo potence spremenljivke <span class="math notranslate nohighlight">\(x_1\)</span>. Opazimo, da velja <span class="math notranslate nohighlight">\(\ell_1 = \lambda_1 + k - 1 \geq k\)</span>, zato iščemo monome, katerih potenca pri <span class="math notranslate nohighlight">\(x_1\)</span> je vsaj <span class="math notranslate nohighlight">\(k\)</span>. Edina možnost je, da ta monom izhaja iz produkta diskriminante in člena <span class="math notranslate nohighlight">\(x_1^n\)</span>. Iščemo torej člen</p>
+<div class="math notranslate nohighlight">
+\[\left[ \sum_{\sigma \in S_k} \sgn(\sigma) \cdot x_1^{\sigma(k) - 1 + n} x_2^{\sigma(k-1) - 1} \cdots x_k^{\sigma(1) - 1} \right]_{(\ell_1, \ell_2, \dots, \ell_k)}.\]</div>
+<p>Oglejmo si zdaj spremenljivko <span class="math notranslate nohighlight">\(x_2\)</span>. Da bo obstajal kak relevanten monom, mora veljati <span class="math notranslate nohighlight">\(\ell_2 = \sigma(k-1) - 1\)</span>. Ker je <span class="math notranslate nohighlight">\(\sigma(k-1) \leq k\)</span>, sledi <span class="math notranslate nohighlight">\(\ell_2 \leq k -1\)</span> in od tod <span class="math notranslate nohighlight">\(\lambda_2 \leq 1\)</span>. Edina možnost, da je <span class="math notranslate nohighlight">\(\chi_{\lambda}(\conclass_{n^1}) \neq 0\)</span>, je torej, da ima razčlenitev <span class="math notranslate nohighlight">\(\lambda\)</span> vse člene od drugega dalje enake <span class="math notranslate nohighlight">\(1\)</span> in je zato oblike</p>
+<div class="math notranslate nohighlight">
+\[\lambda = (n-s, 1, 1, \dots, 1)\]</div>
+<p>za nek <span class="math notranslate nohighlight">\(0 \leq s \leq n-1\)</span>. Taki razčlenitvi pravimo <span class="definicija">kljuka</span>. Zanjo je <span class="math notranslate nohighlight">\(k = s+1\)</span> in <span class="math notranslate nohighlight">\((\ell_1, \ell_2, \dots, \ell_k) = (n, k-1, k-2, \dots, 1)\)</span>, od koder ni težko izračunati, da edini relevanten monom izhaja iz permutacije <span class="math notranslate nohighlight">\(\sigma = (1 \ 2 \ \cdots \ k)\)</span>, zato je nazadnje</p>
+<div class="math notranslate nohighlight">
+\[\chi_{\lambda}(C_{n^1}) = \sgn(\sigma) = (-1)^s.\]</div>
+<p>Vrednost karakterja v dolgem ciklu je torej neničelna le za kljuke, v katerih pa ima vrednost <span class="math notranslate nohighlight">\(\pm 1\)</span>.</p>
+</li>
+</ul>
+</div>
+<div class="domacanaloga">
+<p>Izračunaj vrednost poljubnega karakterja <span class="math notranslate nohighlight">\(\chi_{\lambda}\)</span> v konjugiranostnem razredu transpozicij.</p>
+</div>
+<p>S Frobeniusovo formulo lahko določimo stopnje nerazcepnih upodobitev simetrične grupe. Za to bomo potrebovali koncept kljuke, ki je malo splošnejši od tiste, ki smo jo videli v zadnjem zgledu. Opazujmo Youngov diagram razčlenitve <span class="math notranslate nohighlight">\(\lambda\)</span>. Za vsako celico <span class="math notranslate nohighlight">\((i,j)\)</span> diagrama, kjer <span class="math notranslate nohighlight">\(i\)</span> predstavlja vrstico in <span class="math notranslate nohighlight">\(j\)</span> stopec, je <span class="definicija">kljuka</span> <span class="math notranslate nohighlight">\(H_{\lambda}(i,j)\)</span> množica tistih celic, ki so desno ali pod celico <span class="math notranslate nohighlight">\((i,j)\)</span>, vključivši celico <span class="math notranslate nohighlight">\((i,j)\)</span>.<label for='sidenote-role-8' class='margin-toggle'><span id="id8">
+<sup>8</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-8' name='sidenote-role-8' class='margin-toggle'><span class="sidenote"><sup>8</sup><span class="math notranslate nohighlight">\(H_{\lambda}(i,j)\)</span> torej sestoji iz tistih celic <span class="math notranslate nohighlight">\((a,b)\)</span>, za katere je <span class="math notranslate nohighlight">\(a = i\)</span> in <span class="math notranslate nohighlight">\(b \geq j\)</span> ali <span class="math notranslate nohighlight">\(b = j\)</span> in <span class="math notranslate nohighlight">\(a \geq i\)</span>.</span> <span class="definicija">Dolžina kljuke</span> <span class="math notranslate nohighlight">\(H_{\lambda}(i,j)\)</span> je enaka številu celic v kljuki, se pravi <span class="math notranslate nohighlight">\(|H_{\lambda}(i,j)|\)</span>.</p>
+<div class="posledica">
+<p>Naj bo <span class="math notranslate nohighlight">\(\lambda\)</span> razčlenitev <span class="math notranslate nohighlight">\(n\)</span>. Tedaj je</p>
+<div class="math notranslate nohighlight">
+\[\dim V_{\lambda} = \frac{n!}{\prod_{i,j} |H_{\lambda}(i,j)|}.\]</div>
+</div>
+<div class="dokaz">
+<p>Velja</p>
+<div class="math notranslate nohighlight">
+\[\dim V_{\lambda} = \chi_{\lambda}(\conclass_{1^n}) =
+    \left[ \Delta(\mathbf{x}) \cdot (x_1 + x_2 + \cdots + x_k)^n \right]_{(\ell_1, \ell_2, \dots, \ell_k)}.\]</div>
+<p>Diskriminanto razvijemo kot v zadnjem zgledu, drugi člen pa po multinomski formuli kot</p>
+<div class="math notranslate nohighlight">
+\[(x_1 + x_2 + \cdots + x_k)^n = \sum_{j_1 + j_2 + \cdots + j_k = n} \frac{n!}{j_1! j_2! \cdots j_k!} x_1^{j_1} x_2^{j_2} \cdots x_k^{j_k}.\]</div>
+<p>Ko razviti vsoti zmnožimo, dobimo člen <span class="math notranslate nohighlight">\(x_1^{\ell_1} x_2^{\ell_2} \cdots x_k^{\ell_k}\)</span>, če in samo če za neko permutacijo <span class="math notranslate nohighlight">\(\sigma \in S_n\)</span> in nabor <span class="math notranslate nohighlight">\(j_1, j_2, \dots, j_k\)</span> velja <span class="math notranslate nohighlight">\(\sigma(k - i + 1) - 1 + j_i = \ell_i\)</span>. Iskani koeficient je torej enak</p>
+<div class="math notranslate nohighlight">
+\[\sum_{\sigma} \sgn(\sigma) \cdot \frac{n!}{(\ell_1 - \sigma(k) + 1)! (\ell_2 - \sigma(k-1) + 1)! \cdots (\ell_k - \sigma(1) + 1)!},\]</div>
+<p>kjer seštevamo po tistih <span class="math notranslate nohighlight">\(\sigma \in S_k\)</span>, za katere velja <span class="math notranslate nohighlight">\(\ell_i - \sigma(k-i+1) + 1 \geq 0\)</span> za vsak <span class="math notranslate nohighlight">\(i\)</span>. To vsoto lahko prepišemo v</p>
+<div class="math notranslate nohighlight">
+\[\frac{n!}{\ell_1! \ell_2! \cdots \ell_k!} \cdot \sum_{\sigma} \sgn(\sigma) \cdot \prod_{j = 1}^k \ell_j (\ell_j - 1) \cdots (\ell_j - \sigma(k-j+1) + 2).\]</div>
+<p>Zadnjo vsoto lahko seštevamo po vseh <span class="math notranslate nohighlight">\(\sigma \in S_k\)</span>, saj so členi, v katerih je <span class="math notranslate nohighlight">\(\ell_i - \sigma(k-i+1) + 1 &lt; 0\)</span>, ničelni. To vsoto zato prepoznamo kot determinanto matrike razsežnosti <span class="math notranslate nohighlight">\(k \times k\)</span> z <span class="math notranslate nohighlight">\(j\)</span>-tim stolpcem</p>
+<div class="math notranslate nohighlight">
+\[1, \ \ell_j, \ \ell_j(\ell_j - 1), \ \dots, \ell_j(\ell_j - 1) \cdots (\ell_j - k + 2).\]</div>
+<p>Ta determinanta je enaka Vandermondovi determinanti, zato je iskani koeficient enak</p>
+<div class="math notranslate nohighlight">
+\[\frac{n!}{\ell_1! \ell_2! \cdots \ell_k!} \cdot \prod_{1 \leq i &lt; j \leq n} (\ell_i - \ell_j).\]</div>
+<p>Če ima <span class="math notranslate nohighlight">\(\lambda\)</span> en sam stolpec in je torej <span class="math notranslate nohighlight">\(\lambda = (1,1,\dots,1)\)</span>, potem je <span class="math notranslate nohighlight">\(k = n\)</span> in <span class="math notranslate nohighlight">\(\ell_i = n - i + 1\)</span>, zato je zadnje število enako</p>
+<div class="math notranslate nohighlight">
+\[\frac{n!}{n! (n-1)! \cdots 1!} \cdot \prod_{1 \leq i &lt; j \leq n} (j-i) =
+    \frac{n!}{n! (n-1)! \cdots 1!} \cdot \prod_{1 &lt; j \leq n} (j-1)! =
+    1,\]</div>
+<p>kot mora biti, saj že vemo, da je v tem primeru <span class="math notranslate nohighlight">\(V_{\lambda} \cong \sgn\)</span>. Dolžine kljuk so <span class="math notranslate nohighlight">\(|H_{\lambda}(i,1)| = n - i + 1\)</span>, zato formula o kljukah za ta trivialen primer drži. Splošnega primera ni težko izpeljati z indukcijo.</p>
+<div class="domacanaloga">
+<p>Z indukcijo na število stolpcev Youngovega diagrama <span class="math notranslate nohighlight">\(\lambda\)</span> dokaži, da je</p>
+<div class="math notranslate nohighlight">
+\[\frac{n!}{\ell_1! \ell_2! \cdots \ell_k!} \cdot \prod_{i &lt; j} (\ell_i - \ell_j) = \frac{n!}{\prod_{i,j}|H_{\lambda}(i,j)|}.\]</div>
+</div>
+<p>S tem je formula o kljukah dokazana.</p>
+</div>
+<div class="zgled">
+<p>Iz formule o dolžinah kljuk takoj izračunamo stopnjo standardne upodobitve. Usteza ji razčlenitev <span class="math notranslate nohighlight">\((n-1,1)\)</span>, torej je njena stopnja enaka</p>
+<div class="math notranslate nohighlight">
+\[\frac{n!}{1 \cdot 2 \cdot \cdots \cdot (n-2) \cdot n \cdot 1} = n-1.\]</div>
+</div>
+<p>V zvezi s tabelo karakterjev simetrične grupe omenimo še sodobnejši presenetljiv rezultat <a class="reference external" href="https://link.springer.com/article/10.1007/s00209-014-1290-x">(Miller 2014)</a>, v katerem avtor dokaže, da so vrednosti skoraj vseh karakterjev v skoraj vseh grupnih elementih ničelne. Natančneje, če enakomerno naključno izberemo <span class="math notranslate nohighlight">\(g \in S_n\)</span> in <span class="math notranslate nohighlight">\(\pi \in \Irr(S_n)\)</span>, potem je</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} \PP_{g, \pi}\left(\chi_{\pi}(g) = 0\right) = 1.\]</div>
+<p>Avtor omeni analogno vprašanje glede same tabele karakterjev.</p>
+<div class="odprtproblem">
+<p>Enakomerno naključno izberimo konjugiranostni razred <span class="math notranslate nohighlight">\(\conclass\)</span> v <span class="math notranslate nohighlight">\(S_n\)</span> in <span class="math notranslate nohighlight">\(\pi \in \Irr(S_n)\)</span>. Kaj lahko povemo o obnašanju zaporedja <span class="math notranslate nohighlight">\(\PP_{\conclass, \pi}\left( \chi_{\pi}(\conclass) = 0 \right)\)</span>, ko gre <span class="math notranslate nohighlight">\(n\)</span> čez vse meje?</p>
+</div>
+</section>
+<section id="alternirajoce-grupe">
+<h3>Alternirajoče grupe<a class="headerlink" href="#alternirajoce-grupe" title="Link to this heading">#</a></h3>
+<p>Oglejmo si, kako lahko iz tabele karakterjev simetrične grupe skoraj popolnoma določimo tabelo karakterjev alternirajoče grupe <span class="math notranslate nohighlight">\(A_n\)</span>.</p>
+<p>Določimo najprej konjugiranostne razrede. Naj bo <span class="math notranslate nohighlight">\(\conclass = \sigma^{A_n} \subseteq A_n\)</span> konjugiranostni razred. Ta množica je torej zaprta za konjugiranje z vsemi sodimi permutacijami. Če velja tudi <span class="math notranslate nohighlight">\(\sigma^{(1 \ 2)} \in \conclass\)</span>, potem je <span class="math notranslate nohighlight">\(\conclass\)</span> celo konjugiranostni razred v <span class="math notranslate nohighlight">\(S_n\)</span> in torej ustreza neki razčlenitvi števila <span class="math notranslate nohighlight">\(n\)</span>. Prav lahko pa se zgodi, da <span class="math notranslate nohighlight">\(\conclass\)</span> ni zaprt za konjugiranje z <span class="math notranslate nohighlight">\((1 \ 2)\)</span>. V tem primeru je množica <span class="math notranslate nohighlight">\(\conclass \cup \conclass^{(1 \ 2)}\)</span> konjugiranostni razred permutacije <span class="math notranslate nohighlight">\(\sigma\)</span> v <span class="math notranslate nohighlight">\(S_n\)</span> in zato ustreza neki razčlenitvi števila <span class="math notranslate nohighlight">\(n\)</span>. Konjugiranostne razrede grupe <span class="math notranslate nohighlight">\(A_n\)</span> dobimo torej iz konjugiranostnih razredov sodih permutacij v <span class="math notranslate nohighlight">\(S_n\)</span>, in sicer določeni razredi v <span class="math notranslate nohighlight">\(S_n\)</span> ostanejo konjugiranostni razredi v <span class="math notranslate nohighlight">\(A_n\)</span>, drugi pa se razcepijo na dva konjugiranostna razreda v <span class="math notranslate nohighlight">\(A_n\)</span> enake velikosti. Ni težko prepoznati, kateri razredi se razcepijo.</p>
+<div class="domacanaloga">
+<p>Naj bo <span class="math notranslate nohighlight">\(\conclass\)</span> konjugiranostni razred sode permutacije v <span class="math notranslate nohighlight">\(S_n\)</span>, ki ustreza razčlenitvi <span class="math notranslate nohighlight">\(\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)\)</span>. Dokaži, da se <span class="math notranslate nohighlight">\(\conclass\)</span> razcepi v dva konjugiranostna razreda v <span class="math notranslate nohighlight">\(A_n\)</span>, če in samo če so vsi <span class="math notranslate nohighlight">\(\lambda_i\)</span> lihi in različni med sabo.</p>
+</div>
+<p>Poskusimo zdaj na podoben način razumeti še nerazcepne upodobitve grupe <span class="math notranslate nohighlight">\(A_n\)</span>. Naj bo <span class="math notranslate nohighlight">\(\lambda\)</span> razčlenitev <span class="math notranslate nohighlight">\(n\)</span>, ki ji pritiče nerazcepna upodobitev <span class="math notranslate nohighlight">\(\rho_{\lambda}\)</span> na prostoru <span class="math notranslate nohighlight">\(V_{\lambda}\)</span> s karakterjem <span class="math notranslate nohighlight">\(\chi_{\lambda}\)</span>. Opazujmo zožitev karakterja <span class="math notranslate nohighlight">\(\chi_{\lambda}|_{A_n}\)</span> na <span class="math notranslate nohighlight">\(A_n\)</span>. Po ortonormiranosti karakterjev v <span class="math notranslate nohighlight">\(S_n\)</span> velja</p>
+<div class="math notranslate nohighlight">
+\[\langle \chi_{\lambda}|_{A_n}, \chi_{\lambda}|_{A_n} \rangle
+    +
+    \frac{1}{|A_n|} \sum_{\sigma \in S_n \backslash A_n} |\chi_{\lambda}(\sigma)|^2
+    =
+    \frac{1}{|A_n|} \cdot |S_n| \langle \chi_{\lambda}, \chi_{\lambda} \rangle
+    = 2.\]</div>
+<p>Torej je <span class="math notranslate nohighlight">\(\langle \chi_{\lambda}|_{A_n}, \chi_{\lambda}|_{A_n} \rangle \in \{ 1, 2 \}\)</span>, zato je <span class="math notranslate nohighlight">\(\rho_{\lambda}|_{A_n}\)</span> bodisi nerazcepna upodobitev bodisi vsota dveh neizomorfnih nerazcepnih upodobitev. Drugi primer nastopi, če in samo če je <span class="math notranslate nohighlight">\(\chi_{\lambda}|_{S_n \backslash A_n} = 0\)</span>, kar je ekvivalentno izomorfizmu <span class="math notranslate nohighlight">\(\rho_{\lambda} \cong \sgn \otimes \rho_{\lambda}\)</span>. Zadnja upodobitev je izomorfna <span class="math notranslate nohighlight">\(\rho_{\lambda^\prime}\)</span>, zato se upodobitev <span class="math notranslate nohighlight">\(\rho_{\lambda}\)</span> razcepi na <span class="math notranslate nohighlight">\(A_n\)</span>, če in samo če je <span class="math notranslate nohighlight">\(\lambda = \lambda^\prime\)</span>, se pravi da je <span class="math notranslate nohighlight">\(\lambda\)</span> simetrična razčlenitev. V tem primeru lahko zapišemo <span class="math notranslate nohighlight">\(\chi_{\lambda}|_{A_n} = \alpha + \beta\)</span>, kjer sta <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> nerazcepna karakterja <span class="math notranslate nohighlight">\(A_n\)</span>. Ni se težko prepričati, da zanju velja <span class="math notranslate nohighlight">\(\beta(\sigma) = \alpha(\sigma^{(1 \ 2)})\)</span> za vsak <span class="math notranslate nohighlight">\(\sigma \in A_n\)</span>, torej sta v posebnem upodobitvi, na katere razpade <span class="math notranslate nohighlight">\(\rho_{\lambda}\)</span>, enake razsežnosti. Konkretne vrednosti karakterjev <span class="math notranslate nohighlight">\(\alpha\)</span> in <span class="math notranslate nohighlight">\(\beta\)</span> lahko izračunamo s pomočjo ortogonalnosti karakterjev.</p>
+<p>S štetjem konjugiranostnih razredov v <span class="math notranslate nohighlight">\(A_n\)</span> se ni težko prepričati, da na opisan način dobimo vse nerazcepne upodobitve alternirajoče grupe. Podrobnosti so podrobno prikazane v (Fulton-Harris 2004).</p>
+</section>
+</section>
+<section id="splosne-linearne-grupe">
+<h2>Splošne linearne grupe<a class="headerlink" href="#splosne-linearne-grupe" title="Link to this heading">#</a></h2>
+<p>Opazujmo <span class="definicija">splošno linearno grupo</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}G_p = {\textstyle \GL_2(\FF_p)} =
+    \left\{ \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \mid a,b,c,d \in \FF_p, \ ad - bc \neq 0 \right\}\end{split}\]</div>
+<p>obrnljivih matrik razsežnosti <span class="math notranslate nohighlight">\(2 \times 2\)</span> nad končnim poljem <span class="math notranslate nohighlight">\(\FF_p\)</span>, kjer je <span class="math notranslate nohighlight">\(p\)</span> praštevilo. Njeno kategorijo upodobitev bomo obravnavali nad <span class="math notranslate nohighlight">\(\CC\)</span>. Še pred tem pa moramo bolje spoznati to grupo.</p>
+<section id="osnovne-poteze">
+<h3>Osnovne poteze<a class="headerlink" href="#osnovne-poteze" title="Link to this heading">#</a></h3>
+<p>Grupo <span class="math notranslate nohighlight">\(G_p\)</span> lahko razumemo s pomočjo njenih podgrup</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    B_p &amp;= \left\{ \begin{pmatrix} a &amp; b \\ 0 &amp; d \end{pmatrix} \mid a,d \in \FF_p^*, \ b \in \FF_p \right\}, \\
+    D_p &amp;= \left\{ \begin{pmatrix} a &amp; 0 \\ 0 &amp; d \end{pmatrix} \mid a,d \in \FF_p^* \right\}, \\
+    U_p &amp;= \left\{ \begin{pmatrix} 1 &amp; b \\ 0 &amp; 1 \end{pmatrix} \mid b \in \FF_p \right\}.
+\end{aligned}\end{split}\]</div>
+<p>Grupa <span class="math notranslate nohighlight">\(B_p\)</span> je <span class="definicija">Borelova podgrupa</span>, grupa <span class="math notranslate nohighlight">\(U_p\)</span> pa <span class="definicija">unipotentna podgrupa</span>. Seveda je <span class="math notranslate nohighlight">\(B_p/U_p = D_p\)</span>. Grupa <span class="math notranslate nohighlight">\(G_p\)</span> ima torej vrsto podgrup</p>
+<div class="math notranslate nohighlight">
+\[G_p \geq B_p \geq U_p \geq 1.\]</div>
+<p>Borelova podgrupa <em>ni</em> edinka v <span class="math notranslate nohighlight">\(G_p\)</span>, ima pa kvocientna množica <span class="math notranslate nohighlight">\(G_p/B_p\)</span> odsekov vsekakor pomembno vlogo. Grupa <span class="math notranslate nohighlight">\(G_p\)</span> namreč deluje na ravnini <span class="math notranslate nohighlight">\(\FF_p^2\)</span> z matričnim množenjem in za tem na množici premic v tej ravnini, se pravi</p>
+<div class="math notranslate nohighlight">
+\[\PP^1(\FF_p) = \{ \ell \leq \FF_p^2 \mid \dim \ell = 1 \},\]</div>
+<p>čemur pravimo <span class="definicija">projektivna premica</span> nad <span class="math notranslate nohighlight">\(\FF_p\)</span>. Grupa <span class="math notranslate nohighlight">\(G_p\)</span> deluje na tej premici tranzitivno in stabilizator premice <span class="math notranslate nohighlight">\(e_1\)</span> je ravno Borelova podgrupa <span class="math notranslate nohighlight">\(B_p\)</span>. Projektivno premico lahko zato enačimo z množico <span class="math notranslate nohighlight">\(G_p/B_p\)</span>. V posebnem tako dobimo homomorfizem</p>
+<div class="math notranslate nohighlight">
+\[\Pi \colon G_p \to \Sym(\PP^1(\FF_p)) = S_{p+1},\]</div>
+<p>o katerem bomo več povedali nekoliko kasneje. Za zdaj ne spreglejmo, da od tod takoj izračunamo <span class="math notranslate nohighlight">\(|G_p/B_p| = p+1\)</span> in s tem</p>
+<div class="math notranslate nohighlight">
+\[|G_p| = |G_p/B_p| \cdot |B_p| = (p+1) \cdot (p-1)^2 p.\]</div>
+<p>Grupa <span class="math notranslate nohighlight">\(G_p\)</span> je opremljena tudi z determinantnim homomorfizmom</p>
+<div class="math notranslate nohighlight">
+\[\det \colon G_p \to \FF_p^*.\]</div>
+<p>Jedro tega homomorfizma je <span class="definicija">specialna linearna grupa</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\textstyle \SL_2(\FF_p)} = \left\{ \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \mid a,b,c,d \in \FF_p, \ ad - bc = 1 \right\}.\end{split}\]</div>
+<p>Velja <span class="math notranslate nohighlight">\(|\SL_2(\FF_p)| = |G_p|/(p-1) = (p+1)p(p-1)\)</span>. Izpostavimo dva posebna elementa te grupe,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_+ = \begin{pmatrix}
+        1 &amp; 1 \\ 0 &amp; 1
+    \end{pmatrix}, \quad
+    S_- = \begin{pmatrix}
+        1 &amp; 0 \\ 1 &amp; 1
+    \end{pmatrix}.\end{split}\]</div>
+<p>Levo množenje s tema dvema elementoma ustreza izvajanju vrstičnih operacij na dani matriki,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_+ \cdot 
+    \begin{pmatrix}
+        a &amp; b \\ c &amp; d
+    \end{pmatrix}
+    = 
+    \begin{pmatrix}
+        a+c &amp; b+d \\ c &amp; d
+    \end{pmatrix}, \quad
+    S_- \cdot 
+    \begin{pmatrix}
+        a &amp; b \\ c &amp; d
+    \end{pmatrix}
+    = 
+    \begin{pmatrix}
+        a &amp; b \\ c+a &amp; d+b
+    \end{pmatrix}\end{split}\]</div>
+<p>Ker lahko vsako matriko v <span class="math notranslate nohighlight">\(\SL_2(\FF_p)\)</span> z vrstičnimi operacijami pripeljemo do identitete, sklenemo, da elementa <span class="math notranslate nohighlight">\(S_+\)</span>, <span class="math notranslate nohighlight">\(S_-\)</span> <em>generirata</em> grupo <span class="math notranslate nohighlight">\(\SL_2(\FF_p)\)</span>.</p>
+<div class="zgled">
+<p>Naj bo <span class="math notranslate nohighlight">\(p = 2\)</span>. Grupa <span class="math notranslate nohighlight">\(G_2\)</span> v tem primeru enaka <span class="math notranslate nohighlight">\(\SL_2(\FF_2)\)</span> in je moči <span class="math notranslate nohighlight">\(6\)</span>. Naravno deluje z matričnim množenjem na množici treh neničelnih vektorjev <span class="math notranslate nohighlight">\(\FF_2^2 \backslash \{ 0 \} = \{ e_1, e_2, e_1 + e_2 \}\)</span>. Na ta način dobimo homomorfizem</p>
+<div class="math notranslate nohighlight">
+\[G_2 \to S_3, \quad
+        S_+ \mapsto (2 \ 3), \ 
+        S_- \mapsto (1 \ 3).\]</div>
+<p>ki je surjektiven, ker zapisani transpoziciji generirata grupo <span class="math notranslate nohighlight">\(S_3\)</span>. Ker imata obe grupi enako moč, je celo izomorfizem, torej je <span class="math notranslate nohighlight">\(G_2 \cong S_3\)</span>.</p>
+</div>
+<div class="trditev">
+<p>Za <span class="math notranslate nohighlight">\(p &gt; 2\)</span> je <span class="math notranslate nohighlight">\([G_p, G_p] = \SL_2(\FF_p)\)</span>.</p>
+</div>
+<div class="dokaz">
+<p>Ker je <span class="math notranslate nohighlight">\(G_p/\SL_2(\FF_p)\)</span> komutativna, je <span class="math notranslate nohighlight">\([G_p,G_p] \leq \SL_2(\FF_p)\)</span>. Za obratno neenakost upoštevamo račun</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[ 
+        S_+^{-2^{-1}}, 
+        \begin{pmatrix}
+            1 &amp; 0 \\ 0 &amp; -1 
+        \end{pmatrix}
+    \right] =
+    S_+^{2^{-1}} \cdot 
+    \begin{pmatrix}
+        1 &amp; 0 \\ 0 &amp; -1 
+    \end{pmatrix}
+    \cdot S_+^{-2^{-1}} \cdot
+    \begin{pmatrix}
+        1 &amp; 0 \\ 0 &amp; -1 
+    \end{pmatrix}
+    = S_+\end{split}\]</div>
+<p>in sklenemo <span class="math notranslate nohighlight">\(S_+ \in [G_p, G_p]\)</span>. Sorodno dobimo <span class="math notranslate nohighlight">\(S_- \in [G_p, G_p]\)</span>. Ker <span class="math notranslate nohighlight">\(S_+,S_-\)</span> generirata <span class="math notranslate nohighlight">\(\SL_2(\FF_p)\)</span>, dobimo še drugo vsebovanost.</p>
+</div>
+<p>Nazadnje upoštevajmo oba posebna homomorfizma, <span class="math notranslate nohighlight">\(\Pi\)</span> in <span class="math notranslate nohighlight">\(\det\)</span>. Presek njunih jeder sestoji iz skalarnih matrik z determinanto <span class="math notranslate nohighlight">\(1\)</span>, torej je enak <span class="math notranslate nohighlight">\(\{ I, -I \}\)</span>. Ta podgrupa je edinka v <span class="math notranslate nohighlight">\(\SL_2(\FF_p)\)</span>, zato lahko tvorimo kvocient</p>
+<div class="math notranslate nohighlight">
+\[{\textstyle \PSL_2(\FF_p)} = \frac{\SL_2(\FF_p)}{\{ I, -I \}}.\]</div>
+<div class="zgled">
+<p>Za <span class="math notranslate nohighlight">\(p = 2\)</span> je <span class="math notranslate nohighlight">\(\PSL_2(\FF_2) = \SL_2(\FF_2) \cong S_3\)</span>. Za <span class="math notranslate nohighlight">\(p = 3\)</span> se grupa <span class="math notranslate nohighlight">\(\PSL_2(\FF_3)\)</span> prek delovanja <span class="math notranslate nohighlight">\(\Pi\)</span> vloži v simetrično grupo <span class="math notranslate nohighlight">\(S_4\)</span>. Ker je <span class="math notranslate nohighlight">\(|\PSL_2(\FF_3)| = 12\)</span>, je slika te vložitve podgrupa indeksa <span class="math notranslate nohighlight">\(2\)</span> v <span class="math notranslate nohighlight">\(S_4\)</span>, kar pomeni, da gre za alternirajočo podgrupo. Sledi <span class="math notranslate nohighlight">\(\PSL_2(\FF_3) \cong A_4\)</span>.</p>
+</div>
+<div class="domacanaloga">
+<p>Naj bo <span class="math notranslate nohighlight">\(p = 5\)</span>. Grupa <span class="math notranslate nohighlight">\(\PSL_2(\FF_5)\)</span> je moči <span class="math notranslate nohighlight">\(60\)</span>. Poišči njene <span class="math notranslate nohighlight">\(2\)</span>-podgrupe Sylowa. Na množici teh podgrup grupa <span class="math notranslate nohighlight">\(\PSL_2(\FF_5)\)</span> deluje tranzitivno. Iz tega delovanja izpelji, da je <span class="math notranslate nohighlight">\(\PSL_2(\FF_5) \cong A_5\)</span>.</p>
+</div>
+<div class="izrek">
+<p>Za <span class="math notranslate nohighlight">\(p &gt; 3\)</span> je grupa <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span> enostavna.</p>
+</div>
+<p>Družina grup <span class="math notranslate nohighlight">\(G_p\)</span> za praštevila <span class="math notranslate nohighlight">\(p\)</span> je torej dobra prijateljica ene od fundamentalnih družin končnih enostavnih grup.</p>
+</section>
+<section id="konjugiranostni-razredi">
+<h3>Konjugiranostni razredi<a class="headerlink" href="#konjugiranostni-razredi" title="Link to this heading">#</a></h3>
+<p>Predpostavimo, da je <span class="math notranslate nohighlight">\(p &gt; 2\)</span>. Konjugiranostni razredi v <span class="math notranslate nohighlight">\(G_p\)</span> so enaki podobnostnim razredom matrik. Te najlažje sistematično obravnavamo prek lastnosti njihovih karakterističnih polinomov, ki so stopnje <span class="math notranslate nohighlight">\(2\)</span>. Bodisi je ta polinom razcepen (z eno dvojno ničlo ali dvema različnima v <span class="math notranslate nohighlight">\(\FF_p\)</span>) bodisi je nerazcepen. V primeru dvojnih ničel obravnavamo še možnost, da matrika morda ni diagonalizabilna. Na ta način dobimo naslednje konjugiranostne razrede.</p>
+<ol class="arabic">
+<li><p><span class="definicija">Skalarji</span>. Naj ima element <span class="math notranslate nohighlight">\(g \in G_p\)</span> karakteristični polinom z dvojno ničlo <span class="math notranslate nohighlight">\(a \in \FF_p^*\)</span> in je hkrati diagonalizabilen. Tedaj je <span class="math notranslate nohighlight">\(g\)</span> skalarna matrika</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+            a &amp; 0 \\ 0 &amp; a
+        \end{pmatrix}.\end{split}\]</div>
+<p>Vsak tak element je centralen v <span class="math notranslate nohighlight">\(G_p\)</span>, zato je njegov konjugiranostni razred velikosti <span class="math notranslate nohighlight">\(1\)</span>. Vseh takih razredov je <span class="math notranslate nohighlight">\(p-1\)</span>.</p>
+</li>
+<li><p><span class="definicija">Nediagonalizabilni elementi</span>. Naj ima element <span class="math notranslate nohighlight">\(g \in G_p\)</span> karakteristični polinom z dvojno ničlo <span class="math notranslate nohighlight">\(a \in \FF_p^*\)</span> in hkrati <em>ni</em> diagonalizabilen. Tedaj je po Jordanovi formi <span class="math notranslate nohighlight">\(g\)</span> podoben matriki</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+            a &amp; 1 \\ 0 &amp; a
+        \end{pmatrix}.\end{split}\]</div>
+<p>Centralizator vsakega takega elementa je enak</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}C_p = \left\{ \begin{pmatrix}
+      x &amp; t \\ 0 &amp; x
+  \end{pmatrix} \mid x \in \FF_p^*, \ t \in \FF_p \right\} = S_p \times U_p,\end{split}\]</div>
+<p>kjer je <span class="math notranslate nohighlight">\(S_p\)</span> množica skalarnih matrik. Velja <span class="math notranslate nohighlight">\(|C_p| = (p-1)p\)</span>. Konjugiranostni razred je torej velikosti <span class="math notranslate nohighlight">\(p^2 - 1\)</span>. Vseh takih razredov je <span class="math notranslate nohighlight">\(p-1\)</span>.</p>
+</li>
+<li><p><span class="definicija">Razcepni polenostavni elementi</span>. Naj ima element <span class="math notranslate nohighlight">\(g \in G_p\)</span> karakteristični polinom z dvema različnima ničlama <span class="math notranslate nohighlight">\(a,b \in \FF_p^*\)</span>. Tak element je diagonalizabilen in zato podoben</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+            a &amp; 0 \\ 0 &amp; b
+        \end{pmatrix}.\end{split}\]</div>
+<p>Centralizator vsakega takega elementa je enak</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T_r = D_p = \left\{ \begin{pmatrix}
+            x &amp; 0 \\ 0 &amp; y
+        \end{pmatrix} \mid x, y \in \FF_p^* \right\}.\end{split}\]</div>
+<p>in je zato moči <span class="math notranslate nohighlight">\((p-1)^2\)</span>. Konjugiranostni razred je torej velikosti <span class="math notranslate nohighlight">\(p(p+1)\)</span>. Vseh takih razredov je <span class="math notranslate nohighlight">\(\binom{p-1}{2} = (p-1)(p-2)/2\)</span>.</p>
+</li>
+<span class="sidenote"><sup>9</sup>Ponovljena ničla bi bila ničla odvoda karakterističnega polinoma, ki pa je linearen in ima vse ničle v <span class="math notranslate nohighlight">\(\FF_p\)</span>.</span><span class="sidenote"><sup>10</sup>Če zamenjamo v zgornji matriki <span class="math notranslate nohighlight">\(b\)</span> z <span class="math notranslate nohighlight">\(-b\)</span>, dobimo podobno matriko. To ravno ustreza delovanju <span class="math notranslate nohighlight">\(\sigma\)</span>.</span><li><p><span class="definicija">Nerazcepni polenostavni elementi</span>. Naj ima element <span class="math notranslate nohighlight">\(g \in G_p\)</span> <em>nerazcepen</em> karakteristični polinom. Ta polinom torej nima ničel v <span class="math notranslate nohighlight">\(\FF_p\)</span>, ima pa ničle v razširitvi <span class="math notranslate nohighlight">\(F\)</span> tega polja z ničlama karakterističnega polinoma. Ker je <span class="math notranslate nohighlight">\(p &gt; 2\)</span>, sta ti dve ničli različni.<label for='sidenote-role-9' class='margin-toggle'><span id="id9">
+<sup>9</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-9' name='sidenote-role-9' class='margin-toggle'><span class="sidenote d-n"><sup>9</sup>Ponovljena ničla bi bila ničla odvoda karakterističnega polinoma, ki pa je linearen in ima vse ničle v <span class="math notranslate nohighlight">\(\FF_p\)</span>.</span> Razširitev <span class="math notranslate nohighlight">\(F/\FF_p\)</span> je stopnje <span class="math notranslate nohighlight">\(2\)</span>, zato jo lahko predstavimo kot</p>
+<div class="math notranslate nohighlight">
+\[F \cong \frac{\FF_p[X]}{(X^2 - \epsilon)} = \FF_p(\sqrt{\epsilon}),\]</div>
+<p>kjer <span class="math notranslate nohighlight">\(\epsilon \in \FF_p^*\)</span> <em>ni</em> kvadrat v <span class="math notranslate nohighlight">\(\FF_p\)</span>. To polje je opremljeno z Galoisjevim avtomorfizmom <span class="math notranslate nohighlight">\(\sigma \colon \sqrt{\epsilon} \mapsto - \sqrt{\epsilon}\)</span> reda <span class="math notranslate nohighlight">\(2\)</span>. Če je <span class="math notranslate nohighlight">\(\lambda\)</span> lastna vrednost <span class="math notranslate nohighlight">\(g\)</span>, je torej tudi <span class="math notranslate nohighlight">\(\lambda^{\sigma}\)</span> lastna vrednost in pripadajoča lastna vektorja sta <span class="math notranslate nohighlight">\(v\)</span> in <span class="math notranslate nohighlight">\(v^{\sigma}\)</span>. Zamenjajmo bazo v <span class="math notranslate nohighlight">\(w_2 = v + v^{\sigma}\)</span> in <span class="math notranslate nohighlight">\(w_1 = (v - v^{\sigma})/\sqrt{\epsilon}\)</span>. Ta dva vektorja sta invariantna za avtomorfizem <span class="math notranslate nohighlight">\(\sigma\)</span>, zato imata obe komponenti v <span class="math notranslate nohighlight">\(\FF_p\)</span>. V tej bazi ima element <span class="math notranslate nohighlight">\(g\)</span> matriko</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+            a &amp; \epsilon b \\ b &amp; a
+        \end{pmatrix},\end{split}\]</div>
+<p>kjer je <span class="math notranslate nohighlight">\(a = (\lambda + \lambda^{\sigma})/2 \in \FF_p\)</span> in <span class="math notranslate nohighlight">\(b = (\lambda - \lambda^{\sigma})/(2 \sqrt{\epsilon}) \in \FF_p^*\)</span>. Centralizator vsakega takega elementa je enak</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T_{nr} = \left\{ \begin{pmatrix}
+            x &amp; \epsilon y \\ y &amp; x
+        \end{pmatrix} \mid x, y \in \FF_p, \ (x,y) \neq (0,0) \right\}.\end{split}\]</div>
+<p>Konjugiranostni razred je torej velikosti <span class="math notranslate nohighlight">\(p(p-1)\)</span>. Vseh takih razredov je <span class="math notranslate nohighlight">\(p (p-1)/2\)</span>.<label for='sidenote-role-10' class='margin-toggle'><span id="id10">
+<sup>10</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-10' name='sidenote-role-10' class='margin-toggle'><span class="sidenote d-n"><sup>10</sup>Če zamenjamo v zgornji matriki <span class="math notranslate nohighlight">\(b\)</span> z <span class="math notranslate nohighlight">\(-b\)</span>, dobimo podobno matriko. To ravno ustreza delovanju <span class="math notranslate nohighlight">\(\sigma\)</span>.</span></p>
+</li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{1}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{b}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{\epsilon b}{b}{a}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>število razredov</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(p-1\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(p-1\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\((p-1)(p-2)/2\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(p(p-1)/2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>velikost razreda</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(p^2 - 1\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(p(p+1)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(p(p-1)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Konjugiranostni razredi v <span class="math notranslate nohighlight">\(G_p\)</span>: njihov tip, število razredov določenega tipa in velikost razreda</p>
+<p>Za velika praštevila <span class="math notranslate nohighlight">\(p\)</span> velja <span class="math notranslate nohighlight">\(|G_p| \sim p^4\)</span>. Hkrati iz izračunov števila razredov in njihovih velikosti vidimo, da je število polenostavnih elementov asimptotsko primerljivo s <span class="math notranslate nohighlight">\(p^4\)</span>, razdeljeno približno na polovico med razcepnimi in nerazcepnimi elementi. Generični elementi v <span class="math notranslate nohighlight">\(G_p\)</span> so za velika praštevila torej polenostavni.</p>
+<p>Seštejemo število vseh konjugiranostnih razredov in dobimo</p>
+<div class="math notranslate nohighlight">
+\[\kk(G_p) = p^2 - 1.\]</div>
+<p>Grupa <span class="math notranslate nohighlight">\(G_p\)</span> ima torej <span class="math notranslate nohighlight">\(p^2-1\)</span> nerazcepnih kompleksnih upodobitev.</p>
+<p>Preden nadaljujemo z natančnim določanjem teh upodobitev, se še enkrat ozrimo na klasifikacijo konjugiranostnih razredov. Tekom določanja velikosti razredov smo naleteli na dva posebna centralizatorja polenostavnih elementov, in sicer <span class="math notranslate nohighlight">\(T_r\)</span> in <span class="math notranslate nohighlight">\(T_{nr}\)</span>. Ta dva centralizatorja bosta igrala pomembno vlogo v teoriji upodobitev grupe <span class="math notranslate nohighlight">\(G_p\)</span>. Prvemu pravimo <span class="definicija">razcepni torus</span>, drugemu pa <span class="definicija">nerazcepni torus</span>. Za razcepni torus velja</p>
+<div class="math notranslate nohighlight">
+\[T_r \cong \FF_p^* \times \FF_p^*,\]</div>
+<p>nerazcepni torus pa identificiramo kot<label for='sidenote-role-11' class='margin-toggle'><span id="id11">
+<sup>11</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-11' name='sidenote-role-11' class='margin-toggle'><span class="sidenote"><sup>11</sup>Element <span class="math notranslate nohighlight">\(x + \sqrt{\epsilon} y\)</span> deluje na <span class="math notranslate nohighlight">\(\FF_p(\sqrt{\epsilon})\)</span> z množenjem z leve. Če to grupo obravnavamo kot vektorski prostor nad <span class="math notranslate nohighlight">\(\FF_p\)</span>, potem je matrika tega delovanja v bazi <span class="math notranslate nohighlight">\(\{ 1, \sqrt{\epsilon} \}\)</span> ravno ta, ki je prikazana.</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T_{nr} \cong \FF_p(\sqrt{\epsilon})^*, \quad
+    \begin{pmatrix}
+        x &amp; \epsilon y \\ y &amp; x
+    \end{pmatrix}
+    \mapsto x + \sqrt{\epsilon} y.\end{split}\]</div>
+<p>Obe grupi, <span class="math notranslate nohighlight">\(\FF_p^*\)</span> in <span class="math notranslate nohighlight">\(\FF_p(\sqrt{\epsilon})^*\)</span>, sta ciklični grupi. Prva je moči <span class="math notranslate nohighlight">\(p-1\)</span>, druga pa moči <span class="math notranslate nohighlight">\(p^2 - 1\)</span>.</p>
+</section>
+<section id="tabela-karakterjev-1-del">
+<h3>Tabela karakterjev, 1. del<a class="headerlink" href="#tabela-karakterjev-1-del" title="Link to this heading">#</a></h3>
+<p>Predpostavimo, da je <span class="math notranslate nohighlight">\(p &gt; 2\)</span>. Določimo najprej enorazsežne upodobitve grupe <span class="math notranslate nohighlight">\(G_p\)</span>. Ker je <span class="math notranslate nohighlight">\([G_p, G_p] = \SL_2(\FF_p) = \ker (\det)\)</span>, vse enorazsežne upodobitve dobimo tako, da najprej uporabimo determinanto <span class="math notranslate nohighlight">\(\det \colon G_p \to \FF_p^*\)</span>, za tem pa poljubno upodobitev abelove grupe <span class="math notranslate nohighlight">\(\FF_p^*\)</span>. Za vsak homomorfizem <span class="math notranslate nohighlight">\(\chi \colon \FF_p^* \to \CC^*\)</span> dobimo torej enorazsežno upodobitev <span class="math notranslate nohighlight">\(\chi \circ \det\)</span> grupe <span class="math notranslate nohighlight">\(G_p\)</span> in vse enorazsežne upodobitve so take oblike. Vseh teh upodobitev je <span class="math notranslate nohighlight">\(|\FF_p^*| = p-1\)</span>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{1}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{b}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{\epsilon b}{b}{a}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\chi \circ \det\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\chi(a)^2\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\chi(a)^2\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\chi(a) \chi(b)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\chi(a^2 - \epsilon b^2)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Enorazsežni karakterji <span class="math notranslate nohighlight">\(G_p\)</span></p>
+<p>Nadaljujmo s pomočjo homomorfizma <span class="math notranslate nohighlight">\(\Pi \colon G_p \to S_{p+1}\)</span>, ki opisuje permutacijsko delovanje <span class="math notranslate nohighlight">\(G_p\)</span> na projektivni premici. Od tod dobimo permutacijsko upodobitev <span class="math notranslate nohighlight">\(G_p\)</span> na <span class="math notranslate nohighlight">\(\CC[\PP^1(\FF_p)]\)</span>. Kot smo videli že v primeru simetrične grupe, ta upodobitev <em>ni</em> nerazcepna, saj vedno vsebuje <span class="math notranslate nohighlight">\(\oneone\)</span>. Naj bo <span class="math notranslate nohighlight">\(\St\)</span> komplement <span class="math notranslate nohighlight">\(\oneone\)</span> v tej permutacijski upodobitvi. Ta komplement je do izomorfizma natako enolično določen in mu pravimo <span class="definicija">Steinbergova upodobitev</span>.<label for='sidenote-role-12' class='margin-toggle'><span id="id12">
+<sup>12</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-12' name='sidenote-role-12' class='margin-toggle'><span class="sidenote"><sup>12</sup>Steinbergovo upodobitev dobimo torej tako, da <span class="math notranslate nohighlight">\(\Pi\)</span> podaljšamo s standardno upodobitvijo simetrične grupe <span class="math notranslate nohighlight">\(S_{p+1}\)</span>.</span> Vrednosti karakterjev <span class="math notranslate nohighlight">\(\St\)</span> ni težko izračunati. Račun pokaže <span class="math notranslate nohighlight">\(\langle \St, \St \rangle = 1\)</span>, zato je <span class="math notranslate nohighlight">\(\St\)</span> nerazcepna upodobitev.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{1}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{b}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{\epsilon b}{b}{a}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\St\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-1\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Steinbergov karakter <span class="math notranslate nohighlight">\(G_p\)</span></p>
+<p>Steinbergovo upodobitev lahko tenzoriramo s poljubno enorazsežno in dobimo <span class="math notranslate nohighlight">\(\St \otimes (\chi \circ \det)\)</span>, kar označimo krajše kot <span class="math notranslate nohighlight">\(\St(\chi)\)</span>. Za <span class="math notranslate nohighlight">\(\chi = \oneone\)</span> dobimo običajno Steinbergovo upodobitev. Vse te upodobitve so tudi nerazcepne.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{1}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{b}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{\epsilon b}{b}{a}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\St(\chi)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(p \chi(a)^2\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\chi(a) \chi(b)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(- \chi(a^2 - \epsilon b^2)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Posplošeni Steinbergov karakter <span class="math notranslate nohighlight">\(G_p\)</span></p>
+<p>Do zdaj smo našteli <span class="math notranslate nohighlight">\(2(p-1)\)</span> nerazcepnih upodobitev, iščemo pa jih <span class="math notranslate nohighlight">\(p^2 - 1\)</span>. Še veliko jih manjka! Sledeč filozofiji Artina in Brauerja nadaljne nerazcepne upodobitve iščemo z indukcijo iz podgrup <span class="math notranslate nohighlight">\(G_p\)</span>. Opazujmo Borelovo podgrupo <span class="math notranslate nohighlight">\(B_p\)</span>. Ta grupa je opremljena s projekcijo na razcepni torus</p>
+<div class="math notranslate nohighlight">
+\[B_p \to B_p / U_p = D_p = T_r = \FF_p^* \times \FF_p^*.\]</div>
+<p>Nerazcepne upodobitve razcepnega torusa so ravno produkti <span class="math notranslate nohighlight">\(\chi_1 \times \chi_2\)</span>, kjer sta <span class="math notranslate nohighlight">\(\chi_1\)</span>, <span class="math notranslate nohighlight">\(\chi_2\)</span> nerazcepni upodobitvi prvega oziroma drugega faktorja torusa. Na ta način dobimo nerazcepne upodobitve Borelove podgrupe,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho(\chi_1, \chi_2) \colon B_p \to \CC^*, \quad
+    \begin{pmatrix}
+        a &amp; b \\ 0 &amp; d
+    \end{pmatrix} \mapsto
+    \chi_1(a) \chi_2(d).\end{split}\]</div>
+<p>Vsako od teh upodobitev induciramo na grupo <span class="math notranslate nohighlight">\(G_p\)</span> in dobimo upodobitev</p>
+<div class="math notranslate nohighlight">
+\[\pi(\chi_1, \chi_2) = \textstyle \Ind^{G_p}_{B_p}(\rho(\chi_1, \chi_2))\]</div>
+<p>razsežnosti <span class="math notranslate nohighlight">\(|G_p/B_p| = p+1\)</span>. Karakter take upodobitve lahko izračunamo s formulo za vrednosti karakterjev inducirane upodobitve.</p>
+<div class="domacanaloga">
+<p>Izračunaj vrednosti karakterjev upodobitve <span class="math notranslate nohighlight">\(\pi(\chi_1, \chi_2)\)</span>.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{a}\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(\mat{a}{1}{0}{a}\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{b}\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(\mat{a}{\epsilon b}{b}{a}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\pi(\chi_1, \chi_2)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\((p+1) \chi_1(a) \chi_2(a)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\chi_1(a) \chi_2(a)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\chi_1(a) \chi_2(b) + \chi_2(a) \chi_1(b)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Karakter upodobitve <span class="math notranslate nohighlight">\(\pi(\chi_1, \chi_2)\)</span> grupe <span class="math notranslate nohighlight">\(G_p\)</span></p>
+<p>Od tod po preprostem računu določimo normo karakterja kot</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|| \chi_{\pi(\chi_1, \chi_2)} ||^2 = 
+    \begin{cases}
+        2 &amp; \chi_1 = \chi_2, \\
+        1 &amp; \chi_1 \neq \chi_2.
+    \end{cases}\end{split}\]</div>
+<p>Za <span class="math notranslate nohighlight">\(\chi_1 \neq \chi_2\)</span> je upodobitev <span class="math notranslate nohighlight">\(\pi(\chi_1, \chi_2)\)</span> torej nerazcepna. Iz karakterja opazimo, da je <span class="math notranslate nohighlight">\(\rho\)</span> simetrična v svojih argumentih, se pravi <span class="math notranslate nohighlight">\(\pi(\chi_1, \chi_2) \cong \pi(\chi_2, \chi_1)\)</span>. Na ta način torej dobimo <span class="math notranslate nohighlight">\(\binom{p-1}{2} = (p-1)(p-2)/2\)</span> nerazcepnih upodobitev grupe <span class="math notranslate nohighlight">\(G_p\)</span>. Tem upodobitvam pravimo <span class="definicija">upodobitve glavne vrste</span>.<label for='sidenote-role-13' class='margin-toggle'><span id="id13">
+<sup>13</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-13' name='sidenote-role-13' class='margin-toggle'><span class="sidenote"><sup>13</sup>Angleško <em>principal series representations</em>.</span> V primeru, ko je <span class="math notranslate nohighlight">\(\chi_1 = \chi_2\)</span>, iz vrednosti karakterjev opazimo izomorfizem <span class="math notranslate nohighlight">\(\pi(\chi, \chi) \cong \St(\chi) \oplus (\chi \circ \det)\)</span>, torej tukaj ne najdemo nobenih novih nerazcepnih upodobitev.</p>
+</section>
+<section id="tabela-karakterjev-2-del">
+<h3>Tabela karakterjev, 2. del<a class="headerlink" href="#tabela-karakterjev-2-del" title="Link to this heading">#</a></h3>
+<p>Opazujmo zdaj še upodobitve, ki jih dobimo z indukcijo iz nerazcepnega torusa. Te so nekoliko bolj zapletene, zato bomo pristopili bolj previdno. Naj bo</p>
+<div class="math notranslate nohighlight">
+\[\theta \colon T_{nr} \cong \FF_p(\sqrt{\epsilon})^* \to \CC^*\]</div>
+<p>poljubna enorazsežna upodobitev. Izračunajmo karakter indukcije upodobitve <span class="math notranslate nohighlight">\(\theta\)</span> nerazcepnega torusa. Uporabimo formulo za karakter inducirane upodobitve. Naj bo <span class="math notranslate nohighlight">\(R\)</span> množica predstavnikov desnih odsekov <span class="math notranslate nohighlight">\(T_{nr}\)</span> v <span class="math notranslate nohighlight">\(G_p\)</span>. Za <span class="math notranslate nohighlight">\(g \in G_p\)</span> je <span class="math notranslate nohighlight">\(r g r^{-1} \in T_{nr}\)</span> za nek <span class="math notranslate nohighlight">\(r \in R\)</span>, če in samo če je <span class="math notranslate nohighlight">\(r g r^{-1}\)</span> bodisi skalar bodisi nerazcepen polenostaven element, kar je enakovredno temu, da je <span class="math notranslate nohighlight">\(g\)</span> bodisi skalar bodisi nerazcepen polenostaven element. Za skalarje, ki jih interpretiramo kot elemente <span class="math notranslate nohighlight">\(g = a \in \FF_p^* \subseteq \FF_p(\sqrt{\epsilon})^*\)</span>, velja</p>
+<div class="math notranslate nohighlight">
+\[\textstyle \Ind_{T_{nr}}^{G_p}(\theta)(a) = |G_p : T_{nr}| \cdot \theta(a) = p(p-1) \theta(a).\]</div>
+<p>Za nerazcepne polenostavne elemente, ki jih interpretiramo kot elemente <span class="math notranslate nohighlight">\(g = a + \sqrt{\epsilon} b \in \FF_p(\sqrt{\epsilon})^*\)</span>, pa velja <span class="math notranslate nohighlight">\(g^{G_p} \cap T_{nr} = \{ g, g^{\sigma} \}\)</span>, zato sta v formuli za izračun induciranega karakterja relevantna le dva člena in dobimo</p>
+<div class="math notranslate nohighlight">
+\[\textstyle \Ind_{T_{nr}}^{G_p}(\theta)(a + \sqrt{\epsilon} b) = \theta(a + \sqrt{\epsilon} b) + \theta(a - \sqrt{\epsilon} b).\]</div>
+<p>Z avtomorfizmom <span class="math notranslate nohighlight">\(\sigma \in \Gal(\FF_p(\sqrt{\epsilon})/\FF_p)\)</span> lahko delujemo na upodobitvi s predpisom <span class="math notranslate nohighlight">\(\theta^\sigma(x) = \theta(x^\sigma) = \theta(x^p)\)</span>. Torej je zadnja vrednost karakterja enaka <span class="math notranslate nohighlight">\(\theta(g) + \theta^\sigma(g)\)</span>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{1}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{b}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{\epsilon b}{b}{a}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\Ind_{T_{nr}}^{G_p}(\theta)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(p(p-1) \theta(a)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\theta(a + \sqrt{\epsilon}b) + \theta(a - \sqrt{\epsilon}b)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Karakter upodobitve <span class="math notranslate nohighlight">\(\Ind_{T_{nr}}^{G_p}(\theta)\)</span> grupe <span class="math notranslate nohighlight">\(G_p\)</span></p>
+<p>Iz vrednosti karakterjev lahko izračunamo normo induciranega karakterja. Vrednost <span class="math notranslate nohighlight">\(|| \Ind_{T_{nr}}^{G_p}(\theta) ||^2\)</span> je enaka</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{|G_p|} \left(  \sum_{g \in \FF_p^*} (p (p-1) |\theta(g)|)^2 + \sum_{g \in \FF_p(\sqrt{\epsilon})^* \backslash \FF_p^*} \frac{p(p-1)}{2} \cdot |\theta(g) + \theta^{\sigma}(g)|^2 \right).\]</div>
+<p>Zadnjo vsoto lahko po razvoju kvadrata zapišemo kot</p>
+<div class="math notranslate nohighlight">
+\[\frac{p(p-1)}{2} \cdot \left( 2 (p^2  - p) + 2 \Realpart \left( \sum_{g \in \FF_p(\sqrt{\epsilon})^*} \theta(g) \overline{\theta^{\sigma}(g)} - \sum_{g \in \FF_p^*}  |\theta(g)|^2 \right) \right).\]</div>
+<p>Prvo notranjo vsoto prepoznamo kot skalarni produkt upodobitev <span class="math notranslate nohighlight">\(\theta\)</span> in <span class="math notranslate nohighlight">\(\theta^{\sigma}\)</span> v grupi <span class="math notranslate nohighlight">\(\FF_p(\sqrt{\epsilon})\)</span>, ki je enak bodisi <span class="math notranslate nohighlight">\(0\)</span> bodisi <span class="math notranslate nohighlight">\(1\)</span> po ortogonalnosti nerazcepnih karakterjev. S tem je norma <span class="math notranslate nohighlight">\(|| \Ind_{T_{nr}}^{G_p}(\theta) ||^2\)</span> enaka</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{|G_p|} \left( p^2(p-1)^3 + p^2(p-1)^2 + p(p-1) \cdot \left(  (p^2 - 1) \langle \theta, \theta^{\sigma} \rangle - (p-1) \right) \right),\]</div>
+<p>kar se poenostavi do</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|| {\textstyle \Ind_{T_{nr}}^{G_p}(\theta)} ||^2 = p-1 + \langle \theta, \theta^{\sigma} \rangle = \begin{cases}
+        p &amp; \theta = \theta^\sigma, \\
+        p-1 &amp; \theta \neq \theta^{\sigma}.
+    \end{cases}\end{split}\]</div>
+<p>Upodobitev <span class="math notranslate nohighlight">\(\Ind_{T_{nr}}^{G_p}(\theta)\)</span> je torej daleč od nerazcepne.</p>
+<p>Pred nadaljevanjem postojmo pri pogoju <span class="math notranslate nohighlight">\(\theta = \theta^{\sigma}\)</span>, ki razdeli inducirane upodobitve na dva naravna razreda. Ta pogoj lahko enakovredno zapišemo kot <span class="math notranslate nohighlight">\(\theta(x) = \theta(x^{p})\)</span> za vsak <span class="math notranslate nohighlight">\(x \in \FF_p(\sqrt{\epsilon})^*\)</span>, kar je, ker je <span class="math notranslate nohighlight">\(\FF_p(\sqrt{\epsilon})^*\)</span> ciklična grupa, enako kot <span class="math notranslate nohighlight">\(\theta(x^{p-1}) = 1\)</span>. Vrednost <span class="math notranslate nohighlight">\(\theta\)</span> je torej trivialna na množici <span class="math notranslate nohighlight">\(\{ x^{p-1} \mid x \in \FF_p(\sqrt{\epsilon})^* \}\)</span>, ki jo prepoznamo ravno kot jedro determinante <span class="math notranslate nohighlight">\(\ker(\det) = \{ x \in \FF_p(\sqrt{\epsilon})^* \mid x^{p+1} = 1 \}\)</span>. Pogoj <span class="math notranslate nohighlight">\(\theta = \theta^{\sigma}\)</span> je torej enakovreden temu, da se <span class="math notranslate nohighlight">\(\theta\)</span> <em>faktorizira prek determinante</em>, se pravi da je oblike <span class="math notranslate nohighlight">\(\theta = \chi \circ \det\)</span> za nek karakter <span class="math notranslate nohighlight">\(\chi \colon \FF_p^* \to \CC^*\)</span>. Vseh takih upodobitev je <span class="math notranslate nohighlight">\(p-1\)</span>. Upodobitve <span class="math notranslate nohighlight">\(\theta\)</span>, ki se <em>ne</em> faktorizirajo prek determinante, torej za katere velja <span class="math notranslate nohighlight">\(\theta \neq \theta^{\sigma}\)</span>, se imenujejo <span class="definicija">regularne</span>. Regularne upodobitve prihajajo torej v parih <span class="math notranslate nohighlight">\((\theta, \theta^\sigma)\)</span>. Število Galoisjevih orbit regularnih upodobitev je zato enako <span class="math notranslate nohighlight">\(((p^2 - 1) - (p-1))/2 = p(p-1)/2\)</span>.</p>
+<p>Glede na to, da inducirana upodobitev iz nerazcepnega torusa ni nerazcepna, lahko poskusimo inducirati še iz kakšne druge podgrupe. Naravni kandidat, ki nam še preostane, je centralizator nediagonalizabilnega elementa, se pravi grupa <span class="math notranslate nohighlight">\(C_p = S_p \times U_p\)</span>. Izberimo upodobitvi</p>
+<div class="math notranslate nohighlight">
+\[\chi \colon S_p \cong \FF_p^* \to \CC^*, \quad
+    \psi \colon U_p \cong \FF_p \to \CC^*\]</div>
+<p>in tvorimo produktno upodobitev <span class="math notranslate nohighlight">\(\chi \times \psi\)</span> grupe <span class="math notranslate nohighlight">\(C_p\)</span>. To upodobitev induciramo na grupo <span class="math notranslate nohighlight">\(G_p\)</span>. S formulo za izračun karakterjev inducirane upodobitve ni težko določiti njenega karakterja. Naj bo <span class="math notranslate nohighlight">\(R\)</span> množica predstavnikov desnih odsekov <span class="math notranslate nohighlight">\(C_p\)</span> v <span class="math notranslate nohighlight">\(G_p\)</span>. Za <span class="math notranslate nohighlight">\(g \in G_p\)</span> je <span class="math notranslate nohighlight">\(r g r^{-1} \in C_p\)</span> za nek <span class="math notranslate nohighlight">\(r \in R\)</span>, če in samo če je <span class="math notranslate nohighlight">\(g\)</span> bodisi skalar bodisi nediagonalizabilen element. Za skalarje velja</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\textstyle \Ind_{C_p}^{G_p}(\chi \times \psi) } \left( \begin{pmatrix} a &amp; 0 \\ 0 &amp; a \end{pmatrix} \right)
+    = |G_p : C_p| \cdot \chi(a) = (p^2 - 1) \chi(a).\end{split}\]</div>
+<p>Za nediagonalizabilen element <span class="math notranslate nohighlight">\(g\)</span> pa velja <span class="math notranslate nohighlight">\(g^{G_p} \cap C_p = g U_p \backslash S_p\)</span>, zato je v formuli za induciran karakter relevantnih le <span class="math notranslate nohighlight">\(p-1\)</span> členov in dobimo</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\textstyle \Ind_{C_p}^{G_p}(\chi \times \psi)} \left( \begin{pmatrix} a &amp; 1 \\ 0 &amp; a \end{pmatrix} \right)
+    = \sum_{t \in \FF_p^*} (\chi \times \psi) \left( \begin{pmatrix} a &amp; 1 \\ 0 &amp; a \end{pmatrix} \cdot \begin{pmatrix} 1 &amp; t \\ 0 &amp; 1 \end{pmatrix} \right)
+    = \sum_{t \in \FF_p^*} \chi(a) \psi(t).\end{split}\]</div>
+<p>Zadnjo vsoto lahko prepišemo kot</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\chi(a) \cdot \left( \sum_{t \in \FF_p} \psi(t) - 1 \right)
+    = \chi(a) \cdot \left( p \cdot \langle \psi, \oneone \rangle - 1 \right)
+    = \begin{cases}
+        (p-1) \chi(a) &amp; \psi = \oneone, \\
+        - \chi(a) &amp; \psi \neq \oneone.
+    \end{cases}\end{split}\]</div>
+<p>Inducirani karakter je torej odvisen od <span class="math notranslate nohighlight">\(\psi\)</span> le preko veljavnosti enakosti <span class="math notranslate nohighlight">\(\psi = \oneone\)</span>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{1}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{b}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{\epsilon b}{b}{a}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\Ind_{C_p}^{G_p}(\chi \times \psi)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\((p^2 - 1) \chi(a)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\((p \cdot 1_{\psi = \oneone} - 1) \chi(a)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Karakter upodobitve <span class="math notranslate nohighlight">\(\Ind_{C_p}^{G_p}(\chi \times \psi)\)</span> grupe <span class="math notranslate nohighlight">\(G_p\)</span></p>
+<p>Iz vrednosti karakterjev izračunamo normo</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}||{\textstyle \Ind_{C_p}^{G_p}(\chi \times \psi)} ||^2
+    = \begin{cases}
+        2(p-1) &amp; \psi = \oneone, \\
+        p &amp; \psi \neq \oneone.
+    \end{cases}\end{split}\]</div>
+<p>Upodobitev <span class="math notranslate nohighlight">\(\Ind_{C_p}^{G_p}(\chi \times \psi)\)</span> je torej spet daleč od nerazcepne.</p>
+<p>Primerjajmo obe inducirani upodobitvi. Skalarni produkt njunih karakterjev lahko izračunamo tako, da seštejemo le prispevke po skalarnih elementih, saj so vsi ostali členi ničelni. Dobimo</p>
+<div class="math notranslate nohighlight">
+\[{\textstyle \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\chi \times \psi) \rangle}
+= \frac{1}{|G_p|} \sum_{a \in \FF_p^*} p(p-1) \theta(a) \cdot (p^2 - 1) \overline{\chi(a)},\]</div>
+<p>kar prepoznamo kot</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(p-1) \cdot \langle \theta |_{S_p}, \chi \rangle 
+= \begin{cases}
+        0 &amp; \chi \neq \theta |_{S_p}, \\
+        p-1 &amp; \chi = \theta |_{S_p}. \\
+\end{cases}\end{split}\]</div>
+<p>Če torej izberemo <span class="math notranslate nohighlight">\(\chi = \theta |_{S_p}\)</span>, je skalarni produkt med obema upodobitvama enak <span class="math notranslate nohighlight">\(p-1\)</span>. Izračunali smo tudi že normi obeh upodobitev, obe sta blizu <span class="math notranslate nohighlight">\(\sqrt{p}\)</span>. V luči Cauchy-Schwartzove neenakosti sta karakterja obeh induciranih upodobitev kot vektorja torej zelo blizu temu, da bi bila <em>vzporedna</em> in s tem <em>enaka</em>. Najtesnejšo zvezo med njima dobimo, če minimiziramo normi obeh, torej če vzamemo za <span class="math notranslate nohighlight">\(\theta\)</span> regularen karakter in za <span class="math notranslate nohighlight">\(\psi\)</span> poljuben netrivialen karakter. S to izbiro opazujmo <em>virtualen</em> karakter</p>
+<div class="math notranslate nohighlight">
+\[\textstyle \zeta_{\theta} = \Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi) - \Ind_{T_{nr}}^{G_p}(\theta) \in R(G_p).\]</div>
+<p>Po že opravljenih računih je norma tega virtualnega karakterja res minimalna,</p>
+<div class="math notranslate nohighlight">
+\[\textstyle \langle \zeta_{\theta}, \zeta_{\theta} \rangle 
+    = ||\Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi)||^2 + ||\Ind_{T_{nr}}^{G_p}(\theta)||^2 - 2 \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\theta |_{S_p} \times \psi) \rangle = 1.\]</div>
+<p>Torej je bodisi <span class="math notranslate nohighlight">\(\zeta_{\theta}\)</span> bodisi <span class="math notranslate nohighlight">\(-\zeta_{\theta}\)</span> nerazcepen karakter. Ker velja <span class="math notranslate nohighlight">\(\zeta_{\theta}(1) = p-1\)</span>, je <span class="math notranslate nohighlight">\(\zeta_{\theta}\)</span> nerazcepen karakter.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{1}{0}{a}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{b}\)</span></p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mat{a}{\epsilon b}{b}{a}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\zeta_{\theta}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\((p-1) \theta(a)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-\theta(a)\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(- \theta(a + \sqrt{\epsilon} b) - \theta(a - \sqrt{\epsilon} b)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Karakter <span class="math notranslate nohighlight">\(\zeta_{\theta}\)</span> grupe <span class="math notranslate nohighlight">\(G_p\)</span></p>
+<p>Na ta način za vsak regularen karakter <span class="math notranslate nohighlight">\(\theta\)</span> nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem <span class="math notranslate nohighlight">\(\zeta_{\theta}\)</span>. Taki upodobitvi pravimo <span class="definicija">ostna upodobitev</span>.<label for='sidenote-role-14' class='margin-toggle'><span id="id14">
+<sup>14</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-14' name='sidenote-role-14' class='margin-toggle'><span class="sidenote"><sup>14</sup>Angleško <em>cuspidal representation</em>.</span> Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti Galoisjevi orbiti. Število ostnih upodobitev je zato enako <span class="math notranslate nohighlight">\(p(p-1)/2\)</span>. Poudarimo, da smo ostne upodobitve konstruirali le implicitno prek indukcij. Z nekaj truda bi lahko izpeljali eksplicitno konstrukcijo teh upodobitev. Izkaže se, da ostnih upodobitev <em>ni</em> mogoče opisati kot neposredno induciranih iz podgrup <span class="math notranslate nohighlight">\(G_p\)</span>.<label for='sidenote-role-15' class='margin-toggle'><span id="id15">
+<sup>15</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-15' name='sidenote-role-15' class='margin-toggle'><span class="sidenote"><sup>15</sup>Najpreprostejši znan opis je preko Weilove upodobitve (Bushnell-Henniart 2006), ki ostne upodobitve uresniči na določenih podprostorih v <span class="math notranslate nohighlight">\(\fun(\FF_p(\sqrt{\epsilon}), \CC)\)</span>.</span></p>
+<p>Povzemimo. Skupaj smo našli naslednje upodobitve:</p>
+<ul class="simple">
+<li><p>linearne: <span class="math notranslate nohighlight">\(p-1\)</span> upodobitev stopnje <span class="math notranslate nohighlight">\(1\)</span>,</p></li>
+<li><p>Steinbergove: <span class="math notranslate nohighlight">\(p-1\)</span> upodobitev stopnje <span class="math notranslate nohighlight">\(p\)</span>,</p></li>
+<li><p>glavne vrste: <span class="math notranslate nohighlight">\((p-1)(p-2)/2\)</span> upodobitev stopnje <span class="math notranslate nohighlight">\(p+1\)</span>,</p></li>
+<li><p>ostne: <span class="math notranslate nohighlight">\(p(p-1)/2\)</span> upodobitev stopnje <span class="math notranslate nohighlight">\(p-1\)</span>.</p></li>
+</ul>
+<p>S tem smo našteli <span class="math notranslate nohighlight">\(p^2-1\)</span> nerazcepnih upodobitev in zatorej vse nerazcepne upodobitve grupe <span class="math notranslate nohighlight">\(G_p\)</span>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{a}\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(\mat{a}{1}{0}{a}\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(\mat{a}{0}{0}{b}\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(\mat{a}{\epsilon b}{b}{a}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\chi \circ \det\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\chi(a)^2\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\chi(a)^2\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\chi(a) \chi(b)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\chi(a^2 - \epsilon b^2)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(\St(\chi)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(p \chi(a)^2\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\chi(a) \chi(b)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(- \chi(a^2 - \epsilon b^2)\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\pi(\chi_1, \chi_2)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\((p+1) \chi_1(a) \chi_2(a)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\chi_1(a) \chi_2(a)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\chi_1(a) \chi_2(b) + \chi_2(a) \chi_1(b)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(\zeta_{\theta}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\((p-1) \theta(a)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(-\theta(a)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(- \theta(a + \sqrt{\epsilon} b) - \theta(a - \sqrt{\epsilon} b)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Tabela karakterjev <span class="math notranslate nohighlight">\(G_p\)</span></p>
+<p>Izračunano tabelo karakterjev grupe <span class="math notranslate nohighlight">\(G_p\)</span> lahko uporabimo, da z njo določimo še tabelo karakterjev grupe <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span>.</p>
+<div class="domacanaloga">
+<p>Izračunaj tabelo karakterjev grupe <span class="math notranslate nohighlight">\(\SL_2(\FF_p)\)</span> in grupe <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span>. S tabelo se prepričaj, da je grupa <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span> enostavna za <span class="math notranslate nohighlight">\(p &gt; 3\)</span>. V pomoč ti je lahko obravnava v (Fulton-Harris 2004).</p>
+</div>
+</section>
+<section id="matrike-visjih-razseznosti">
+<h3>Matrike višjih razsežnosti<a class="headerlink" href="#matrike-visjih-razseznosti" title="Link to this heading">#</a></h3>
+<p>Argumente, ki smo jih videli v tem razdelku, bi lahko posplošili na matrike večjih razsežnosti in tako (s precej več truda) izračunali generično tabelo karakterjev grupe <span class="math notranslate nohighlight">\(\GL_n(\FF_q)\)</span>, kot je storil <a class="reference external" href="https://www.jstor.org/stable/1992997#metadata_info_tab_contents">(Green 1955)</a>. Zopet dobimo glavno vrsto upodobitev, tokrat inducirano induktivno iz podgrup <span class="math notranslate nohighlight">\(\GL_m(\FF_q)\)</span> za <span class="math notranslate nohighlight">\(m &lt; n\)</span>. Pri tem je relevantno, da to lahko naredimo na več načinov, na primer za vsako razčlenitev števila <span class="math notranslate nohighlight">\(n = m_1 + m_2 + \cdots + m_k\)</span> lahko v <span class="math notranslate nohighlight">\(\GL_n(\FF_q)\)</span> vidimo bločnodiagonalni direktni produkt grup</p>
+<div class="math notranslate nohighlight">
+\[\textstyle  \GL_{m_1}(\FF_q) \times \GL_{m_2}(\FF_q) \times \cdots \times \GL_{m_k}(\FF_q).\]</div>
+<p>Teorija upodobitev <span class="math notranslate nohighlight">\(\GL_n(\FF_q)\)</span> zato vključuje nekaj kompleksnosti teorije upodobitev simetrične grupe <span class="math notranslate nohighlight">\(S_n\)</span>. Tudi v splošnem primeru dobimo ostne upodobitve, in sicer s pomočjo indukcije iz Galoisjevih razredov regularnih upodobitev nerazcepnega torusa, ki ga lahko predstavimo kot končno polje <span class="math notranslate nohighlight">\(\FF_{q^n}\)</span>.</p>
+<p>Ni pa tako enostavno pridobiti tudi tabele karakterjev družine enostavnih grup <span class="math notranslate nohighlight">\(\PSL_n(\FF_q)\)</span> ali njene prijateljice <span class="math notranslate nohighlight">\(E_8(\FF_q)\)</span>. Seveda lahko posamezne tabele za specifične vrednosti <span class="math notranslate nohighlight">\(n\)</span> in <span class="math notranslate nohighlight">\(q\)</span> izračunamo,<label for='sidenote-role-16' class='margin-toggle'><span id="id16">
+<sup>16</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-16' name='sidenote-role-16' class='margin-toggle'><span class="sidenote"><sup>16</sup>Računanje teh tabel specifičnih končnih enostavnih grup je zbrano v <a class="reference external" href="http://brauer.maths.qmul.ac.uk/Atlas/v3/">ATLAS</a>. Ti izračuni so močno pripomogli k dokazu izreka o <a class="reference external" href="https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups">klasifikaciji končnih enostavnih grup</a>.</span> ampak končni cilj je imeti generične tabele karakterjev, kot smo to dosegli za <span class="math notranslate nohighlight">\(G_p = \GL_2(\FF_p)\)</span>. Za razumevanje teorije upodobitev teh grup imamo na voljo matematično zahtevno <a class="reference external" href="https://en.wikipedia.org/wiki/Deligne%E2%80%93Lusztig_theory">Deligne-Lusztigovo teorijo</a>, ki upodobitve končnih grup sestavlja s pomočjo upodobitev prirejenih algebraičnih grup nad algebraično zaprtim poljem, na primer <span class="math notranslate nohighlight">\(\SL_n(\overline{\FF_p})\)</span>, in sicer te upodobitve izhajajo iz delovanja na <span class="math notranslate nohighlight">\(\ell\)</span>-adičnih kohomoloških grupah prirejenih raznoterosti. Iz te teorije lahko razumemo <em>del</em> generične tabele karakterjev, na primer poznamo vse stopnje nerazcepnih upodobitev, ne poznamo pa vseh vrednosti vseh karakterjev.</p>
+<hr class="footnotes docutils" />
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter03.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">nazaj</p>
+        <p class="prev-next-title">Upodobitve končnih grup</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter05.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">naprej</p>
+        <p class="prev-next-title">Aplikacije</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Vsebina
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simetricne-grupe">Simetrične grupe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nerazcepne-upodobitve">Nerazcepne upodobitve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vrednosti-karakterjev">Vrednosti karakterjev</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternirajoce-grupe">Alternirajoče grupe</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#splosne-linearne-grupe">Splošne linearne grupe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#osnovne-poteze">Osnovne poteze</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konjugiranostni-razredi">Konjugiranostni razredi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabela-karakterjev-1-del">Tabela karakterjev, 1. del</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabela-karakterjev-2-del">Tabela karakterjev, 2. del</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrike-visjih-razseznosti">Matrike višjih razsežnosti</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Avtor Urban Jezernik
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
