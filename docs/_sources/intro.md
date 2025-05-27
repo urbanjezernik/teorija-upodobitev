@@ -8,7 +8,7 @@
   <strong>Urban Jezernik<br>
   Univerza v Ljubljani, Fakulteta za matematiko in fiziko</strong><br>
 
-  Zadnja posodobitev: 26. 05. 2025
+  Zadnja posodobitev: 27. 05. 2025
 </div>
 ```
 
@@ -18,7 +18,7 @@ Teorija upodobitev se ukvarja z *linearizacijo* abstraktnih objektov, predvsem g
 
 1.  Namesto abstraktne obravnave dano grupo na različne načine uresničimo z obrnljivimi matrikami, kar nam z močnimi orodji linearne algebre omogoča bolj transparenten študij njihovih lastnosti. Tukaj nas zanimajo predvsem najenostavnejši načini predstavitev grup z matrikami.
 
-    <div class="zgled">
+    <div class="zgledbrezstevilke">
 
     Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta abstraktna grupa izhaja iz simetrij $n$-kotnika v ravnini, s čimer lahko uresničimo njena generatorja $s,r$ kot matriki
     ```{math}
@@ -36,7 +36,7 @@ Teorija upodobitev se ukvarja z *linearizacijo* abstraktnih objektov, predvsem g
 
 2.  Mnoge situacije, kjer se pojavljajo grupe prek svojih delovanj, lahko lineariziramo in to linearno strukturo razstavimo na enostavne komponente, ki jih razumemo s pomočjo prejšnje točke.
 
-    <div class="zgled">
+    <div class="zgledbrezstevilke">
 
     Opazujmo simetrično grupo $S_n$, ki naravno deluje na množici $\{ 1, 2, \dots, n \}$ s permutacijami. Temu delovanju lahko priredimo vektorski prostor z bazo $\{ e_1, e_2, \dots, e_n \}$. Permutaciji $\sigma \in S_n$ lahko v tej bazi priredimo permutacijsko matriko v $\GL_n(\CC)$, ki vektor $e_i$ preslika v $e_{\sigma(i)}$. Na ta način lahko uresničimo naravno delovanje simetrične grupe $S_n$ znotraj matrične grupe $\GL_n(\CC)$.
 
@@ -73,3 +73,22 @@ Pri predstavitvi temeljev teorije upodobitev uporabljamo jezik homomorfizmov gru
 ### Zahvala
 
 Zapiske sem v največji meri pripravil med izvajanjem predmeta na magistrskem študiju matematike na Fakulteti za matematiko in fiziko Univerze v Ljubljani v letu 2022/23. Zahvaljujem se študentom, ki so obiskovali predavanja in med spremljanjem opozarjali na vsebinske pomanjkljivosti. Zapiske sta še posebej podrobno pregledala študenta Hana Ibrahimpašić in Daniel Vitas. Zahvaljujem se jima za mnoge koristne pripombe.
+
+```{raw} html
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!/intro\.html$/.test(window.location.pathname)) return;
+    document
+      .querySelectorAll('a.headerlink[href="#teorija-upodobitev"][title="Link to this heading"]')
+      .forEach(el => el.remove());
+    document.querySelectorAll('h2').forEach(h2 => {
+      const h3 = document.createElement('h3');
+      Array.from(h2.attributes).forEach(({name, value}) =>
+        h3.setAttribute(name, value)
+      );
+      h3.innerHTML = h2.innerHTML;
+      h2.replaceWith(h3);
+    });
+  });
+</script>
+```

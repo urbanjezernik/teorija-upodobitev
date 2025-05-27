@@ -351,7 +351,7 @@ Naj bo $g \in G$ in naj bo $B = g A^{-1} \subseteq G$. Množici $A$ in $B$ sta o
 
 </div>
 
-Ta lastnost velikih množic ima mnogo zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babaijeve domeneve o premerih končnih enostavnih grup prek teorije približnih podgrup in pri raziskovanju slučajnih sprehodov,[^7] kot je razloženo v [(Breuillard 2013)](http://library.msri.org/books/Book61/files/15breu.pdf).
+Ta lastnost velikih množic ima mnogo zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babaijeve domeneve o premerih končnih enostavnih grup prek teorije približnih podgrup in pri raziskovanju slučajnih sprehodov,[^7] kot je razl oženo v [(Breuillard 2013)](https://library.slmath.org/books/Book61/files/15breu.pdf).
 
 ### Največja možna gostota
 
@@ -833,7 +833,7 @@ Ker je $\delta$ generator $\FF_p^*$, grupa $\langle \conclass \rangle$ vsebuje m
 
 Za razumevanje limitnega obnašanja porazdelitve $\mu_n$ moramo najprej določiti vrednosti $r_{\pi}(\conclass)$. Tabelo karakterjev grupe $G_p$ v celoti poznamo.
 
-|  | $\chi_{\pi}(1)$ | $\overline{\chi_{\pi}(\conclass)}$ | $r_{\pi}(\conclass)$ | $\left| r_{\pi}(\conclass) \right|$ |  |
+|  | $\chi_{\pi}(1)$ | $\overline{\chi_{\pi}(\conclass)}$ | $r_{\pi}(\conclass)$ | $\abs{r_{\pi}(\conclass)}$ |  |
 |:---|:--:|:--:|:--:|:--:|:--:|
 | $\chi \circ \det$ | $1$ | $\overline{\chi(\delta)}$ | $\overline{\chi(\delta)}$ | $1$ |  |
 | $\St(\chi)$ | $p$ | $\overline{\chi(\delta)}$ | $\overline{\chi(\delta)} / p$ | $1/p$ |  |

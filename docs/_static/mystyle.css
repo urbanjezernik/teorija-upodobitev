@@ -9,7 +9,7 @@ h1, h2 {
 .naslov h1 {
   font-size: 4em;
 }
-.zgled {
+.zgled, .zgledbrezstevilke {
 	color: #266633;
 }
 .odprtproblem {
@@ -109,22 +109,41 @@ div.izrek > p:first-child::before {                        /* label */
 div.izrek > p:first-child { margin-top: 0; }               /* no gap */
 
 /* ZGLED ──────────────────────────────────────────────── */
-div.zgled           { counter-increment: stevec; }
+/* 1) bump your counter on every .zgled */
+div.zgled {
+  counter-increment: stevec;
+}
+
+/* 2) when the first child is a <p>, inject *inside* that <p> (inline) */
 div.zgled > p:first-child::before {
   content: "Zgled " counter(chapter) "." counter(stevec) ". ";
   font-weight: 700;
-  margin-right: .4ch;
+  /* inline by default, so no extra line break */
 }
-div.zgled > p:first-child { margin-top: 0; }
 
-/* ZGLED ──────────────────────────────────────────────── */
-div.zgled           { counter-increment: stevec; }
-div.zgled > ul:first-child::before {
+/* 3) when the first child is a <ul>, inject *before* the list (still inline) */
+div.zgled:has(> ul:first-child)::before {
   content: "Zgled " counter(chapter) "." counter(stevec) ". ";
   font-weight: 700;
+  /* inline by default, so appears right before the UL element */
+  /* margin-right if you need a little extra breathing room */
   margin-right: .4ch;
 }
-div.zgled > ul:first-child { margin-top: 0; }
+
+/* 4) reset the top-margin on the real first child so things don’t jump down */
+div.zgled > p:first-child,
+div.zgled > ul:first-child {
+  margin-top: 0;
+}
+
+/* 2) when the first child is a <p>, inject *inside* that <p> (inline) */
+div.zgledbrezstevilke > p:first-child::before {
+  content: "Zgled. ";
+  font-weight: 700;
+  margin-top: 0;
+  /* inline by default, so no extra line break */
+}
+
 
 /* TRDITEV ────────────────────────────────────────────── */
 div.trditev         { counter-increment: stevec; }
@@ -170,6 +189,15 @@ div.posledica > p:first-child::before {
   margin-right: .4ch;
 }
 div.posledica > p:first-child { margin-top: 0; }
+
+/* posl ────────────────────────────────────────────── */
+div.odprtproblem         { counter-increment: stevec; }
+div.odprtproblem > p:first-child::before {
+  content: "Odprt problem " counter(chapter) "." counter(stevec) ". ";
+  font-weight: 700;
+  margin-right: .4ch;
+}
+div.odprtproblem > p:first-child { margin-top: 0; }
 /* …repeat for lema, definicija, domacanaloga … */
 
 footer.bd-footer-content {display:none;}
