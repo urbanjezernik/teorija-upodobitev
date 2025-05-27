@@ -48,7 +48,6 @@ sphinx:
       use_sidenotes: true      # <-- activates margin/sidenotes
       # secondary_sidebar_items: []  
       show_nav_level: 2          # <- expand headings down to <h2>
-      show_toc_level: 2
     html_sidebars:
       "**":                              # match every page
         # - search-field.html       # 🔍  built-in search input
@@ -124,6 +123,8 @@ sphinx:
           youngsym: "\\sigma_{\\lambda}"
 
           mat: ["\\begin{pmatrix} #1 & #2\\\\ #3 & #4 \\end{pmatrix}", 4]
+
+          abs: ["\\lvert #1 \\rvert", 1]
 
 
 html_static_path:

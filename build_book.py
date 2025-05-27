@@ -152,7 +152,27 @@ pypandoc.convert_text(
 
 md = intro_md.read_text()
 
-full_intro = make_title_block() + "\n" + md
+jsblock = """```{raw} html
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!/intro\.html$/.test(window.location.pathname)) return;
+    document
+      .querySelectorAll('a.headerlink[href="#teorija-upodobitev"][title="Link to this heading"]')
+      .forEach(el => el.remove());
+    document.querySelectorAll('h2').forEach(h2 => {
+      const h3 = document.createElement('h3');
+      Array.from(h2.attributes).forEach(({name, value}) =>
+        h3.setAttribute(name, value)
+      );
+      h3.innerHTML = h2.innerHTML;
+      h2.replaceWith(h3);
+    });
+  });
+</script>
+```
+"""
+
+full_intro = make_title_block() + "\n" + md + "\n" + jsblock
 
 intro_md.write_text(full_intro)
 

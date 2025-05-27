@@ -109,6 +109,7 @@
 \DeclareMathOperator\diam{diam}
 \DeclareMathOperator\Ad{Ad}
 \DeclareMathOperator\imaginary{Im}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
 
 \def\definicija{\color{rdeca}\bf\em}
 \def\vprasanje{\color{oranzna}}
@@ -133,6 +134,18 @@
 
 \theoremstyle{zgled}
 \newtheorem{zgled}[theorem]{Zgled}
+
+\newtheoremstyle{zgledbrezstevilke}
+ {}{}%
+ {\color{zelena}}
+ {}%
+ {\color{zelena}\bfseries}%
+ {\color{zelena}.}%
+ { }{}
+
+\theoremstyle{zgledbrezstevilke}
+\newtheorem{zgledbrezstevilke}[theorem]{Zgled}
+
 
 \newtheoremstyle{odprtproblem}
  {}{}%
@@ -276,7 +289,7 @@ Teorija upodobitev se ukvarja z \emph{linearizacijo} abstraktnih objektov, predv
 \begin{enumerate}
     \item Namesto abstraktne obravnave dano grupo na različne načine uresničimo z obrnljivimi matrikami, kar nam z močnimi orodji linearne algebre omogoča bolj transparenten študij njihovih lastnosti. Tukaj nas zanimajo predvsem najenostavnejši načini predstavitev grup z matrikami.
     
-    \begin{zgled}
+    \begin{zgledbrezstevilke}
         Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta abstraktna grupa izhaja iz simetrij $n$-kotnika v ravnini, s čimer lahko uresničimo njena generatorja $s,r$ kot matriki
         \[
             s \mapsto \begin{pmatrix}
@@ -288,13 +301,13 @@ Teorija upodobitev se ukvarja z \emph{linearizacijo} abstraktnih objektov, predv
             \end{pmatrix}
         \]
         in torej poljuben element $D_{2n}$ kot matriko v $\GL_2(\RR)$.
-    \end{zgled}
+    \end{zgledbrezstevilke}
 
     \item Mnoge situacije, kjer se pojavljajo grupe prek svojih delovanj, lahko lineariziramo in to linearno strukturo razstavimo na enostavne komponente, ki jih razumemo s pomočjo prejšnje točke.
     
-    \begin{zgled}
+    \begin{zgledbrezstevilke}
         Opazujmo simetrično grupo $S_n$, ki naravno deluje na množici $\{ 1, 2, \dots, n \}$ s permutacijami. Temu delovanju lahko priredimo vektorski prostor z bazo $\{ e_1, e_2, \dots, e_n \}$. Permutaciji $\sigma \in S_n$ lahko v tej bazi priredimo permutacijsko matriko v $\GL_n(\CC)$, ki vektor $e_i$ preslika v $e_{\sigma(i)}$. Na ta način lahko uresničimo naravno delovanje simetrične grupe $S_n$ znotraj matrične grupe $\GL_n(\CC)$.
-    \end{zgled}
+    \end{zgledbrezstevilke}
 \end{enumerate}
 
 Najprej bomo vzpostavili temelje teorije upodobitev (osnovne definicije in zgledi, fundamentalne konstrukcije upodobitev). Pokazali bomo, kako se lahko vsaki konkretni upodobitvi približamo, kot da bi jo pogledali pod mikroskopom (videli bomo, da je vsaka sestavljena iz \emph{celic}, vsaka celica pa iz \emph{organelov}). Za tem si bomo ogledali dobro razvito teorijo upodobitev končnih grup (tu bomo pod mikroskopom videli in razumeli čudovito strukturo s pomočjo Fourierove transformacije), podrobneje bomo raziskali upodobitve dveh temeljnih družin končnih grup (simetrične grupe in splošne linearne grupe nad končnim poljem). Ta teorija ima mnogo aplikacij, od katerih bomo izpostavili nekaj sodobnejših (v teoriji števil, kombinatoriki, slučajnih procesih na grupah). Nazadnje bomo obravnavali še nekaj zgledov upodobitev pomembnih družin neskončnih grup (kompaktne grupe ter linearne grupe, zvezne in diskretne).
@@ -351,16 +364,6 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
 
 \begin{zgled} \leavevmode
     \begin{itemize}
-        \item Opazujmo grupo ostankov $\ZZ/6\ZZ$ in racionalni vektorski prostor $\QQ^2$. Preslikava
-        \[
-            \rho \colon \ZZ/6\ZZ \to \GL(\QQ^2) = {\textstyle \GL_2(\QQ)}, \quad
-            x \mapsto  \begin{pmatrix}
-                1/2 & 1/8 \\
-                -6 & 1/2 \\
-            \end{pmatrix}^x
-        \]
-        je upodobitev grupe $\ZZ/6\ZZ$. Relevantna matrika je namreč reda $6$.
-
         \item Opazujmo matrično grupo $\GL_2(\CC)$ in vektorski prostor $\CC^2$. Množenje matrik z vektorji podaja upodobitev
         \[
             \textstyle \rho \colon \GL_2(\CC) \to \GL(\CC^2) = \GL_2(\CC), \quad
@@ -387,7 +390,7 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
             \chi_m \colon \ZZ/q\ZZ \to \GL(\CC) = \CC^*, \quad
             x \mapsto e^{2 \pi i mx/q}.
         \]
-
+        
         \item Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta grupa izhaja iz simetrij $n$-kotnika v ravnini, s čimer nam ponuja svojo naravno upodobitev $\rho \colon D_{2n} \to \GL(\RR^2) = \GL_2(\RR)$, ki preslika generatorja kot
         \[
             s \mapsto \begin{pmatrix}
@@ -408,6 +411,16 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
                 \sin(2 \pi k/n) & \cos(2 \pi k/n)
             \end{pmatrix}.
         \]
+        
+        \item Opazujmo grupo ostankov $\ZZ/6\ZZ$ in racionalni vektorski prostor $\QQ^2$. Preslikava
+        \[
+            \rho \colon \ZZ/6\ZZ \to \GL(\QQ^2) = {\textstyle \GL_2(\QQ)}, \quad
+            x \mapsto  \begin{pmatrix}
+                1/2 & 1/8 \\
+                -6 & 1/2 \\
+            \end{pmatrix}^x
+        \]
+        je upodobitev grupe $\ZZ/6\ZZ$. Relevantna matrika je namreč reda $6$.
         
         \item Opazujmo ciklično grupo $\ZZ/p\ZZ$ za praštevilo $p$ nad končnim poljem $\FF_p$. Preslikava
         \[
@@ -3576,7 +3589,7 @@ Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne neracepne 
 Naj bo $g \in G$ in naj bo $B = g A^{-1} \subseteq G$. Množici $A$ in $B$ sta obe enake gostote, recimo $\alpha$. Velja $\alpha^3 > m^{-1}$, kar je enakovredno $m^{-1/2} \alpha^{3/2} < \alpha^3$. Iz trditve od tod sledi $A \cdot A \cap B \neq \emptyset$, zato je $g \in A \cdot A \cdot A$. Ker je bil $g$ poljuben, je $A \cdot A \cdot A = G$.
 \end{dokaz}
 
-Ta lastnost velikih množic ima mnogo zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babaijeve domeneve o premerih končnih enostavnih grup prek teorije približnih podgrup in pri raziskovanju slučajnih sprehodov,\footnote{Del tega si bomo ogledali nekoliko kasneje.} kot je razloženo v \href{http://library.msri.org/books/Book61/files/15breu.pdf}{(Breuillard 2013)}.
+Ta lastnost velikih množic ima mnogo zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babaijeve domeneve o premerih končnih enostavnih grup prek teorije približnih podgrup in pri raziskovanju slučajnih sprehodov,\footnote{Del tega si bomo ogledali nekoliko kasneje.} kot je razl oženo v \href{https://library.slmath.org/books/Book61/files/15breu.pdf}{(Breuillard 2013)}.
 
 \subsection{Največja možna gostota}
 
@@ -4036,7 +4049,7 @@ Za razumevanje limitnega obnašanja porazdelitve $\mu_n$ moramo najprej določit
     &
     $r_{\pi}(\conclass)$
     &
-    $\left| r_{\pi}(\conclass) \right|$ \\ \hline
+    $\abs{r_{\pi}(\conclass)}$ \\ \hline
     $\chi \circ \det$ & $1$ & $\overline{\chi(\delta)}$ &  $\overline{\chi(\delta)}$ & $1$ \\
     $\St(\chi)$ & $p$ & $\overline{\chi(\delta)}$ & $\overline{\chi(\delta)} / p$ & $1/p$ \\
     $\pi(\chi_1, \chi_2)$ & $p+1$ & $\overline{\chi_1(\delta)} + \overline{\chi_2(\delta)}$ & $(\overline{\chi_1(\delta)} + \overline{\chi_2(\delta)})/(p+1)$ & $< 2/(p+1)$ \\

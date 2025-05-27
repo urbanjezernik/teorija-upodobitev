@@ -31,16 +31,6 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
 
 <div class="zgled">
 
-- Opazujmo grupo ostankov $\ZZ/6\ZZ$ in racionalni vektorski prostor $\QQ^2$. Preslikava
-  ```{math}
-  \rho \colon \ZZ/6\ZZ \to \GL(\QQ^2) = {\textstyle \GL_2(\QQ)}, \quad
-              x \mapsto  \begin{pmatrix}
-                  1/2 & 1/8 \\
-                  -6 & 1/2 \\
-              \end{pmatrix}^x
-  ```
-  je upodobitev grupe $\ZZ/6\ZZ$. Relevantna matrika je namreč reda $6$.
-
 - Opazujmo matrično grupo $\GL_2(\CC)$ in vektorski prostor $\CC^2$. Množenje matrik z vektorji podaja upodobitev
   ```{math}
   \textstyle \rho \colon \GL_2(\CC) \to \GL(\CC^2) = \GL_2(\CC), \quad
@@ -90,6 +80,16 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
                   \sin(2 \pi k/n) & \cos(2 \pi k/n)
               \end{pmatrix}.
   ```
+
+- Opazujmo grupo ostankov $\ZZ/6\ZZ$ in racionalni vektorski prostor $\QQ^2$. Preslikava
+  ```{math}
+  \rho \colon \ZZ/6\ZZ \to \GL(\QQ^2) = {\textstyle \GL_2(\QQ)}, \quad
+              x \mapsto  \begin{pmatrix}
+                  1/2 & 1/8 \\
+                  -6 & 1/2 \\
+              \end{pmatrix}^x
+  ```
+  je upodobitev grupe $\ZZ/6\ZZ$. Relevantna matrika je namreč reda $6$.
 
 - Opazujmo ciklično grupo $\ZZ/p\ZZ$ za praštevilo $p$ nad končnim poljem $\FF_p$. Preslikava
   ```{math}
