@@ -8,7 +8,7 @@
   <strong>Urban Jezernik<br>
   Univerza v Ljubljani, Fakulteta za matematiko in fiziko</strong><br>
 
-  Zadnja posodobitev: 27. 05. 2025
+  Zadnja posodobitev: 04. 11. 2025
 </div>
 ```
 
@@ -42,7 +42,7 @@ Teorija upodobitev se ukvarja z *linearizacijo* abstraktnih objektov, predvsem g
 
     </div>
 
-Najprej bomo vzpostavili temelje teorije upodobitev (osnovne definicije in zgledi, fundamentalne konstrukcije upodobitev). Pokazali bomo, kako se lahko vsaki konkretni upodobitvi približamo, kot da bi jo pogledali pod mikroskopom (videli bomo, da je vsaka sestavljena iz *celic*, vsaka celica pa iz *organelov*). Za tem si bomo ogledali dobro razvito teorijo upodobitev končnih grup (tu bomo pod mikroskopom videli in razumeli čudovito strukturo s pomočjo Fourierove transformacije), podrobneje bomo raziskali upodobitve dveh temeljnih družin končnih grup (simetrične grupe in splošne linearne grupe nad končnim poljem). Ta teorija ima mnogo aplikacij, od katerih bomo izpostavili nekaj sodobnejših (v teoriji števil, kombinatoriki, slučajnih procesih na grupah). Nazadnje bomo obravnavali še nekaj zgledov upodobitev pomembnih družin neskončnih grup (kompaktne grupe ter linearne grupe, zvezne in diskretne).
+Najprej bomo vzpostavili temelje teorije upodobitev (osnovne definicije in zgledi, fundamentalne konstrukcije upodobitev). Pokazali bomo, kako se lahko vsaki konkretni upodobitvi približamo, kot da bi jo pogledali pod mikroskopom (videli bomo, da je vsaka sestavljena iz *celic*, vsaka celica pa iz *organelov*). Za tem si bomo ogledali dobro razvito teorijo upodobitev končnih grup (tu bomo pod mikroskopom videli in razumeli čudovito strukturo s pomočjo Fourierove transformacije), podrobneje bomo raziskali upodobitve dveh temeljnih družin končnih grup (simetrične grupe in splošne linearne grupe nad končnim poljem). Ta teorija ima mnogo uporab, od katerih bomo izpostavili nekaj sodobnejših (v teoriji števil, kombinatoriki, slučajnih procesih na grupah). Nazadnje bomo obravnavali še nekaj zgledov upodobitev pomembnih družin neskončnih grup (kompaktne grupe ter linearne grupe, zvezne in diskretne).
 
 ### Literatura
 
@@ -72,7 +72,7 @@ Pri predstavitvi temeljev teorije upodobitev uporabljamo jezik homomorfizmov gru
 
 ### Zahvala
 
-Zapiske sem v največji meri pripravil med izvajanjem predmeta na magistrskem študiju matematike na Fakulteti za matematiko in fiziko Univerze v Ljubljani v letu 2022/23. Zahvaljujem se študentom, ki so obiskovali predavanja in med spremljanjem opozarjali na vsebinske pomanjkljivosti. Zapiske sta še posebej podrobno pregledala študenta Hana Ibrahimpašić in Daniel Vitas. Zahvaljujem se jima za mnoge koristne pripombe.
+Zapiske sem v največji meri pripravil med izvajanjem predmeta na magistrskem študiju matematike na Fakulteti za matematiko in fiziko Univerze v Ljubljani v letu 2022/23. Zahvaljujem se študentom, ki so obiskovali predavanja in med spremljanjem opozarjali na vsebinske pomanjkljivosti. Zapiske sta še posebej podrobno pregledala študenta Hana Ibrahimpašić in Daniel Vitas. Zahvaljujem se jima za mnoge koristne pripombe. Za Založbo FMF je zapiske strokovno pregledal Primož Moravec. Njegovi predlogi so naredili delo bolj dostopno študentom, za kar sem mu, kot mu bodo tudi bralci, hvaležen.
 
 ```{raw} html
 <script defer>

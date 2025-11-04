@@ -59,7 +59,7 @@ Množico vseh izomorfnostnih razredov nerazcepnih upodobitev dane grupe $G$ ozna
 
 Naj bo $G$ grupa z nerazcepno upodobitvijo $\pi$ končne razsežnosti nad poljem kompleksnih števil. Spletične $\hom_G(\pi, \pi) = \hom(\pi, \pi)^G$ so endomorfizmi vektorskega prostora, ki so $G$-invariantni, se pravi komutirajo z delovanjem grupe $G$. Zglede takih endomorfizmov lahko dobimo iz delovanj centralnih elementov grupe $G$; za vsak $z \in Z(G)$ je $\pi(z) \in \hom_G(\pi, \pi)$. Po Schurovi lemi je zato $\pi(z) = \omega(z) \cdot \id$ za nek skalar $\omega(z)$. Ker je $\pi$ homomorfizem, je $\omega \colon Z(G) \to \CC^*$ enorazsežna upodobitev centra grupe $G$. Tej upodobitvi rečemo <span class="definicija">centralni karakter</span> upodobitve $\pi$.
 
-Še posebej zanimiv je primer, ko je $G$ *abelova* grupa. Takrat za vsako nerazcepno upodobitev $\pi$ končne razsežnosti nad poljem $\CC$ velja $\pi(g) = \omega(g) \cdot \id$ za *vsak* $g \in G$. Vsak enorazsežen podprostor je zato avtomatično podupodobitev. Ker je $\pi$ nerazcepna, od tod sklepamo $\deg(\pi) = 1$ in s tem $\pi = \omega$. Upodobitev $\pi$ je tako *enorazsežna*. Na primer, vsaka končnorazsežna nerazcepna kompleksna upodobitev grupe $\RR$ je nujno enorazsežna.
+Še posebej zanimiv je primer, ko je $G$ *abelova* grupa. Takrat za vsako nerazcepno upodobitev $\pi$ končne razsežnosti nad poljem $\CC$ velja $\pi(g) = \omega(g) \cdot \id$ za *vsak* $g \in G$. Vsak enorazsežen podprostor je zato avtomatično podupodobitev. Ker je $\pi$ nerazcepna, od tod sklepamo $\deg(\pi) = 1$ in s tem $\pi = \omega$. Upodobitev $\pi$ je tako *enorazsežna*. Na primer, vsaka končno razsežna nerazcepna kompleksna upodobitev grupe $\RR$ je nujno enorazsežna.
 
 </div>
 
@@ -167,7 +167,7 @@ Naj $\rho$ upodablja grupo $G$ na prostoru $V$. Naj bo $W \leq V$ nerazcepna pod
 
 ### Kompozicijska vrsta
 
-Vsake upodobitve ne moremo razstaviti kot direktno vsoto nerazcepnih upodobitev. Kljub temu pa je res, da lahko vsako upodobitev (na končnorazsežnem prostoru) razstavimo na nerazcepne upodobitve, le da moramo pri tem poseči po nekoliko zahtevnejšem načinu razstavljanja.
+Vsake upodobitve ne moremo razstaviti kot direktno vsoto nerazcepnih upodobitev. Kljub temu pa je res, da lahko vsako upodobitev (na končno razsežnem prostoru) razstavimo na nerazcepne upodobitve, le da moramo pri tem poseči po nekoliko zahtevnejšem načinu razstavljanja.
 
 Naj bo $G$ grupa z upodobitvijo na prostoru $V$. Predpostavimo, da obstaja zaporedje $G$-invariantnih podprostorov
 ```{math}
@@ -187,13 +187,13 @@ katere kompozicijska faktorja sta kot upodobitvi izomorfna $\oneone$. Sama upodo
 
 <div class="izrek">
 
-Vsaka upodobitev na končnorazsežnem prostoru ima kompozicijsko vrsto. Vsaki dve kompozicijski vrsti imata enako število členov in do permutacije ter izomorfizma natančno enake kompozicijske faktorje.
+Vsaka upodobitev na končno razsežnem prostoru ima kompozicijsko vrsto. Vsaki dve kompozicijski vrsti imata enako število členov in do permutacije ter izomorfizma natančno enake kompozicijske faktorje.
 
 </div>
 
 <div class="dokaz">
 
-Naj grupa deluje linearno na končnorazsežnem prostoru $V$. Da kompozicijska vrsta res obstaja, ni težko preveriti. Najprej izberemo neko nerazcepno podupodobitev $V_1$. Če je $V_1 < V$, potem izberemo podupodobitev $V_2$, ki vsebuje $V_1$ in je med vsemi takimi minimalne razsežnosti. S tem je $V_2/V_1$ nerazcepna. Induktivno nadaljujemo z grajenjem kompozicijske vrste. Ker je $V$ končnorazsežen, se ta postopek ustavi.
+Naj grupa deluje linearno na končno razsežnem prostoru $V$. Da kompozicijska vrsta res obstaja, ni težko preveriti. Najprej izberemo neko nerazcepno podupodobitev $V_1$. Če je $V_1 < V$, potem izberemo podupodobitev $V_2$, ki vsebuje $V_1$ in je med vsemi takimi minimalne razsežnosti. S tem je $V_2/V_1$ nerazcepna. Induktivno nadaljujemo z grajenjem kompozicijske vrste. Ker je $V$ končno razsežen, se ta postopek ustavi.
 
 Premislimo še, kako lahko vsaki dve kompozicijski vrsti povežemo med sabo. Opazujmo dve taki vrsti,
 ```{math}
@@ -201,7 +201,7 @@ Premislimo še, kako lahko vsaki dve kompozicijski vrsti povežemo med sabo. Opa
     \quad \text{in} \quad
     0 = W_0 \leq W_1 \leq \cdots \leq W_m = V.
 ```
-S pomočjo druge vrste bomo skušali *pofiniti* prvo vrsto in obratno.[^6] Za $0 \leq i < n$ in $0 \leq j \leq m$ naj bo
+S pomočjo druge vrste bomo skušali najti *finejšo* vrsto, ki je bliže prvi, ter obratno.[^6] Za $0 \leq i < n$ in $0 \leq j \leq m$ naj bo
 ```{math}
 V_{i,j} = V_i + (V_{i+1} \cap W_j),
 ```
@@ -213,7 +213,7 @@ med $V_i$ in $V_{i+1}$. Ker je kvocient $V_{i+1}/V_i$ nerazcepen in je vsak $V_{
 ```{math}
 \frac{V_i + (V_{i+1} \cap W_{j+1})}{V_i + (V_{i+1} \cap W_j)}.
 ```
-Zgodbo zdaj ponovimo še za drugo verigo. Pofinimo jo s pomočjo prve, definiramo $W_{j,i} = W_j + (W_{j+1} \cap V_i)$. Kvocient $W_{j+1}/W_j$ je enak
+Zgodbo zdaj ponovimo še za drugo verigo. S pomočjo prve poiščimo finejšo. Definiramo $W_{j,i} = W_j + (W_{j+1} \cap V_i)$. Kvocient $W_{j+1}/W_j$ je enak
 ```{math}
 \frac{W_j + (W_{j+1} \cap V_{i+1})}{W_j + (W_{j+1} \cap V_i)}.
 ```
@@ -233,11 +233,11 @@ S tem smo za vsak $0 \leq i < n$ našli natanko določen $j$, da je $V_{i+1}/V_i
 
 </div>
 
-Iz izreka sledi, da lahko za vsako upodobitev $\rho$ grupe $G$ na končnorazsežnem prostoru najdemo bazo prostora, v kateri imajo vse matrike $\rho(g)$ za $g \in G$ *bločnozgornjetrikotno* obliko (pri čemer je število blokov enako dolžini kompozicijske vrste). Po drugi strani lahko za *polenostavno* upodobitev najdemo bazo prostora, v kateri imajo vse matrike *bločnodiagonalno* obliko.
+Iz izreka sledi, da lahko za vsako upodobitev $\rho$ grupe $G$ na končno razsežnem prostoru najdemo bazo prostora, v kateri imajo vse matrike $\rho(g)$ za $g \in G$ *bločno zgornjetrikotno* obliko (pri čemer je število blokov enako dolžini kompozicijske vrste). Po drugi strani lahko za *polenostavno* upodobitev najdemo bazo prostora, v kateri imajo vse matrike *bločno diagonalno* obliko.
 
 ### Izotipične komponente
 
-Po zadnjem izreku je za dano upodobitev $\rho$ na končnorazsežnem prostoru in nerazcepno upodobitev $\pi$ število kompozicijskih faktorjev, ki so izomorfni $\pi$, neodvisno od kompozicijske vrste. Temu številu pravimo <span class="definicija">večkratnost</span> $\pi$ v $\rho$ in ga označimo z $\mult_{\rho}(\pi)$.
+Po zadnjem izreku je za dano upodobitev $\rho$ na končno razsežnem prostoru in nerazcepno upodobitev $\pi$ število kompozicijskih faktorjev, ki so izomorfni $\pi$, neodvisno od kompozicijske vrste. Temu številu pravimo <span class="definicija">večkratnost</span> $\pi$ v $\rho$ in ga označimo z $\mult_{\rho}(\pi)$.
 
 Kadar je dana upodobitev *polenostavna*, je do izomorfizma natančno enolično določena s svojimi večkratnostmi. Če je $\rho = \bigoplus_{i \in I} \rho_i$, potem je
 ```{math}
@@ -262,7 +262,7 @@ Po Schurovi lemi je (nad algebraično zaprtim poljem) vsak od zadnjih prostorov 
 
 Čeravno so kompozicijski faktorji upodobitve enolično določeni do permutacije natančno, pa *ni* res, da so enolično določeni tudi členi kompozicijske vrste, niti kadar je dana upodobitev polenostavna. Lahko se namreč zgodi, da neka nerazcepna podupodobitev nastopa z večkratnostjo vsaj $2$.[^7]
 
-Oglejmo si tako situacijo še podrobneje. Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$. Naj bo $\pi$ neka *nerazcepna* upodobitev grupe $G$. Opazujmo vse $G$-invariantne podprostore v $V$, ki so kot upodobitve izomorfni $\pi$. Vsota (ne nujno direktna) vseh teh podprostorov
+Oglejmo si tako situacijo še podrobneje. Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$. Naj bo $\pi$ neka *nerazcepna* upodobitev grupe $G$. Opazujmo vse $G$-invariantne (glede na upodobitev $\rho$) podprostore v $V$, ki so kot upodobitve izomorfni $\pi$. Vsota (ne nujno direktna) vseh teh podprostorov
 ```{math}
 \textstyle \Izotip_{\rho}(\pi) = \sum_{W \leq V, \ W \cong \pi} W
 ```
@@ -283,7 +283,7 @@ Naj bo $W$ direktna vsota podprostorov $V_i$, ki so kot upodobitev izomorfni $\p
 
 </div>
 
-Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in nerazcepno upodobitvijo $\pi$ na prostoru $W$. Vsak $G$-invarianten podprostor v $V$, ki je kot upodobitev izomorfen $\pi$, lahko dobimo kot sliko prostora $W$ z neko spletično v $\hom_G(\pi, \rho)$.[^8] Vsoto vseh takih $G$-invariantnih podprostorov lahko torej zajamemo kot sliko linearne preslikave
+Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in nerazcepno upodobitvijo $\pi$ na prostoru $W$. Vsak $G$-invarianten (glede na upodobitev $\rho$) podprostor v $V$, ki je kot upodobitev izomorfen $\pi$, lahko dobimo kot sliko prostora $W$ z neko spletično v $\hom_G(\pi, \rho)$.[^8] Vsoto vseh takih $G$-invariantnih podprostorov lahko torej zajamemo kot sliko linearne preslikave
 ```{math}
 \Sigma_{\pi, \rho} \colon \hom_G(\pi, \rho) \otimes W \to V, \quad
     \Phi \otimes w \mapsto \Phi(w).
@@ -326,7 +326,7 @@ Iz injektivnosti $\Sigma_{\pi, \rho}$ sledi $\Izotip_{\rho}(\pi) \cong \hom_G(\p
 
 <div class="domacanaloga">
 
-Naj bo $G$ grupa s končnorazsežno upodobitvijo $\rho$ na prostoru $V$ nad algebraično zaprtim poljem. Premisli, da se izotipične komponente, ki pripadajo paroma neizomorfnim nerazcepnim upodobitvam, sekajo trivialno.
+Naj bo $G$ grupa s končno razsežno upodobitvijo $\rho$ na prostoru $V$ nad algebraično zaprtim poljem. Premisli, da se izotipične komponente, ki pripadajo paroma neizomorfnim nerazcepnim upodobitvam, sekajo trivialno.
 
 </div>
 
@@ -352,18 +352,18 @@ Naj bo $G$ grupa s končnorazsežno upodobitvijo $\rho$ na prostoru $V$ nad alge
 
 Vsaka upodobitev dane grupe je homomorfizem v grupo obrnljivih matrik $\GL(V)$. Do sedaj smo na upodobitve gledali z bolj konceptualnega stališča: govorili smo o strukturi prostora $V$ in o njegovi morebitni dekompoziciji na nerazcepne upodobitve. Zdaj si bomo z vsako od teh umazali roke in jo pogledali še podrobneje.
 
-Predpostavimo, da je prostor $V$ končnorazsežen. Izberimo bazo prostora $V$ in s tem izomorfizem $V \cong F^n$ za nek $n$, tako da je upodobitev dana s homomorfizmom $\rho \colon G \to \GL_n(F)$. Vsak tak homomorfizem je *po komponentah* podan s svojimi <span class="definicija">matričnimi koeficienti</span>; to so funkcije
+Predpostavimo, da je prostor $V$ končno razsežen. Izberimo bazo prostora $V$ in s tem izomorfizem $V \cong F^n$ za nek $n$, tako da je upodobitev dana s homomorfizmom $\rho \colon G \to \GL_n(F)$. Vsak tak homomorfizem je *po komponentah* podan s svojimi <span class="definicija">matričnimi koeficienti</span>; to so funkcije
 ```{math}
 f_{i,j} \colon G \to F, \quad
     g \mapsto \langle e_i^*, \rho(g) \cdot e_j \rangle = \rho(g)_{i,j}
 ```
 za $i,j \in \{ 1, 2, \dots, n \}$.
 
-O matričnih koeficientih upodobitve $\rho$ lahko abstraktneje govorimo tudi brez izbire baze prostora. Za vsak vektor $v \in V$ in kovektor $\lambda \in V^*$ definiramo $f_{v, \lambda} \colon G \to F$, $g \mapsto \langle \lambda, \rho(g) \cdot v \rangle$. To so <span class="definicija">posplošeni matrični koeficienti</span>. Kadar je prostor $V$ končnorazsežen, lahko vsak vektor razvijemo po izbrani bazi in vsak kovektor po dualni bazi, s čimer posplošeni matrični koeficient razvijemo po običajnih matričnih koeficientih.
+O matričnih koeficientih upodobitve $\rho$ lahko abstraktneje govorimo tudi brez izbire baze prostora. Za vsak vektor $v \in V$ in kovektor $\lambda \in V^*$ definiramo $f_{v, \lambda} \colon G \to F$, $g \mapsto \langle \lambda, \rho(g) \cdot v \rangle$. To so <span class="definicija">posplošeni matrični koeficienti</span>. Kadar je prostor $V$ končno razsežen, lahko vsak vektor razvijemo po izbrani bazi in vsak kovektor po dualni bazi, s čimer posplošeni matrični koeficient razvijemo po običajnih matričnih koeficientih.
 
 ### Matrični koeficienti in regularna upodobitev
 
-Matrične koeficiente lahko vidimo kot elemente vektorskega prostora funkcij $\fun(G,F)$ iz $G$ v $F$. Na tem prostoru deluje grupa $G$ z regularno upodobitvijo $\rho_{\fun}$. Naj bo $\MK(\pi) \leq \fun(G,F)$ podprostor, ki ga razpenjajo matrični koeficienti neke končnorazsežne nerazcepne upodobitve $\pi$.[^9]
+Matrične koeficiente lahko vidimo kot elemente vektorskega prostora funkcij $\fun(G,F)$ iz $G$ v $F$. Na tem prostoru deluje grupa $G$ z regularno upodobitvijo $\rho_{\fun}$. Naj bo $\MK(\pi) \leq \fun(G,F)$ podprostor, ki ga razpenjajo matrični koeficienti neke končno razsežne nerazcepne upodobitve $\pi$.[^9]
 
 <div class="trditev">
 
@@ -387,7 +387,7 @@ Matrični koeficienti upodobitve $\pi$ nam torej dajejo podupodobitev na prostor
 
 <div class="izrek">
 
-Naj bo $G$ grupa s končnorazsežno nerazcepno upodobitvijo $\pi$. Tedaj je
+Naj bo $G$ grupa s končno razsežno nerazcepno upodobitvijo $\pi$. Tedaj je
 ```{math}
 \textstyle  \MK(\pi) = \Izotip_{\rho_{\fun}}(\pi)
 ```
@@ -419,11 +419,11 @@ Izpostavimo pomembno posledico, ki nam pove, da lahko vse nerazcepne upodobitve 
 
 <div class="posledica">
 
-Vsaka končnorazsežna nerazcepna upodobitev dane grupe je uresničljiva kot podupodobitev regularne.
+Vsaka končno razsežna nerazcepna upodobitev dane grupe je uresničljiva kot podupodobitev regularne.
 
 </div>
 
-V posebnem smo tekom zadnjega dokaza izpeljali, da so po izbiri baze matrični koeficienti končnorazsežne nerazcepne upodobitve nad algebraično zaprtim poljem $\pi$ vselej linearno neodvisni.[^11] Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodobitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
+V posebnem smo tekom zadnjega dokaza izpeljali, da so po izbiri baze matrični koeficienti končno razsežne nerazcepne upodobitve nad algebraično zaprtim poljem $\pi$ vselej linearno neodvisni.[^11] Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodobitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
 
 Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve *končno mnogo* paroma neizomorfnih nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam po izbiri baze podari svoje matrične koeficiente. Ti razpenjajo prostore, ki so enakim izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med sabo. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$.
 
@@ -434,19 +434,19 @@ Matrični koeficienti so elementi prostora funkcij $\fun(G,F)$. V primeru, ko je
 
 <div class="posledica">
 
-Končna grupa ima le končno mnogo končnorazsežnih nerazcepnih upodobitev. Nad algebraično zaprtim poljem je vsaka od njih stopnje kvečjemu $\sqrt{|G|}$.
+Končna grupa ima le končno mnogo končno razsežnih nerazcepnih upodobitev. Nad algebraično zaprtim poljem je vsaka od njih stopnje kvečjemu $\sqrt{|G|}$.
 
 </div>
 
 <div class="dokaz">
 
-Vsaka končnorazsežna nerazcepna upodobitev je vsebovana v regularni in se zatorej pojavi kot njen kompozicijski faktor. Vseh možnih kompozicijskih faktorjev je končno mnogo, ker je prostor $\fun(G,F)$ končnorazsežen. Drugi del posledice sledi neposredno iz neenakosti pred njo.
+Vsaka končno razsežna nerazcepna upodobitev je vsebovana v regularni in se zatorej pojavi kot njen kompozicijski faktor. Vseh možnih kompozicijskih faktorjev je končno mnogo, ker je prostor $\fun(G,F)$ končno razsežen. Drugi del posledice sledi neposredno iz neenakosti pred njo.
 
 </div>
 
 <div class="zgled">
 
-Opazujmo grupo $S_3$ nad poljem $\CC$. Njeno regularno upodobitev smo že razstavili na direktno vsoto $\oneone \oplus \rho$, kjer je $\rho$ dvorazsežna nerazcepna upodobitev. Poleg tega poznamo še enorazsežno predznačno upodobitev $\sgn$. Vsota kvadratov stopenj teh treh upodobitev je $1^2 + 1^2 + 2^2 = 6$, kar je ravno enako moči grupe $S_3$. Od tod sledi, da so te tri *vse* končnorazsežne nerazcepne upodobitve grupe $S_3$.
+Opazujmo grupo $S_3$ nad poljem $\CC$. Njeno regularno upodobitev smo že razstavili na direktno vsoto $\oneone \oplus \rho$, kjer je $\rho$ dvorazsežna nerazcepna upodobitev. Poleg tega poznamo še enorazsežno predznačno upodobitev $\sgn$. Vsota kvadratov stopenj teh treh upodobitev je $1^2 + 1^2 + 2^2 = 6$, kar je ravno enako moči grupe $S_3$. Od tod sledi, da so te tri *vse* končno razsežne nerazcepne upodobitve grupe $S_3$.
 
 </div>
 
@@ -454,7 +454,7 @@ Več o upodobitvah končnih grup si bomo pogledali nekoliko kasneje.
 
 ### Karakterji
 
-Naj bo $G$ grupa in $\rho$ njena končnorazsežna upodobitev. Po izbiri baze dobimo matrične koeficiente $f_{i,j}$. Te lahko kombiniramo na različne načine, da dobimo funkcije v $\fun(G,F)$, ki so nazadnje *neodvisne* od izbire baze. Najosnovnejša[^12] taka funkcija je sled linearnega operatorja, se pravi
+Naj bo $G$ grupa in $\rho$ njena končno razsežna upodobitev. Po izbiri baze dobimo matrične koeficiente $f_{i,j}$. Te lahko kombiniramo na različne načine, da dobimo funkcije v $\fun(G,F)$, ki so *neodvisne* od izbire baze. Najosnovnejša[^12] taka funkcija je sled linearnega operatorja, se pravi
 ```{math}
 \textstyle \chi_{\rho} \colon G \to F, \quad
     g \mapsto \tr(\rho(g)) = \sum_{i = 1}^{\deg(\rho)} f_{i,i}(g).
@@ -469,7 +469,7 @@ Za dan konjugiranostni razred $\conclass$ v grupi $G$ bomo pisali $\chi_{\rho}(\
 
 <div class="zgled">
 
-Opazujmo grupo $S_3$ nad poljem $\CC$. Poznamo že vse tri njene končnorazsežne nerazcepne upodobitve. Določimo karakterje teh nerazcepnih upodobitev. Karakterji enorazsežnih upodobitev so kot funkcije kar enaki upodobitvam. Za karakter $\chi_{\rho}$ velja
+Opazujmo grupo $S_3$ nad poljem $\CC$. Poznamo že vse tri njene končno razsežne nerazcepne upodobitve. Določimo karakterje teh nerazcepnih upodobitev. Karakterji enorazsežnih upodobitev so kot funkcije kar enaki upodobitvam. Za karakter $\chi_{\rho}$ velja
 ```{math}
 () \mapsto \tr \begin{pmatrix}
         1 & 0 \\ 0 & 1
@@ -499,7 +499,7 @@ Tabela karakterjev $S_3$
 
 <div class="trditev">
 
-Naj bo $G$ grupa s končnorazsežnima nerazcepnima upodobitvama nad algebraično zaprtim poljem. Ti dve upodobitvi sta izomorfni, če in samo če imata enaka karakterja.
+Naj bo $G$ grupa s končno razsežnima nerazcepnima upodobitvama nad algebraično zaprtim poljem. Ti dve upodobitvi sta izomorfni, če in samo če imata enaka karakterja.
 
 </div>
 
@@ -513,7 +513,7 @@ Karakterjev fundamentalnih konstrukcij različnih upodobitev ni težko izračuna
 
 <div class="trditev">
 
-Naj bo $G$ grupa s končnorazsežnimi upodobitvami $\rho$, $\rho_1$, $\rho_2$. Tedaj za vse $g \in G$ velja
+Naj bo $G$ grupa s končno razsežnimi upodobitvami $\rho$, $\rho_1$, $\rho_2$. Tedaj za vse $g \in G$ velja
 ```{math}
 \chi_{\rho}(1) = \deg(\rho), \quad
     \chi_{\rho_1 \oplus \rho_2} = \chi_{\rho_1} + \chi_{\rho_2}, \quad
@@ -537,7 +537,7 @@ Netrivialna je le zadnja enakost o indukciji. Naj $H$ deluje na prostoru $V$ pre
 ```{math}
 g \cdot v r_0 = \left( \rho(h) \cdot v \right) r,
 ```
-kjer je $r = h r_0 g^{-1}$ za enolično določena $r \in R$, $h \in H$. Prostori $V r$ se torej pri delovanju med sabo permutirajo, poleg tega pa grupa deluje netrivialno še na vsaki komponenti posebej. Za izračun sledi so zato relevantne samo komponente, ki so fiksne pri tej permutaciji. To so komponente $Vr_0$, za katere je $r = r_0$, se pravi komponente z lastnostjo $H r_0 g^{-1} = H r_0$, kar je nazadnje enakovredno pogoju $r_0 g r_0^{-1} \in H$. Za tako komponento $V r_0$ element $g$ deluje na vektorju $v r_0$ kot
+kjer je $r = h r_0 g^{-1}$ za enolično določena $r \in R$, $h \in H$. Prostori $V r$ se torej pri delovanju med sabo permutirajo, poleg tega pa grupa deluje netrivialno še na vsaki komponenti posebej. Za izračun sledi so zato relevantne samo komponente, ki so fiksne pri tej permutaciji. To so komponente $Vr_0$, za katere je $r = r_0$, se pravi komponente z lastnostjo $H r_0 g^{-1} = H r_0$. To je enakovredno pogoju $r_0 g r_0^{-1} \in H$. Za tako komponento $V r_0$ element $g$ deluje na vektorju $v r_0$ kot
 ```{math}
 g \cdot v r_0 = \left( \rho(r_0 g r_0^{-1}) \cdot v \right) r_0,
 ```
@@ -547,7 +547,7 @@ zato je sled induciranega delovanja $g$ na $V r_0$ enaka $\chi_{\rho}(r_0 g r_0^
 
 <div class="zgled">
 
-Naj bo $G$ končna grupa. V tem primeru je regularna upodobitev $\rho_{\fun}$ končnorazsežna. Določimo njen karakter najprej na roke. V regularni upodobitvi imamo naravno bazo iz karakterističnih funkcij
+Naj bo $G$ končna grupa. V tem primeru je regularna upodobitev $\rho_{\fun}$ končno razsežna. Določimo njen karakter najprej na roke. V regularni upodobitvi imamo naravno bazo iz karakterističnih funkcij
 ```{math}
 1_{x} \colon G \to F, \quad
         y \mapsto \begin{cases} 1 & y = x, \\ 0 & \text{sicer.} \end{cases}
@@ -562,7 +562,7 @@ Ta karakter bi lahko hitreje izračunali s pomočjo znane identifikacije $\rho_{
 
 </div>
 
-Lastnost karakterjev kot srža upodobitve se prenese na končnorazsežne polenostavne upodobitve, *če je le polje ničelne karakteristike*. Karakter dane polenostavne upodobitve $\rho$ namreč lahko razvijemo kot
+Lastnost karakterjev kot srža upodobitve se prenese na končno razsežne polenostavne upodobitve, *če je le polje ničelne karakteristike*. Karakter dane polenostavne upodobitve $\rho$ namreč lahko razvijemo kot
 ```{math}
 \textstyle \chi_{\rho} = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot \chi_{\pi}.
 ```

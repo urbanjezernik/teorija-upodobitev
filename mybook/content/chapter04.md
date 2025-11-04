@@ -146,7 +146,7 @@ Preostane nam še dokaz leme.
 
     </div>
 
-    Naj bo $t$ transpozicija, ki zamenja ti dve števili. Zanjo torej velja $t \in Q$ in $g^{-1} t g \in P$. S tem je
+    Naj bo $t$ transpozicija, ki zamenja števili iz predhodne naloge. Zanjo torej velja $t \in Q$ in $g^{-1} t g \in P$. S tem je
     ```{math}
     f(g) = f(t \cdot g \cdot g^{-1} t g) = \sgn(t) \cdot f(g) = - f(g),
     ```
@@ -166,9 +166,9 @@ Preostane nam še dokaz leme.
     ```{math}
     1_{P_\mu} * f * (\sgn \cdot 1_{Q_{\lambda}}) = 0.
     ```
-    Zaradi linearnosti te trditve lahko predpostavimo, da je $f = 1_g$ za nek $g \in G$.
+    Ker je ta enakost linearna v $f$, lahko predpostavimo, da je $f = 1_g$ za nek $g \in G$.
 
-    Naj bosta $T_{\lambda}$, $T_{\mu}$ Youngovi tabeli razčlenitev $\lambda$, $\mu$, s katerima smo dobili grupe $P$ in $Q$. Tabelo $T_{\lambda}$ zamenjajmo s tabelo $g^{-1} \cdot T_{\lambda}$; ob tem se $Q_{\lambda}$ zamenja s $g^{-1} Q_{\lambda} g$. Z novimi tabelami je
+    Naj bosta $T_{\lambda}$, $T_{\mu}$ Youngovi tabeli razčlenitev $\lambda$, $\mu$, s katerima smo dobili grupi $P$ in $Q$. Tabelo $T_{\lambda}$ zamenjajmo s tabelo $g^{-1} \cdot T_{\lambda}$; ob tem se $Q_{\lambda}$ zamenja s $g^{-1} Q_{\lambda} g$. Z novimi tabelami je
     ```{math}
     1_{P_\mu} * (\sgn \cdot 1_{g^{-1} Q_{\lambda} g}) = 1_{P_\mu} * 1_{g^{-1}} * (\sgn \cdot 1_{Q_{\lambda}}) * 1_g.
     ```
@@ -214,7 +214,7 @@ in pri tem so koeficienti razvoja racionalni. V bazi $B_{\lambda}$ ima torej vsa
 
 <div class="domacanaloga">
 
-Naj bo $G$ končna grupa z upodobitvijo nad $\QQ$. Dokaži, da obstaja baza vektorskega prostora, v kateri je dana upodobitev definirana nad $\ZZ$. Nasvet: izberi neko bazo prostora in jo povpreči z grupo $G$.
+Naj bo $G$ končna grupa z upodobitvijo nad $\QQ$. Dokaži, da obstaja baza vektorskega prostora, v kateri je dana upodobitev definirana nad $\ZZ$. Nasvet: izberi neko bazo prostora in vsak njen element povpreči po grupi $G$.
 
 </div>
 
@@ -224,7 +224,7 @@ Vsaka nerazcepna upodobitev simetrične grupe je definirana nad $\ZZ$.
 
 </div>
 
-Vsak Spechtov modul $V_{\lambda}$ lahko z redukcijo po modulu $p$ za poljubno praštevilo $p$ reduciramo do vektorskega prostora nad končnim poljem $\FF_p$. Na ta način dobimo modularno upodobitev $\rho_{\lambda,p}$ simetrične grupe. Kot smo videli že v primeru $p = 3$, te upodobitve niso nujno nerazcepne. Izkaže se, da pa ima taka modularna upodobitev *enoličen nerazcepen kvocient* $D_{\lambda}$, če za razčlenitev $\lambda = 1^{i_1} 2^{i_2} \cdots n^{i_n}$ velja $i_j < p$ za vsak $j$. Takim ugodnim razčlenitvam pravimo <span class="definicija">$p$-regularne razčlenitve</span>. Izkaže se, da je število $p$-regularnih razčlenitev ravno enako številu konjugiranostnih razredov elementov v $S_n$, katerih red je *tuj* $p$. Na ta način dobimo vse modularne upodobitve simetrične grupe, a tega ne bomo dokazali.
+Vsak Spechtov modul $V_{\lambda}$ lahko z redukcijo po modulu $p$ za poljubno praštevilo $p$ reduciramo do vektorskega prostora nad končnim poljem $\FF_p$. Na ta način dobimo modularno upodobitev $\rho_{\lambda,p}$ simetrične grupe. Kot smo videli že v primeru $p = 3$, te upodobitve niso nujno nerazcepne. Izkaže se, da pa ima taka modularna upodobitev *enoličen nerazcepen kvocient* $D_{\lambda}$, če za razčlenitev $\lambda = 1^{i_1} 2^{i_2} \cdots n^{i_n}$ velja $i_j < p$ za vsak $j$. Takim ugodnim razčlenitvam pravimo <span class="definicija">$p$-regularne razčlenitve</span>. Izkaže se, da je število $p$-regularnih razčlenitev ravno enako številu konjugiranostnih razredov elementov v $S_n$, katerih red je *tuj* $p$. Na ta način dobimo vse modularne upodobitve simetrične grupe, a tega ne bomo dokazali (glej [(Curtis-Reiner 1962)](https://www.ams.org/books/chel/356/) in krajši povzetek [tukaj](https://math.berkeley.edu/~ltomczak/notes/Mich2022/RepSn_Notes.pdf)).
 
 <div class="izrek">
 
@@ -366,7 +366,9 @@ Ta determinanta je enaka Vandermondovi determinanti, zato je iskani koeficient e
     \frac{n!}{n! (n-1)! \cdots 1!} \cdot \prod_{1 < j \leq n} (j-1)! =
     1,
 ```
-kot mora biti, saj že vemo, da je v tem primeru $V_{\lambda} \cong \sgn$. Dolžine kljuk so $|H_{\lambda}(i,1)| = n - i + 1$, zato formula o kljukah za ta trivialen primer drži. Splošnega primera ni težko izpeljati z indukcijo.
+kot mora biti, saj že vemo, da je v tem primeru $V_{\lambda} \cong \sgn$. Dolžine kljuk so $|H_{\lambda}(i,1)| = n - i + 1$, zato formula o kljukah za ta trivialen primer drži. Splošnega primera ni težko izpeljati z indukcijo (glej nalogo spodaj). S tem je formula o kljukah dokazana.
+
+</div>
 
 <div class="domacanaloga">
 
@@ -374,10 +376,6 @@ Z indukcijo na število stolpcev Youngovega diagrama $\lambda$ dokaži, da je
 ```{math}
 \frac{n!}{\ell_1! \ell_2! \cdots \ell_k!} \cdot \prod_{i < j} (\ell_i - \ell_j) = \frac{n!}{\prod_{i,j}|H_{\lambda}(i,j)|}.
 ```
-
-</div>
-
-S tem je formula o kljukah dokazana.
 
 </div>
 
@@ -401,6 +399,8 @@ Avtor omeni analogno vprašanje glede same tabele karakterjev.
 Enakomerno naključno izberimo konjugiranostni razred $\conclass$ v $S_n$ in $\pi \in \Irr(S_n)$. Kaj lahko povemo o obnašanju zaporedja $\PP_{\conclass, \pi}\left( \chi_{\pi}(\conclass) = 0 \right)$, ko gre $n$ čez vse meje?
 
 </div>
+
+Na podlagi ekstenzivnih Monte Carlo simulacij [(Miller-Scheinerman 2025)](https://www.ams.org/journals/mcom/2025-94-351/S0025-5718-2024-03964-9/) ponujata nekaj domnev v tej smeri.
 
 ### Alternirajoče grupe
 
@@ -434,7 +434,7 @@ Opazujmo <span class="definicija">splošno linearno grupo</span>
 G_p = {\textstyle \GL_2(\FF_p)} =
     \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mid a,b,c,d \in \FF_p, \ ad - bc \neq 0 \right\}
 ```
-obrnljivih matrik razsežnosti $2 \times 2$ nad končnim poljem $\FF_p$, kjer je $p$ praštevilo. Njeno kategorijo upodobitev bomo obravnavali nad $\CC$. Še pred tem pa moramo bolje spoznati to grupo.
+obrnljivih matrik razsežnosti $2 \times 2$ nad končnim poljem $\FF_p$, kjer je $p$ praštevilo. Njeno kategorijo upodobitev bomo obravnavali nad $\CC$. Še pred tem pa moramo bolje spoznati to grupo.[^9]
 
 ### Osnovne poteze
 
@@ -566,6 +566,12 @@ Za $p > 3$ je grupa $\PSL_2(\FF_p)$ enostavna.
 
 </div>
 
+<div class="dokaz">
+
+Izrek je prvi izrekel Galois leta 1831, ni pa podal dokaza. Prvi objavljen dokaz najdemo v [(Jordan 1870)](https://archive.org/details/traitdessubsti00jorduoft/page/n15/mode/2up). Nekoliko bolj sodobna različica dokaza je v [Conradovih zapiskih](https://kconrad.math.uconn.edu/blurbs/grouptheory/PSLnsimple.pdf).
+
+</div>
+
 Družina grup $G_p$ za praštevila $p$ je torej dobra prijateljica ene od fundamentalnih družin končnih enostavnih grup.
 
 ### Konjugiranostni razredi
@@ -608,7 +614,7 @@ Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnost
     ```
     in je zato moči $(p-1)^2$. Konjugiranostni razred je torej velikosti $p(p+1)$. Vseh takih razredov je $\binom{p-1}{2} = (p-1)(p-2)/2$.
 
-4.  <span class="definicija">Nerazcepni polenostavni elementi</span>. Naj ima element $g \in G_p$ *nerazcepen* karakteristični polinom. Ta polinom torej nima ničel v $\FF_p$, ima pa ničle v razširitvi $F$ tega polja z ničlama karakterističnega polinoma. Ker je $p > 2$, sta ti dve ničli različni.[^9] Razširitev $F/\FF_p$ je stopnje $2$, zato jo lahko predstavimo kot
+4.  <span class="definicija">Nerazcepni polenostavni elementi</span>. Naj ima element $g \in G_p$ *nerazcepen* karakteristični polinom. Ta polinom torej nima ničel v $\FF_p$, ima pa ničle v razširitvi $F$ tega polja z ničlama karakterističnega polinoma. Ker je $p > 2$, sta ti dve ničli različni.[^10] Razširitev $F/\FF_p$ je stopnje $2$, zato jo lahko predstavimo kot
     ```{math}
     F \cong \frac{\FF_p[X]}{(X^2 - \epsilon)} = \FF_p(\sqrt{\epsilon}),
     ```
@@ -624,7 +630,7 @@ Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnost
                 x & \epsilon y \\ y & x
             \end{pmatrix} \mid x, y \in \FF_p, \ (x,y) \neq (0,0) \right\}.
     ```
-    Konjugiranostni razred je torej velikosti $p(p-1)$. Vseh takih razredov je $p (p-1)/2$.[^10]
+    Konjugiranostni razred je torej velikosti $p(p-1)$. Vseh takih razredov je $p (p-1)/2$.[^11]
 
 |  | $\mat{a}{0}{0}{a}$ | $\mat{a}{1}{0}{a}$ | $\mat{a}{0}{0}{b}$ | $\mat{a}{\epsilon b}{b}{a}$ |
 |:---|:--:|:--:|:--:|:--:|
@@ -633,7 +639,7 @@ Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnost
 
 Konjugiranostni razredi v $G_p$: njihov tip, število razredov določenega tipa in velikost razreda
 
-Za velika praštevila $p$ velja $|G_p| \sim p^4$. Hkrati iz izračunov števila razredov in njihovih velikosti vidimo, da je število polenostavnih elementov asimptotsko primerljivo s $p^4$, razdeljeno približno na polovico med razcepnimi in nerazcepnimi elementi. Generični elementi v $G_p$ so za velika praštevila torej polenostavni.
+Za velika praštevila $p$ velja $|G_p| \sim p^4$.[^12] Hkrati iz izračunov števila razredov in njihovih velikosti vidimo, da je število polenostavnih elementov asimptotsko primerljivo s $p^4$, razdeljeno približno na polovico med razcepnimi in nerazcepnimi elementi. Generični elementi v $G_p$ so za velika praštevila torej polenostavni.
 
 Seštejemo število vseh konjugiranostnih razredov in dobimo
 ```{math}
@@ -645,7 +651,7 @@ Preden nadaljujemo z natančnim določanjem teh upodobitev, se še enkrat ozrimo
 ```{math}
 T_r \cong \FF_p^* \times \FF_p^*,
 ```
-nerazcepni torus pa identificiramo kot[^11]
+nerazcepni torus pa identificiramo kot[^13]
 ```{math}
 T_{nr} \cong \FF_p(\sqrt{\epsilon})^*, \quad
     \begin{pmatrix}
@@ -665,7 +671,7 @@ Predpostavimo, da je $p > 2$. Določimo najprej enorazsežne upodobitve grupe $G
 
 Enorazsežni karakterji $G_p$
 
-Nadaljujmo s pomočjo homomorfizma $\Pi \colon G_p \to S_{p+1}$, ki opisuje permutacijsko delovanje $G_p$ na projektivni premici. Od tod dobimo permutacijsko upodobitev $G_p$ na $\CC[\PP^1(\FF_p)]$. Kot smo videli že v primeru simetrične grupe, ta upodobitev *ni* nerazcepna, saj vedno vsebuje $\oneone$. Naj bo $\St$ komplement $\oneone$ v tej permutacijski upodobitvi. Ta komplement je do izomorfizma natako enolično določen in mu pravimo <span class="definicija">Steinbergova upodobitev</span>.[^12] Vrednosti karakterjev $\St$ ni težko izračunati. Račun pokaže $\langle \St, \St \rangle = 1$, zato je $\St$ nerazcepna upodobitev.
+Nadaljujmo s pomočjo homomorfizma $\Pi \colon G_p \to S_{p+1}$, ki opisuje permutacijsko delovanje $G_p$ na projektivni premici. Od tod dobimo permutacijsko upodobitev $G_p$ na $\CC[\PP^1(\FF_p)]$. Kot smo videli že v primeru simetrične grupe, ta upodobitev *ni* nerazcepna, saj vedno vsebuje $\oneone$. Naj bo $\St$ komplement $\oneone$ v tej permutacijski upodobitvi. Ta komplement je do izomorfizma natako enolično določen in mu pravimo <span class="definicija">Steinbergova upodobitev</span>.[^14] Vrednosti karakterjev $\St$ ni težko izračunati. Račun pokaže $\langle \St, \St \rangle = 1$, zato je $\St$ nerazcepna upodobitev.
 
 |  | $\mat{a}{0}{0}{a}$ | $\mat{a}{1}{0}{a}$ | $\mat{a}{0}{0}{b}$ | $\mat{a}{\epsilon b}{b}{a}$ |
 |:---|:--:|:--:|:--:|:--:|
@@ -719,7 +725,7 @@ Od tod po preprostem računu določimo normo karakterja kot
         1 & \chi_1 \neq \chi_2.
     \end{cases}
 ```
-Za $\chi_1 \neq \chi_2$ je upodobitev $\pi(\chi_1, \chi_2)$ torej nerazcepna. Iz karakterja opazimo, da je $\rho$ simetrična v svojih argumentih, se pravi $\pi(\chi_1, \chi_2) \cong \pi(\chi_2, \chi_1)$. Na ta način torej dobimo $\binom{p-1}{2} = (p-1)(p-2)/2$ nerazcepnih upodobitev grupe $G_p$. Tem upodobitvam pravimo <span class="definicija">upodobitve glavne vrste</span>.[^13] V primeru, ko je $\chi_1 = \chi_2$, iz vrednosti karakterjev opazimo izomorfizem $\pi(\chi, \chi) \cong \St(\chi) \oplus (\chi \circ \det)$, torej tukaj ne najdemo nobenih novih nerazcepnih upodobitev.
+Za $\chi_1 \neq \chi_2$ je upodobitev $\pi(\chi_1, \chi_2)$ torej nerazcepna. Iz karakterja opazimo, da je $\rho$ simetrična v svojih argumentih, se pravi $\pi(\chi_1, \chi_2) \cong \pi(\chi_2, \chi_1)$. Na ta način torej dobimo $\binom{p-1}{2} = (p-1)(p-2)/2$ nerazcepnih upodobitev grupe $G_p$. Tem upodobitvam pravimo <span class="definicija">upodobitve glavne vrste</span>.[^15] V primeru, ko je $\chi_1 = \chi_2$, iz vrednosti karakterjev opazimo izomorfizem $\pi(\chi, \chi) \cong \St(\chi) \oplus (\chi \circ \det)$, torej tukaj ne najdemo nobenih novih nerazcepnih upodobitev.
 
 ### Tabela karakterjev, 2. del
 
@@ -731,7 +737,7 @@ poljubna enorazsežna upodobitev. Izračunajmo karakter indukcije upodobitve $\t
 ```{math}
 \textstyle \Ind_{T_{nr}}^{G_p}(\theta)(a) = |G_p : T_{nr}| \cdot \theta(a) = p(p-1) \theta(a).
 ```
-Za nerazcepne polenostavne elemente, ki jih interpretiramo kot elemente $g = a + \sqrt{\epsilon} b \in \FF_p(\sqrt{\epsilon})^*$, pa velja $g^{G_p} \cap T_{nr} = \{ g, g^{\sigma} \}$, zato sta v formuli za izračun induciranega karakterja relevantna le dva člena in dobimo
+Za nerazcepne polenostavne elemente, ki jih interpretiramo kot elemente $g = a + \sqrt{\epsilon} b \in \FF_p(\sqrt{\epsilon})^*$, pa velja $g^{G_p} \cap T_{nr} = \{ g, g^{\sigma} \}$. V formuli za izračun induciranega karakterja sta zato relevantna le dva člena in dobimo
 ```{math}
 \textstyle \Ind_{T_{nr}}^{G_p}(\theta)(a + \sqrt{\epsilon} b) = \theta(a + \sqrt{\epsilon} b) + \theta(a - \sqrt{\epsilon} b).
 ```
@@ -839,7 +845,7 @@ Torej je bodisi $\zeta_{\theta}$ bodisi $-\zeta_{\theta}$ nerazcepen karakter. K
 
 Karakter $\zeta_{\theta}$ grupe $G_p$
 
-Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo <span class="definicija">ostna upodobitev</span>.[^14] Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti Galoisjevi orbiti. Število ostnih upodobitev je zato enako $p(p-1)/2$. Poudarimo, da smo ostne upodobitve konstruirali le implicitno prek indukcij. Z nekaj truda bi lahko izpeljali eksplicitno konstrukcijo teh upodobitev. Izkaže se, da ostnih upodobitev *ni* mogoče opisati kot neposredno induciranih iz podgrup $G_p$.[^15]
+Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo <span class="definicija">ostna upodobitev</span>.[^16] Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti orbiti Galoisjeve grupe. Število ostnih upodobitev je zato enako $p(p-1)/2$. Poudarimo, da smo ostne upodobitve konstruirali le implicitno prek indukcij. Z nekaj truda bi lahko izpeljali eksplicitno konstrukcijo teh upodobitev. Izkaže se, da ostnih upodobitev *ni* mogoče opisati kot neposredno induciranih iz podgrup $G_p$.[^17]
 
 Povzemimo. Skupaj smo našli naslednje upodobitve:
 
@@ -872,17 +878,17 @@ Izračunaj tabelo karakterjev grupe $\SL_2(\FF_p)$ in grupe $\PSL_2(\FF_p)$. S t
 
 ### Matrike višjih razsežnosti
 
-Argumente, ki smo jih videli v tem razdelku, bi lahko posplošili na matrike večjih razsežnosti in tako (s precej več truda) izračunali generično tabelo karakterjev grupe $\GL_n(\FF_q)$, kot je storil [(Green 1955)](https://www.jstor.org/stable/1992997#metadata_info_tab_contents). Zopet dobimo glavno vrsto upodobitev, tokrat inducirano induktivno iz podgrup $\GL_m(\FF_q)$ za $m < n$. Pri tem je relevantno, da to lahko naredimo na več načinov, na primer za vsako razčlenitev števila $n = m_1 + m_2 + \cdots + m_k$ lahko v $\GL_n(\FF_q)$ vidimo bločnodiagonalni direktni produkt grup
+Argumente, ki smo jih videli v tem razdelku, bi lahko posplošili na matrike večjih razsežnosti in tako (s precej več truda) izračunali generično tabelo karakterjev grupe $\GL_n(\FF_q)$, kot je storil [(Green 1955)](https://www.jstor.org/stable/1992997#metadata_info_tab_contents). Zopet dobimo glavno vrsto upodobitev, tokrat inducirano induktivno iz podgrup $\GL_m(\FF_q)$ za $m < n$. Pri tem je relevantno, da to lahko naredimo na več načinov, na primer za vsako razčlenitev števila $n = m_1 + m_2 + \cdots + m_k$ lahko v $\GL_n(\FF_q)$ vidimo bločno diagonalni direktni produkt grup
 ```{math}
 \textstyle  \GL_{m_1}(\FF_q) \times \GL_{m_2}(\FF_q) \times \cdots \times \GL_{m_k}(\FF_q).
 ```
 Teorija upodobitev $\GL_n(\FF_q)$ zato vključuje nekaj kompleksnosti teorije upodobitev simetrične grupe $S_n$. Tudi v splošnem primeru dobimo ostne upodobitve, in sicer s pomočjo indukcije iz Galoisjevih razredov regularnih upodobitev nerazcepnega torusa, ki ga lahko predstavimo kot končno polje $\FF_{q^n}$.
 
-Ni pa tako enostavno pridobiti tudi tabele karakterjev družine enostavnih grup $\PSL_n(\FF_q)$ ali njene prijateljice $E_8(\FF_q)$. Seveda lahko posamezne tabele za specifične vrednosti $n$ in $q$ izračunamo,[^16] ampak končni cilj je imeti generične tabele karakterjev, kot smo to dosegli za $G_p = \GL_2(\FF_p)$. Za razumevanje teorije upodobitev teh grup imamo na voljo matematično zahtevno [Deligne-Lusztigovo teorijo](https://en.wikipedia.org/wiki/Deligne–Lusztig_theory), ki upodobitve končnih grup sestavlja s pomočjo upodobitev prirejenih algebraičnih grup nad algebraično zaprtim poljem, na primer $\SL_n(\overline{\FF_p})$, in sicer te upodobitve izhajajo iz delovanja na $\ell$-adičnih kohomoloških grupah prirejenih raznoterosti. Iz te teorije lahko razumemo *del* generične tabele karakterjev, na primer poznamo vse stopnje nerazcepnih upodobitev, ne poznamo pa vseh vrednosti vseh karakterjev.
+Ni pa tako enostavno pridobiti tudi tabele karakterjev družine enostavnih grup $\PSL_n(\FF_q)$ ali njene prijateljice $E_8(\FF_q)$. Seveda lahko posamezne tabele za specifične vrednosti $n$ in $q$ izračunamo,[^18] ampak končni cilj je imeti generične tabele karakterjev, kot smo to dosegli za $G_p = \GL_2(\FF_p)$. Za razumevanje teorije upodobitev teh grup imamo na voljo matematično zahtevno [Deligne-Lusztigovo teorijo](https://en.wikipedia.org/wiki/Deligne–Lusztig_theory), ki upodobitve končnih grup sestavlja s pomočjo upodobitev prirejenih algebraičnih grup nad algebraično zaprtim poljem, na primer $\SL_n(\overline{\FF_p})$, in sicer te upodobitve izhajajo iz delovanja na $\ell$-adičnih kohomoloških grupah prirejenih raznoterosti. Iz te teorije lahko razumemo *del* generične tabele karakterjev, na primer poznamo vse stopnje nerazcepnih upodobitev, ne poznamo pa vseh vrednosti vseh karakterjev.
 
 [^1]: Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, …
 
-[^2]: Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, treh neskončnih družin, in sicer cikličnih grup praštevilske moči $\ZZ/p\ZZ$, alternirajočih grup $A_n$ in različnih matričnih grup nad končnimi polji, na primer $\SL_n(\FF_p)/Z(\SL_n(\FF_p))$. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev nekomutativnih končnih enostavnih grup.
+[^2]: Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, treh neskončnih družin, in sicer cikličnih grup praštevilske moči $\ZZ/p\ZZ$, alternirajočih grup $A_n$ in različnih matričnih grup nad končnimi polji, na primer $\SL_n(\FF_p)/Z(\SL_n(\FF_p))$. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev nekomutativnih končnih enostavnih grup. Podrobnejši opis končnih enostavnih grup je na voljo [tukaj](https://en.wikipedia.org/wiki/List_of_finite_simple_groups).
 
 [^3]: Res, če je $x = q_1 p_1 = q_2 p_2$, potem je $q_2^{-1} q_1 = p_2 p_1^{-1} \in P \cap Q = 1$, zato je $q_1 = q_2$ in $p_1 = p_2$.
 
@@ -896,18 +902,22 @@ Ni pa tako enostavno pridobiti tudi tabele karakterjev družine enostavnih grup 
 
 [^8]: $H_{\lambda}(i,j)$ torej sestoji iz tistih celic $(a,b)$, za katere je $a = i$ in $b \geq j$ ali $b = j$ in $a \geq i$.
 
-[^9]: Ponovljena ničla bi bila ničla odvoda karakterističnega polinoma, ki pa je linearen in ima vse ničle v $\FF_p$.
+[^9]: Lastnosti, ki jih bomo navedli v tem razdelku, ni težko preveriti in jih prepuščamo bralcu v razmislek.
 
-[^10]: Če zamenjamo v zgornji matriki $b$ z $-b$, dobimo podobno matriko. To ravno ustreza delovanju $\sigma$.
+[^10]: Ponovljena ničla bi bila ničla odvoda karakterističnega polinoma, ki pa je linearen in ima vse ničle v $\FF_p$.
 
-[^11]: Element $x + \sqrt{\epsilon} y$ deluje na $\FF_p(\sqrt{\epsilon})$ z množenjem z leve. Če to grupo obravnavamo kot vektorski prostor nad $\FF_p$, potem je matrika tega delovanja v bazi $\{ 1, \sqrt{\epsilon} \}$ ravno ta, ki je prikazana.
+[^11]: Če zamenjamo v zgornji matriki $b$ z $-b$, dobimo podobno matriko. To ravno ustreza delovanju $\sigma$.
 
-[^12]: Steinbergovo upodobitev dobimo torej tako, da $\Pi$ podaljšamo s standardno upodobitvijo simetrične grupe $S_{p+1}$.
+[^12]: Za funkciji $f,g \colon \NN \to \RR$ pišemo $f \sim g$, če velja $\lim_{n \to \infty} f(n)/g(n) = 1$.
 
-[^13]: Angleško *principal series representations*.
+[^13]: Element $x + \sqrt{\epsilon} y$ deluje na $\FF_p(\sqrt{\epsilon})$ z množenjem z leve. Če to grupo obravnavamo kot vektorski prostor nad $\FF_p$, potem je matrika tega delovanja v bazi $\{ 1, \sqrt{\epsilon} \}$ ravno ta, ki je prikazana.
 
-[^14]: Angleško *cuspidal representation*.
+[^14]: Steinbergovo upodobitev dobimo torej tako, da $\Pi$ podaljšamo s standardno upodobitvijo simetrične grupe $S_{p+1}$.
 
-[^15]: Najpreprostejši znan opis je preko Weilove upodobitve (Bushnell-Henniart 2006), ki ostne upodobitve uresniči na določenih podprostorih v $\fun(\FF_p(\sqrt{\epsilon}), \CC)$.
+[^15]: Angleško *principal series representations*.
 
-[^16]: Računanje teh tabel specifičnih končnih enostavnih grup je zbrano v [ATLAS](http://brauer.maths.qmul.ac.uk/Atlas/v3/). Ti izračuni so močno pripomogli k dokazu izreka o [klasifikaciji končnih enostavnih grup](https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups).
+[^16]: Angleško *cuspidal representation*.
+
+[^17]: Najpreprostejši znan opis je preko Weilove upodobitve (Bushnell-Henniart 2006), ki ostne upodobitve uresniči na določenih podprostorih v $\fun(\FF_p(\sqrt{\epsilon}), \CC)$.
+
+[^18]: Računanje teh tabel specifičnih končnih enostavnih grup je zbrano v [ATLAS](http://brauer.maths.qmul.ac.uk/Atlas/v3/). Ti izračuni so močno pripomogli k dokazu izreka o [klasifikaciji končnih enostavnih grup](https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups).

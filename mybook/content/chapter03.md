@@ -17,7 +17,7 @@ Prepričajmo se najprej, da končne grupe nimajo *prevelikih* nerazcepnih upodob
 
 <div class="trditev">
 
-Vsaka nerazcepna upodobitev končne grupe je končnorazsežna.
+Vsaka nerazcepna upodobitev končne grupe je končno razsežna.
 
 </div>
 
@@ -27,7 +27,7 @@ Naj bo $G$ končna grupa z upodobitvijo $\rho$ na prostoru $V$. Izberimo poljube
 ```{math}
 W = \langle \rho(g) \cdot v \mid g \in G \rangle
 ```
-prostora $V$. Ker je $G$ končna, je $W$ končnorazsežen. Hkrati je po konstrukciji ta podprostor $G$-invarianten. Vsaka upodobitev končne grupe ima torej končnorazsežno podupodobitev. V posebnem to pomeni, da ni neskončnorazsežne nerazcepne upodobitve.
+prostora $V$. Ker je $G$ končna, je $W$ končno razsežen. Hkrati je po konstrukciji ta podprostor $G$-invarianten. Vsaka upodobitev končne grupe ima torej končno razsežno podupodobitev. V posebnem to pomeni, da ni neskončno razsežne nerazcepne upodobitve.
 
 </div>
 
@@ -90,9 +90,9 @@ kar zopet implicira $\sum_{g \in G} \chi(g) = 0$.
 
 <div class="zgled">
 
-V ekstremni situaciji, ko je $\characteristic(F) = p > 0$ in $|G| = p^n$ za nek $n \in \NN$, kategorija upodobitev izgleda precej nenavadno. V takih neugodnih razmerah *netrivialnih nerazcepnih upodobitev ni*. Poglejmo si, zakaj je temu tako v primeru $F = \FF_p$ za neko praštevilo $p$.[^4]
+V ekstremni situaciji, ko je $\characteristic(F) = p > 0$ in $|G| = p^n$ za nek $n \in \NN$, kategorija upodobitev izgleda precej nenavadno. V takih neugodnih razmerah *netrivialnih nerazcepnih upodobitev ni*. Poglejmo si, zakaj je temu tako v primeru $F = \FF_p$ za neko praštevilo $p$.
 
-Imejmo nerazcepno upodobitev $p$-grupe $G$ na prostoru $V$ nad poljem $\FF_p$. Vemo že, da je $V$ nujno končnorazsežen, zato je $|V| = p^k$ za nek $k \in \NN$. Grupa $G$ permutacijsko deluje na množici neničelnih vektorjev $V \backslash \{ 0 \}$. Po lemi o orbiti in stabilizatorju je velikost orbite vsakega neničelnega vektorja enaka indeksu stabilizatorja, ki je po predpostavki o moči grupe nujno potenca praštevila $p$. Ker pa moč $|V \backslash \{ 0 \}|$ ni deljiva s $p$, mora obstajati vektor $0 \neq v \in V$ z orbito moči $1$. Ta vektor je torej fiksen za delovanje grupe $G$ in zato razpenja enorazsežen podprostor $\FF_p \cdot v$, ki je kot upodobitev izomorfen $\oneone$. Torej je $V = \oneone$ in upodobitev je res trivialna.
+Imejmo nerazcepno upodobitev $p$-grupe $G$ na prostoru $V$ nad poljem $\FF_p$. Vemo že, da je $V$ nujno končno razsežen, zato je $|V| = p^k$ za nek $k \in \NN$. Grupa $G$ permutacijsko deluje na množici neničelnih vektorjev $V \backslash \{ 0 \}$. Po lemi o orbiti in stabilizatorju je velikost orbite vsakega neničelnega vektorja enaka indeksu stabilizatorja, ki je po predpostavki o moči grupe nujno potenca praštevila $p$. Ker pa moč $|V \backslash \{ 0 \}|$ ni deljiva s $p$, mora obstajati vektor $0 \neq v \in V$ z orbito moči $1$. Ta vektor je torej fiksen za delovanje grupe $G$ in zato razpenja enorazsežen podprostor $\FF_p \cdot v$, ki je kot upodobitev izomorfen $\oneone$. Torej je $V = \oneone$ in upodobitev je res trivialna.
 
 </div>
 
@@ -129,7 +129,7 @@ V posebnem iz izreka po primerjavi razsežnosti izpeljemo
 
 <div class="domacanaloga">
 
-Naj bosta $G_1, G_2$ grupi z nerazcepnima končnorazsežnima upodobitvama $\rho_1, \rho_2$ nad algebraično zaprtim poljem. Tedaj je produkt $\rho_1 \times \rho_2$ nerazcepna upodobitev grupe $G_1 \times G_2$. Premisli, da velja tudi obratno; vsaka končnorazsežna kompleksna nerazcepna upodobitev grupe $G_1 \times G_2$ je oblike $\rho_1 \times \rho_2$ za neki nerazcepni upodobitvi $\rho_1, \rho_2$.
+Naj bosta $G_1, G_2$ grupi z nerazcepnima končno razsežnima upodobitvama $\rho_1, \rho_2$ nad algebraično zaprtim poljem. Tedaj je produkt $\rho_1 \times \rho_2$ nerazcepna upodobitev grupe $G_1 \times G_2$. Premisli, da velja tudi obratno; vsaka končno razsežna kompleksna nerazcepna upodobitev grupe $G_1 \times G_2$ je oblike $\rho_1 \times \rho_2$ za neki nerazcepni upodobitvi $\rho_1, \rho_2$.
 
 </div>
 
@@ -155,7 +155,7 @@ Naj upodobitvi $\pi_1$, $\pi_2$ delujeta na prostorih $V_1$, $V_2$. Grupa $G$ de
 ```{math}
 \frac{1}{|G|} \sum_{g \in G} g \cdot A = 0.
 ```
-Konkretizirajmo preslikavo $A$. Naj bo $\{ e_i \}_i$ baza prostora $V_1$ in $\{ f_j \}_j$ baza prostora $V_2$. Vzemimo
+Izberimo zdaj posebno preslikavo $A$. Naj bo $\{ e_i \}_i$ baza prostora $V_1$ in $\{ f_j \}_j$ baza prostora $V_2$. Vzemimo
 ```{math}
 A_{i,l} \colon V_1 \to V_2, \quad
     v \mapsto \langle e_i^*, v \rangle f_l.
@@ -166,7 +166,7 @@ S to izbiro dosežemo enakost
     \frac{1}{|G|} \sum_{g \in G} \langle e_i^*, g^{-1} \cdot e_j \rangle g \cdot f_l =
     \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) g \cdot f_l.
 ```
-Na zadnjem uporabimo še $f_k^*$, pa dobimo
+Na zadnjem uporabimo še $f_k^*$ in dobimo
 ```{math}
 0 = \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) \langle f_k^*, g \cdot f_l \rangle =
     \frac{1}{|G|} \sum_{g \in G} f_{i,j}^{\pi_1}(g^{-1}) f_{k,l}^{\pi_2}(g),
@@ -319,7 +319,7 @@ Za končno grupo $G$ nad algebraično zaprtim poljem karakteristike tuje $|G|$ v
 
 </div>
 
-V splošnem *ne* poznamo eksplicitne korespondence[^5] med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Vemo le, da njuno število sovpada.
+V splošnem *ne* poznamo eksplicitne korespondence[^4] med konjugiranostnimi razredi in nerazcepnimi upodobitvami. Vemo le, da njuni števili sovpadata.
 
 <div class="zgled">
 
@@ -341,7 +341,7 @@ V splošnem *ne* poznamo eksplicitne korespondence[^5] med konjugiranostnimi raz
       \end{cases}
   ```
 
-  Določimo zdaj še nerazcepne upodobitve. Poznamo že dvorazsežne nerazcepne upodobitve $\rho_k$ za $0 < k < n/2$, vseh teh je $\lceil n/2 \rceil - 1$. Za karakter take upodobitve velja $\chi_{\rho_k}(r) = 2 \cos(2 \pi k / n)$, zato so vsi ti karakterji različni med sabo in s tem so upodobitve $\rho_k$ neizomorfne. Poleg teh dvorazsežnih upodobitev imamo še linearne upodobitve. Število teh je enako velikosti abelacije $D_{2n}/[D_{2n}, D_{2n}]$.[^6] Velja
+  Določimo zdaj še nerazcepne upodobitve. Poznamo že dvorazsežne nerazcepne upodobitve $\rho_k$ za $0 < k < n/2$, vseh teh je $\lceil n/2 \rceil - 1$. Za karakter take upodobitve velja $\chi_{\rho_k}(r) = 2 \cos(2 \pi k / n)$, zato so vsi ti karakterji različni med sabo in s tem so upodobitve $\rho_k$ neizomorfne. Poleg teh dvorazsežnih upodobitev imamo še linearne upodobitve. Število teh je enako velikosti abelacije $D_{2n}/[D_{2n}, D_{2n}]$.[^5] Velja
   ```{math}
   [r^i, s r^j] = r^{-i} \left( r^i \right)^{s r^j} = r^{-2i}, \quad
       [s r^i, s r^j] = r^{-i} s \left( s r^i \right)^{s r^j} = r^{2j - 2i},
@@ -376,7 +376,7 @@ V splošnem *ne* poznamo eksplicitne korespondence[^5] med konjugiranostnimi raz
 
   </div>
 
-- Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.[^7] Recimo, da so dolžine teh ciklov enake $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_{k}$. Seveda velja $\sum_{i = 1}^{k} \lambda_i = n$. Zaporedju $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ pravimo <span class="definicija">ciklični tip</span> permutacije $\sigma$. Kadar so kateri od členov cikličnega tipa enaki, ciklični tip pišemo tudi kot $1^{i_1} 2^{i_2} \cdots n^{i_n}$, kjer je $i_m$ število ciklov dolžine $m$ v $\sigma$.
+- Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.[^6] Recimo, da so dolžine teh ciklov enake $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_{k}$. Seveda velja $\sum_{i = 1}^{k} \lambda_i = n$. Zaporedju $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ pravimo <span class="definicija">ciklični tip</span> permutacije $\sigma$. Kadar so kateri od členov cikličnega tipa enaki, ciklični tip pišemo tudi kot $1^{i_1} 2^{i_2} \cdots n^{i_n}$, kjer je $i_m$ število ciklov dolžine $m$ v $\sigma$.
 
   <div class="domacanaloga">
 
@@ -398,7 +398,7 @@ Ker nerazcepni karakterji tvorijo ortonormirano bazo prostora razrednih funkcij,
 ```{math}
 f = \sum_{\pi \in \Irr(G)} [ f, \chi_{\pi} ] \chi_{\pi}.
 ```
-Alternativna baza prostora razrednih funkcij sestoji iz karakterističnih funkcij konjugiranostnih razredov v $G$. Razvoj te baze po karakterjih nam podaja še eno relacijo med karakterji, ki je ortogonalna[^8] ortonormiranosti.
+Alternativna baza prostora razrednih funkcij sestoji iz karakterističnih funkcij konjugiranostnih razredov v $G$. Razvoj te baze po karakterjih nam podaja še eno relacijo med karakterji, ki je ortogonalna[^7] ortonormiranosti.
 
 <div class="posledica">
 
@@ -425,11 +425,11 @@ in dobljeno evalviramo v elementu $g$.
 
 ### Razstavljanje upodobitve
 
-S pomočjo ortonormirane baze karakterjev lahko z lahkoto razumemo vsako končnorazsežno upodobitev končne grupe nad ugodnim poljem.
+S pomočjo ortonormirane baze karakterjev lahko z lahkoto razumemo vsako končno razsežno upodobitev končne grupe nad ugodnim poljem.
 
 <div class="posledica">
 
-Naj bo $G$ končna grupa s končnorazsežno upodobitvijo $\rho$ nad algebraično zaprtim poljem karakteristike $0$.
+Naj bo $G$ končna grupa s končno razsežno upodobitvijo $\rho$ nad algebraično zaprtim poljem karakteristike $0$.
 
 1.  Za vsako nerazcepno upodobitev $\pi$ velja $\mult_{\rho}(\pi) = [ \chi_{\rho}, \chi_{\pi} ]$.
 
@@ -474,7 +474,7 @@ torej $\pi$ vsebuje $\oneone$ z večkratnostjo $1$, kar je povsem analogno temu,
 ```
 zato je upodobitev $\rho$ nerazcepna.
 
-Zaenkrat imamo tri nerazcepne upodobitve stopenj $1,1,3$. Iščemo torej še dve nerazcepni upodobitvi, katerih vsote kvadratov stopenj so enake $24 - (1^2 + 1^2 + 3^2) = 13$. Stopnji teh dveh neznanih upodobitev sta zato nujno enaki $2$ in $3$. Ker že imamo eno nerazcepno upodobitev stopnje $3$, lahko iz nje pridelamo novo s tenzoriranjem z upodobitvijo stopnje $1$. Dobimo upodobitev $\sgn \otimes \rho$. Njen karakter ima vrednosti $3,-1,0,1,-1$ in s tem normo $1$, zato je upodobitev $\sgn \otimes \rho$ res nerazcepna. Nazadnje nam torej manjka le še ena upodobitev stopnje $2$. Imenujmo jo $\tau$. Čeprav je ne poznamo, lahko iz ortonormiranosti karakterjev določimo njen karakter $\chi_{\tau}$ kot natanko tisto razredno funkcijo, ki je ortogonalna na vse poznane neracepne karakterje in je norme $1$ ter pozitivne stopnje. Na ta način dobimo vrednosti $2,0,-1,0,2$. S tem smo nazadnje določili celotno tabelo karakterjev grupe $S_4$ nad $\CC$.[^9]
+Zaenkrat imamo tri nerazcepne upodobitve stopenj $1,1,3$. Iščemo torej še dve nerazcepni upodobitvi, katerih vsote kvadratov stopenj so enake $24 - (1^2 + 1^2 + 3^2) = 13$. Stopnji teh dveh neznanih upodobitev sta zato nujno enaki $2$ in $3$. Ker že imamo eno nerazcepno upodobitev stopnje $3$, lahko iz nje pridelamo novo s tenzoriranjem z upodobitvijo stopnje $1$. Dobimo upodobitev $\sgn \otimes \rho$. Njen karakter ima vrednosti $3,-1,0,1,-1$ in s tem normo $1$, zato je upodobitev $\sgn \otimes \rho$ res nerazcepna. Nazadnje nam torej manjka le še ena upodobitev stopnje $2$. Imenujmo jo $\tau$. Čeprav je ne poznamo, lahko iz ortonormiranosti karakterjev določimo njen karakter $\chi_{\tau}$ kot natanko tisto razredno funkcijo, ki je ortogonalna na vse poznane neracepne karakterje in je norme $1$ ter pozitivne stopnje. Na ta način dobimo vrednosti $2,0,-1,0,2$. S tem smo nazadnje določili celotno tabelo karakterjev grupe $S_4$ nad $\CC$.[^8]
 
 |  | $()$ | $(1 \ 2)$ | $(1 \ 2 \ 3)$ | $(1 \ 2 \ 3 \ 4)$ | $(1 \ 2)(3 \ 4)$ |
 |:--:|:--:|:--:|:--:|:--:|:--:|
@@ -519,7 +519,7 @@ Ni težko preveriti, da je $\Fcal$ dobro definirana preslikava. Očitno je linea
 
 </div>
 
-V posebnem je vsaka endospletična regularne upodobitve enaka evalvaciji Fourierovi transformacije v neki fiksni funkciji.[^10] Nekoliko natančneje si poglejmo, kaj je ta evalvacija. Za funkciji $f,h \in \fun(G,F)$ je
+V posebnem je vsaka endospletična regularne upodobitve enaka evalvaciji Fourierove transformacije v neki fiksni funkciji.[^9] Nekoliko natančneje si poglejmo, kaj je ta evalvacija. Za funkciji $f,h \in \fun(G,F)$ je
 ```{math}
 \hat{h}(\rho_{\fun}) \cdot f = \sum_{g \in G} h(g) \rho_{\fun}(g^{-1}) \cdot f =
     \left( x \mapsto \sum_{g \in G} h(g) f(x g^{-1}) \right).
@@ -536,7 +536,7 @@ in zato preslikava $\Fcal$ ni nič drugega kot običajna Fourierova transformaci
 
 <div class="trditev">
 
-Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Za vsako končnorazsežno upodobitev $\rho$ in nerazcepno upodobitev $\pi$ je
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Za vsako končno razsežno upodobitev $\rho$ in nerazcepno upodobitev $\pi$ je
 ```{math}
 \frac{\deg(\pi)}{|G|} \cdot \widehat{\chi_{\pi}}(\rho)
 ```
@@ -625,7 +625,7 @@ Naj bo
 ```{math}
 \textstyle W = \bigcap_{\conclass} \Eigenspace_{\lambda_{\conclass}}\left(\widehat{1_{\conclass}}(\rho_{\fun})\right) \leq \fun(G,F)
 ```
-presek lastnih podprostorov[^11] za neke skalarje $\lambda_{\conclass}$, kjer presek teče po vseh konjugiranostnih razredih grupe $G$. Predpostavimo, da je $W \neq 0$. Naj bo $w \in W$. Za $\pi \in \Irr(G)$ naj bo $P_{\pi}$ projekcija na $\pi$-izotipično komponento. Velja
+presek lastnih podprostorov[^10] za neke skalarje $\lambda_{\conclass}$, kjer presek teče po vseh konjugiranostnih razredih grupe $G$. Predpostavimo, da je $W \neq 0$. Naj bo $w \in W$. Za $\pi \in \Irr(G)$ naj bo $P_{\pi}$ projekcija na $\pi$-izotipično komponento. Velja
 ```{math}
 P_{\pi} \cdot w = \frac{\chi_{\pi}(1)}{|G|} \widehat{\chi_{\pi}}(\rho_{\fun}) \cdot w =
     \frac{\chi_{\pi}(1)}{|G|} \sum_{g \in G} \chi_{\pi}(g) \rho_{\fun}(g^{-1}) \cdot w.
@@ -647,11 +647,11 @@ Vemo že, kako deluje $\widehat{1_{\conclass}}(\rho_{\fun})$ na $\pi$-izotipičn
 
 </div>
 
-S to karakterizacijo izotipičnih komponent lahko opišemo algoritem za izračun tabele karakterjev.[^12] Najprej oštevilčimo elemente grupe $G$ kot $g_1, g_2, \dots, g_{|G|}$ in pripravimo vektorski prostor $F^{|G|} \cong \fun(G,F)$ s standardno bazo $e_i$, ki ustreza karakteristični funkciji $1_{g_i}$. Izračunamo še konjugiranostne razrede grupe $G$ in iz vsakega izberemo predstavnika. Pripravimo funkcijo, ki izračuna matriko regularne upodobitve $\rho_{\fun}$ v poljubnem elementu $x \in G$, in za tem še funkcijo, ki izračuna matriko Fourierove transformacije $\widehat{1_{\conclass}}(\rho_{\fun})$ za konjugiranostni razred $\conclass$. Izračunamo lastne podprostore vseh teh matrik in za tem vse njihove netrivialne preseke. Te so ravno izotipične komponente. V vsaki komponenti $W$ izberemo bazo, v kateri izračunamo sled zožitve matrike $\rho_{\fun}(x)$ na $W$. Ker je $W$ kot upodobitev izomorfen direktni vsoti $\deg(\pi)$ kopij neke nerazcepne upodobitve $\pi$, velja $\dim(W) = \deg(\pi)^2$ in zato
+S to karakterizacijo izotipičnih komponent lahko opišemo algoritem za izračun tabele karakterjev.[^11] Najprej oštevilčimo elemente grupe $G$ kot $g_1, g_2, \dots, g_{|G|}$ in pripravimo vektorski prostor $F^{|G|} \cong \fun(G,F)$ s standardno bazo $e_i$, ki ustreza karakteristični funkciji $1_{g_i}$. Izračunamo še konjugiranostne razrede grupe $G$ in iz vsakega izberemo predstavnika. Pripravimo funkcijo, ki izračuna matriko regularne upodobitve $\rho_{\fun}$ v poljubnem elementu $x \in G$, in za tem še funkcijo, ki izračuna matriko Fourierove transformacije $\widehat{1_{\conclass}}(\rho_{\fun})$ za konjugiranostni razred $\conclass$. Izračunamo lastne podprostore vseh teh matrik in za tem vse njihove netrivialne preseke. Te so ravno izotipične komponente. V vsaki komponenti $W$ izberemo bazo, v kateri izračunamo sled zožitve matrike $\rho_{\fun}(x)$ na $W$. Ker je $W$ kot upodobitev izomorfen direktni vsoti $\deg(\pi)$ kopij neke nerazcepne upodobitve $\pi$, velja $\dim(W) = \deg(\pi)^2$ in zato
 ```{math}
 \tr(\rho_{\fun}(x) |_W) = \sqrt{\dim(W)} \cdot \chi_{\pi}(x).
 ```
-Iz izračunane sledi torej lahko določimo vrednost pripadajočega karakterja v predstavnikih konjugiranostnih razredov. Implementacija predstavljenega algoritma za izračun tabele karakterjev nad $\CC$ v programskem jeziku GAP[^13] je dostopna [tukaj](https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g).
+Iz izračunane sledi torej lahko določimo vrednost pripadajočega karakterja v predstavnikih konjugiranostnih razredov. Implementacija predstavljenega algoritma za izračun tabele karakterjev nad $\CC$ v programskem jeziku GAP[^12] je dostopna [tukaj](https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g).
 
 <div class="zgled">
 
@@ -667,13 +667,13 @@ Opazujmo alternirajočo grupo $A_5$ nad poljem $\CC$. Z opisanim algoritmom hitr
 
 Tabela karakterjev $A_5$, kjer je $\zeta = e^{2 \pi i / 5}$
 
-Iz tabele lahko razberemo kar nekaj lastnosti grupe. Poglejmo si, kako hitro premislimo, da je $A_5$ *enostavna* grupa. Če bi namreč $A_5$ imela kakšno pravo netrivialno edinko $N$, potem bi kvocient $A_5/N$ imel kakšno netrivialno nerazcepno upodobitev $\rho$. Restrikcija $\Res^{A_5/N}_{A_5}(\rho)$ je zato netrivialna nerazcepna upodobitev grupe $A_5$ z netrivialnim jedrom. Vrednost karakterja $\chi_{\rho}$ v poljubnem elementu $N$ je torej enaka $\chi_{\rho}(1)$. Iz tabele karakterjev grupe $A_5$ pa je jasno, da takega karakterja ni.[^14]
+Iz tabele lahko razberemo kar nekaj lastnosti grupe. Poglejmo si, kako hitro premislimo, da je $A_5$ *enostavna* grupa. Če bi namreč $A_5$ imela kakšno pravo netrivialno edinko $N$, potem bi kvocient $A_5/N$ imel kakšno netrivialno nerazcepno upodobitev $\rho$. Restrikcija $\Res^{A_5/N}_{A_5}(\rho)$ je zato netrivialna nerazcepna upodobitev grupe $A_5$ z netrivialnim jedrom. Vrednost karakterja $\chi_{\rho}$ v poljubnem elementu $N$ je torej enaka $\chi_{\rho}(1)$. Iz tabele karakterjev grupe $A_5$ pa je jasno, da takega karakterja ni.[^13]
 
 </div>
 
 Predstavljeni algoritem ima mnogo pomanjkljivosti. V programskem jeziku GAP je za izračun tabele karakterjev implementiran algoritem [(Dixon 1967, Schneider 1990)](https://www.sciencedirect.com/science/article/pii/S0747717108800776), ki izboljša predstavljenega na naslednja dva načina.
 
-1.  S predstavljenim algoritmom bomo težko izračunali tabelo karakterjev kakšne zelo velike grupe, saj moramo v postopku diagonalizirati matrike velikosti $|G| \times |G|$. Algoritem v GAP sicer temelji na enaki ideji iskanja skupnih lastnih podprostorov, a pri tem ne opazuje regularne upodobitve, temveč upošteva abstraktne formule med karakterji in iz njih izpelje matrike velikosti $\kk(G) \times \kk(G)$, katerih skupni lastni vektorji so (bolj ali manj) karakterji. Ker je $\kk(G)$ bistveno manjše od $|G|$, je ta izračun mnogo lažji in hitrejši.
+1.  S predstavljenim algoritmom bomo težko izračunali tabelo karakterjev kakšne zelo velike grupe, saj moramo v postopku diagonalizirati matrike velikosti $|G| \times |G|$. Algoritem v GAP sicer temelji na enaki ideji iskanja skupnih lastnih podprostorov, a pri tem ne opazuje regularne upodobitve, temveč upošteva abstraktne formule med karakterji in iz njih izpelje matrike velikosti $\kk(G) \times \kk(G)$, katerih skupni lastni vektorji so (bolj ali manj) karakterji. Ker je število $\kk(G)$ bistveno manjše od $|G|$, je ta izračun mnogo lažji in hitrejši.
 
 2.  Za izračun natančnih vrednosti karakterjev moramo vse račune izvajati eksaktno in brez približkov. Numerične metode, ki jih sicer lahko uporabimo za hitro računanje lastnih vrednosti velikih matrik, torej odpadejo. Programski jezik GAP zna računati simbolično, a je to lahko precej zamudno. Algoritem v GAP se temu izogne tako, da večino računov opravi nad poljem $\FF_p$ za ustrezno izbrano dovolj veliko praštevilo $p$, potem pa te rezultate prenese nazaj nad $\CC$. Vsi računi so zato hitri in eksaktni.
 
@@ -685,7 +685,7 @@ Naj bo $G$ grupa in $F$ polje karakteristike tuje $|G|$. Karakterji upodobitev g
 ```{math}
 R(G) = \bigoplus_{\pi \in \Irr(G)} \ZZ \cdot \chi_{\pi} \subseteq \textstyle \fun_{\cl}(G, F).
 ```
-Množica $R(G)$ je najprej očitno abelova podgrupa razrednih funkcij. Za tem je opremljena z množenjem, ki izhaja iz tenzorskega produkta upodobitev. Množica $R(G)$ na ta način postane komutativen podkolobar v $\fun_{\cl}(G,F)$, ki ga imenujemo <span class="definicija">kolobar virtualnih karakterjev</span>.[^15]
+Množica $R(G)$ je najprej očitno abelova podgrupa razrednih funkcij. Za tem je opremljena z množenjem, ki izhaja iz tenzorskega produkta upodobitev. Množica $R(G)$ na ta način postane komutativen podkolobar v $\fun_{\cl}(G,F)$, ki ga imenujemo <span class="definicija">kolobar virtualnih karakterjev</span>.[^14]
 
 Naj bo $H$ podgrupa v $G$. Restrikcija vzdolž vložitve $H$ v $G$ porodi *homomorfizem kolobarjev*
 ```{math}
@@ -711,7 +711,7 @@ c_H \colon H \to F, \quad
 ```
 Ker je $H$ abelova grupa, je seveda $c_H \in \fun_{\cl}(H,F)$.
 
-Premislimo, da je celo $c_H \in R(H)$. Dokazujmo z indukcijo na $|H|$. Vsaka prava podgrupa $K \leq H$ je tudi ciklična, zato zanjo po indukcijski predpostavki velja $c_K \in R(K)$. Naj bo $R$ množica predstavnikov odsekov $K$ v $H$. S formulo za indukcijo karakterja za $h \in H$ izračunamo
+Premislimo, da velja celo $c_H \in R(H)$. Dokazujmo z indukcijo na $|H|$. Vsaka prava podgrupa $K \leq H$ je tudi ciklična, zato zanjo po indukcijski predpostavki velja $c_K \in R(K)$. Naj bo $R$ množica predstavnikov odsekov $K$ v $H$. S formulo za indukcijo karakterja za $h \in H$ izračunamo
 ```{math}
 {\textstyle \Ind^H_K(c_K)(h)} = \sum_{r \in R \colon h \in K} c_K(h) =
     \begin{cases} |H:K| c_K(h) & h \in K, \\ 0 & \text{sicer}  \end{cases} =
@@ -743,7 +743,7 @@ Vsak virtualni karakter v $R(G)$ je zato linearna kombinacija induciranih virtua
 
 <div class="izrek">
 
-Naj bo $G$ končna grupa in $\rho$ njena končnorazsežna upodobitev nad poljem karakteristike tuje $|G|$. Tedaj je $\chi_{\rho}$ *racionalna* linearna kombinacija indukcij nerazcepnih karakterjev cikličnih podgrup grupe $G$.
+Naj bo $G$ končna grupa in $\rho$ njena končno razsežna upodobitev nad poljem karakteristike tuje $|G|$. Tedaj je $\chi_{\rho}$ *racionalna* linearna kombinacija indukcij nerazcepnih karakterjev cikličnih podgrup grupe $G$.
 
 </div>
 
@@ -751,7 +751,7 @@ Racionalnim kombinacijam se lahko izognemo, če razširimo razred podgrup s cikl
 
 <div class="izrek">
 
-Naj bo $G$ končna grupa in $\rho$ njena končnorazsežna upodobitev nad algebraično zaprtim poljem karakteristike $0$. Tedaj je $\chi_{\rho}$ *celoštevilska* linearna kombinacija indukcij nerazcepnih karakterjev $p$-elementarnih podgrup grupe $G$, ko $p$ preteče vse praštevilske delitelje moči $G$.
+Naj bo $G$ končna grupa in $\rho$ njena končno razsežna upodobitev nad algebraično zaprtim poljem karakteristike $0$. Tedaj je $\chi_{\rho}$ *celoštevilska* linearna kombinacija indukcij nerazcepnih karakterjev $p$-elementarnih podgrup grupe $G$, ko $p$ preteče vse praštevilske delitelje moči $G$.
 
 </div>
 
@@ -765,11 +765,11 @@ Splošno teorijo upodobitev končnih grup zaključimo z upodobitvami nad najugod
 
 #### Vrednosti karakterjev
 
-Najprej si oglejmo nekaj dodatnih lastnosti, ki jih imajo karakterji kompleksnih upodobitev. Njihove vrednosti namreč niso čisto poljubna kompleksna števila, temveč so algebraična cela števila[^16] omejene absolutne vrednosti.
+Najprej si oglejmo nekaj dodatnih lastnosti, ki jih imajo karakterji kompleksnih upodobitev. Njihove vrednosti namreč niso čisto poljubna kompleksna števila, temveč so algebraična cela števila[^15] omejene absolutne vrednosti.
 
 <div class="trditev">
 
-Naj bo $G$ končna grupa. Za vsako končnorazsežno kompleksno upodobitev $\rho$ in vsak $g \in G$ je
+Naj bo $G$ končna grupa. Za vsako končno razsežno kompleksno upodobitev $\rho$ in vsak $g \in G$ je
 ```{math}
 |\chi_{\rho}(g)| \leq \deg(\rho), \quad
     \chi_{\rho}(g) \in \bar{\ZZ}, \quad
@@ -780,7 +780,7 @@ Naj bo $G$ končna grupa. Za vsako končnorazsežno kompleksno upodobitev $\rho$
 
 <div class="dokaz">
 
-Velja $\rho(g^{|G|}) = \rho(1) = \id$, zato je $\rho(g)$ linearna preslikava končnega reda. Take preslikave so diagonalizabilne.[^17] V posebnem je zato vsaka lastna vrednost $\lambda \in \Eigenvalues(\rho(g))$ končnega reda v $\CC^*$. S tem je seveda
+Velja $\rho(g^{|G|}) = \rho(1) = \id$, zato je $\rho(g)$ linearna preslikava končnega reda. Take preslikave so diagonalizabilne.[^16] Naj bo $\Eigenvalues(\rho(g)) \subseteq \CC^*$ množica lastnih vrednosti $\rho(g)$. Vsaka lastna vrednost $\lambda \in \Eigenvalues(\rho(g))$ je končnega reda v $\CC^*$. S tem je seveda
 ```{math}
 \chi_{\rho}(g) = \sum_{\lambda \in \Eigenvalues(\rho(g))} \lambda \in \bar{\ZZ},
     \quad
@@ -841,13 +841,13 @@ Ker je zadnje število hkrati v $\QQ$, je torej v $\QQ \cap \bar{\ZZ} = \ZZ$.
 
 #### Skalarni produkti in unitarnost
 
-Polje $\CC$ je opremljeno s standardnim skalarnim produktom $\langle z, w \rangle = z \cdot \overline{w}$. Ta produkt lahko razširimo na vsak končnorazsežen kompleksen vektorski prostor. Obravnavali bomo dve taki razširitvi, in sicer na prostor funkcij $\fun(G,\CC)$ ter na vektorski prostor, na katerem upodabljamo grupo $G$.
+Polje $\CC$ je opremljeno s standardnim skalarnim produktom $\langle z, w \rangle = z \cdot \overline{w}$. Ta produkt lahko razširimo na vsak končno razsežen kompleksen vektorski prostor. Obravnavali bomo dve taki razširitvi, in sicer na prostor funkcij $\fun(G,\CC)$ ter na vektorski prostor, na katerem upodabljamo grupo $G$.
 
 Opazujmo najprej prostor funkcij $\fun(G,\CC)$. Vemo že, da ga lahko opremimo s skalarnim produktom $[\cdot, \cdot]$. Ker pa je ta prostor kompleksen, lahko nanj vpeljemo še <span class="definicija">standarden kompleksni skalarni produkt</span>,
 ```{math}
 \langle f, h \rangle = \frac{1}{|G|} \sum_{g \in G} f(g) \overline{h(g)}
 ```
-za $f,h \in \fun(G,\CC)$. Za vsako končnorazsežno kompleksno upodobitev $\rho$ po zadnji trditvi velja
+za $f,h \in \fun(G,\CC)$. Za vsako končno razsežno kompleksno upodobitev $\rho$ po zadnji trditvi velja
 ```{math}
 [f, \chi_{\rho}] = \langle f, \chi_{\rho} \rangle,
 ```
@@ -855,13 +855,13 @@ zato se večina rezultatov, ki smo jih izpeljali za skalarni produkt $[\cdot, \c
 
 <div class="domacanaloga">
 
-Oglejmo si še eno aplikacijo restriktivnih vrednosti kompleksnih karakterjev. Naj bo $G$ končna grupa in $\rho$ njena poljubna *zvesta* končnorazsežna kompleksna upodobitev. Tedaj obstaja $N$, tako da je vsaka nerazcepna kompleksna upodobitev grupe $G$ podupodobitev $\rho^{\otimes N}$.
+Oglejmo si še eno uporabo restriktivnih vrednosti kompleksnih karakterjev. Naj bo $G$ končna grupa in $\rho$ njena poljubna *zvesta* končno razsežna kompleksna upodobitev. Tedaj obstaja $N$, tako da je vsaka nerazcepna kompleksna upodobitev grupe $G$ podupodobitev $\rho^{\otimes N}$.
 
 Dokaza se lahko lotiš tako, da fiksiraš nerazcepno upodobitev $\pi \in \Irr(G)$ in opazuješ *rodovno funkcijo* večkratnosti, se pravi formalno vsoto $F(X) = \sum_{k = 0}^{\infty} \mult_{\rho^{\otimes k}}(\pi) X^k$. Dovolj bo premisliti, da je ta rodovna funkcija neničelna. Izrazi vsak koeficient $\mult_{\rho^{\otimes k}}(\pi)$ s pomočjo skalarnega produkta in se na ta način prepričaj, da ima $F(X)$ pol pri $X = 1/\deg \rho$, zato je res neničelna.
 
 </div>
 
-Osredotočimo se sedaj še na upodobitveni prostor. Naj bo $\rho$ kompleksna upodobitev grupe $G$ na končnorazsežnem prostoru $V$. Izberimo bazo prostora $\{ v_i \}_{i}$ in z njo kompleksen skalarni produkt
+Osredotočimo se sedaj še na upodobitveni prostor. Naj bo $\rho$ kompleksna upodobitev grupe $G$ na končno razsežnem prostoru $V$. Izberimo bazo prostora $\{ v_i \}_{i}$ in z njo kompleksen skalarni produkt
 ```{math}
 \left\langle \sum_i \alpha_i v_i, \sum_i \beta_i v_i \right\rangle = \sum_i \alpha_i \overline{\beta_i}.
 ```
@@ -869,11 +869,11 @@ Prostor $V$ je opremljen z linearnim delovanjem grupe $G$. Zdaj smo na ta prosto
 ```{math}
 \forall g \in G. \ \forall v, w \in V. \quad \langle \rho(g) \cdot v, \rho(g) \cdot w \rangle = \langle v, w \rangle,
 ```
-tedaj rečemo, da je $\rho$ <span class="definicija">unitarna upodobitev</span>. V tem primeru $\rho$ slika iz $G$ v grupo unitarnih transformacij $\U(V)$ prostora $V$ s skalarnim produktom $\langle \cdot, \cdot \rangle$. Seveda ni vsaka upodobitev končne grupe unitarna,[^18] je pa vsaka upodobitev *unitarizabilna*.
+tedaj rečemo, da je $\rho$ <span class="definicija">unitarna upodobitev</span>. V tem primeru $\rho$ slika iz $G$ v grupo unitarnih transformacij $\U(V)$ prostora $V$ s skalarnim produktom $\langle \cdot, \cdot \rangle$. Seveda ni vsaka upodobitev končne grupe unitarna,[^17] je pa vsaka upodobitev *unitarizabilna*.
 
 <div class="trditev">
 
-Naj bo $G$ končna grupa in $\rho$ njena končnorazsežna kompleksna upodobitev na prostoru $V$. Tedaj na $V$ obstaja skalarni produkt, glede na katerega je $\rho$ unitarna.
+Naj bo $G$ končna grupa in $\rho$ njena končno razsežna kompleksna upodobitev na prostoru $V$. Tedaj na $V$ obstaja skalarni produkt, glede na katerega je $\rho$ unitarna.
 
 </div>
 
@@ -928,32 +928,30 @@ to je <span class="definicija">Hilbert-Schmidtov skalarni produkt</span>. Parsev
 
 [^3]: V tem primeru sicer nimamo dostopa do povprečenja v celoti, lahko pa uporabimo *delno* povprečenje, ki izračuna le vsoto po grupi.
 
-[^4]: Splošen primer hitro sledi iz tega posebnega. Če je namreč $F$ karakteristike $p$, ima prapolje $\FF_p$. Upodobitev v tem primeru obravnavamo nad tem prapoljem.
+[^4]: In najverjetneje taka korespondenca v splošnem *ne* obstaja. Je pa na voljo za kakšne posebne družine grup, kot bomo spoznali kasneje.
 
-[^5]: In najverjetneje taka korespondenca v splošnem *ne* obstaja. Je pa na voljo za kakšne posebne družine grup, kot bomo spoznali kasneje.
+[^5]: <span class="definicija">Komutator</span> elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$. <span class="definicija">Komutatorska podgrupa</span> grupe $G$ je $[G,G] = \langle [x,y] \mid x,y \in G \rangle$.
 
-[^6]: <span class="definicija">Komutator</span> elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$. <span class="definicija">Komutatorska podgrupa</span> grupe $G$ je $[G,G] = \langle [x,y] \mid x,y \in G \rangle$.
+[^6]: Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.
 
-[^7]: Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.
+[^7]: Relaciji sta ortogonalni v smislu tabele karakterjev. Ortonormiranost karakterjev preberemo tako, da fiksiramo vrstice. To drugo relacijo pa preberemo tako, da fiksiramo stolpce. Tej relaciji včasih rečemo <span class="definicija">druga ortogonalnostna relacija</span>.
 
-[^8]: Relaciji sta ortogonalni v smislu tabele karakterjev. Ortonormiranost karakterjev preberemo tako, da fiksiramo vrstice. To drugo relacijo pa preberemo tako, da fiksiramo stolpce. Tej relaciji včasih rečemo <span class="definicija">druga ortogonalnostna relacija</span>.
+[^8]: Zanimivo je, da smo uspeli določiti tabelo karakterjev, brez da bi eksplicitno poznali vse upodobitve.
 
-[^9]: Zanimivo je, da smo uspeli določiti tabelo karakterjev, brez da bi eksplicitno poznali vse upodobitve.
+[^9]: V asociativni algebri to izrečemo ponavadi takole: vsak levi ideal v polenostavni algebri je glavni.
 
-[^10]: V asociativni algebri to izrečemo ponavadi takole: vsak levi ideal v polenostavni algebri je glavni.
+[^10]: Za endomorfizem $A$ je $\Eigenspace_\lambda(A)$ lastni podprostor $A$ za lastno vrednost $\lambda$.
 
-[^11]: Za endomorfizem $A$ je $\Eigenspace_\lambda(A)$ lastni podprostor $A$ za lastno vrednost $\lambda$.
+[^11]: Na podoben način lahko določimo tudi upodobitve same, ne le karakterje.
 
-[^12]: Na podoben način lahko določimo tudi upodobitve same, ne le karakterje.
+[^12]: GAP je programski jezik, ki pride zelo prav pri delu z grupami, saj ima implementiranih veliko standardnih konstrukcij grup in funkcij za delo z njimi. Dostopen je prosto na naslovu <https://www.gap-system.org>.
 
-[^13]: GAP je programski jezik, ki pride zelo prav pri delu z grupami, saj ima implementiranih veliko standardnih konstrukcij grup in funkcij za delo z njimi. Dostopen je prosto na naslovu <https://www.gap-system.org>.
+[^13]: Iz argumenta vidimo, da velja celo naslednje. Končna grupa $G$ je enostavna, če in samo če je vsaka njena netrivialna nerazcepna upodobitev zvesta.
 
-[^14]: Iz argumenta vidimo, da velja celo naslednje. Končna grupa $G$ je enostavna, če in samo če je vsaka njena netrivialna nerazcepna upodobitev zvesta.
+[^14]: Virtualnih, ker vsebuje tudi negativne kombinacije nerazcepnih kolobarjev, ki ne ustrezajo karakterjem upodobitev.
 
-[^15]: Virtualnih, ker vsebuje tudi negativne kombinacije nerazcepnih kolobarjev, ki ne ustrezajo karakterjem upodobitev.
+[^15]: <span class="definicija">Algebraično celo število</span> je kompleksno število, ki je ničla moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih celih števil označimo z $\bar{\ZZ}$. Ni se težko prepričati, da $\bar{\ZZ}$ tvori kolobar in da velja $\QQ \cap \bar{\ZZ} = \ZZ$.
 
-[^16]: <span class="definicija">Algebraično celo število</span> je kompleksno število, ki je ničla moničnega polinoma s celoštevilskimi koeficienti. Množico algebraičnih celih števil označimo z $\bar{\ZZ}$. Ni se težko prepričati, da $\bar{\ZZ}$ tvori kolobar in da velja $\QQ \cap \bar{\ZZ} = \ZZ$.
+[^16]: Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\rho(g)$.
 
-[^17]: Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\rho(g)$.
-
-[^18]: Skalarni produkt na danem prostoru lahko izberemo na mnogo različnih načinov.
+[^17]: Skalarni produkt na danem prostoru lahko izberemo na mnogo različnih načinov.

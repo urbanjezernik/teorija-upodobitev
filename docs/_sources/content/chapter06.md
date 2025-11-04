@@ -15,7 +15,7 @@ V svetu neskončih grup ponavadi ne obravnavamo čisto vseh abstraktnih upodobit
 
 <div class="zgled">
 
-Opazujmo grupo $\RR$. Vemo že, da je vsaka njena končnorazsežna nerazcepna kompleksna upodobitev enorazsežna, torej oblike $\chi \colon \RR \to \CC^*$ za nek homomorfizem $\chi$. Premislimo, da je takih homomorfizmov *ogromno*. Grupa $\RR$ je kot abelova grupa izomorfna neskončni direktni vsoti kopij $\ZZ$. Za vsak nabor realnih števil $x_1, x_2, \dots, x_k$, ki so $\ZZ$-linearno neodvisna, lahko izberemo poljuben nabor kompleksnih števil $z_1, z_2, \dots, z_k$ in dobimo homomorfizem abelovih grup $\chi \colon \RR \to \CC^*$ z lastnostjo $\chi(x_i) = z_i$ za vsak $i$.
+Opazujmo grupo $\RR$. Vemo že, da je vsaka njena končno razsežna nerazcepna kompleksna upodobitev enorazsežna, torej oblike $\chi \colon \RR \to \CC^*$ za nek homomorfizem $\chi$. Premislimo, da je takih homomorfizmov *ogromno*. Grupa $\RR$ je kot abelova grupa izomorfna neskončni direktni vsoti kopij $\ZZ$. Za vsak nabor realnih števil $x_1, x_2, \dots, x_k$, ki so $\ZZ$-linearno neodvisna, lahko izberemo poljuben nabor kompleksnih števil $z_1, z_2, \dots, z_k$ in dobimo homomorfizem abelovih grup $\chi \colon \RR \to \CC^*$ z lastnostjo $\chi(x_i) = z_i$ za vsak $i$.
 
 </div>
 
@@ -31,7 +31,7 @@ Grupe $\RR$, $\RR^3$, $\RR^*$, $\U_1(\CC) = S^1$, $\SU_2(\CC)$, $\SO_3(\RR)$, $\
 
 </div>
 
-Končnorazsežna[^1] kompleksna upodobitev $\rho \colon G \to \GL_n(\CC)$ topološke grupe $G$ je <span class="definicija">zvezna</span>, kadar je zvezna kot preslikava, pri čemer prostor $\GL_n(\CC) \subseteq \CC^{n^2}$ opremimo z inducirano topologijo.
+Končno razsežna[^1] kompleksna upodobitev $\rho \colon G \to \GL_n(\CC)$ topološke grupe $G$ je <span class="definicija">zvezna</span>, kadar je zvezna kot preslikava, pri čemer prostor $\GL_n(\CC) \subseteq \CC^{n^2}$ opremimo z inducirano topologijo.
 
 <div class="zgled">
 
@@ -114,7 +114,7 @@ Ker je funkcija na desni odvedljiva, velja enako tudi za funkcijo na levi.
 
 </div>
 
-Iz trditve izpeljemo, da vsaka zvezna upodobitev $\RR/\ZZ \to \CC^*$ izhaja iz upodobitve $\chi_{\zeta}$ za nek $\zeta$. Pri tem mora biti $\ZZ \leq \ker \chi_{\zeta}$, od koder sledi $\zeta = 2 \pi i k$ za nek $k \in \ZZ$. Upodobitve $\chi_k$ torej izčrpajo vse končnorazsežne zvezne kompleksne upodobitve grupe $\RR/\ZZ$. Te upodobitve so vse tudi unitarne, kar ni naključje, kot bomo pojasnili nekoliko kasneje.
+Iz trditve izpeljemo, da vsaka zvezna upodobitev $\RR/\ZZ \to \CC^*$ izhaja iz upodobitve $\chi_{\zeta}$ za nek $\zeta$. Pri tem mora biti $\ZZ \leq \ker \chi_{\zeta}$, od koder sledi $\zeta = 2 \pi i k$ za nek $k \in \ZZ$. Upodobitve $\chi_k$ torej izčrpajo vse končno razsežne zvezne kompleksne upodobitve grupe $\RR/\ZZ$. Te upodobitve so vse tudi unitarne, kar ni naključje, kot bomo pojasnili nekoliko kasneje.
 
 #### Fourierova analiza
 
@@ -138,23 +138,74 @@ Za te funkcije po osnovnem izreku Fourierove analize velja konvergenca
 ```{math}
 \lim_{N \to \infty} || f - f_N || = 0,
 ```
-torej lahko $f$ razvijemo v Fourierovo vrsto.[^3] Hkrati drži varianta Parsevalove formule
+torej lahko $f$ razvijemo v Fourierovo vrsto. Pri tem moramo biti nekoliko previdni, saj opisana konvergenca *ne* implicira, da vrsta $f_N$ v vseh točkah konvergira k $f$, temveč le *skoraj povsod*. Hkrati drži varianta Parsevalove formule
 ```{math}
 ||f||^2 = \sum_{k \in \ZZ} |\langle f, \chi_k \rangle|^2.
 ```
 Upodobitve $\chi_k$ za $k \in \ZZ$ torej tvorijo ortonormiran sistem funkcij, ki je *gost* v prostoru vseh dovolj lepih funkcij na $\RR/\ZZ$.
 
+<div class="zgled">
+
+Opazujmo funkcijo $f \colon \RR/\ZZ \to \RR$, definirano kot
+```{math}
+f(x) = - 2 \log | 2 \sin(\pi x) |
+```
+z vrednostjo $f(0) = 0$ v singularni točki. Pišimo $z = e^{2 \pi i x}$. Potem je $\Re(2 \log (1 - z)) = 2 \log |1 - z| = \log |\sin(\pi x)|$. Uporabimo razvoj $- \log(1 - z) = \sum_{k \geq 1} z^k / k$,[^3] da dobimo
+```{math}
+f(x) = 
+    2 \sum_{k \geq 1} \frac{\cos(2 \pi k x)}{k} 
+    = \sum_{k \neq 1} \frac{1}{|k|} \chi_k(x)
+```
+za $0 < x < 1$. Fourierovi koeficienti funkcije $f$ so torej $\langle f, \chi_k \rangle = 1/|k|$ za $k \neq 0$ in $\langle f, \chi_0 \rangle = 0$. Vsota kvadratov teh koeficientov konvergira, zato je po [Riesz-Fischerjevem izreku](https://en.wikipedia.org/wiki/Riesz–Fischer_theorem) $f$ kvadratno integrabilna funkcija na $\RR/\ZZ$. Delne Fourierove vsote $f_N$ so v točki $x = 0$ enake
+```{math}
+f_N(0) = 2 \sum_{1 \leq k \leq N} \frac{1}{k},
+```
+kar divergira za $N \to \infty$.
+
+</div>
+
 Fourierovo analizo lahko torej vidimo kot analog dekompozicije regularne upodobitve v primeru končnih grup za neskončno grupo $\RR/\ZZ$.
 
 ### Poljubne kompaktne grupe
 
-Izkaže se, da ima vse, kar smo videli za primer $\U_1(\CC)$, ustrezno posplošitev za poljubno kompaktno grupo $G$, na primer $\SU_2(\CC)$ ali $\SO_3(\RR)$. Za natančno obravnavo potrebujemo nekaj *teorije mere*, ki jo bomo prosto uporabili v tem podrazdelku.
+Izkaže se, da ima vse, kar smo videli za primer $\U_1(\CC)$, ustrezno posplošitev za poljubno kompaktno grupo $G$, na primer $\SU_2(\CC)$ ali $\SO_3(\RR)$. Za natančno obravnavo potrebujemo nekaj *teorije mere*, ki jo bomo prosto uporabili v tem podrazdelku.[^4]
 
-V primeru grupe $\RR/\ZZ$ smo skalarni produkt na prostoru funkcij izrazili s pomočjo integrala. Izkaže se, da ima vsaka kompaktna grupa enolično verjetnostno mero $\mu$, ki zadošča pogoju invariantnosti $\mu(U) = \mu(g \cdot U) = \mu(U \cdot g)$ za vsako merljivo množico $U$ in element $g \in G$. To mero imenujemo <span class="definicija">Haarova mera</span>. Z njo lahko definiramo integral vsake merljive funkcije $f$. S pomočjo tega se nam odprejo vrata orodju povprečenja po grupi, ki ga lahko izkoristimo za različne namene.
+V primeru grupe $\RR/\ZZ$ smo skalarni produkt na prostoru funkcij izrazili s pomočjo integrala. Izkaže se, da ima vsaka kompaktna grupa enolično verjetnostno mero $\mu$, ki zadošča pogoju invariantnosti $\mu(U) = \mu(g \cdot U) = \mu(U \cdot g)$ za vsako merljivo množico $U$ in element $g \in G$. To mero imenujemo <span class="definicija">Haarova mera</span>.[^5]
+
+<div class="zgled">
+
+Multiplikativna grupa $\U_1(\CC) = S^1$ je izomorfna aditivni grupi $\RR/\ZZ$ preko preslikave $\chi_1 \colon \RR/\ZZ \to S^1$, $x \mapsto e^{2 \pi i x}$. Naj bo $\lambda$ standardna Lebesgueova mera na $\RR$. To mero lahko preko kanonične projekcije $\RR \to \RR/\ZZ$ prenesemo na $\RR/\ZZ$, pri čemer definiramo mero na podmnožici $U \subseteq \RR/\ZZ$ kot $\lambda(\pi^{-1}(U) \cap [0,1))$. Za pripadajočo podmnožico $U \subseteq S^1$ potem definiramo njeno mero kot $\mu(U) = \lambda(\chi_1^{-1}(U))$. Ta mera je Haarova mera na $\U_1(\CC)$ in igra ključno vlogo v klasični Fourierovi analizi, kot smo se spomnili zgoraj.
+
+</div>
+
+<div class="zgled">
+
+Nekoliko bolj zapleten opis ima Haarova mera na grupi $\SU_2(\CC)$. Elementi te grupe so matrike oblike
+```{math}
+\begin{pmatrix}
+        a & b \\
+        -\overline{b} & \overline{a}
+    \end{pmatrix}, \quad |a|^2 + |b|^2 = 1.
+```
+Grupo $\SU_2(\CC)$ lahko torej identificiramo s sfero $S^3 \subseteq \RR^4$ preko vložitve $\iota(a,b) = (\Re(a), \Im(a), \Re(b), \Im(b))$. Mero na $\SU_2(\CC)$ potem definiramo preko Lebesgueove mere na $S^3$.
+
+Oglejmo si, kako to deluje v koordinatah. Parametrizirajmo $a,b$ in s tem vložitev $\iota$ kot $a = e^{\frac{i}{2} (\phi + \psi)} \cos(\theta/2)$ in $b = e^{\frac{i}{2} (\phi - \psi)} \sin(\theta/2)$ za realna števila $\phi \in [0, 2\pi)$, $\theta \in [0, \pi]$, $\psi \in [0, 4\pi)$. Naj bodo $v_1, v_2, v_3$ tangentni vektorji na $S^3$, dobljeni z odvajanjem vložitve $\iota$ po parametrih $\phi, \psi, \theta$. Ti vektorji napenjajo paralelepiped z volumnom $\sqrt{\det(G)}$, kjer je $G$ Gramova matrika z elementi $G_{ij} = \langle v_i, v_j \rangle$. Izračunamo
+```{math}
+G = \begin{pmatrix}
+    1/4 & 0 & \cos(\theta)/4 \\
+    0 & 1/4 & 0 \\
+    \cos(\theta)/4 & 0 & 1/4
+\end{pmatrix}, \quad \det(G) = \frac{\sin^2(\theta)}{64}.
+```
+Diferencialen volumen na $S^3$ glede na izbrano parametrizacijo je torej $\frac{\sin(\theta)}{8} d\phi d\theta d\psi$. Ko to pointegriramo po celotni domeni parametrov, dobimo volumen sfere $2 \pi^2$. Haarova mera je verjetnostna, zato moramo diferencialen volumen še normalizirati s faktorjem $1/(2 \pi^2)$. Končno dobimo Haarovo mero na $\SU_2(\CC)$ z gostoto $\frac{\sin(\theta)}{16 \pi^2}$ v parametrih $\phi, \theta, \psi$.
+
+</div>
+
+S Haarovo mero lahko definiramo integral merljive funkcije. S pomočjo tega se nam odprejo vrata orodju povprečenja po grupi, ki ga lahko izkoristimo za različne namene.
 
 <div class="trditev">
 
-Vsaka zvezna končnorazsežna kompleksna upodobitev kompaktne grupe je unitarizabilna.
+Vsaka zvezna končno razsežna kompleksna upodobitev kompaktne grupe je unitarizabilna.
 
 </div>
 
@@ -173,7 +224,7 @@ Kot v primeru $\RR/\ZZ$ lahko vse upodobitve najdemo v ustreznem modelu regularn
 ```{math}
 \rho(g) \cdot f = x \mapsto f(x g).
 ```
-Ta prostor je seveda neskončnorazsežen. Znameniti Peter-Weylov izrek razkrije dekompozicijo te upodobitve, ki je popolnoma analogna tisti iz sveta končnih grup.
+Ta prostor je seveda neskončno razsežen. Znameniti Peter-Weylov izrek razkrije dekompozicijo te upodobitve, ki je popolnoma analogna tisti iz sveta končnih grup.[^6]
 
 <div class="izrek">
 
@@ -181,11 +232,11 @@ Naj bo $G$ kompaktna grupa s Haarovo mero $\mu$. Regularna upodobitev $G$ na $L^
 ```{math}
 L^2(G) \cong \bigoplus_{\pi} \underbrace{\pi \oplus \pi \oplus \cdots \oplus \pi}_{\deg(\pi)},
 ```
-ko $\pi$ preteče vse končnorazsežne nerazcepne zvezne unitarne upodobitve grupe $G$.
+ko $\pi$ preteče vse končno razsežne nerazcepne zvezne unitarne upodobitve grupe $G$.
 
 </div>
 
-Kot v končnih grupah se s pomočjo matričnih koeficientov prepričamo, da je vsaka nerazcepna zvezna unitarna upodobitev vsebovana v regularni. V posebnem je zato vsaka zvezna unitarna upodobitev kompaktne grupe nujno *končnorazsežna*.
+Kot v končnih grupah se s pomočjo matričnih koeficientov prepričamo, da je vsaka nerazcepna zvezna unitarna upodobitev vsebovana v regularni. V posebnem je zato vsaka zvezna unitarna upodobitev kompaktne grupe nujno *končno razsežna*.
 
 ## Zvezne linearne grupe
 
@@ -193,7 +244,7 @@ V tem razdelku si bomo ogledali, kako lahko razumemo teorijo upodobitev linearni
 
 ### $\SL_2(\CC)$
 
-Grupa $\SL_2(\CC)$ je zaprta podmnožica kompleksnega prostora $\CC^4$, dana z enačbo $ad - bc = 1$. Ker je odvod determinantne preslikave v vsaki točki neničeln, je $\SL_2(\CC)$ podmnogoterost kompleksne razsežnosti $3$. Pri opazovanju upodobitev grupe $\SL_2(\CC)$ bomo seveda upoštevali to strukturo, saj sicer dobimo *preveč* updobitev.[^4] Smiselno bo opazovati upodobitve, pri katerih so matrični koeficienti zvezne ali celo gladke funkcije matrike, ki deluje. Glede na to, da je $\SL_2(\CC)$ kompleksna mnogoterost, lahko opazujemo tudi kompleksno analitične upodobitve. Na grupo $\SL_2(\CC)$ lahko gledamo tudi kot na algebraično grupo,[^5] zato ima smisel opazovati tudi le polinomske upodobitve. Kot bomo videli, so si nazadnje vse te različne oblike upodobitev grupe $\SL_2(\CC)$ med sabo zelo podobne.
+Grupa $\SL_2(\CC)$ je zaprta podmnožica kompleksnega prostora $\CC^4$, dana z enačbo $ad - bc = 1$. Ker je odvod determinantne preslikave v vsaki točki neničeln, je $\SL_2(\CC)$ podmnogoterost kompleksne razsežnosti $3$. Pri opazovanju upodobitev grupe $\SL_2(\CC)$ bomo seveda upoštevali to strukturo, saj sicer dobimo *preveč* updobitev.[^7] Smiselno bo opazovati upodobitve, pri katerih so matrični koeficienti zvezne ali celo gladke funkcije matrike, ki deluje. Glede na to, da je $\SL_2(\CC)$ kompleksna mnogoterost, lahko opazujemo tudi kompleksno analitične upodobitve. Na grupo $\SL_2(\CC)$ lahko gledamo tudi kot na algebraično grupo,[^8] zato ima smisel opazovati tudi le polinomske upodobitve. Kot bomo videli, so si nazadnje vse te različne oblike upodobitev grupe $\SL_2(\CC)$ med sabo zelo podobne.
 
 #### Standardna upodobitev in njene potence
 
@@ -207,7 +258,7 @@ Grupa $\SL_2(\CC)$ naravno deluje na vektorskem prostoru $\CC^2$ z množenjem ma
         a & b \\ c & d 
     \end{pmatrix} \right).
 ```
-To upodobitev lahko vidimo kot upodobitev na prostoru linearnih polinomov v $X$,$Y$. V tej luči jo lahko naravno razširimo na prostor homogenih polinomov $\CC[X,Y]_k$ stopnje $k \geq 1$.[^6] Baza tega prostora so monomi $e_i = X^i Y^{k-i}$ za $0 \leq i \leq k$, torej je $\CC[X,Y]_k$ razsežnosti $k+1$. Formalno za razširitev $\rho_1$ uporabimo simetrično potenco in dobimo
+To upodobitev lahko vidimo kot upodobitev na prostoru linearnih polinomov v $X$,$Y$. V tej luči jo lahko naravno razširimo na prostor homogenih polinomov $\CC[X,Y]_k$ stopnje $k \geq 1$.[^9] Baza tega prostora so monomi $e_i = X^i Y^{k-i}$ za $0 \leq i \leq k$, torej je $\CC[X,Y]_k$ razsežnosti $k+1$. Formalno za razširitev $\rho_1$ uporabimo simetrično potenco in dobimo
 ```{math}
 {\textstyle \rho_k = \Sym^k(\rho_1) \colon \SL_2(\CC) \to \GL(\CC[X,Y]_k),} \quad
     g \mapsto \left( f(X,Y) \mapsto f((X,Y) \cdot g) \right).
@@ -230,7 +281,7 @@ Polinomske upodobitve $\rho_k \colon \SL_2(\CC) \to \GL_{k+1}(\CC)$ so nerazcepn
 
 <div class="dokaz">
 
-Kot v obravnavi upodobitev splošne linearne grupe nad končnim poljem si oglejmo torus[^7]
+Kot v obravnavi upodobitev splošne linearne grupe nad končnim poljem si oglejmo torus[^10]
 ```{math}
 T = \left\{ 
         \begin{pmatrix}
@@ -271,7 +322,7 @@ Upoštevajmo zdaj, da je $W$ invarianten še glede na vse ostale elemente v $\SL
 
 </div>
 
-Na ta način smo torej konstruirali neskončno mnogo nerazcepnih polinomskih upodobitev grupe $\SL_2(\CC)$ poljubne visoke stopnje. Zanimivo je, da te upodobitve *niso* unitarne. Lastne vrednosti unitarnih matrik so namreč nujno absolutne vrednosti $1$, čemur upodobitve $\rho_k$ ne zadoščajo. Kasneje bomo videli preprost argument, da niti njena podgrupa $\SL_2(\RR)$ nima netrivialnih končnorazsežnih unitarnih upodobitev. Upodobitve teh grup so torej bistveno drugačne od upodobitev kompaktnih grup, kjer so *vse* končnorazsežne nerazcepne upodobitve unitarne.
+Na ta način smo torej konstruirali neskončno mnogo nerazcepnih polinomskih upodobitev grupe $\SL_2(\CC)$ poljubne visoke stopnje. Zanimivo je, da te upodobitve *niso* unitarne. Lastne vrednosti unitarnih matrik so namreč nujno absolutne vrednosti $1$, čemur upodobitve $\rho_k$ ne zadoščajo. Kasneje bomo videli preprost argument, da niti njena podgrupa $\SL_2(\RR)$ nima netrivialnih končno razsežnih unitarnih upodobitev. Upodobitve teh grup so torej bistveno drugačne od upodobitev kompaktnih grup, kjer so *vse* končno razsežne nerazcepne upodobitve unitarne.
 
 <div class="domacanaloga">
 
@@ -285,7 +336,7 @@ Princip za dokazovanje, da smo z upodobitvami $\rho_k$ izčrpali vse dovolj lepe
 ```{math}
 \textstyle D_I \rho \colon T_I \SL_2(\CC) \to T_I \GL_n(\CC)
 ```
-med tangentnima prostoroma v identični matriki. Oglejmo si podrobneje, kako izgledata ta dva tangentna prostora in kaj točno je $D_I \rho$.
+med tangentnima prostoroma v identični matriki. Oglejmo si podrobneje, kako izgledata ta dva tangentna prostora in kaj točno je $D_I \rho$.[^11]
 
 Opazujmo najprej grupo $\GL_n(\CC)$, ki je odprta podmnožica $\CC^{n^2}$. Njen tangentni prostor v $I$ zato lahko identificiramo z vektorskim prostorom $\CC^{n^2}$, ki ga predstavimo v matrični obliki kot
 ```{math}
@@ -296,7 +347,7 @@ Ta opis je prikladen, ker omogoča jasen opis majhne okolice $I$ v $\GL_n(\CC)$.
 \gamma \colon \RR \to {\textstyle \GL_n(\CC)}, \quad
     t \mapsto e^{tX} = \sum_{i = 0}^{\infty} t^i X^i / i!
 ```
-v grupi $\GL_n(\CC)$. Res, velja formula $\det(\gamma(t)) = \det e^{tX} = e^{\tr (tX)}$,[^8] zato je $\gamma(t)$ obrnljiva matrika. Tangentni vektor poti $\gamma$ v točki $0$ izračunamo kot
+v grupi $\GL_n(\CC)$. Res, velja formula $\det(\gamma(t)) = \det e^{tX} = e^{\tr (tX)}$,[^12] zato je $\gamma(t)$ obrnljiva matrika. Tangentni vektor poti $\gamma$ v točki $0$ izračunamo kot
 ```{math}
 D_0 \gamma 
     = \lim_{t \to 0} \frac{e^{tX} - I}{t}
@@ -453,7 +504,7 @@ Na oba tangentna prostora zato gledamo kot na vektorska prostora, ozaljšana z b
 ```{math}
 [X,Y] = -[Y,X], \quad [[X,Y], Z] + [[Y,Z], X] + [[Z,X], Y] = 0
 ```
-za vse tangentne vektorje $X,Y,Z$. Abstraktnim vektorskim prostorom s tako binarno operacijo pravimo <span class="definicija">Liejeve algebre</span>. Te algebre tvorijo kategorijo: morfizmi med dvema algebrama so preslikave, ki spoštujejo vso strukturo, in jim zato upravičeno pravimo <span class="definicija">Liejevi homomorfizmi</span>.[^9] Kadar Liejev homomorfizem slika iz dane Liejeve algebre $L$ v $\glfrak_n(\CC)$, po analogiji z grupami rečemo, da imamo <span class="definicija">Liejevo upodobitev</span>. Te upodobitve lahko primerjamo med sabo s spletičnami in zato govorimo o izomorfnostnih razredih Liejevih upodobitev.[^10] Prav tako na smiseln način posplošimo pojem nerazcepne upodobitve.[^11]
+za vse tangentne vektorje $X,Y,Z$. Abstraktnim vektorskim prostorom s tako binarno operacijo pravimo <span class="definicija">Liejeve algebre</span>. Te algebre tvorijo kategorijo: morfizmi med dvema algebrama so preslikave, ki spoštujejo vso strukturo, in jim zato upravičeno pravimo <span class="definicija">Liejevi homomorfizmi</span>.[^13] Kadar Liejev homomorfizem slika iz dane Liejeve algebre $L$ v $\glfrak_n(\CC)$, po analogiji z grupami rečemo, da imamo <span class="definicija">Liejevo upodobitev</span>. Te upodobitve lahko primerjamo med sabo s spletičnami in zato govorimo o izomorfnostnih razredih Liejevih upodobitev.[^14] Prav tako na smiseln način posplošimo pojem nerazcepne upodobitve.[^15]
 
 Tangentna prostora $\slfrak_2(\CC)$ in $\glfrak_2(\CC)$ sta torej Liejevi algebri in odvod upodobitve $D_I \rho$ je Liejev homomorfizem, na katerega lahko gledamo kot na Liejevo upodobitev Liejeve algebre $\slfrak_2(\CC)$. Vsaka upodobitev grupe $\SL_2(\CC)$ nam torej da Liejevo upodobitev njene Liejeve algebre. Kadar ima upodobitev grupe kakšen netrivialen invarianten podprostor, je ta invarianten tudi za delovanje Liejeve algebre. Razcepne upodobitve grupe dajo torej razcepne upodobitve Liejeve algebre. Z drugimi besedami, nerazcepne upodobitve Liejeve algebre, ki izhajajo iz upodobitve grupe, lahko izhajajo le iz nerazcepnih upodobitev grupe. Zaradi tega je še posebej pomembno, da opišemo vse nerazcepne upodobitve Liejeve algebre.
 
@@ -479,9 +530,9 @@ HEv = [H,E]v + EHv = 2 E v + \lambda E v = (\lambda + 2) Ev,
 ```
 zato je $E \cdot \Eigenspace_{\lambda}(H) \subseteq \Eigenspace_{\lambda + 2}(H)$. Podobno velja $F \cdot \Eigenspace_{\lambda}(H) \subseteq \Eigenspace_{\lambda - 2}(H)$.
 
-Izberimo lastno vrednost $\lambda$ preslikave $H$ z največjo možno realno komponento. Iz maksimalnosti $\lambda$ sledi $Ev \in \Eigenspace_{\lambda + 2}(H) = 0$. Naj bo $v_i = F^i v$ za $i \geq 0$.[^12] Velja $v_i \in \Eigenspace_{\lambda - 2i}(H)$. Za nek $n \geq 0$ velja torej $v_n \neq 0$ in $v_{n+1} = 0$. Vektorji $v_0, v_1, \dots, v_n$ so v različnih lastnih podprostorih $H$, zato so linearno neodvisni. Naj bo $W \leq V$ podprostor, ki ga generirajo.
+Izberimo lastno vrednost $\lambda$ preslikave $H$ z največjo možno realno komponento. Iz maksimalnosti $\lambda$ sledi $Ev \in \Eigenspace_{\lambda + 2}(H) = 0$. Naj bo $v_i = F^i v$ za $i \geq 0$.[^16] Velja $v_i \in \Eigenspace_{\lambda - 2i}(H)$. Za nek $n \geq 0$ velja torej $v_n \neq 0$ in $v_{n+1} = 0$. Vektorji $v_0, v_1, \dots, v_n$ so v različnih lastnih podprostorih $H$, zato so linearno neodvisni. Naj bo $W \leq V$ podprostor, ki ga generirajo.
 
-Naj bo $w_i = E v_i$ za $i \geq 0$.[^13] Velja $w_0 = E v_0 = Ev = 0$, za $i \geq 1$ pa izračunamo
+Naj bo $w_i = E v_i$ za $i \geq 0$.[^17] Velja $w_0 = E v_0 = Ev = 0$, za $i \geq 1$ pa izračunamo
 ```{math}
 w_i 
     = E F v_{i-1}
@@ -552,7 +603,7 @@ Prepričajmo se, da je $\rho$ blizu tega, da bi bila homomorfizem. Naj bosta $A,
 \rho(A) \rho(B) = e^{\phi(\log A)} e^{\phi(\log B)}, \quad
     \rho(AB) = e^{\phi(\log(AB))}.
 ```
-Če bi logaritem pretvoril produkt v vsoto in eksponentna funkcija vsoto v produkt, potem bi iz linearnosti $\phi$ takoj sledilo, da sta oba izraza enaka. V splošnem žal matrični logaritem in eksponentna funkcija nimata te lastnosti. Za vsaka $X,Y \in \glfrak_n(\CC)$ lahko z nekaj truda z uporabo razvoja v Taylorjevo vrsto izračunamo vrednost
+Če bi logaritem pretvoril produkt v vsoto in eksponentna funkcija vsoto v produkt, potem bi iz linearnosti $\phi$ takoj sledilo, da sta oba izraza enaka. V splošnem žal matrični logaritem in eksponentna funkcija nimata te lastnosti. Za vsaka $X,Y \in \glfrak_n(\CC)$ lahko [z nekaj truda](https://www.math.ru.nl/~mueger/PDF/BCHD.pdf) z uporabo razvoja v Taylorjevo vrsto izračunamo vrednost
 ```{math}
 \log(e^X e^Y) = X + Y + \frac{1}{2} [X,Y] - \frac{1}{12}[[X,Y],X] + \frac{1}{12} [[X,Y], Y] + \cdots,
 ```
@@ -578,7 +629,7 @@ Ker je $\gamma(t_i) \gamma(t_{i-1})^{-1} \in U$, kjer že imamo definiran $\rho$
 ```
 Seveda moramo preveriti, da je ta definicija neodvisna od izbire delilnih točk $t_0, t_1, \dots, t_m$ in od izbire poti $\gamma$.
 
-Prepričajmo se najprej, da z isto potjo $\gamma$ drugačna izbira delilnih točk privede do enakega rezultata, če je le zadoščeno pogoju $\gamma(t) \gamma(s)^{-1} \in U$ za vsaka $t_i \leq s < t \leq t_{i+1}$. V ta namen bo dovolj premisliti, da se definicija $\rho(A)$ ne spremeni, če pofinimo izbiro delilnih točk, se pravi če dodamo še nekaj dodatnih točk.[^14] Za to pa bo dovolj preveriti, da se definicija $\rho(A)$ ne spremeni, če dodamo eno samo dodatno delilno točko, na primer med $t_i$ in $t_{i-1}$ vrinemo nek $s$. V tem primeru se v definiciji $\rho(A)$ spremeni le faktor $\rho(\gamma(t_i) \gamma(t_{i-1})^{-1})$, in sicer ga zamenjamo s produktom
+Prepričajmo se najprej, da z isto potjo $\gamma$ drugačna izbira delilnih točk privede do enakega rezultata, če je le zadoščeno pogoju $\gamma(t) \gamma(s)^{-1} \in U$ za vsaka $t_i \leq s < t \leq t_{i+1}$. V ta namen bo dovolj premisliti, da se definicija $\rho(A)$ ne spremeni, če fineje izberemo delilne točke, se pravi če dodamo še nekaj dodatnih točk.[^18] Za to pa bo dovolj preveriti, da se definicija $\rho(A)$ ne spremeni, če dodamo eno samo dodatno delilno točko, na primer med $t_i$ in $t_{i-1}$ vrinemo nek $s$. V tem primeru se v definiciji $\rho(A)$ spremeni le faktor $\rho(\gamma(t_i) \gamma(t_{i-1})^{-1})$, in sicer ga zamenjamo s produktom
 ```{math}
 \rho(\gamma(t_i) \gamma(s)^{-1}) 
     \rho(\gamma(s) \gamma(t_{i-1})^{-1}).
@@ -603,19 +654,19 @@ Vzpostavili smo bijekcijo med analitičnimi upodobitvami grupe $\SL_2(\CC)$ in L
 
 <div class="posledica">
 
-Vsaka analitična nerazcepna končnorazsežna kompleksna upodobitev grupe $\SL_2(\CC)$ je izomorfna $\rho_k$ za nek $k \geq 0$.
+Vsaka analitična nerazcepna končno razsežna kompleksna upodobitev grupe $\SL_2(\CC)$ je izomorfna $\rho_k$ za nek $k \geq 0$.
 
 </div>
 
-Na grupo $\SL_2(\CC)$ bi lahko gledali kot na *realno* grupo.[^15] V tem primeru bi njene *gladke* upodobitve dobili iz Liejevih upodobitev njene Liejeve algebre $\slfrak_2(\CC)$, na katero bi gledali kot na *realno* Liejevo algebro.[^16] Teh upodobitev je nekoliko več. Vsako od upodobitev $\rho_k$ lahko namreč še konjugiramo. Izkaže se, ni presenetljivo in ni težko, da vse nerazcepne realne Liejeve upodobitve dobimo kot tenzorske produkte teh.
+Na grupo $\SL_2(\CC)$ bi lahko gledali kot na *realno* grupo.[^19] V tem primeru bi njene *gladke* upodobitve dobili iz Liejevih upodobitev njene Liejeve algebre $\slfrak_2(\CC)$, na katero bi gledali kot na *realno* Liejevo algebro.[^20] Teh upodobitev je nekoliko več. Vsako od upodobitev $\rho_k$ lahko namreč še konjugiramo. Izkaže se, ni presenetljivo in ni težko, da vse nerazcepne realne Liejeve upodobitve dobimo kot tenzorske produkte teh.
 
 <div class="posledica">
 
-Vsaka gladka nerazcepna končnorazsežna kompleksna upodobitev grupe $\SL_2(\CC)$ je izomorfna $\rho_k \otimes \overline{\rho_{\ell}}$ za neka $k, \ell \geq 0$.
+Vsaka gladka nerazcepna končno razsežna kompleksna upodobitev grupe $\SL_2(\CC)$ je izomorfna $\rho_k \otimes \overline{\rho_{\ell}}$ za neka $k, \ell \geq 0$.
 
 </div>
 
-Večino od povedanega v tem razdelku je razširljivo na poljubne topološke grupe, ki imajo strukturo realne ali kompleksne mnogoterosti, pri čemer sta množenje in invertiranje zvezni, gladki ali analitični operaciji. Takim grupam pravimo <span class="definicija">Liejeve grupe</span>. Eksaktno korespondenco med upodobitvami Liejeve grupe in njene prirejene Liejeve algebre izgubimo, če grupa ni enostavno povezana.
+Večino od povedanega v tem razdelku je razširljivo na poljubne topološke grupe, ki imajo strukturo realne ali kompleksne mnogoterosti, pri čemer sta množenje in invertiranje zvezni, gladki ali analitični operaciji. Takim grupam pravimo <span class="definicija">Liejeve grupe</span>.[^21] Eksaktno korespondenco med upodobitvami Liejeve grupe in njene prirejene Liejeve algebre izgubimo, če grupa ni enostavno povezana.
 
 <div class="zgled">
 
@@ -625,23 +676,7 @@ Spomnimo se grupe $\U_1(\CC) \cong \RR/\ZZ$. Njena Liejeva algebra je $\RR$ s tr
 
 <div class="zgled">
 
-Opazujmo grupo $\SU_2(\CC)$. Njeni elementi so matrike oblike
-```{math}
-\begin{pmatrix}
-        \alpha & - \overline{\beta} \\
-        \beta & \overline{\alpha}
-    \end{pmatrix}
-```
-za $\alpha, \beta \in \CC$ z lastnostjo $|\alpha|^2 + |\beta|^2 = 1$. Podamo lahko torej homeomorfizem
-```{math}
-S^3 \to {\textstyle \SU_2(\CC)}, \quad
-    (a,b,c,d) \mapsto     
-    \begin{pmatrix}
-        a + i b & - c + i d \\
-        c + i d & a - i b
-    \end{pmatrix},
-```
-zato je grupa $\SU_2(\CC)$ enostavno povezana realna Liejeva grupa. Podobno kot za grupo $\SL_2(\CC)$ se lahko prepričamo, da je Liejeva algebra $\sufrak_2(\CC)$ Liejeve grupe $\SU_2(\CC)$ enaka
+Opazujmo grupo $\SU_2(\CC)$. Videli smo že, da je ta grupa homeomorfna sferi $S^3$. Grupa $\SU_2(\CC)$ je torej enostavno povezana realna Liejeva grupa. Podobno kot za grupo $\SL_2(\CC)$ se lahko prepričamo, da je Liejeva algebra $\sufrak_2(\CC)$ Liejeve grupe $\SU_2(\CC)$ enaka
 ```{math}
 {\textstyle \sufrak_2(\CC)} = \left\{ \begin{pmatrix} i b & -c + i d \\ c + i d & - i b \\  \end{pmatrix} \mid b,c,d \in \RR \right\}.
 ```
@@ -665,7 +700,7 @@ Grupa $\SU_2(\CC)$ deluje s konjugiranjem na $\sufrak_2(\CC)$. Na ta način dobi
 
 <div class="domacanaloga">
 
-Prepričaj se, da je $\ker \Ad = \{ I, -I \}$ in da je $\image \Ad \cong \SO_3(\RR)$. Upodobitve grupe $\SO_3(\RR)$[^17] so torej ravno upodobitve enostavno povezane grupe $\SU_2(\CC)$, ki imajo v jedru $-I$.
+Prepričaj se, da je $\ker \Ad = \{ I, -I \}$ in da je $\image \Ad \cong \SO_3(\RR)$. Upodobitve grupe $\SO_3(\RR)$[^22] so torej ravno upodobitve enostavno povezane grupe $\SU_2(\CC)$, ki imajo v jedru $-I$.
 
 </div>
 
@@ -681,15 +716,15 @@ Upodobitve $\rho_k$ grupe $\SL_2(\CC)$ lahko zožimo na podgrupo realnih matrik 
 
 <div class="posledica">
 
-Vsaka gladka nerazcepna končnorazsežna kompleksna upodobitev grupe $\SL_2(\RR)$ je izomorfna $\rho_k$ za nek $k \geq 0$.
+Vsaka gladka nerazcepna končno razsežna kompleksna upodobitev grupe $\SL_2(\RR)$ je izomorfna $\rho_k$ za nek $k \geq 0$.
 
 </div>
 
-V kontekstu realnih Liejevih grup se sicer izkaže, da je vsaka zvezna končnorazsežna upodobitev avtomatično gladka.[^18] To seveda ne velja za kompleksne Liejeve grupe, kjer lahko vsako analitično upodobitev konjugiramo in dobimo upodobitev, ki je sicer gladka, a ne nujno analitična. Upodobitve $\rho_k$ torej podajajo vse zvezne končnorazsežne upodobitve grupe $\SL_2(\RR)$.
+V kontekstu realnih Liejevih grup se sicer izkaže, da je vsaka zvezna končno razsežna upodobitev avtomatično gladka.[^23] To seveda ne velja za kompleksne Liejeve grupe, kjer lahko vsako analitično upodobitev konjugiramo in dobimo upodobitev, ki je sicer gladka, a ne nujno analitična. Upodobitve $\rho_k$ torej podajajo vse zvezne končno razsežne upodobitve grupe $\SL_2(\RR)$.
 
 #### Unitarne upodobitve
 
-Nobena od upodobitev $\rho_k$ ni unitarna. Če želimo konstruirati unitarne upodobitve, moramo poseči po neskončnorazsežnih vektorskih prostorih. Te upodobitve lahko konstruiramo s pomočjo delovanj grupe $\SL_2(\RR)$. Ogledali si bomo en primer take konstrukcije.
+Nobena od upodobitev $\rho_k$ ni unitarna. Če želimo konstruirati unitarne upodobitve, moramo poseči po neskončno razsežnih vektorskih prostorih. Te upodobitve lahko konstruiramo s pomočjo delovanj grupe $\SL_2(\RR)$. Ogledali si bomo en primer take konstrukcije.
 
 Grupa $\SL_2(\RR)$ deluje na <span class="definicija">hiperbolični ravnini</span>
 ```{math}
@@ -724,7 +759,7 @@ in sicer definiramo
         a & b \\ c & d
     \end{pmatrix}^{-1} \cdot z \right).
 ```
-Izkaže se, da je $\rho_k$ nerazcepna unitarna upodobitev grupe $\SL_2(\RR)$ na neskončnorazsežnem Hilbertovem prostoru $D_k$ in da so te upodobitve med sabo neizomorfne. Na ta način dobimo celo vrsto nerazcepnih unitarnih upodobitev grupe $\SL_2(\RR)$, ki jim pravimo <span class="definicija">upodobitve diskretne vrste</span>.
+Izkaže se, da je $\rho_k$ nerazcepna unitarna upodobitev grupe $\SL_2(\RR)$ na neskončno razsežnem Hilbertovem prostoru $D_k$ in da so te upodobitve med sabo neizomorfne. Na ta način dobimo celo vrsto nerazcepnih unitarnih upodobitev grupe $\SL_2(\RR)$, ki jim pravimo <span class="definicija">upodobitve diskretne vrste</span>.
 
 Z opazovanjem drugih zanimivih podgrup v $\SL_2(\RR)$ najdemo še kakšne druge unitarne upodobitve. Še posebej zanimiva je diskretna podgrupa $\SL_2(\ZZ)$. Z njo dobimo kvocientno množico $Y = \SL_2(\ZZ) \backslash \SL_2(\RR)$. Na grupo $\SL_2(\RR)$ lahko s pomočjo projekcije $\SL_2(\RR) \to \SL_2(\RR)/\SO_2(\RR) = \HH$ prenesemo mero, ki jo nato potisnemo na $Y$, tako da lahko opazujemo prostor funkcij $L^2(Y)$, na katerem deluje grupa $\SL_2(\RR)$. V tem prostoru lahko najdemo mnogo nerazcepnih unitarnih podupodobitev. Še posebej zanimive so upodobitve, ki so konsturirane s pomočjo indukcije unitarnih upodobitev Borelove podgrupe zgornjetrikotnih matrik. Te imenujemo <span class="definicija">upodobitve glavne vrste</span> in jih lahko vidimo kot posplošitev upodobitev glavne vrste iz teorije upodobitev grupe $\GL_2(\FF_p)$.
 
@@ -732,11 +767,11 @@ Poleg teh dveh družin upodobitev ima grupa $\SL_2(\RR)$ še eno nekoliko bolj n
 
 Izkaže se, da vse netrivialne nerazcepne unitarne upodobitve grupe $\SL_2(\RR)$ lahko dobimo iz ene od opisanih družin upodobitev.
 
-Razumevanje neskončnorazsežnih nerazcepnih unitarnih upodobitev poljubnih Liejevih grup je eden od pomembnih nedoseženih ciljev teorije upodobitev. Nekaj znanih rezultatov skupaj z vizijo o tem, kako naprej, je predstavljenih v zelo dostopnem članku [(Vogan 2007)](https://math.mit.edu/~dav/articleHIST.pdf).
+Razumevanje neskončno razsežnih nerazcepnih unitarnih upodobitev poljubnih Liejevih grup je eden od pomembnih nedoseženih ciljev teorije upodobitev. Nekaj znanih rezultatov skupaj z vizijo o tem, kako naprej, je predstavljenih v zelo dostopnem članku [(Vogan 2007)](https://math.mit.edu/~dav/articleHIST.pdf).
 
 ## Diskretne linearne grupe
 
-Nazadnje si bomo pogledali še nekaj zgledov upodobitev diskretnih neskončnih grup, in sicer $\SL_m(\ZZ)$. V zadnjem zgledu smo videli, da te igrajo vlogo pri opisovanju unitarnih upodobitev Liejevih grup. Te grupe niso ozaljšane z uporabno topologijo, zato bomo opazovali kar običajne abstraktne končnorazsežne kompleksne upodobitve. Kot bomo videli, se te grupe obnašajo bistveno različno za $m = 2$ oziroma za $m \geq 3$.
+Nazadnje si bomo pogledali še nekaj zgledov upodobitev diskretnih neskončnih grup, in sicer $\SL_m(\ZZ)$. V zadnjem zgledu smo videli, da te igrajo vlogo pri opisovanju unitarnih upodobitev Liejevih grup. Te grupe niso ozaljšane z uporabno topologijo, zato bomo opazovali kar običajne abstraktne končno razsežne kompleksne upodobitve. Kot bomo videli, se te grupe obnašajo bistveno različno za $m = 2$ oziroma za $m \geq 3$.
 
 ### $\SL_2(\ZZ)$
 
@@ -779,7 +814,7 @@ ki prav tako generirata $\SL_2(\ZZ)$. Za ti dve matriki velja $A^2 = B^3 = -I$. 
 ```{math}
 {\textstyle \PSL_2(\ZZ)} = \frac{\SL_2(\ZZ)}{\{ I, -I \}}.
 ```
-Naj bosta $a,b$ sliki matrik $A,B$ v $\PSL_2(\ZZ)$. Velja torej $a^2 = b^3 = 1$. Ker matriki $a,b$ generirata grupo $\PSL_2(\ZZ)$, lahko vsak njen element zapišemo kot besedo s črkama $a$ in $b$. Glavna prednost alternativne izbire generatorjev izhaja iz dejstva, da ima vsak element *enoličen* tak zapis.[^19]
+Naj bosta $a,b$ sliki matrik $A,B$ v $\PSL_2(\ZZ)$. Velja torej $a^2 = b^3 = 1$. Ker matriki $a,b$ generirata grupo $\PSL_2(\ZZ)$, lahko vsak njen element zapišemo kot besedo s črkama $a$ in $b$. Glavna prednost alternativne izbire generatorjev izhaja iz dejstva, da ima vsak element *enoličen* tak zapis.[^24]
 
 <div class="trditev">
 
@@ -793,7 +828,7 @@ za nek $n \in \NN_0$ in $i_j \in \{0,1,2 \}$, pri čemer je $i_j \neq 0$ za vsak
 
 <div class="dokaz">
 
-Jasno ima vsak element tak zapis, saj $a,b$ generirata $\PSL_2(\ZZ)$ in velja $a^2 = b^3 = 1$. Preverimo še enoličnost. Predpostavimo, da je $n$ najmanjše število, za katero je izraz kot zgoraj enak $1$.[^20] Seveda je tedaj $n \neq 0$ in kratek račun pokaže tudi, da je $n \neq 1$. Za $n \geq 2$ konjugiramo izraz iz trditve in dobimo
+Jasno ima vsak element tak zapis, saj $a,b$ generirata $\PSL_2(\ZZ)$ in velja $a^2 = b^3 = 1$. Preverimo še enoličnost. Predpostavimo, da je $n$ najmanjše število, za katero je izraz kot zgoraj enak $1$.[^25] Seveda je tedaj $n \neq 0$ in kratek račun pokaže tudi, da je $n \neq 1$. Za $n \geq 2$ konjugiramo izraz iz trditve in dobimo
 ```{math}
 1 = a b^{i_1} a b^{i_2} \cdots a b^{i_{n-1}} a b^{i_n + i_0}.
 ```
@@ -814,7 +849,7 @@ zato je v $\SL_2(\ZZ)$ neka beseda v $S_+, S_-$ dolžine $n \geq 2$ enaka $\pm I
 
 #### Upodobitve
 
-Namesto upodobitev grupe $\SL_2(\ZZ)$ opazujmo upodobitve nekoliko enostavnejše grupe $\PSL_2(\ZZ)$. Vsak homomorfizem te grupe v katerokoli grupo $G$ je določen s sliko generatorjev $a,b$. Glede na enolično predstavitev elementov grupe $\PSL_2(\ZZ)$ pa je res tudi obratno: za vsako izbiro elementov $X,Y \in G$ z lastnostjo $X^2 = Y^3 = 1$ lahko na enoličen način predpišemo homomorfizem[^21]
+Namesto upodobitev grupe $\SL_2(\ZZ)$ opazujmo upodobitve nekoliko enostavnejše grupe $\PSL_2(\ZZ)$. Vsak homomorfizem te grupe v katerokoli grupo $G$ je določen s sliko generatorjev $a,b$. Glede na enolično predstavitev elementov grupe $\PSL_2(\ZZ)$ pa je res tudi obratno: za vsako izbiro elementov $X,Y \in G$ z lastnostjo $X^2 = Y^3 = 1$ lahko na enoličen način predpišemo homomorfizem[^26]
 ```{math}
 \textstyle \rho 
     \colon \PSL_2(\ZZ) \to G, \quad
@@ -846,7 +881,7 @@ Obravnave vseh upodobitev se lotimo sistematično po razsežnostih. Vsaka $n$-ra
 {\textstyle \Rep_n} = \frac{\{ (X, Y) \in \GL_n(\CC) \times \GL_n(\CC) \mid X^2 = Y^3 = I \}}
     {\GL_n(\CC)},
 ```
-pri čemer grupa $\GL_n(\CC)$ deluje s hkratnim konjugiranjem na parih matrik, se pravi $A \cdot (X,Y) = (A X A^{-1}, A Y A^{-1})$ za $A \in \GL_n(\CC)$.[^22] Elementi množice $\Rep_n$ predstavljajo ravno vse predstavnike izomorfnostnih razredov $n$-razsežnih upodobitev grupe $\PSL_2(\ZZ)$.
+pri čemer grupa $\GL_n(\CC)$ deluje s hkratnim konjugiranjem na parih matrik, se pravi $A \cdot (X,Y) = (A X A^{-1}, A Y A^{-1})$ za $A \in \GL_n(\CC)$.[^27] Elementi množice $\Rep_n$ predstavljajo ravno vse predstavnike izomorfnostnih razredov $n$-razsežnih upodobitev grupe $\PSL_2(\ZZ)$.
 
 Opišimo najprej enorazsežne upodobitve $\Rep_1$. Za števili $X,Y \in \CC^*$ mora veljati $X \in \{1, -1 \}$ in $Y \in \{ 1, \zeta, \zeta^2 \}$, kjer je $\zeta = e^{2 \pi i / 3}$. Delovanje grupe $\CC^*$ na parih je v tem primeru kar trivialno. Velja torej
 ```{math}
@@ -867,7 +902,7 @@ Oglejmo si sedaj še dvorazsežne upodobitve $\Rep_2$. Kot bomo videli, je teh *
                 a & b \\ c & d
             \end{pmatrix}
     ```
-    za neke $a,b,c,d \in \CC$. Centralizator matrike $X$ v $\GL_2(\CC)$ je enak torusu diagonalnih matrik. S temi matrikami lahko torej še dodatno konjugiramo in poenostavimo matriko $Y$. Ločimo več možnosti.[^23]
+    za neke $a,b,c,d \in \CC$. Centralizator matrike $X$ v $\GL_2(\CC)$ je enak torusu diagonalnih matrik. S temi matrikami lahko torej še dodatno konjugiramo in poenostavimo matriko $Y$. Ločimo več možnosti.[^28]
 
     1.  Če je $c = 0$ in $b = 0$, potem je $Y$ diagonalna matrika. Njeni lastni vrednosti sta različna tretja korena enote, zato je $Y$ oblike
         ```{math}
@@ -934,7 +969,7 @@ x =
        -1 & -1 & -1
     \end{pmatrix}.
 ```
-Na ta način lahko dobimo precej preprosto <span class="definicija">prezentacijo</span> te grupe, ki je podobna zelo uporabnemu opisu grupe $\PSL_2(\ZZ)$ z generatorjema $a,b$ iz prejšnjega razdelka. Bistvena razlika je, da ta prezentacija vsebuje nekaj pogojev med generatorji $x,y,z$, ki niso tako zelo enostavne oblike kot v grupi $\PSL_2(\ZZ)$. Izkaže se [(Conder-Robertson-Williams 1992)](https://www.ams.org/proc/1992-115-01/S0002-9939-1992-1079696-5/), da vse te pogoje lahko zajamemo z naslednjimi enakostmi:[^24]
+Na ta način lahko dobimo precej preprosto <span class="definicija">prezentacijo</span> te grupe, ki je podobna zelo uporabnemu opisu grupe $\PSL_2(\ZZ)$ z generatorjema $a,b$ iz prejšnjega razdelka. Bistvena razlika je, da ta prezentacija vsebuje nekaj pogojev med generatorji $x,y,z$, ki niso tako zelo enostavne oblike kot v grupi $\PSL_2(\ZZ)$. Izkaže se [(Conder-Robertson-Williams 1992)](https://www.ams.org/proc/1992-115-01/S0002-9939-1992-1079696-5/), da vse te pogoje lahko zajamemo z naslednjimi enakostmi:[^29]
 ```{math}
 x^3 = y^3 = z^2 = (xz)^3 = (yz)^3 = (x^{-1}zxy)^2 = (y^{-1}zyx)^2 = (xy)^6 = I.
 ```
@@ -948,7 +983,7 @@ Razliko med grupo $\SL_2(\ZZ)$ in $\SL_3(\ZZ)$ lahko jasno vidimo v njunih konč
 ```{math}
 \textstyle \pi_N \colon \SL_3(\ZZ) \to \SL_3(\ZZ/N\ZZ).
 ```
-Jedra teh homomorfizmov so <span class="definicija">kongruenčne podgrupe</span>. Izkaže se [(Bass-Lazard-Serre 1964)](https://projecteuclid.org/journals/bulletin-of-the-american-mathematical-society-new-series/volume-70/issue-3/Sous-groupes-dindice-fini-dans-SLleft-nZ-right/bams/1183526018.full), da pa tukaj (in v vseh $\SL_m(\ZZ)$ za $m \geq 3$) *ni* nobenih bistveno drugačnih homomorfizmov v končne grupe. Natančneje, vsak homomorfizem $\alpha \colon \SL_3(\ZZ) \to G$ v končno grupo $G$ se faktorizira prek nekega kongruenčnega homomorfizma $\pi_N$. Povedano še drugače, vsaka podgrupa $H \leq \SL_3(\ZZ)$ končnega indeksa vsebuje neko kongruenčno podgrupo. Tej lastnosti grupe $\SL_3(\ZZ)$ rečemo <span class="definicija">lastnost kongruenčnih podgrup</span>.[^25]
+Jedra teh homomorfizmov so <span class="definicija">kongruenčne podgrupe</span>. Izkaže se [(Bass-Lazard-Serre 1964)](https://projecteuclid.org/journals/bulletin-of-the-american-mathematical-society-new-series/volume-70/issue-3/Sous-groupes-dindice-fini-dans-SLleft-nZ-right/bams/1183526018.full), da pa tukaj (in v vseh $\SL_m(\ZZ)$ za $m \geq 3$) *ni* nobenih bistveno drugačnih homomorfizmov v končne grupe. Natančneje, vsak homomorfizem $\alpha \colon \SL_3(\ZZ) \to G$ v končno grupo $G$ se faktorizira prek nekega kongruenčnega homomorfizma $\pi_N$. Povedano še drugače, vsaka podgrupa $H \leq \SL_3(\ZZ)$ končnega indeksa vsebuje neko kongruenčno podgrupo. Tej lastnosti grupe $\SL_3(\ZZ)$ rečemo <span class="definicija">lastnost kongruenčnih podgrup</span>.[^30]
 
 Vsak končni kvocient $G$ grupe $\SL_3(\ZZ)$ ima svoje nerazcepne upodobitve, ki jih z restrikcijo potegnemo do nerazcepnih upodobitev grupe $\SL_3(\ZZ)$. Po lastnosti kongruenčnih podgrupe je tak $G$ nujno kvocient $\SL_3(\ZZ/N\ZZ)$ za nek $N$, zato bo dovolj opazovati nerazcepne upodobitve kongruenčnih kvocientov. Če je $N$ praštevilo, te zelo dobro razumemo s tehnikami upodobitev končnih grup. V splošnem iz praštevilske faktorizacije $N = p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m}$ z uporabo Kitajskega izreka o ostankih dobimo
 ```{math}
@@ -972,7 +1007,7 @@ pri čemer so homomorfizmi $r_k \colon \ZZ/p^k\ZZ \to \ZZ/p^{k-1}\ZZ$ redukcije 
 ```
 Ker je vsak $\ZZ/p^k\ZZ$ kolobar, je tudi ta limita kolobar. Pravimo mu kolobar <span class="definicija">$p$-adičnih celih števil</span> in ga označimo z $\ZZ_p$. Kolobar celih števil $\ZZ$ se naravno vloži v $\ZZ_p$ s preslikavo $n \mapsto (n)_{k \in \NN}$.
 
-Vse končne kolobarje $\ZZ/p^k\ZZ$ opremimo z diskretno topologijo in njihov produkt s produktno topologijo, tako da je $\ZZ_p$ tudi topološki prostor. Po izreku Tihonova je produkt vseh $\ZZ/p^k\ZZ$ kompakten, $\ZZ_p$ pa tvori zaprto množico v tem produktu, zato je tudi $\ZZ_p$ kompakten topološki prostor.[^26]
+Vse končne kolobarje $\ZZ/p^k\ZZ$ opremimo z diskretno topologijo in njihov produkt s produktno topologijo, tako da je $\ZZ_p$ tudi topološki prostor. Po izreku Tihonova je produkt vseh $\ZZ/p^k\ZZ$ kompakten, $\ZZ_p$ pa tvori zaprto množico v tem produktu, zato je tudi $\ZZ_p$ kompakten topološki prostor.[^31]
 
 Na enak način lahko opazujemo vse grupe $\SL_3(\ZZ/p^k\ZZ)$ hkrati. Zložimo jih v ravno vrsto
 ```{math}
@@ -1010,7 +1045,7 @@ Iz te lastnosti je razvidno, da se grupa $\SL_3(\ZZ_p)$ obnaša zelo drugače ko
 
 <div class="domacanaloga">
 
-S pomočjo eksponentne preslikave dokaži, da v grupi $\GL_n(\CC)$ obstaja odprta okolica enote $U$, ki ne vsebuje nobene netrivialne podgrupe.[^27]
+S pomočjo eksponentne preslikave dokaži, da v grupi $\GL_n(\CC)$ obstaja odprta okolica enote $U$, ki ne vsebuje nobene netrivialne podgrupe.[^32]
 
 </div>
 
@@ -1020,7 +1055,7 @@ Vse upodobitve kongruenčnih kvocientov grupe $\SL_3(\ZZ)$ lahko torej zajamemo 
 
 <div class="trditev">
 
-Vsaka zvezna končnorazsežna kompleksna upodobitev grupe $\SL_3(\ZZ_p)$ se faktorizira prek $\widetilde{\pi_{p^k}}$ za nek $k \in \NN$.
+Vsaka zvezna končno razsežna kompleksna upodobitev grupe $\SL_3(\ZZ_p)$ se faktorizira prek $\widetilde{\pi_{p^k}}$ za nek $k \in \NN$.
 
 </div>
 
@@ -1096,62 +1131,72 @@ Preberi dokaz Lubotzkyjevega izreka v [(Putman)](https://www3.nd.edu/~andyp/note
 
 <div class="posledica">
 
-Nerazcepne končnorazsežne kompleksne upodobitve grupe $\SL_3(\ZZ)$ so zožitve tenzorskih produktov nerazcepnih polinomskih upodobitev grupe $\SL_3(\CC)$ in nerazcepnih zveznih upodobitev grupe $\SL_3(\widehat{\ZZ})$.
+Nerazcepne končno razsežne kompleksne upodobitve grupe $\SL_3(\ZZ)$ so zožitve tenzorskih produktov nerazcepnih polinomskih upodobitev grupe $\SL_3(\CC)$ in nerazcepnih zveznih upodobitev grupe $\SL_3(\widehat{\ZZ})$.
 
 </div>
 
 V posebnem je vseh nerazcepnih upodobitev $\SL_3(\ZZ)$ le števno mnogo, kar je v ostrem nasprotju z neštevno mnogo upodobitvami $\SL_2(\ZZ)$. Vse povedano se da razširiti na grupe $\SL_m(\ZZ)$ za $m \geq 3$.
 
-[^1]: Če bi želeli obravnavati tudi neskončnorazsežne upodobitve na prostoru $V$, bi morali to definicijo nekoliko popraviti. Najprej bi morali zahtevati, da vsak element grupe $G$ deluje kot zvezen linearen operator na $V$, kar ni avtomatično v neskončnorazsežnih vektorskih prostorih. Za tem bi morali namesto zveznosti preslikave $\rho$ zahtevati, da je le *šibko zvezna*, kar pomeni, da je preslikava $G \times V \to V$, $(g,v) \mapsto \rho(g) \cdot v$ zvezna.
+[^1]: Če bi želeli obravnavati tudi neskončno razsežne upodobitve na prostoru $V$, bi morali to definicijo nekoliko popraviti. Najprej bi morali zahtevati, da vsak element grupe $G$ deluje kot zvezen linearen operator na $V$, kar ni avtomatično v neskončno razsežnih vektorskih prostorih. Za tem bi morali namesto zveznosti preslikave $\rho$ zahtevati, da je le *šibko zvezna*, kar pomeni, da je preslikava $G \times V \to V$, $(g,v) \mapsto \rho(g) \cdot v$ zvezna.
 
-[^2]: Lahko se celo zgodi, da $f_N$ ne konvergira v *nobeni* točki.
+[^2]: Lahko se celo zgodi, da $f_N$ ne konvergira v *nobeni* točki. Take primere je prvi konstruiral Kolmogorov; glej povzetek [(Chen 1962)](https://projecteuclid.org/journals/proceedings-of-the-japan-academy-series-a-mathematical-sciences/volume-38/issue-6/A-remarkable-divergent-Fourier-series/10.3792/pja/1195523374.full?tab=ArticleLink).
 
-[^3]: Pri tem moramo biti nekoliko previdni, saj opisana konvergenca *ne* implicira, da vrsta $f_N$ v vseh točkah konvergira k $f$, temveč le *skoraj povsod*.
+[^3]: Vrsta konvergira le za $|z| < 1$, zato v resnici uporabimo razvoj za $r z$ z $r < 1$, nato pa izlimitiramo $r \to 1$ in vzamemo realni del.
 
-[^4]: Podobno kot smo že videli v primeru upodobitev grupe $\RR$. Konkretno za vsak avtomorfizem polja $\CC$ dobimo upodobitev $\SL_2(\CC) \to \SL_2(\CC)$, ki aplicira avtomorfizem po členih matrike. Polje $\CC$ ima *mnogo* divjih avtomorfizmov.
+[^4]: Za uvodno seznanitev s teorijo mere se lahko obrneš na [(Magajna 2011)](https://www.fmf.uni-lj.si/sl/zalozba/katalog/46/osnove-teorije-mere/).
 
-[^5]: <span class="definicija">Linearna algebraična grupa</span> je grupa, ki je hkrati množica skupnih ničel nekih polinomov v prostoru $\CC^n$.
+[^5]: Dokaz obstoja Haarove mere lahko najdeš v prvem poglavju zapiskov [(Hladnik 2006)](https://users.fmf.uni-lj.si/hladnik/3st/HA.pdf).
 
-[^6]: Pri $k = 0$ dobimo trivialno upodobitev.
+[^6]: Za dokaz glej na primer zadnje poglavje zapiskov [(Hladnik 2006)](https://users.fmf.uni-lj.si/hladnik/3st/HA.pdf). Tam najdeš tudi ekspliciten opis nerazcepnih zveznih unitarnih upodobitev grupe $\SU_2(\CC)$. V naslednjem razdelku si bomo pogledali še en drug (bolj geometrijski) način, kako lahko pridemo do teh upodobitev.
 
-[^7]: Ker je polje $\CC$ algebraično zaprto, tukaj obstaja le en torus.
+[^7]: Podobno kot smo že videli v primeru upodobitev grupe $\RR$. Konkretno za vsak avtomorfizem polja $\CC$ dobimo upodobitev $\SL_2(\CC) \to \SL_2(\CC)$, ki aplicira avtomorfizem po členih matrike. Polje $\CC$ ima *mnogo* divjih avtomorfizmov.
 
-[^8]: Ta formula je jasna, če matriko $X$ predstavimo v Jordanovi normalni obliki.
+[^8]: <span class="definicija">Linearna algebraična grupa</span> je grupa, ki je hkrati množica skupnih ničel nekih polinomov v prostoru $\CC^n$.
 
-[^9]: Liejev homomorfizem je torej linearna preslikava $\phi \colon L_1 \to L_2$, za katero velja $\phi([x,y]) = [\phi(x), \phi(y)]$ za vsaka $x,y \in L_1$.
+[^9]: Pri $k = 0$ dobimo trivialno upodobitev.
 
-[^10]: <span class="definicija">Liejeva spletična</span> med Liejevima upodobitvama $\phi_1, \phi_2$ Liejeve algebre $L$ na prostoru $V$ je linearna preslikava $\alpha \in \End(V)$ z lastnostjo $\alpha(\phi_1(x) \cdot v) = \phi_2(x) \cdot \alpha(v)$ za vsaka $x \in L$, $v \in V$. Kadar najdemo obrnljivo Liejevo spletično, sta upodobitvi <span class="definicija">izomorfni</span>.
+[^10]: Ker je polje $\CC$ algebraično zaprto, tukaj obstaja le en torus.
 
-[^11]: Liejeva upodobitev $\phi \colon L \to \glfrak_n(\CC)$ je <span class="definicija">nerazcepna</span>, če prostor $\CC^n$ nima nobenih netrivialnih $L$-invariantnih podprostorov.
+[^11]: Za splošnejšo obravnavo tangentnih prostorov in odvodov med mnogoterostmi glej zapiske [(Forstnerič 2023)](https://users.fmf.uni-lj.si/forstneric/papers/AMbook.pdf).
 
-[^12]: Vektor $v$ torej *potisnemo navzdol* s $F$.
+[^12]: Ta formula je jasna, če matriko $X$ predstavimo v Jordanovi normalni obliki.
 
-[^13]: Vektor $v_n$ torej *potisnemo navzgor* z $E$.
+[^13]: Liejev homomorfizem je torej linearna preslikava $\phi \colon L_1 \to L_2$, za katero velja $\phi([x,y]) = [\phi(x), \phi(y)]$ za vsaka $x,y \in L_1$.
 
-[^14]: Vsaki dve izbiri delilnih točk imata namreč skupno pofinitev. Ta sklep je podoben kot pri definiciji Riemannovega integrala.
+[^14]: <span class="definicija">Liejeva spletična</span> med Liejevima upodobitvama $\phi_1, \phi_2$ Liejeve algebre $L$ na prostoru $V$ je linearna preslikava $\alpha \in \End(V)$ z lastnostjo $\alpha(\phi_1(x) \cdot v) = \phi_2(x) \cdot \alpha(v)$ za vsaka $x \in L$, $v \in V$. Kadar najdemo obrnljivo Liejevo spletično, sta upodobitvi <span class="definicija">izomorfni</span>.
 
-[^15]: To je analogno temu, da na kompleksna števila $\CC$ gledamo kot na $\RR^2$.
+[^15]: Liejeva upodobitev $\phi \colon L \to \glfrak_n(\CC)$ je <span class="definicija">nerazcepna</span>, če prostor $\CC^n$ nima nobenih netrivialnih $L$-invariantnih podprostorov.
 
-[^16]: Opazovali bi torej Liejeve homomorfizme $\slfrak_2(\CC) \to \glfrak_n(\CC)$, ki so le $\RR$-linearni.
+[^16]: Vektor $v$ torej *potisnemo navzdol* s $F$.
 
-[^17]: Grupa $\SO_3(\RR)$ *ni* enostavno povezana. Homeomorfna je projektivnemu prostoru $\RR P^3$.
+[^17]: Vektor $v_n$ torej *potisnemo navzgor* z $E$.
 
-[^18]: Poseben primer tega fenomena smo videli v razdelku o upodobitvah grupe $\RR/\ZZ$, kjer smo dokazali, da je vsaka zvezna upodobitev grupe $\RR$ odvedljiva.
+[^18]: Za vsaki dve izbiri delilnih točk lahko namreč najdemo tretjo izbiro, ki je finejša od obeh. Ta sklep je podoben kot pri definiciji Riemannovega integrala.
 
-[^19]: Rečemo, da je grupa $\PSL_2(\ZZ)$ <span class="definicija">prosti produkt</span> podgrup $\langle a \rangle = \ZZ/2\ZZ$ in $\langle b \rangle = \ZZ/3\ZZ$.
+[^19]: To je analogno temu, da na kompleksna števila $\CC$ gledamo kot na $\RR^2$.
 
-[^20]: Če nek element lahko zapišemo v želeni obliki na dva načina, potem vse črke prenesemo na eno stran enakosti in s tem tudi $1$ zapišemo na netrivialen način v želeni obliki.
+[^20]: Opazovali bi torej Liejeve homomorfizme $\slfrak_2(\CC) \to \glfrak_n(\CC)$, ki so le $\RR$-linearni.
 
-[^21]: To je analog razširjanja lokalnega homomorfizma, ki smo ga videli pri grupi $\SL_2(\CC)$. Tam nismo imeli enoličnosti zapisa kot tukaj, zato smo se morali potruditi z dokazovanjem dobre definiranosti razširitve homomorfizma z $U$ na ves $\SL_2(\CC)$. Tukaj to dobimo zastonj.
+[^21]: Za celovito obravnavo Liejevih grup se lahko obrneš na zapiske [(Mrčun 2024)](https://users.fmf.uni-lj.si/mrcun/preprints/lg.pdf).
 
-[^22]: Para matrik $(X,Y)$ in $(X', Y')$ sta torej ekvivalentna, če in samo če za neko matriko $A \in \GL_n(\CC)$ velja $(X,Y) = A \cdot (X', Y')$.
+[^22]: Grupa $\SO_3(\RR)$ *ni* enostavno povezana. Homeomorfna je projektivnemu prostoru $\RR P^3$.
 
-[^23]: Obravnava je analogna razumevanju konjugiranostnih razredov v končni grupi $\GL_2(\FF_p)$, le da je tu nekoliko preprostejša, ker ni nerazcepnega torusa.
+[^23]: Poseben primer tega fenomena smo videli v razdelku o upodobitvah grupe $\RR/\ZZ$, kjer smo dokazali, da je vsaka zvezna upodobitev grupe $\RR$ odvedljiva.
 
-[^24]: Rečemo, da je grupa $\SL_3(\ZZ)$ dana s prezentacijo z *generatorji* $x,y,z$ in *relacijami*, ki jih podajajo te enakosti. Glej [Teorijo grup](https://urbanjezernik.github.io/teorija-grup) za podrobnosti glede te konstrukcije in več zgledov.
+[^24]: Rečemo, da je grupa $\PSL_2(\ZZ)$ <span class="definicija">prosti produkt</span> podgrup $\langle a \rangle = \ZZ/2\ZZ$ in $\langle b \rangle = \ZZ/3\ZZ$.
 
-[^25]: Angleško *congruence subgroup property.*
+[^25]: Če nek element lahko zapišemo v želeni obliki na dva načina, potem vse črke prenesemo na eno stran enakosti in s tem tudi $1$ zapišemo na netrivialen način v želeni obliki.
 
-[^26]: Topologija na $\ZZ_p$ je nekoliko neobičajna. Dobimo namreč popolnoma nepovezan topološki prostor. Predstavljamo si ga lahko kot Cantorjevo množico, kot je prikazano [tukaj](http://roice3.org/padics/).
+[^26]: To je analog razširjanja lokalnega homomorfizma, ki smo ga videli pri grupi $\SL_2(\CC)$. Tam nismo imeli enoličnosti zapisa kot tukaj, zato smo se morali potruditi z dokazovanjem dobre definiranosti razširitve homomorfizma z $U$ na ves $\SL_2(\CC)$. Tukaj to dobimo zastonj.
 
-[^27]: Tej lastnosti pravimo <span class="definicija">brez majhnih podgrup</span>, angleško *no small subgroups*.
+[^27]: Para matrik $(X,Y)$ in $(X', Y')$ sta torej ekvivalentna, če in samo če za neko matriko $A \in \GL_n(\CC)$ velja $(X,Y) = A \cdot (X', Y')$.
+
+[^28]: Obravnava je analogna razumevanju konjugiranostnih razredov v končni grupi $\GL_2(\FF_p)$, le da je tu nekoliko preprostejša, ker ni nerazcepnega torusa.
+
+[^29]: Rečemo, da je grupa $\SL_3(\ZZ)$ dana s prezentacijo z *generatorji* $x,y,z$ in *relacijami*, ki jih podajajo te enakosti. Glej [Teorijo grup](https://urbanjezernik.github.io/teorija-grup) za podrobnosti glede te konstrukcije in več zgledov.
+
+[^30]: Angleško *congruence subgroup property.*
+
+[^31]: Topologija na $\ZZ_p$ je nekoliko neobičajna. Dobimo namreč popolnoma nepovezan topološki prostor. Predstavljamo si ga lahko kot Cantorjevo množico, kot je prikazano [tukaj](http://roice3.org/padics/).
+
+[^32]: Tej lastnosti pravimo <span class="definicija">brez majhnih podgrup</span>, angleško *no small subgroups*.

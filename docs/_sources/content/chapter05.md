@@ -5,7 +5,7 @@
 </style>
 ```
 
-# Aplikacije
+# Uporabe
 
 Avstralski matematik Geordie Williamson je na svojem [plenarnem predavanju](https://www.youtube.com/watch?v=-3q6C558yog) na Mednarodnem matematičnem kongresu leta 2018 opisal teorijo upodobitev na naslednji način.
 
@@ -45,14 +45,14 @@ Rothov izrek se sicer tiče podmnožice celih števil, ampak ker to množico fil
 
 <div class="zgled">
 
-V $\FF_p$ tvori množica $\{ 0, 1, (p+1)/2 \}$ aritmetično zaporedje. Res, če vzamemo $x = 0$, $y = (p+1)/2$, potem dobimo zaporedje z razliko $y$ kot
+Naj bo $p > 2$. V $\FF_p$ tvori množica $\{ 0, 1, (p+1)/2 \}$ aritmetično zaporedje. Res, če vzamemo $x = 0$, $y = (p+1)/2$, potem dobimo zaporedje z razliko $y$ kot
 ```{math}
 x = 0, \ x + y = \frac{p+1}{2}, \ x + 2y = p + 1 = 1.
 ```
 
 </div>
 
-Če torej rešimo Rothov problem za podmnožice $\FF_p$ namesto za podmnožice $\{1,2,\dots,n\}$, moramo biti previdni, saj dobljenega aritmetičnega zaporedja morda ne bomo mogli dvigniti iz $\FF_p$ v $\ZZ$. Tej težavi se lahko izognemo tako, da izberemo praštevilo $p$ z lastnostjo $p > 2n$. Ni se težko prepričati, da v tem primeru vsako aritmetično zaporedje s $3$ členi v $\{ 1, 2, \dots, n \} \subseteq \FF_p$ lahko dvignemo do aritmetičnega zaporedja v $\{1,2,\dots,n\}$. Poleg tega želimo, da se gostota množice $A$ pri projekciji iz $\{1,2,\dots,n \}$ v $\FF_p$ ne spremeni preveč, zato praštevilo $p$ ne sme biti preveliko. Optimalna izbira bo torej praštevilo $p$ z lastnostjo $2n < p < 4n$, taka izbira pa tudi vselej obstaja po Bertrandovem postulatu.
+Če torej rešimo Rothov problem za podmnožice $\FF_p$ namesto za podmnožice $\{1,2,\dots,n\}$, moramo biti previdni, saj dobljenega aritmetičnega zaporedja morda ne bomo mogli dvigniti iz $\FF_p$ v $\ZZ$. Tej težavi se lahko izognemo tako, da izberemo praštevilo $p$ z lastnostjo $p > 2n$. Ni se težko prepričati, da v tem primeru vsako aritmetično zaporedje s $3$ členi v $\{ 1, 2, \dots, n \} \subseteq \FF_p$ lahko dvignemo do aritmetičnega zaporedja v $\{1,2,\dots,n\}$. Poleg tega želimo, da se gostota množice $A$ pri projekciji iz $\{1,2,\dots,n \}$ v $\FF_p$ ne spremeni preveč, zato praštevilo $p$ ne sme biti preveliko. Optimalna izbira bo torej praštevilo $p$ z lastnostjo $2n < p < 4n$, taka izbira pa tudi vselej obstaja po [Bertrandovem postulatu](https://sl.wikipedia.org/wiki/Bertrandova_domneva).
 
 Dogajanje smo na ta način prestavili v končno abelovo grupo $\FF_p$. V njej opazujemo množico $A \subseteq \FF_p$, ki je gostote $\delta$. Dokazati želimo, da za dovolj velik $p$ obstajajo v $A$ aritmetična zaporedja dolžine $3$, če je le $\delta > C/\log \log p$ za neko konstanto $C$.
 
@@ -160,7 +160,7 @@ zato je
 ```{math}
 \left|\sum_{x \in \FF_p} f(x) \zeta^{-jx}\right| = |\widehat{f}(\chi_j)| \geq p \delta^2.
 ```
-Funkcija $x \mapsto \zeta^{-jx}$ precej oscilira, ko $x$ preteče ves $\FF_p$. Če bi bila ta funkcija približno konstanta, bi lahko sklepali, da je vsota vrednosti $f$ precej velika. Približno konstantnost te funkcije lahko dosežemo tako, da preidemo na neko podmnožico $\FF_p$.[^2]
+Funkcija $x \mapsto \zeta^{-jx}$ precej oscilira, ko $x$ preteče ves $\FF_p$. Če bi bila ta funkcija približno konstanta, bi lahko sklepali, da je vsota vrednosti $f$ precej velika. Približno konstantnost te funkcije lahko dosežemo tako, da preidemo na neko podmnožico $\FF_p$.
 
 <div class="domacanaloga">
 
@@ -209,11 +209,11 @@ Množica $A$ ima torej v aritmetičnem zaporedju $P_i$ gostoto za $\frac{c}{2} \
 
 #### Iteracija
 
-Povzemimo. Če množica $A$ gostote $\delta$ nima aritmetičnih zaporedij dolžine $3$, potem smo našli aritmetično zaporedje $P_i$, v katerem ima $A$ gostoto vsaj $\delta + \frac{c}{2} \delta^2$. Ta postopek zdaj iteriramo.[^3] Če množica $A \cap P_i$ nima aritmetičnih zaporedij dolžine $3$, potem najdemo aritmetično zaporedje dolžine med $c\sqrt{|P_i|}$ in $(1-c)\sqrt{|P_i|}$, v katerem ima $A$ gostoto vsaj $\delta + 2 \frac{c}{2} \delta^2$, in tako dalje. Ker gostota na nobeni točki ne more preseči vrednosti $1$, se ta postopek gotovo ustavi po končno mnogo korakih. Na tej točki najdemo aritmetično zaporedje dolžine $3$ v $A$, če je le velikost množice $P_i$ do te točke dovolj velika. Iz podrobne analize večanja gostote in spreminjaja velikosti množic $P_i$ se da izpeljati,[^4] da ta argument res deluje, če je le $\delta \geq C/\log \log p$ za neko konstanto $C$. S tem je Rothov izrek dokazan.
+Povzemimo. Če množica $A$ gostote $\delta$ nima aritmetičnih zaporedij dolžine $3$, potem smo našli aritmetično zaporedje $P_i$, v katerem ima $A$ gostoto vsaj $\delta + \frac{c}{2} \delta^2$. Ta postopek zdaj iteriramo.[^2] Če množica $A \cap P_i$ nima aritmetičnih zaporedij dolžine $3$, potem najdemo aritmetično zaporedje dolžine med $c\sqrt{|P_i|}$ in $(1-c)\sqrt{|P_i|}$, v katerem ima $A$ gostoto vsaj $\delta + 2 \frac{c}{2} \delta^2$, in tako dalje. Ker gostota na nobeni točki ne more preseči vrednosti $1$, se ta postopek gotovo ustavi po končno mnogo korakih. Na tej točki najdemo aritmetično zaporedje dolžine $3$ v $A$, če je le velikost množice $P_i$ do te točke dovolj velika. Iz podrobne analize večanja gostote in spreminjaja velikosti množic $P_i$ se da izpeljati,[^3] da ta argument res deluje, če je le $\delta \geq C/\log \log p$ za neko konstanto $C$. S tem je Rothov izrek dokazan.
 
 ### Onkraj Rothovega izreka
 
-Mnogo dela po Rothovem izreku je bilo posvečenega izboljšanju meje o gostoti, ki še zagotovi obstoj aritmetičnih zaporedij dolžine $3$. Večina izboljšav spodnje meje je s sabo prinesla nove ideje, uporabne tudi za reševanje kakšnih drugih problemov. Najsodobnejši rezultat v zvezi s tem je prebojen članek [(Bloom-Sisask 2020)](https://www.quantamagazine.org/landmark-math-proof-clears-hurdle-in-top-erdos-conjecture-20200803/), kjer avtorja dokažeta, da obstajata konstanti $C,c$, tako da ima vsaka množica $A \subseteq \{ 1, 2, \dots, n \}$ gostote vsaj $C / (\log n)^{1 + c}$ aritmetično zaporedje dolžine $3$. Te meja se torej znebi dvojnega logaritma in uvede minimalen eksponent k logaritmu, zato je bistveno manjša restrikcija na gostoto.
+Mnogo dela po Rothovem izreku je bilo posvečenega izboljšanju meje o gostoti, ki še zagotovi obstoj aritmetičnih zaporedij dolžine $3$. Večina izboljšav spodnje meje je s sabo prinesla nove ideje, uporabne tudi za reševanje kakšnih drugih problemov. Najsodobnejši rezultat v zvezi s tem je prebojen članek [(Bloom-Sisask 2020)](https://www.quantamagazine.org/landmark-math-proof-clears-hurdle-in-top-erdos-conjecture-20200803/), kjer avtorja dokažeta, da obstajata konstanti $C,c$, tako da ima vsaka množica $A \subseteq \{ 1, 2, \dots, n \}$ gostote vsaj $C / (\log n)^{1 + c}$ aritmetično zaporedje dolžine $3$. Ta meja se torej znebi dvojnega logaritma in uvede minimalen eksponent k logaritmu, zato je bistveno manjša restrikcija na gostoto.[^4]
 
 Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiševa je število praštevil do $n$ vsaj $C n / \log n$, zato imajo praštevila v $\{1,2,\dots,n\}$ gostoto vsaj $C / \log n$ in na njih lahko apliciramo posplošeni Rothov izrek. Ker lahko vselej tudi izpustimo prvih nekaj praštevil, torej sklepamo, da množica praštevil vsebuje neskončno mnogo aritmetičnih zaporedij dolžine $3$. Poudarimo konceptualno pomembno dejstvo, da smo ta rezultat izpeljali zgolj zaradi same gostote praštevil in ne zaradi kakršne koli druge njihove lastnosti. Nenazadnje je slogan izvirnega Rothovega izreka ta, da lahko najdemo v vsaki dovolj gosti množici strukturo.
 
@@ -247,7 +247,13 @@ Kadar množica $A$ vsebuje kakšno podgrupo, seveda *ni* brez produktov, zato se
 
 - Naj bo $G = \ZZ/n\ZZ$ in $A$ neka njena podmnožica. Množica $A$ je brez produktov, če in samo če enačba $x+y=z$ nima rešitve v $A$. To vprašanje je ravno obratno sorodni lastnosti, ki smo jo opazovali v prejšnjem razdelku. Tam smo reševali le malo drugačno enačbo $x+y=2z$ in dokazali, da ima vselej rešitve v podmnožicah pozitivne gostote. Zanimivo je, da je situacija precej drugačna za enačbo $x+y = z$.[^5] Za množico $A$ lahko vzamemo na primer vsa števila v $\ZZ/n\ZZ$, ki so strogo med $\frac{1}{3}n$ in $\frac{2}{3}n$. Ta množica je jasno brez produktov in je gostote približno $\frac{1}{3}$ v $\ZZ/n\ZZ$ za velike vrednosti $n$.
 
-  To konstrukcijo lahko posplošimo na poljubno končno abelovo grupo. Ob tem se ni težko prepričati, da vselej obstaja podmnožica brez produktov gostote vsaj $\frac{2}{7}$.
+  To konstrukcijo lahko posplošimo na poljubno končno abelovo grupo.
+
+  <div class="domacanaloga">
+
+  Naj bo $A$ končna abelova grupa. Prepričaj se, da vselej obstaja podmnožica v $A$, ki je brez produktov in gostote vsaj $\frac{2}{7}$.
+
+  </div>
 
 - Simetrična grupa $S_n$ vsebuje ogromno množico brez produktov, in sicer množico vseh lihih permutacij $S_n \backslash A_n$. Produkt dveh lihih permutacij je soda permutacija, zato je ta množica res brez produktov. Njena gostota je $\frac12$.
 
@@ -255,7 +261,7 @@ Kadar množica $A$ vsebuje kakšno podgrupo, seveda *ni* brez produktov, zato se
 
 </div>
 
-Mnogo težje je najti podmnožice brez produktov pozitivne gostote v alternirajoči grupi $A_n$ (ko gre $n$ proti neskončnosti) ali linearni grupi $\PSL_2(\FF_p)$ (ko gre $p$ proti neskončnosti). Dokazali bomo, da to težavo lahko pojasnimo s teorijo updobitev.
+Mnogo težje je najti podmnožice brez produktov pozitivne gostote v alternirajoči grupi $A_n$ (ko gre $n$ proti neskončnosti) ali linearni grupi $\PSL_2(\FF_p)$ (ko gre $p$ proti neskončnosti). Dokazali bomo, da to težavo lahko pojasnimo s teorijo upodobitev.
 
 <div class="izrek">
 
@@ -351,7 +357,7 @@ Naj bo $g \in G$ in naj bo $B = g A^{-1} \subseteq G$. Množici $A$ in $B$ sta o
 
 </div>
 
-Ta lastnost velikih množic ima mnogo zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babaijeve domeneve o premerih končnih enostavnih grup prek teorije približnih podgrup in pri raziskovanju slučajnih sprehodov,[^7] kot je razl oženo v [(Breuillard 2013)](https://library.slmath.org/books/Book61/files/15breu.pdf).
+Ta lastnost velikih množic ima mnogo zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babaijeve domeneve o premerih končnih enostavnih grup prek teorije približnih podgrup in pri raziskovanju slučajnih sprehodov,[^7] kot je razloženo v [(Breuillard 2013)](https://library.slmath.org/books/Book61/files/15breu.pdf).
 
 ### Največja možna gostota
 
@@ -401,12 +407,12 @@ Ta množica v splošnem *ni* podgrupa.
 
 <div class="zgled">
 
-V programskem okolju GAP se ni težko prepričati, da je najmanjša[^10] grupa $G$, v kateri $K(G)$ ne sovpada z izvedeno podgrupo $[G,G] = \langle K(G) \rangle$, moči $96$. V GAP je ta grupa dostopna pod imenom `SmallGroup(96, 3)`. Podamo jo lahko v njeni permutacijski obliki kot podgrupo $S_{12}$, generirano s permutacijama
+V programskem okolju GAP se ni težko prepričati, da je najmanjša[^10] grupa $G$, v kateri $K(G)$ ne sovpada komutatorsko podgrupo $[G,G] = \langle K(G) \rangle$, moči $96$. V GAP je ta grupa dostopna pod imenom `SmallGroup(96, 3)`. Podamo jo lahko v njeni permutacijski obliki kot podgrupo $S_{12}$, generirano s permutacijama
 ```{math}
 x = (1 \ 3 \ 5)(2 \ 4 \ 6)(7 \ 11 \ 9)(8 \ 12 \ 10), \quad
     y = (3 \ 9 \ 4 \ 10)(5 \ 7)(6 \ 8)(11 \ 12).
 ```
-Hitro izračunamo, da je $|K(G)| = 29$, torej $K(G)$ vsekakor ni podgrupa $G$. Izvedena podgrupa je le nekoliko večja, $|[G,G]| = 32$. Primer elementa v $[G,G]$, ki ni hkrati v $K(G)$, je permutacija $(5 \ 6)(7 \ 8)$.
+Hitro izračunamo, da je $|K(G)| = 29$, torej $K(G)$ vsekakor ni podgrupa $G$. Komutatorska podgrupa je le nekoliko večja, $|[G,G]| = 32$. Primer elementa v $[G,G]$, ki ni hkrati v $K(G)$, je permutacija $(5 \ 6)(7 \ 8)$.
 
 </div>
 
@@ -445,7 +451,7 @@ N(g) = \sum_{\conclass} \frac{|G|}{|\conclass|} \cdot |\{ (a,b) \in G \times G \
 ```
 kjer vsota teče po vseh konjugiranostnih razredih grupe $G$.
 
-Dobljeni zapis funkcije $N$ je priročen, ker je izražen le s konjugiranostnimi razredi in je neodvisen od izbire njihovih konkretnih predstavnikov. S tem je amenabilen za gnetenje s Fourierovo transformacijo. Najprej opazimo, da lahko drugi faktor zadnje vsote zapišemo kot
+Dobljeni zapis funkcije $N$ je priročen, ker je izražen le s konjugiranostnimi razredi in je neodvisen od izbire njihovih konkretnih predstavnikov. S tem je primeren za gnetenje s Fourierovo transformacijo. Najprej opazimo, da lahko drugi faktor zadnje vsote zapišemo kot
 ```{math}
 \sum_{a,b \in G, \ a \cdot b = g} 1_{\conclass^{-1}}(a) \cdot 1_{\conclass}(b) = \left( 1_{\conclass^{-1}} * 1_{\conclass} \right) (g),
 ```
@@ -531,7 +537,7 @@ Iz tabele lahko razberemo, da je element $[x,y]$ res komutator, saj je
     3 - \frac13 - 2 \cdot \frac13 + 2 \cdot \frac13 = 
     \frac83 \neq 0.
 ```
-Po drugi strani je element $(5 \ 6)(7 \ 8)$ v jedru vseh linearnih upodobitev, zato pripada izvedeni podgrupi $[G,G]$. Hkrati pa ta element *ne* pripada $K(G)$, saj je
+Po drugi strani je element $(5 \ 6)(7 \ 8)$ v jedru vseh linearnih upodobitev, zato pripada komutatorski podgrupi $[G,G]$. Hkrati pa ta element *ne* pripada $K(G)$, saj je
 ```{math}
 \sum_{i = 1}^{12} \frac{\chi_i((5 \ 6)(7 \ 8))}{\chi_i(1)} =
     3 + 1 + \frac13 - 4 \cdot \frac13 - 3 = 0.
@@ -628,7 +634,7 @@ ki jo lahko zapišemo s pomočjo Fourierove transformacije in nazadnje dobimo
 ```{math}
 \mu_n = \widehat{\frac{1_{S}}{|S|} }(\rho_{\fun}) \cdot \mu_{n-1}.
 ```
-Rekurzivna zveza za izračun porazdelitvene funkcije $\mu_n$ iz $\mu_{n-1}$ je torej izrazljiva kot Fourierova transformacija normalizirane karakteristične funkcije generirajoče množice $S$ v regularni upodobitvi. Tej linearni preslikavi pravimo <span class="definicija">operator Markova</span> in jo označimo kot
+Rekurzivna zveza za izračun porazdelitvene funkcije $\mu_n$ iz $\mu_{n-1}$ se torej izrazi s pomočjo Fourierove transformacije normalizirane karakteristične funkcije generirajoče množice $S$ v regularni upodobitvi. Tej linearni preslikavi pravimo <span class="definicija">operator Markova</span> in jo označimo kot
 ```{math}
 M = \widehat{\frac{1_{S}}{|S|} }(\rho_{\fun}) = \frac{1}{|S|} \sum_{x \in S} \rho_{\fun}(x)^*.
 ```
@@ -893,7 +899,7 @@ Obravnavaj slučajni sprehod v $S_n$ glede na generirajočo množico $S$, ki ses
 
 ### Konvergenca v družinah
 
-Za vsako konkretno nekomutativno končno enostavno grupo $G$ velja, da so vse lastne vrednosti operatorja $M$ razen $1$ po absolutni vrednosti kvečjemu $1-\epsilon$ za nek $\epsilon = \epsilon(G) > 0$. V tem primeru rečemo, da je grupa $G$ <span class="definicija">$\epsilon$-ekspanzivna</span> glede na generirajočo množico $S$. Slučajni sprehod v taki grupi se dobro premeša po $O_{\epsilon}(\log |G|)$ korakih. Težave nastopijo, ko skušamo ta argument uporabiti za celo družino grup, saj se lahko zgodi, da z večanjem parametra $n$ vrednost ekspanzivnosti $\epsilon = \epsilon_n$ nujno konvergira k $0$. Ta fenomen vidimo v primeru družine $A_n$ in konjugiranostnega razreda $3$-ciklov.
+Za vsako konkretno nekomutativno končno enostavno grupo $G$ jasno velja, da so vse lastne vrednosti operatorja $M$ razen $1$ po absolutni vrednosti kvečjemu $1-\epsilon$ za nek $\epsilon = \epsilon(G) > 0$. V tem primeru rečemo, da je grupa $G$ <span class="definicija">$\epsilon$-ekspanzivna</span> glede na generirajočo množico $S$. Slučajni sprehod v taki grupi se dobro premeša po $O_{\epsilon}(\log |G|)$ korakih. Težave nastopijo, ko skušamo ta argument uporabiti za celo družino grup, saj se lahko zgodi, da z večanjem parametra $n$ vrednost ekspanzivnosti $\epsilon = \epsilon_n$ nujno konvergira k $0$. Ta fenomen vidimo v primeru družine $A_n$ in konjugiranostnega razreda $3$-ciklov.
 
 <div class="domacanaloga">
 
@@ -907,7 +913,7 @@ Družini grup $(G_i, S_i)_{i \in \NN}$, kjer je $G_i = \langle S_i \rangle$, pra
 
 Vsaka družina je ekspanzivna, če za generatorsko množico vzamemo kar $S_i = G_i$ za vsak $i$. V tem primeru je namreč operator Markova enak povprečju $\EE(\rho_{\fun})$, ki je projektor na trivialno podupodobitev regularne, zato so vse njegove netrivialne lastne vrednosti ničelne. Želimo si ekspanzivnih družin, v katerih je množica $S_i$ čim manjša, po možnosti celo omejene velikosti v vseh članicah družine, na primer $|S_i| \leq 100$ za vsak $i$. V takih ekspanzivnih družinah lahko enakomerno zelo hitro z zaporednim vzorčenjem v množici omejene velikosti dobimo približno enakomerno naključne elemente ogromnih grup.
 
-S pomočjo teorije upodobitev in poznavanja določenih lastnosti karakterjev končnih enostavnih grup $\PSL_n(\FF_p)$ ni pretežko posplošiti zgleda iz zadnjega razdelka. Zanimivo je, da isti rezultat ne deluje za družino alternirajočih grup.
+S pomočjo teorije upodobitev in poznavanja določenih lastnosti karakterjev končnih enostavnih grup $\PSL_n(\FF_p)$ ni pretežko posplošiti zgleda iz zadnjega razdelka.[^18] Zanimivo je, da isti rezultat ne deluje za družino alternirajočih grup.
 
 <div class="izrek">
 
@@ -925,7 +931,7 @@ Obstaja konstanta $C > 0$, tako da je družina nekomutativnih končnih enostavni
 
 Izrek nam zagotavlja obstoj neke ne prevelike generirajoče množice v končnih enostavnih grupah, glede na katere se slučajni sprehodi enakomerno zelo hitro dobro premešajo. Še težje pa je povedati kaj bolj konkretnega o teh generirajočih množicah. Za primer $A_n$ so te množice konstruirane v [(Kassabov 2007)](https://link.springer.com/article/10.1007/s00222-007-0065-y) s pomočjo neke naključne metode. Dokaz omejitev absolutnih vrednosti lastnih vrednosti operatorja Markova sloni na teoriji upodobitev, a je precej bolj zahteven od tega, ki smo si ga ogledali mi, saj so te generatorske množice daleč od konjugiranostnih razredov. Pred nedavnim so se našle celo eksplicitne konstrukcije generirajočih množic $A_n$, glede na katere dobimo ekspanzivno družino [(Caprace-Kassabov 2022)](https://arxiv.org/abs/2210.00730). Tudi tukaj je ključna teorija upodobitev, a v igro vstopijo neskončne grupe avtomorfizmov polinomskih kolobarjev nad končnim poljem.
 
-Dokazi ekspanzivnosti za generatorske množice, ki niso konjugiranostni razredi, ponavadi potekajo na obraten način, kot bi pričakovali. Omejenost absolutnih vrednosti netrivialnih lastnih vrednosti operatorja Markova namreč lahko dokažemo, če premislimo, da se slučajni sprehodi enakomerno zelo hitro premešajo.[^18] Primer uporabe te tehnike par excellence je naslednji rezultat, ki med drugim presenetljivo sloni na Gowersovem rezultatu o zgornji meji gostote množic brez produktov.
+Dokazi ekspanzivnosti za generatorske množice, ki niso konjugiranostni razredi, ponavadi potekajo na obraten način, kot bi pričakovali. Omejenost absolutnih vrednosti netrivialnih lastnih vrednosti operatorja Markova namreč lahko dokažemo, če premislimo, da se slučajni sprehodi enakomerno zelo hitro premešajo.[^19] Primer uporabe te tehnike par excellence je naslednji rezultat, ki med drugim presenetljivo sloni na Gowersovem rezultatu o zgornji meji gostote množic brez produktov.
 
 <div class="izrek">
 
@@ -947,23 +953,23 @@ V vsaki alternirajoči grupi $A_n$ enakomerno naključno izberemo dva elementa $
 
 </div>
 
-Vzpodbuden delni rezultat je, da asimptotska visoko verjetna ekspanzivnost drži za družino določenih *kvocientov Cayleyjevih grafov* simetričnih grup, kot je predstavljeno v [(Milanez 2022)](https://repozitorij.uni-lj.si/IzpisGradiva.php?id=140303).
+Vzpodbuden delni rezultat je, da asimptotska visoko verjetna ekspanzivnost drži za družino določenih *kvocientov Cayleyjevih grafov* simetričnih grup, kot je predstavljeno v [(Milanez 2022)](https://repozitorij.uni-lj.si/IzpisGradiva.php?id=140303). Ti rezultati so bili nedavno posplošeni do *precej velikih* kvocientov Cayleyjevih grafov v [(Cassidy 2025).](https://arxiv.org/abs/2412.13941)
 
 [^1]: Na ta način torej izbiramo aritmetična zaporedja v $\FF_p$ dolžine $3$.
 
-[^2]: Argument za to je konceptualno preprost, a poln tehničnih podrobnosti.
+[^2]: Ne bomo preveč natančni glede iteracije. V grobem lahko iz aritmetičnega zaporedja $P_i$ preidemo na ciklično grupo enake moči (morda ne več praštevilske) in potem ponovimo argument v tej ciklični grupi.
 
-[^3]: Ne bomo preveč natančni glede iteracije. V grobem lahko iz aritmetičnega zaporedja $P_i$ preidemo na ciklično grupo enake moči (morda ne več praštevilske) in potem ponovimo argument v tej ciklični grupi.
+[^3]: Glej [(Peluse 2022)](https://arxiv.org/pdf/2206.10037.pdf).
 
-[^4]: Glej [(Peluse 2022)](https://arxiv.org/pdf/2206.10037.pdf).
+[^4]: Iskanje optimalnih restrikcij na gostoto je predstavljeno v [(Bone 2024)](https://repozitorij.uni-lj.si/IzpisGradiva.php?id=155586&lang=slv).
 
-[^5]: Lahko bi naredili sicer enak razmislek kot v dokazu Rothovega izreka, a nam od tiste točke, ko harmonična analiza odpove, ne bi obstoj aritmetičnih zaporedij $P_i$ koristil za reševanje enačbe $x+y=z$.
+[^5]: Lahko bi naredili sicer enak razmislek kot v dokazu Rothovega izreka, a nam od tiste točke, ko harmonična analiza odpove, obstoj aritmetičnih zaporedij $P_i$ ne bi koristil za reševanje enačbe $x+y=z$.
 
 [^6]: Za funkciji $f, g \colon \NN \to \RR$ pišemo $f \ll g$, če obstaja konstanta $C$, da je $f(n) \leq C g(n)$ za vse $n$. V primeru, ko za funkciji $f,g$ velja hkrati $f \ll g$ in $g \ll f$, pišemo $f = \Theta(g)$. Funkciji $f$ in $g$ sta torej asimptotsko do konstante natančno enaki.
 
 [^7]: Del tega si bomo ogledali nekoliko kasneje.
 
-[^8]: Za funkciji $f,g \colon \NN \to \RR$ pišemo $f \sim g$, če velja $\lim_{n \to \infty} f(n)/g(n) = 1$.
+[^8]: Za funkciji $f, g \colon \NN \to \RR$ pišemo $f = O(g)$, če velja $f \ll g$, ter $f = o(g)$, če velja $\lim_{n \to \infty} f(n)/g(n) = 0$.
 
 [^9]: Definicija množice $S$ je enaka kot za primer $A_n$, dodaten trud je potreben le za oceno njene gostote.
 
@@ -983,4 +989,6 @@ Vzpodbuden delni rezultat je, da asimptotska visoko verjetna ekspanzivnost drži
 
 [^17]: Angleško *expander family*. Ime izhaja iz alternativne karakterizacije teh družin v teoriji grafov.
 
-[^18]: Ni težko premisliti, da sta ta dva koncepta ekvivalentna. Čas mešanja v vsaki članici družine $G_i$ je $O(\log |G_i|)$, če in samo če je družina ekspanzivna.
+[^18]: Glej pregledni članek [(Liebeck 2017)](https://www.ma.imperial.ac.uk/~mwl/princeton-survey-final.pdf).
+
+[^19]: Ni težko premisliti, da sta ta dva koncepta ekvivalentna. Čas mešanja v vsaki članici družine $G_i$ je $O(\log |G_i|)$, če in samo če je družina ekspanzivna.

@@ -17,7 +17,7 @@ Naj bo $G$ grupa in $V$ vektorski prostor nad poljem $F$. Upodobitev grupe $G$ n
 ```{math}
 \rho \colon G \to \GL(V).
 ```
-Pri tem razsežnosti prostora $V$ rečemo <span class="definicija">stopnja upodobitve</span> in jo označimo z $\deg(\rho)$.
+Pri tem je $\GL(V)$ grupa vseh obrnljivih linearnih preslikav iz prostora $V$ vase. Razsežnosti prostora $V$ rečemo <span class="definicija">stopnja upodobitve</span> in jo označimo z $\deg(\rho)$.
 
 Ko v prostoru $V$ izberemo bazo in torej izomorfizem $V \cong F^{\deg(\rho)}$, lahko upodobitev $\rho$ enakovredno zapišemo kot homomorfizem
 ```{math}
@@ -25,16 +25,16 @@ Ko v prostoru $V$ izberemo bazo in torej izomorfizem $V \cong F^{\deg(\rho)}$, l
 ```
 iz grupe $G$ v obrnljive matrike razsežnosti $\deg(\rho)$ nad $F$.
 
-Nad poljem kompleksnih števil $F = \CC$ upodobitvam rečemo <span class="definicija">kompleksne</span>, nad polji karakteristike $p > 0$, na primer $F = \FF_p$, pa upodobitvam rečemo <span class="definicija">modularne</span>.
+Nad poljem kompleksnih števil $F = \CC$ upodobitvam rečemo <span class="definicija">kompleksne</span>, nad polji karakteristike $p > 0$, na primer $F = \FF_p$,[^1] pa upodobitvam rečemo <span class="definicija">modularne</span>.
 
-Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vektorju $v$, se pravi $\rho(g)(v)$, včasih pišemo krajše kot $g \cdot v$ ali kar $gv$.
+Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vektorju $v$, se pravi $\rho(g)(v)$, včasih pišemo krajše kot $g \cdot v$ ali kar $gv$.[^2]
 
 <div class="zgled">
 
 - Opazujmo matrično grupo $\GL_2(\CC)$ in vektorski prostor $\CC^2$. Množenje matrik z vektorji podaja upodobitev
   ```{math}
-  \textstyle \rho \colon \GL_2(\CC) \to \GL(\CC^2) = \GL_2(\CC), \quad
-              A \mapsto \left( v \mapsto A \cdot v \right) = A.
+  \textstyle \rho \colon \GL_2(\CC) \to \GL(\CC^2) \equiv \GL_2(\CC), \quad
+              A \mapsto \left( v \mapsto A \cdot v \right) \equiv A.
   ```
 
 - Opazujmo grupo realnih števil $\RR^*$ za množenje in vektorski prostor $\CC$. Absolutna vrednost podaja upodobitev
@@ -57,7 +57,7 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
 - Opazujmo grupo ostankov $\ZZ/q\ZZ$ za poljubno naravno število $q$. Za vsak parameter $m \in \ZZ/q\ZZ$ imamo upodobitev
   ```{math}
   \chi_m \colon \ZZ/q\ZZ \to \GL(\CC) = \CC^*, \quad
-              x \mapsto e^{2 \pi i mx/q}.
+              x + q\ZZ \mapsto e^{2 \pi i mx/q}.
   ```
 
 - Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta grupa izhaja iz simetrij $n$-kotnika v ravnini, s čimer nam ponuja svojo naravno upodobitev $\rho \colon D_{2n} \to \GL(\RR^2) = \GL_2(\RR)$, ki preslika generatorja kot
@@ -84,7 +84,7 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
 - Opazujmo grupo ostankov $\ZZ/6\ZZ$ in racionalni vektorski prostor $\QQ^2$. Preslikava
   ```{math}
   \rho \colon \ZZ/6\ZZ \to \GL(\QQ^2) = {\textstyle \GL_2(\QQ)}, \quad
-              x \mapsto  \begin{pmatrix}
+              x + 6 \ZZ \mapsto  \begin{pmatrix}
                   1/2 & 1/8 \\
                   -6 & 1/2 \\
               \end{pmatrix}^x
@@ -109,26 +109,25 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
 
 - Naj bo $V$ vektorski prostor in naj bo $G$ poljubna podgrupa grupe $\GL(V)$. Tedaj je naravna vložitev $G \to \GL(V)$ upodobitev grupe $G$ na prostoru $V$.
 
-  Za konkreten zgled lahko vzamemo $V = \CC^2$ in $G = \langle \left( \begin{smallmatrix} 1 & 1 \\ 0 & 1 \end{smallmatrix} \right) \rangle \leq \GL(\CC^2)$. Na ta način dobimo upodobitev grupe $G \cong \ZZ$ na prostoru $\CC^2$. Na istem prostoru lahko vzamemo tudi $G = \langle 
-          \left( \begin{smallmatrix} 1 & 1 \\ 0 & 1 \end{smallmatrix} \right), \left( \begin{smallmatrix} 1 & 0 \\ 0 & -1 \end{smallmatrix} \right) \rangle \leq \GL(\CC^2)$. Grupa $G$ je neskončna diedrska grupa $G \cong D_\infty$.
+  Za konkreten zgled lahko vzamemo $V = \CC^2$ in $G = \langle \left( \begin{smallmatrix} 1 & 1 \\ 0 & 1 \end{smallmatrix} \right) \rangle \leq \GL(\CC^2)$. Na ta način dobimo upodobitev grupe $G \cong \ZZ$ na prostoru $\CC^2$.
 
 - Naj bo $G$ poljubna grupa, opremljena z delovanjem na neki množici $X$. Naj bo $F[X]$ vektorski prostor z bazo $\{ e_x \}_{x \in X}$. Grupa $G$ deluje na $F[X]$ s homomorfizmom
   ```{math}
   \pi \colon G \to \GL(F[X]), \quad
-              g \mapsto \left( e_x \mapsto e_{g.x} \right),
+              g \mapsto \left( e_x \mapsto e_{g \cdot x} \right),
   ```
   kjer je $x \in X$. To delovanje imenujemo <span class="definicija">permutacijska upodobitev</span> grupe $G$ na $F[X]$.
 
   Za konkreten zgled lahko vzamemo $G = S_n$, ki naravno deluje na množici $X = \{ 1, 2, \dots, n \}$. Na ta način dobimo permutacijsko upodobitev grupe $S_n$ na prostoru $F[\{ 1, 2, \dots, n \}]$ razsežnosti $n$.
 
-- Naj bo $G$ grupa in $F$ polje. Grupa $G$ vselej deluje na sebi s Cayleyjevim delovanjem. Prirejeni permutacijski upodobitvi grupe $G$ na $F[G]$[^1] rečemo <span class="definicija">Cayleyjeva upodobitev</span> grupe $G$ nad $F$. To delovanje označimo z $\pi_{\Cay}$.
+- Naj bo $G$ grupa in $F$ polje. Grupa $G$ vselej deluje na sebi s Cayleyjevim delovanjem. Prirejeni permutacijski upodobitvi grupe $G$ na $F[G]$[^3] rečemo <span class="definicija">Cayleyjeva upodobitev</span> grupe $G$ nad $F$. To delovanje označimo z $\pi_{\Cay}$.
 
 - Naj bo $G$ grupa in $F$ polje. Naj bo $\fun(G,F)$ množica vseh funkcij iz množice $G$ v $F$. Te funkcije lahko po točkah seštevamo in množimo s skalarji, na ta način je $\fun(G,F)$ vektorski prostor. Grupa $G$ deluje na $\fun(G,F)$ s homomorfizmom
   ```{math}
   \rho_{\fun} \colon G \to \GL(\fun(G,F)), \quad
               g \mapsto \left( f \mapsto \left( x \mapsto f(xg) \right) \right),
   ```
-  kjer je $f \in \fun(G,F), \ x \in G$. To delovanje izhaja iz (desnega) delovanja grupe $G$ na sebi in ga zato imenujemo <span class="definicija">(desna) regularna upodobitev</span> grupe $G$ nad $F$.
+  kjer je $f \in \fun(G,F), \ x \in G$. To delovanje izhaja iz (desnega) Cayleyjevega delovanja grupe $G$ na sebi in ga zato imenujemo <span class="definicija">(desna) regularna upodobitev</span> grupe $G$ nad $F$.
 
 </div>
 
@@ -138,14 +137,14 @@ Upodobitev $\rho$ grupe $G$ pohvalimo s pridevnikom <span class="definicija">zve
 
 Naj bo $G$ grupa. Opazujmo neki njeni upodobitvi $\rho_1$ in $\rho_2$ nad vektorskima prostoroma $V_1$ in $V_2$, obema nad poljem $F$. Ti dve upodobitvi lahko *primerjamo* med sabo, in sicer tako, da hkrati primerjamo vektorska prostora in delovanji grupe $G$ na teh dveh prostorih.
 
-Natančneje, <span class="definicija">spletična</span>[^2] med upodobitvama $\rho_1$ in $\rho_2$ je linearna preslikava $\Phi \colon V_1 \to V_2$, za katero za vsak $g \in G$ in $v \in V_1$ velja[^3]
+Natančneje, <span class="definicija">spletična</span>[^4] med upodobitvama $\rho_1$ in $\rho_2$ je linearna preslikava $\Phi \colon V_1 \to V_2$, za katero za vsak $g \in G$ in $v \in V_1$ velja[^5]
 ```{math}
 \Phi(\rho_1(g) \cdot v) = \rho_2(g) \cdot \Phi(v).
 ```
 
 <div class="zgled">
 
-Opazujmo grupo $\ZZ$ in dve njeni upodobitvi, ki smo jih že videli. Prva naj bo upodobitev
+Opazujmo grupo $\ZZ$ in dve njeni upodobitvi, ki smo ju že videli. Prva naj bo upodobitev
 ```{math}
 \rho \colon \ZZ \to \GL(\CC^2), \quad
     x \mapsto \begin{pmatrix} 1 & x \\ 0 & 1 \end{pmatrix},
@@ -167,11 +166,17 @@ Za dano upodobitev $\rho$ grupe $G$ na vektorskem prostoru $V$ je identična pre
 
 ### Izomorfnost upodobitev
 
-Kadar je spletična $\Phi \colon V_1 \to V_2$ med $\rho_1$ in $\rho_2$ obrnljiva kot linearna preslikava, je tudi njen inverz $\Phi^{-1}$ spletična med $\rho_2$ in $\rho_1$. V tem primeru spletični $\Phi$ rečemo <span class="definicija">izomorfizem</span> upodobitev $\rho_1$ in $\rho_2$.
+<div class="domacanaloga">
+
+Naj bo $\Phi \colon V_1 \to V_2$ spletična med upodobitvama $\rho_1$ in $\rho_2$, ki je obrnljiva kot linearna preslikava. Prepričaj se, da je tudi njen inverz $\Phi^{-1} \colon V_2 \to V_1$ spletična med $\rho_2$ in $\rho_1$.
+
+</div>
+
+Spletični $\Phi$, ki je obrnljiva kot linearna preslikava, rečemo <span class="definicija">izomorfizem</span> upodobitev $\rho_1$ in $\rho_2$.
 
 <div class="zgled">
 
-Opazujmo ciklično grupo $\ZZ/n\ZZ$ za poljuben $n > 1$. Ta grupa naravno deluje na množici $\Omega = \{ 1, 2, \dots, n \}$,[^4] od koder izhaja permutacijska upodobitev
+Opazujmo ciklično grupo $\ZZ/n\ZZ$ za poljuben $n > 1$. Ta grupa naravno deluje na množici $\Omega = \{ 1, 2, \dots, n \}$,[^6] od koder izhaja permutacijska upodobitev
 ```{math}
 \pi \colon \ZZ/n\ZZ \to \GL(\CC[\Omega]).
 ```
@@ -204,7 +209,7 @@ Vektorski prostor $\fun(\ZZ/n\ZZ, \CC)$ lahko na naraven način opremimo z bazo 
             0 & \text{sicer}
         \end{cases}
 ```
-za $\bar x \in \ZZ/n\ZZ$. Predpišimo linearno preslikavo[^5]
+za $\bar x \in \ZZ/n\ZZ$. Predpišimo linearno preslikavo[^7]
 ```{math}
 \Phi^\prime \colon \CC[\ZZ/n\ZZ] \to \fun(\ZZ/n\ZZ, \CC), \quad
         e_{\bar x} \mapsto 1_{- \bar x}.
@@ -229,7 +234,7 @@ Torej je res $\Phi^\prime(\bar x \cdot e_{\bar y}) = \bar x \cdot \Phi^\prime(e_
 
 </div>
 
-Eden pomembnih ciljev teorije upodobitev je razumeti vse upodobitve dane grupe do izomorfizma natančno. Kasneje bomo spoznali, kako lahko to v določenih[^6] primerih *precej dobro* uresničimo.
+Eden pomembnih ciljev teorije upodobitev je razumeti vse upodobitve dane grupe do izomorfizma natančno. Kasneje bomo spoznali, kako lahko to v določenih[^8] primerih *precej dobro* uresničimo.
 
 ## Fundamentalne konstrukcije
 
@@ -277,22 +282,22 @@ Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL(V)$. Denimo, da obstaja v
 
 - Naj bo $G$ grupa in $\rho$ njena upodobitev na prostoru $V$. Predpostavimo, da obstaja vektor $v \in V$, ki je lastni vektor vsake linearne preslikave $\rho(g)$ za $g \in G$.
 
-  Torej za vsak $g \in G$ obstaja $\chi(g) \in F$, da je $\rho(g) \cdot v = \chi(g) v$. Na ta način dobimo funkcijo $\chi \colon G \to F$, se pravi element prostora $\fun(G,F)$. Ta funkcija ni čisto poljubna; ker je $\rho$ upodobitev, je $\chi$ nujno *homomorfizem* iz grupe $G$ v grupo $F^*$. Torej je $\chi$ pravzaprav upodobitev grupe $G$ na prostoru $F$ razsežnosti $1$.[^7]
+  Torej za vsak $g \in G$ obstaja $\chi(g) \in F$, da je $\rho(g) \cdot v = \chi(g) v$. Na ta način dobimo funkcijo $\chi \colon G \to F$, se pravi element prostora $\fun(G,F)$. Ta funkcija ni čisto poljubna; ker je $\rho$ upodobitev, je $\chi$ nujno *homomorfizem* iz grupe $G$ v grupo $F^*$. Torej je $\chi$ pravzaprav upodobitev grupe $G$ na prostoru $F$ razsežnosti $1$.[^9]
 
   Zdaj kot v zadnjem zgledu s predpisom
   ```{math}
   \Phi \colon F \to V, \quad
           x \mapsto xv
   ```
-  dobimo injektivno spletično med $\chi$ in $\rho$, torej lahko vidimo $\chi$ kot enorazsežno podupodobitev upodobitve $\rho$. Hkrati lahko iz te spletične obnovimo podatek o skupnem lastnem vektorju $v$ in upodobitvi $\chi$.[^8]
+  dobimo injektivno spletično med $\chi$ in $\rho$, torej lahko vidimo $\chi$ kot enorazsežno podupodobitev upodobitve $\rho$. Hkrati lahko iz te spletične obnovimo podatek o skupnem lastnem vektorju $v$ in upodobitvi $\chi$.[^10]
 
-  Torej smo vzpostavili bijektivno korespondenco med množico enorazsežnih podupodobitev upodobitve $\rho$ in skupnimi lastnimi vektorji vseh preslikav $\rho(g)$ za $g \in G$.
+  Vzpostavili smo torej bijektivno korespondenco med množico enorazsežnih podupodobitev upodobitve $\rho$ in skupnimi lastnimi vektorji vseh preslikav $\rho(g)$ za $g \in G$.
 
   Poseben primer te korespondence je zadnji zgled. Množico enorazsežnih trivialnih podupodobitev upodobitve $\rho$ lahko identificiramo z množico neničelnih spletičen $\hom_G(\oneone, V) \backslash \{ x \mapsto 0 \}$, ta pa ustreza skupnim lastnim vektorjem $\rho(g)$ za $g \in G$ z lastno vrednostjo $1$, kar je ravno množica $V^G \backslash \{ 0 \}$.
 
 - Naj bo $G$ grupa in $F$ polje. Opazujmo Cayleyjevo upodobitev $\pi_{\Cay}$ na $F[G]$ in desno regularno upodobitev $\rho_{\fun}$ na $\fun(G,F)$. Trdimo, da je $\pi_{\Cay}$ podupodobitev upodobitve $\rho_{\fun}$.
 
-  V ta namen predpišimo linearno preslikavo[^9]
+  V ta namen predpišimo linearno preslikavo[^11]
   ```{math}
   \Phi \colon F[G] \to \fun(G,F), \quad
           e_g \mapsto 1_{g^{-1}}
@@ -311,7 +316,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho \colon G \to \GL(V)$. Denimo, da obstaja v
   ```
   zato je $\Phi$ tudi spletična.
 
-  Kadar je grupa $G$ *končna*, sta prostora $F[G]$ in $\fun(G,F)$ enake razsežnosti, zato sta v tem primeru upodobitvi $\pi_{\Cay}$ in $\rho_{\fun}$ izomorfni. Kadar je grupa $G$ *neskončna*, pa preslikava $\Phi$ vsekakor ni bijektivna.[^10] V tem primeru upodobitvi nista izomorfni.[^11]
+  Kadar je grupa $G$ *končna*, sta prostora $F[G]$ in $\fun(G,F)$ enake razsežnosti, zato sta v tem primeru upodobitvi $\pi_{\Cay}$ in $\rho_{\fun}$ izomorfni. Kadar je grupa $G$ *neskončna*, pa preslikava $\Phi$ vsekakor ni bijektivna.[^12] V tem primeru upodobitvi nista izomorfni.[^13]
 
 </div>
 
@@ -369,7 +374,7 @@ Na ta način dobimo <span class="definicija">direktno vsoto</span> upodobitev $\
 
 <div class="zgled">
 
-- Opazujmo permutacijsko upodobitev $\pi$ grupe $\ZZ/n\ZZ$ na prostoru $\CC[\Omega]$, kjer je $\Omega = \{ 1, 2, \dots, n \}$. Premislili smo že, da ima ta upodobitev $n$ podupodobitev. Za vsak $j \in \Omega$ imamo upodobitev na podprostoru $\CC \cdot f_j$, ki je izomorfna upodobitvi $\chi_{-j}$. Ker je množica vektorjev $\{ f_j \mid j \in \Omega \}$ linearno neodvisna,[^12] lahko permutacijsko upodobitev torej zapišemo kot direktno vsoto $\pi = \bigoplus_{j \in \Omega} \chi_j$.
+- Opazujmo permutacijsko upodobitev $\pi$ grupe $\ZZ/n\ZZ$ na prostoru $\CC[\Omega]$, kjer je $\Omega = \{ 1, 2, \dots, n \}$. Premislili smo že, da ima ta upodobitev $n$ podupodobitev. Za vsak $j \in \Omega$ imamo upodobitev na podprostoru $\CC \cdot f_j$, ki je izomorfna upodobitvi $\chi_{-j}$. Ker je množica vektorjev $\{ f_j \mid j \in \Omega \}$ linearno neodvisna,[^14] lahko permutacijsko upodobitev torej zapišemo kot direktno vsoto $\pi = \bigoplus_{j \in \Omega} \chi_j$.
 
   <div class="domacanaloga">
 
@@ -377,7 +382,7 @@ Na ta način dobimo <span class="definicija">direktno vsoto</span> upodobitev $\
 
   </div>
 
-- Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Delovanje grupe $S_3$ ohranja vektor $e_1 + e_2 + e_3$, zato ima ta upodobitev trivialno enorazsežno podupodobitev, dano s podprostorom $\langle e_1 + e_2 + e_3 \rangle$. Eden od komplementov tega podprostora je $\langle e_1 - e_2, e_2 - e_3 \rangle$, ki je hkrati $S_3$-invariaten podprostor.[^13] Če označimo $u_1 = e_1 - e_2$ in $u_2 = e_2 - e_3$, lahko slednjo upodobitev opišemo s homomorfizmom
+- Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Delovanje grupe $S_3$ ohranja vektor $e_1 + e_2 + e_3$, zato ima ta upodobitev trivialno enorazsežno podupodobitev, dano s podprostorom $\langle e_1 + e_2 + e_3 \rangle$. Eden od komplementov tega podprostora je $\langle e_1 - e_2, e_2 - e_3 \rangle$, ki je hkrati $S_3$-invariaten podprostor.[^15] Če označimo $u_1 = e_1 - e_2$ in $u_2 = e_2 - e_3$, lahko slednjo upodobitev opišemo s homomorfizmom
   ```{math}
   \rho \colon S_3 \to \GL(\langle u_1, u_2 \rangle), \quad
           (1 \ 2) \mapsto \begin{pmatrix} 
@@ -402,6 +407,12 @@ Naj ima grupa $G$ upodobitvi $\rho_1$ in $\rho_2$ na prostorih $V_1$ in $V_2$. T
 \rho_1 \otimes \rho_2 \colon G \to \GL(V_1 \otimes V_2), \quad
     g \mapsto \left( v_1 \otimes v_2 \mapsto \rho_1(g) v_1 \otimes \rho_2(g) v_2 \right).
 ```
+
+<div class="domacanaloga">
+
+Izberimo bazi prostorov $V_1$ in $V_2$. Tenzorski produkti baznih elementov tvorijo bazo prostora $V_1 \otimes V_2$. Kako izgleda matrika $(\rho_1 \otimes \rho_2)(g)$ v odvisnosti od matrik $\rho_1(g)$ in $\rho_2(g)$?
+
+</div>
 
 <div class="zgled">
 
@@ -530,7 +541,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ nad poljem $F$. Naj bo $E
 E \otimes \rho \colon G \to \GL(E \otimes V), \quad
     g \mapsto \left( e \otimes v \mapsto e  \otimes \rho(g) \cdot v \right).
 ```
-Ta postopek konstrukcije prostora $E \otimes V$ imenujemo <span class="definicija">razširitev skalarjev</span>. Dano upodobitev lahko razširimo do ugodnejših skalarjev[^14], lahko pa tudi dano upodobitev nad velikim poljem $E$ gledamo kot razširitev skalarjev neke upodobitve nad preprostejšim poljem $F$.[^15] V tem slednjem primeru rečemo, da je dana upodobitev <span class="definicija">definirana nad poljem</span> $F$. Včasih nam uspe najti celo preprost *podkolobar* polja $F$, nad katerim je definirana dana upodobitev.
+Ta postopek konstrukcije prostora $E \otimes V$ imenujemo <span class="definicija">razširitev skalarjev</span>. Dano upodobitev lahko razširimo do ugodnejših skalarjev[^16], lahko pa tudi dano upodobitev nad velikim poljem $E$ gledamo kot razširitev skalarjev neke upodobitve nad preprostejšim poljem $F$.[^17] V tem slednjem primeru rečemo, da je dana upodobitev <span class="definicija">definirana nad poljem</span> $F$. Včasih nam uspe najti celo preprost *podkolobar* polja $F$, nad katerim je definirana dana upodobitev.
 
 <div class="zgled">
 
@@ -593,7 +604,7 @@ za $g \in G, \ f \in \fun(G,V)$. Po drugi strani na tej množici deluje tudi gru
 ```{math}
 h \cdot f = \left( x \mapsto \rho(h) \cdot f \left( \phi(h^{-1}) \cdot x \right) \right)
 ```
-za $h \in H, \ f \in \fun(G,V)$.[^16] Opazujmo invariantni podprostor
+za $h \in H, \ f \in \fun(G,V)$.[^18] Opazujmo invariantni podprostor
 ```{math}
 \fun(G, V)^H =
     \left\{ f \in \fun(G,V) \mid \forall h \in H, x \in G. \ \rho(h) \cdot f(x) = f \left(\phi(h) \cdot x\right)\right\}.
@@ -606,7 +617,7 @@ Naj bo $G$ grupa z vložitvijo $\phi \colon 1 \to G$ trivialne podgrupe. Vsaka u
 
 </div>
 
-Inducirano upodobitev $\Ind^G_H(\rho) = \fun(G,V)^H$ smo konstruirali z invariantami grupe $H$. To pomeni, da vektorji v tem prostoru niso poljubne funkcije v $\fun(G,V)$, temveč zadoščajo določenim restriktivnim pogojem. Te funkcije so določene z vrednostmi, ki jih zavzamejo na predstavnikih desnih odsekov $\image \phi \backslash G$,[^17] in te vrednosti pripadajo podprostoru $V^{\ker \phi}$.[^18]
+Inducirano upodobitev $\Ind^G_H(\rho) = \fun(G,V)^H$ smo konstruirali z invariantami grupe $H$. To pomeni, da vektorji v tem prostoru niso poljubne funkcije v $\fun(G,V)$, temveč zadoščajo določenim restriktivnim pogojem. Te funkcije so določene z vrednostmi, ki jih zavzamejo na predstavnikih desnih odsekov $\image \phi \backslash G$,[^19] in te vrednosti pripadajo podprostoru $V^{\ker \phi}$.[^20]
 
 <div class="zgled">
 
@@ -627,7 +638,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\phi \colon G 
 
 Najpomembnejši primer indukcije, čeravno ne tudi najbolj preprost, je <span class="definicija">indukcija iz podgrupe končnega indeksa</span>. Naj bo $G$ grupa s podgrupo $H$ in naj bo $\phi$ vložitev $H$ v $G$. Predpostavimo, da je $|G:H| < \infty$. Naj bo $\rho$ upodobitev grupe $H$ na prostoru $V$. Premislimo, kako izgleda upodobitev $\Ind^G_H(\rho)$.
 
-Naj bo $R$ neka izbrana množica predstavnikov desnih odsekov $H$ v $G$. Vsaka funkcija $f \in \fun(G,V)^H$ je določena z vrednostmi $f(r)$ za $r \in R$ in dodatnih restrikcij za te vrednosti ni, zato dobimo izomorfizem vektorskih prostorov[^19]
+Naj bo $R$ neka izbrana množica predstavnikov desnih odsekov $H$ v $G$. Vsaka funkcija $f \in \fun(G,V)^H$ je določena z vrednostmi $f(r)$ za $r \in R$ in dodatnih restrikcij za te vrednosti ni, zato dobimo izomorfizem vektorskih prostorov[^21]
 ```{math}
 \Phi \colon \fun(G,V)^H \to \fun(R,V), \quad
         f \mapsto \left( r \mapsto f(r) \right).
@@ -698,7 +709,7 @@ S tranzitivnostjo indukcije lahko vsako indukcijo vzdolž homomorfizma $\phi \co
 
 ### Adjunkcija restrikcije in indukcije
 
-Indukcija in restrikcija vsekakor nista inverzna funktorja. Na primer, če je $H \leq G$ in $\phi$ vložitev, potem za upodobitev $\rho$ v $\Rep_G$ velja $\deg(\Res^G_H(\rho)) = \deg(\rho)$ in zato $\deg(\Ind^G_H(\Res^G_H(\rho))) = |G:H| \cdot \deg(\rho)$, kar je lahko mnogo večje od $\deg(\rho)$. Sta pa funktorja restrikcije in indukcije vendarle tesno povezana. Tvorita namreč <span class="definicija">adjungiran par</span> funktorjev.[^20]
+Indukcija in restrikcija vsekakor nista inverzna funktorja. Na primer, če je $H \leq G$ in $\phi$ vložitev, potem za upodobitev $\rho$ v $\Rep_G$ velja $\deg(\Res^G_H(\rho)) = \deg(\rho)$ in zato $\deg(\Ind^G_H(\Res^G_H(\rho))) = |G:H| \cdot \deg(\rho)$, kar je lahko mnogo večje od $\deg(\rho)$. Sta pa funktorja restrikcije in indukcije vendarle tesno povezana. Tvorita namreč <span class="definicija">adjungiran par</span> funktorjev.[^22]
 
 <div class="trditev">
 
@@ -724,7 +735,12 @@ Za vektor $v \in V$ definirajmo
 ```{math}
 \Psi(v) = \left( x \mapsto \Phi(\rho(x) \cdot v) \right) \in \fun(G,W).
 ```
-Ni težko (je pa sitno) preveriti, da opisano prirejanje vzpostavi izomorfizem med prostoroma spletičen $\hom_H(V,W)$ in $\hom_G(V,\fun(G,W)^H)$.
+
+<div class="domacanaloga">
+
+Preveri, da prirejanje $\Phi \mapsto \Psi$ vzpostavi izomorfizem med prostoroma spletičen $\hom_H(V,W)$ in $\hom_G(V,\fun(G,W)^H)$.
+
+</div>
 
 </div>
 
@@ -767,42 +783,46 @@ Premisli, kako se restrikcija in indukcija ujameta z dualom, direktno vsoto in t
 
 </div>
 
-[^1]: Prostor $F[G]$ je vektorski prostor nad $F$, generiran z množico $G$. Običajno mu pravimo <span class="definicija">grupna algebra</span>, saj ta prostor na naraven način podeduje operacijo množenja iz grupe $G$.
+[^1]: Končno polje ostankov celih števil pri deljenju s $p$ bomo označili s $\FF_p$.
 
-[^2]: Angleško *intertwiner*.
+[^2]: Ta zapis odraža dejstvo, da je upodobitev pravzaprav delovanje grupe $G$ na množici $V$ z dodatnimi lastnostmi. Za vse $g, h \in G$ in $v \in V$ velja $g \cdot (h \cdot v) = (gh) \cdot v$, ker gre za delovanje grupe. Po drugi strani pa za vse $g,h \in G$, $v,w \in V$ in $\alpha \in F$ velja še $g \cdot (v + w) = g \cdot v + g \cdot w$ in $g \cdot (\alpha v) = \alpha (g \cdot v)$, ker je delovanje linearno.
 
-[^3]: Z opustitvijo eksplicitnih oznak za delovanja lahko ta pogoj pišemo krajše kot $\Phi(gv) = g\Phi(v)$.
+[^3]: Prostor $F[G]$ je vektorski prostor nad $F$, generiran z množico $G$. Običajno mu pravimo <span class="definicija">grupna algebra</span>, saj ta prostor na naraven način podeduje operacijo množenja iz grupe $G$.
 
-[^4]: Generator $\bar 1 = 1 + n\ZZ \in \ZZ/n\ZZ$ deluje kot cikel $(1 \ 2 \ \cdots \ n)$.
+[^4]: Angleško *intertwiner*. Simpatičen prevod je po Francetu Križaniču.
 
-[^5]: Pozor, karakteristična funkcija je zasidrana pri *inverzu* elementa $\bar x$ v $\ZZ/n\ZZ$.
+[^5]: Z opustitvijo eksplicitnih oznak za delovanja lahko ta pogoj pišemo krajše kot $\Phi(gv) = g\Phi(v)$.
 
-[^6]: Na primer, *precej dobro* bomo opisali upodobitve poljubne končne grupe nad poljem kompleksnih števil.
+[^6]: Generator $\bar 1 = 1 + n\ZZ \in \ZZ/n\ZZ$ deluje kot cikel $(1 \ 2 \ \cdots \ n)$.
 
-[^7]: Kadar je $\chi(g) = 1$ za vsak $g \in G$, je ta upodobitev izomorfna $\oneone$. Kadar je $\chi(g) \neq 1$ za vsaj kak $g \in G$, pa ta upodobitev *ni* trivialna.
+[^7]: Pozor, karakteristična funkcija je zasidrana pri *inverzu* elementa $\bar x$ v $\ZZ/n\ZZ$.
 
-[^8]: Namreč, $v = \Phi(1)$ in $\chi(g) = \rho(g) \cdot 1$.
+[^8]: Na primer, *precej dobro* bomo opisali upodobitve poljubne končne grupe nad poljem kompleksnih števil.
 
-[^9]: Poseben primer te preslikave smo videli za grupo $\ZZ/n\ZZ$, kjer smo premislili, da je celo bijektivna.
+[^9]: Kadar je $\chi(g) = 1$ za vsak $g \in G$, je ta upodobitev izomorfna $\oneone$. Kadar je $\chi(g) \neq 1$ za vsaj kak $g \in G$, pa ta upodobitev *ni* trivialna.
 
-[^10]: Slika $\image \Phi$ namreč sestoji iz funkcij, ki so neničelne le v končno mnogo elementih grupe $G$.
+[^10]: Namreč, $v = \Phi(1)$ in $\chi(g) = \rho(g) \cdot 1$.
 
-[^11]: To sledi na primer iz dejstva, da prostora $F[G]^G$ in $\fun(G,F)^G$ nista izomorfna.
+[^11]: Poseben primer te preslikave smo videli za grupo $\ZZ/n\ZZ$, kjer smo premislili, da je celo bijektivna.
 
-[^12]: Prehodna matrika iz baze $e_i$ v bazo $f_j$ je ravno Vandermondova matrika.
+[^12]: Slika $\image \Phi$ namreč sestoji iz funkcij, ki so neničelne le v končno mnogo elementih grupe $G$.
 
-[^13]: Na primer, generator $(1 \ 3 \ 2)$ preslika vektor $e_1 - e_2$ v $e_3 - e_1$, kar lahko zapišemo kot $-(e_1 - e_2) - (e_2 - e_3)$.
+[^13]: To sledi na primer iz dejstva, da prostora $F[G]^G$ in $\fun(G,F)^G$ nista izomorfna.
 
-[^14]: Na primer polja kompleksnih števil.
+[^14]: Prehodna matrika iz baze $e_i$ v bazo $f_j$ je ravno Vandermondova matrika.
 
-[^15]: Na primer $E = \CC$ in $F = \QQ$.
+[^15]: Na primer, generator $(1 \ 3 \ 2)$ preslika vektor $e_1 - e_2$ v $e_3 - e_1$, kar lahko zapišemo kot $-(e_1 - e_2) - (e_2 - e_3)$.
 
-[^16]: Delovanje $H$ na $\fun(G,V)$ je konstruirano analogno delovanju grupe na prostoru linearnih preslikav.
+[^16]: Na primer polja kompleksnih števil.
 
-[^17]: Če je $R$ množica predstavnikov desnih odsekov $\image \phi$ v $G$ in če že poznamo vrednosti $f \in \fun(G,V)$ na množici $R$, potem lahko vsako drugo vrednost $f$ izračunamo kot $f(x \cdot r) = \rho(y) \cdot f(r)$ za $x = \phi(y) \in \image \phi$.
+[^17]: Na primer $E = \CC$ in $F = \QQ$.
 
-[^18]: Če je $f \in \fun(G,V)^H$, potem pogoj $H$-invariantnosti uporabimo z elementi $h \in \ker \phi$ in dobimo $\rho(h) \cdot f(x) = f(x)$, torej je $f \in V^h$.
+[^18]: Delovanje $H$ na $\fun(G,V)$ je konstruirano analogno delovanju grupe na prostoru linearnih preslikav.
 
-[^19]: Množico funkcij $\fun(R,V)$ lahko vidimo kot direktno vsoto prostorov $V$, indeksirano z množico $R$.
+[^19]: Če je $R$ množica predstavnikov desnih odsekov $\image \phi$ v $G$ in če že poznamo vrednosti $f \in \fun(G,V)$ na množici $R$, potem lahko vsako drugo vrednost $f$ izračunamo kot $f(x \cdot r) = \rho(y) \cdot f(r)$ za $x = \phi(y) \in \image \phi$.
 
-[^20]: V nadaljevanju bomo spoznali presenetljivo uporabnost tega navidez naključnega dejstva.
+[^20]: Če je $f \in \fun(G,V)^H$, potem pogoj $H$-invariantnosti uporabimo z elementi $h \in \ker \phi$ in dobimo $\rho(h) \cdot f(x) = f(x)$, torej je $f \in V^h$.
+
+[^21]: Množico funkcij $\fun(R,V)$ lahko vidimo kot direktno vsoto prostorov $V$, indeksirano z množico $R$.
+
+[^22]: V nadaljevanju bomo spoznali presenetljivo uporabnost tega navidez naključnega dejstva.
