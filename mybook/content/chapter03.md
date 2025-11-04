@@ -944,7 +944,7 @@ to je <span class="definicija">Hilbert-Schmidtov skalarni produkt</span>. Parsev
 
 [^11]: Na podoben način lahko določimo tudi upodobitve same, ne le karakterje.
 
-[^12]: GAP je programski jezik, ki pride zelo prav pri delu z grupami, saj ima implementiranih veliko standardnih konstrukcij grup in funkcij za delo z njimi. Dostopen je prosto na naslovu <https://www.gap-system.org>.
+[^12]: GAP je programski jezik, ki pride zelo prav pri delu z grupami, saj ima implementiranih veliko standardnih konstrukcij grup in funkcij za delo z njimi. Dostopen je prosto na naslovu <https://www.gap-system.org>. Osnovna načela za delo z upodobitvami končnih grup lahko najdeš v [Moravčevi skripti](https://users.fmf.uni-lj.si/moravec/Papers/upodob_moravec.pdf).
 
 [^13]: Iz argumenta vidimo, da velja celo naslednje. Končna grupa $G$ je enostavna, če in samo če je vsaka njena netrivialna nerazcepna upodobitev zvesta.
 

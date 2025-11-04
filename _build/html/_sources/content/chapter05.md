@@ -11,7 +11,7 @@ Avstralski matematik Geordie Williamson je na svojem [plenarnem predavanju](http
 
 *The idea is that groups in mathematics are everywhere, but groups are nonlinear objects and are rather complicated. We attempt to linearize in some way by taking, for example, actions on a space of functions. We understand what can happen in the linear world by representation theory. Then we hope to go back to our original problem.*
 
-V tem poglavju si bomo pogledali nekaj konkretnih aplikacij teorije upodobitev, ki na prvi pogled nimajo nobene povezave z upodobitvami, nazadnje pa je za njihovo razumevanje ključna. Pričeli bomo z abelovimi grupami. V tem primeru aplikacijam teorije upodobitev ponavadi rečemo <span class="definicija">harmonična analiza</span>. To zgodbo bomo potem razširili še v nekomutativen svet.
+V tem poglavju si bomo pogledali nekaj konkretnih uporab teorije upodobitev, ki na prvi pogled nimajo nobene povezave z upodobitvami, nazadnje pa je za njihovo razumevanje ključna. Pričeli bomo z abelovimi grupami. V tem primeru uporabam teorije upodobitev ponavadi rečemo <span class="definicija">harmonična analiza</span>. To zgodbo bomo potem razširili še v nekomutativen svet.
 
 ## Aritmetična zaporedja
 
@@ -215,7 +215,7 @@ Povzemimo. Če množica $A$ gostote $\delta$ nima aritmetičnih zaporedij dolži
 
 Mnogo dela po Rothovem izreku je bilo posvečenega izboljšanju meje o gostoti, ki še zagotovi obstoj aritmetičnih zaporedij dolžine $3$. Večina izboljšav spodnje meje je s sabo prinesla nove ideje, uporabne tudi za reševanje kakšnih drugih problemov. Najsodobnejši rezultat v zvezi s tem je prebojen članek [(Bloom-Sisask 2020)](https://www.quantamagazine.org/landmark-math-proof-clears-hurdle-in-top-erdos-conjecture-20200803/), kjer avtorja dokažeta, da obstajata konstanti $C,c$, tako da ima vsaka množica $A \subseteq \{ 1, 2, \dots, n \}$ gostote vsaj $C / (\log n)^{1 + c}$ aritmetično zaporedje dolžine $3$. Ta meja se torej znebi dvojnega logaritma in uvede minimalen eksponent k logaritmu, zato je bistveno manjša restrikcija na gostoto.[^4]
 
-Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiševa je število praštevil do $n$ vsaj $C n / \log n$, zato imajo praštevila v $\{1,2,\dots,n\}$ gostoto vsaj $C / \log n$ in na njih lahko apliciramo posplošeni Rothov izrek. Ker lahko vselej tudi izpustimo prvih nekaj praštevil, torej sklepamo, da množica praštevil vsebuje neskončno mnogo aritmetičnih zaporedij dolžine $3$. Poudarimo konceptualno pomembno dejstvo, da smo ta rezultat izpeljali zgolj zaradi same gostote praštevil in ne zaradi kakršne koli druge njihove lastnosti. Nenazadnje je slogan izvirnega Rothovega izreka ta, da lahko najdemo v vsaki dovolj gosti množici strukturo.
+Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiševa je število praštevil do $n$ vsaj $C n / \log n$, zato imajo praštevila v $\{1,2,\dots,n\}$ gostoto vsaj $C / \log n$ in na njih lahko uporabimo posplošeni Rothov izrek. Ker lahko vselej tudi izpustimo prvih nekaj praštevil, torej sklepamo, da množica praštevil vsebuje neskončno mnogo aritmetičnih zaporedij dolžine $3$. Poudarimo konceptualno pomembno dejstvo, da smo ta rezultat izpeljali zgolj zaradi same gostote praštevil in ne zaradi kakršne koli druge njihove lastnosti. Nenazadnje je slogan izvirnega Rothovega izreka ta, da lahko najdemo v vsaki dovolj gosti množici strukturo.
 
 <div class="odprtproblem">
 

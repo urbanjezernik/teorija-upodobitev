@@ -21,6 +21,11 @@ P = S_{\lambda_1} \times S_{\lambda_2} \times \cdots \times S_{\lambda_k}.
 ```
 Razčlenitev $\lambda$ si lahko predstavljamo kot zaporedje vrstic diagrama, v katerem je $\lambda_1$ škatlic v $1$. vrstici, $\lambda_2$ škatlic v $2$. vrstici, …, $\lambda_k$ škatlic v $k$. vrstici. Pri tem so vrstice poravnane na levo. Takemu shematičnemu prikazu razčlenitve pravimo <span class="definicija">Youngov diagram</span>. Diagram ima $n$ škatlic, v katere poljubno vpišemo števila od $1$ do $n$. Tako izpolnjenemu diagramu pravimo <span class="definicija">Youngova tabela</span>. Vsaka Youngova tabela nam pravzaprav ponuja vložitev grupe $P$ v $S_n$. Fiksirajmo standardno vložitev, ki ustreza temu, da v škatlice vpišemo po vrsti števila od $1$ do $n$, začenši zgoraj levo in hodeč po $1$. vrstici, nato po $2$. vrstici in tako naprej. Grupa $P$, standardno vložena v $S_n$, predstavlja ravno vse permutacije, ki ohranjajo *vrstice* tabele.
 
+<figure>
+<img src="img/img_young.png" />
+<figcaption>Youngov diagram razčlenitve <span class="math inline"><em>λ</em> = (5, 3, 1)</span> in dve Youngovi tabeli. Druga tabela je standardna.</figcaption>
+</figure>
+
 Inducirajmo trivialno upodobitev iz $P$ na $S_n$. V razdelku o indukciji smo spoznali, da lahko $\Ind^{S_n}_{P}(\oneone)$ interpretiramo kot permutacijsko upodobitev $S_n$ na desnih odsekih podgrupe $P$. To interpretacijo lahko vložimo v prostor funkcij $\fun(S_n, \CC)$. Namesto množice $P$ lahko namreč opazujemo indikatorsko funkcijo $1_P$. Element $g \in S_n$ na njej deluje kot $\rho_{\fun}(g) \cdot 1_P = 1_{P g^{-1}}$, se pravi kot permutacija desnih odsekov. Na ta način upodobitveni prostor upodobitve $\Ind^{S_n}_{P}(\oneone)$ vidimo kot
 ```{math}
 \langle \rho_{\fun}(g) \cdot 1_{P} \mid g \in S_n \rangle.
@@ -308,7 +313,14 @@ Dokaz temelji na poznavanju osnov teorije simetričnih funkcij, ki jih ponavadi 
   ```{math}
   \lambda = (n-s, 1, 1, \dots, 1)
   ```
-  za nek $0 \leq s \leq n-1$. Taki razčlenitvi pravimo <span class="definicija">kljuka</span>. Zanjo je $k = s+1$ in $(\ell_1, \ell_2, \dots, \ell_k) = (n, k-1, k-2, \dots, 1)$, od koder ni težko izračunati, da edini relevanten monom izhaja iz permutacije $\sigma = (1 \ 2 \ \cdots \ k)$, zato je nazadnje
+  za nek $0 \leq s \leq n-1$. Takšni razčlenitvi pravimo <span class="definicija">kljuka</span>.
+
+  <figure>
+  <img src="img/img_kljuka.png" style="width:33.0%" />
+  <figcaption>Kljuka <span class="math inline"><em>λ</em> = (7, 1, 1)</span>.</figcaption>
+  </figure>
+
+  Za kljuko je $k = s+1$ in $(\ell_1, \ell_2, \dots, \ell_k) = (n, k-1, k-2, \dots, 1)$, od koder ni težko izračunati, da edini relevanten monom izhaja iz permutacije $\sigma = (1 \ 2 \ \cdots \ k)$, zato je nazadnje
   ```{math}
   \chi_{\lambda}(C_{n^1}) = \sgn(\sigma) = (-1)^s.
   ```
@@ -323,6 +335,11 @@ Izračunaj vrednost poljubnega karakterja $\chi_{\lambda}$ v konjugiranostnem ra
 </div>
 
 S Frobeniusovo formulo lahko določimo stopnje nerazcepnih upodobitev simetrične grupe. Za to bomo potrebovali koncept kljuke, ki je malo splošnejši od tiste, ki smo jo videli v zadnjem zgledu. Opazujmo Youngov diagram razčlenitve $\lambda$. Za vsako celico $(i,j)$ diagrama, kjer $i$ predstavlja vrstico in $j$ stopec, je <span class="definicija">kljuka</span> $H_{\lambda}(i,j)$ množica tistih celic, ki so desno ali pod celico $(i,j)$, vključivši celico $(i,j)$.[^8] <span class="definicija">Dolžina kljuke</span> $H_{\lambda}(i,j)$ je enaka številu celic v kljuki, se pravi $|H_{\lambda}(i,j)|$.
+
+<figure>
+<img src="img/img_dolzine_kljuk.png" style="width:33.0%" />
+<figcaption>V celicah Youngovega diagrama razčlenitve <span class="math inline"><em>λ</em> = (5, 3, 1)</span> so zapisane dolžine kljuk. Označena je kljuka <span class="math inline"><em>H</em><sub><em>λ</em></sub>(1, 3)</span>.</figcaption>
+</figure>
 
 <div class="posledica">
 

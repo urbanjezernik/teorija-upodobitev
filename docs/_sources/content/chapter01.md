@@ -471,7 +471,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ nad poljem $F$. Tvorimo l
 ```
 za $\lambda \in V^*, \ v \in V$. Na ta način dobimo <span class="definicija">dualno upodobitev</span> $\rho^*$ upodobitve $\rho$.
 
-Za funkcional $\lambda \in V^*$ in vektor $v \in V$ včasih uporabimo oznako $\langle \lambda, v \rangle$ za aplikacijo $\lambda(v)$. S to oznako lahko zapišemo definicijo dualne upodobitve kot
+Za funkcional $\lambda \in V^*$ in vektor $v \in V$ včasih uporabimo oznako $\langle \lambda, v \rangle$ za uporabo $\lambda(v)$. S to oznako lahko zapišemo definicijo dualne upodobitve kot
 ```{math}
 \langle \rho^*(g) \cdot \lambda, v \rangle = \langle \lambda, \rho(g^{-1}) \cdot v \rangle.
 ```

@@ -317,7 +317,7 @@ Najprej bomo vzpostavili temelje teorije upodobitev (osnovne definicije in zgled
 
 \subsubsection{Literatura}
 
-Pri predstavitvi temeljev teorije upodobitev uporabljamo jezik homomorfizmov grup (in ne modulov), tako da porabimo več časa za osnove, a je snov predstavljena bolj konkretno. To pride prav predvsem pri razstavljanju dane upodobitve na nerazcepne podupodobitve, kjer sledimo pristopu Kowalskega in opazujemo matrične koeficiente. Karakterje obdelamo v jeziku nekomutativne Fourierove transformacije kot Diaconis. S tem tudi pripravimo teren za kasnejše aplikacije teorije upodobitev. Omenimo kolobar virtualnih karakterjev in kot Serre dokažemo Artinov izrek. Razširjena zgleda upodobitev simetričnih grup in splošnih linearnih grup nad končnim poljem pretežno izvedemo s pomočjo monografije Fultona in Harrisa. Pri upodobitvah simetrične grupe določene aspekte izrazimo s Fourierovo transformacijo, pri linearnih grupah pa sledeč Bushnell in Henniart nekoliko bolj naravno predstavimo ostne upodobitve. V aplikacijah teorije upodobitev predstavimo Rothov izrek po Gowersovo in raziščemo soroden problem za nekomutativne grupe, kjer analitične argumente napravimo kot Eberhard. Pri prepoznavanju komutatorjev nam prav pridejo razvita Fourierova orodja, slučajne sprehode pa raziščemo podobno kot Diaconis. Kompaktne grupe in povezavo s klasično Fourierovo analizo črpamo iz Kowalskega, upodobitve Liejevih grup pa prikažemo kot Fulton in Harris, pri čemer se za integriranje Liejevih homomorfizmov naslonimo na Hallovo knjigo. Diskretne grupe obdelamo sledeč Conradu in Putmanu, razliko med klasičnimi in $p$-adičnimi Liejevimi grupami prikažemo kot Choiy.
+Pri predstavitvi temeljev teorije upodobitev uporabljamo jezik homomorfizmov grup (in ne modulov), tako da porabimo več časa za osnove, a je snov predstavljena bolj konkretno. To pride prav predvsem pri razstavljanju dane upodobitve na nerazcepne podupodobitve, kjer sledimo pristopu Kowalskega in opazujemo matrične koeficiente. Karakterje obdelamo v jeziku nekomutativne Fourierove transformacije kot Diaconis. S tem tudi pripravimo teren za kasnejše uporabe teorije upodobitev. Omenimo kolobar virtualnih karakterjev in kot Serre dokažemo Artinov izrek. Razširjena zgleda upodobitev simetričnih grup in splošnih linearnih grup nad končnim poljem pretežno izvedemo s pomočjo monografije Fultona in Harrisa. Pri upodobitvah simetrične grupe določene aspekte izrazimo s Fourierovo transformacijo, pri linearnih grupah pa sledeč Bushnell in Henniart nekoliko bolj naravno predstavimo ostne upodobitve. V uporabah teorije upodobitev predstavimo Rothov izrek po Gowersovo in raziščemo soroden problem za nekomutativne grupe, kjer analitične argumente napravimo kot Eberhard. Pri prepoznavanju komutatorjev nam prav pridejo razvita Fourierova orodja, slučajne sprehode pa raziščemo podobno kot Diaconis. Kompaktne grupe in povezavo s klasično Fourierovo analizo črpamo iz Kowalskega, upodobitve Liejevih grup pa prikažemo kot Fulton in Harris, pri čemer se za integriranje Liejevih homomorfizmov naslonimo na Hallovo knjigo. Diskretne grupe obdelamo sledeč Conradu in Putmanu, razliko med klasičnimi in $p$-adičnimi Liejevimi grupami prikažemo kot Choiy.
 
 \begin{itemize}
 \item {\literatura E. Kowalski, {\em \href{https://people.math.ethz.ch/~kowalski/representation-theory.pdf}{An Introduction to the Representation Theory of Groups}}, American Mathematical Society, 2014.} 
@@ -780,7 +780,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ nad poljem $F$. Tvorimo l
 \]
 za $\lambda \in V^*, \ v \in V$. Na ta način dobimo {\definicija dualno upodobitev} $\rho^*$ upodobitve $\rho$. 
 
-Za funkcional $\lambda \in V^*$ in vektor $v \in V$ včasih uporabimo oznako $\langle \lambda, v \rangle$ za aplikacijo $\lambda(v)$. S to oznako lahko zapišemo definicijo dualne upodobitve kot
+Za funkcional $\lambda \in V^*$ in vektor $v \in V$ včasih uporabimo oznako $\langle \lambda, v \rangle$ za uporabo $\lambda(v)$. S to oznako lahko zapišemo definicijo dualne upodobitve kot
 \[
     \langle \rho^*(g) \cdot \lambda, v \rangle = \langle \lambda, \rho(g^{-1}) \cdot v \rangle.
 \]
@@ -2110,7 +2110,7 @@ S to karakterizacijo izotipičnih komponent lahko opišemo algoritem za izračun
 \[
     \tr(\rho_{\fun}(x) |_W) = \sqrt{\dim(W)} \cdot \chi_{\pi}(x).
 \]
-Iz izračunane sledi torej lahko določimo vrednost pripadajočega karakterja v predstavnikih konjugiranostnih razredov. Implementacija predstavljenega algoritma za izračun tabele karakterjev nad $\CC$ v programskem jeziku GAP\footnote{GAP~je programski jezik, ki pride zelo prav pri delu z grupami, saj ima implementiranih veliko standardnih konstrukcij grup in funkcij za delo z njimi. Dostopen je prosto na naslovu \url{https://www.gap-system.org}.}~je dostopna \href{https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g}{tukaj}.
+Iz izračunane sledi torej lahko določimo vrednost pripadajočega karakterja v predstavnikih konjugiranostnih razredov. Implementacija predstavljenega algoritma za izračun tabele karakterjev nad $\CC$ v programskem jeziku GAP\footnote{GAP~je programski jezik, ki pride zelo prav pri delu z grupami, saj ima implementiranih veliko standardnih konstrukcij grup in funkcij za delo z njimi. Dostopen je prosto na naslovu \url{https://www.gap-system.org}. Osnovna načela za delo z upodobitvami končnih grup lahko najdeš v \href{https://users.fmf.uni-lj.si/moravec/Papers/upodob_moravec.pdf}{Moravčevi skripti}.}~je dostopna \href{https://github.com/urbanjezernik/teorija-upodobitev/blob/main/racunanje-tabele.g}{tukaj}.
 
 \begin{zgled}
 Opazujmo alternirajočo grupo $A_5$ nad poljem $\CC$. Z opisanim algoritmom hitro izračunamo njeno tabelo karakterjev.
@@ -2369,6 +2369,12 @@ Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$. Ne
     P = S_{\lambda_1} \times S_{\lambda_2} \times \cdots \times S_{\lambda_k}.
 \]
 Razčlenitev $\lambda$ si lahko predstavljamo kot zaporedje vrstic diagrama, v katerem je $\lambda_1$ škatlic v $1$. vrstici, $\lambda_2$ škatlic v $2$. vrstici, \dots, $\lambda_k$ škatlic v $k$. vrstici. Pri tem so vrstice poravnane na levo. Takemu shematičnemu prikazu razčlenitve pravimo {\definicija Youngov diagram}. Diagram ima $n$ škatlic, v katere poljubno vpišemo števila od $1$ do $n$. Tako izpolnjenemu diagramu pravimo {\definicija Youngova tabela}. Vsaka Youngova tabela nam pravzaprav ponuja vložitev grupe $P$ v $S_n$. Fiksirajmo standardno vložitev, ki ustreza temu, da v škatlice vpišemo po vrsti števila od $1$ do $n$, začenši zgoraj levo in hodeč po $1$. vrstici, nato po $2$. vrstici in tako naprej. Grupa $P$, standardno vložena v $S_n$, predstavlja ravno vse permutacije, ki ohranjajo \emph{vrstice} tabele. 
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\textwidth]{img/img_young.png}
+    \caption{Youngov diagram razčlenitve $\lambda = (5, 3, 1)$ in dve Youngovi tabeli. Druga tabela je standardna.}
+\end{figure}
 
 Inducirajmo trivialno upodobitev iz $P$ na $S_n$. V razdelku o indukciji smo spoznali, da lahko $\Ind^{S_n}_{P}(\oneone)$ interpretiramo kot permutacijsko upodobitev $S_n$ na desnih odsekih podgrupe $P$. To interpretacijo lahko vložimo v prostor funkcij $\fun(S_n, \CC)$. Namesto množice $P$ lahko namreč opazujemo indikatorsko funkcijo $1_P$. Element $g \in S_n$ na njej deluje kot
 $\rho_{\fun}(g) \cdot 1_P = 1_{P g^{-1}}$, se pravi kot permutacija desnih odsekov. Na ta način upodobitveni prostor upodobitve $\Ind^{S_n}_{P}(\oneone)$ vidimo kot 
@@ -2639,7 +2645,15 @@ Oglejmo si zdaj spremenljivko $x_2$. Da bo obstajal kak relevanten monom, mora v
 \[
     \lambda = (n-s, 1, 1, \dots, 1)
 \]
-za nek $0 \leq s \leq n-1$. Taki razčlenitvi pravimo {\definicija kljuka}. Zanjo je $k = s+1$ in $(\ell_1, \ell_2, \dots, \ell_k) = (n, k-1, k-2, \dots, 1)$, od koder ni težko izračunati, da edini relevanten monom izhaja iz permutacije $\sigma = (1 \ 2 \ \cdots \ k)$, zato je nazadnje
+za nek $0 \leq s \leq n-1$. Takšni razčlenitvi pravimo {\definicija kljuka}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.33\textwidth]{img/img_kljuka.png}
+    \caption{Kljuka $\lambda = (7,1,1)$.}
+\end{figure}
+
+Za kljuko je $k = s+1$ in $(\ell_1, \ell_2, \dots, \ell_k) = (n, k-1, k-2, \dots, 1)$, od koder ni težko izračunati, da edini relevanten monom izhaja iz permutacije $\sigma = (1 \ 2 \ \cdots \ k)$, zato je nazadnje
 \[
     \chi_{\lambda}(C_{n^1}) = \sgn(\sigma) = (-1)^s.
 \]
@@ -2652,6 +2666,12 @@ Vrednost karakterja v dolgem ciklu je torej neničelna le za kljuke, v katerih p
 \end{domacanaloga}
 
 S Frobeniusovo formulo lahko določimo stopnje nerazcepnih upodobitev simetrične grupe. Za to bomo potrebovali koncept kljuke, ki je malo splošnejši od tiste, ki smo jo videli v zadnjem zgledu. Opazujmo Youngov diagram razčlenitve $\lambda$. Za vsako celico $(i,j)$ diagrama, kjer $i$ predstavlja vrstico in $j$ stopec, je {\definicija kljuka} $H_{\lambda}(i,j)$ množica tistih celic, ki so desno ali pod celico $(i,j)$, vključivši celico $(i,j)$.\footnote{$H_{\lambda}(i,j)$ torej sestoji iz tistih celic $(a,b)$, za katere je $a = i$ in $b \geq j$ ali $b = j$ in $a \geq i$.} {\definicija Dolžina kljuke} $H_{\lambda}(i,j)$ je enaka številu celic v kljuki, se pravi $|H_{\lambda}(i,j)|$.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.33\textwidth]{img/img_dolzine_kljuk.png}
+    \caption{V celicah Youngovega diagrama razčlenitve $\lambda = (5,3,1)$ so zapisane dolžine kljuk. Označena je kljuka $H_{\lambda}(1,3)$.}
+\end{figure}
 
 \begin{posledica}[formula o dolžinah kljuk]
 Naj bo $\lambda$ razčlenitev $n$. Tedaj je
@@ -3282,7 +3302,7 @@ Avstralski matematik Geordie Williamson je na svojem \href{https://www.youtube.c
 
 \smallskip
 
-V tem poglavju si bomo pogledali nekaj konkretnih aplikacij teorije upodobitev, ki na prvi pogled nimajo nobene povezave z upodobitvami, nazadnje pa je za njihovo razumevanje ključna. Pričeli bomo z abelovimi grupami. V tem primeru aplikacijam teorije upodobitev ponavadi rečemo {\definicija harmonična analiza}. To zgodbo bomo potem razširili še v nekomutativen svet.
+V tem poglavju si bomo pogledali nekaj konkretnih uporab teorije upodobitev, ki na prvi pogled nimajo nobene povezave z upodobitvami, nazadnje pa je za njihovo razumevanje ključna. Pričeli bomo z abelovimi grupami. V tem primeru uporabam teorije upodobitev ponavadi rečemo {\definicija harmonična analiza}. To zgodbo bomo potem razširili še v nekomutativen svet.
 
 \section{Aritmetična zaporedja}
 
@@ -3480,7 +3500,7 @@ Povzemimo. Če množica $A$ gostote $\delta$ nima aritmetičnih zaporedij dolži
 
 Mnogo dela po Rothovem izreku je bilo posvečenega izboljšanju meje o gostoti, ki še zagotovi obstoj aritmetičnih zaporedij dolžine $3$. Večina izboljšav spodnje meje je s sabo prinesla nove ideje, uporabne tudi za reševanje kakšnih drugih problemov. Najsodobnejši rezultat v zvezi s tem je prebojen članek \href{https://www.quantamagazine.org/landmark-math-proof-clears-hurdle-in-top-erdos-conjecture-20200803/}{(Bloom-Sisask 2020)}, kjer avtorja dokažeta, da obstajata konstanti $C,c$, tako da ima vsaka množica $A \subseteq \{ 1, 2, \dots, n \}$ gostote vsaj $C / (\log n)^{1 + c}$ aritmetično zaporedje dolžine $3$. Ta meja se torej znebi dvojnega logaritma in uvede minimalen eksponent k logaritmu, zato je bistveno manjša restrikcija na gostoto.\footnote{Iskanje optimalnih restrikcij na gostoto je predstavljeno v \href{https://repozitorij.uni-lj.si/IzpisGradiva.php?id=155586&lang=slv}{(Bone 2024)}.}
 
-Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiševa je število praštevil do $n$ vsaj $C n / \log n$, zato imajo praštevila v $\{1,2,\dots,n\}$ gostoto vsaj $C / \log n$ in na njih lahko apliciramo posplošeni Rothov izrek. Ker lahko vselej tudi izpustimo prvih nekaj praštevil, torej sklepamo, da množica praštevil vsebuje neskončno mnogo aritmetičnih zaporedij dolžine $3$. Poudarimo konceptualno pomembno dejstvo, da smo ta rezultat izpeljali zgolj zaradi same gostote praštevil in ne zaradi kakršne koli druge njihove lastnosti. Nenazadnje je slogan izvirnega Rothovega izreka ta, da lahko najdemo v vsaki dovolj gosti množici strukturo.
+Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiševa je število praštevil do $n$ vsaj $C n / \log n$, zato imajo praštevila v $\{1,2,\dots,n\}$ gostoto vsaj $C / \log n$ in na njih lahko uporabimo posplošeni Rothov izrek. Ker lahko vselej tudi izpustimo prvih nekaj praštevil, torej sklepamo, da množica praštevil vsebuje neskončno mnogo aritmetičnih zaporedij dolžine $3$. Poudarimo konceptualno pomembno dejstvo, da smo ta rezultat izpeljali zgolj zaradi same gostote praštevil in ne zaradi kakršne koli druge njihove lastnosti. Nenazadnje je slogan izvirnega Rothovega izreka ta, da lahko najdemo v vsaki dovolj gosti množici strukturo.
 
 \begin{odprtproblem}
 Ali je mogoče z ustrezno posplošitvijo Rothovega izreka dokazati, da praštevila vsebujejo aritmetična zaporedja dolžine $k$ za vsak $k \geq 3$? Obstoj takih zaporedij je sicer znan iz \href{https://en.wikipedia.org/wiki/Green–Tao_theorem}{(Green-Tao 2004)}, ki temelji na razširitvi Szemerédijevega izreka, a ne v smeri nižanja meje gostote, temveč v uporabi izreka na specifičnih redkih podmnožicah.
@@ -4580,8 +4600,14 @@ na enak način izračunamo
     E_k \cdot e_i = (k-i) e_{i+1}, \quad
     F_k \cdot e_i = i e_{i-1}.
 \]
-Element $H_k$ torej deluje diagonalno na $\CC[X,Y]_k$, pri čemer ima vektor $e_k = X^k$ največjo lastno vrednost, in sicer $k$. Ta vektor je v jedru preslikave $E_k$, z zaporednimi aplikacijami preslikave $F_k$ pa iz njega po vrsti dobimo vse ostale bazne vektorje $e_i$ za $0 \leq i \leq k$.
+Element $H_k$ torej deluje diagonalno na $\CC[X,Y]_k$, pri čemer ima vektor $e_k = X^k$ največjo lastno vrednost, in sicer $k$. Ta vektor je v jedru preslikave $E_k$, z zaporednimi uporabami preslikave $F_k$ pa iz njega po vrsti dobimo vse ostale bazne vektorje $e_i$ za $0 \leq i \leq k$.
 \end{zgled}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{img/img_sl2irrep.png}
+    \caption{Prikaz delovanja elementov $E_k, H_k, F_k$ v upodobitvi $\rho_k$.}
+\end{figure}
 
 \subsubsection{Liejeva algebra}
 
@@ -4641,7 +4667,7 @@ za vse tangentne vektorje $X,Y,Z$. Abstraktnim vektorskim prostorom s tako binar
 Tangentna prostora $\slfrak_2(\CC)$ in $\glfrak_2(\CC)$ sta torej Liejevi algebri in odvod upodobitve $D_I \rho$ je Liejev homomorfizem, na katerega lahko gledamo kot na Liejevo upodobitev Liejeve algebre $\slfrak_2(\CC)$. Vsaka upodobitev grupe $\SL_2(\CC)$ nam torej da Liejevo upodobitev njene Liejeve algebre. Kadar ima upodobitev grupe kakšen netrivialen invarianten podprostor, je ta invarianten tudi za delovanje Liejeve algebre. Razcepne upodobitve grupe dajo torej razcepne upodobitve Liejeve algebre. Z drugimi besedami, nerazcepne upodobitve Liejeve algebre, ki izhajajo iz upodobitve grupe, lahko izhajajo le iz nerazcepnih upodobitev grupe. Zaradi tega je še posebej pomembno, da opišemo vse nerazcepne upodobitve Liejeve algebre.
 
 \begin{zgled}
-Liejeve upodobitve $D_I \rho_k$ so nerazcepne. Argument za to je podoben tistemu iz grup, a je še lažji. Res, če je $W \leq \CC[X,Y]_k$ netrivialen invarianten $\slfrak_2(\CC)$-podprostor, potem vsebuje vektor $0 \neq w = \sum_{i = 0}^k a_i e_i$. Naj bo $i_0$ največji indeks, za katerega je $a_{i_0} \neq 0$. Potem je $    F_k^{i_0} \cdot w = a_{i_0} i_0! e_0 \in W$. Torej je $e_0 \in W$. Po zaporednih aplikacijah $E_k$ sklenemo $e_i \in W$ za vsak $0 \leq i \leq k$. Torej je res $W = \CC[X,Y]_k$.
+Liejeve upodobitve $D_I \rho_k$ so nerazcepne. Argument za to je podoben tistemu iz grup, a je še lažji. Res, če je $W \leq \CC[X,Y]_k$ netrivialen invarianten $\slfrak_2(\CC)$-podprostor, potem vsebuje vektor $0 \neq w = \sum_{i = 0}^k a_i e_i$. Naj bo $i_0$ največji indeks, za katerega je $a_{i_0} \neq 0$. Potem je $    F_k^{i_0} \cdot w = a_{i_0} i_0! e_0 \in W$. Torej je $e_0 \in W$. Po zaporednih uporabah $E_k$ sklenemo $e_i \in W$ za vsak $0 \leq i \leq k$. Torej je res $W = \CC[X,Y]_k$.
 \end{zgled}
 
 \begin{trditev}

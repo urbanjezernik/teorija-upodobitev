@@ -1,0 +1,31 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning}
+
+\begin{document}
+\begin{tikzpicture}[>=Stealth]
+  % Global box size and text style
+  \def\bs{0.8} % box size in cm
+  \tikzset{
+    cell/.style = {draw, minimum width=\bs cm, minimum height=\bs cm, inner sep=0pt, outer sep=0pt, anchor=south west},
+    lab/.style  = {font=\footnotesize},
+    num/.style  = {font=\small}
+  }
+
+  % We'll work in integer grid units scaled by \bs for convenient placement
+  \begin{scope}[x=\bs cm,y=\bs cm]
+
+    % ========= Panel 1: Empty Young diagram λ=(5,3,1) =========
+    % top row (length 5) at y=2
+    \foreach \x in {0,1,2,3,4,5,6} { \node[cell] at (\x,2) {}; }
+    % middle row (length 3) at y=1
+    \foreach \x in {0}     { \node[cell] at (\x,1) {}; }
+    % bottom row (length 1) at y=0
+    \node[cell] at (0,0) {};
+    % title
+    % \node[lab, align=center] at (2, -0.8) {Young diagram\\$\lambda=(5,3,1)$};
+  \end{scope}
+
+\end{tikzpicture}
+\end{document}

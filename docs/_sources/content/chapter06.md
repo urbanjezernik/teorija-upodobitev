@@ -445,9 +445,14 @@ na enak način izračunamo
 E_k \cdot e_i = (k-i) e_{i+1}, \quad
     F_k \cdot e_i = i e_{i-1}.
 ```
-Element $H_k$ torej deluje diagonalno na $\CC[X,Y]_k$, pri čemer ima vektor $e_k = X^k$ največjo lastno vrednost, in sicer $k$. Ta vektor je v jedru preslikave $E_k$, z zaporednimi aplikacijami preslikave $F_k$ pa iz njega po vrsti dobimo vse ostale bazne vektorje $e_i$ za $0 \leq i \leq k$.
+Element $H_k$ torej deluje diagonalno na $\CC[X,Y]_k$, pri čemer ima vektor $e_k = X^k$ največjo lastno vrednost, in sicer $k$. Ta vektor je v jedru preslikave $E_k$, z zaporednimi uporabami preslikave $F_k$ pa iz njega po vrsti dobimo vse ostale bazne vektorje $e_i$ za $0 \leq i \leq k$.
 
 </div>
+
+<figure>
+<img src="img/img_sl2irrep.png" />
+<figcaption>Prikaz delovanja elementov <span class="math inline"><em>E</em><sub><em>k</em></sub>, <em>H</em><sub><em>k</em></sub>, <em>F</em><sub><em>k</em></sub></span> v upodobitvi <span class="math inline"><em>ρ</em><sub><em>k</em></sub></span>.</figcaption>
+</figure>
 
 #### Liejeva algebra
 
@@ -510,7 +515,7 @@ Tangentna prostora $\slfrak_2(\CC)$ in $\glfrak_2(\CC)$ sta torej Liejevi algebr
 
 <div class="zgled">
 
-Liejeve upodobitve $D_I \rho_k$ so nerazcepne. Argument za to je podoben tistemu iz grup, a je še lažji. Res, če je $W \leq \CC[X,Y]_k$ netrivialen invarianten $\slfrak_2(\CC)$-podprostor, potem vsebuje vektor $0 \neq w = \sum_{i = 0}^k a_i e_i$. Naj bo $i_0$ največji indeks, za katerega je $a_{i_0} \neq 0$. Potem je $F_k^{i_0} \cdot w = a_{i_0} i_0! e_0 \in W$. Torej je $e_0 \in W$. Po zaporednih aplikacijah $E_k$ sklenemo $e_i \in W$ za vsak $0 \leq i \leq k$. Torej je res $W = \CC[X,Y]_k$.
+Liejeve upodobitve $D_I \rho_k$ so nerazcepne. Argument za to je podoben tistemu iz grup, a je še lažji. Res, če je $W \leq \CC[X,Y]_k$ netrivialen invarianten $\slfrak_2(\CC)$-podprostor, potem vsebuje vektor $0 \neq w = \sum_{i = 0}^k a_i e_i$. Naj bo $i_0$ največji indeks, za katerega je $a_{i_0} \neq 0$. Potem je $F_k^{i_0} \cdot w = a_{i_0} i_0! e_0 \in W$. Torej je $e_0 \in W$. Po zaporednih uporabah $E_k$ sklenemo $e_i \in W$ za vsak $0 \leq i \leq k$. Torej je res $W = \CC[X,Y]_k$.
 
 </div>
 
