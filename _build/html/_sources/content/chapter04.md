@@ -58,6 +58,8 @@ ki ga imenujemo <span class="definicija">Spechtov modul</span>. Na tem prostoru 
 
 <div class="izrek">
 
+(o nerazcepnih upodobitvah simetrične grupe)
+
 1.  Za vsako razčlenitev $\lambda$ je $\rho_{\lambda}$ nerazcepna.
 
 2.  Za različni razčlenitvi $\lambda, \mu$ je $\rho_{\lambda} \not\cong \rho_{\mu}$.
@@ -113,6 +115,8 @@ Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vl
 
 <div class="lema">
 
+Opazujmo simetrično grupo $S_n$.
+
 1.  Za vsako razčlenitev $\lambda$ je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda} \subseteq \CC \cdot \youngsym$.
 
 2.  Za razčlenitvi $\lambda > \mu$ je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\mu} = 0$.
@@ -120,6 +124,8 @@ Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vl
 </div>
 
 <div class="dokaz">
+
+(dokaz izreka o nerazcepnih upodobitvah simetrične grupe)
 
 1.  Naj bo $W \leq V_{\lambda}$ podupodobitev. Po lemi je $\widehat{\youngsym}(\rho_{\fun}) \cdot W$ bodisi $\CC \cdot \youngsym$ bodisi $0$.
 
@@ -134,6 +140,8 @@ Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vl
 Preostane nam še dokaz leme.
 
 <div class="dokaz">
+
+(dokaz leme)
 
 1.  Za vsaka $p \in P$, $q \in Q$ je $\sgn \cdot 1_q * \youngsym * 1_p = \youngsym$. Dokažimo najprej, da je Youngov simetrizator do skalarja natančno *edina* funkcija s to lastnostjo.
 

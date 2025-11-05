@@ -298,7 +298,7 @@ Iz trditve hitro izpeljemo Gowersov izrek. Uporabimo jo z $A=B$. Če je $A$ brez
 
 <div class="dokaz">
 
-Verjetnost v trditvi je enaka
+(dokaz trditve) Verjetnost v trditvi je enaka
 ```{math}
 \frac{|\{ (x,y,z) \in A \times A \times B \mid xy = z \}|}{|G|^2}.
 ```

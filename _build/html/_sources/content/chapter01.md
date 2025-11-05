@@ -499,6 +499,8 @@ Dualna upodobitev $\chi_a^*$ je torej enorazsežna upodobitev, ki je izomorfna u
 
 <div class="domacanaloga">
 
+Naj bo $G$ grupa.
+
 - Naj bosta $\rho_1, \rho_2$ upodobitvi grupe $G$. Dokaži, da je
   ```{math}
   \left( \rho_1 \oplus \rho_2 \right)^* \cong \rho_1^* \oplus \rho_2^*

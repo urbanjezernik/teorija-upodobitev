@@ -389,6 +389,7 @@ document.write(`
 
 </label><input type='checkbox' id='sidenote-role-4' name='sidenote-role-4' class='margin-toggle'><span class="sidenote"><sup>4</sup>Ker je <span class="math notranslate nohighlight">\(\Fcal(\youngsym)\)</span> spletična, je to res invarianten podprostor. Ni pa težko videti, kako elementi grupe zares delujejo; za <span class="math notranslate nohighlight">\(g \in S_n\)</span> element <span class="math notranslate nohighlight">\(\rho_{\fun}(g)\)</span> preslika <span class="math notranslate nohighlight">\(\youngsym * f\)</span> v <span class="math notranslate nohighlight">\(\youngsym * (\rho_{\fun}(g) \cdot f)\)</span>.</span>, dobljeno upodobitev označimo z <span class="math notranslate nohighlight">\(\rho_{\lambda}\)</span>. Velja <span class="math notranslate nohighlight">\(V_{\lambda} \neq 0\)</span>, saj je <span class="math notranslate nohighlight">\(\youngsym = \youngsym * 1_1 \in V_{\lambda}\)</span>.</p>
 <div class="izrek">
+<p>(o nerazcepnih upodobitvah simetrične grupe)</p>
 <ol class="arabic simple">
 <li><p>Za vsako razčlenitev <span class="math notranslate nohighlight">\(\lambda\)</span> je <span class="math notranslate nohighlight">\(\rho_{\lambda}\)</span> nerazcepna.</p></li>
 <li><p>Za različni razčlenitvi <span class="math notranslate nohighlight">\(\lambda, \mu\)</span> je <span class="math notranslate nohighlight">\(\rho_{\lambda} \not\cong \rho_{\mu}\)</span>.</p></li>
@@ -430,12 +431,14 @@ document.write(`
 </div>
 <p>Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vlogo delovanje Fourierove transformacije Youngovega simetrizatorja <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun})\)</span> na prostoru <span class="math notranslate nohighlight">\(V_{\lambda}\)</span>. V lemi uporabljamo leksikografsko delno urejenost <span class="math notranslate nohighlight">\(&lt;\)</span> na množici vseh razčlenitev.</p>
 <div class="lema">
+<p>Opazujmo simetrično grupo <span class="math notranslate nohighlight">\(S_n\)</span>.</p>
 <ol class="arabic simple">
 <li><p>Za vsako razčlenitev <span class="math notranslate nohighlight">\(\lambda\)</span> je <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda} \subseteq \CC \cdot \youngsym\)</span>.</p></li>
 <li><p>Za razčlenitvi <span class="math notranslate nohighlight">\(\lambda &gt; \mu\)</span> je <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\mu} = 0\)</span>.</p></li>
 </ol>
 </div>
 <div class="dokaz">
+<p>(dokaz izreka o nerazcepnih upodobitvah simetrične grupe)</p>
 <ol class="arabic">
 <li><p>Naj bo <span class="math notranslate nohighlight">\(W \leq V_{\lambda}\)</span> podupodobitev. Po lemi je <span class="math notranslate nohighlight">\(\widehat{\youngsym}(\rho_{\fun}) \cdot W\)</span> bodisi <span class="math notranslate nohighlight">\(\CC \cdot \youngsym\)</span> bodisi <span class="math notranslate nohighlight">\(0\)</span>.</p>
 <p>V prvem primeru sledi, da je <span class="math notranslate nohighlight">\(\youngsym \in W\)</span>, od koder sklenemo <span class="math notranslate nohighlight">\(W \geq \langle \rho_{\fun}(g) \cdot \sigma_\lambda \mid g \in S_n \rangle\)</span>, kar je ravno enako <span class="math notranslate nohighlight">\(\image \Fcal(\youngsym) = V_{\lambda}\)</span>.</p>
@@ -446,6 +449,7 @@ document.write(`
 </div>
 <p>Preostane nam še dokaz leme.</p>
 <div class="dokaz">
+<p>(dokaz leme)</p>
 <ol class="arabic">
 <li><p>Za vsaka <span class="math notranslate nohighlight">\(p \in P\)</span>, <span class="math notranslate nohighlight">\(q \in Q\)</span> je <span class="math notranslate nohighlight">\(\sgn \cdot 1_q * \youngsym * 1_p = \youngsym\)</span>. Dokažimo najprej, da je Youngov simetrizator do skalarja natančno <em>edina</em> funkcija s to lastnostjo.</p>
 <p>Res, naj funkcija <span class="math notranslate nohighlight">\(f \in \hom(S_n, \CC)\)</span> zadošča <span class="math notranslate nohighlight">\(\sgn \cdot 1_q * f * 1_p = f\)</span>. To pomeni, da za vsak <span class="math notranslate nohighlight">\(g \in G\)</span> velja</p>

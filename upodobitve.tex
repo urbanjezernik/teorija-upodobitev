@@ -809,7 +809,8 @@ Funkcionali v dualnem prostoru $\CC^*$ so skalarna množenja s kompleksnimi šte
 Dualna upodobitev $\chi_a^*$ je torej enorazsežna upodobitev, ki je izomorfna upodobitvi $\chi_{-a}$.
 \end{zgled}
 
-\begin{domacanaloga} \leavevmode
+\begin{domacanaloga} 
+Naj bo $G$ grupa.
 \begin{itemize}
     \item Naj bosta $\rho_1, \rho_2$ upodobitvi grupe $G$. Dokaži, da je
     \[
@@ -1583,8 +1584,7 @@ Te račune povprečij lahko razširimo na izračun povprečne linearne preslikav
 Preveri, da je $\EE(\rho) \in \hom_G(V,V)$ projekcijska spletična na podprostor fiksnih vektorjev $V^G$. 
 \end{domacanaloga}
 
-\begin{dokaz}[Dokaz Maschkejevega izreka]
-$(\Leftarrow):$ Predpostavimo $\characteristic(F) \nmid |G|$. Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$ in naj bo $W$ poljuben $G$-invarianten podprostor. Naj bo $P \in \hom(V,V)$ projektor na $W$. Grupa $G$ deluje na prostoru linearnih preslikav $\hom(V,V)$.\footnote{Spomnimo se, da je delovanje $G$ na $\hom(V,V)$ dano kot $g \cdot \Phi = \rho(g) \Phi \rho(g)^{-1}$ za $g \in G$, $\Phi \in \hom(V,V)$.} Povprečna vrednost tega delovanja je projekcijska spletična na podprostor spletičen $\hom(V,V)^G = \hom_G(V,V)$. Ko to povprečno vrednost uporabimo na projektorju $P$, dobimo torej linearno preslikavo
+\begin{dokaz}(dokaz Maschkejevega izreka) $(\Leftarrow):$ Predpostavimo $\characteristic(F) \nmid |G|$. Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$ in naj bo $W$ poljuben $G$-invarianten podprostor. Naj bo $P \in \hom(V,V)$ projektor na $W$. Grupa $G$ deluje na prostoru linearnih preslikav $\hom(V,V)$.\footnote{Spomnimo se, da je delovanje $G$ na $\hom(V,V)$ dano kot $g \cdot \Phi = \rho(g) \Phi \rho(g)^{-1}$ za $g \in G$, $\Phi \in \hom(V,V)$.} Povprečna vrednost tega delovanja je projekcijska spletična na podprostor spletičen $\hom(V,V)^G = \hom_G(V,V)$. Ko to povprečno vrednost uporabimo na projektorju $P$, dobimo torej linearno preslikavo
 \[
     Q = \frac{1}{|G|} \sum_{g \in G} g \cdot P \in \hom_G(V,V),
 \]
@@ -1801,8 +1801,7 @@ Od tod izračunamo relevantni skalar kot $|G| \cdot [ f, \chi_{\pi} ]/\deg(\pi)$
 
 Opremljeni lahko z lahkoto izpeljemo izrek.
 
-\begin{dokaz}[Dokaz izreka o bazi razrednih funkcij]
-Predpostavimo, da nerazcepni karakterji \emph{ne} razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \fun_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $[ f, \chi_{\pi} ] = 0$. Preslikava $\hat{f}(\pi)$ je po lemi zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, se pravi $\hat{f}(\rho_{\fun}) = 0$. Po zadnjem zgledu to implicira $f = 0$. 
+\begin{dokaz}(dokaz izreka o bazi razrednih funkcij) Predpostavimo, da nerazcepni karakterji \emph{ne} razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \fun_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $[ f, \chi_{\pi} ] = 0$. Preslikava $\hat{f}(\pi)$ je po lemi zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, se pravi $\hat{f}(\rho_{\fun}) = 0$. Po zadnjem zgledu to implicira $f = 0$. 
 \end{dokaz}
 
 Vsaka razredna funkcija je enolično določena s svojimi vrednostmi v predstavnikih konjugiranostnih razredov. Če {\definicija število konjugiranostnih razredov} označimo s $\kk(G)$, velja torej $\dim \fun_{\cl}(G,F) = \kk(G)$. Ker karakterji tvorijo bazo prostora razrednih funkcij, lahko \emph{število} nerazcepnih upodobitev torej izračunamo neposredno iz algebraične strukture grupe.
@@ -2277,7 +2276,7 @@ Dokaz bomo navezali na edino mesto, kjer smo že videli ulomek $|G|/\deg(\pi)$, 
     V tej bazi ima torej $\widehat{1_{\conclass}}(\rho_{\fun})$ matriko s koeficienti v množici $\{ 0, 1 \}$. Karakteristični polinom te matrike ima zato celoštevilske koeficiente, torej so lastne vrednosti preslikave $\widehat{1_{\conclass}}(\rho_{\fun})$ algebraična cela števila.
     \end{dokaz}
     
-    \begin{dokaz}[Dokaz izreka o stopnjah upodobitev]
+    \begin{dokaz}(dokaz izreka o stopnjah upodobitev)
     Naj bo $\pi \in \Irr(G)$. Uporabimo lemo s funkcijo $f = \chi_{\pi}$, ki nam pove, da je 
     \[
         \frac{|G|}{\deg(\pi)} \cdot [ \chi_{\pi}, \chi_{\pi} ] = \frac{|G|}{\deg(\pi)} \in \bar{\ZZ}.
@@ -2412,7 +2411,7 @@ Vzdolž Youngovega simetrizatorja dobimo endospletično $\Fcal(\youngsym)$ regul
 \]
 ki ga imenujemo {\definicija Spechtov modul}. Na tem prostoru naravno deluje grupa $S_n$\footnote{Ker je $\Fcal(\youngsym)$ spletična, je to res invarianten podprostor. Ni pa težko videti, kako elementi grupe zares delujejo; za $g \in S_n$ element $\rho_{\fun}(g)$ preslika $\youngsym * f$ v $\youngsym * (\rho_{\fun}(g) \cdot f)$.}, dobljeno upodobitev označimo z $\rho_{\lambda}$. Velja $V_{\lambda} \neq 0$, saj je $\youngsym = \youngsym * 1_1 \in V_{\lambda}$.
 
-\begin{izrek}[o nerazcepnih upodobitvah simetrične grupe] \leavevmode
+\begin{izrek}(o nerazcepnih upodobitvah simetrične grupe) \leavevmode
 \begin{enumerate}
     \item Za vsako razčlenitev $\lambda$ je $\rho_{\lambda}$ nerazcepna.
     \item Za različni razčlenitvi $\lambda, \mu$ je $\rho_{\lambda} \not\cong \rho_{\mu}$.
@@ -2463,14 +2462,15 @@ Zadnja točka seveda sledi iz prvih dveh, saj je število nerazcepnih upodobitev
 
 Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vlogo delovanje Fourierove transformacije Youngovega simetrizatorja $\widehat{\youngsym}(\rho_{\fun})$ na prostoru $V_{\lambda}$. V lemi uporabljamo leksikografsko delno urejenost $<$ na množici vseh razčlenitev. 
 
-\begin{lema} \leavevmode
+\begin{lema}
+Opazujmo simetrično grupo $S_n$.
 \begin{enumerate}
     \item Za vsako razčlenitev $\lambda$ je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda} \subseteq \CC \cdot \youngsym$.
     \item Za razčlenitvi $\lambda > \mu$ je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\mu} = 0$.
 \end{enumerate}
 \end{lema}
 
-\begin{dokaz}[Dokaz izreka o nerazcepnih upodobitvah simetrične grupe] \leavevmode
+\begin{dokaz}(dokaz izreka o nerazcepnih upodobitvah simetrične grupe) \leavevmode
 \begin{enumerate}
     \item Naj bo $W \leq V_{\lambda}$ podupodobitev. Po lemi je $\widehat{\youngsym}(\rho_{\fun}) \cdot W$ bodisi $\CC \cdot \youngsym$ bodisi $0$. 
     
@@ -2484,7 +2484,7 @@ Dokaz izreka bomo izpeljali s pomočjo naslednje leme, v kateri igra ključno vl
 
 Preostane nam še dokaz leme.
 
-\begin{dokaz}[Dokaz leme] \leavevmode
+\begin{dokaz}(dokaz leme) \leavevmode
 \begin{enumerate}
     \item Za vsaka $p \in P$, $q \in Q$ je $\sgn \cdot 1_q * \youngsym * 1_p = \youngsym$. Dokažimo najprej, da je Youngov simetrizator do skalarja natančno \emph{edina} funkcija s to lastnostjo. 
     
@@ -3577,7 +3577,7 @@ Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne nerazcepne
 Iz trditve hitro izpeljemo Gowersov izrek. Uporabimo jo z $A=B$. Če je $A$ brez produktov in gostote $\alpha$, potem velja $\alpha^3 \leq m^{-1/2} \alpha^{3/2}$, kar je enakovredno $\alpha \leq m^{-1/3}$.
 
 
-\begin{dokaz}[Dokaz trditve]
+\begin{dokaz}(dokaz trditve)
 Verjetnost v trditvi je enaka 
 \[
     \frac{|\{ (x,y,z) \in A \times A \times B \mid xy = z \}|}{|G|^2}.
@@ -5216,7 +5216,7 @@ Izrek sloni na {\definicija Margulisovi superrigidnosti} diskretnih podgrup v Li
 \begin{izrek}[\href{https://link.springer.com/book/9783642057212}{Margulis 1991}]
 Naj bo $\rho \colon \SL_3(\ZZ) \to \GL_n(\CC)$ upodobitev. Tedaj obstaja polinomska upodobitev $\tilde \rho \colon \SL_3(\CC) \to \GL_n(\CC)$, ki se na nekem kongruenčnem jedru $\ker \pi_{N}$ ujema z $\rho$.
 \end{izrek}
-\begin{dokaz}[Ideja dokaza iz \href{https://zbmath.org/?q=an:0579.20038}{(Steinberg 1985)}]
+\begin{dokaz}(ideja dokaza iz \href{https://zbmath.org/?q=an:0579.20038}{(Steinberg 1985)})
 Grupa $\SL_3(\ZZ)$ je generirana z matrikami $T_{ij} = I + E_{ij}$ za $i \neq j$. Te matrike niso zelo blizu identitete v $\SL_3(\CC)$, zato jih ne moremo potisniti v Liejevo algebro $\slfrak_3(\CC)$ z logaritmom. Lahko pa vseeno formalno izračunamo njihov logaritem. Ker je $E_{ij}^2 = 0$, je $\log T_{ij} = E_{ij} \in \slfrak_3(\CC)$. Z nekaj računanja se prepričamo, da matrike $E_{ij}$ generirajo  Liejevo algebro $\slfrak_3(\CC)$.
 
 Nekaj podobnega lahko naredimo v sliki upodobitve $\rho$. Matrike $\rho(T_{ij})$ so daleč od identitete v $\GL_n(\CC)$. Vsako lahko zapišemo v Jordanski obliki kot produkt diagonalne matrike $\rho(T_{ij})_s$ (\emph{polenostavni del}) in matrike z enicami po diagonali $\rho(T_{ij})_u$ (\emph{unipotentni del}). Za unipotentni del velja $(\rho(T_{ij})_u - I)^n = 0$, zato lahko izračunamo logaritem $\log \rho(T_{ij})_u \in \glfrak_n(\CC)$ z razvojem v končno Taylorjevo vrsto. Z nekaj računanja se prepričamo, da matrike $\log \rho(T_{ij})_u$ generirajo Liejevo algebro $\slfrak_3(\CC)$ znotraj $\glfrak_n(\CC)$. 

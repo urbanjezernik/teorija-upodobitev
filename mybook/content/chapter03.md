@@ -60,6 +60,8 @@ Preveri, da je $\EE(\rho) \in \hom_G(V,V)$ projekcijska spletična na podprostor
 
 <div class="dokaz">
 
+(dokaz Maschkejevega izreka)
+
 $(\Leftarrow):$ Predpostavimo $\characteristic(F) \nmid |G|$. Naj bo $\rho$ upodobitev grupe $G$ na prostoru $V$ in naj bo $W$ poljuben $G$-invarianten podprostor. Naj bo $P \in \hom(V,V)$ projektor na $W$. Grupa $G$ deluje na prostoru linearnih preslikav $\hom(V,V)$.[^2] Povprečna vrednost tega delovanja je projekcijska spletična na podprostor spletičen $\hom(V,V)^G = \hom_G(V,V)$. Ko to povprečno vrednost uporabimo na projektorju $P$, dobimo torej linearno preslikavo
 ```{math}
 Q = \frac{1}{|G|} \sum_{g \in G} g \cdot P \in \hom_G(V,V),
@@ -306,6 +308,8 @@ Od tod izračunamo relevantni skalar kot $|G| \cdot [ f, \chi_{\pi} ]/\deg(\pi)$
 Opremljeni lahko z lahkoto izpeljemo izrek.
 
 <div class="dokaz">
+
+(dokaz izreka o bazi razrednih funkcij)
 
 Predpostavimo, da nerazcepni karakterji *ne* razpenjajo prostora razrednih funkcij. Torej obstaja funkcija $f \in \fun_{\cl}(G,F)$, ki je vsebovana v ortogonalnem komplementu vseh nerazcepnih karakterjev. Za vsak $\pi \in \Irr(G)$ velja torej $[ f, \chi_{\pi} ] = 0$. Preslikava $\hat{f}(\pi)$ je po lemi zato ničelna. Ker to velja za vsako nerazcepno upodobitev, mora veljati tudi za regularno upodobitev, se pravi $\hat{f}(\rho_{\fun}) = 0$. Po zadnjem zgledu to implicira $f = 0$.
 
@@ -830,6 +834,8 @@ V tej bazi ima torej $\widehat{1_{\conclass}}(\rho_{\fun})$ matriko s koeficient
 </div>
 
 <div class="dokaz">
+
+(dokaz izreka o stopnjah upodobitev)
 
 Naj bo $\pi \in \Irr(G)$. Uporabimo lemo s funkcijo $f = \chi_{\pi}$, ki nam pove, da je
 ```{math}

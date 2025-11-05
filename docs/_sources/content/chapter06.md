@@ -1110,7 +1110,7 @@ Naj bo $\rho \colon \SL_3(\ZZ) \to \GL_n(\CC)$ upodobitev. Tedaj obstaja polinom
 
 <div class="dokaz">
 
-Grupa $\SL_3(\ZZ)$ je generirana z matrikami $T_{ij} = I + E_{ij}$ za $i \neq j$. Te matrike niso zelo blizu identitete v $\SL_3(\CC)$, zato jih ne moremo potisniti v Liejevo algebro $\slfrak_3(\CC)$ z logaritmom. Lahko pa vseeno formalno izračunamo njihov logaritem. Ker je $E_{ij}^2 = 0$, je $\log T_{ij} = E_{ij} \in \slfrak_3(\CC)$. Z nekaj računanja se prepričamo, da matrike $E_{ij}$ generirajo Liejevo algebro $\slfrak_3(\CC)$.
+(ideja dokaza iz [(Steinberg 1985)](https://zbmath.org/?q=an:0579.20038)) Grupa $\SL_3(\ZZ)$ je generirana z matrikami $T_{ij} = I + E_{ij}$ za $i \neq j$. Te matrike niso zelo blizu identitete v $\SL_3(\CC)$, zato jih ne moremo potisniti v Liejevo algebro $\slfrak_3(\CC)$ z logaritmom. Lahko pa vseeno formalno izračunamo njihov logaritem. Ker je $E_{ij}^2 = 0$, je $\log T_{ij} = E_{ij} \in \slfrak_3(\CC)$. Z nekaj računanja se prepričamo, da matrike $E_{ij}$ generirajo Liejevo algebro $\slfrak_3(\CC)$.
 
 Nekaj podobnega lahko naredimo v sliki upodobitve $\rho$. Matrike $\rho(T_{ij})$ so daleč od identitete v $\GL_n(\CC)$. Vsako lahko zapišemo v Jordanski obliki kot produkt diagonalne matrike $\rho(T_{ij})_s$ (*polenostavni del*) in matrike z enicami po diagonali $\rho(T_{ij})_u$ (*unipotentni del*). Za unipotentni del velja $(\rho(T_{ij})_u - I)^n = 0$, zato lahko izračunamo logaritem $\log \rho(T_{ij})_u \in \glfrak_n(\CC)$ z razvojem v končno Taylorjevo vrsto. Z nekaj računanja se prepričamo, da matrike $\log \rho(T_{ij})_u$ generirajo Liejevo algebro $\slfrak_3(\CC)$ znotraj $\glfrak_n(\CC)$.
 
