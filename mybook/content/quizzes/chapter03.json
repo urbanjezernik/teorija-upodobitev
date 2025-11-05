@@ -1,0 +1,282 @@
+[
+  {
+    "question": "Vsaka nerazcepna upodobitev končne grupe je končnorazsežna.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vsaka upodobitev končne grupe je polenostavna.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Končna $p$-grupa ima nad poljem karakteristike $p$ lahko neskončno mnogo nerazcepnih upodobitev.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj se vsaka nerazcepna upodobitev $G$ pojavi v regularni upodobitvi z večkratnostjo $\\deg(\\pi)$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Matrični koeficienti neizomorfnih nerazcepnih upodobitev končne grupe nad ugodnim poljem so ortogonalni.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Kompleksni nerazcepni karakterji končne grupe $G$ tvorijo ortonormiran sistem v prostoru kompleksnih funkcij na $G$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nekomutativna Fourierova transformacija funkcije $f$ na grupi $G$ v upodobitvi $\\pi$ je $\\hat{f}(\\pi) = \\sum_{g \\in G} f(g) \\pi(g)$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Za vsako funkcijo $f$ na grupi $G$ velja $\\hat{f}(\\rho_{fun}) \\cdot 1_1 = f$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Fourierova transformacija razredne funkcije $f$ na $G$ v regularni upodobitvi je skalarno množenje.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Število nerazcepnih kompleksnih upodobitev končne grupe $G$ je enako $k(G)$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Konjugiranostni razredi v simetrični grupi $S_n$ so v bijekciji z razčlenitvami števila $n$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Naj bo $G$ končna grupa in $\\rho$ njena končnorazsežna kompleksna upodobitev. Tedaj je $\\rho$ nerazcepna, če in samo če velja $|| \\chi_{\\rho} || = 0$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vsaka endospletična regularne upodobitve končne grupe nad kompleksnimi števili izhaja iz Fourierove transformacije.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Funkcija $f \\in \\mathrm{fun}(G,\\mathbf{C})$ je izračunljiva iz svojih Fourierovih transformirank v nerazcepnih upodobitvah.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tabelo karakterjev simetrične grupe $S_n$ nad poljem kompleksnih števil lahko izračunamo z algoritmom, ki teče v polinomskem času v odvisnosti od $n$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Kolobar virtualnih karakterjev $R(G)$ dane končne grupe je končno generiran kot kolobar.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Naj bo $G$ končna grupa. Karakter vsake končnorazsežne kompleksne upodobitve grupe $G$ je celoštevilska linearna kombinacija indukcij nerazcepnih karakterjev podgrup $G$ praštevilske moči.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Stopnja nerazcepne kompleksne upodobitve končne grupe deli moč grupe.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vsaka kompleksna upodobitev končne grupe je unitarna.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Parsevalov izrek povezuje standardni kompleksni skalarni produkt na prostoru funkcij s Hilbert-Schmidtovimi skalarnimi produkti Fourierovih transformirank v nerazcepnih upodobitvah.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  }
+]

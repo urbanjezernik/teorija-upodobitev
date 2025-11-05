@@ -35,7 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=a5ebfbfa" />
+    <link rel="stylesheet" type="text/css" href="../_static/quiz.css?v=ec93ceb6" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=7a42ac56" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -62,6 +63,7 @@
     <script>window.MathJax = {"tex": {"macros": {"NN": "\\mathbf{N}", "ZZ": "\\mathbf{Z}", "QQ": "\\mathbf{Q}", "RR": "\\mathbf{R}", "CC": "\\mathbf{C}", "FF": "\\mathbf{F}", "EE": "\\mathbf{E}", "PP": "\\mathbf{P}", "HH": "\\mathbf{H}", "oneone": "\\mathbf{1}", "Fcal": "\\mathcal{F}", "conclass": "\\mathcal{C}", "image": "\\operatorname{im}", "sgn": "\\operatorname{sgn}", "Res": "\\operatorname{Res}", "Ind": "\\operatorname{Ind}", "Rep": "\\operatorname{Rep}", "mult": "\\operatorname{mult}", "Izotip": "\\operatorname{Izotip}", "MK": "\\operatorname{MK}", "tr": "\\operatorname{tr}", "Irr": "\\operatorname{Irr}", "SU": "\\mathrm{SU}", "characteristic": "\\operatorname{char}", "kk": "\\operatorname{k}", "cl": "\\operatorname{cl}", "inv": "\\operatorname{inv}", "Eigenvalues": "\\operatorname{Spec}", "Eigenspace": "\\operatorname{LP}", "fun": "\\operatorname{fun}", "HS": "\\operatorname{HS}", "St": "\\operatorname{St}", "Realpart": "\\operatorname{Re}", "Aut": "\\operatorname{Aut}", "GL": "\\operatorname{GL}", "SL": "\\operatorname{SL}", "PSL": "\\operatorname{PSL}", "U": "\\operatorname{U}", "SO": "\\operatorname{SO}", "Gal": "\\operatorname{Gal}", "Sym": "\\operatorname{Sym}", "Homeo": "\\operatorname{Homeo}", "Cay": "\\operatorname{Cay}", "Isom": "\\operatorname{Isom}", "id": "\\operatorname{id}", "supp": "\\operatorname{supp}", "End": "\\operatorname{End}", "Mat": "\\operatorname{Mat}", "Cone": "\\operatorname{Cone}", "diam": "\\operatorname{diam}", "Ad": "\\operatorname{Ad}", "imaginary": "\\operatorname{Im}", "glfrak": "\\mathfrak{gl}", "slfrak": "\\mathfrak{sl}", "sufrak": "\\mathfrak{su}", "GAP": ["\\texttt{GAP}", 0], "youngsym": "\\sigma_{\\lambda}", "mat": ["\\begin{pmatrix} #1 & #2\\\\ #3 & #4 \\end{pmatrix}", 4], "abs": ["\\lvert #1 \\rvert", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/chapter03';</script>
+    <script src="../_static/quiz.js?v=429d5605"></script>
     <script src="../_static/bs-table-wrapper.js?v=8f7ea02a"></script>
     <script src="../_static/fix-pipe-tables.js?v=5aeff36a"></script>
     <link rel="canonical" href="/teorija-upodobitev/content/chapter03.html" />
@@ -329,6 +331,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
             </nav>
         </div>
@@ -1121,9 +1124,32 @@ document.write(`
 <p>to je <span class="definicija">Hilbert-Schmidtov skalarni produkt</span>. Parsevalov izrek nam torej povezuje standarden kompleksni skalarni produkt funkcij s Hilbert-Schmidtovim skalarnim produktom Fourierovih transformacij v nerazcepnih upodobitvah,</p>
 <div class="math notranslate nohighlight">
 \[\langle f, h \rangle = \frac{1}{|G|^2} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \left\langle \hat{f}(\pi), \hat{h}(\pi) \right\rangle_{\HS}.\]</div>
-<hr class="footnotes docutils" />
 </section>
 </section>
+</section>
+<section id="kviz">
+<h2>Kviz<a class="headerlink" href="#kviz" title="Link to this heading">#</a></h2>
+<div class="quiz-item" data-correct="true"><p>Vsaka nerazcepna upodobitev končne grupe je končnorazsežna.</p>
+</div><div class="quiz-item" data-correct="false"><p>Vsaka upodobitev končne grupe je polenostavna.</p>
+</div><div class="quiz-item" data-correct="false"><p>Končna <span class="math notranslate nohighlight">\(p\)</span>-grupa ima nad poljem karakteristike <span class="math notranslate nohighlight">\(p\)</span> lahko neskončno mnogo nerazcepnih upodobitev.</p>
+</div><div class="quiz-item" data-correct="true"><p>Naj bo <span class="math notranslate nohighlight">\(G\)</span> končna grupa in <span class="math notranslate nohighlight">\(F\)</span> algebraično zaprto polje karakteristike tuje <span class="math notranslate nohighlight">\(|G|\)</span>. Tedaj se vsaka nerazcepna upodobitev <span class="math notranslate nohighlight">\(G\)</span> pojavi v regularni upodobitvi z večkratnostjo <span class="math notranslate nohighlight">\(\deg(\pi)\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Matrični koeficienti neizomorfnih nerazcepnih upodobitev končne grupe nad ugodnim poljem so ortogonalni.</p>
+</div><div class="quiz-item" data-correct="true"><p>Kompleksni nerazcepni karakterji končne grupe <span class="math notranslate nohighlight">\(G\)</span> tvorijo ortonormiran sistem v prostoru kompleksnih funkcij na <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Nekomutativna Fourierova transformacija funkcije <span class="math notranslate nohighlight">\(f\)</span> na grupi <span class="math notranslate nohighlight">\(G\)</span> v upodobitvi <span class="math notranslate nohighlight">\(\pi\)</span> je <span class="math notranslate nohighlight">\(\hat{f}(\pi) = \sum_{g \in G} f(g) \pi(g)\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Za vsako funkcijo <span class="math notranslate nohighlight">\(f\)</span> na grupi <span class="math notranslate nohighlight">\(G\)</span> velja <span class="math notranslate nohighlight">\(\hat{f}(\rho_{fun}) \cdot 1_1 = f\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Naj bo <span class="math notranslate nohighlight">\(G\)</span> končna grupa in <span class="math notranslate nohighlight">\(F\)</span> algebraično zaprto polje karakteristike tuje <span class="math notranslate nohighlight">\(|G|\)</span>. Fourierova transformacija razredne funkcije <span class="math notranslate nohighlight">\(f\)</span> na <span class="math notranslate nohighlight">\(G\)</span> v regularni upodobitvi je skalarno množenje.</p>
+</div><div class="quiz-item" data-correct="true"><p>Število nerazcepnih kompleksnih upodobitev končne grupe <span class="math notranslate nohighlight">\(G\)</span> je enako <span class="math notranslate nohighlight">\(k(G)\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Konjugiranostni razredi v simetrični grupi <span class="math notranslate nohighlight">\(S_n\)</span> so v bijekciji z razčlenitvami števila <span class="math notranslate nohighlight">\(n\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Naj bo <span class="math notranslate nohighlight">\(G\)</span> končna grupa in <span class="math notranslate nohighlight">\(\rho\)</span> njena končnorazsežna kompleksna upodobitev. Tedaj je <span class="math notranslate nohighlight">\(\rho\)</span> nerazcepna, če in samo če velja <span class="math notranslate nohighlight">\(|| \chi_{\rho} || = 0\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Vsaka endospletična regularne upodobitve končne grupe nad kompleksnimi števili izhaja iz Fourierove transformacije.</p>
+</div><div class="quiz-item" data-correct="true"><p>Funkcija <span class="math notranslate nohighlight">\(f \in \mathrm{fun}(G,\mathbf{C})\)</span> je izračunljiva iz svojih Fourierovih transformirank v nerazcepnih upodobitvah.</p>
+</div><div class="quiz-item" data-correct="false"><p>Tabelo karakterjev simetrične grupe <span class="math notranslate nohighlight">\(S_n\)</span> nad poljem kompleksnih števil lahko izračunamo z algoritmom, ki teče v polinomskem času v odvisnosti od <span class="math notranslate nohighlight">\(n\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Kolobar virtualnih karakterjev <span class="math notranslate nohighlight">\(R(G)\)</span> dane končne grupe je končno generiran kot kolobar.</p>
+</div><div class="quiz-item" data-correct="false"><p>Naj bo <span class="math notranslate nohighlight">\(G\)</span> končna grupa. Karakter vsake končnorazsežne kompleksne upodobitve grupe <span class="math notranslate nohighlight">\(G\)</span> je celoštevilska linearna kombinacija indukcij nerazcepnih karakterjev podgrup <span class="math notranslate nohighlight">\(G\)</span> praštevilske moči.</p>
+</div><div class="quiz-item" data-correct="true"><p>Stopnja nerazcepne kompleksne upodobitve končne grupe deli moč grupe.</p>
+</div><div class="quiz-item" data-correct="false"><p>Vsaka kompleksna upodobitev končne grupe je unitarna.</p>
+</div><div class="quiz-item" data-correct="true"><p>Parsevalov izrek povezuje standardni kompleksni skalarni produkt na prostoru funkcij s Hilbert-Schmidtovimi skalarnimi produkti Fourierovih transformirank v nerazcepnih upodobitvah.</p>
+</div><hr class="footnotes docutils" />
 </section>
 </section>
 
@@ -1212,6 +1238,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
   </nav></div>
 

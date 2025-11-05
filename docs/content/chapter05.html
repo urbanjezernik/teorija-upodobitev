@@ -35,7 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=a5ebfbfa" />
+    <link rel="stylesheet" type="text/css" href="../_static/quiz.css?v=ec93ceb6" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=7a42ac56" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -62,6 +63,7 @@
     <script>window.MathJax = {"tex": {"macros": {"NN": "\\mathbf{N}", "ZZ": "\\mathbf{Z}", "QQ": "\\mathbf{Q}", "RR": "\\mathbf{R}", "CC": "\\mathbf{C}", "FF": "\\mathbf{F}", "EE": "\\mathbf{E}", "PP": "\\mathbf{P}", "HH": "\\mathbf{H}", "oneone": "\\mathbf{1}", "Fcal": "\\mathcal{F}", "conclass": "\\mathcal{C}", "image": "\\operatorname{im}", "sgn": "\\operatorname{sgn}", "Res": "\\operatorname{Res}", "Ind": "\\operatorname{Ind}", "Rep": "\\operatorname{Rep}", "mult": "\\operatorname{mult}", "Izotip": "\\operatorname{Izotip}", "MK": "\\operatorname{MK}", "tr": "\\operatorname{tr}", "Irr": "\\operatorname{Irr}", "SU": "\\mathrm{SU}", "characteristic": "\\operatorname{char}", "kk": "\\operatorname{k}", "cl": "\\operatorname{cl}", "inv": "\\operatorname{inv}", "Eigenvalues": "\\operatorname{Spec}", "Eigenspace": "\\operatorname{LP}", "fun": "\\operatorname{fun}", "HS": "\\operatorname{HS}", "St": "\\operatorname{St}", "Realpart": "\\operatorname{Re}", "Aut": "\\operatorname{Aut}", "GL": "\\operatorname{GL}", "SL": "\\operatorname{SL}", "PSL": "\\operatorname{PSL}", "U": "\\operatorname{U}", "SO": "\\operatorname{SO}", "Gal": "\\operatorname{Gal}", "Sym": "\\operatorname{Sym}", "Homeo": "\\operatorname{Homeo}", "Cay": "\\operatorname{Cay}", "Isom": "\\operatorname{Isom}", "id": "\\operatorname{id}", "supp": "\\operatorname{supp}", "End": "\\operatorname{End}", "Mat": "\\operatorname{Mat}", "Cone": "\\operatorname{Cone}", "diam": "\\operatorname{diam}", "Ad": "\\operatorname{Ad}", "imaginary": "\\operatorname{Im}", "glfrak": "\\mathfrak{gl}", "slfrak": "\\mathfrak{sl}", "sufrak": "\\mathfrak{su}", "GAP": ["\\texttt{GAP}", 0], "youngsym": "\\sigma_{\\lambda}", "mat": ["\\begin{pmatrix} #1 & #2\\\\ #3 & #4 \\end{pmatrix}", 4], "abs": ["\\lvert #1 \\rvert", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/chapter05';</script>
+    <script src="../_static/quiz.js?v=429d5605"></script>
     <script src="../_static/bs-table-wrapper.js?v=8f7ea02a"></script>
     <script src="../_static/fix-pipe-tables.js?v=5aeff36a"></script>
     <link rel="canonical" href="/teorija-upodobitev/content/chapter05.html" />
@@ -346,6 +348,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konvergenca-v-druzinah">Konvergenca v družinah</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
             </nav>
         </div>
@@ -1224,8 +1227,20 @@ document.write(`
 \[\lim_{n \to \infty} \PP_{x,y}(\text{$A_n$ je $\epsilon$-ekspanzivna glede na $S_{n,x,y}$}) = 1 ?\]</div>
 </div>
 <p>Vzpodbuden delni rezultat je, da asimptotska visoko verjetna ekspanzivnost drži za družino določenih <em>kvocientov Cayleyjevih grafov</em> simetričnih grup, kot je predstavljeno v <a class="reference external" href="https://repozitorij.uni-lj.si/IzpisGradiva.php?id=140303">(Milanez 2022)</a>. Ti rezultati so bili nedavno posplošeni do <em>precej velikih</em> kvocientov Cayleyjevih grafov v <a class="reference external" href="https://arxiv.org/abs/2412.13941">(Cassidy 2025).</a></p>
-<hr class="footnotes docutils" />
 </section>
+</section>
+<section id="kviz">
+<h2>Kviz<a class="headerlink" href="#kviz" title="Link to this heading">#</a></h2>
+<div class="quiz-item" data-correct="true"><p>Za vsak dovolj velik <span class="math notranslate nohighlight">\(n\)</span> velja, da vsaka podmnožica <span class="math notranslate nohighlight">\(\{ 1,2,\dots,n\}\)</span> gostote vsaj <span class="math notranslate nohighlight">\(1\%\)</span> vsebuje rešitev enačbe <span class="math notranslate nohighlight">\(x+y=2z\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Fourierova transformacija pretvori konvolucijo funkcij v produkt linearnih preslikav (in pri tem zamenja vrstni red).</p>
+</div><div class="quiz-item" data-correct="false"><p>Za vsak dovolj velik <span class="math notranslate nohighlight">\(n\)</span> velja, da vsaka podmnožica <span class="math notranslate nohighlight">\(\mathbf{Z}/n\mathbf{Z}\)</span> gostote vsaj <span class="math notranslate nohighlight">\(1\%\)</span> vsebuje rešitev enačbe <span class="math notranslate nohighlight">\(x+y=z\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Najmanjša stopnja netrivialne nerazcepne kompleksne upodobitve grupe <span class="math notranslate nohighlight">\(A_n\)</span> je velikostnega reda <span class="math notranslate nohighlight">\(\Theta(n!)\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Vsak element nekomutativne končne enostavne grupe je komutator.</p>
+</div><div class="quiz-item" data-correct="true"><p>Operator Markova na grupi <span class="math notranslate nohighlight">\(G = \langle S \rangle\)</span> je <span class="math notranslate nohighlight">\(M = \frac{\widehat{1_S}}{|S|}(\rho_{fun})\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Če je <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> konjugiranostni razred grupe <span class="math notranslate nohighlight">\(G\)</span>, ki generira <span class="math notranslate nohighlight">\(G\)</span>, potem je pripadajoči operator Markova diagonalizabilen z lastnimi vrednostmi <span class="math notranslate nohighlight">\(\chi_{\pi}(\mathcal{C})\)</span> za nerazcepne kompleksne upodobitve <span class="math notranslate nohighlight">\(\pi\)</span> grupe <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Čas mešanja slučajnega sprehoda je najmanjše število <span class="math notranslate nohighlight">\(n\)</span>, pri katerem je <span class="math notranslate nohighlight">\(|| \mu_n - U_G || &lt; 1 \%\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Čas mešanja je logaritmičen v velikosti grupe.</p>
+</div><hr class="footnotes docutils" />
 </section>
 </section>
 
@@ -1331,6 +1346,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konvergenca-v-druzinah">Konvergenca v družinah</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
   </nav></div>
 

@@ -938,3 +938,136 @@ Ni pa tako enostavno pridobiti tudi tabele karakterjev družine enostavnih grup 
 [^17]: Najpreprostejši znan opis je preko Weilove upodobitve (Bushnell-Henniart 2006), ki ostne upodobitve uresniči na določenih podprostorih v $\fun(\FF_p(\sqrt{\epsilon}), \CC)$.
 
 [^18]: Računanje teh tabel specifičnih končnih enostavnih grup je zbrano v [ATLAS](http://brauer.maths.qmul.ac.uk/Atlas/v3/). Ti izračuni so močno pripomogli k dokazu izreka o [klasifikaciji končnih enostavnih grup](https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups).
+
+
+## Kviz
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Nerazcepne kompleksne upodobitve $S_n$ so v bijekciji z razčlenitvami $\lambda$ števila $n$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Vektorskemu prostoru $V_{\lambda}$, prirejenemu razčlenitvi $\lambda$, pravimo Špelin modul.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Razčlenitvi $(n-1,1)$ števila $n$ ustreza standardna upodobitev $S_n$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Iz vsake nerazcepne upodobitve $S_n$ lahko po izbiri ustrezne baze s projekcijo mod $p$ dobimo modularno upodobitev.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Vrednosti nerazcepnih karakterjev simetrične grupe lahko izračunamo s Frobeniusovo formulo.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Formula o dolžinah kljuk pove, da lahko vrednosti nerazcepnih karakterjev izračunamo iz dolžin kljuk v diagramu razčlenitve.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Vsaka nerazcepna upodobitev alternirajoče grupe $A_n$  je restrikcija nerazcepne updobitve simetrične grupe $S_n$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Podgrupa zgornjetrikotnih matrik v $G_p = GL_2(\mathbf{F}_p)$ se imenuje Boreliozna podgrupa.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Grupa $G_p$ naravno deluje na projektivni premici nad končnim poljem.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Za $p > 3$ je grupa $PSL_2(\mathbf{F}_p)$ enostavna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Razcepni in nerazcepni torus v $GL_2(\mathbf{F}_p)$ sta kot abelovi grupi izomorfna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Steinbergova upodobitev je nerazcepna upodobitev $GL_2(\mathbf{F}_p)$, ki je podupodobitev permutacijske upodobitve $GL_2(\mathbf{F}_p)$ na projektivni premici.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Nerazcepne upodobitve grupe $GL_2(\mathbf{F}_p)$, ki jih dobimo z indukcijo iz podgrupe zgornjetrikotnih matrik, se imenujejo upodobitve sekundarne vrste.
+
+```{raw} html
+</div>
+```

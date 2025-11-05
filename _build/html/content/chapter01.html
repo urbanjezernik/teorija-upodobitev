@@ -35,7 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=a5ebfbfa" />
+    <link rel="stylesheet" type="text/css" href="../_static/quiz.css?v=ec93ceb6" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=7a42ac56" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -62,6 +63,7 @@
     <script>window.MathJax = {"tex": {"macros": {"NN": "\\mathbf{N}", "ZZ": "\\mathbf{Z}", "QQ": "\\mathbf{Q}", "RR": "\\mathbf{R}", "CC": "\\mathbf{C}", "FF": "\\mathbf{F}", "EE": "\\mathbf{E}", "PP": "\\mathbf{P}", "HH": "\\mathbf{H}", "oneone": "\\mathbf{1}", "Fcal": "\\mathcal{F}", "conclass": "\\mathcal{C}", "image": "\\operatorname{im}", "sgn": "\\operatorname{sgn}", "Res": "\\operatorname{Res}", "Ind": "\\operatorname{Ind}", "Rep": "\\operatorname{Rep}", "mult": "\\operatorname{mult}", "Izotip": "\\operatorname{Izotip}", "MK": "\\operatorname{MK}", "tr": "\\operatorname{tr}", "Irr": "\\operatorname{Irr}", "SU": "\\mathrm{SU}", "characteristic": "\\operatorname{char}", "kk": "\\operatorname{k}", "cl": "\\operatorname{cl}", "inv": "\\operatorname{inv}", "Eigenvalues": "\\operatorname{Spec}", "Eigenspace": "\\operatorname{LP}", "fun": "\\operatorname{fun}", "HS": "\\operatorname{HS}", "St": "\\operatorname{St}", "Realpart": "\\operatorname{Re}", "Aut": "\\operatorname{Aut}", "GL": "\\operatorname{GL}", "SL": "\\operatorname{SL}", "PSL": "\\operatorname{PSL}", "U": "\\operatorname{U}", "SO": "\\operatorname{SO}", "Gal": "\\operatorname{Gal}", "Sym": "\\operatorname{Sym}", "Homeo": "\\operatorname{Homeo}", "Cay": "\\operatorname{Cay}", "Isom": "\\operatorname{Isom}", "id": "\\operatorname{id}", "supp": "\\operatorname{supp}", "End": "\\operatorname{End}", "Mat": "\\operatorname{Mat}", "Cone": "\\operatorname{Cone}", "diam": "\\operatorname{diam}", "Ad": "\\operatorname{Ad}", "imaginary": "\\operatorname{Im}", "glfrak": "\\mathfrak{gl}", "slfrak": "\\mathfrak{sl}", "sufrak": "\\mathfrak{su}", "GAP": ["\\texttt{GAP}", 0], "youngsym": "\\sigma_{\\lambda}", "mat": ["\\begin{pmatrix} #1 & #2\\\\ #3 & #4 \\end{pmatrix}", 4], "abs": ["\\lvert #1 \\rvert", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/chapter01';</script>
+    <script src="../_static/quiz.js?v=429d5605"></script>
     <script src="../_static/bs-table-wrapper.js?v=8f7ea02a"></script>
     <script src="../_static/fix-pipe-tables.js?v=5aeff36a"></script>
     <link rel="canonical" href="/teorija-upodobitev/content/chapter01.html" />
@@ -326,6 +328,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adjunkcija-restrikcije-in-indukcije">Adjunkcija restrikcije in indukcije</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
             </nav>
         </div>
@@ -974,8 +977,25 @@ document.write(`
 <div class="domacanaloga">
 <p>Premisli, kako se restrikcija in indukcija ujameta z dualom, direktno vsoto in tenzorskim produktom.</p>
 </div>
-<hr class="footnotes docutils" />
 </section>
+</section>
+<section id="kviz">
+<h2>Kviz<a class="headerlink" href="#kviz" title="Link to this heading">#</a></h2>
+<div class="quiz-item" data-correct="false"><p>Stopnja modularne upodobitve je praštevilo.</p>
+</div><div class="quiz-item" data-correct="false"><p>Trivialna upodobitev je stopnje <span class="math notranslate nohighlight">\(0\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Cayleyjeva upodobitev je poseben primer permutacijske upodobitve.</p>
+</div><div class="quiz-item" data-correct="false"><p>Upodobitev je zvesta, kadar je surjektivna.</p>
+</div><div class="quiz-item" data-correct="false"><p>Morfizmom v kategoriji upodobitev dane grupe pravimo prepletične.</p>
+</div><div class="quiz-item" data-correct="true"><p>Regularna upodobitev končne ciklične grupe je izomorfna desni regularni upodobitvi.</p>
+</div><div class="quiz-item" data-correct="false"><p>Naj bo <span class="math notranslate nohighlight">\(G\)</span> grupa z linearnim delovanjem na prostoru <span class="math notranslate nohighlight">\(V\)</span>. Prostor koinvariant <span class="math notranslate nohighlight">\(V_G\)</span> je podprostor prostora <span class="math notranslate nohighlight">\(V\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Permutacijska upodobitev končne ciklične grupe je izomorfna direktni vsoti enorazsežnih podupodobitev.</p>
+</div><div class="quiz-item" data-correct="false"><p>Tenzorski produkt upodobitev je vselej razcepna upodobitev.</p>
+</div><div class="quiz-item" data-correct="true"><p>Upodobitve grupe <span class="math notranslate nohighlight">\(G\)</span>, ki so trivialne na podgrupi edinki <span class="math notranslate nohighlight">\(N\)</span>, so v bijekciji z upodobitvami kvocientne grupe <span class="math notranslate nohighlight">\(G/N\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Restrikcija in indukcija sta inverzna funktorja.</p>
+</div><div class="quiz-item" data-correct="true"><p>Indukcija trivialne upodobitve iz podgrupe končnega indeksa <span class="math notranslate nohighlight">\(H \leq G\)</span> je izomorfna permutacijski upodobitvi <span class="math notranslate nohighlight">\(G\)</span> na odsekih po <span class="math notranslate nohighlight">\(H\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Stopnja inducirane upodobitve je enaka stopnji originalne upodobitve.</p>
+</div><div class="quiz-item" data-correct="false"><p>Indukcija tenzorskega produkta upodobitev je izomorfna tenzorskemu produktu indukcij upodobitev.</p>
+</div><hr class="footnotes docutils" />
 </section>
 </section>
 
@@ -1061,6 +1081,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adjunkcija-restrikcije-in-indukcije">Adjunkcija restrikcije in indukcije</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
   </nav></div>
 

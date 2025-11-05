@@ -8,7 +8,7 @@
   <strong>Urban Jezernik<br>
   Univerza v Ljubljani, Fakulteta za matematiko in fiziko</strong><br>
 
-  Zadnja posodobitev: 04. 11. 2025
+  Zadnja posodobitev: 05. 11. 2025
 </div>
 ```
 

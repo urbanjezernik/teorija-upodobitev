@@ -955,3 +955,206 @@ to je <span class="definicija">Hilbert-Schmidtov skalarni produkt</span>. Parsev
 [^16]: Diagonalizabilnost sledi iz obravnave Jordanove normalne forme preslikave $\rho(g)$.
 
 [^17]: Skalarni produkt na danem prostoru lahko izberemo na mnogo različnih načinov.
+
+
+## Kviz
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Vsaka nerazcepna upodobitev končne grupe je končnorazsežna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Vsaka upodobitev končne grupe je polenostavna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Končna $p$-grupa ima nad poljem karakteristike $p$ lahko neskončno mnogo nerazcepnih upodobitev.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Tedaj se vsaka nerazcepna upodobitev $G$ pojavi v regularni upodobitvi z večkratnostjo $\deg(\pi)$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Matrični koeficienti neizomorfnih nerazcepnih upodobitev končne grupe nad ugodnim poljem so ortogonalni.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Kompleksni nerazcepni karakterji končne grupe $G$ tvorijo ortonormiran sistem v prostoru kompleksnih funkcij na $G$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Nekomutativna Fourierova transformacija funkcije $f$ na grupi $G$ v upodobitvi $\pi$ je $\hat{f}(\pi) = \sum_{g \in G} f(g) \pi(g)$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Za vsako funkcijo $f$ na grupi $G$ velja $\hat{f}(\rho_{fun}) \cdot 1_1 = f$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Fourierova transformacija razredne funkcije $f$ na $G$ v regularni upodobitvi je skalarno množenje.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Število nerazcepnih kompleksnih upodobitev končne grupe $G$ je enako $k(G)$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Konjugiranostni razredi v simetrični grupi $S_n$ so v bijekciji z razčlenitvami števila $n$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Naj bo $G$ končna grupa in $\rho$ njena končnorazsežna kompleksna upodobitev. Tedaj je $\rho$ nerazcepna, če in samo če velja $|| \chi_{\rho} || = 0$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Vsaka endospletična regularne upodobitve končne grupe nad kompleksnimi števili izhaja iz Fourierove transformacije.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Funkcija $f \in \mathrm{fun}(G,\mathbf{C})$ je izračunljiva iz svojih Fourierovih transformirank v nerazcepnih upodobitvah.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Tabelo karakterjev simetrične grupe $S_n$ nad poljem kompleksnih števil lahko izračunamo z algoritmom, ki teče v polinomskem času v odvisnosti od $n$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Kolobar virtualnih karakterjev $R(G)$ dane končne grupe je končno generiran kot kolobar.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Naj bo $G$ končna grupa. Karakter vsake končnorazsežne kompleksne upodobitve grupe $G$ je celoštevilska linearna kombinacija indukcij nerazcepnih karakterjev podgrup $G$ praštevilske moči.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Stopnja nerazcepne kompleksne upodobitve končne grupe deli moč grupe.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Vsaka kompleksna upodobitev končne grupe je unitarna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Parsevalov izrek povezuje standardni kompleksni skalarni produkt na prostoru funkcij s Hilbert-Schmidtovimi skalarnimi produkti Fourierovih transformirank v nerazcepnih upodobitvah.
+
+```{raw} html
+</div>
+```

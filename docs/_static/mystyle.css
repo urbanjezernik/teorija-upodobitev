@@ -201,3 +201,37 @@ div.odprtproblem > p:first-child { margin-top: 0; }
 /* …repeat for lema, definicija, domacanaloga … */
 
 footer.bd-footer-content {display:none;}
+
+/* ── QUIZ (scoped, minimalist, safe to append) ───────────── */
+.chapter-quiz { margin-top: 1.5rem; }
+
+.chapter-quiz .quiz-item {
+  margin: 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+  border-left: 4px solid transparent;
+  border-radius: 0.25rem;
+  background: #fafafa;
+  color: inherit;
+}
+
+.chapter-quiz .quiz-item p { margin: 0 0 0.5rem 0; }
+
+/* Math stays readable in compact blocks */
+.chapter-quiz .quiz-item mjx-container { font-size: 1em; }
+
+.chapter-quiz .quiz-controls { display: inline-flex; gap: 0.5rem; }
+
+.chapter-quiz .quiz-btn {
+  font: inherit; color: inherit; line-height: 1.2;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid #bdbdbd; background: #f6f6f6;
+  border-radius: 0.3rem; cursor: pointer;
+}
+.chapter-quiz .quiz-btn:hover  { background: #eee; }
+
+/* results */
+.chapter-quiz .quiz-item.is-correct { border-left-color: #2e7d32; background: #f3f8f4; }
+.chapter-quiz .quiz-item.is-wrong   { border-left-color: #9E291A; background: #fbf1f0; }
+
+.chapter-quiz .quiz-reveal     { margin-top: 0.5rem; font-style: italic; }
+.chapter-quiz .quiz-reveal-btn { margin-left: auto; }

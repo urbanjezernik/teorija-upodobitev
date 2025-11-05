@@ -8,6 +8,67 @@ from datetime import date
 
 from textwrap import dedent   # already imported earlier
 
+
+import json, html  # add to your imports
+
+_DOLLAR_INLINE = re.compile(r"\$(.+?)\$")
+_DOLLAR_DISPLAY = re.compile(r"\$\$(.+?)\$\$", re.DOTALL)
+import json
+
+def render_quiz_block(idx: int, quiz_dir: pathlib.Path) -> str:
+    """
+    If mybook/content/quizzes/chapterNN.json exists, append a section:
+      ## Vprašanja za ponovitev
+      (for each question)
+        ```{raw} html
+        <div class="quiz-item" data-correct="true|false">
+        ```
+        …question text as normal Markdown (so $math$ renders)…
+        </div>
+    """
+    path = quiz_dir / f"chapter{idx:02}.json"
+    if not path.exists():
+        return ""
+
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as e:
+        return (
+            "```{admonition} Pozor\n"
+            ":class: warning\n"
+            f"Neveljaven JSON v `{path.as_posix()}`: {e}\n"
+            "```\n"
+        )
+
+    blocks = ["## Kviz\n"]
+    for q in data:
+        text = str(q.get("question", "")).strip()
+        answers = q.get("answers", [])
+        correct = None
+        for ans in answers:
+            if ans.get("correct"):
+                correct = str(ans.get("answer", ""))
+                break
+
+        # true/false → data-correct, otherwise stash label (if you ever need it later)
+        if isinstance(correct, str) and correct.lower() in ("true", "false"):
+            open_tag = f'<div class="quiz-item" data-correct="{correct.lower()}">'
+        elif correct:
+            open_tag = f'<div class="quiz-item" data-correct-label="{correct}">'
+        else:
+            open_tag = '<div class="quiz-item">'
+
+        blocks.append(
+            "```{raw} html\n" + open_tag + "\n```\n\n" +  # OPEN (raw HTML)
+            text + "\n\n" +                                 # QUESTION (Markdown → MathJax works)
+            "```{raw} html\n</div>\n```\n"                  # CLOSE (raw HTML)
+        )
+
+    return "\n".join(blocks)
+
+
+
+
 # --- 0. helper -----------------------------------------------------------
 def strip_preamble(tex_src: str) -> str:
     """
@@ -78,6 +139,10 @@ BOOK_DIR   = pathlib.Path("mybook")               # created earlier
 CONTENT_DIR = BOOK_DIR / "content"                # keep Markdown here
 CONTENT_DIR.mkdir(parents=True, exist_ok=True)
 
+# Where to keep per-chapter quiz JSON files:
+QUIZ_DIR = (BOOK_DIR / "content" / "quizzes")
+QUIZ_DIR.mkdir(parents=True, exist_ok=True)
+
 tex = TEX_FILE.read_text(encoding="utf-8")
 # remove \begin{document} … \end{document}
 tex = re.sub(r'\\begin{document}|\\end{document}', '', tex)
@@ -130,11 +195,19 @@ for idx, ch_tex in enumerate(chapters_tex, 1):
         r'\1```{math}\n\2\n\1```',   # same indent, MyST directive
         md, flags=re.M)
     out_md.write_text(md)                               # overwrite in place
-    
-    md = style_block(idx) + "\n" + md        #  idx = chapter number in the loop
+        
+    # Prepend YAML front matter first, then your style block and body
+    md = style_block(idx) + "\n" + md
+
+    quiz_block = render_quiz_block(idx, QUIZ_DIR)
+    if quiz_block:
+        md += "\n\n" + quiz_block
+
     out_md.write_text(md)
 
+
     chapter_entries.append({"file": str(out_md.relative_to(BOOK_DIR))})
+
 
 
 # 3️⃣  Handle the pre-chapter material as “intro”
@@ -173,7 +246,6 @@ jsblock = """```{raw} html
 """
 
 full_intro = make_title_block() + "\n" + md + "\n" + jsblock
-
 intro_md.write_text(full_intro)
 
 # --- apply the same post-processing we used for chapters -------------

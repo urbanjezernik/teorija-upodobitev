@@ -1205,3 +1205,176 @@ V posebnem je vseh nerazcepnih upodobitev $\SL_3(\ZZ)$ le števno mnogo, kar je 
 [^31]: Topologija na $\ZZ_p$ je nekoliko neobičajna. Dobimo namreč popolnoma nepovezan topološki prostor. Predstavljamo si ga lahko kot Cantorjevo množico, kot je prikazano [tukaj](http://roice3.org/padics/).
 
 [^32]: Tej lastnosti pravimo <span class="definicija">brez majhnih podgrup</span>, angleško *no small subgroups*.
+
+
+## Kviz
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Vsaka upodobitev grupe $\mathbf{R}$ je zvezna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Vsaka zvezna upodobitev grupe $\mathbf{R}$ je unitarizabilna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Vsaka zvezna upodobitev grupe $\mathbf{R}/\mathbf{Z}$ je unitarizabilna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Grupa $SL_2(\mathbf{C})$ ima neskončno mnogo končnorazsežnih gladkih nerazcepnih upodobitev.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Tangentni prostor grupe $SL_2(\mathbf{C})$ sestoji natanko iz $2 \times 2$ kompleksnih matrik s sledjo $0$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Iz Liejeve grupe pridemo v Liejevo algebro z eksponentno preslikavo.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Tangentni prostor Liejeve grupe tvori Liejevo algebro glede na operaciji $+$ in $[.,.]$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Vsaka nerazcepna Liejeva upodobitev Liejeve algebre $\mathfrak{sl}_2(\mathbf{C})$ je odvod neke polinomske upodobitve grupe $SL_2(\mathbf{C})$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Vsako Liejevo upodobitev poljubne Liejeve algebre lahko pointegriramo do upodobitve prirejene Liejeve grupe.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Za matriki $X,Y \in \mathfrak{gl}_n(\mathbf{C})$ velja $\log(e^X e^Y) = X + Y$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Grupa $SL_2(\mathbf{R})$ nima unitarnih upodobitev.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Modularna grupa $PSL_2(\mathbf{Z})$ je prosti produkt dveh svojih podgrup reda $2$ in $3$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Grupa $SL_2(\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Grupa $SL_3(\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Vsaka podgrupa končnega indeksa v $SL_2(\mathbf{Z})$ vsebuje neko kongruenčno podgrupo.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Kolobar $p$-adičnih števil je topološko homeomorfen zaprti krogli v $\mathbf{R}^2$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Vsaka končnorazsežna upodobitev grupe $SL_3(\mathbf{Z})$ se na neki podgrupi končnega indeksa ujema z zožitvijo polinomske upodobitve grupe $SL_3(\mathbf{C})$.
+
+```{raw} html
+</div>
+```

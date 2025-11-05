@@ -35,7 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=a5ebfbfa" />
+    <link rel="stylesheet" type="text/css" href="../_static/quiz.css?v=ec93ceb6" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=7a42ac56" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -62,6 +63,7 @@
     <script>window.MathJax = {"tex": {"macros": {"NN": "\\mathbf{N}", "ZZ": "\\mathbf{Z}", "QQ": "\\mathbf{Q}", "RR": "\\mathbf{R}", "CC": "\\mathbf{C}", "FF": "\\mathbf{F}", "EE": "\\mathbf{E}", "PP": "\\mathbf{P}", "HH": "\\mathbf{H}", "oneone": "\\mathbf{1}", "Fcal": "\\mathcal{F}", "conclass": "\\mathcal{C}", "image": "\\operatorname{im}", "sgn": "\\operatorname{sgn}", "Res": "\\operatorname{Res}", "Ind": "\\operatorname{Ind}", "Rep": "\\operatorname{Rep}", "mult": "\\operatorname{mult}", "Izotip": "\\operatorname{Izotip}", "MK": "\\operatorname{MK}", "tr": "\\operatorname{tr}", "Irr": "\\operatorname{Irr}", "SU": "\\mathrm{SU}", "characteristic": "\\operatorname{char}", "kk": "\\operatorname{k}", "cl": "\\operatorname{cl}", "inv": "\\operatorname{inv}", "Eigenvalues": "\\operatorname{Spec}", "Eigenspace": "\\operatorname{LP}", "fun": "\\operatorname{fun}", "HS": "\\operatorname{HS}", "St": "\\operatorname{St}", "Realpart": "\\operatorname{Re}", "Aut": "\\operatorname{Aut}", "GL": "\\operatorname{GL}", "SL": "\\operatorname{SL}", "PSL": "\\operatorname{PSL}", "U": "\\operatorname{U}", "SO": "\\operatorname{SO}", "Gal": "\\operatorname{Gal}", "Sym": "\\operatorname{Sym}", "Homeo": "\\operatorname{Homeo}", "Cay": "\\operatorname{Cay}", "Isom": "\\operatorname{Isom}", "id": "\\operatorname{id}", "supp": "\\operatorname{supp}", "End": "\\operatorname{End}", "Mat": "\\operatorname{Mat}", "Cone": "\\operatorname{Cone}", "diam": "\\operatorname{diam}", "Ad": "\\operatorname{Ad}", "imaginary": "\\operatorname{Im}", "glfrak": "\\mathfrak{gl}", "slfrak": "\\mathfrak{sl}", "sufrak": "\\mathfrak{su}", "GAP": ["\\texttt{GAP}", 0], "youngsym": "\\sigma_{\\lambda}", "mat": ["\\begin{pmatrix} #1 & #2\\\\ #3 & #4 \\end{pmatrix}", 4], "abs": ["\\lvert #1 \\rvert", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/chapter04';</script>
+    <script src="../_static/quiz.js?v=429d5605"></script>
     <script src="../_static/bs-table-wrapper.js?v=8f7ea02a"></script>
     <script src="../_static/fix-pipe-tables.js?v=5aeff36a"></script>
     <link rel="canonical" href="/teorija-upodobitev/content/chapter04.html" />
@@ -322,6 +324,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrike-visjih-razseznosti">Matrike višjih razsežnosti</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
             </nav>
         </div>
@@ -1211,8 +1214,24 @@ document.write(`
 <sup>18</sup></span>
 
 </label><input type='checkbox' id='sidenote-role-18' name='sidenote-role-18' class='margin-toggle'><span class="sidenote"><sup>18</sup>Računanje teh tabel specifičnih končnih enostavnih grup je zbrano v <a class="reference external" href="http://brauer.maths.qmul.ac.uk/Atlas/v3/">ATLAS</a>. Ti izračuni so močno pripomogli k dokazu izreka o <a class="reference external" href="https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups">klasifikaciji končnih enostavnih grup</a>.</span> ampak končni cilj je imeti generične tabele karakterjev, kot smo to dosegli za <span class="math notranslate nohighlight">\(G_p = \GL_2(\FF_p)\)</span>. Za razumevanje teorije upodobitev teh grup imamo na voljo matematično zahtevno <a class="reference external" href="https://en.wikipedia.org/wiki/Deligne%E2%80%93Lusztig_theory">Deligne-Lusztigovo teorijo</a>, ki upodobitve končnih grup sestavlja s pomočjo upodobitev prirejenih algebraičnih grup nad algebraično zaprtim poljem, na primer <span class="math notranslate nohighlight">\(\SL_n(\overline{\FF_p})\)</span>, in sicer te upodobitve izhajajo iz delovanja na <span class="math notranslate nohighlight">\(\ell\)</span>-adičnih kohomoloških grupah prirejenih raznoterosti. Iz te teorije lahko razumemo <em>del</em> generične tabele karakterjev, na primer poznamo vse stopnje nerazcepnih upodobitev, ne poznamo pa vseh vrednosti vseh karakterjev.</p>
-<hr class="footnotes docutils" />
 </section>
+</section>
+<section id="kviz">
+<h2>Kviz<a class="headerlink" href="#kviz" title="Link to this heading">#</a></h2>
+<div class="quiz-item" data-correct="true"><p>Nerazcepne kompleksne upodobitve <span class="math notranslate nohighlight">\(S_n\)</span> so v bijekciji z razčlenitvami <span class="math notranslate nohighlight">\(\lambda\)</span> števila <span class="math notranslate nohighlight">\(n\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Vektorskemu prostoru <span class="math notranslate nohighlight">\(V_{\lambda}\)</span>, prirejenemu razčlenitvi <span class="math notranslate nohighlight">\(\lambda\)</span>, pravimo Špelin modul.</p>
+</div><div class="quiz-item" data-correct="true"><p>Razčlenitvi <span class="math notranslate nohighlight">\((n-1,1)\)</span> števila <span class="math notranslate nohighlight">\(n\)</span> ustreza standardna upodobitev <span class="math notranslate nohighlight">\(S_n\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Iz vsake nerazcepne upodobitve <span class="math notranslate nohighlight">\(S_n\)</span> lahko po izbiri ustrezne baze s projekcijo mod <span class="math notranslate nohighlight">\(p\)</span> dobimo modularno upodobitev.</p>
+</div><div class="quiz-item" data-correct="true"><p>Vrednosti nerazcepnih karakterjev simetrične grupe lahko izračunamo s Frobeniusovo formulo.</p>
+</div><div class="quiz-item" data-correct="false"><p>Formula o dolžinah kljuk pove, da lahko vrednosti nerazcepnih karakterjev izračunamo iz dolžin kljuk v diagramu razčlenitve.</p>
+</div><div class="quiz-item" data-correct="false"><p>Vsaka nerazcepna upodobitev alternirajoče grupe <span class="math notranslate nohighlight">\(A_n\)</span>  je restrikcija nerazcepne updobitve simetrične grupe <span class="math notranslate nohighlight">\(S_n\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Podgrupa zgornjetrikotnih matrik v <span class="math notranslate nohighlight">\(G_p = GL_2(\mathbf{F}_p)\)</span> se imenuje Boreliozna podgrupa.</p>
+</div><div class="quiz-item" data-correct="true"><p>Grupa <span class="math notranslate nohighlight">\(G_p\)</span> naravno deluje na projektivni premici nad končnim poljem.</p>
+</div><div class="quiz-item" data-correct="true"><p>Za <span class="math notranslate nohighlight">\(p &gt; 3\)</span> je grupa <span class="math notranslate nohighlight">\(PSL_2(\mathbf{F}_p)\)</span> enostavna.</p>
+</div><div class="quiz-item" data-correct="false"><p>Razcepni in nerazcepni torus v <span class="math notranslate nohighlight">\(GL_2(\mathbf{F}_p)\)</span> sta kot abelovi grupi izomorfna.</p>
+</div><div class="quiz-item" data-correct="true"><p>Steinbergova upodobitev je nerazcepna upodobitev <span class="math notranslate nohighlight">\(GL_2(\mathbf{F}_p)\)</span>, ki je podupodobitev permutacijske upodobitve <span class="math notranslate nohighlight">\(GL_2(\mathbf{F}_p)\)</span> na projektivni premici.</p>
+</div><div class="quiz-item" data-correct="false"><p>Nerazcepne upodobitve grupe <span class="math notranslate nohighlight">\(GL_2(\mathbf{F}_p)\)</span>, ki jih dobimo z indukcijo iz podgrupe zgornjetrikotnih matrik, se imenujejo upodobitve sekundarne vrste.</p>
+</div><hr class="footnotes docutils" />
 </section>
 </section>
 
@@ -1294,6 +1313,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrike-visjih-razseznosti">Matrike višjih razsežnosti</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
   </nav></div>
 

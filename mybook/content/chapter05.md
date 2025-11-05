@@ -992,3 +992,96 @@ Vzpodbuden delni rezultat je, da asimptotska visoko verjetna ekspanzivnost drži
 [^18]: Glej pregledni članek [(Liebeck 2017)](https://www.ma.imperial.ac.uk/~mwl/princeton-survey-final.pdf).
 
 [^19]: Ni težko premisliti, da sta ta dva koncepta ekvivalentna. Čas mešanja v vsaki članici družine $G_i$ je $O(\log |G_i|)$, če in samo če je družina ekspanzivna.
+
+
+## Kviz
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Za vsak dovolj velik $n$ velja, da vsaka podmnožica $\{ 1,2,\dots,n\}$ gostote vsaj $1\%$ vsebuje rešitev enačbe $x+y=2z$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Fourierova transformacija pretvori konvolucijo funkcij v produkt linearnih preslikav (in pri tem zamenja vrstni red).
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Za vsak dovolj velik $n$ velja, da vsaka podmnožica $\mathbf{Z}/n\mathbf{Z}$ gostote vsaj $1\%$ vsebuje rešitev enačbe $x+y=z$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Najmanjša stopnja netrivialne nerazcepne kompleksne upodobitve grupe $A_n$ je velikostnega reda $\Theta(n!)$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Vsak element nekomutativne končne enostavne grupe je komutator.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Operator Markova na grupi $G = \langle S \rangle$ je $M = \frac{\widehat{1_S}}{|S|}(\rho_{fun})$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Če je $\mathcal{C}$ konjugiranostni razred grupe $G$, ki generira $G$, potem je pripadajoči operator Markova diagonalizabilen z lastnimi vrednostmi $\chi_{\pi}(\mathcal{C})$ za nerazcepne kompleksne upodobitve $\pi$ grupe $G$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Čas mešanja slučajnega sprehoda je najmanjše število $n$, pri katerem je $|| \mu_n - U_G || < 1 \%$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Čas mešanja je logaritmičen v velikosti grupe.
+
+```{raw} html
+</div>
+```

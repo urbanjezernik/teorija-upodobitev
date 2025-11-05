@@ -35,7 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=a5ebfbfa" />
+    <link rel="stylesheet" type="text/css" href="../_static/quiz.css?v=ec93ceb6" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=7a42ac56" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -62,6 +63,7 @@
     <script>window.MathJax = {"tex": {"macros": {"NN": "\\mathbf{N}", "ZZ": "\\mathbf{Z}", "QQ": "\\mathbf{Q}", "RR": "\\mathbf{R}", "CC": "\\mathbf{C}", "FF": "\\mathbf{F}", "EE": "\\mathbf{E}", "PP": "\\mathbf{P}", "HH": "\\mathbf{H}", "oneone": "\\mathbf{1}", "Fcal": "\\mathcal{F}", "conclass": "\\mathcal{C}", "image": "\\operatorname{im}", "sgn": "\\operatorname{sgn}", "Res": "\\operatorname{Res}", "Ind": "\\operatorname{Ind}", "Rep": "\\operatorname{Rep}", "mult": "\\operatorname{mult}", "Izotip": "\\operatorname{Izotip}", "MK": "\\operatorname{MK}", "tr": "\\operatorname{tr}", "Irr": "\\operatorname{Irr}", "SU": "\\mathrm{SU}", "characteristic": "\\operatorname{char}", "kk": "\\operatorname{k}", "cl": "\\operatorname{cl}", "inv": "\\operatorname{inv}", "Eigenvalues": "\\operatorname{Spec}", "Eigenspace": "\\operatorname{LP}", "fun": "\\operatorname{fun}", "HS": "\\operatorname{HS}", "St": "\\operatorname{St}", "Realpart": "\\operatorname{Re}", "Aut": "\\operatorname{Aut}", "GL": "\\operatorname{GL}", "SL": "\\operatorname{SL}", "PSL": "\\operatorname{PSL}", "U": "\\operatorname{U}", "SO": "\\operatorname{SO}", "Gal": "\\operatorname{Gal}", "Sym": "\\operatorname{Sym}", "Homeo": "\\operatorname{Homeo}", "Cay": "\\operatorname{Cay}", "Isom": "\\operatorname{Isom}", "id": "\\operatorname{id}", "supp": "\\operatorname{supp}", "End": "\\operatorname{End}", "Mat": "\\operatorname{Mat}", "Cone": "\\operatorname{Cone}", "diam": "\\operatorname{diam}", "Ad": "\\operatorname{Ad}", "imaginary": "\\operatorname{Im}", "glfrak": "\\mathfrak{gl}", "slfrak": "\\mathfrak{sl}", "sufrak": "\\mathfrak{su}", "GAP": ["\\texttt{GAP}", 0], "youngsym": "\\sigma_{\\lambda}", "mat": ["\\begin{pmatrix} #1 & #2\\\\ #3 & #4 \\end{pmatrix}", 4], "abs": ["\\lvert #1 \\rvert", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/chapter06';</script>
+    <script src="../_static/quiz.js?v=429d5605"></script>
     <script src="../_static/bs-table-wrapper.js?v=8f7ea02a"></script>
     <script src="../_static/fix-pipe-tables.js?v=5aeff36a"></script>
     <link rel="canonical" href="/teorija-upodobitev/content/chapter06.html" />
@@ -352,6 +354,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
             </nav>
         </div>
@@ -1287,9 +1290,29 @@ document.write(`
 <p>Nerazcepne končno razsežne kompleksne upodobitve grupe <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span> so zožitve tenzorskih produktov nerazcepnih polinomskih upodobitev grupe <span class="math notranslate nohighlight">\(\SL_3(\CC)\)</span> in nerazcepnih zveznih upodobitev grupe <span class="math notranslate nohighlight">\(\SL_3(\widehat{\ZZ})\)</span>.</p>
 </div>
 <p>V posebnem je vseh nerazcepnih upodobitev <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span> le števno mnogo, kar je v ostrem nasprotju z neštevno mnogo upodobitvami <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>. Vse povedano se da razširiti na grupe <span class="math notranslate nohighlight">\(\SL_m(\ZZ)\)</span> za <span class="math notranslate nohighlight">\(m \geq 3\)</span>.</p>
-<hr class="footnotes docutils" />
 </section>
 </section>
+</section>
+<section id="kviz">
+<h2>Kviz<a class="headerlink" href="#kviz" title="Link to this heading">#</a></h2>
+<div class="quiz-item" data-correct="false"><p>Vsaka upodobitev grupe <span class="math notranslate nohighlight">\(\mathbf{R}\)</span> je zvezna.</p>
+</div><div class="quiz-item" data-correct="false"><p>Vsaka zvezna upodobitev grupe <span class="math notranslate nohighlight">\(\mathbf{R}\)</span> je unitarizabilna.</p>
+</div><div class="quiz-item" data-correct="true"><p>Vsaka zvezna upodobitev grupe <span class="math notranslate nohighlight">\(\mathbf{R}/\mathbf{Z}\)</span> je unitarizabilna.</p>
+</div><div class="quiz-item" data-correct="true"><p>Grupa <span class="math notranslate nohighlight">\(SL_2(\mathbf{C})\)</span> ima neskončno mnogo končnorazsežnih gladkih nerazcepnih upodobitev.</p>
+</div><div class="quiz-item" data-correct="true"><p>Tangentni prostor grupe <span class="math notranslate nohighlight">\(SL_2(\mathbf{C})\)</span> sestoji natanko iz <span class="math notranslate nohighlight">\(2 \times 2\)</span> kompleksnih matrik s sledjo <span class="math notranslate nohighlight">\(0\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Iz Liejeve grupe pridemo v Liejevo algebro z eksponentno preslikavo.</p>
+</div><div class="quiz-item" data-correct="true"><p>Tangentni prostor Liejeve grupe tvori Liejevo algebro glede na operaciji <span class="math notranslate nohighlight">\(+\)</span> in <span class="math notranslate nohighlight">\([.,.]\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Vsaka nerazcepna Liejeva upodobitev Liejeve algebre <span class="math notranslate nohighlight">\(\mathfrak{sl}_2(\mathbf{C})\)</span> je odvod neke polinomske upodobitve grupe <span class="math notranslate nohighlight">\(SL_2(\mathbf{C})\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Vsako Liejevo upodobitev poljubne Liejeve algebre lahko pointegriramo do upodobitve prirejene Liejeve grupe.</p>
+</div><div class="quiz-item" data-correct="false"><p>Za matriki <span class="math notranslate nohighlight">\(X,Y \in \mathfrak{gl}_n(\mathbf{C})\)</span> velja <span class="math notranslate nohighlight">\(\log(e^X e^Y) = X + Y\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Grupa <span class="math notranslate nohighlight">\(SL_2(\mathbf{R})\)</span> nima unitarnih upodobitev.</p>
+</div><div class="quiz-item" data-correct="true"><p>Modularna grupa <span class="math notranslate nohighlight">\(PSL_2(\mathbf{Z})\)</span> je prosti produkt dveh svojih podgrup reda <span class="math notranslate nohighlight">\(2\)</span> in <span class="math notranslate nohighlight">\(3\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Grupa <span class="math notranslate nohighlight">\(SL_2(\mathbf{Z})\)</span> ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje <span class="math notranslate nohighlight">\(17\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Grupa <span class="math notranslate nohighlight">\(SL_3(\mathbf{Z})\)</span> ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje <span class="math notranslate nohighlight">\(17\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Vsaka podgrupa končnega indeksa v <span class="math notranslate nohighlight">\(SL_2(\mathbf{Z})\)</span> vsebuje neko kongruenčno podgrupo.</p>
+</div><div class="quiz-item" data-correct="false"><p>Kolobar <span class="math notranslate nohighlight">\(p\)</span>-adičnih števil je topološko homeomorfen zaprti krogli v <span class="math notranslate nohighlight">\(\mathbf{R}^2\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Vsaka končnorazsežna upodobitev grupe <span class="math notranslate nohighlight">\(SL_3(\mathbf{Z})\)</span> se na neki podgrupi končnega indeksa ujema z zožitvijo polinomske upodobitve grupe <span class="math notranslate nohighlight">\(SL_3(\mathbf{C})\)</span>.</p>
+</div><hr class="footnotes docutils" />
 </section>
 </section>
 
@@ -1393,6 +1416,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
   </nav></div>
 

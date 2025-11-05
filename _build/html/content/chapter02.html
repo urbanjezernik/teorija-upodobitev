@@ -35,7 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=a5ebfbfa" />
+    <link rel="stylesheet" type="text/css" href="../_static/quiz.css?v=ec93ceb6" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=7a42ac56" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -62,6 +63,7 @@
     <script>window.MathJax = {"tex": {"macros": {"NN": "\\mathbf{N}", "ZZ": "\\mathbf{Z}", "QQ": "\\mathbf{Q}", "RR": "\\mathbf{R}", "CC": "\\mathbf{C}", "FF": "\\mathbf{F}", "EE": "\\mathbf{E}", "PP": "\\mathbf{P}", "HH": "\\mathbf{H}", "oneone": "\\mathbf{1}", "Fcal": "\\mathcal{F}", "conclass": "\\mathcal{C}", "image": "\\operatorname{im}", "sgn": "\\operatorname{sgn}", "Res": "\\operatorname{Res}", "Ind": "\\operatorname{Ind}", "Rep": "\\operatorname{Rep}", "mult": "\\operatorname{mult}", "Izotip": "\\operatorname{Izotip}", "MK": "\\operatorname{MK}", "tr": "\\operatorname{tr}", "Irr": "\\operatorname{Irr}", "SU": "\\mathrm{SU}", "characteristic": "\\operatorname{char}", "kk": "\\operatorname{k}", "cl": "\\operatorname{cl}", "inv": "\\operatorname{inv}", "Eigenvalues": "\\operatorname{Spec}", "Eigenspace": "\\operatorname{LP}", "fun": "\\operatorname{fun}", "HS": "\\operatorname{HS}", "St": "\\operatorname{St}", "Realpart": "\\operatorname{Re}", "Aut": "\\operatorname{Aut}", "GL": "\\operatorname{GL}", "SL": "\\operatorname{SL}", "PSL": "\\operatorname{PSL}", "U": "\\operatorname{U}", "SO": "\\operatorname{SO}", "Gal": "\\operatorname{Gal}", "Sym": "\\operatorname{Sym}", "Homeo": "\\operatorname{Homeo}", "Cay": "\\operatorname{Cay}", "Isom": "\\operatorname{Isom}", "id": "\\operatorname{id}", "supp": "\\operatorname{supp}", "End": "\\operatorname{End}", "Mat": "\\operatorname{Mat}", "Cone": "\\operatorname{Cone}", "diam": "\\operatorname{diam}", "Ad": "\\operatorname{Ad}", "imaginary": "\\operatorname{Im}", "glfrak": "\\mathfrak{gl}", "slfrak": "\\mathfrak{sl}", "sufrak": "\\mathfrak{su}", "GAP": ["\\texttt{GAP}", 0], "youngsym": "\\sigma_{\\lambda}", "mat": ["\\begin{pmatrix} #1 & #2\\\\ #3 & #4 \\end{pmatrix}", 4], "abs": ["\\lvert #1 \\rvert", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/chapter02';</script>
+    <script src="../_static/quiz.js?v=429d5605"></script>
     <script src="../_static/bs-table-wrapper.js?v=8f7ea02a"></script>
     <script src="../_static/fix-pipe-tables.js?v=5aeff36a"></script>
     <link rel="canonical" href="/teorija-upodobitev/content/chapter02.html" />
@@ -321,6 +323,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#karakterji">Karakterji</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
             </nav>
         </div>
@@ -757,8 +760,24 @@ document.write(`
 <p>Nad algebraično zaprtim poljem ničelne karakteristike je polenostavna upodobitev do izomorfizma natančno določena s svojim karakterjem.</p>
 </div>
 <p>Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitve, ki so sicer mnogo bolj kompleksni objekti kot le funkcije na grupi, natančno določene. V nadaljevanju bomo videli, da lahko včasih eksplicitno izračunamo vse nerazcepne karakterje, brez da bi sploh poznali same nerazcepne upodobitve. Na ta način lahko dodobra razumemo kategorijo upodobitev dane grupe zgolj z uporabo karakterjev.</p>
-<hr class="footnotes docutils" />
 </section>
+</section>
+<section id="kviz">
+<h2>Kviz<a class="headerlink" href="#kviz" title="Link to this heading">#</a></h2>
+<div class="quiz-item" data-correct="false"><p>Upodobitev je nerazcepna, če in samo če je ne moremo zapisati kot direktno vsoto dveh podupodobitev.</p>
+</div><div class="quiz-item" data-correct="true"><p>Vsaka spletična med nerazcepnima upodobitvama je bodisi izomorfizem bodisi ničelna.</p>
+</div><div class="quiz-item" data-correct="true"><p>Vsaka nerazcepna kompleksna končnorazsežna upodobitev abelove grupe je enorazsežna.</p>
+</div><div class="quiz-item" data-correct="true"><p>Dana podupodobitev na prostoru <span class="math notranslate nohighlight">\(W \leq V\)</span> ima komplementarno podupodobitev, če in samo če obstaja projekcijska spletična iz <span class="math notranslate nohighlight">\(V\)</span> na <span class="math notranslate nohighlight">\(W\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Izotipična upodobitev je polenostavna.</p>
+</div><div class="quiz-item" data-correct="false"><p>Vsaka končnorazsežna upodobitev ima enolično kompozicijsko vrsto.</p>
+</div><div class="quiz-item" data-correct="true"><p>Naj bo <span class="math notranslate nohighlight">\(\rho\)</span> kompleksna končnorazsežna upodobitev nad algebraično zaprtim poljem <span class="math notranslate nohighlight">\(F\)</span>. Tedaj je izotipična komponenta vsake nerazcepne upodobitve v <span class="math notranslate nohighlight">\(\rho\)</span> izotipična.</p>
+</div><div class="quiz-item" data-correct="false"><p>Naj bo <span class="math notranslate nohighlight">\(\pi\)</span> končnorazsežna kompleksna nerazcepna upodobitev grupe <span class="math notranslate nohighlight">\(G\)</span>. Tedaj je prostor matričnih koeficientov <span class="math notranslate nohighlight">\(MK(\pi)\)</span> razsežnosti <span class="math notranslate nohighlight">\(\deg(\pi)\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Končna grupa ima nad polji, ki niso algebraično zaprta, lahko neskončno mnogo nerazcepnih končnorazsežnih upodobitev.</p>
+</div><div class="quiz-item" data-correct="false"><p>Karakter upodobitve <span class="math notranslate nohighlight">\(\rho\)</span> je funkcija <span class="math notranslate nohighlight">\(\chi \colon G \to F\)</span>, <span class="math notranslate nohighlight">\(\chi(g) = \det(\rho(g))\)</span>.</p>
+</div><div class="quiz-item" data-correct="false"><p>Funkcijam, ki so konstantne na konjugiranostnih razredih grupe, pravimo redne funkcije.</p>
+</div><div class="quiz-item" data-correct="false"><p>Karakter regularne upodobitve končne grupe <span class="math notranslate nohighlight">\(G\)</span> je enak <span class="math notranslate nohighlight">\(|G|\)</span> v enoti grupe, sicer pa je enak <span class="math notranslate nohighlight">\(1\)</span>.</p>
+</div><div class="quiz-item" data-correct="true"><p>Nad algebraično zaprtim poljem ničelne karakteristike je polenostavna upodobitev do izomorfizma natančno določena s svojim karakterjem.</p>
+</div><hr class="footnotes docutils" />
 </section>
 </section>
 
@@ -839,6 +858,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#karakterji">Karakterji</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kviz">Kviz</a></li>
 </ul>
   </nav></div>
 

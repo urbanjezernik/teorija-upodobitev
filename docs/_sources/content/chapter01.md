@@ -826,3 +826,146 @@ Premisli, kako se restrikcija in indukcija ujameta z dualom, direktno vsoto in t
 [^21]: Množico funkcij $\fun(R,V)$ lahko vidimo kot direktno vsoto prostorov $V$, indeksirano z množico $R$.
 
 [^22]: V nadaljevanju bomo spoznali presenetljivo uporabnost tega navidez naključnega dejstva.
+
+
+## Kviz
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Stopnja modularne upodobitve je praštevilo.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Trivialna upodobitev je stopnje $0$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Cayleyjeva upodobitev je poseben primer permutacijske upodobitve.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Upodobitev je zvesta, kadar je surjektivna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Morfizmom v kategoriji upodobitev dane grupe pravimo prepletične.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Regularna upodobitev končne ciklične grupe je izomorfna desni regularni upodobitvi.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Naj bo $G$ grupa z linearnim delovanjem na prostoru $V$. Prostor koinvariant $V_G$ je podprostor prostora $V$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Permutacijska upodobitev končne ciklične grupe je izomorfna direktni vsoti enorazsežnih podupodobitev.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Tenzorski produkt upodobitev je vselej razcepna upodobitev.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Upodobitve grupe $G$, ki so trivialne na podgrupi edinki $N$, so v bijekciji z upodobitvami kvocientne grupe $G/N$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Restrikcija in indukcija sta inverzna funktorja.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Indukcija trivialne upodobitve iz podgrupe končnega indeksa $H \leq G$ je izomorfna permutacijski upodobitvi $G$ na odsekih po $H$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Stopnja inducirane upodobitve je enaka stopnji originalne upodobitve.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Indukcija tenzorskega produkta upodobitev je izomorfna tenzorskemu produktu indukcij upodobitev.
+
+```{raw} html
+</div>
+```

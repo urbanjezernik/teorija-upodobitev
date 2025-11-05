@@ -133,3 +133,4 @@ html_static_path:
 html_js_files:
   - fix-pipe-tables.js
   - bs-table-wrapper.js
+  - quiz.js

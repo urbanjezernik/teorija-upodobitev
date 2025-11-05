@@ -601,3 +601,136 @@ Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitv
 [^12]: V resnici je sled do skalarja natančno *edina* taka funkcija.
 
 [^13]: <span class="definicija">Konjugiranostni razred</span> elementa $g \in G$ je množica $\{ x g x^{-1} \mid x \in G \}$. Grupa $G$ je disjunktna unija konjugiranostnih razredov svojih elementov. Včasih uporabljamo oznako $g^x = x^{-1} g x$ in s tem oznako $g^G$ za konjugiranostni razred elementa $g$ v $G$.
+
+
+## Kviz
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Upodobitev je nerazcepna, če in samo če je ne moremo zapisati kot direktno vsoto dveh podupodobitev.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Vsaka spletična med nerazcepnima upodobitvama je bodisi izomorfizem bodisi ničelna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Vsaka nerazcepna kompleksna končnorazsežna upodobitev abelove grupe je enorazsežna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Dana podupodobitev na prostoru $W \leq V$ ima komplementarno podupodobitev, če in samo če obstaja projekcijska spletična iz $V$ na $W$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Izotipična upodobitev je polenostavna.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Vsaka končnorazsežna upodobitev ima enolično kompozicijsko vrsto.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Naj bo $\rho$ kompleksna končnorazsežna upodobitev nad algebraično zaprtim poljem $F$. Tedaj je izotipična komponenta vsake nerazcepne upodobitve v $\rho$ izotipična.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Naj bo $\pi$ končnorazsežna kompleksna nerazcepna upodobitev grupe $G$. Tedaj je prostor matričnih koeficientov $MK(\pi)$ razsežnosti $\deg(\pi)$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Končna grupa ima nad polji, ki niso algebraično zaprta, lahko neskončno mnogo nerazcepnih končnorazsežnih upodobitev.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Karakter upodobitve $\rho$ je funkcija $\chi \colon G \to F$, $\chi(g) = \det(\rho(g))$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Funkcijam, ki so konstantne na konjugiranostnih razredih grupe, pravimo redne funkcije.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="false">
+```
+
+Karakter regularne upodobitve končne grupe $G$ je enak $|G|$ v enoti grupe, sicer pa je enak $1$.
+
+```{raw} html
+</div>
+```
+
+```{raw} html
+<div class="quiz-item" data-correct="true">
+```
+
+Nad algebraično zaprtim poljem ničelne karakteristike je polenostavna upodobitev do izomorfizma natančno določena s svojim karakterjem.
+
+```{raw} html
+</div>
+```

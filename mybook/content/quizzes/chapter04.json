@@ -1,0 +1,184 @@
+[
+  {
+    "question": "Nerazcepne kompleksne upodobitve $S_n$ so v bijekciji z razčlenitvami $\\lambda$ števila $n$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vektorskemu prostoru $V_{\\lambda}$, prirejenemu razčlenitvi $\\lambda$, pravimo Špelin modul.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Razčlenitvi $(n-1,1)$ števila $n$ ustreza standardna upodobitev $S_n$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Iz vsake nerazcepne upodobitve $S_n$ lahko po izbiri ustrezne baze s projekcijo mod $p$ dobimo modularno upodobitev.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vrednosti nerazcepnih karakterjev simetrične grupe lahko izračunamo s Frobeniusovo formulo.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Formula o dolžinah kljuk pove, da lahko vrednosti nerazcepnih karakterjev izračunamo iz dolžin kljuk v diagramu razčlenitve.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vsaka nerazcepna upodobitev alternirajoče grupe $A_n$  je restrikcija nerazcepne updobitve simetrične grupe $S_n$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Podgrupa zgornjetrikotnih matrik v $G_p = GL_2(\\mathbf{F}_p)$ se imenuje Boreliozna podgrupa.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Grupa $G_p$ naravno deluje na projektivni premici nad končnim poljem.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Za $p > 3$ je grupa $PSL_2(\\mathbf{F}_p)$ enostavna.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Razcepni in nerazcepni torus v $GL_2(\\mathbf{F}_p)$ sta kot abelovi grupi izomorfna.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Steinbergova upodobitev je nerazcepna upodobitev $GL_2(\\mathbf{F}_p)$, ki je podupodobitev permutacijske upodobitve $GL_2(\\mathbf{F}_p)$ na projektivni premici.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nerazcepne upodobitve grupe $GL_2(\\mathbf{F}_p)$, ki jih dobimo z indukcijo iz podgrupe zgornjetrikotnih matrik, se imenujejo upodobitve sekundarne vrste.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  }
+]
