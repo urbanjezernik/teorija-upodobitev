@@ -70,6 +70,10 @@ Pri predstavitvi temeljev teorije upodobitev uporabljamo jezik homomorfizmov gru
 
 - K. Choiy, *[A note on the image of continuous homomorphisms of locally profinite groups](https://www.math.purdue.edu/~tongliu/teaching/598/p-adicrep.pdf)*.
 
+### Oblika zapiskov
+
+Zapiski so pripravljeni predvsem v [elektronski obliki](https://urbanjezernik.github.io/teorija-upodobitev/), ki omogoča neposreden dostop do povezanih virov in kratkih kvizov za hitro ponavljanje po poglavjih. Za tiste, ki so raje odklopljeni ali želijo tiskano različico, je na voljo tudi [PDF](https://github.com/urbanjezernik/teorija-upodobitev/blob/main/upodobitve.pdf).
+
 ### Zahvala
 
 Zapiske sem v največji meri pripravil med izvajanjem predmeta na magistrskem študiju matematike na Fakulteti za matematiko in fiziko Univerze v Ljubljani v letu 2022/23. Zahvaljujem se študentom, ki so obiskovali predavanja in med spremljanjem opozarjali na vsebinske pomanjkljivosti. Zapiske sta še posebej podrobno pregledala študenta Hana Ibrahimpašić in Daniel Vitas. Zahvaljujem se jima za mnoge koristne pripombe. Za Založbo FMF je zapiske strokovno pregledal Primož Moravec. Njegovi predlogi so naredili delo bolj dostopno študentom, za kar sem mu, kot mu bodo tudi bralci, hvaležen.
