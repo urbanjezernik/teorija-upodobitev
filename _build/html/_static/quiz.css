@@ -1,0 +1,15 @@
+.chapter-quiz { margin-top: 1.5rem; }
+.quiz-item { 
+  padding: 0.75rem 0.75rem 0.5rem;
+  margin: 0.75rem 0;
+}
+.quiz-item p { margin: 0 0 0.5rem 0; }
+
+.quiz-controls { display: flex; gap: 0.5rem; }
+
+/* result states */
+.quiz-item.is-correct { border-left-color: #266633; background: #e8f5e9; }
+.quiz-item.is-wrong   { border-left-color: #9E291A; background: #ffebee; }
+
+.quiz-reveal { margin-top: 0.5rem; font-style: italic; }
+.quiz-reveal-btn { margin-left: auto; }

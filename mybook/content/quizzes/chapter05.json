@@ -1,0 +1,128 @@
+[
+  {
+    "question": "Za vsak dovolj velik $n$ velja, da vsaka podmnožica $\\{ 1,2,\\dots,n\\}$ gostote vsaj $1\\%$ vsebuje rešitev enačbe $x+y=2z$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Fourierova transformacija pretvori konvolucijo funkcij v produkt linearnih preslikav (in pri tem zamenja vrstni red).",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Za vsak dovolj velik $n$ velja, da vsaka podmnožica $\\mathbf{Z}/n\\mathbf{Z}$ gostote vsaj $1\\%$ vsebuje rešitev enačbe $x+y=z$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Najmanjša stopnja netrivialne nerazcepne kompleksne upodobitve grupe $A_n$ je velikostnega reda $\\Theta(n!)$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vsak element nekomutativne končne enostavne grupe je komutator.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Operator Markova na grupi $G = \\langle S \\rangle$ je $M = \\frac{\\widehat{1_S}}{|S|}(\\rho_{fun})$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Če je $\\mathcal{C}$ konjugiranostni razred grupe $G$, ki generira $G$, potem je pripadajoči operator Markova diagonalizabilen z lastnimi vrednostmi $\\chi_{\\pi}(\\mathcal{C})$ za nerazcepne kompleksne upodobitve $\\pi$ grupe $G$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Čas mešanja slučajnega sprehoda je najmanjše število $n$, pri katerem je $|| \\mu_n - U_G || < 1 \\%$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Čas mešanja je logaritmičen v velikosti grupe.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,240 @@
+[
+  {
+    "question": "Vsaka upodobitev grupe $\\mathbf{R}$ je zvezna.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vsaka zvezna upodobitev grupe $\\mathbf{R}$ je unitarizabilna.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vsaka zvezna upodobitev grupe $\\mathbf{R}/\\mathbf{Z}$ je unitarizabilna.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Grupa $SL_2(\\mathbf{C})$ ima neskončno mnogo končnorazsežnih gladkih nerazcepnih upodobitev.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tangentni prostor grupe $SL_2(\\mathbf{C})$ sestoji natanko iz $2 \\times 2$ kompleksnih matrik s sledjo $0$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Iz Liejeve grupe pridemo v Liejevo algebro z eksponentno preslikavo.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tangentni prostor Liejeve grupe tvori Liejevo algebro glede na operaciji $+$ in $[.,.]$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vsaka nerazcepna Liejeva upodobitev Liejeve algebre $\\mathfrak{sl}_2(\\mathbf{C})$ je odvod neke polinomske upodobitve grupe $SL_2(\\mathbf{C})$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vsako Liejevo upodobitev poljubne Liejeve algebre lahko pointegriramo do upodobitve prirejene Liejeve grupe.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Za matriki $X,Y \\in \\mathfrak{gl}_n(\\mathbf{C})$ velja $\\log(e^X e^Y) = X + Y$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Grupa $SL_2(\\mathbf{R})$ nima unitarnih upodobitev.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Modularna grupa $PSL_2(\\mathbf{Z})$ je prosti produkt dveh svojih podgrup reda $2$ in $3$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Grupa $SL_2(\\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Grupa $SL_3(\\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vsaka podgrupa končnega indeksa v $SL_2(\\mathbf{Z})$ vsebuje neko kongruenčno podgrupo.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Kolobar $p$-adičnih števil je topološko homeomorfen zaprti krogli v $\\mathbf{R}^2$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vsaka končnorazsežna upodobitev grupe $SL_3(\\mathbf{Z})$ se na neki podgrupi končnega indeksa ujema z zožitvijo polinomske upodobitve grupe $SL_3(\\mathbf{C})$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  }
+]

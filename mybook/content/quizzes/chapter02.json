@@ -1,0 +1,184 @@
+[
+  {
+    "question": "Upodobitev je nerazcepna, če in samo če je ne moremo zapisati kot direktno vsoto dveh podupodobitev.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vsaka spletična med nerazcepnima upodobitvama je bodisi izomorfizem bodisi ničelna.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vsaka nerazcepna kompleksna končnorazsežna upodobitev abelove grupe je enorazsežna.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Dana podupodobitev na prostoru $W \\leq V$ ima komplementarno podupodobitev, če in samo če obstaja projekcijska spletična iz $V$ na $W$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Izotipična upodobitev je polenostavna.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vsaka končnorazsežna upodobitev ima enolično kompozicijsko vrsto.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Naj bo $\\rho$ kompleksna končnorazsežna upodobitev nad algebraično zaprtim poljem $F$. Tedaj je izotipična komponenta vsake nerazcepne upodobitve v $\\rho$ izotipična.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Naj bo $\\pi$ končnorazsežna kompleksna nerazcepna upodobitev grupe $G$. Tedaj je prostor matričnih koeficientov $MK(\\pi)$ razsežnosti $\\deg(\\pi)$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Končna grupa ima nad polji, ki niso algebraično zaprta, lahko neskončno mnogo nerazcepnih končnorazsežnih upodobitev.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Karakter upodobitve $\\rho$ je funkcija $\\chi \\colon G \\to F$, $\\chi(g) = \\det(\\rho(g))$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Funkcijam, ki so konstantne na konjugiranostnih razredih grupe, pravimo redne funkcije.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Karakter regularne upodobitve končne grupe $G$ je enak $|G|$ v enoti grupe, sicer pa je enak $1$.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": false
+      },
+      {
+        "answer": "False",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Nad algebraično zaprtim poljem ničelne karakteristike je polenostavna upodobitev do izomorfizma natančno določena s svojim karakterjem.",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "True",
+        "correct": true
+      },
+      {
+        "answer": "False",
+        "correct": false
+      }
+    ]
+  }
+]
