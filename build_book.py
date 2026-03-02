@@ -80,7 +80,7 @@ def strip_preamble(tex_src: str) -> str:
         return tex_src
     return tex_src[m.end():]         # drop everything up to \maketitle
 
-def make_title_block(today=None):
+def make_title_block(today=None, title_image_html=""):
     """Return the HTML (or MyST-container) that should appear at the very top
     of intro.md.  The date is filled-in automatically unless you pass one in."""
     if today is None:
@@ -96,8 +96,9 @@ def make_title_block(today=None):
     ```{{raw}} html
       <strong>Urban Jezernik<br>
       Univerza v Ljubljani, Fakulteta za matematiko in fiziko</strong><br>
-
       Zadnja posodobitev: {today}
+
+      {title_image_html}
     </div>
     ```
     """)                       # <-- triple-quoted string ends here
@@ -158,9 +159,23 @@ def add_em_to_definicija_for_build(tex_src: str) -> str:
         out = re.sub(pattern, repl, out)
     return out
 
+def prepare_title_image_html(src: pathlib.Path, static_dir: pathlib.Path) -> str:
+    """
+    Copy the chosen title image into mybook/_static and return HTML for intro.md.
+    """
+    if not src.exists():
+        print(f"⚠️  Title image not found: {src}")
+        return ""
+
+    static_dir.mkdir(parents=True, exist_ok=True)
+    dst = static_dir / src.name
+    shutil.copy2(src, dst)
+    return f'<img src="_static/{src.name}" class="naslovna-slika" alt="Naslovna slika">'
+
 TEX_FILE   = pathlib.Path("upodobitve.tex")       # <— adjust if needed
 BOOK_DIR   = pathlib.Path("mybook")               # created earlier
 CONTENT_DIR = BOOK_DIR / "content"                # keep Markdown here
+STATIC_DIR = BOOK_DIR / "_static"
 CONTENT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Where to keep per-chapter quiz JSON files:
@@ -270,7 +285,11 @@ jsblock = """```{raw} html
 ```
 """
 
-full_intro = make_title_block() + "\n" + md + "\n" + jsblock
+title_image_html = prepare_title_image_html(
+    pathlib.Path("img") / "victoriano-izquierdo.jpg",
+    STATIC_DIR,
+)
+full_intro = make_title_block(title_image_html=title_image_html) + "\n" + md + "\n" + jsblock
 intro_md.write_text(full_intro)
 
 # --- apply the same post-processing we used for chapters -------------

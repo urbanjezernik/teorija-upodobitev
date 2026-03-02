@@ -8,6 +8,7 @@
 \usepackage{pstricks,pst-plot,pst-math}
 \usepackage{pstricks-add}
 \usepackage{graphicx}
+\usepackage{pdfpages}
 \usepackage{enumerate}
 \usepackage{color}
 \usepackage{fouriernc}
@@ -265,12 +266,19 @@
 
 \title{\bf Teorija upodobitev}
 \author{Urban Jezernik}
+\newcommand{\publishercoverpdf}{img/ovitek1.pdf}
 
 % za generiranje html dokumenta s stilom mystyle.css uporabi:
 % pandoc upodobitve.tex --toc --toc-depth=2 --metadata date="`date -u "+%d. %m. %Y"`" --template template.html -c mystyle.css -s --mathjax -o index.html
 
 
 \begin{document}
+
+\hypersetup{pageanchor=false}
+\IfFileExists{\publishercoverpdf}{
+  \includepdf[pages=-]{\publishercoverpdf}
+}{}
+\hypersetup{pageanchor=true}
 
 \baselineskip=14pt
 

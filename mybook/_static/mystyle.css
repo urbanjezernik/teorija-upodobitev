@@ -9,6 +9,10 @@ h1, h2 {
 .naslov h1 {
   font-size: 4em;
 }
+.naslovna-slika {
+  /* width: min(420px, 82vw); */
+  margin: 1.4rem auto 1.8rem auto;
+}
 .zgled, .zgledbrezstevilke {
 	color: #266633;
 }
