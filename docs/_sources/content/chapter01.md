@@ -60,7 +60,7 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
               x + q\ZZ \mapsto e^{2 \pi i mx/q}.
   ```
 
-- Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta grupa izhaja iz simetrij $n$-kotnika v ravnini, s čimer nam ponuja svojo naravno upodobitev $\rho \colon D_{2n} \to \GL(\RR^2) = \GL_2(\RR)$, ki preslika generatorja kot
+- Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta grupa izhaja iz simetrij pravilnega $n$-kotnika v ravnini, s čimer nam ponuja svojo naravno upodobitev $\rho \colon D_{2n} \to \GL(\RR^2) = \GL_2(\RR)$, ki preslika generatorja kot
   ```{math}
   s \mapsto \begin{pmatrix}
                   0 & 1 \\ 1 & 0
@@ -152,7 +152,7 @@ Opazujmo grupo $\ZZ$ in dve njeni upodobitvi, ki smo ju že videli. Prva naj bo 
 druga pa naj bo kar trivialna upodobitev $\oneone$ na prostoru $\CC$. Predpišimo linearno preslikavo $\Phi \colon \CC \to \CC^2$ v standardni bazi z matriko $\left( \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right)$. Tedaj za vsak vektor $v \in \CC$ in vsako število $x \in \ZZ$ velja
 ```{math}
 \Phi(x \cdot v) 
-    =  \begin{pmatrix} xv \\ 0 \end{pmatrix} 
+    =  \begin{pmatrix} v \\ 0 \end{pmatrix} 
     = x \cdot  \begin{pmatrix} v \\ 0 \end{pmatrix} 
     = x \cdot \Phi(v),
 ```
@@ -501,14 +501,14 @@ Dualna upodobitev $\chi_a^*$ je torej enorazsežna upodobitev, ki je izomorfna u
 
 Naj bo $G$ grupa.
 
-- Naj bosta $\rho_1, \rho_2$ upodobitvi grupe $G$. Dokaži, da je
+- Naj bosta $\rho_1, \rho_2$ upodobitvi grupe $G$ in predpostavimo, da je vsaj ena končne stopnje. Dokaži, da je
   ```{math}
   \left( \rho_1 \oplus \rho_2 \right)^* \cong \rho_1^* \oplus \rho_2^*
           \quad \text{in} \quad
           \left( \rho_1 \otimes \rho_2 \right)^* \cong \rho_1^* \otimes \rho_2^*.
   ```
 
-- Naj bo $\rho$ upodobitev grupe $G$ z $\deg(\rho) < \infty$. Tedaj je $\left( \rho^* \right)^* \cong \rho$.
+- Naj bo $\rho$ upodobitev grupe $G$ končne stopnje. Tedaj je $\left( \rho^* \right)^* \cong \rho$.
 
 </div>
 
@@ -651,7 +651,7 @@ g \cdot \left( r \mapsto \begin{cases} v & r = r_0, \\ 0 & r \neq r_0 \end{cases
         \Phi \left( g \cdot f \right) =
         \Phi \left( x \mapsto f(xg) \right).
 ```
-Za $x \in R$ z lastnostjo $xg \in Hr_0$, se pravi $x = h r_0 g^{-1}$ za nek $h \in H$, velja $f(xg) = f(hr_0) = \rho(h) \cdot v$. Seveda je $|R \cap H r g^{-1}| = 1$, torej obstaja natanko en tak $x$. Za $x \in R$ z lastnostjo $xg \notin Hr_0$ pa velja $f(xg) = 0$. S tem je
+Za $x \in R$ z lastnostjo $xg \in Hr_0$, se pravi $x = h r_0 g^{-1}$ za nek $h \in H$, velja $f(xg) = f(hr_0) = \rho(h) \cdot v$. Seveda je $|R \cap H r_0 g^{-1}| = 1$, torej obstaja natanko en tak $x$. Za $x \in R$ z lastnostjo $xg \notin Hr_0$ pa velja $f(xg) = 0$. S tem je
 ```{math}
 g \cdot \left( r \mapsto \begin{cases} v & r = r_0, \\ 0 & r \neq r_0 \end{cases} \right) =
         \left( r \mapsto \begin{cases} \rho(h) \cdot v & r = h r_0 g^{-1} \text{ za nek $h \in H$,} \\ 0 & r \notin H r_0 g^{-1} \end{cases} \right).
@@ -803,7 +803,7 @@ Premisli, kako se restrikcija in indukcija ujameta z dualom, direktno vsoto in t
 
 [^9]: Kadar je $\chi(g) = 1$ za vsak $g \in G$, je ta upodobitev izomorfna $\oneone$. Kadar je $\chi(g) \neq 1$ za vsaj kak $g \in G$, pa ta upodobitev *ni* trivialna.
 
-[^10]: Namreč, $v = \Phi(1)$ in $\chi(g) = \rho(g) \cdot 1$.
+[^10]: Namreč, $v = \Phi(1)$ in $\chi(g) v = \Phi(\chi(g) \cdot 1) = \rho(g) \cdot \Phi(1)$.
 
 [^11]: Poseben primer te preslikave smo videli za grupo $\ZZ/n\ZZ$, kjer smo premislili, da je celo bijektivna.
 
@@ -886,7 +886,7 @@ Morfizmom v kategoriji upodobitev dane grupe pravimo prepletične.
 <div class="quiz-item" data-correct="true">
 ```
 
-Regularna upodobitev končne ciklične grupe je izomorfna desni regularni upodobitvi.
+Cayleyjeva upodobitev končne ciklične grupe je izomorfna desni regularni upodobitvi.
 
 ```{raw} html
 </div>

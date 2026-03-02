@@ -70,7 +70,7 @@
     ]
   },
   {
-    "question": "Regularna upodobitev končne ciklične grupe je izomorfna desni regularni upodobitvi.",
+    "question": "Cayleyjeva upodobitev končne ciklične grupe je izomorfna desni regularni upodobitvi.",
     "type": "multiple_choice",
     "answers": [
       {

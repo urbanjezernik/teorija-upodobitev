@@ -8,7 +8,7 @@
   <strong>Urban Jezernik<br>
   Univerza v Ljubljani, Fakulteta za matematiko in fiziko</strong><br>
 
-  Zadnja posodobitev: 05. 11. 2025
+  Zadnja posodobitev: 02. 03. 2026
 </div>
 ```
 
@@ -20,7 +20,7 @@ Teorija upodobitev se ukvarja z *linearizacijo* abstraktnih objektov, predvsem g
 
     <div class="zgledbrezstevilke">
 
-    Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta abstraktna grupa izhaja iz simetrij $n$-kotnika v ravnini, s čimer lahko uresničimo njena generatorja $s,r$ kot matriki
+    Opazujmo diedrsko grupo $D_{2n} = \langle s, r \rangle$, v kateri je $s^2 = 1$, $r^n = 1$ in $s r s = r^{-1}$. Ta abstraktna grupa izhaja iz simetrij pravilnega $n$-kotnika v ravnini, s čimer lahko uresničimo njena generatorja $s,r$ kot matriki
     ```{math}
     s \mapsto \begin{pmatrix}
                     0 & 1 \\ 1 & 0
