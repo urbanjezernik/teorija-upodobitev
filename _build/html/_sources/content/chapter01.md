@@ -7,7 +7,7 @@
 
 # Temelji teorije upodobitev
 
-V tem poglavju bomo vzpostavili temelje teorije upodobitev. Spoznali bomo koncept upodobitve in si ogledali mnogo primerov. Premislili bomo, kako upodobitve med sabo primerjamo in kako iz danih upodobitev sestavimo nove.
+V tem poglavju bomo vzpostavili temelje teorije upodobitev. Spoznali bomo koncept upodobitve in si ogledali številne primere. Premislili bomo, kako upodobitve med seboj primerjamo in kako iz danih upodobitev sestavimo nove.
 
 ## Osnovni pojmi
 
@@ -131,11 +131,11 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
 
 </div>
 
-Upodobitev $\rho$ grupe $G$ pohvalimo s pridevnikom <span class="definicija">zvesta</span>, kadar je injektivna, se pravi $\ker \rho = 1$. Trivialna upodobitev netrivialne grupe ni zvesta, sta pa vselej zvesti Cayleyjeva in desna regularna upodobitev.
+Upodobitev $\rho$ grupe $G$ pohvalimo s pridevnikom <span class="definicija">zvesta</span>, kadar je injektivna, torej $\ker \rho = 1$. Trivialna upodobitev netrivialne grupe ni zvesta, sta pa vselej zvesti Cayleyjeva in desna regularna upodobitev.
 
 ### Kategorija upodobitev
 
-Naj bo $G$ grupa. Opazujmo neki njeni upodobitvi $\rho_1$ in $\rho_2$ nad vektorskima prostoroma $V_1$ in $V_2$, obema nad poljem $F$. Ti dve upodobitvi lahko *primerjamo* med sabo, in sicer tako, da hkrati primerjamo vektorska prostora in delovanji grupe $G$ na teh dveh prostorih.
+Naj bo $G$ grupa. Opazujmo neki njeni upodobitvi $\rho_1$ in $\rho_2$ nad vektorskima prostoroma $V_1$ in $V_2$, obema nad poljem $F$. Ti dve upodobitvi lahko *primerjamo* med seboj, in sicer tako, da hkrati primerjamo vektorska prostora in delovanji grupe $G$ na teh dveh prostorih.
 
 Natančneje, <span class="definicija">spletična</span>[^4] med upodobitvama $\rho_1$ in $\rho_2$ je linearna preslikava $\Phi \colon V_1 \to V_2$, za katero za vsak $g \in G$ in $v \in V_1$ velja[^5]
 ```{math}
@@ -378,7 +378,7 @@ Na ta način dobimo <span class="definicija">direktno vsoto</span> upodobitev $\
 
   <div class="domacanaloga">
 
-  Prepričaj se, da so upodobitve $\chi_j$ za $j \in \Omega$ grupe $\ZZ/n\ZZ$ med sabo paroma neizomorfne.
+  Prepričaj se, da so upodobitve $\chi_j$ za $j \in \Omega$ grupe $\ZZ/n\ZZ$ med seboj paroma neizomorfne.
 
   </div>
 
@@ -394,7 +394,7 @@ Na ta način dobimo <span class="definicija">direktno vsoto</span> upodobitev $\
   ```
   Permutacijska upodobitev $S_3$ je zato direktna vsota enorazsežne podupodobitve $\oneone$ in dvorazsežne podupodobitve $\rho$.
 
-  Premislimo, da upodobitve $\rho$ *ne* moremo zapisati kot direktne vsote svojih pravih podupodobitev. V ta namen opazujmo njene morebitne enorazsežne podupodobitve. Premislili smo že, da te ustrezajo skupnim lastnim vektorjem vseh preslikav $\rho(x)$ za $x \in S_3$. Lastna vektorja $\rho((1 \ 2))$ sta $u_1$ in $u_1 + 2 u_2$. Noben od teh dveh vektorjev ni hkrati lastni vektor $\rho((1 \ 2 \ 3))$. Torej je upodobitev $\rho$ stopnje $2$, hkrati pa nima enorazsežnih podupodobitev in je torej ne moremo nadalje razstaviti.
+  Premislimo, da upodobitve $\rho$ *ne* moremo zapisati kot direktne vsote svojih pravih podupodobitev. V ta namen opazujmo njene morebitne enorazsežne podupodobitve. Premislili smo že, da te ustrezajo skupnim lastnim vektorjem vseh preslikav $\rho(x)$ za $x \in S_3$. Lastna vektorja $\rho((1 \ 2))$ sta $u_1$ in $u_1 + 2 u_2$. Noben od teh dveh vektorjev ni hkrati lastni vektor $\rho((1 \ 2 \ 3))$. Torej je upodobitev $\rho$ stopnje $2$, hkrati pa nima enorazsežnih podupodobitev in je torej ne moremo razstaviti nadalje.
 
 </div>
 
@@ -410,7 +410,7 @@ Naj ima grupa $G$ upodobitvi $\rho_1$ in $\rho_2$ na prostorih $V_1$ in $V_2$. T
 
 <div class="domacanaloga">
 
-Izberimo bazi prostorov $V_1$ in $V_2$. Tenzorski produkti baznih elementov tvorijo bazo prostora $V_1 \otimes V_2$. Kako izgleda matrika $(\rho_1 \otimes \rho_2)(g)$ v odvisnosti od matrik $\rho_1(g)$ in $\rho_2(g)$?
+Izberimo bazi prostorov $V_1$ in $V_2$. Tenzorski produkti baznih elementov tvorijo bazo prostora $V_1 \otimes V_2$. Kako je videti matrika $(\rho_1 \otimes \rho_2)(g)$ v odvisnosti od matrik $\rho_1(g)$ in $\rho_2(g)$?
 
 </div>
 
@@ -543,7 +543,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ nad poljem $F$. Naj bo $E
 E \otimes \rho \colon G \to \GL(E \otimes V), \quad
     g \mapsto \left( e \otimes v \mapsto e  \otimes \rho(g) \cdot v \right).
 ```
-Ta postopek konstrukcije prostora $E \otimes V$ imenujemo <span class="definicija">razširitev skalarjev</span>. Dano upodobitev lahko razširimo do ugodnejših skalarjev[^16], lahko pa tudi dano upodobitev nad velikim poljem $E$ gledamo kot razširitev skalarjev neke upodobitve nad preprostejšim poljem $F$.[^17] V tem slednjem primeru rečemo, da je dana upodobitev <span class="definicija">definirana nad poljem</span> $F$. Včasih nam uspe najti celo preprost *podkolobar* polja $F$, nad katerim je definirana dana upodobitev.
+Ta postopek konstrukcije prostora $E \otimes V$ imenujemo <span class="definicija">razširitev skalarjev</span>. Dano upodobitev lahko razširimo do ugodnejših skalarjev[^16], lahko pa tudi dano upodobitev nad velikim poljem $E$ gledamo kot razširitev skalarjev neke upodobitve nad preprostejšim poljem $F$.[^17] V tem primeru rečemo, da je dana upodobitev <span class="definicija">definirana nad poljem</span> $F$. Včasih nam uspe najti celo preprost *podkolobar* polja $F$, nad katerim je definirana dana upodobitev.
 
 <div class="zgled">
 
@@ -638,7 +638,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\phi \colon G 
 
 </div>
 
-Najpomembnejši primer indukcije, čeravno ne tudi najbolj preprost, je <span class="definicija">indukcija iz podgrupe končnega indeksa</span>. Naj bo $G$ grupa s podgrupo $H$ in naj bo $\phi$ vložitev $H$ v $G$. Predpostavimo, da je $|G:H| < \infty$. Naj bo $\rho$ upodobitev grupe $H$ na prostoru $V$. Premislimo, kako izgleda upodobitev $\Ind^G_H(\rho)$.
+Najpomembnejši primer indukcije, čeravno ne tudi najbolj preprost, je <span class="definicija">indukcija iz podgrupe končnega indeksa</span>. Naj bo $G$ grupa s podgrupo $H$ in naj bo $\phi$ vložitev $H$ v $G$. Predpostavimo, da je $|G:H| < \infty$. Naj bo $\rho$ upodobitev grupe $H$ na prostoru $V$. Premislimo, kako je videti upodobitev $\Ind^G_H(\rho)$.
 
 Naj bo $R$ neka izbrana množica predstavnikov desnih odsekov $H$ v $G$. Vsaka funkcija $f \in \fun(G,V)^H$ je določena z vrednostmi $f(r)$ za $r \in R$ in dodatnih restrikcij za te vrednosti ni, zato dobimo izomorfizem vektorskih prostorov[^21]
 ```{math}
@@ -656,7 +656,7 @@ Za $x \in R$ z lastnostjo $xg \in Hr_0$, se pravi $x = h r_0 g^{-1}$ za nek $h \
 g \cdot \left( r \mapsto \begin{cases} v & r = r_0, \\ 0 & r \neq r_0 \end{cases} \right) =
         \left( r \mapsto \begin{cases} \rho(h) \cdot v & r = h r_0 g^{-1} \text{ za nek $h \in H$,} \\ 0 & r \notin H r_0 g^{-1} \end{cases} \right).
 ```
-Da bo preslikava $\Phi$ spletična, moramo na $\fun(R,V)$ torej uvesti tako delovanje grupe $G$, ki dan vektor $v$ pri vnosu $r_0 \in R$ preslika tako, da najprej izračuna odsek elementa $r_0 g^{-1}$ po $H$, ta element zapiše kot $r_0 g^{-1} = h^{-1} r$ za $h \in H, \ r \in R$, nato pa na vektor $v$ deluje z $\rho(h)$ in ga hkrati prestavi k vnosu $r$.
+Da bo preslikava $\Phi$ spletična, moramo na $\fun(R,V)$ torej uvesti tako delovanje grupe $G$, ki dani vektor $v$ pri vnosu $r_0 \in R$ preslika tako, da najprej izračuna odsek elementa $r_0 g^{-1}$ po $H$, ta element zapiše kot $r_0 g^{-1} = h^{-1} r$ za $h \in H, \ r \in R$, nato pa na vektor $v$ deluje z $\rho(h)$ in ga hkrati prestavi k vnosu $r$.
 
 Opisan postopek si lahko nekoliko lažje predstavljamo tako, da množico $\fun(R,V)$ identificiramo z direktno vsoto $\bigoplus_{r \in R} V r$, kjer je $Vr$ kopija vektorskega prostora $V$ pri komponenti $r$. Element $g \in G$ deluje na vektorju $v r_0 \in Vr_0$ kot $g^{-1}$ z desne. V teh domačih oznakah izračunamo
 ```{math}

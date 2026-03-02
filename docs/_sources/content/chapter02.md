@@ -7,7 +7,7 @@
 
 # Upodobitev pod mikroskopom
 
-V tem poglavju bomo pribili upodobitev dane grupe in se ji tesno približali, kot da bi jo pogledali pod mikroskopom. Pri tem bomo najprej uzrli osnovne kose, iz katerih je sestavljena upodobitev. Ti osnovni kosi ustrezajo celicam, ki jih vidimo pod mikroskopom. Za tem se bomo približali še sestavi teh osnovnih kosov: vsak je dan s homomorfizmom v matrike, zato bomo raziskali koeficiente te matrike. Ti ustrezajo organelom, ki jih v celici vidimo pod mikroskopom. Nazadnje bomo premislili, da so te upodobitvene celice dovolj diferencirane med sabo, da za njihovo identifikacijo zadošča poznavanje le nekaterih njihovih organelov.
+V tem poglavju bomo pribili upodobitev dane grupe in se ji tesno približali, kot da bi jo pogledali pod mikroskopom. Pri tem bomo najprej uzrli osnovne kose, iz katerih je sestavljena upodobitev. Ti osnovni kosi ustrezajo celicam, ki jih vidimo pod mikroskopom. Za tem se bomo približali še sestavi teh osnovnih kosov: vsak je dan s homomorfizmom v matrike, zato bomo raziskali koeficiente te matrike. Ti ustrezajo organelom, ki jih v celici vidimo pod mikroskopom. Nazadnje bomo premislili, da so te upodobitvene celice dovolj diferencirane med seboj, da za njihovo identifikacijo zadošča poznavanje le nekaterih njihovih organelov.
 
 ## Razstavljanje upodobitve
 
@@ -21,11 +21,11 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V \neq 0$. Kadar *ne* obstaj
 
 - Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Premislili smo že, da je ta upodobitev direktna vsota enorazsežne podupodobitve $\oneone$ in dvorazsežne podupodobitve $\rho$, pri čemer slednja nima nobene enorazsežne podupodobitve. S tem je permutacijska upodobitev razstavljena kot direktna vsota dveh nerazcepnih upodobitev.
 
-- Opazujmo diedrsko grupo $D_{2n}$ z dvorazsežno upodobitvijo $\rho_k$ za $k \in \ZZ$, ki jo obravnavajmo kot kompleksno upodobitev. Matrika $\rho_k(r)$ ima lastni vrednosti $e^{\pm 2 \pi i k / n}$. Ti dve vrednosti sta različni, če in samo če $k$ *ni* deljiv z $n/2$. Za vsak $0 < k < n/2$ ima $\rho_k(r)$ torej različni lastni vrednosti z lastnima vektorjema $\left( \begin{smallmatrix} 1 \\ \mp i \end{smallmatrix} \right)$. Matrika $\rho_k(s)$ zamenja ta dva lastna podprostora med sabo. Upodobitev $\rho_k$ za $0 < k < n/2$ torej nima nobene enorazsežne kompleksne podupodobitve in je zato nerazcepna.
+- Opazujmo diedrsko grupo $D_{2n}$ z dvorazsežno upodobitvijo $\rho_k$ za $k \in \ZZ$, ki jo obravnavajmo kot kompleksno upodobitev. Matrika $\rho_k(r)$ ima lastni vrednosti $e^{\pm 2 \pi i k / n}$. Ti dve vrednosti sta različni, če in samo če $k$ *ni* deljiv z $n/2$. Za vsak $0 < k < n/2$ ima $\rho_k(r)$ torej različni lastni vrednosti z lastnima vektorjema $\left( \begin{smallmatrix} 1 \\ \mp i \end{smallmatrix} \right)$. Matrika $\rho_k(s)$ zamenja ta dva lastna podprostora med seboj. Upodobitev $\rho_k$ za $0 < k < n/2$ torej nima nobene enorazsežne kompleksne podupodobitve in je zato nerazcepna.
 
 </div>
 
-Preverimo, da so nerazcepne upodobitve dane grupe med sabo *neprimerljive*, tudi če so enake razsežnosti. Zatorej si jih lahko predstavljamo kot neodvisne osnovne kose kategorije upodobitev dane grupe.[^2]
+Preverimo, da so nerazcepne upodobitve dane grupe med seboj *neprimerljive*, tudi če so enake razsežnosti. Zatorej si jih lahko predstavljamo kot neodvisne osnovne kose kategorije upodobitev dane grupe.[^2]
 
 <div class="lema">
 
@@ -97,7 +97,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\tilde \rho$ n
 
 ### Polenostavnost
 
-Vrnimo se k začetni ideji o *razstavljanju* dane upodobitve. Kadar lahko dano upodobitev $\rho$ zapišemo kot direktno vsoto *nerazcepnih* upodobitev $\bigoplus_{i \in I} \rho_i$, tedaj rečemo, da je $\rho$ <span class="definicija">polenostavna</span> upodobitev. Če so pri tem vse podupodobitve $\rho_i$ izomorfne med sabo, upodobitev $\rho$ imenujemo <span class="definicija">izotipična</span> upodobitev.
+Vrnimo se k začetni ideji o *razstavljanju* dane upodobitve. Kadar lahko dano upodobitev $\rho$ zapišemo kot direktno vsoto *nerazcepnih* upodobitev $\bigoplus_{i \in I} \rho_i$, tedaj rečemo, da je $\rho$ <span class="definicija">polenostavna</span> upodobitev. Če so pri tem vse podupodobitve $\rho_i$ izomorfne med seboj, upodobitev $\rho$ imenujemo <span class="definicija">izotipična</span> upodobitev.
 
 <div class="zgled">
 
@@ -195,7 +195,7 @@ Vsaka upodobitev na končno razsežnem prostoru ima kompozicijsko vrsto. Vsaki d
 
 Naj grupa deluje linearno na končno razsežnem prostoru $V$. Da kompozicijska vrsta res obstaja, ni težko preveriti. Najprej izberemo neko nerazcepno podupodobitev $V_1$. Če je $V_1 < V$, potem izberemo podupodobitev $V_2$, ki vsebuje $V_1$ in je med vsemi takimi minimalne razsežnosti. S tem je $V_2/V_1$ nerazcepna. Induktivno nadaljujemo z grajenjem kompozicijske vrste. Ker je $V$ končno razsežen, se ta postopek ustavi.
 
-Premislimo še, kako lahko vsaki dve kompozicijski vrsti povežemo med sabo. Opazujmo dve taki vrsti,
+Premislimo še, kako lahko vsaki dve kompozicijski vrsti povežemo med seboj. Opazujmo dve taki vrsti,
 ```{math}
 0 = V_0 \leq V_1 \leq \cdots \leq V_n = V 
     \quad \text{in} \quad
@@ -256,7 +256,7 @@ Po Schurovi lemi je (nad algebraično zaprtim poljem) vsak od zadnjih prostorov 
 
   Upodobitev $\tilde \rho$ *ni* nerazcepna, saj ima invarianten podprostor $\langle u_1 - u_2 = e_1 + e_2 + e_3 \rangle$. Na tem podprostoru grupa $S_3$ deluje trivialno. V kvocientu $(\ZZ/3\ZZ)^2/\langle u_1 - u_2 \rangle \cong \ZZ/3\ZZ$ generatorja $(1\ 2)$ in $(1 \ 2 \ 3)$ grupe $S_3$ preslikata odsek vektorja $u_1$ v odsek $-u_1$ oziroma $u_1$. V tem prepoznamo predznačno upodobitev, interpretirano kot homomorfizem $\sgn \colon S_3 \to \GL_1(\ZZ/3\ZZ) \cong \{ 1, -1 \}$. Nad poljem $\ZZ/3\ZZ$ za permutacijsko upodobitev $\pi$ tako velja $\mult_{\pi}(\oneone) = 2$ in $\mult_{\pi}(\sgn) = 1$.
 
-  Premislimo, da upodobitev $\pi$ nad $\ZZ/3\ZZ$ *ni* polenostavna. Če bi namreč bila, bi po zgornjem morala biti izomorfna direktni vsoti $\oneone \oplus \oneone \oplus \sgn$. Prostor $(\ZZ/3\ZZ)^3$ bi zatorej imel bazo, v kateri bi matriki za $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$ bili hkrati diagonalni. Ti dve matriki bi zato komutirali, kar pomeni, da bi morali komutirati tudi linearni preslikavi $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$. Temu pa ni tako, saj na primer velja $\pi((1 \ 2 \ 3)(1 \ 2)) e_1 = e_3$ in $\pi((1 \ 2)(1 \ 2 \ 3)) e_1 = e_1$.
+  Premislimo, da upodobitev $\pi$ nad $\ZZ/3\ZZ$ *ni* polenostavna. Če bi namreč bila, bi po zgornjem morala biti izomorfna direktni vsoti $\oneone \oplus \oneone \oplus \sgn$. Prostor $(\ZZ/3\ZZ)^3$ bi zatorej imel bazo, v kateri bi matriki za $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$ bili hkrati diagonalni. Ti dve matriki bi zato komutirali, kar pomeni, da bi morali komutirati tudi linearni preslikavi $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$. Vendar pa to ne drži, saj na primer velja $\pi((1 \ 2 \ 3)(1 \ 2)) e_1 = e_3$ in $\pi((1 \ 2)(1 \ 2 \ 3)) e_1 = e_1$.
 
 </div>
 
@@ -350,7 +350,7 @@ Naj bo $G$ grupa s končno razsežno upodobitvijo $\rho$ na prostoru $V$ nad alg
 
 ## Matrični koeficienti
 
-Vsaka upodobitev dane grupe je homomorfizem v grupo obrnljivih matrik $\GL(V)$. Do sedaj smo na upodobitve gledali z bolj konceptualnega stališča: govorili smo o strukturi prostora $V$ in o njegovi morebitni dekompoziciji na nerazcepne upodobitve. Zdaj si bomo z vsako od teh umazali roke in jo pogledali še podrobneje.
+Vsaka upodobitev dane grupe je homomorfizem v grupo obrnljivih matrik $\GL(V)$. Do sedaj smo na upodobitve gledali z bolj konceptualnega stališča: govorili smo o strukturi prostora $V$ in o njegovi morebitni dekompoziciji na nerazcepne upodobitve. Zdaj si bomo z vsako od teh umazali roke in si jo ogledali še podrobneje.
 
 Predpostavimo, da je prostor $V$ končno razsežen. Izberimo bazo prostora $V$ in s tem izomorfizem $V \cong F^n$ za nek $n$, tako da je upodobitev dana s homomorfizmom $\rho \colon G \to \GL_n(F)$. Vsak tak homomorfizem je *po komponentah* podan s svojimi <span class="definicija">matričnimi koeficienti</span>; to so funkcije
 ```{math}
@@ -423,9 +423,9 @@ Vsaka končno razsežna nerazcepna upodobitev dane grupe je uresničljiva kot po
 
 </div>
 
-V posebnem smo tekom zadnjega dokaza izpeljali, da so po izbiri baze matrični koeficienti končno razsežne nerazcepne upodobitve nad algebraično zaprtim poljem $\pi$ vselej linearno neodvisni.[^11] Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodobitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
+V posebnem smo z zadnjim dokazom izpeljali, da so po izbiri baze matrični koeficienti končno razsežne nerazcepne upodobitve nad algebraično zaprtim poljem $\pi$ vselej linearno neodvisni.[^11] Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodobitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
 
-Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve *končno mnogo* paroma neizomorfnih nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam po izbiri baze podari svoje matrične koeficiente. Ti razpenjajo prostore, ki so enakim izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med sabo. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$.
+Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve *končno mnogo* paroma neizomorfnih nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam po izbiri baze podari svoje matrične koeficiente. Ti razpenjajo prostore, ki so enaki izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med seboj. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$.
 
 Matrični koeficienti so elementi prostora funkcij $\fun(G,F)$. V primeru, ko je grupa končna, lahko po primerjanju dimenzij zato izpeljemo neenakost
 ```{math}
@@ -450,7 +450,7 @@ Opazujmo grupo $S_3$ nad poljem $\CC$. Njeno regularno upodobitev smo že razsta
 
 </div>
 
-Več o upodobitvah končnih grup si bomo pogledali nekoliko kasneje.
+Več o upodobitvah končnih grup si bomo ogledali nekoliko kasneje.
 
 ### Karakterji
 
@@ -483,7 +483,7 @@ Opazujmo grupo $S_3$ nad poljem $\CC$. Poznamo že vse tri njene končno razsež
 ```
 V grupi $S_3$ je vsak element konjugiran enemu od $()$, $(1 \ 2)$ ali $(1 \ 2 \ 3)$. S tem so torej vse vrednosti karakterja $\chi_{\rho}$ določene.
 
-Vse podatke o vrednostih karakterjev dane grupe ponavadi zložimo v <span class="definicija">tabelo karakterjev</span>. Stolpce indeksiramo s predstavniki konjugiranostnih razredov, vrstice pa z nerazcepnimi karakterji. Vrednosti v tabeli so vrednosti karakterjev v konjugiranostnih razredih.
+Vse podatke o vrednostih karakterjev dane grupe po navadi zložimo v <span class="definicija">tabelo karakterjev</span>. Stolpce indeksiramo s predstavniki konjugiranostnih razredov, vrstice pa z nerazcepnimi karakterji. Vrednosti v tabeli so vrednosti karakterjev v konjugiranostnih razredih.
 
 |                    | $()$ | $(1 \ 2)$ | $(1 \ 2 \ 3)$ |
 |:------------------:|:------:|:-----------:|:---------------:|
@@ -505,7 +505,7 @@ Naj bo $G$ grupa s končno razsežnima nerazcepnima upodobitvama nad algebraičn
 
 <div class="dokaz">
 
-Ker so matrični koeficienti različnih nerazcepnih upodobitev linearno neodvisni med sabo, so tudi njihovi karakterji linearno neodvisni kot elementi prostora $\fun(G,F)$.
+Ker so matrični koeficienti različnih nerazcepnih upodobitev linearno neodvisni med seboj, so tudi njihovi karakterji linearno neodvisni kot elementi prostora $\fun(G,F)$.
 
 </div>
 
@@ -537,7 +537,7 @@ Netrivialna je le zadnja enakost o indukciji. Naj $H$ deluje na prostoru $V$ pre
 ```{math}
 g \cdot v r_0 = \left( \rho(h) \cdot v \right) r,
 ```
-kjer je $r = h r_0 g^{-1}$ za enolično določena $r \in R$, $h \in H$. Prostori $V r$ se torej pri delovanju med sabo permutirajo, poleg tega pa grupa deluje netrivialno še na vsaki komponenti posebej. Za izračun sledi so zato relevantne samo komponente, ki so fiksne pri tej permutaciji. To so komponente $Vr_0$, za katere je $r = r_0$, se pravi komponente z lastnostjo $H r_0 g^{-1} = H r_0$. To je enakovredno pogoju $r_0 g r_0^{-1} \in H$. Za tako komponento $V r_0$ element $g$ deluje na vektorju $v r_0$ kot
+pri čemer je $r = h r_0 g^{-1}$ za enolično določena $r \in R$, $h \in H$. Prostori $V r$ se torej pri delovanju med seboj permutirajo, poleg tega pa grupa deluje netrivialno še na vsaki komponenti posebej. Za izračun sledi so zato relevantne samo komponente, ki so fiksne pri tej permutaciji. To so komponente $Vr_0$, za katere je $r = r_0$, se pravi komponente z lastnostjo $H r_0 g^{-1} = H r_0$. To je enakovredno pogoju $r_0 g r_0^{-1} \in H$. Za tako komponento $V r_0$ element $g$ deluje na vektorju $v r_0$ kot
 ```{math}
 g \cdot v r_0 = \left( \rho(r_0 g r_0^{-1}) \cdot v \right) r_0,
 ```
@@ -574,9 +574,9 @@ Nad algebraično zaprtim poljem ničelne karakteristike je polenostavna upodobit
 
 </div>
 
-Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitve, ki so sicer mnogo bolj kompleksni objekti kot le funkcije na grupi, natančno določene. V nadaljevanju bomo videli, da lahko včasih eksplicitno izračunamo vse nerazcepne karakterje, brez da bi sploh poznali same nerazcepne upodobitve. Na ta način lahko dodobra razumemo kategorijo upodobitev dane grupe zgolj z uporabo karakterjev.
+Karakterji so torej funkcije na grupi, s katerimi so v številnih primerih upodobitve, ki so sicer veliko bolj kompleksni objekti kot le funkcije na grupi, natančno določene. V nadaljevanju bomo videli, da lahko včasih eksplicitno izračunamo vse nerazcepne karakterje, ne da bi sploh poznali same nerazcepne upodobitve. Na ta način lahko dodobra razumemo kategorijo upodobitev dane grupe zgolj z uporabo karakterjev.
 
-[^1]: Rečemo tudi, da je $V$ <span class="definicija">enostavna</span> upodobitev. Te terminologija izhaja iz alternativne obravnave upodobitev kot *modulov nad grupnimi algebrami*.
+[^1]: Rečemo tudi, da je $V$ <span class="definicija">enostavna</span> upodobitev. Ta terminologija izhaja iz alternativne obravnave upodobitev kot *modulov nad grupnimi algebrami*.
 
 [^2]: Po analogiji s faktorizacijo števil si nerazcepne upodobitve lahko predstavljamo kot praštevila.
 
@@ -584,7 +584,7 @@ Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitv
 
 [^4]: Linearna preslikava $A \colon X \to X$ je projekcija na podprostor $Y \leq X$, če je $A^2 = A$ in $\image A = Y$. Projekcijska spletična je torej spletična, ki je hkrati projekcija na nek podprostor.
 
-[^5]: V nadaljevanju bomo pokazali, da so upodobitve *končnih* grup nad poljem karakteristike $0$ vselej poenostavne.
+[^5]: V nadaljevanju bomo pokazali, da so upodobitve *končnih* grup nad poljem karakteristike $0$ vselej polenostavne.
 
 [^6]: Ta argument je soroden premisleku o obstoju Hirschove dolžine v policikličnih grupah iz [Teorije grup](https://urbanjezernik.github.io/teorija-grup/).
 

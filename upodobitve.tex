@@ -111,7 +111,7 @@
 \DeclareMathOperator\imaginary{Im}
 \newcommand{\abs}[1]{\lvert #1 \rvert}
 
-\def\definicija{\color{rdeca}\bf\em}
+\def\definicija{\color{rdeca}\bf}
 \def\vprasanje{\color{oranzna}}
 \def\literatura{\color{modra}}
 \def\vaje{{\literatura ($\to$ vaje)}}
@@ -284,7 +284,7 @@
 \subsubsection{Kratek opis vsebine}
 
 
-Teorija upodobitev se ukvarja z \emph{linearizacijo} abstraktnih objektov, predvsem grup in njihovih delovanj. Gre za klasično in dobro raziskano vejo matematike, ki ima številne uporabe tudi v drugih znanostih. Dva pomembna cilja, ki ju ta teorija doseže, sta naslednja. 
+Teorija upodobitev se ukvarja z \emph{linearizacijo} abstraktnih objektov, predvsem grup in njihovih delovanj. Gre za klasično in dobro raziskano vejo matematike, ki ima številne uporabe tudi v drugih znanostih. Dva pomembna cilja, ki ju doseže ta teorija, sta naslednja. 
 
 \begin{enumerate}
     \item Namesto abstraktne obravnave dano grupo na različne načine uresničimo z obrnljivimi matrikami, kar nam z močnimi orodji linearne algebre omogoča bolj transparenten študij njihovih lastnosti. Tukaj nas zanimajo predvsem najenostavnejši načini predstavitev grup z matrikami.
@@ -303,20 +303,20 @@ Teorija upodobitev se ukvarja z \emph{linearizacijo} abstraktnih objektov, predv
         in torej poljuben element $D_{2n}$ kot matriko v $\GL_2(\RR)$.
     \end{zgledbrezstevilke}
 
-    \item Mnoge situacije, kjer se pojavljajo grupe prek svojih delovanj, lahko lineariziramo in to linearno strukturo razstavimo na enostavne komponente, ki jih razumemo s pomočjo prejšnje točke.
+    \item Številne situacije, kjer se pojavljajo grupe prek svojih delovanj, lahko lineariziramo in to linearno strukturo razstavimo na enostavne komponente, ki jih razumemo s pomočjo prejšnje točke.
     
     \begin{zgledbrezstevilke}
         Opazujmo simetrično grupo $S_n$, ki naravno deluje na množici $\{ 1, 2, \dots, n \}$ s permutacijami. Temu delovanju lahko priredimo vektorski prostor z bazo $\{ e_1, e_2, \dots, e_n \}$. Permutaciji $\sigma \in S_n$ lahko v tej bazi priredimo permutacijsko matriko v $\GL_n(\CC)$, ki vektor $e_i$ preslika v $e_{\sigma(i)}$. Na ta način lahko uresničimo naravno delovanje simetrične grupe $S_n$ znotraj matrične grupe $\GL_n(\CC)$.
     \end{zgledbrezstevilke}
 \end{enumerate}
 
-Najprej bomo vzpostavili temelje teorije upodobitev (osnovne definicije in zgledi, fundamentalne konstrukcije upodobitev). Pokazali bomo, kako se lahko vsaki konkretni upodobitvi približamo, kot da bi jo pogledali pod mikroskopom (videli bomo, da je vsaka sestavljena iz \emph{celic}, vsaka celica pa iz \emph{organelov}). Za tem si bomo ogledali dobro razvito teorijo upodobitev končnih grup (tu bomo pod mikroskopom videli in razumeli čudovito strukturo s pomočjo Fourierove transformacije), podrobneje bomo raziskali upodobitve dveh temeljnih družin končnih grup (simetrične grupe in splošne linearne grupe nad končnim poljem). Ta teorija ima mnogo uporab, od katerih bomo izpostavili nekaj sodobnejših (v teoriji števil, kombinatoriki, slučajnih procesih na grupah). Nazadnje bomo obravnavali še nekaj zgledov upodobitev pomembnih družin neskončnih grup (kompaktne grupe ter linearne grupe, zvezne in diskretne).
+Najprej bomo vzpostavili temelje teorije upodobitev (osnovne definicije in zgledi, fundamentalne konstrukcije upodobitev). Pokazali bomo, kako se lahko približamo vsaki konkretni upodobitvi, kot da bi jo pogledali pod mikroskopom (videli bomo, da je vsaka sestavljena iz \emph{celic}, vsaka celica pa iz \emph{organelov}). Za tem si bomo ogledali dobro razvito teorijo upodobitev končnih grup (tu bomo pod mikroskopom videli in razumeli čudovito strukturo s pomočjo Fourierove transformacije), podrobneje bomo raziskali upodobitve dveh temeljnih družin končnih grup (simetrične grupe in splošne linearne grupe nad končnim poljem). Ta teorija ima številne uporabe, od katerih bomo izpostavili nekaj sodobnejših (v teoriji števil, kombinatoriki, slučajnih procesih na grupah). Nazadnje bomo obravnavali še nekaj zgledov upodobitev pomembnih družin neskončnih grup (kompaktne grupe ter linearne grupe, zvezne in diskretne).
 
 \newpage
 
 \subsubsection{Literatura}
 
-Pri predstavitvi temeljev teorije upodobitev uporabljamo jezik homomorfizmov grup (in ne modulov), tako da porabimo več časa za osnove, a je snov predstavljena bolj konkretno. To pride prav predvsem pri razstavljanju dane upodobitve na nerazcepne podupodobitve, kjer sledimo pristopu Kowalskega in opazujemo matrične koeficiente. Karakterje obdelamo v jeziku nekomutativne Fourierove transformacije kot Diaconis. S tem tudi pripravimo teren za kasnejše uporabe teorije upodobitev. Omenimo kolobar virtualnih karakterjev in kot Serre dokažemo Artinov izrek. Razširjena zgleda upodobitev simetričnih grup in splošnih linearnih grup nad končnim poljem pretežno izvedemo s pomočjo monografije Fultona in Harrisa. Pri upodobitvah simetrične grupe določene aspekte izrazimo s Fourierovo transformacijo, pri linearnih grupah pa sledeč Bushnell in Henniart nekoliko bolj naravno predstavimo ostne upodobitve. V uporabah teorije upodobitev predstavimo Rothov izrek po Gowersovo in raziščemo soroden problem za nekomutativne grupe, kjer analitične argumente napravimo kot Eberhard. Pri prepoznavanju komutatorjev nam prav pridejo razvita Fourierova orodja, slučajne sprehode pa raziščemo podobno kot Diaconis. Kompaktne grupe in povezavo s klasično Fourierovo analizo črpamo iz Kowalskega, upodobitve Liejevih grup pa prikažemo kot Fulton in Harris, pri čemer se za integriranje Liejevih homomorfizmov naslonimo na Hallovo knjigo. Diskretne grupe obdelamo sledeč Conradu in Putmanu, razliko med klasičnimi in $p$-adičnimi Liejevimi grupami prikažemo kot Choiy.
+Pri predstavitvi temeljev teorije upodobitev uporabljamo jezik homomorfizmov grup (in ne modulov), tako da porabimo več časa za osnove, a je snov predstavljena bolj konkretno. To pride prav predvsem pri razstavljanju dane upodobitve na nerazcepne podupodobitve, pri čemer sledimo pristopu Kowalskega in opazujemo matrične koeficiente. Karakterje obdelamo v jeziku nekomutativne Fourierove transformacije kot Diaconis. S tem tudi pripravimo teren za kasnejše uporabe teorije upodobitev. Omenimo kolobar virtualnih karakterjev in kot Serre dokažemo Artinov izrek. Razširjena zgleda upodobitev simetričnih grup in splošnih linearnih grup nad končnim poljem pretežno izvedemo s pomočjo monografije Fultona in Harrisa. Pri upodobitvah simetrične grupe določene aspekte izrazimo s Fourierovo transformacijo, pri linearnih grupah pa sledeč Bushnell in Henniart nekoliko bolj naravno predstavimo ostne upodobitve. V uporabah teorije upodobitev predstavimo Rothov izrek po Gowersovo in raziščemo soroden problem za nekomutativne grupe, kjer analitične argumente napravimo kot Eberhard. Pri prepoznavanju komutatorjev nam prav pridejo razvita Fourierova orodja, slučajne sprehode pa raziščemo podobno kot Diaconis. Kompaktne grupe in povezavo s klasično Fourierovo analizo črpamo iz Kowalskega, upodobitve Liejevih grup pa prikažemo kot Fulton in Harris, pri čemer se za integriranje Liejevih homomorfizmov naslonimo na Hallovo knjigo. Diskretne grupe obdelamo sledeč Conradu in Putmanu, razliko med klasičnimi in $p$-adičnimi Liejevimi grupami prikažemo kot Choiy.
 
 \begin{itemize}
 \item {\literatura E. Kowalski, {\em \href{https://people.math.ethz.ch/~kowalski/representation-theory.pdf}{An Introduction to the Representation Theory of Groups}}, American Mathematical Society, 2014.} 
@@ -336,15 +336,15 @@ Pri predstavitvi temeljev teorije upodobitev uporabljamo jezik homomorfizmov gru
 
 \subsubsection{Oblika zapiskov}
 
-Zapiski so pripravljeni predvsem v \href{https://urbanjezernik.github.io/teorija-upodobitev/}{elektronski obliki}, ki omogoča neposreden dostop do povezanih virov in kratkih kvizov za hitro ponavljanje po poglavjih. Za tiste, ki so raje odklopljeni ali želijo tiskano različico, je na voljo tudi \href{https://github.com/urbanjezernik/teorija-upodobitev/blob/main/upodobitve.pdf}{PDF}.
+Zapiski so pripravljeni predvsem v \href{https://urbanjezernik.github.io/teorija-upodobitev/}{elektronski obliki}, ki omogoča neposreden dostop do povezanih virov in kratkih kvizov za hitro ponavljanje po poglavjih. Za tiste, ki so raje odklopljeni ali želijo tiskano različico, je na voljo tudi v formatu \href{https://github.com/urbanjezernik/teorija-upodobitev/blob/main/upodobitve.pdf}{PDF}.
 
 \subsubsection{Zahvala}
 
-Zapiske sem v največji meri pripravil med izvajanjem predmeta na magistrskem študiju matematike na Fakulteti za matematiko in fiziko Univerze v Ljubljani v letu 2022/23. Zahvaljujem se študentom, ki so obiskovali predavanja in med spremljanjem opozarjali na vsebinske pomanjkljivosti. Zapiske sta še posebej podrobno pregledala študenta Hana Ibrahimpašić in Daniel Vitas. Zahvaljujem se jima za mnoge koristne pripombe. Za Založbo FMF je zapiske strokovno pregledal Primož Moravec. Njegovi predlogi so naredili delo bolj dostopno študentom, za kar sem mu, kot mu bodo tudi bralci, hvaležen.
+Zapiske sem v največji meri pripravil med izvajanjem predmeta na magistrskem študiju matematike na Fakulteti za matematiko in fiziko Univerze v Ljubljani v letu 2022/23. Zahvaljujem se študentom, ki so obiskovali predavanja in med spremljanjem opozarjali na vsebinske pomanjkljivosti. Zapiske sta še posebej podrobno pregledala študenta Hana Ibrahimpašić in Daniel Vitas. Zahvaljujem se jima za številne koristne pripombe. Za Založbo FMF je zapiske strokovno pregledal Primož Moravec. Njegovi predlogi so naredili delo bolj dostopno študentom, za kar sem mu, kot mu bodo tudi bralci, hvaležen.
 
 \chapter{Temelji teorije upodobitev}
 
-V tem poglavju bomo vzpostavili temelje teorije upodobitev. Spoznali bomo koncept upodobitve in si ogledali mnogo primerov. Premislili bomo, kako upodobitve med sabo primerjamo in kako iz danih upodobitev sestavimo nove.
+V tem poglavju bomo vzpostavili temelje teorije upodobitev. Spoznali bomo koncept upodobitve in si ogledali številne primere. Premislili bomo, kako upodobitve med seboj primerjamo in kako iz danih upodobitev sestavimo nove.
 
 \section{Osnovni pojmi}
 
@@ -464,11 +464,11 @@ Za element $g \in G$ in vektor $v \in V$ rezultat delovanja elementa $g$ na vekt
     \end{itemize}
 \end{zgled}
 
-Upodobitev $\rho$ grupe $G$ pohvalimo s pridevnikom {\definicija zvesta}, kadar je injektivna, se pravi $\ker \rho = 1$. Trivialna upodobitev netrivialne grupe ni zvesta, sta pa vselej zvesti Cayleyjeva in desna regularna upodobitev.
+Upodobitev $\rho$ grupe $G$ pohvalimo s pridevnikom {\definicija zvesta}, kadar je injektivna, torej $\ker \rho = 1$. Trivialna upodobitev netrivialne grupe ni zvesta, sta pa vselej zvesti Cayleyjeva in desna regularna upodobitev.
 
 \subsection{Kategorija upodobitev}
 
-Naj bo $G$ grupa. Opazujmo neki njeni upodobitvi $\rho_1$ in $\rho_2$ nad vektorskima prostoroma $V_1$ in $V_2$, obema nad poljem $F$. Ti dve upodobitvi lahko \emph{primerjamo} med sabo, in sicer tako, da hkrati primerjamo vektorska prostora in delovanji grupe $G$ na teh dveh prostorih. 
+Naj bo $G$ grupa. Opazujmo neki njeni upodobitvi $\rho_1$ in $\rho_2$ nad vektorskima prostoroma $V_1$ in $V_2$, obema nad poljem $F$. Ti dve upodobitvi lahko \emph{primerjamo} med seboj, in sicer tako, da hkrati primerjamo vektorska prostora in delovanji grupe $G$ na teh dveh prostorih. 
 
 Natančneje, {\definicija spletična}\footnote{Angleško \emph{intertwiner}. Simpatičen prevod je po Francetu Križaniču.} med upodobitvama $\rho_1$ in $\rho_2$ je linearna preslikava $\Phi \colon V_1 \to V_2$, za katero za vsak $g \in G$ in $v \in V_1$ velja\footnote{Z opustitvijo eksplicitnih oznak za delovanja lahko ta pogoj pišemo krajše kot $\Phi(gv) = g\Phi(v)$.}
 \[
@@ -696,7 +696,7 @@ Na ta način dobimo {\definicija direktno vsoto} upodobitev $\bigoplus_{i \in I}
     \item Opazujmo permutacijsko upodobitev $\pi$ grupe $\ZZ/n\ZZ$ na prostoru $\CC[\Omega]$, kjer je $\Omega = \{ 1, 2, \dots, n \}$. Premislili smo že, da ima ta upodobitev $n$ podupodobitev. Za vsak $j \in \Omega$ imamo upodobitev na podprostoru $\CC \cdot f_j$, ki je izomorfna upodobitvi $\chi_{-j}$. Ker je množica vektorjev $\{ f_j \mid j \in \Omega \}$ linearno neodvisna,\footnote{Prehodna matrika iz baze $e_i$ v bazo $f_j$ je ravno Vandermondova matrika.} lahko permutacijsko upodobitev torej zapišemo kot direktno vsoto $\pi = \bigoplus_{j \in \Omega} \chi_j$.
     
     \begin{domacanaloga}
-        Prepričaj se, da so upodobitve $\chi_j$ za $j \in \Omega$ grupe $\ZZ/n\ZZ$ med sabo paroma neizomorfne.
+        Prepričaj se, da so upodobitve $\chi_j$ za $j \in \Omega$ grupe $\ZZ/n\ZZ$ med seboj paroma neizomorfne.
     \end{domacanaloga}
 
     \item Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Delovanje grupe $S_3$ ohranja vektor $e_1 + e_2 + e_3$, zato ima ta upodobitev trivialno enorazsežno podupodobitev, dano s podprostorom $\langle e_1 + e_2 + e_3 \rangle$. Eden od komplementov tega podprostora je $\langle e_1 - e_2, e_2 - e_3 \rangle$, ki je hkrati $S_3$-invariaten podprostor.\footnote{Na primer, generator $(1 \ 3 \ 2)$ preslika vektor $e_1 - e_2$ v $e_3 - e_1$, kar lahko zapišemo kot $-(e_1 - e_2) - (e_2 - e_3)$.} Če označimo $u_1 = e_1 - e_2$ in $u_2 = e_2 - e_3$, lahko slednjo upodobitev opišemo s homomorfizmom
@@ -711,7 +711,7 @@ Na ta način dobimo {\definicija direktno vsoto} upodobitev $\bigoplus_{i \in I}
     \]
     Permutacijska upodobitev $S_3$ je zato direktna vsota enorazsežne podupodobitve $\oneone$ in dvorazsežne podupodobitve $\rho$. 
     
-    Premislimo, da upodobitve $\rho$ \emph{ne} moremo zapisati kot direktne vsote svojih pravih podupodobitev. V ta namen opazujmo njene morebitne enorazsežne podupodobitve. Premislili smo že, da te ustrezajo skupnim lastnim vektorjem vseh preslikav $\rho(x)$ za $x \in S_3$. Lastna vektorja $\rho((1 \ 2))$ sta $u_1$ in $u_1 + 2 u_2$. Noben od teh dveh vektorjev ni hkrati lastni vektor $\rho((1 \ 2 \ 3))$. Torej je upodobitev $\rho$ stopnje $2$, hkrati pa nima enorazsežnih podupodobitev in je torej ne moremo nadalje razstaviti.
+    Premislimo, da upodobitve $\rho$ \emph{ne} moremo zapisati kot direktne vsote svojih pravih podupodobitev. V ta namen opazujmo njene morebitne enorazsežne podupodobitve. Premislili smo že, da te ustrezajo skupnim lastnim vektorjem vseh preslikav $\rho(x)$ za $x \in S_3$. Lastna vektorja $\rho((1 \ 2))$ sta $u_1$ in $u_1 + 2 u_2$. Noben od teh dveh vektorjev ni hkrati lastni vektor $\rho((1 \ 2 \ 3))$. Torej je upodobitev $\rho$ stopnje $2$, hkrati pa nima enorazsežnih podupodobitev in je torej ne moremo razstaviti nadalje.
 \end{itemize}
 \end{zgled}
 
@@ -726,7 +726,7 @@ Naj ima grupa $G$ upodobitvi $\rho_1$ in $\rho_2$ na prostorih $V_1$ in $V_2$. T
 \]
 
 \begin{domacanaloga}
-Izberimo bazi prostorov $V_1$ in $V_2$. Tenzorski produkti baznih elementov tvorijo bazo prostora $V_1 \otimes V_2$. Kako izgleda matrika $(\rho_1 \otimes \rho_2)(g)$ v odvisnosti od matrik $\rho_1(g)$ in $\rho_2(g)$?
+Izberimo bazi prostorov $V_1$ in $V_2$. Tenzorski produkti baznih elementov tvorijo bazo prostora $V_1 \otimes V_2$. Kako je videti matrika $(\rho_1 \otimes \rho_2)(g)$ v odvisnosti od matrik $\rho_1(g)$ in $\rho_2(g)$?
 \end{domacanaloga}
 
 \begin{zgled}
@@ -848,7 +848,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ nad poljem $F$. Naj bo $E
     E \otimes \rho \colon G \to \GL(E \otimes V), \quad
     g \mapsto \left( e \otimes v \mapsto e  \otimes \rho(g) \cdot v \right).
 \]
-Ta postopek konstrukcije prostora $E \otimes V$ imenujemo {\definicija razširitev skalarjev}. Dano upodobitev lahko razširimo do ugodnejših skalarjev\footnote{Na primer polja kompleksnih števil.}, lahko pa tudi dano upodobitev nad velikim poljem $E$ gledamo kot razširitev skalarjev neke upodobitve nad preprostejšim poljem $F$.\footnote{Na primer $E = \CC$ in $F = \QQ$.} V tem slednjem primeru rečemo, da je dana upodobitev {\definicija definirana nad poljem} $F$. Včasih nam uspe najti celo preprost \emph{podkolobar} polja $F$, nad katerim je definirana dana upodobitev.
+Ta postopek konstrukcije prostora $E \otimes V$ imenujemo {\definicija razširitev skalarjev}. Dano upodobitev lahko razširimo do ugodnejših skalarjev\footnote{Na primer polja kompleksnih števil.}, lahko pa tudi dano upodobitev nad velikim poljem $E$ gledamo kot razširitev skalarjev neke upodobitve nad preprostejšim poljem $F$.\footnote{Na primer $E = \CC$ in $F = \QQ$.} V tem primeru rečemo, da je dana upodobitev {\definicija definirana nad poljem} $F$. Včasih nam uspe najti celo preprost \emph{podkolobar} polja $F$, nad katerim je definirana dana upodobitev.
 
 \begin{zgled}
 Opazujmo grupo $S_3$ in njeno permutacijsko upodobitev na realnem prostoru $\RR[\{ 1, 2, 3 \}]$. Poznamo že njeno dvorazsežno upodobitev $\rho$ na podprostoru $\langle e_1 - e_2, e_2 - e_3 \rangle$, ki \emph{nima} enorazsežnih podupodobitev. Ta je definirana z matrikami, ki imajo zgolj celoštevilske koeficiente. Upodobitev $\rho$ je zato definirana nad \emph{kolobarjem} $\ZZ$. To upodobitev lahko zato \emph{projiciramo} s homomorfizmom kolobarjev $\ZZ \to \ZZ/p\ZZ$ za poljubno praštevilo $p$ do upodobitve
@@ -933,7 +933,7 @@ ki je spletična glede na regularno delovanje $G$ na $\fun(G,V)$. S tem imamo to
     Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\phi \colon G \to G/N$ kvocientna projekcija za neko podgrupo edinko $N$ v $G$. Dokaži, da je $\Ind^{G/N}_G(\rho)$ izomorfna upodobitvi $G/N$ na prostoru $V^N$, ki izhaja iz upodobitve $\rho$.
 \end{domacanaloga}
 
-Najpomembnejši primer indukcije, čeravno ne tudi najbolj preprost, je {\definicija indukcija iz podgrupe končnega indeksa}. Naj bo $G$ grupa s podgrupo $H$ in naj bo $\phi$ vložitev $H$ v $G$. Predpostavimo, da je $|G:H| < \infty$. Naj bo $\rho$ upodobitev grupe $H$ na prostoru $V$. Premislimo, kako izgleda upodobitev $\Ind^G_H(\rho)$. 
+Najpomembnejši primer indukcije, čeravno ne tudi najbolj preprost, je {\definicija indukcija iz podgrupe končnega indeksa}. Naj bo $G$ grupa s podgrupo $H$ in naj bo $\phi$ vložitev $H$ v $G$. Predpostavimo, da je $|G:H| < \infty$. Naj bo $\rho$ upodobitev grupe $H$ na prostoru $V$. Premislimo, kako je videti upodobitev $\Ind^G_H(\rho)$. 
     
 Naj bo $R$ neka izbrana množica predstavnikov desnih odsekov $H$ v $G$. Vsaka funkcija $f \in \fun(G,V)^H$ je določena z vrednostmi $f(r)$ za $r \in R$ in dodatnih restrikcij za te vrednosti ni, zato dobimo izomorfizem vektorskih prostorov\footnote{Množico funkcij $\fun(R,V)$ lahko vidimo kot direktno vsoto prostorov $V$, indeksirano z množico $R$.}
     \[
@@ -951,7 +951,7 @@ Za $x \in R$ z lastnostjo $xg \in Hr_0$, se pravi $x = h r_0 g^{-1}$ za nek $h \
         g \cdot \left( r \mapsto \begin{cases} v & r = r_0, \\ 0 & r \neq r_0 \end{cases} \right) =
         \left( r \mapsto \begin{cases} \rho(h) \cdot v & r = h r_0 g^{-1} \text{ za nek $h \in H$,} \\ 0 & r \notin H r_0 g^{-1} \end{cases} \right).
     \]
-Da bo preslikava $\Phi$ spletična, moramo na $\fun(R,V)$ torej uvesti tako delovanje grupe $G$, ki dan vektor $v$ pri vnosu $r_0 \in R$ preslika tako, da najprej izračuna odsek elementa $r_0 g^{-1}$ po $H$, ta element zapiše kot $r_0 g^{-1} = h^{-1} r$ za $h \in H, \ r \in R$, nato pa na vektor $v$ deluje z $\rho(h)$ in ga hkrati prestavi k vnosu $r$.
+Da bo preslikava $\Phi$ spletična, moramo na $\fun(R,V)$ torej uvesti tako delovanje grupe $G$, ki dani vektor $v$ pri vnosu $r_0 \in R$ preslika tako, da najprej izračuna odsek elementa $r_0 g^{-1}$ po $H$, ta element zapiše kot $r_0 g^{-1} = h^{-1} r$ za $h \in H, \ r \in R$, nato pa na vektor $v$ deluje z $\rho(h)$ in ga hkrati prestavi k vnosu $r$.
     
 Opisan postopek si lahko nekoliko lažje predstavljamo tako, da množico $\fun(R,V)$ identificiramo z direktno vsoto $\bigoplus_{r \in R} V r$, kjer je $Vr$ kopija vektorskega prostora $V$ pri komponenti $r$. Element $g \in G$ deluje na vektorju $v r_0 \in Vr_0$ kot $g^{-1}$ z desne. V teh domačih oznakah izračunamo
     \[
@@ -1065,7 +1065,7 @@ od koder sledi
 
 \chapter{Upodobitev pod mikroskopom}
 
-V tem poglavju bomo pribili upodobitev dane grupe in se ji tesno približali, kot da bi jo pogledali pod mikroskopom. Pri tem bomo najprej uzrli osnovne kose, iz katerih je sestavljena upodobitev. Ti osnovni kosi ustrezajo celicam, ki jih vidimo pod mikroskopom. Za tem se bomo približali še sestavi teh osnovnih kosov: vsak je dan s homomorfizmom v matrike, zato bomo raziskali koeficiente te matrike. Ti ustrezajo organelom, ki jih v celici vidimo pod mikroskopom. Nazadnje bomo premislili, da so te upodobitvene celice dovolj diferencirane med sabo, da za njihovo identifikacijo zadošča poznavanje le nekaterih njihovih organelov.
+V tem poglavju bomo pribili upodobitev dane grupe in se ji tesno približali, kot da bi jo pogledali pod mikroskopom. Pri tem bomo najprej uzrli osnovne kose, iz katerih je sestavljena upodobitev. Ti osnovni kosi ustrezajo celicam, ki jih vidimo pod mikroskopom. Za tem se bomo približali še sestavi teh osnovnih kosov: vsak je dan s homomorfizmom v matrike, zato bomo raziskali koeficiente te matrike. Ti ustrezajo organelom, ki jih v celici vidimo pod mikroskopom. Nazadnje bomo premislili, da so te upodobitvene celice dovolj diferencirane med seboj, da za njihovo identifikacijo zadošča poznavanje le nekaterih njihovih organelov.
 
 \section{Razstavljanje upodobitve}
 
@@ -1073,17 +1073,17 @@ Pogosto nas zanima, ali lahko dano upodobitev $\rho$ grupe $G$ na prostoru $V$ z
 
 \subsection{Nerazcepnost}
 
-Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V \neq 0$. Kadar \emph{ne} obstaja noben $G$-invarianten podprostor prostora $V$ (razen prostorov $0$ in $V$), tedaj rečemo, da je upodobitev $\rho$ {\definicija nerazcepna}.\footnote{Rečemo tudi, da je $V$ {\definicija enostavna} upodobitev. Te terminologija izhaja iz alternativne obravnave upodobitev kot \emph{modulov nad grupnimi algebrami}.} V tem primeru upodobitve seveda ne moremo razstaviti na enostavnejše v smislu direktne vsote.
+Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V \neq 0$. Kadar \emph{ne} obstaja noben $G$-invarianten podprostor prostora $V$ (razen prostorov $0$ in $V$), tedaj rečemo, da je upodobitev $\rho$ {\definicija nerazcepna}.\footnote{Rečemo tudi, da je $V$ {\definicija enostavna} upodobitev. Ta terminologija izhaja iz alternativne obravnave upodobitev kot \emph{modulov nad grupnimi algebrami}.} V tem primeru upodobitve seveda ne moremo razstaviti na enostavnejše v smislu direktne vsote.
 
 \begin{zgled} \leavevmode
 \begin{itemize}
 \item Opazujmo permutacijsko upodobitev simetrične grupe $S_3$ na prostoru $\RR[\{ 1,2,3 \}] = \RR^3$. Premislili smo že, da je ta upodobitev direktna vsota enorazsežne podupodobitve $\oneone$ in dvorazsežne podupodobitve $\rho$, pri čemer slednja nima nobene enorazsežne podupodobitve. S tem je permutacijska upodobitev razstavljena kot direktna vsota dveh nerazcepnih upodobitev.
 
-\item Opazujmo diedrsko grupo $D_{2n}$ z dvorazsežno upodobitvijo $\rho_k$ za $k \in \ZZ$, ki jo obravnavajmo kot kompleksno upodobitev. Matrika $\rho_k(r)$ ima lastni vrednosti $e^{\pm 2 \pi i k / n}$. Ti dve vrednosti sta različni, če in samo če $k$ \emph{ni} deljiv z $n/2$. Za vsak $0 < k < n/2$ ima $\rho_k(r)$ torej različni lastni vrednosti z lastnima vektorjema $\left( \begin{smallmatrix} 1 \\ \mp i \end{smallmatrix} \right)$. Matrika $\rho_k(s)$ zamenja ta dva lastna podprostora med sabo. Upodobitev $\rho_k$ za $0 < k < n/2$ torej nima nobene enorazsežne kompleksne podupodobitve in je zato nerazcepna.
+\item Opazujmo diedrsko grupo $D_{2n}$ z dvorazsežno upodobitvijo $\rho_k$ za $k \in \ZZ$, ki jo obravnavajmo kot kompleksno upodobitev. Matrika $\rho_k(r)$ ima lastni vrednosti $e^{\pm 2 \pi i k / n}$. Ti dve vrednosti sta različni, če in samo če $k$ \emph{ni} deljiv z $n/2$. Za vsak $0 < k < n/2$ ima $\rho_k(r)$ torej različni lastni vrednosti z lastnima vektorjema $\left( \begin{smallmatrix} 1 \\ \mp i \end{smallmatrix} \right)$. Matrika $\rho_k(s)$ zamenja ta dva lastna podprostora med seboj. Upodobitev $\rho_k$ za $0 < k < n/2$ torej nima nobene enorazsežne kompleksne podupodobitve in je zato nerazcepna.
 \end{itemize}
 \end{zgled}
 
-Preverimo, da so nerazcepne upodobitve dane grupe med sabo \emph{neprimerljive}, tudi če so enake razsežnosti. Zatorej si jih lahko predstavljamo kot neodvisne osnovne kose kategorije upodobitev dane grupe.\footnote{Po analogiji s faktorizacijo števil si nerazcepne upodobitve lahko predstavljamo kot praštevila.} 
+Preverimo, da so nerazcepne upodobitve dane grupe med seboj \emph{neprimerljive}, tudi če so enake razsežnosti. Zatorej si jih lahko predstavljamo kot neodvisne osnovne kose kategorije upodobitev dane grupe.\footnote{Po analogiji s faktorizacijo števil si nerazcepne upodobitve lahko predstavljamo kot praštevila.} 
 
 \begin{lema}[Schurova lema]
 Naj bo $G$ grupa z upodobitvijo $\rho$ in nerazcepno upodobitvijo $\pi$. Tedaj je vsaka spletična v $\hom_G(\pi, \rho)$ bodisi injektivna bodisi ničelna in vsaka spletična v $\hom_G(\rho, \pi)$ je bodisi surjektivna bodisi ničelna. V posebnem je vsaka spletična med dvema nerazcepnima upodobitvama grupe $G$ bodisi izomorfizem bodisi ničelna.
@@ -1137,7 +1137,7 @@ Naj bo $G$ grupa z upodobitvijo $\rho$ na prostoru $V$ in naj bo $\tilde \rho$ n
 
 \subsection{Polenostavnost}
 
-Vrnimo se k začetni ideji o \emph{razstavljanju} dane upodobitve. Kadar lahko dano upodobitev $\rho$ zapišemo kot direktno vsoto \emph{nerazcepnih} upodobitev $\bigoplus_{i \in I} \rho_i$, tedaj rečemo, da je $\rho$ {\definicija polenostavna} upodobitev. Če so pri tem vse podupodobitve $\rho_i$ izomorfne med sabo, upodobitev $\rho$ imenujemo {\definicija izotipična} upodobitev.
+Vrnimo se k začetni ideji o \emph{razstavljanju} dane upodobitve. Kadar lahko dano upodobitev $\rho$ zapišemo kot direktno vsoto \emph{nerazcepnih} upodobitev $\bigoplus_{i \in I} \rho_i$, tedaj rečemo, da je $\rho$ {\definicija polenostavna} upodobitev. Če so pri tem vse podupodobitve $\rho_i$ izomorfne med seboj, upodobitev $\rho$ imenujemo {\definicija izotipična} upodobitev.
 
 \begin{zgled} \leavevmode
     \begin{itemize}
@@ -1146,7 +1146,7 @@ Vrnimo se k začetni ideji o \emph{razstavljanju} dane upodobitve. Kadar lahko d
     \end{itemize}
 \end{zgled}
 
-Vseh upodobitev žal ne moremo razstaviti na direktno vsoto nerazcepnih.\footnote{V nadaljevanju bomo pokazali, da so upodobitve \emph{končnih} grup nad poljem karakteristike $0$ vselej poenostavne.} Polenostavnost dane upodobitve je namreč tesno povezana z obstojem komplementarnih podupodobitev.
+Vseh upodobitev žal ne moremo razstaviti na direktno vsoto nerazcepnih.\footnote{V nadaljevanju bomo pokazali, da so upodobitve \emph{končnih} grup nad poljem karakteristike $0$ vselej polenostavne.} Polenostavnost dane upodobitve je namreč tesno povezana z obstojem komplementarnih podupodobitev.
 
 \begin{trditev}
 Upodobitev grupe $G$ je polenostavna, če in samo če ima vsaka njena podupodobitev komplementarno podupodobitev.
@@ -1210,7 +1210,7 @@ Vsaka upodobitev na končno razsežnem prostoru ima kompozicijsko vrsto. Vsaki d
 \begin{dokaz}
 Naj grupa deluje linearno na končno razsežnem prostoru $V$. Da kompozicijska vrsta res obstaja, ni težko preveriti. Najprej izberemo neko nerazcepno podupodobitev $V_1$. Če je $V_1 < V$, potem izberemo podupodobitev $V_2$, ki vsebuje $V_1$ in je med vsemi takimi minimalne razsežnosti. S tem je $V_2/V_1$ nerazcepna. Induktivno nadaljujemo z grajenjem kompozicijske vrste. Ker je $V$ končno razsežen, se ta postopek ustavi.
 
-Premislimo še, kako lahko vsaki dve kompozicijski vrsti povežemo med sabo. Opazujmo dve taki vrsti,
+Premislimo še, kako lahko vsaki dve kompozicijski vrsti povežemo med seboj. Opazujmo dve taki vrsti,
 \[
     0 = V_0 \leq V_1 \leq \cdots \leq V_n = V 
     \quad \text{in} \quad
@@ -1268,7 +1268,7 @@ Po Schurovi lemi je (nad algebraično zaprtim poljem) vsak od zadnjih prostorov 
 
     Upodobitev $\tilde \rho$ \emph{ni} nerazcepna, saj ima invarianten podprostor $\langle u_1 - u_2 = e_1 + e_2 + e_3 \rangle$. Na tem podprostoru grupa $S_3$ deluje trivialno. V kvocientu $(\ZZ/3\ZZ)^2/\langle u_1 - u_2 \rangle \cong \ZZ/3\ZZ$ generatorja $(1\ 2)$ in $(1 \ 2 \ 3)$ grupe $S_3$ preslikata odsek vektorja $u_1$ v odsek $-u_1$ oziroma $u_1$. V tem prepoznamo predznačno upodobitev, interpretirano kot homomorfizem $\sgn \colon S_3 \to \GL_1(\ZZ/3\ZZ) \cong \{ 1, -1 \}$. Nad poljem $\ZZ/3\ZZ$ za permutacijsko upodobitev $\pi$ tako velja $\mult_{\pi}(\oneone) = 2$ in $\mult_{\pi}(\sgn) = 1$.
 
-    Premislimo, da upodobitev $\pi$ nad $\ZZ/3\ZZ$ \emph{ni} polenostavna. Če bi namreč bila, bi po zgornjem morala biti izomorfna direktni vsoti $\oneone \oplus \oneone \oplus \sgn$. Prostor $(\ZZ/3\ZZ)^3$ bi zatorej imel bazo, v kateri bi matriki za $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$ bili hkrati diagonalni. Ti dve matriki bi zato komutirali, kar pomeni, da bi morali komutirati tudi linearni preslikavi $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$. Temu pa ni tako, saj na primer velja $\pi((1 \ 2 \ 3)(1 \ 2)) e_1 = e_3$ in $\pi((1 \ 2)(1 \ 2 \ 3)) e_1 = e_1$.
+    Premislimo, da upodobitev $\pi$ nad $\ZZ/3\ZZ$ \emph{ni} polenostavna. Če bi namreč bila, bi po zgornjem morala biti izomorfna direktni vsoti $\oneone \oplus \oneone \oplus \sgn$. Prostor $(\ZZ/3\ZZ)^3$ bi zatorej imel bazo, v kateri bi matriki za $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$ bili hkrati diagonalni. Ti dve matriki bi zato komutirali, kar pomeni, da bi morali komutirati tudi linearni preslikavi $\pi((1 \ 2))$ in $\pi((1 \ 2 \ 3))$. Vendar pa to ne drži, saj na primer velja $\pi((1 \ 2 \ 3)(1 \ 2)) e_1 = e_3$ in $\pi((1 \ 2)(1 \ 2 \ 3)) e_1 = e_1$.
 \end{itemize}
 \end{zgled}
 
@@ -1346,7 +1346,7 @@ Kadar je grupa $G$ abelova, je vsaka njena nerazcepna upodobitev nad algebraičn
 
 \section{Matrični koeficienti}
 
-Vsaka upodobitev dane grupe je homomorfizem v grupo obrnljivih matrik $\GL(V)$. Do sedaj smo na upodobitve gledali z bolj konceptualnega stališča: govorili smo o strukturi prostora $V$ in o njegovi morebitni dekompoziciji na nerazcepne upodobitve. Zdaj si bomo z vsako od teh umazali roke in jo pogledali še podrobneje. 
+Vsaka upodobitev dane grupe je homomorfizem v grupo obrnljivih matrik $\GL(V)$. Do sedaj smo na upodobitve gledali z bolj konceptualnega stališča: govorili smo o strukturi prostora $V$ in o njegovi morebitni dekompoziciji na nerazcepne upodobitve. Zdaj si bomo z vsako od teh umazali roke in si jo ogledali še podrobneje. 
 
 Predpostavimo, da je prostor $V$ končno razsežen. Izberimo bazo prostora $V$ in s tem izomorfizem $V \cong F^n$ za nek $n$, tako da je upodobitev dana s homomorfizmom $\rho \colon G \to \GL_n(F)$. Vsak tak homomorfizem je \emph{po komponentah} podan s svojimi {\definicija matričnimi koeficienti}; to so funkcije
 \[
@@ -1407,9 +1407,9 @@ Izpostavimo pomembno posledico, ki nam pove, da lahko vse nerazcepne upodobitve 
 Vsaka končno razsežna nerazcepna upodobitev dane grupe je uresničljiva kot podupodobitev regularne.
 \end{posledica}
 
-V posebnem smo tekom zadnjega dokaza izpeljali, da so po izbiri baze matrični koeficienti končno razsežne nerazcepne upodobitve nad algebraično zaprtim poljem $\pi$ vselej linearno neodvisni.\footnote{Temu dejstvu včasih pravimo \emph{Burnsideov izrek o nerazcepnosti}.} Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodobitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
+V posebnem smo z zadnjim dokazom izpeljali, da so po izbiri baze matrični koeficienti končno razsežne nerazcepne upodobitve nad algebraično zaprtim poljem $\pi$ vselej linearno neodvisni.\footnote{Temu dejstvu včasih pravimo \emph{Burnsideov izrek o nerazcepnosti}.} Vseh je ravno $\deg(\pi)^2$ in znotraj regularne upodobitve tvorijo podupodobitev $\MK(\pi)$, ki sestoji iz $\deg(\pi)$ mnogo kopij upodobitve $\pi$.
 
-Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve \emph{končno mnogo} paroma neizomorfnih nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam po izbiri baze podari svoje matrične koeficiente. Ti razpenjajo prostore, ki so enakim izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med sabo. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$. 
+Vse podobno velja, kadar imamo namesto ene same nerazcepne upodobitve \emph{končno mnogo} paroma neizomorfnih nerazcepnih upodobitev $\{ \pi_i \}_{i \in I}$ dane grupe $G$. Vsaka od njih nam po izbiri baze podari svoje matrične koeficiente. Ti razpenjajo prostore, ki so enaki izotipičnim komponentam v regularni upodobitvi in te komponente tvorijo notranjo direktno vsoto. Matrični koeficienti vseh teh upodobitev so torej linearno neodvisni med seboj. Vseh skupaj je $\sum_{i \in I} \deg(\pi_i)^2$. 
 
 Matrični koeficienti so elementi prostora funkcij $\fun(G,F)$. V primeru, ko je grupa končna, lahko po primerjanju dimenzij zato izpeljemo neenakost
 \[
@@ -1427,7 +1427,7 @@ Vsaka končno razsežna nerazcepna upodobitev je vsebovana v regularni in se zat
     Opazujmo grupo $S_3$ nad poljem $\CC$. Njeno regularno upodobitev smo že razstavili na direktno vsoto $\oneone \oplus \rho$, kjer je $\rho$ dvorazsežna nerazcepna upodobitev. Poleg tega poznamo še enorazsežno predznačno upodobitev $\sgn$. Vsota kvadratov stopenj teh treh upodobitev je $1^2 + 1^2 + 2^2 = 6$, kar je ravno enako moči grupe $S_3$. Od tod sledi, da so te tri \emph{vse} končno razsežne nerazcepne upodobitve grupe $S_3$.
 \end{zgled}
 
-Več o upodobitvah končnih grup si bomo pogledali nekoliko kasneje.
+Več o upodobitvah končnih grup si bomo ogledali nekoliko kasneje.
 
 \subsection{Karakterji}
 
@@ -1459,7 +1459,7 @@ Opazujmo grupo $S_3$ nad poljem $\CC$. Poznamo že vse tri njene končno razsež
 \]
 V grupi $S_3$ je vsak element konjugiran enemu od $()$, $(1 \ 2)$ ali $(1 \ 2 \ 3)$. S tem so torej vse vrednosti karakterja $\chi_{\rho}$ določene.
 
-Vse podatke o vrednostih karakterjev dane grupe ponavadi zložimo v {\definicija tabelo karakterjev}. Stolpce indeksiramo s predstavniki konjugiranostnih razredov, vrstice pa z nerazcepnimi karakterji. Vrednosti v tabeli so vrednosti karakterjev v konjugiranostnih razredih.
+Vse podatke o vrednostih karakterjev dane grupe po navadi zložimo v {\definicija tabelo karakterjev}. Stolpce indeksiramo s predstavniki konjugiranostnih razredov, vrstice pa z nerazcepnimi karakterji. Vrednosti v tabeli so vrednosti karakterjev v konjugiranostnih razredih.
 
 \begin{table}[t]
      \centering
@@ -1479,7 +1479,7 @@ Vse podatke o vrednostih karakterjev dane grupe ponavadi zložimo v {\definicija
 Naj bo $G$ grupa s končno razsežnima nerazcepnima upodobitvama nad algebraično zaprtim poljem. Ti dve upodobitvi sta izomorfni, če in samo če imata enaka karakterja.
 \end{trditev}
 \begin{dokaz}
-Ker so matrični koeficienti različnih nerazcepnih upodobitev linearno neodvisni med sabo, so tudi njihovi karakterji linearno neodvisni kot elementi prostora $\fun(G,F)$. 
+Ker so matrični koeficienti različnih nerazcepnih upodobitev linearno neodvisni med seboj, so tudi njihovi karakterji linearno neodvisni kot elementi prostora $\fun(G,F)$. 
 \end{dokaz}
 
 Karakterjev fundamentalnih konstrukcij različnih upodobitev ni težko izračunati.
@@ -1506,7 +1506,7 @@ Netrivialna je le zadnja enakost o indukciji. Naj $H$ deluje na prostoru $V$ pre
 \[
     g \cdot v r_0 = \left( \rho(h) \cdot v \right) r,
 \]
-kjer je $r = h r_0 g^{-1}$ za enolično določena $r \in R$, $h \in H$. Prostori $V r$ se torej pri delovanju med sabo permutirajo, poleg tega pa grupa deluje netrivialno še na vsaki komponenti posebej. Za izračun sledi so zato relevantne samo komponente, ki so fiksne pri tej permutaciji. To so komponente $Vr_0$, za katere je $r = r_0$, se pravi komponente z lastnostjo $H r_0 g^{-1} = H r_0$. To je enakovredno pogoju $r_0 g r_0^{-1} \in H$. Za tako komponento $V r_0$ element $g$ deluje na vektorju $v r_0$ kot
+pri čemer je $r = h r_0 g^{-1}$ za enolično določena $r \in R$, $h \in H$. Prostori $V r$ se torej pri delovanju med seboj permutirajo, poleg tega pa grupa deluje netrivialno še na vsaki komponenti posebej. Za izračun sledi so zato relevantne samo komponente, ki so fiksne pri tej permutaciji. To so komponente $Vr_0$, za katere je $r = r_0$, se pravi komponente z lastnostjo $H r_0 g^{-1} = H r_0$. To je enakovredno pogoju $r_0 g r_0^{-1} \in H$. Za tako komponento $V r_0$ element $g$ deluje na vektorju $v r_0$ kot
 \[
     g \cdot v r_0 = \left( \rho(r_0 g r_0^{-1}) \cdot v \right) r_0,
 \]
@@ -1538,7 +1538,7 @@ Polenostavna upodobitev je enolično določena s svojimi nerazcepnimi komponenta
 Nad algebraično zaprtim poljem ničelne karakteristike je polenostavna upodobitev do izomorfizma natančno določena s svojim karakterjem.
 \end{posledica}
 
-Karakterji so torej funkcije na grupi, s katerimi so v mnogih primerih upodobitve, ki so sicer mnogo bolj kompleksni objekti kot le funkcije na grupi, natančno določene. V nadaljevanju bomo videli, da lahko včasih eksplicitno izračunamo vse nerazcepne karakterje, brez da bi sploh poznali same nerazcepne upodobitve. Na ta način lahko dodobra razumemo kategorijo upodobitev dane grupe zgolj z uporabo karakterjev.
+Karakterji so torej funkcije na grupi, s katerimi so v številnih primerih upodobitve, ki so sicer veliko bolj kompleksni objekti kot le funkcije na grupi, natančno določene. V nadaljevanju bomo videli, da lahko včasih eksplicitno izračunamo vse nerazcepne karakterje, ne da bi sploh poznali same nerazcepne upodobitve. Na ta način lahko dodobra razumemo kategorijo upodobitev dane grupe zgolj z uporabo karakterjev.
 
 \chapter{Upodobitve končnih grup}
 
@@ -1612,9 +1612,9 @@ kar zopet implicira $\sum_{g \in G} \chi(g) = 0$. \kljuka
 \end{dokaz}
 
 \begin{zgled}
-V ekstremni situaciji, ko je $\characteristic(F) = p > 0$ in $|G| = p^n$ za nek $n \in \NN$, kategorija upodobitev izgleda precej nenavadno. V takih neugodnih razmerah \emph{netrivialnih nerazcepnih upodobitev ni}. Poglejmo si, zakaj je temu tako v primeru $F = \FF_p$ za neko praštevilo $p$.
+V ekstremni situaciji, ko je $\characteristic(F) = p > 0$ in $|G| = p^n$ za nek $n \in \NN$, je kategorija upodobitev videti precej nenavadno. V takih neugodnih razmerah \emph{netrivialnih nerazcepnih upodobitev ni}. Poglejmo si, zakaj je tako v primeru $F = \FF_p$ za neko praštevilo $p$.
 
-Imejmo nerazcepno upodobitev $p$-grupe $G$ na prostoru $V$ nad poljem $\FF_p$. Vemo že, da je $V$ nujno končno razsežen, zato je $|V| = p^k$ za nek $k \in \NN$. Grupa $G$ permutacijsko deluje na množici neničelnih vektorjev $V \backslash \{ 0 \}$. Po lemi o orbiti in stabilizatorju je velikost orbite vsakega neničelnega vektorja enaka indeksu stabilizatorja, ki je po predpostavki o moči grupe nujno potenca praštevila $p$. Ker pa moč $|V \backslash \{ 0 \}|$ ni deljiva s $p$, mora obstajati vektor $0 \neq v \in V$ z orbito moči $1$. Ta vektor je torej fiksen za delovanje grupe $G$ in zato razpenja enorazsežen podprostor $\FF_p \cdot v$, ki je kot upodobitev izomorfen $\oneone$. Torej je $V = \oneone$ in upodobitev je res trivialna.
+Imejmo nerazcepno upodobitev $p$-grupe $G$ na prostoru $V$ nad poljem $\FF_p$. Vemo že, da je $V$ nujno končno razsežen, zato je $|V| = p^k$ za neki $k \in \NN$. Grupa $G$ permutacijsko deluje na množici neničelnih vektorjev $V \backslash \{ 0 \}$. Po lemi o orbiti in stabilizatorju je velikost orbite vsakega neničelnega vektorja enaka indeksu stabilizatorja, ki je po predpostavki o moči grupe nujno potenca praštevila $p$. Ker pa moč $|V \backslash \{ 0 \}|$ ni deljiva s $p$, mora obstajati vektor $0 \neq v \in V$ z orbito moči $1$. Ta vektor je torej fiksen za delovanje grupe $G$ in zato razpenja enorazsežen podprostor $\FF_p \cdot v$, ki je kot upodobitev izomorfen $\oneone$. Torej je $V = \oneone$ in upodobitev je res trivialna.
 \end{zgled}
 
 \subsection{Dekompozicija regularne upodobitve}
@@ -1642,7 +1642,7 @@ V posebnem iz izreka po primerjavi razsežnosti izpeljemo
         \chi^1_{j_1} \times \chi^2_{j_2} \times \cdots \times \chi^k_{j_k} \colon \prod_{i=1}^k C_i = A \to \CC^*, \quad
         (c_1, c_2, \dots, c_k) \mapsto \prod_{i = 1}^k \chi^i_{j_i}(c_i).
     \]
-    Na ta način dobimo $\prod_{i=1}^k |\Omega_i| = \prod_{i=1}^k |C_i| = |A|$ enorazsežnih upodobitev. Vsaki dve od teh sta različni med sabo. Na ta način smo torej našli \emph{vse} nerazcepne upodobitve abelove grupe $A$.
+    Na ta način dobimo $\prod_{i=1}^k |\Omega_i| = \prod_{i=1}^k |C_i| = |A|$ enorazsežnih upodobitev. Vsaki dve od teh sta različni med seboj. Na ta način smo torej našli \emph{vse} nerazcepne upodobitve abelove grupe $A$.
 \end{itemize}
 \end{zgled}
 
@@ -1661,7 +1661,7 @@ za $f_1, f_2 \in \fun(G,F)$. Ker je polje $F$ v splošnem abstraktno, to sicer n
 Z uporabo povprečenja na prostoru linearnih preslikav (podobno kot pri dokazu Maschkejevega izreka) bomo nadgradili dekompozicijo regularne upodobitve na \emph{ortogonalno} direktno vsoto.
 
 \begin{trditev}
-Naj bo $G$ končna grupa z neizomorfnima nerazcepnima upodobitvima $\pi_1$, $\pi_2$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Tedaj sta prostora $\MK(\pi_1)$ in $\MK(\pi_2)$ ortogonalna.
+Naj bo $G$ končna grupa z neizomorfnima nerazcepnima upodobitvama $\pi_1$, $\pi_2$ nad algebraično zaprtim poljem karakteristike tuje $|G|$. Tedaj sta prostora $\MK(\pi_1)$ in $\MK(\pi_2)$ ortogonalna.
 \end{trditev}
 \begin{dokaz}
 Naj upodobitvi $\pi_1$, $\pi_2$ delujeta na prostorih $V_1$, $V_2$. Grupa $G$ deluje na prostoru linearnih preslikav $\hom(V_1, V_2)$. Povprečje tega delovanja je projekcijska spletična na podprostor $\hom(V_1, V_2)^G = \hom_G(V_1, V_2)$, ki je po Schurovi lemi trivialen. Za poljubno linearno preslikavo $A \in \hom(V_1, V_2)$ je torej
@@ -1704,7 +1704,7 @@ Pristopimo kot pri zadnjem dokazu, pri čemer prostor spletičen $\hom_G(V,V)$ p
 \[
     \frac{1}{|G|} \sum_{g \in G} g \cdot A = \textstyle \lambda_A \cdot \id_V
 \]
-za nek $\lambda_A \in F$. Velja $g \cdot A = \pi(g) A \pi(g)^{-1}
+za neki $\lambda_A \in F$. Velja $g \cdot A = \pi(g) A \pi(g)^{-1}
 $, zato je $\tr(g \cdot A) = \tr(A)$, od koder izpeljemo
 \[
     \lambda_A = \frac{\tr(A)}{\deg(\pi)}.
@@ -1833,7 +1833,7 @@ zato je konjugiranostni razred $s$ enak $\{ s r^{2j} \mid j \in \ZZ \}$ in konju
     \end{cases}
 \]
 
-Določimo zdaj še nerazcepne upodobitve. Poznamo že dvorazsežne nerazcepne upodobitve $\rho_k$ za $0 < k < n/2$, vseh teh je $\lceil n/2 \rceil - 1$. Za karakter take upodobitve velja $\chi_{\rho_k}(r) = 2 \cos(2 \pi k / n)$, zato so vsi ti karakterji različni med sabo in s tem so upodobitve $\rho_k$ neizomorfne. Poleg teh dvorazsežnih upodobitev imamo še linearne upodobitve. Število teh je enako velikosti abelacije $D_{2n}/[D_{2n}, D_{2n}]$.\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$. {\definicija Komutatorska podgrupa} grupe $G$ je $[G,G] = \langle [x,y] \mid x,y \in G \rangle$.} Velja
+Določimo zdaj še nerazcepne upodobitve. Poznamo že dvorazsežne nerazcepne upodobitve $\rho_k$ za $0 < k < n/2$, vseh teh je $\lceil n/2 \rceil - 1$. Za karakter take upodobitve velja $\chi_{\rho_k}(r) = 2 \cos(2 \pi k / n)$, zato so vsi ti karakterji različni med seboj in s tem so upodobitve $\rho_k$ neizomorfne. Poleg teh dvorazsežnih upodobitev imamo še linearne upodobitve. Število teh je enako velikosti abelacije $D_{2n}/[D_{2n}, D_{2n}]$.\footnote{{\definicija Komutator} elementov $x,y \in G$ je element $[x,y] = x^{-1} y^{-1} x y$. {\definicija Komutatorska podgrupa} grupe $G$ je $[G,G] = \langle [x,y] \mid x,y \in G \rangle$.} Velja
 \[
     [r^i, s r^j] = r^{-i} \left( r^i \right)^{s r^j} = r^{-2i}, \quad
     [s r^i, s r^j] = r^{-i} s \left( s r^i \right)^{s r^j} = r^{2j - 2i},
@@ -1872,7 +1872,7 @@ Izračunaj tabelo kompleksnih karakterjev kvaternionske grupe $Q_8 = \{ \pm 1, \
 \item Opazujmo simetrično grupo $S_n$ nad poljem $\CC$. Vsako njeno permutacijo $\sigma \in S_n$ lahko zapišemo kot produkt disjunktnih ciklov.\footnote{Pri tem fiksne točke permutacije obravnavamo kot cikle dolžine $1$.} Recimo, da so dolžine teh ciklov enake $\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_{k}$. Seveda velja $\sum_{i = 1}^{k} \lambda_i = n$. Zaporedju $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ pravimo {\definicija ciklični tip} permutacije $\sigma$. Kadar so kateri od členov cikličnega tipa enaki, ciklični tip pišemo tudi kot $1^{i_1} 2^{i_2} \cdots n^{i_n}$, kjer je $i_m$ število ciklov dolžine $m$ v $\sigma$.
 
 \begin{domacanaloga}
-Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom. Ta konjugiranostni razred ponavadi označimo kot $\conclass_{(\lambda_1, \lambda_2, \dots, \lambda_k)}$.
+Konjugiranostni razredi v $S_n$ so določeni s cikličnim tipom. Natančneje, če je $(\lambda_1, \lambda_2, \dots, \lambda_{k})$ ciklični tip permutacije $\sigma$, potem konjugiranostni razred $\sigma^{S_n}$ sestoji natanko iz vseh permutacij s tem cikličnim tipom. Ta konjugiranostni razred po navadi označimo kot $\conclass_{(\lambda_1, \lambda_2, \dots, \lambda_k)}$.
 \end{domacanaloga}
 
 V teoriji števil in kombinatoriki cikličnim tipom rečemo tudi {\definicija razčlenitve} števila $n$. Število vseh razčlenitev označimo s $p(n)$. Velja torej $p(n) = \kk(S_n) = |\Irr(S_n)|$. Splošna eksplicitna formula za to število \emph{ne} obstaja, poznamo pa njeno asimptotsko oceno
@@ -1911,7 +1911,7 @@ in dobljeno evalviramo v elementu $g$.
 
 \subsection{Razstavljanje upodobitve}
 
-S pomočjo ortonormirane baze karakterjev lahko z lahkoto razumemo vsako končno razsežno upodobitev končne grupe nad ugodnim poljem.
+S pomočjo ortonormirane baze karakterjev z lahkoto razumemo vsako končno razsežno upodobitev končne grupe nad ugodnim poljem.
 
 \begin{posledica}
 Naj bo $G$ končna grupa s končno razsežno upodobitvijo $\rho$ nad algebraično zaprtim poljem karakteristike $0$. 
@@ -1932,7 +1932,7 @@ Skalarno pomnožimo s $\chi_{\pi}$ in uporabimo ortonormiranost, pa dobimo $\mul
     = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi) \cdot [ \chi_{\rho}, \chi_{\pi} ] 
     = \sum_{\pi \in \Irr(G)} \mult_{\rho}(\pi)^2.
 \]
-Nazadnje je $||\chi_{\rho}|| = 1$, če in samo če je za natanko eno nerazcepno upodobitev $\pi$ njena večkratnost v $\rho$ enaka $1$, se pravi če je $\rho$ nerazcepna.
+Nazadnje je $||\chi_{\rho}|| = 1$, če in samo če je za natanko eno nerazcepno upodobitev $\pi$ njena večkratnost v $\rho$ enaka $1$, se pravi, če je $\rho$ nerazcepna.
 \end{dokaz}
 
 \begin{zgled}
@@ -1953,7 +1953,7 @@ torej $\pi$ vsebuje $\oneone$ z večkratnostjo $1$, kar je povsem analogno temu,
 \]
 zato je upodobitev $\rho$ nerazcepna. 
 
-Zaenkrat imamo tri nerazcepne upodobitve stopenj $1,1,3$. Iščemo torej še dve nerazcepni upodobitvi, katerih vsote kvadratov stopenj so enake $24 - (1^2 + 1^2 + 3^2) = 13$. Stopnji teh dveh neznanih upodobitev sta zato nujno enaki $2$ in $3$. Ker že imamo eno nerazcepno upodobitev stopnje $3$, lahko iz nje pridelamo novo s tenzoriranjem z upodobitvijo stopnje $1$. Dobimo upodobitev $\sgn \otimes \rho$. Njen karakter ima vrednosti $3,-1,0,1,-1$ in s tem normo $1$, zato je upodobitev $\sgn \otimes \rho$ res nerazcepna. Nazadnje nam torej manjka le še ena upodobitev stopnje $2$. Imenujmo jo $\tau$. Čeprav je ne poznamo, lahko iz ortonormiranosti karakterjev določimo njen karakter $\chi_{\tau}$ kot natanko tisto razredno funkcijo, ki je ortogonalna na vse poznane neracepne karakterje in je norme $1$ ter pozitivne stopnje. Na ta način dobimo vrednosti $2,0,-1,0,2$. S tem smo nazadnje določili celotno tabelo karakterjev grupe $S_4$ nad $\CC$.\footnote{Zanimivo je, da smo uspeli določiti tabelo karakterjev, brez da bi eksplicitno poznali vse upodobitve. }
+Za zdaj imamo tri nerazcepne upodobitve stopenj $1,1,3$. Iščemo torej še dve nerazcepni upodobitvi, katerih vsote kvadratov stopenj so enake $24 - (1^2 + 1^2 + 3^2) = 13$. Stopnji teh dveh neznanih upodobitev sta zato nujno enaki $2$ in $3$. Ker že imamo eno nerazcepno upodobitev stopnje $3$, lahko iz nje pridelamo novo s tenzoriranjem z upodobitvijo stopnje $1$. Dobimo upodobitev $\sgn \otimes \rho$. Njen karakter ima vrednosti $3,-1,0,1,-1$ in s tem normo $1$, zato je upodobitev $\sgn \otimes \rho$ res nerazcepna. Nazadnje nam torej manjka le še ena upodobitev stopnje $2$. Imenujmo jo $\tau$. Čeprav je ne poznamo, lahko iz ortonormiranosti karakterjev določimo njen karakter $\chi_{\tau}$ kot natanko tisto razredno funkcijo, ki je ortogonalna na vse poznane neracepne karakterje in je norme $1$ ter pozitivne stopnje. Na ta način dobimo vrednosti $2,0,-1,0,2$. S tem smo nazadnje določili celotno tabelo karakterjev grupe $S_4$ nad $\CC$.\footnote{Zanimivo je, da nam je uspelo določiti tabelo karakterjev, ne da bi eksplicitno poznali vse upodobitve. }
 
 \begin{table}[t]
     \centering
@@ -1996,7 +1996,7 @@ je izomorfizem vektorskih prostorov.
 Ni težko preveriti, da je $\Fcal$ dobro definirana preslikava. Očitno je linearna. Za $f \in \fun(G,F)$ je $\Fcal(f) \cdot 1_1 = \widehat{1_1}(\rho_{\fun}) \cdot f = f$, zato je $\Fcal$ injektivna. Oba prostora sta enake razsežnosti, namreč $|G|$, zato je $\Fcal$ izomorfizem.
 \end{dokaz}
 
-V posebnem je vsaka endospletična regularne upodobitve enaka evalvaciji Fourierove transformacije v neki fiksni funkciji.\footnote{V asociativni algebri to izrečemo ponavadi takole: vsak levi ideal v polenostavni algebri je glavni.} Nekoliko natančneje si poglejmo, kaj je ta evalvacija. Za funkciji $f,h \in \fun(G,F)$ je
+V posebnem je vsaka endospletična regularne upodobitve enaka evalvaciji Fourierove transformacije v neki fiksni funkciji.\footnote{V asociativni algebri to izrečemo po navadi takole: vsak levi ideal v polenostavni algebri je glavni.} Nekoliko natančneje si oglejmo, kaj je ta evalvacija. Za funkciji $f,h \in \fun(G,F)$ je
 \[
     \hat{h}(\rho_{\fun}) \cdot f = \sum_{g \in G} h(g) \rho_{\fun}(g^{-1}) \cdot f =
     \left( x \mapsto \sum_{g \in G} h(g) f(x g^{-1}) \right).
@@ -2060,7 +2060,7 @@ kar lahko po upoštevanju linearnosti sledi izrazimo kot
 \[
     f(g) = \frac{1}{|G|} \sum_{\pi \in \Irr(G)} \chi_{\pi}(1) \tr \left( \hat{f}(\pi) \cdot \pi(g) \right).
 \]
-Temu razvoju funkcije $f$ po $\pi$-izotipičnih komponentah rečemo {\definicija Fourierova inverzija}, saj nam ekplicitno pove, kako lahko $f$ izračunamo iz njenih Fourierovih transformacij v nerazcepnih upodobitvah.
+Temu razvoju funkcije $f$ po $\pi$-izotipičnih komponentah rečemo {\definicija Fourierova inverzija}, saj nam eksplicitno pove, kako lahko $f$ izračunamo iz njenih Fourierovih transformacij v nerazcepnih upodobitvah.
 
 \begin{zgled}
 Naj bo $A$ končna abelova grupa. Vemo že, da so vse njene kompleksne nerazcepne upodobitve enorazsežne. V tem primeru so upodobitve kar enake svojim karakterjem. Za dano funkcijo $f \in \fun(A,\CC)$ lahko Fourierovo inverzijo zapišemo kot
@@ -2072,9 +2072,9 @@ kar je le posledica dejstva $\hat{f}(\chi) = |A| \cdot [ f, \chi ]$.
 
 \subsection{Izračunljivost tabele karakterjev}
 
-Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Kategorijo $\Rep_G$ v tem primeru razumemo zelo dobro, če le poznamo tabelo karakterjev. Za zdaj smo si pogledali nekaj zgledov, kako to tabelo izračunati za posebne primere grupe. Pri tem smo si sicer res pomagali z razvito teorijo, a je bil večji del izračuna tabele opravljen z metodo ostrega pogleda. V splošnem se temu lahko izognemo; obstaja namreč več algoritmov, ki le z uporabo linearne algebre izračunajo tabelo karakterjev.
+Naj bo $G$ končna grupa in $F$ algebraično zaprto polje karakteristike tuje $|G|$. Kategorijo $\Rep_G$ v tem primeru razumemo zelo dobro, če le poznamo tabelo karakterjev. Za zdaj smo si ogledali nekaj zgledov, kako to tabelo izračunati za posebne primere grupe. Pri tem smo si sicer res pomagali z razvito teorijo, a je bil večji del izračuna tabele opravljen z metodo ostrega pogleda. V splošnem se temu lahko izognemo; obstaja namreč več algoritmov, ki le z uporabo linearne algebre izračunajo tabelo karakterjev.
 
-Pogledali si bomo enega takih algoritmov, ki uporablja projekcije na izotipične komponente iz zadnjega razdelka. Algoritem temelji na Fourierovi transformaciji karakteristične funkcije $1_{\conclass}$ konjugiranostnega razreda $\conclass$ grupe $G$ v regularni upodobitvi $\rho_{\fun}$. Po lemi o Fourierovi transformaciji razredne funkcije je namreč zožitev $\widehat{1_{\conclass}}(\rho_{\fun})$ na $\pi$-izotipično komponento skalarno množenje s številom
+Ogledali si bomo enega takih algoritmov, ki uporablja projekcije na izotipične komponente iz zadnjega razdelka. Algoritem temelji na Fourierovi transformaciji karakteristične funkcije $1_{\conclass}$ konjugiranostnega razreda $\conclass$ grupe $G$ v regularni upodobitvi $\rho_{\fun}$. Po lemi o Fourierovi transformaciji razredne funkcije je namreč zožitev $\widehat{1_{\conclass}}(\rho_{\fun})$ na $\pi$-izotipično komponento skalarno množenje s številom
 \[
     \frac{|G|}{\deg(\pi)} \cdot [1_{\conclass}, \chi_{\pi}] =
     |\conclass| \cdot \frac{\chi_{\pi}(\conclass^{-1})}{\chi_{\pi}(1)}.
@@ -2099,7 +2099,7 @@ Vsoto lahko razvijemo po vsakem konjugiranostnem razredu posebej in dobimo
     \frac{\chi_{\pi}(1)}{|G|} \sum_{\conclass} \chi_{\pi}(\conclass) \sum_{g \in \conclass} \rho_{\fun}(g^{-1}) \cdot w =
     \left( \frac{\chi_{\pi}(1)}{|G|} \sum_{\conclass} \chi_{\pi}(\conclass) \lambda_{\conclass} \right) w
 \]
-kjer smo v enakosti upoštevali, da je $w \in W$. Od tod sledi
+pri čemer smo v enakosti upoštevali, da je $w \in W$. Od tod sledi
 \[
     \textstyle W \leq \Eigenspace_{\frac{\chi_{\pi}(1)}{|G|} \sum_{\conclass} \chi_{\pi}(\conclass) \lambda_{\conclass}}(P_{\pi}).
 \]
@@ -2132,19 +2132,19 @@ Opazujmo alternirajočo grupo $A_5$ nad poljem $\CC$. Z opisanim algoritmom hitr
 \caption{Tabela karakterjev $A_5$, kjer je $\zeta = e^{2 \pi i / 5}$}
 \end{table}
 
-Iz tabele lahko razberemo kar nekaj lastnosti grupe. Poglejmo si, kako hitro premislimo, da je $A_5$ \emph{enostavna} grupa. Če bi namreč $A_5$ imela kakšno pravo netrivialno edinko $N$, potem bi kvocient $A_5/N$ imel kakšno netrivialno nerazcepno upodobitev $\rho$. Restrikcija $\Res^{A_5/N}_{A_5}(\rho)$ je zato netrivialna nerazcepna upodobitev grupe $A_5$ z netrivialnim jedrom. Vrednost karakterja $\chi_{\rho}$ v poljubnem elementu $N$ je torej enaka $\chi_{\rho}(1)$. Iz tabele karakterjev grupe $A_5$ pa je jasno, da takega karakterja ni.\footnote{Iz argumenta vidimo, da velja celo naslednje. Končna grupa $G$ je enostavna, če in samo če je vsaka njena netrivialna nerazcepna upodobitev zvesta.}
+Iz tabele lahko razberemo kar nekaj lastnosti grupe. Oglejmo si, kako hitro premislimo, da je $A_5$ \emph{enostavna} grupa. Če bi namreč $A_5$ imela kakšno pravo netrivialno edinko $N$, potem bi kvocient $A_5/N$ imel kakšno netrivialno nerazcepno upodobitev $\rho$. Restrikcija $\Res^{A_5/N}_{A_5}(\rho)$ je zato netrivialna nerazcepna upodobitev grupe $A_5$ z netrivialnim jedrom. Vrednost karakterja $\chi_{\rho}$ v poljubnem elementu $N$ je torej enaka $\chi_{\rho}(1)$. Iz tabele karakterjev grupe $A_5$ pa je jasno, da takega karakterja ni.\footnote{Iz argumenta vidimo, da velja celo naslednje. Končna grupa $G$ je enostavna, če in samo če je vsaka njena netrivialna nerazcepna upodobitev zvesta.}
 \end{zgled}
 
-Predstavljeni algoritem ima mnogo pomanjkljivosti. V programskem jeziku GAP~je za izračun tabele karakterjev implementiran algoritem \href{https://www.sciencedirect.com/science/article/pii/S0747717108800776}{(Dixon 1967, Schneider 1990)}, ki izboljša predstavljenega na naslednja dva načina.
+Predstavljeni algoritem ima številne pomanjkljivosti. V programskem jeziku GAP~je za izračun tabele karakterjev implementiran algoritem \href{https://www.sciencedirect.com/science/article/pii/S0747717108800776}{(Dixon 1967, Schneider 1990)}, ki izboljša predstavljenega na naslednja dva načina.
 \begin{enumerate}
-    \item S predstavljenim algoritmom bomo težko izračunali tabelo karakterjev kakšne zelo velike grupe, saj moramo v postopku diagonalizirati matrike velikosti $|G| \times |G|$. Algoritem v GAP~sicer temelji na enaki ideji iskanja skupnih lastnih podprostorov, a pri tem ne opazuje regularne upodobitve, temveč upošteva abstraktne formule med karakterji in iz njih izpelje matrike velikosti $\kk(G) \times \kk(G)$, katerih skupni lastni vektorji so (bolj ali manj) karakterji. Ker je število $\kk(G)$ bistveno manjše od $|G|$, je ta izračun mnogo lažji in hitrejši.
+    \item S predstavljenim algoritmom bomo težko izračunali tabelo karakterjev kakšne zelo velike grupe, saj moramo v postopku diagonalizirati matrike velikosti $|G| \times |G|$. Algoritem v GAP~sicer temelji na enaki ideji iskanja skupnih lastnih podprostorov, a pri tem ne opazuje regularne upodobitve, temveč upošteva abstraktne formule med karakterji in iz njih izpelje matrike velikosti $\kk(G) \times \kk(G)$, katerih skupni lastni vektorji so (bolj ali manj) karakterji. Ker je število $\kk(G)$ bistveno manjše od $|G|$, je ta izračun veliko lažji in hitrejši.
     
     \item Za izračun natančnih vrednosti karakterjev moramo vse račune izvajati eksaktno in brez približkov. Numerične metode, ki jih sicer lahko uporabimo za hitro računanje lastnih vrednosti velikih matrik, torej odpadejo. Programski jezik GAP~zna računati simbolično, a je to lahko precej zamudno. Algoritem v GAP~se temu izogne tako, da večino računov opravi nad poljem $\FF_p$ za ustrezno izbrano dovolj veliko praštevilo $p$, potem pa te rezultate prenese nazaj nad $\CC$. Vsi računi so zato hitri in eksaktni.
 \end{enumerate}
 
 \subsection{Kolobar virtualnih karakterjev}
 
-Pogosto nas ne zanima le računski aspekt upodobitev, temveč konceptualno razumevanje, od kod prihajajo nerazcepne upodobitve dane grupe. Kot bomo videli, tukaj igra glavno vlogo indukcija.
+Pogosto nas ne zanima le računski aspekt upodobitev, temveč konceptualno razumevanje, od kod prihajajo nerazcepne upodobitve dane grupe. Kot bomo videli, ima tukaj glavno vlogo indukcija.
 
 Naj bo $G$ grupa in $F$ polje karakteristike tuje $|G|$. Karakterji upodobitev grupe $G$ so celoštevilske kombinacije nerazcepnih karakterjev. Tvorimo množico vseh takih kombinacij, se pravi
 \[
@@ -2220,7 +2220,7 @@ Ne spreglejmo ključne lekcije tega razdelka: nerazcepne upodobitve dane končne
 
 \subsection{Kompleksne upodobitve}
 
-Splošno teorijo upodobitev končnih grup zaključimo z upodobitvami nad najugodnejšim poljem $\CC$. To polje je daleč od abstraktnega in je opremljeno z mnogo dodatne strukture, ki jo lahko pri upodobitvah izkoristimo.
+Splošno teorijo upodobitev končnih grup zaključimo z upodobitvami nad najugodnejšim poljem $\CC$. To polje je daleč od abstraktnega in je opremljeno z mnogo dodatne strukture, ki jo lahko izkoristimo pri upodobitvah.
 
 \subsubsection{Vrednosti karakterjev}
 
@@ -2308,11 +2308,11 @@ Osredotočimo se sedaj še na upodobitveni prostor. Naj bo $\rho$ kompleksna upo
 \[
     \left\langle \sum_i \alpha_i v_i, \sum_i \beta_i v_i \right\rangle = \sum_i \alpha_i \overline{\beta_i}.
 \]
-Prostor $V$ je opremljen z linearnim delovanjem grupe $G$. Zdaj smo na ta prostor dodali strukturo skalarnega produkta in ni jasno, ali je grupa $G$ kompatibilna s to dodatno strukturo. Kadar je temu tako, se pravi
+Prostor $V$ je opremljen z linearnim delovanjem grupe $G$. Zdaj smo na ta prostor dodali strukturo skalarnega produkta in ni jasno, ali je grupa $G$ kompatibilna s to dodatno strukturo. Kadar je tako, se pravi
 \[
     \forall g \in G. \ \forall v, w \in V. \quad \langle \rho(g) \cdot v, \rho(g) \cdot w \rangle = \langle v, w \rangle,
 \]
-tedaj rečemo, da je $\rho$ {\definicija unitarna upodobitev}. V tem primeru $\rho$ slika iz $G$ v grupo unitarnih transformacij $\U(V)$ prostora $V$ s skalarnim produktom $\langle \cdot, \cdot \rangle$. Seveda ni vsaka upodobitev končne grupe unitarna,\footnote{Skalarni produkt na danem prostoru lahko izberemo na mnogo različnih načinov.} je pa vsaka upodobitev \emph{unitarizabilna}.
+tedaj rečemo, da je $\rho$ {\definicija unitarna upodobitev}. V tem primeru $\rho$ slika iz $G$ v grupo unitarnih transformacij $\U(V)$ prostora $V$ s skalarnim produktom $\langle \cdot, \cdot \rangle$. Seveda ni vsaka upodobitev končne grupe unitarna,\footnote{Skalarni produkt na danem prostoru lahko izberemo na veliko različnih načinov.} je pa vsaka upodobitev \emph{unitarizabilna}.
 
 \begin{trditev}
 Naj bo $G$ končna grupa in $\rho$ njena končno razsežna kompleksna upodobitev na prostoru $V$. Tedaj na $V$ obstaja skalarni produkt, glede na katerega je $\rho$ unitarna.
@@ -2360,7 +2360,7 @@ to je {\definicija Hilbert-Schmidtov skalarni produkt}. Parsevalov izrek nam tor
 
 \chapter{Razširjeni zgledi -- končni}
 
-Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo na voljo tabelo karakterjev, izračun te pa je končen problem. S tem smo za konkretne končne grupe dosegli ultimativen cilj teorije upodobitev. Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves ne spregledamo gozda. Grupe namreč praviloma ne nastopajo posamično, temveč kot del večjih družin.\footnote{Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, \dots} V tem poglavju si bomo podrobneje pogledali dve temeljni družini grup, in sicer simetrične grupe ter splošne linearne grupe nad končnim poljem.\footnote{Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, treh neskončnih družin, in sicer cikličnih grup praštevilske moči $\ZZ/p\ZZ$, alternirajočih grup $A_n$ in različnih matričnih grup nad končnimi polji, na primer $\SL_n(\FF_p)/Z(\SL_n(\FF_p))$. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev nekomutativnih končnih enostavnih grup. Podrobnejši opis končnih enostavnih grup je na voljo \href{https://en.wikipedia.org/wiki/List_of_finite_simple_groups}{tukaj}.} Njuno teorijo upodobitev bomo obravnavali celostno.
+Kategorijo upodobitev dane končne grupe nad ugodnim poljem razumemo, če imamo na voljo tabelo karakterjev, izračun te pa je končen problem. S tem smo za konkretne končne grupe dosegli ultimativen cilj teorije upodobitev. Biti pa moramo previdni, da zaradi vseh teh čudovitih dreves ne spregledamo gozda. Grupe namreč praviloma ne nastopajo posamično, temveč kot del večjih družin.\footnote{Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, \dots} V tem poglavju si bomo podrobneje ogledali dve temeljni družini grup, in sicer simetrične grupe ter splošne linearne grupe nad končnim poljem.\footnote{Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, treh neskončnih družin, in sicer cikličnih grup praštevilske moči $\ZZ/p\ZZ$, alternirajočih grup $A_n$ in različnih matričnih grup nad končnimi polji, na primer $\SL_n(\FF_p)/Z(\SL_n(\FF_p))$. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev nekomutativnih končnih enostavnih grup. Podrobnejši opis končnih enostavnih grup je na voljo \href{https://en.wikipedia.org/wiki/List_of_finite_simple_groups}{tukaj}.} Njuno teorijo upodobitev bomo obravnavali celostno.
 
 \section{Simetrične grupe}
 

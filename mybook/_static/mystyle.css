@@ -201,3 +201,8 @@ div.odprtproblem > p:first-child { margin-top: 0; }
 /* …repeat for lema, definicija, domacanaloga … */
 
 footer.bd-footer-content {display:none;}
+
+/* Hide top-right article action controls (download/fullscreen/theme/search/toggles). */
+.header-article-item .article-header-buttons {
+  display: none !important;
+}

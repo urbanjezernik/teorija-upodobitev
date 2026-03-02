@@ -134,6 +134,30 @@ def mark_definicija(tex_src: str) -> str:
         tex_src)
     return tex_src
 
+def add_em_to_definicija_for_build(tex_src: str) -> str:
+    """
+    Keep source TeX untouched, but for build parsing force \\definicija
+    to include \\em so conversion targets the same emphasized terms.
+    """
+    replacements = [
+        (
+            r'\\def\\definicija\{[^}]*\}',
+            r'\\def\\definicija{\\color{rdeca}\\bf\\em}',
+        ),
+        (
+            r'\\newcommand\{\\definicija\}\{[^}]*\}',
+            r'\\newcommand{\\definicija}{\\color{rdeca}\\bf\\em}',
+        ),
+        (
+            r'\\renewcommand\{\\definicija\}\{[^}]*\}',
+            r'\\renewcommand{\\definicija}{\\color{rdeca}\\bf\\em}',
+        ),
+    ]
+    out = tex_src
+    for pattern, repl in replacements:
+        out = re.sub(pattern, repl, out)
+    return out
+
 TEX_FILE   = pathlib.Path("upodobitve.tex")       # <— adjust if needed
 BOOK_DIR   = pathlib.Path("mybook")               # created earlier
 CONTENT_DIR = BOOK_DIR / "content"                # keep Markdown here
@@ -144,6 +168,7 @@ QUIZ_DIR = (BOOK_DIR / "content" / "quizzes")
 QUIZ_DIR.mkdir(parents=True, exist_ok=True)
 
 tex = TEX_FILE.read_text(encoding="utf-8")
+tex = add_em_to_definicija_for_build(tex)
 # remove \begin{document} … \end{document}
 tex = re.sub(r'\\begin{document}|\\end{document}', '', tex)
 
