@@ -15,7 +15,7 @@ Opazujmo simetrično grupo $S_n$ za $n \in \NN$ nad poljem $\CC$. Ogledali smo s
 
 ### Nerazcepne upodobitve
 
-Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$. Nerazcepno upodobitev grupe $S_n$, prirejeno $\lambda$, kot ponavadi iščemo z indukcijo iz podgrup. Razčlenitev $\lambda$ lahko interpretiramo kot ciklični tip permutacij, zato se naravno ponuja <span class="definicija">Youngova grupa</span>
+Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$. Nerazcepno upodobitev grupe $S_n$, prirejeno $\lambda$, kot po navadi iščemo z indukcijo iz podgrup. Razčlenitev $\lambda$ lahko interpretiramo kot ciklični tip permutacij, zato se naravno ponuja <span class="definicija">Youngova grupa</span>
 ```{math}
 P = S_{\lambda_1} \times S_{\lambda_2} \times \cdots \times S_{\lambda_k}.
 ```
@@ -36,7 +36,7 @@ Ta prostor lahko izrazimo s pomočjo Fourierove transformacije kot
     = \image \Fcal(1_P)
     = \langle 1_P * f \mid f \in \fun(S_n, \CC) \rangle.
 ```
-Upodobitev $S_n$ na tem prostoru gotovo *ni* nerazcepna, saj na primer vsebuje trivialno z večkratnostjo $\langle \chi_{\oneone}, \Ind^{S_n}_{P}(\chi_{\oneone}) \rangle = \langle \chi_{\oneone}, \chi_{\oneone} \rangle = 1$. Ta prostor bomo zato še dodatno projicirali na nek podprostor.
+Upodobitev $S_n$ na tem prostoru gotovo *ni* nerazcepna, saj na primer vsebuje trivialno z večkratnostjo $\langle \chi_{\oneone}, \Ind^{S_n}_{P}(\chi_{\oneone}) \rangle = \langle \chi_{\oneone}, \chi_{\oneone} \rangle = 1$. Ta prostor bomo zato še dodatno projicirali na neki podprostor.
 
 Do zdaj smo upoštevali le grupo $P$ permutacij, ki ohranjajo *vrstice* izbrane Youngove tabele. Iz tega gledišča je naravno, da obravnavamo tudi grupo permutacij, ki ohranjajo *stolpce* tabele. Označimo jo s $Q$. Ravno ta podgrupa je dodatek, ki nam bo dodatno reduciral zgoraj opisano inducirano upodobitev. Pri tem bomo upoštevali, da je $Q$ sestavljena dualno $P$, zato jo bomo utežili s predznačno upodobitvijo $\sgn$.
 
@@ -133,7 +133,7 @@ Opazujmo simetrično grupo $S_n$.
 
     Privzemimo zdaj, da je $\widehat{\youngsym}(\rho_{\fun}) \cdot W = 0$, kar lahko zapišemo kot $W * \youngsym = 0$. Od tod sledi $W * V_{\lambda} = 0$ in zato $W * W = 0$. Naj bo $W = \image P$ za neko projektorsko endospletično $P$ regularne upodobitve. Vemo že, da so vse take preslikave oblike $P = \Fcal(w)$ za neko funkcijo $w \in \fun(S_n, \CC)$. Ker je $P \cdot 1_1 = \widehat{1_1}(\rho_{\fun}) \cdot w = w$, sledi $w \in W$. Še več, ker je $P^2 = P$, izračunamo $w = P \cdot w = \widehat{w}(\rho_{\fun}) \cdot w = w * w$. Ker je $W * W = 0$, sledi $w = 0$ in s tem $W = 0$.
 
-2.  Za različni razčlenitvi $\lambda$, $\mu$ lahko brez škode predpostavimo $\lambda > \mu$, saj je $<$ linearna urejenost. Po lemi je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\mu} = 0$. Hkrati je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda}$ bodisi $\CC \cdot \youngsym$ bodisi $0$. V slednjem primeru pristopimo kot zgoraj: velja $V_{\lambda} * V_{\lambda} = 0$ in projektorska endospletična regularne upodobitve na $V_{\lambda}$ je oblike $\Fcal(v)$ za nek $v \in V_{\lambda}$ z lastnostjo $v = v * v$, kar implicira $v = 0$ in s tem $V_{\lambda} = 0$, protislovje. Torej je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda} \neq 0$ in zato $V_{\lambda} \not\cong V_{\mu}$.
+2.  Za različni razčlenitvi $\lambda$, $\mu$ lahko brez škode predpostavimo $\lambda > \mu$, saj je $<$ linearna urejenost. Po lemi je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\mu} = 0$. Hkrati je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda}$ bodisi $\CC \cdot \youngsym$ bodisi $0$. V slednjem primeru pristopimo kot zgoraj: velja $V_{\lambda} * V_{\lambda} = 0$ in projektorska endospletična regularne upodobitve na $V_{\lambda}$ je oblike $\Fcal(v)$ za neki $v \in V_{\lambda}$ z lastnostjo $v = v * v$, kar implicira $v = 0$ in s tem $V_{\lambda} = 0$, protislovje. Torej je $\widehat{\youngsym}(\rho_{\fun}) \cdot V_{\lambda} \neq 0$ in zato $V_{\lambda} \not\cong V_{\mu}$.
 
 </div>
 
@@ -151,7 +151,7 @@ Preostane nam še dokaz leme.
     ```
     kar lahko prepišemo v $f(qgp) = \sgn(q) \cdot f(g)$. Od tod sledi $f(qp) = \sgn(q) \cdot f(1)$. Na množici $QP$ se torej do skalarja $f(1)$ natančno funkcija $f$ ujema z Youngovim simetrizatorjem $\youngsym$.
 
-    Preverimo še, da je izven množice $QP$ funkcija $f$ ničelna. V ta namen se spomnimo, da $P$ in $Q$ izhajata iz Youngove tabele $T$. Elementi $S_n$ naravno delujejo s permutacijami na množici tabel. Za $g \in S_n$ naj bo $g \cdot T$ rezultat tega delovanja z elementom $g$.
+    Preverimo še, da je zunaj množice $QP$ funkcija $f$ ničelna. V ta namen se spomnimo, da $P$ in $Q$ izhajata iz Youngove tabele $T$. Elementi $S_n$ naravno delujejo s permutacijami na množici tabel. Za $g \in S_n$ naj bo $g \cdot T$ rezultat tega delovanja z elementom $g$.
 
     <div class="domacanaloga">
 
@@ -185,7 +185,7 @@ Preostane nam še dokaz leme.
     ```{math}
     1_{P_\mu} * (\sgn \cdot 1_{g^{-1} Q_{\lambda} g}) = 1_{P_\mu} * 1_{g^{-1}} * (\sgn \cdot 1_{Q_{\lambda}}) * 1_g.
     ```
-    Če uspemo dokazati, da je leva stran ničelna, bo taka tudi desna, od koder po dodatni konvoluciji z $1_{g^{-1}}$ z desne sledi želena enakost.
+    Če nam uspe dokazati, da je leva stran ničelna, bo taka tudi desna, od koder po dodatni konvoluciji z $1_{g^{-1}}$ z desne sledi želena enakost.
 
     Predpostavimo torej lahko, da je $g = 1$. Kot v dokazu prejšnje točke najdemo transpozicijo $t \in Q_{\lambda} \cap P_{\mu}$. Z njo velja
     ```{math}
@@ -196,7 +196,7 @@ Preostane nam še dokaz leme.
 
 </div>
 
-Tekom dokaza izreka smo premislili, da je $\youngsym * \youngsym = n_{\lambda} \cdot \youngsym$ za nek skalar $n_{\lambda} \in \CC$. Linearna preslikava $\Fcal(\youngsym)$ slika v vektorski podprostor $V_{\lambda}$, na tem podprostoru pa deluje kot
+Ob izpeljavi dokaza izreka smo premislili, da je $\youngsym * \youngsym = n_{\lambda} \cdot \youngsym$ za neki skalar $n_{\lambda} \in \CC$. Linearna preslikava $\Fcal(\youngsym)$ slika v vektorski podprostor $V_{\lambda}$, na tem podprostoru pa deluje kot
 ```{math}
 \Fcal(\youngsym) \cdot (\youngsym * f) 
     = \youngsym * \youngsym * f
@@ -251,7 +251,7 @@ Opazujmo grupo $S_3$. Njene nerazcepne upodobitve nad $\CC$ dobimo iz razčlenit
 
 </div>
 
-Modularni svet je mnogo bolj mističen od kompleksnega. Sodobna teorija upodobitev se povečini ukvarja s tem, kako *regularna* je kategorija upodobitev v odvisnosti od praštevila $p$.[^7] V zvezi s tem obstaja mnogo odprtih problemov.
+Modularni svet je veliko bolj mističen od kompleksnega. Sodobna teorija upodobitev se povečini ukvarja s tem, kako *regularna* je kategorija upodobitev v odvisnosti od praštevila $p$.[^7] V zvezi s tem obstajajo številni odprti problemi.
 
 <div class="odprtproblem">
 
@@ -284,7 +284,7 @@ Naj bo $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$ razčlenitev $n$ in 
 \chi_{\lambda}\left(\conclass_{1^{i_1} 2^{i_2} \cdots n^{i_n}}\right) =
     \left[ \Delta(\mathbf{x}) \cdot P_1(\mathbf{x})^{i_1} P_2(\mathbf{x})^{i_2} \cdots P_n(\mathbf{x})^{i_n} \right]_{(\ell_1, \ell_2, \dots, \ell_k)},
 ```
-kjer je
+pri čemer je
 ```{math}
 \ell_1 = \lambda_1 + k - 1, \quad
     \ell_2 = \lambda_2 + k - 2, \quad
@@ -294,7 +294,7 @@ kjer je
 
 </div>
 
-Dokaz temelji na poznavanju osnov teorije simetričnih funkcij, ki jih ponavadi spoznamo pri kombinatoričnih predmetih, zato ga brez prehude žalosti izpustimo. Poglejmo pa si nekaj primerov uporabe izreka.
+Dokaz temelji na poznavanju osnov teorije simetričnih funkcij, ki jih po navadi spoznamo pri kombinatoričnih predmetih, zato ga brez prehude žalosti izpustimo. Poglejmo pa si nekaj primerov uporabe izreka.
 
 <div class="zgled">
 
@@ -321,7 +321,7 @@ Dokaz temelji na poznavanju osnov teorije simetričnih funkcij, ki jih ponavadi 
   ```{math}
   \lambda = (n-s, 1, 1, \dots, 1)
   ```
-  za nek $0 \leq s \leq n-1$. Takšni razčlenitvi pravimo <span class="definicija">kljuka</span>.
+  za neki $0 \leq s \leq n-1$. Takšni razčlenitvi pravimo <span class="definicija">kljuka</span>.
 
   <figure>
   <img src="img/img_kljuka.png" style="width:33.0%" />
@@ -342,7 +342,7 @@ Izračunaj vrednost poljubnega karakterja $\chi_{\lambda}$ v konjugiranostnem ra
 
 </div>
 
-S Frobeniusovo formulo lahko določimo stopnje nerazcepnih upodobitev simetrične grupe. Za to bomo potrebovali koncept kljuke, ki je malo splošnejši od tiste, ki smo jo videli v zadnjem zgledu. Opazujmo Youngov diagram razčlenitve $\lambda$. Za vsako celico $(i,j)$ diagrama, kjer $i$ predstavlja vrstico in $j$ stopec, je <span class="definicija">kljuka</span> $H_{\lambda}(i,j)$ množica tistih celic, ki so desno ali pod celico $(i,j)$, vključivši celico $(i,j)$.[^8] <span class="definicija">Dolžina kljuke</span> $H_{\lambda}(i,j)$ je enaka številu celic v kljuki, se pravi $|H_{\lambda}(i,j)|$.
+S Frobeniusovo formulo lahko določimo stopnje nerazcepnih upodobitev simetrične grupe. Za to bomo potrebovali koncept kljuke, ki je malo splošnejši od tiste, ki smo jo videli v zadnjem zgledu. Opazujmo Youngov diagram razčlenitve $\lambda$. Za vsako celico $(i,j)$ diagrama, pri čemer $i$ predstavlja vrstico in $j$ stopec, je <span class="definicija">kljuka</span> $H_{\lambda}(i,j)$ množica tistih celic, ki so desno ali pod celico $(i,j)$, vključivši celico $(i,j)$.[^8] <span class="definicija">Dolžina kljuke</span> $H_{\lambda}(i,j)$ je enaka številu celic v kljuki, se pravi $|H_{\lambda}(i,j)|$.
 
 <figure>
 <img src="img/img_dolzine_kljuk.png" style="width:33.0%" />
@@ -373,7 +373,7 @@ Ko razviti vsoti zmnožimo, dobimo člen $x_1^{\ell_1} x_2^{\ell_2} \cdots x_k^{
 ```{math}
 \sum_{\sigma} \sgn(\sigma) \cdot \frac{n!}{(\ell_1 - \sigma(k) + 1)! (\ell_2 - \sigma(k-1) + 1)! \cdots (\ell_k - \sigma(1) + 1)!},
 ```
-kjer seštevamo po tistih $\sigma \in S_k$, za katere velja $\ell_i - \sigma(k-i+1) + 1 \geq 0$ za vsak $i$. To vsoto lahko prepišemo v
+pri čemer seštevamo po tistih $\sigma \in S_k$, za katere velja $\ell_i - \sigma(k-i+1) + 1 \geq 0$ za vsak $i$. To vsoto lahko prepišemo v
 ```{math}
 \frac{n!}{\ell_1! \ell_2! \cdots \ell_k!} \cdot \sum_{\sigma} \sgn(\sigma) \cdot \prod_{j = 1}^k \ell_j (\ell_j - 1) \cdots (\ell_j - \sigma(k-j+1) + 2).
 ```
@@ -406,7 +406,7 @@ Z indukcijo na število stolpcev Youngovega diagrama $\lambda$ dokaži, da je
 
 <div class="zgled">
 
-Iz formule o dolžinah kljuk takoj izračunamo stopnjo standardne upodobitve. Usteza ji razčlenitev $(n-1,1)$, torej je njena stopnja enaka
+Iz formule o dolžinah kljuk takoj izračunamo stopnjo standardne upodobitve. Ustreza ji razčlenitev $(n-1,1)$, torej je njena stopnja enaka
 ```{math}
 \frac{n!}{1 \cdot 2 \cdot \cdots \cdot (n-2) \cdot n \cdot 1} = n-1.
 ```
@@ -435,7 +435,7 @@ Določimo najprej konjugiranostne razrede. Naj bo $\conclass = \sigma^{A_n} \sub
 
 <div class="domacanaloga">
 
-Naj bo $\conclass$ konjugiranostni razred sode permutacije v $S_n$, ki ustreza razčlenitvi $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$. Dokaži, da se $\conclass$ razcepi v dva konjugiranostna razreda v $A_n$, če in samo če so vsi $\lambda_i$ lihi in različni med sabo.
+Naj bo $\conclass$ konjugiranostni razred sode permutacije v $S_n$, ki ustreza razčlenitvi $\lambda = (\lambda_1, \lambda_2, \dots, \lambda_k)$. Dokaži, da se $\conclass$ razcepi v dva konjugiranostna razreda v $A_n$, če in samo če so vsi $\lambda_i$ lihi in različni med seboj.
 
 </div>
 
@@ -448,7 +448,7 @@ Poskusimo zdaj na podoben način razumeti še nerazcepne upodobitve grupe $A_n$.
     \frac{1}{|A_n|} \cdot |S_n| \langle \chi_{\lambda}, \chi_{\lambda} \rangle
     = 2.
 ```
-Torej je $\langle \chi_{\lambda}|_{A_n}, \chi_{\lambda}|_{A_n} \rangle \in \{ 1, 2 \}$, zato je $\rho_{\lambda}|_{A_n}$ bodisi nerazcepna upodobitev bodisi vsota dveh neizomorfnih nerazcepnih upodobitev. Drugi primer nastopi, če in samo če je $\chi_{\lambda}|_{S_n \backslash A_n} = 0$, kar je ekvivalentno izomorfizmu $\rho_{\lambda} \cong \sgn \otimes \rho_{\lambda}$. Zadnja upodobitev je izomorfna $\rho_{\lambda^\prime}$, zato se upodobitev $\rho_{\lambda}$ razcepi na $A_n$, če in samo če je $\lambda = \lambda^\prime$, se pravi da je $\lambda$ simetrična razčlenitev. V tem primeru lahko zapišemo $\chi_{\lambda}|_{A_n} = \alpha + \beta$, kjer sta $\alpha, \beta$ nerazcepna karakterja $A_n$. Ni se težko prepričati, da zanju velja $\beta(\sigma) = \alpha(\sigma^{(1 \ 2)})$ za vsak $\sigma \in A_n$, torej sta v posebnem upodobitvi, na katere razpade $\rho_{\lambda}$, enake razsežnosti. Konkretne vrednosti karakterjev $\alpha$ in $\beta$ lahko izračunamo s pomočjo ortogonalnosti karakterjev.
+Torej je $\langle \chi_{\lambda}|_{A_n}, \chi_{\lambda}|_{A_n} \rangle \in \{ 1, 2 \}$, zato je $\rho_{\lambda}|_{A_n}$ bodisi nerazcepna upodobitev bodisi vsota dveh neizomorfnih nerazcepnih upodobitev. Drugi primer nastopi, če in samo če je $\chi_{\lambda}|_{S_n \backslash A_n} = 0$, kar je ekvivalentno izomorfizmu $\rho_{\lambda} \cong \sgn \otimes \rho_{\lambda}$. Zadnja upodobitev je izomorfna $\rho_{\lambda^\prime}$, zato se upodobitev $\rho_{\lambda}$ razcepi na $A_n$, če in samo če je $\lambda = \lambda^\prime$, se pravi, da je $\lambda$ simetrična razčlenitev. V tem primeru lahko zapišemo $\chi_{\lambda}|_{A_n} = \alpha + \beta$, kjer sta $\alpha, \beta$ nerazcepna karakterja $A_n$. Ni se težko prepričati, da zanju velja $\beta(\sigma) = \alpha(\sigma^{(1 \ 2)})$ za vsak $\sigma \in A_n$, torej sta v posebnem upodobitvi, na katere razpade $\rho_{\lambda}$, enake razsežnosti. Konkretne vrednosti karakterjev $\alpha$ in $\beta$ lahko izračunamo s pomočjo ortogonalnosti karakterjev.
 
 S štetjem konjugiranostnih razredov v $A_n$ se ni težko prepričati, da na opisan način dobimo vse nerazcepne upodobitve alternirajoče grupe. Podrobnosti so podrobno prikazane v (Fulton-Harris 2004).
 
@@ -459,7 +459,7 @@ Opazujmo <span class="definicija">splošno linearno grupo</span>
 G_p = {\textstyle \GL_2(\FF_p)} =
     \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mid a,b,c,d \in \FF_p, \ ad - bc \neq 0 \right\}
 ```
-obrnljivih matrik razsežnosti $2 \times 2$ nad končnim poljem $\FF_p$, kjer je $p$ praštevilo. Njeno kategorijo upodobitev bomo obravnavali nad $\CC$. Še pred tem pa moramo bolje spoznati to grupo.[^9]
+obrnljivih matrik razsežnosti $2 \times 2$ nad končnim poljem $\FF_p$, pri čemer je $p$ praštevilo. Njeno kategorijo upodobitev bomo obravnavali nad $\CC$. Še pred tem pa moramo bolje spoznati to grupo.[^9]
 
 ### Osnovne poteze
 
@@ -623,7 +623,7 @@ Predpostavimo, da je $p > 2$. Konjugiranostni razredi v $G_p$ so enaki podobnost
           x & t \\ 0 & x
       \end{pmatrix} \mid x \in \FF_p^*, \ t \in \FF_p \right\} = S_p \times U_p,
     ```
-    kjer je $S_p$ množica skalarnih matrik. Velja $|C_p| = (p-1)p$. Konjugiranostni razred je torej velikosti $p^2 - 1$. Vseh takih razredov je $p-1$.
+    pri čemer je $S_p$ množica skalarnih matrik. Velja $|C_p| = (p-1)p$. Konjugiranostni razred je torej velikosti $p^2 - 1$. Vseh takih razredov je $p-1$.
 
 3.  <span class="definicija">Razcepni polenostavni elementi</span>. Naj ima element $g \in G_p$ karakteristični polinom z dvema različnima ničlama $a,b \in \FF_p^*$. Tak element je diagonalizabilen in zato podoben
     ```{math}
@@ -672,7 +672,7 @@ Seštejemo število vseh konjugiranostnih razredov in dobimo
 ```
 Grupa $G_p$ ima torej $p^2-1$ nerazcepnih kompleksnih upodobitev.
 
-Preden nadaljujemo z natančnim določanjem teh upodobitev, se še enkrat ozrimo na klasifikacijo konjugiranostnih razredov. Tekom določanja velikosti razredov smo naleteli na dva posebna centralizatorja polenostavnih elementov, in sicer $T_r$ in $T_{nr}$. Ta dva centralizatorja bosta igrala pomembno vlogo v teoriji upodobitev grupe $G_p$. Prvemu pravimo <span class="definicija">razcepni torus</span>, drugemu pa <span class="definicija">nerazcepni torus</span>. Za razcepni torus velja
+Preden nadaljujemo z natančnim določanjem teh upodobitev, se še enkrat ozrimo na klasifikacijo konjugiranostnih razredov. Med določanjem velikosti razredov smo naleteli na dva posebna centralizatorja polenostavnih elementov, in sicer $T_r$ in $T_{nr}$. Ta dva centralizatorja bosta imela pomembno vlogo v teoriji upodobitev grupe $G_p$. Prvemu pravimo <span class="definicija">razcepni torus</span>, drugemu pa <span class="definicija">nerazcepni torus</span>. Za razcepni torus velja
 ```{math}
 T_r \cong \FF_p^* \times \FF_p^*,
 ```
@@ -712,7 +712,7 @@ Steinbergovo upodobitev lahko tenzoriramo s poljubno enorazsežno in dobimo $\St
 
 Posplošeni Steinbergov karakter $G_p$
 
-Do zdaj smo našteli $2(p-1)$ nerazcepnih upodobitev, iščemo pa jih $p^2 - 1$. Še veliko jih manjka! Sledeč filozofiji Artina in Brauerja nadaljne nerazcepne upodobitve iščemo z indukcijo iz podgrup $G_p$. Opazujmo Borelovo podgrupo $B_p$. Ta grupa je opremljena s projekcijo na razcepni torus
+Do zdaj smo našteli $2(p-1)$ nerazcepnih upodobitev, iščemo pa jih $p^2 - 1$. Še veliko jih manjka! Sledeč filozofiji Artina in Brauerja nadaljnje nerazcepne upodobitve iščemo z indukcijo iz podgrup $G_p$. Opazujmo Borelovo podgrupo $B_p$. Ta grupa je opremljena s projekcijo na razcepni torus
 ```{math}
 B_p \to B_p / U_p = D_p = T_r = \FF_p^* \times \FF_p^*.
 ```
@@ -758,7 +758,7 @@ Opazujmo zdaj še upodobitve, ki jih dobimo z indukcijo iz nerazcepnega torusa. 
 ```{math}
 \theta \colon T_{nr} \cong \FF_p(\sqrt{\epsilon})^* \to \CC^*
 ```
-poljubna enorazsežna upodobitev. Izračunajmo karakter indukcije upodobitve $\theta$ nerazcepnega torusa. Uporabimo formulo za karakter inducirane upodobitve. Naj bo $R$ množica predstavnikov desnih odsekov $T_{nr}$ v $G_p$. Za $g \in G_p$ je $r g r^{-1} \in T_{nr}$ za nek $r \in R$, če in samo če je $r g r^{-1}$ bodisi skalar bodisi nerazcepen polenostaven element, kar je enakovredno temu, da je $g$ bodisi skalar bodisi nerazcepen polenostaven element. Za skalarje, ki jih interpretiramo kot elemente $g = a \in \FF_p^* \subseteq \FF_p(\sqrt{\epsilon})^*$, velja
+poljubna enorazsežna upodobitev. Izračunajmo karakter indukcije upodobitve $\theta$ nerazcepnega torusa. Uporabimo formulo za karakter inducirane upodobitve. Naj bo $R$ množica predstavnikov desnih odsekov $T_{nr}$ v $G_p$. Za $g \in G_p$ je $r g r^{-1} \in T_{nr}$ za neki $r \in R$, če in samo če je $r g r^{-1}$ bodisi skalar bodisi nerazcepen polenostaven element, kar je enakovredno temu, da je $g$ bodisi skalar bodisi nerazcepen polenostaven element. Za skalarje, ki jih interpretiramo kot elemente $g = a \in \FF_p^* \subseteq \FF_p(\sqrt{\epsilon})^*$, velja
 ```{math}
 \textstyle \Ind_{T_{nr}}^{G_p}(\theta)(a) = |G_p : T_{nr}| \cdot \theta(a) = p(p-1) \theta(a).
 ```
@@ -795,7 +795,7 @@ kar se poenostavi do
 ```
 Upodobitev $\Ind_{T_{nr}}^{G_p}(\theta)$ je torej daleč od nerazcepne.
 
-Pred nadaljevanjem postojmo pri pogoju $\theta = \theta^{\sigma}$, ki razdeli inducirane upodobitve na dva naravna razreda. Ta pogoj lahko enakovredno zapišemo kot $\theta(x) = \theta(x^{p})$ za vsak $x \in \FF_p(\sqrt{\epsilon})^*$, kar je, ker je $\FF_p(\sqrt{\epsilon})^*$ ciklična grupa, enako kot $\theta(x^{p-1}) = 1$. Vrednost $\theta$ je torej trivialna na množici $\{ x^{p-1} \mid x \in \FF_p(\sqrt{\epsilon})^* \}$, ki jo prepoznamo ravno kot jedro determinante $\ker(\det) = \{ x \in \FF_p(\sqrt{\epsilon})^* \mid x^{p+1} = 1 \}$. Pogoj $\theta = \theta^{\sigma}$ je torej enakovreden temu, da se $\theta$ *faktorizira prek determinante*, se pravi da je oblike $\theta = \chi \circ \det$ za nek karakter $\chi \colon \FF_p^* \to \CC^*$. Vseh takih upodobitev je $p-1$. Upodobitve $\theta$, ki se *ne* faktorizirajo prek determinante, torej za katere velja $\theta \neq \theta^{\sigma}$, se imenujejo <span class="definicija">regularne</span>. Regularne upodobitve prihajajo torej v parih $(\theta, \theta^\sigma)$. Število Galoisjevih orbit regularnih upodobitev je zato enako $((p^2 - 1) - (p-1))/2 = p(p-1)/2$.
+Pred nadaljevanjem postojmo pri pogoju $\theta = \theta^{\sigma}$, ki razdeli inducirane upodobitve na dva naravna razreda. Ta pogoj lahko enakovredno zapišemo kot $\theta(x) = \theta(x^{p})$ za vsak $x \in \FF_p(\sqrt{\epsilon})^*$, kar je, ker je $\FF_p(\sqrt{\epsilon})^*$ ciklična grupa, enako kot $\theta(x^{p-1}) = 1$. Vrednost $\theta$ je torej trivialna na množici $\{ x^{p-1} \mid x \in \FF_p(\sqrt{\epsilon})^* \}$, ki jo prepoznamo ravno kot jedro determinante $\ker(\det) = \{ x \in \FF_p(\sqrt{\epsilon})^* \mid x^{p+1} = 1 \}$. Pogoj $\theta = \theta^{\sigma}$ je torej enakovreden temu, da se $\theta$ *faktorizira prek determinante*, se pravi, da je oblike $\theta = \chi \circ \det$ za nek karakter $\chi \colon \FF_p^* \to \CC^*$. Vseh takih upodobitev je $p-1$. Upodobitve $\theta$, ki se *ne* faktorizirajo prek determinante, torej za katere velja $\theta \neq \theta^{\sigma}$, se imenujejo <span class="definicija">regularne</span>. Regularne upodobitve prihajajo torej v parih $(\theta, \theta^\sigma)$. Število Galoisjevih orbit regularnih upodobitev je zato enako $((p^2 - 1) - (p-1))/2 = p(p-1)/2$.
 
 Glede na to, da inducirana upodobitev iz nerazcepnega torusa ni nerazcepna, lahko poskusimo inducirati še iz kakšne druge podgrupe. Naravni kandidat, ki nam še preostane, je centralizator nediagonalizabilnega elementa, se pravi grupa $C_p = S_p \times U_p$. Izberimo upodobitvi
 ```{math}
@@ -840,7 +840,7 @@ Iz vrednosti karakterjev izračunamo normo
 ```
 Upodobitev $\Ind_{C_p}^{G_p}(\chi \times \psi)$ je torej spet daleč od nerazcepne.
 
-Primerjajmo obe inducirani upodobitvi. Skalarni produkt njunih karakterjev lahko izračunamo tako, da seštejemo le prispevke po skalarnih elementih, saj so vsi ostali členi ničelni. Dobimo
+Primerjajmo obe inducirani upodobitvi. Skalarni produkt njunih karakterjev lahko izračunamo tako, da seštejemo le prispevke po skalarnih elementih, saj so vsi drugi členi ničelni. Dobimo
 ```{math}
 {\textstyle \langle \Ind_{T_{nr}}^{G_p}(\theta), \Ind_{C_p}^{G_p}(\chi \times \psi) \rangle}
 = \frac{1}{|G_p|} \sum_{a \in \FF_p^*} p(p-1) \theta(a) \cdot (p^2 - 1) \overline{\chi(a)},
@@ -870,7 +870,7 @@ Torej je bodisi $\zeta_{\theta}$ bodisi $-\zeta_{\theta}$ nerazcepen karakter. K
 
 Karakter $\zeta_{\theta}$ grupe $G_p$
 
-Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo <span class="definicija">ostna upodobitev</span>.[^16] Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti orbiti Galoisjeve grupe. Število ostnih upodobitev je zato enako $p(p-1)/2$. Poudarimo, da smo ostne upodobitve konstruirali le implicitno prek indukcij. Z nekaj truda bi lahko izpeljali eksplicitno konstrukcijo teh upodobitev. Izkaže se, da ostnih upodobitev *ni* mogoče opisati kot neposredno induciranih iz podgrup $G_p$.[^17]
+Na ta način za vsak regularen karakter $\theta$ nerazcepnega torusa dobimo nerazcepno upodobitev s karakterjem $\zeta_{\theta}$. Taki upodobitvi pravimo <span class="definicija">ostna upodobitev</span>.[^16] Z izračunom skalarnih produktov se ni težko prepričati, da sta dve taki upodobitvi izomorfni, če in samo če sta regularna karakterja v isti orbiti Galoisove grupe. Število ostnih upodobitev je zato enako $p(p-1)/2$. Poudarimo, da smo ostne upodobitve konstruirali le implicitno prek indukcij. Z nekaj truda bi lahko izpeljali eksplicitno konstrukcijo teh upodobitev. Izkaže se, da ostnih upodobitev *ni* mogoče opisati kot neposredno induciranih iz podgrup $G_p$.[^17]
 
 Povzemimo. Skupaj smo našli naslednje upodobitve:
 
@@ -911,7 +911,7 @@ Teorija upodobitev $\GL_n(\FF_q)$ zato vključuje nekaj kompleksnosti teorije up
 
 Ni pa tako enostavno pridobiti tudi tabele karakterjev družine enostavnih grup $\PSL_n(\FF_q)$ ali njene prijateljice $E_8(\FF_q)$. Seveda lahko posamezne tabele za specifične vrednosti $n$ in $q$ izračunamo,[^18] ampak končni cilj je imeti generične tabele karakterjev, kot smo to dosegli za $G_p = \GL_2(\FF_p)$. Za razumevanje teorije upodobitev teh grup imamo na voljo matematično zahtevno [Deligne-Lusztigovo teorijo](https://en.wikipedia.org/wiki/Deligne–Lusztig_theory), ki upodobitve končnih grup sestavlja s pomočjo upodobitev prirejenih algebraičnih grup nad algebraično zaprtim poljem, na primer $\SL_n(\overline{\FF_p})$, in sicer te upodobitve izhajajo iz delovanja na $\ell$-adičnih kohomoloških grupah prirejenih raznoterosti. Iz te teorije lahko razumemo *del* generične tabele karakterjev, na primer poznamo vse stopnje nerazcepnih upodobitev, ne poznamo pa vseh vrednosti vseh karakterjev.
 
-[^1]: Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe, …
+[^1]: Na primer abelove grupe, simetrične grupe, diedrske grupe, splošne linearne grupe, končne enostavne grupe …
 
 [^2]: Vsaka končna grupa je zgrajena iz končnih enostavnih grup, te pa sestojijo iz, grobo rečeno, treh neskončnih družin, in sicer cikličnih grup praštevilske moči $\ZZ/p\ZZ$, alternirajočih grup $A_n$ in različnih matričnih grup nad končnimi polji, na primer $\SL_n(\FF_p)/Z(\SL_n(\FF_p))$. Zgleda družin, ki si jih bomo ogledali, sta torej do neke mere reprezentativna za razumevanje upodobitev nekomutativnih končnih enostavnih grup. Podrobnejši opis končnih enostavnih grup je na voljo [tukaj](https://en.wikipedia.org/wiki/List_of_finite_simple_groups).
 

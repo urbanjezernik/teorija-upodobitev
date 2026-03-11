@@ -323,4 +323,4 @@ with (BOOK_DIR / "_toc.yml").open("w") as f:
     yaml.dump(toc, f)
 
 print("✅  Chapters written:", len(chapter_entries))
-print("   Run  jupyter-book build mybook/  to test-build the site.")
+print("   Run  jupyter-book build mybook/  to test-build the site (requires jupyter-book 1.x).")

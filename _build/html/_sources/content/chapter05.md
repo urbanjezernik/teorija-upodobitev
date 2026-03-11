@@ -11,7 +11,7 @@ Avstralski matematik Geordie Williamson je na svojem [plenarnem predavanju](http
 
 *The idea is that groups in mathematics are everywhere, but groups are nonlinear objects and are rather complicated. We attempt to linearize in some way by taking, for example, actions on a space of functions. We understand what can happen in the linear world by representation theory. Then we hope to go back to our original problem.*
 
-V tem poglavju si bomo pogledali nekaj konkretnih uporab teorije upodobitev, ki na prvi pogled nimajo nobene povezave z upodobitvami, nazadnje pa je za njihovo razumevanje ključna. Pričeli bomo z abelovimi grupami. V tem primeru uporabam teorije upodobitev ponavadi rečemo <span class="definicija">harmonična analiza</span>. To zgodbo bomo potem razširili še v nekomutativen svet.
+V tem poglavju si bomo pogledali nekaj konkretnih uporab teorije upodobitev, ki na prvi pogled nimajo nobene povezave z upodobitvami, nazadnje pa je za njihovo razumevanje ključna. Začeli bomo z abelovimi grupami. V tem primeru uporabam teorije upodobitev po navadi rečemo <span class="definicija">harmonična analiza</span>. To zgodbo bomo potem razširili še v nekomutativen svet.
 
 ## Aritmetična zaporedja
 
@@ -102,7 +102,7 @@ Trikrat globoko vdihnimo in premislimo vsako zadevo posebej.
 Število iskanih aritmetičnih zaporedij je zato enako
 ```{math}
 \frac{1}{p} \sum_{j \in \FF_p} \widehat{1_A}(\chi_j)^2 \overline{\widehat{1_A}(\chi_j^2)}
-    = \frac{1}{p} \sum_{j \in \FF_p} \widehat{1_A}(\chi_j)^2 \widehat{1_A}(\chi_{-2j})
+    = \frac{1}{p} \sum_{j \in \FF_p} \widehat{1_A}(\chi_j)^2 \widehat{1_A}(\chi_{-2j}).
 ```
 
 #### Glavni del in prispevki netrivialnih karakterjev
@@ -142,7 +142,7 @@ Od tod torej sklenemo
 \PP_{x,y,z \in \FF_p}(x,y,z \in A \mid x+y=2z)
     \geq \delta^3 - \delta \cdot \frac{1}{p} \max_{j \in \FF_p^*} |\widehat{1_A}(\chi_j)|.
 ```
-Kadar je Fourierova transformacija $1_A$ v vseh netrivialnih karakterjih strogo manjša od $p \delta^2$, je verjetnost na levi strani strogo pozitivna, zato res najdemo aritmetično zaporedje dolžine $3$ v $A$. Ko pa ima po drugi strani $\widehat{1_A}$ kakšen velik netrivialen Fourierov koeficient, se pravi ko za nek $j \in \FF_p^*$ velja
+Kadar je Fourierova transformacija $1_A$ v vseh netrivialnih karakterjih strogo manjša od $p \delta^2$, je verjetnost na levi strani strogo pozitivna, zato res najdemo aritmetično zaporedje dolžine $3$ v $A$. Ko pa ima po drugi strani $\widehat{1_A}$ kakšen velik netrivialen Fourierov koeficient, se pravi, ko za nek $j \in \FF_p^*$ velja
 ```{math}
 |\widehat{1_A}(\chi_j)| \geq p \delta^2,
 ```
@@ -174,7 +174,7 @@ S pomočjo razčlenitve množice $\FF_p$ torej sklepamo
    \sum_{i = 1}^m \left| \sum_{x \in P_i} f(x) \zeta^{-jx} \right|
    = \sum_{i = 1}^m \left| \sum_{x \in P_i} f(x) \left( \zeta^{-jx_0} + (\zeta^{-jx} - \zeta^{-jx_0}) \right) \right|,
 ```
-kjer smo v vsakem $P_i$ izbrali nek element $x_0$. Po trikotniški neenakosti in upoštevanju približne konstantnosti funkcije $x \mapsto \zeta^{-jx}$ na $P_i$ lahko zadnjo vsoto omejimo navzgor kot
+pri čemer smo v vsakem $P_i$ izbrali nek element $x_0$. Po trikotniški neenakosti in upoštevanju približne konstantnosti funkcije $x \mapsto \zeta^{-jx}$ na $P_i$ lahko zadnjo vsoto omejimo navzgor kot
 ```{math}
 \sum_{i = 1}^m \left| \sum_{x \in P_i} f(x) \right| + 
     \sum_{i = 1}^m \sum_{x \in P_i} | f(x) | c \delta^2
@@ -184,7 +184,7 @@ S tem nazadnje dobimo neenakost
 ```{math}
 \sum_{i = 1}^m \left| \sum_{x \in P_i} f(x) \right| \geq (1-c) p \delta^2.
 ```
-Po konstrukciji je povprečje funkcije $f$ po $\FF_p$ enako $0$. Vsote po zaporedjih $P_i$ se torej seštejejo v $0$, po absolutni vrednosti pa se seštejejo v vsaj $(1-c) p \delta^2$. Torej obstaja nek $i$, za katerega velja
+Po konstrukciji je povprečje funkcije $f$ po $\FF_p$ enako $0$. Vsote po zaporedjih $P_i$ se torej seštejejo v $0$, po absolutni vrednosti pa se seštejejo v vsaj $(1-c) p \delta^2$. Torej obstaja neki $i$, za katerega velja
 ```{math}
 \sum_{x \in P_i} f(x)
     +
@@ -213,9 +213,9 @@ Povzemimo. Če množica $A$ gostote $\delta$ nima aritmetičnih zaporedij dolži
 
 ### Onkraj Rothovega izreka
 
-Mnogo dela po Rothovem izreku je bilo posvečenega izboljšanju meje o gostoti, ki še zagotovi obstoj aritmetičnih zaporedij dolžine $3$. Večina izboljšav spodnje meje je s sabo prinesla nove ideje, uporabne tudi za reševanje kakšnih drugih problemov. Najsodobnejši rezultat v zvezi s tem je prebojen članek [(Bloom-Sisask 2020)](https://www.quantamagazine.org/landmark-math-proof-clears-hurdle-in-top-erdos-conjecture-20200803/), kjer avtorja dokažeta, da obstajata konstanti $C,c$, tako da ima vsaka množica $A \subseteq \{ 1, 2, \dots, n \}$ gostote vsaj $C / (\log n)^{1 + c}$ aritmetično zaporedje dolžine $3$. Ta meja se torej znebi dvojnega logaritma in uvede minimalen eksponent k logaritmu, zato je bistveno manjša restrikcija na gostoto.[^4]
+Veliko dela po Rothovem izreku je bilo posvečenega izboljšanju meje o gostoti, ki še zagotovi obstoj aritmetičnih zaporedij dolžine $3$. Večina izboljšav spodnje meje je s seboj prinesla nove ideje, uporabne tudi za reševanje kakšnih drugih problemov. Najsodobnejši rezultat v zvezi s tem je prebojen članek [(Bloom-Sisask 2020)](https://www.quantamagazine.org/landmark-math-proof-clears-hurdle-in-top-erdos-conjecture-20200803/), v katerem avtorja dokažeta, da obstajata konstanti $C,c$, tako da ima vsaka množica $A \subseteq \{ 1, 2, \dots, n \}$ gostote vsaj $C / (\log n)^{1 + c}$ aritmetično zaporedje dolžine $3$. Ta meja se torej znebi dvojnega logaritma in uvede minimalen eksponent k logaritmu, zato je bistveno manjša restrikcija na gostoto.[^4]
 
-Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiševa je število praštevil do $n$ vsaj $C n / \log n$, zato imajo praštevila v $\{1,2,\dots,n\}$ gostoto vsaj $C / \log n$ in na njih lahko uporabimo posplošeni Rothov izrek. Ker lahko vselej tudi izpustimo prvih nekaj praštevil, torej sklepamo, da množica praštevil vsebuje neskončno mnogo aritmetičnih zaporedij dolžine $3$. Poudarimo konceptualno pomembno dejstvo, da smo ta rezultat izpeljali zgolj zaradi same gostote praštevil in ne zaradi kakršne koli druge njihove lastnosti. Nenazadnje je slogan izvirnega Rothovega izreka ta, da lahko najdemo v vsaki dovolj gosti množici strukturo.
+Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiševa je število praštevil do $n$ vsaj $C n / \log n$, zato imajo praštevila v $\{1,2,\dots,n\}$ gostoto vsaj $C / \log n$ in na njih lahko uporabimo posplošeni Rothov izrek. Ker lahko vselej tudi izpustimo prvih nekaj praštevil, torej sklepamo, da množica praštevil vsebuje neskončno mnogo aritmetičnih zaporedij dolžine $3$. Poudarimo konceptualno pomembno dejstvo, da smo ta rezultat izpeljali zgolj zaradi same gostote praštevil in ne zaradi kakršne koli druge njihove lastnosti. Ne nazadnje je slogan izvirnega Rothovega izreka ta, da lahko najdemo v vsaki dovolj gosti množici strukturo.
 
 <div class="odprtproblem">
 
@@ -239,7 +239,7 @@ kjer je $S_j = \sum_{a \in \FF_p} \zeta^{j a^n}$. Določi glavni del ter omeji p
 
 ### Antipodgrupe
 
-Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je podgrupa, če in samo če je zaprta za množenje, se pravi $A \cdot A \subseteq A$. Skrajno diametralno tej strukturi se znajdemo, če predpostavimo, da produkt *nobenih* dveh elementov iz množice $A$ ne pripada $A$, se pravi $A \cdot A \cap A = \emptyset$. Z drugimi besedami, enačba $xy = z$ v množici $A$ nima rešitev. V tem primeru rečemo, da je množica $A$ <span class="definicija">brez produktov</span>. Če smo v teoriji grup malodane obsedeni s strukturiranimi množicami, nas mora vsaj malo tudi zanimati tudi druga skrajnost.
+Naj bo $G$ končna grupa in $A \subseteq G$ njena podmnožica. Množica $A$ je podgrupa, če in samo če je zaprta za množenje, se pravi $A \cdot A \subseteq A$. Skrajno diametralno tej strukturi se znajdemo, če predpostavimo, da produkt *nobenih* dveh elementov iz množice $A$ ne pripada $A$, se pravi $A \cdot A \cap A = \emptyset$. Z drugimi besedami, enačba $xy = z$ v množici $A$ nima rešitev. V tem primeru rečemo, da je množica $A$ <span class="definicija">brez produktov</span>. Če smo v teoriji grup malodane obsedeni s strukturiranimi množicami, nas mora vsaj malo zanimati tudi druga skrajnost.
 
 Kadar množica $A$ vsebuje kakšno podgrupo, seveda *ni* brez produktov, zato se morajo take množice čim bolj izogniti podgrupam. Osnovno vprašanje v zvezi z množicami brez produktov je, kako velike podmnožice brez produktov dana grupa vsebuje. Za začetek si oglejmo nekaj preprostih zgledov.
 
@@ -261,7 +261,7 @@ Kadar množica $A$ vsebuje kakšno podgrupo, seveda *ni* brez produktov, zato se
 
 </div>
 
-Mnogo težje je najti podmnožice brez produktov pozitivne gostote v alternirajoči grupi $A_n$ (ko gre $n$ proti neskončnosti) ali linearni grupi $\PSL_2(\FF_p)$ (ko gre $p$ proti neskončnosti). Dokazali bomo, da to težavo lahko pojasnimo s teorijo upodobitev.
+Veliko težje je najti podmnožice brez produktov pozitivne gostote v alternirajoči grupi $A_n$ (ko gre $n$ proti neskončnosti) ali linearni grupi $\PSL_2(\FF_p)$ (ko gre $p$ proti neskončnosti). Dokazali bomo, da to težavo lahko pojasnimo s teorijo upodobitev.
 
 <div class="izrek">
 
@@ -271,9 +271,9 @@ Naj bo $G$ končna grupa in naj bo $m$ najmanjša stopnja netrivialne nerazcepne
 
 <div class="zgled">
 
-- Iz rezultatov o upodobitvah simetričnih grup (natančneje, formule o kljukah) sledi, do ima $S_n$ dve nerazcepni upodobitvi stopnje $1$ (to sta $\oneone$ in $\sgn$) in dve nerazcepni upodobitvi stopnje $n-1$ (to sta $\rho$ in $\rho \otimes \sgn$), vse ostale nerazcepne upodobitve pa so višje stopnje (za $n \geq 7$). Velja torej $m = \Theta(n)$.[^6] Po izreku v $A_n$ zatorej *ni* podmnožic brez produktov pozitivne gostote, ko gre $n$ čez vse meje. Še več, največja dovoljena gostota je velikostnega reda $m^{-1/3} = \Theta(n^{-1/3})$.
+- Iz rezultatov o upodobitvah simetričnih grup (natančneje, formule o kljukah) sledi, do ima $S_n$ dve nerazcepni upodobitvi stopnje $1$ (to sta $\oneone$ in $\sgn$) in dve nerazcepni upodobitvi stopnje $n-1$ (to sta $\rho$ in $\rho \otimes \sgn$), vse druge nerazcepne upodobitve pa so višje stopnje (za $n \geq 7$). Velja torej $m = \Theta(n)$.[^6] Po izreku v $A_n$ zatorej *ni* podmnožic brez produktov pozitivne gostote, ko gre $n$ čez vse meje. Še več, največja dovoljena gostota je velikostnega reda $m^{-1/3} = \Theta(n^{-1/3})$.
 
-- Opazujmo grupo $\PSL_2(\FF_p)$. Iz njene tabele karakterjev razberemo, da zanjo velja $m = (p-1)/2$. Po izreku tudi ta grupa nima podmnožic brez produktov pozitivne gostote, ko gre $p$ čez vse meje. Še več, največja gostota, ki jo dopušča izrek, je velikostnega reda $m^{-1/3} = \Theta(p^{-1/3}) = \Theta(|\PSL_2(\FF_p)|^{-1/9})$, kar je celo mnogo manjše (relativno glede na velikost grupe) od zgornje meje, ki smo jo videli v primeru alternirajoče grupe.
+- Opazujmo grupo $\PSL_2(\FF_p)$. Iz njene tabele karakterjev razberemo, da zanjo velja $m = (p-1)/2$. Po izreku tudi ta grupa nima podmnožic brez produktov pozitivne gostote, ko gre $p$ čez vse meje. Še več, največja gostota, ki jo dopušča izrek, je velikostnega reda $m^{-1/3} = \Theta(p^{-1/3}) = \Theta(|\PSL_2(\FF_p)|^{-1/9})$, kar je celo veliko manjše (relativno glede na velikost grupe) od zgornje meje, ki smo jo videli v primeru alternirajoče grupe.
 
 </div>
 
@@ -357,7 +357,7 @@ Naj bo $g \in G$ in naj bo $B = g A^{-1} \subseteq G$. Množici $A$ in $B$ sta o
 
 </div>
 
-Ta lastnost velikih množic ima mnogo zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babaijeve domeneve o premerih končnih enostavnih grup prek teorije približnih podgrup in pri raziskovanju slučajnih sprehodov,[^7] kot je razloženo v [(Breuillard 2013)](https://library.slmath.org/books/Book61/files/15breu.pdf).
+Ta lastnost velikih množic ima veliko zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babaijeve domneve o premerih končnih enostavnih grup prek teorije približnih podgrup in pri raziskovanju slučajnih sprehodov,[^7] kot je razloženo v [(Breuillard 2013)](https://library.slmath.org/books/Book61/files/15breu.pdf).
 
 ### Največja možna gostota
 
@@ -416,7 +416,7 @@ Hitro izračunamo, da je $|K(G)| = 29$, torej $K(G)$ vsekakor ni podgrupa $G$. K
 
 </div>
 
-V luči zgleda je teoriji grup vsekakor v interesu, da bi razumela, kdaj dan element $g \in G$ pripada množici $K(G)$. Lahko smo celo bolj natančni in se vprašamo, na koliko načinov lahko $g$ zapišemo kot komutator. V ta namen predpišimo funkcijo
+V luči zgleda je teoriji grup vsekakor v interesu, da bi razumela, kdaj dani element $g \in G$ pripada množici $K(G)$. Lahko smo celo bolj natančni in se vprašamo, na koliko načinov lahko $g$ zapišemo kot komutator. V ta namen predpišimo funkcijo
 ```{math}
 N \colon G \to \NN_0, \quad
     g \mapsto |\{ (x,y) \in G \times G \mid g = [x,y] \}|.
@@ -449,7 +449,7 @@ To prirejanje *ni* injektivno, saj s trojico $(\conclass,a,b)$ element $y$ ni en
 ```{math}
 N(g) = \sum_{\conclass} \frac{|G|}{|\conclass|} \cdot |\{ (a,b) \in G \times G \mid a \in \conclass^{-1}, \ b \in \conclass, \ a \cdot b = g \}|,
 ```
-kjer vsota teče po vseh konjugiranostnih razredih grupe $G$.
+pri čemer vsota teče po vseh konjugiranostnih razredih grupe $G$.
 
 Dobljeni zapis funkcije $N$ je priročen, ker je izražen le s konjugiranostnimi razredi in je neodvisen od izbire njihovih konkretnih predstavnikov. S tem je primeren za gnetenje s Fourierovo transformacijo. Najprej opazimo, da lahko drugi faktor zadnje vsote zapišemo kot
 ```{math}
@@ -572,7 +572,7 @@ Ta močnejša domneva je še vedno nerazrešena, je pa v zadnjih letih bilo kar 
 ```{math}
 \sum_{\pi \in \Irr(G)} \frac{\overline{\chi_{\pi}(\conclass)}^2}{\chi_{\pi}(1)} \chi_{\pi}(g) \neq 0.
 ```
-S pomočjo poznavanja karakterjev končnih enostavnih grup je domneva znana za mnogo primerov, odprtih pa je še nekaj neskončnih družin matričnih grup nad majhnimi polji, kot je zelo prijazno razloženo v Larsenovem predavanju [tukaj](https://www.youtube.com/watch?v=OQFFYaCYzq4).
+S pomočjo poznavanja karakterjev končnih enostavnih grup je domneva znana za veliko primerov, odprtih pa je še nekaj neskončnih družin matričnih grup nad majhnimi polji, kot je zelo prijazno razloženo v Larsenovem predavanju [tukaj](https://www.youtube.com/watch?v=OQFFYaCYzq4).
 
 ## Slučajni sprehodi
 
@@ -592,7 +592,7 @@ Po $n$ korakih tega postopka dobimo element $X_n \in G$, ki je seveda odvisen od
 
 <div class="zgled">
 
-Naj bo $G = S_n$ in $S$ množica transpozicij v $S_n$. Predstavljajmo si, da imamo pred sabo urejen kup kart. Enakomerno naključno izberemo dve različni karti v tem kupu, eno z levo roko in eno z desno, in ju zamenjamo. Ta postopek ponovimo $n$-krat. Menjava na vsakem koraku ustreza izbiri naključne transpozicije $\sigma \in S$, s katero pomnožimo trenutno permutacijo, ki opisuje stanje, v katerem je kup kart. Slučajni sprehod v tem primeru torej opisuje slučajno mešanje kupa kart.
+Naj bo $G = S_n$ in $S$ množica transpozicij v $S_n$. Predstavljajmo si, da imamo pred seboj urejen kup kart. Enakomerno naključno izberemo dve različni karti v tem kupu, eno z levo roko in eno z desno, in ju zamenjamo. Ta postopek ponovimo $n$-krat. Menjava na vsakem koraku ustreza izbiri naključne transpozicije $\sigma \in S$, s katero pomnožimo trenutno permutacijo, ki opisuje stanje, v katerem je kup kart. Slučajni sprehod v tem primeru torej opisuje slučajno mešanje kupa kart.
 
 </div>
 
@@ -612,7 +612,7 @@ Po $n$ korakih slučajnega sprehoda se znajdemo v nedoločenem elementu grupe $G
 \mu_n \colon G \to \CC, \quad
     g \mapsto \PP(X_n = g),
 ```
-ki meri verjetnost, da smo v danem elementu. Ta funkcija torej ni nič drugega kot porazdelitvena funkcija slučajne spremenljivke $X_n$. Slučajni sprehod se prične v $1$, zato je $\mu_0 = 1_1$.
+ki meri verjetnost, da smo v danem elementu. Ta funkcija torej ni nič drugega kot porazdelitvena funkcija slučajne spremenljivke $X_n$. Slučajni sprehod se začne v $1$, zato je $\mu_0 = 1_1$.
 
 Vrednosti funkcije $\mu_n$ lahko izračunamo induktivno na $n$, upoštevajoč lastnost Markova. Velja
 ```{math}
@@ -624,7 +624,7 @@ Vrednosti $p_{S}(h,g)$ so neničelne le, kadar je $g \in h S$. Dobimo torej
 ```{math}
 \mu_n(g)
     = \frac{1}{|S|} \sum_{h \in g S^{-1}} \mu_{n-1}(h)
-    = \frac{1}{|S|} \sum_{x \in G} \mu_{n-1}(gx^{-1}) 1_{S}(x),
+    = \frac{1}{|S|} \sum_{x \in G} \mu_{n-1}(gx^{-1}) 1_{S}(x).
 ```
 Zadnjo vsoto prepoznamo kot konvolucijo
 ```{math}
@@ -684,7 +684,7 @@ Ta matrika je simetrična. Njen karakteristični polinom je enak $\lambda^6 - \l
     \left\langle 1_1, \sgn \right\rangle \sgn +
     k,
 ```
-kjer je $k \in \ker M$. Velja torej
+pri čemer je $k \in \ker M$. Velja torej
 ```{math}
 1_1 =
     \frac{1}{6} + \frac{1}{6} \sgn + k.
@@ -729,7 +729,7 @@ za vsako nerazcepno kompleksno upodobitev $\pi \in \Irr(G)$, pri čemer je večk
 
 </div>
 
-Operator Markova $M$ slučajnega sprehoda na $G$ z generirajočo množico $\conclass$, kjer je $\conclass$ konjugiranostni razred v $G$, deluje na vsaki od izotipičnih komponent regularne upodobitve kot skalarni večkratnik identitete z znamimi skalarji. Da lahko razumemo $\mu_n = M^n \cdot 1_1$, moramo najprej razviti funkcijo $1_1$ po izotipičnih komponentah. To naredimo, kot smo že, s pomočjo Fourierovih transformacij nerazcepnih karakterjev. Projekcija $1_1$ na $\pi$-izotipično komponento je enaka
+Operator Markova $M$ slučajnega sprehoda na $G$ z generirajočo množico $\conclass$, pri čemer je $\conclass$ konjugiranostni razred v $G$, deluje na vsaki od izotipičnih komponent regularne upodobitve kot skalarni večkratnik identitete z znamimi skalarji. Da lahko razumemo $\mu_n = M^n \cdot 1_1$, moramo najprej razviti funkcijo $1_1$ po izotipičnih komponentah. To naredimo, kot smo že, s pomočjo Fourierovih transformacij nerazcepnih karakterjev. Projekcija $1_1$ na $\pi$-izotipično komponento je enaka
 ```{math}
 v_{\pi} = \frac{\chi_{\pi}(1)}{|G|} \cdot \chi_{\pi},
 ```
@@ -763,7 +763,7 @@ Velja torej
 \mu_n - \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi}
     = \sum_{\pi \in \Irr(G) \backslash X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi}.
 ```
-Prispevki $r_{\pi}(\conclass)^n$ za $\pi$ izven $X_{\conclass}$ konvergirajo k $0$ za velike vrednosti $n$ in zatorej dobimo
+Prispevki $r_{\pi}(\conclass)^n$ za $\pi$ zunaj $X_{\conclass}$ konvergirajo k $0$ za velike vrednosti $n$ in zatorej dobimo
 ```{math}
 \lim_{n \to \infty} \left( \mu_n - \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi} \right) = 0.
 ```
@@ -779,7 +779,7 @@ Napako pri aproksimaciji porazdelitev $\mu_n$ in vsoto prispevkov po $X_{\concla
 ```{math}
 || \mu_n -  \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi} ||_1  \leq \theta.
 ```
-Čas mešanja in s tem hitrost konvergence k limitni porazdelitvi lahko kvantitativno nadziramo, če dobro poznamo vrednosti $r_{\pi}(\conclass)$ za $\pi$ izven $X_{\conclass}$, saj velja
+Čas mešanja in s tem hitrost konvergence k limitni porazdelitvi lahko kvantitativno nadziramo, če dobro poznamo vrednosti $r_{\pi}(\conclass)$ za $\pi$ zunaj $X_{\conclass}$, saj velja
 ```{math}
 || \mu_n -  \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi} ||_1
     \leq
@@ -867,7 +867,7 @@ V tem primeru kandidat za limitno porazdelitev v resnici ne konvergira, saj za r
 
 #### Hitrost konvergence
 
-Pogovorimo se še o oceni napake pri aproksimaciji $\mu_n$ s kandidatom za limitno porazdelitev. Za $\pi$ izven $X_{\conclass}$ ocenimo
+Pogovorimo se še o oceni napake pri aproksimaciji $\mu_n$ s kandidatom za limitno porazdelitev. Za $\pi$ zunaj $X_{\conclass}$ ocenimo
 ```{math}
 \max_{\pi \in \Irr(G_p) \backslash X_{\conclass}} |r_{\pi}(\conclass)| < \frac{2}{p}, \quad
     \sum_{\pi \in \Irr(G_p) \backslash X_{\conclass}} \chi_{\pi}(1)
@@ -887,7 +887,7 @@ Napaka zelo hitro upade, pod $\theta$ je že pri $n = (3 \log p - \log \theta) /
 
 <div class="domacanaloga">
 
-Obravnavaj slučajni sprehod v $\PSL_2(\FF_p)$ glede na nek konjugiranostni razred $\conclass$. V tem primeru bo $\lim_{n \to \infty} \mu_n$ enakomerna porazdelitev na $\PSL_2(\FF_p)$. S pomočjo tabele karakterjev oceni hitrost konvergence in pokaži, da dosežemo približno naključno matriko v $\PSL_2(\FF_p)$ mnogo hitreje kot po $p-1$ korakih.
+Obravnavaj slučajni sprehod v $\PSL_2(\FF_p)$ glede na neki konjugiranostni razred $\conclass$. V tem primeru bo $\lim_{n \to \infty} \mu_n$ enakomerna porazdelitev na $\PSL_2(\FF_p)$. S pomočjo tabele karakterjev oceni hitrost konvergence in pokaži, da dosežemo približno naključno matriko v $\PSL_2(\FF_p)$ veliko hitreje kot po $p-1$ korakih.
 
 </div>
 
@@ -899,7 +899,7 @@ Obravnavaj slučajni sprehod v $S_n$ glede na generirajočo množico $S$, ki ses
 
 ### Konvergenca v družinah
 
-Za vsako konkretno nekomutativno končno enostavno grupo $G$ jasno velja, da so vse lastne vrednosti operatorja $M$ razen $1$ po absolutni vrednosti kvečjemu $1-\epsilon$ za nek $\epsilon = \epsilon(G) > 0$. V tem primeru rečemo, da je grupa $G$ <span class="definicija">$\epsilon$-ekspanzivna</span> glede na generirajočo množico $S$. Slučajni sprehod v taki grupi se dobro premeša po $O_{\epsilon}(\log |G|)$ korakih. Težave nastopijo, ko skušamo ta argument uporabiti za celo družino grup, saj se lahko zgodi, da z večanjem parametra $n$ vrednost ekspanzivnosti $\epsilon = \epsilon_n$ nujno konvergira k $0$. Ta fenomen vidimo v primeru družine $A_n$ in konjugiranostnega razreda $3$-ciklov.
+Za vsako konkretno nekomutativno končno enostavno grupo $G$ jasno velja, da so vse lastne vrednosti operatorja $M$, razen $1$, po absolutni vrednosti kvečjemu $1-\epsilon$ za nek $\epsilon = \epsilon(G) > 0$. V tem primeru rečemo, da je grupa $G$ <span class="definicija">$\epsilon$-ekspanzivna</span> glede na generirajočo množico $S$. Slučajni sprehod v taki grupi se dobro premeša po $O_{\epsilon}(\log |G|)$ korakih. Težave nastopijo, ko skušamo ta argument uporabiti za celo družino grup, saj se lahko zgodi, da z večanjem parametra $n$ vrednost ekspanzivnosti $\epsilon = \epsilon_n$ nujno konvergira k $0$. Ta fenomen vidimo v primeru družine $A_n$ in konjugiranostnega razreda $3$-ciklov.
 
 <div class="domacanaloga">
 
@@ -931,7 +931,7 @@ Obstaja konstanta $C > 0$, tako da je družina nekomutativnih končnih enostavni
 
 Izrek nam zagotavlja obstoj neke ne prevelike generirajoče množice v končnih enostavnih grupah, glede na katere se slučajni sprehodi enakomerno zelo hitro dobro premešajo. Še težje pa je povedati kaj bolj konkretnega o teh generirajočih množicah. Za primer $A_n$ so te množice konstruirane v [(Kassabov 2007)](https://link.springer.com/article/10.1007/s00222-007-0065-y) s pomočjo neke naključne metode. Dokaz omejitev absolutnih vrednosti lastnih vrednosti operatorja Markova sloni na teoriji upodobitev, a je precej bolj zahteven od tega, ki smo si ga ogledali mi, saj so te generatorske množice daleč od konjugiranostnih razredov. Pred nedavnim so se našle celo eksplicitne konstrukcije generirajočih množic $A_n$, glede na katere dobimo ekspanzivno družino [(Caprace-Kassabov 2022)](https://arxiv.org/abs/2210.00730). Tudi tukaj je ključna teorija upodobitev, a v igro vstopijo neskončne grupe avtomorfizmov polinomskih kolobarjev nad končnim poljem.
 
-Dokazi ekspanzivnosti za generatorske množice, ki niso konjugiranostni razredi, ponavadi potekajo na obraten način, kot bi pričakovali. Omejenost absolutnih vrednosti netrivialnih lastnih vrednosti operatorja Markova namreč lahko dokažemo, če premislimo, da se slučajni sprehodi enakomerno zelo hitro premešajo.[^19] Primer uporabe te tehnike par excellence je naslednji rezultat, ki med drugim presenetljivo sloni na Gowersovem rezultatu o zgornji meji gostote množic brez produktov.
+Dokazi ekspanzivnosti za generatorske množice, ki niso konjugiranostni razredi, po navadi potekajo na obraten način, kot bi pričakovali. Omejenost absolutnih vrednosti netrivialnih lastnih vrednosti operatorja Markova namreč lahko dokažemo, če premislimo, da se slučajni sprehodi enakomerno zelo hitro premešajo.[^19] Primer uporabe te tehnike par excellence je naslednji rezultat, ki med drugim presenetljivo sloni na Gowersovem rezultatu o zgornji meji gostote množic brez produktov.
 
 <div class="izrek">
 
@@ -983,7 +983,7 @@ Vzpodbuden delni rezultat je, da asimptotska visoko verjetna ekspanzivnost drži
 
 [^14]: Za primerjavo porazdelitev ne uporabljamo standardne norme $||f|| = \langle f, f \rangle^{1/2}$, ampak normo $||f||_1$. Razlog za to je naslednji. Opazujmo družino simetričnih grup $S_n$. Potem je $||U_{A_n} - U_{S_n}||^2 = 1/|S_n|$, kar konvergira k $0$ za $n \to \infty$, čeprav sta porazdelitvi očitno različni. Norma $||\cdot||_1$ nima te pomanjkljivosti; velja $||U_{A_n} - U_{S_n}||_1 = 1$.
 
-[^15]: Rečemo tudi, da se slučajni sprehod <span class="definicija">dobro premeša</span> po času $t_{mix}(\theta)$. Ta koncept je seveda odvisen od izbire konstante $\theta$, a ponavadi za $\theta$ vzamemo kar neko majhno konstanto, na primer $\theta = 10^{-2}$.
+[^15]: Rečemo tudi, da se slučajni sprehod <span class="definicija">dobro premeša</span> po času $t_{mix}(\theta)$. Ta koncept je seveda odvisen od izbire konstante $\theta$, a po navadi za $\theta$ vzamemo kar neko majhno konstanto, na primer $\theta = 10^{-2}$.
 
 [^16]: Tako hitra konvergenca je posledica dejstva, da je konjugiranostni razred $\conclass$ v $G_p$ zelo velik, $\log |\conclass| \sim \log |G_p|$, in da imamo zelo dobre ocene za $r_{\pi}(\conclass)$.
 

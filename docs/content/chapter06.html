@@ -16,43 +16,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/quiz.css?v=ec93ceb6" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=870912a7" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=a3a20203"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script src="../_static/translations.js?v=852ec8ec"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
@@ -72,6 +75,7 @@
     <link rel="prev" title="Uporabe" href="chapter05.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="sl"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,19 +91,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -107,7 +100,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -115,8 +107,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -132,7 +124,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -169,9 +162,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -254,7 +252,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Celozaslonski način"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -268,25 +266,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -371,10 +361,10 @@ document.write(`
                  lema 0 trditev 0 definicija 0 dokaz 0; }
 </style><section class="tex2jax_ignore mathjax_ignore" id="razsirjeni-zgledi-neskoncni">
 <h1>Razširjeni zgledi – neskončni<a class="headerlink" href="#razsirjeni-zgledi-neskoncni" title="Link to this heading">#</a></h1>
-<p>V tem zaključnem poglavju si bomo pogledali nekaj zgledov iz teorije upodobitev neskončnih grup. Tukaj ni enotne teorije, s katero bi lahko obravnavali vsako grupo, obstajajo pa družine grup, znotraj katerih lahko razumemo upodobitve na enoten način. Ne bomo razvijali splošne teorije, temveč si bomo ogledali le konkretne, a reprezentativne predstavnike nekaterih izmed pomembnih družin neskončnih grup.</p>
+<p>V tem zaključnem poglavju si bomo ogledali nekaj zgledov iz teorije upodobitev neskončnih grup. Tukaj ni enotne teorije, s katero bi lahko obravnavali vsako grupo, obstajajo pa družine grup, znotraj katerih lahko razumemo upodobitve na enoten način. Ne bomo razvijali splošne teorije, temveč si bomo ogledali le konkretne, a reprezentativne predstavnike nekaterih izmed pomembnih družin neskončnih grup.</p>
 <section id="ozaljsane-upodobitve">
 <h2>Ozaljšane upodobitve<a class="headerlink" href="#ozaljsane-upodobitve" title="Link to this heading">#</a></h2>
-<p>V svetu neskončih grup ponavadi ne obravnavamo čisto vseh abstraktnih upodobitev, ker na ta način dobimo preprosto <em>preveč</em> upodobitev, ki niti niso <em>smiselne</em>.</p>
+<p>V svetu neskončih grup po navadi ne obravnavamo čisto vseh abstraktnih upodobitev, ker na ta način dobimo preprosto <em>preveč</em> upodobitev, ki niti niso <em>smiselne</em>.</p>
 <div class="zgled">
 <p>Opazujmo grupo <span class="math notranslate nohighlight">\(\RR\)</span>. Vemo že, da je vsaka njena končno razsežna nerazcepna kompleksna upodobitev enorazsežna, torej oblike <span class="math notranslate nohighlight">\(\chi \colon \RR \to \CC^*\)</span> za nek homomorfizem <span class="math notranslate nohighlight">\(\chi\)</span>. Premislimo, da je takih homomorfizmov <em>ogromno</em>. Grupa <span class="math notranslate nohighlight">\(\RR\)</span> je kot abelova grupa izomorfna neskončni direktni vsoti kopij <span class="math notranslate nohighlight">\(\ZZ\)</span>. Za vsak nabor realnih števil <span class="math notranslate nohighlight">\(x_1, x_2, \dots, x_k\)</span>, ki so <span class="math notranslate nohighlight">\(\ZZ\)</span>-linearno neodvisna, lahko izberemo poljuben nabor kompleksnih števil <span class="math notranslate nohighlight">\(z_1, z_2, \dots, z_k\)</span> in dobimo homomorfizem abelovih grup <span class="math notranslate nohighlight">\(\chi \colon \RR \to \CC^*\)</span> z lastnostjo <span class="math notranslate nohighlight">\(\chi(x_i) = z_i\)</span> za vsak <span class="math notranslate nohighlight">\(i\)</span>.</p>
 </div>
@@ -395,18 +385,18 @@ document.write(`
 \[\chi_{\zeta} \colon \RR \to \CC^*, \quad
     x \mapsto e^{\zeta x}.\]</div>
 </div>
-<p>Kadar je dana topološka grupa <span class="math notranslate nohighlight">\(G\)</span> opremljena z znano topologijo, ki izhaja iz evklidskega prostora, kot se zgodi na primer v grupah <span class="math notranslate nohighlight">\(\SO_3(\RR)\)</span> ali <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span>, ima smisel govoriti o mnogih dodatnih lastnostih matričnih koeficientov upodobitev. Lahko na primer zahtevamo, da so ti koeficienti gladki, analitični ali preprosto polinomi. V teh primerih rečemo, da imamo gladko, analitično oziroma polinomsko upodobitev.</p>
+<p>Kadar je dana topološka grupa <span class="math notranslate nohighlight">\(G\)</span> opremljena z znano topologijo, ki izhaja iz evklidskega prostora, kot se zgodi na primer v grupah <span class="math notranslate nohighlight">\(\SO_3(\RR)\)</span> ali <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span>, ima smisel govoriti o številnih dodatnih lastnostih matričnih koeficientov upodobitev. Lahko na primer zahtevamo, da so ti koeficienti gladki, analitični ali preprosto polinomi. V teh primerih rečemo, da imamo gladko, analitično oziroma polinomsko upodobitev.</p>
 </section>
 <section id="unitarnost">
 <h3>Unitarnost<a class="headerlink" href="#unitarnost" title="Link to this heading">#</a></h3>
-<p>Pri raziskovanju teorije upodobitev končnih grup nam je marsikje prav prišlo dejstvo, da smo vektorske prostore opremili s skalarnim produktom, ki je bil invarianten glede na upodobitev. Z drugimi besedami, opazovali smo <span class="definicija">unitarne</span> upodobitve, ki slikajo v grupo <span class="math notranslate nohighlight">\(\U(V) \leq \GL(V)\)</span>. Z metodo povprečenja smo dokazali, da je vsaka upodobitev končne grupe unitarizabilna in torej po ustrezni zamenjavi baze lahko predpostavimo, da je oblike <span class="math notranslate nohighlight">\(\rho \colon G \to U_n(\CC)\)</span>. Za neskončne grupe tega sklepa ne moremo napraviti in tudi zaključek v splošnem ne drži.</p>
+<p>Pri raziskovanju teorije upodobitev končnih grup nam je marsikje prav prišlo dejstvo, da smo vektorske prostore opremili s skalarnim produktom, ki je bil invarianten glede na upodobitev. Z drugimi besedami, opazovali smo <span class="definicija">unitarne</span> upodobitve, ki slikajo v grupo <span class="math notranslate nohighlight">\(\U(V) \leq \GL(V)\)</span>. Z metodo povprečenja smo dokazali, da je vsaka upodobitev končne grupe unitarizabilna in torej po ustrezni zamenjavi baze lahko predpostavimo, da je oblike <span class="math notranslate nohighlight">\(\rho \colon G \to U_n(\CC)\)</span>. Za neskončne grupe tega sklepa ne moremo napraviti in tudi zaključek na splošno ne drži.</p>
 <div class="zgled">
-<p>Opazujmo grupo <span class="math notranslate nohighlight">\(\RR\)</span> in njene upodobitve <span class="math notranslate nohighlight">\(\chi_{\zeta}\)</span>. Ta upodobitev je unitarna, če in samo če za nek skalarni produkt na <span class="math notranslate nohighlight">\(\CC\)</span> velja</p>
+<p>Opazujmo grupo <span class="math notranslate nohighlight">\(\RR\)</span> in njene upodobitve <span class="math notranslate nohighlight">\(\chi_{\zeta}\)</span>. Ta upodobitev je unitarna, če in samo če za neki skalarni produkt na <span class="math notranslate nohighlight">\(\CC\)</span> velja</p>
 <div class="math notranslate nohighlight">
 \[\langle u, v \rangle = \langle e^{\zeta x} u, e^{\zeta x} v \rangle\]</div>
 <p>za vsak <span class="math notranslate nohighlight">\(x \in \RR\)</span> in vse <span class="math notranslate nohighlight">\(u,v \in \CC\)</span>. Ta pogoj je enakovreden <span class="math notranslate nohighlight">\(|e^{\zeta x}| = 1\)</span>, se pravi <span class="math notranslate nohighlight">\(\zeta \in \RR \cdot i\)</span>. V tem primeru upodobitev <span class="math notranslate nohighlight">\(\chi_{\zeta}\)</span> nujno slika v enotsko krožnico <span class="math notranslate nohighlight">\(\U(\CC) = S^1 = \{ z \in \CC \mid |z| = 1 \}\)</span>.</p>
 </div>
-<p>Za neskončne topološke grupe najraje opazujemo zvezne unitarne upodobitve. O teh ponavadi lahko povemo največ, kot bomo videli v nadaljevanju.</p>
+<p>Za neskončne topološke grupe najraje opazujemo zvezne unitarne upodobitve. O teh po navadi lahko povemo največ, kot bomo videli v nadaljevanju.</p>
 </section>
 </section>
 <section id="kompaktne-grupe">
@@ -423,7 +413,7 @@ document.write(`
     x \mapsto e^{2 \pi i k x}.\]</div>
 <p>Velja pa tudi obratno, iz vsake upodobitve <span class="math notranslate nohighlight">\(\chi \colon \RR/\ZZ \to \U_1(\CC)\)</span> z restrikcijo vzdolž <span class="math notranslate nohighlight">\(\RR \to \RR/\ZZ\)</span> dobimo upodobitev <span class="math notranslate nohighlight">\(\RR\)</span>. Te upodobitve lahko popolnoma opišemo s pomočjo elementarne analize.</p>
 <div class="trditev">
-<p>Vsaka zvezna upodobitev <span class="math notranslate nohighlight">\(\RR \to \CC^*\)</span> je oblike <span class="math notranslate nohighlight">\(\chi_{\zeta}\)</span> za nek <span class="math notranslate nohighlight">\(\zeta \in \CC\)</span>.</p>
+<p>Vsaka zvezna upodobitev <span class="math notranslate nohighlight">\(\RR \to \CC^*\)</span> je oblike <span class="math notranslate nohighlight">\(\chi_{\zeta}\)</span> za neki <span class="math notranslate nohighlight">\(\zeta \in \CC\)</span>.</p>
 </div>
 <div class="dokaz">
 <p>Naj bo <span class="math notranslate nohighlight">\(\chi \colon \RR \to \CC^*\)</span> zvezna. Če je <span class="math notranslate nohighlight">\(\chi\)</span> celo <em>odvedljiva</em>, potem za vsak <span class="math notranslate nohighlight">\(x \in \RR\)</span> velja</p>
@@ -447,11 +437,11 @@ document.write(`
 \[\chi(x) = \frac{X(x+y_0) - X(x)}{X(y_0)}.\]</div>
 <p>Ker je funkcija na desni odvedljiva, velja enako tudi za funkcijo na levi.</p>
 </div>
-<p>Iz trditve izpeljemo, da vsaka zvezna upodobitev <span class="math notranslate nohighlight">\(\RR/\ZZ \to \CC^*\)</span> izhaja iz upodobitve <span class="math notranslate nohighlight">\(\chi_{\zeta}\)</span> za nek <span class="math notranslate nohighlight">\(\zeta\)</span>. Pri tem mora biti <span class="math notranslate nohighlight">\(\ZZ \leq \ker \chi_{\zeta}\)</span>, od koder sledi <span class="math notranslate nohighlight">\(\zeta = 2 \pi i k\)</span> za nek <span class="math notranslate nohighlight">\(k \in \ZZ\)</span>. Upodobitve <span class="math notranslate nohighlight">\(\chi_k\)</span> torej izčrpajo vse končno razsežne zvezne kompleksne upodobitve grupe <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>. Te upodobitve so vse tudi unitarne, kar ni naključje, kot bomo pojasnili nekoliko kasneje.</p>
+<p>Iz trditve izpeljemo, da vsaka zvezna upodobitev <span class="math notranslate nohighlight">\(\RR/\ZZ \to \CC^*\)</span> izhaja iz upodobitve <span class="math notranslate nohighlight">\(\chi_{\zeta}\)</span> za neki <span class="math notranslate nohighlight">\(\zeta\)</span>. Pri tem mora biti <span class="math notranslate nohighlight">\(\ZZ \leq \ker \chi_{\zeta}\)</span>, od koder sledi <span class="math notranslate nohighlight">\(\zeta = 2 \pi i k\)</span> za nek <span class="math notranslate nohighlight">\(k \in \ZZ\)</span>. Upodobitve <span class="math notranslate nohighlight">\(\chi_k\)</span> torej izčrpajo vse končno razsežne zvezne kompleksne upodobitve grupe <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>. Te upodobitve so vse tudi unitarne, kar ni naključje, kot bomo pojasnili nekoliko kasneje.</p>
 </section>
 <section id="fourierova-analiza">
 <h4>Fourierova analiza<a class="headerlink" href="#fourierova-analiza" title="Link to this heading">#</a></h4>
-<p>Klasična Fourierova analiza periodičnih funkcij se tesno prepleta s teorijo upodobitev grupe <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>. Kot vemo, lahko z upodobitvami <span class="math notranslate nohighlight">\(\chi_k\)</span> za <span class="math notranslate nohighlight">\(k \in \ZZ\)</span> aproksimiramo poljubno zvezno funkcijo na <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>. To naredimo na sledeč način. Prostor funkcij na grupi <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span> opremimo s skalarnim produktom</p>
+<p>Klasična Fourierova analiza periodičnih funkcij se tesno prepleta s teorijo upodobitev grupe <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>. Kot vemo, lahko z upodobitvami <span class="math notranslate nohighlight">\(\chi_k\)</span> za <span class="math notranslate nohighlight">\(k \in \ZZ\)</span> aproksimiramo poljubno zvezno funkcijo na <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>. To naredimo na naslednji način. Prostor funkcij na grupi <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span> opremimo s skalarnim produktom</p>
 <div class="math notranslate nohighlight">
 \[\langle f, h \rangle = \int_{0}^{1} f(t) \overline{h(t)} dt.\]</div>
 <p>Fourierovi koeficienti funkcije <span class="math notranslate nohighlight">\(f\)</span> so</p>
@@ -463,7 +453,7 @@ document.write(`
 <p>za <span class="math notranslate nohighlight">\(N \in \NN\)</span>. V splošnem delne vsote <span class="math notranslate nohighlight">\(f_N\)</span> ne konvergirajo po točkah,<label for='sidenote-role-2' class='margin-toggle'><span id="id2">
 <sup>2</sup></span>
 
-</label><input type='checkbox' id='sidenote-role-2' name='sidenote-role-2' class='margin-toggle'><span class="sidenote"><sup>2</sup>Lahko se celo zgodi, da <span class="math notranslate nohighlight">\(f_N\)</span> ne konvergira v <em>nobeni</em> točki. Take primere je prvi konstruiral Kolmogorov; glej povzetek <a class="reference external" href="https://projecteuclid.org/journals/proceedings-of-the-japan-academy-series-a-mathematical-sciences/volume-38/issue-6/A-remarkable-divergent-Fourier-series/10.3792/pja/1195523374.full?tab=ArticleLink">(Chen 1962)</a>.</span> je pa temu tako, če dodatno predpostavimo, da obravnavamo le kvadratno integrabilne funkcije <span class="math notranslate nohighlight">\(f\)</span>, se pravi</p>
+</label><input type='checkbox' id='sidenote-role-2' name='sidenote-role-2' class='margin-toggle'><span class="sidenote"><sup>2</sup>Lahko se celo zgodi, da <span class="math notranslate nohighlight">\(f_N\)</span> ne konvergira v <em>nobeni</em> točki. Take primere je prvi konstruiral Kolmogorov; glej povzetek <a class="reference external" href="https://projecteuclid.org/journals/proceedings-of-the-japan-academy-series-a-mathematical-sciences/volume-38/issue-6/A-remarkable-divergent-Fourier-series/10.3792/pja/1195523374.full?tab=ArticleLink">(Chen 1962)</a>.</span> je pa tako, če dodatno predpostavimo, da obravnavamo le kvadratno integrabilne funkcije <span class="math notranslate nohighlight">\(f\)</span>, se pravi</p>
 <div class="math notranslate nohighlight">
 \[\int_0^1 |f(t)|^2 dt &lt; \infty.\]</div>
 <p>Za te funkcije po osnovnem izreku Fourierove analize velja konvergenca</p>
@@ -504,7 +494,7 @@ document.write(`
 
 </label><input type='checkbox' id='sidenote-role-5' name='sidenote-role-5' class='margin-toggle'><span class="sidenote"><sup>5</sup>Dokaz obstoja Haarove mere lahko najdeš v prvem poglavju zapiskov <a class="reference external" href="https://users.fmf.uni-lj.si/hladnik/3st/HA.pdf">(Hladnik 2006)</a>.</span></p>
 <div class="zgled">
-<p>Multiplikativna grupa <span class="math notranslate nohighlight">\(\U_1(\CC) = S^1\)</span> je izomorfna aditivni grupi <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span> preko preslikave <span class="math notranslate nohighlight">\(\chi_1 \colon \RR/\ZZ \to S^1\)</span>, <span class="math notranslate nohighlight">\(x \mapsto e^{2 \pi i x}\)</span>. Naj bo <span class="math notranslate nohighlight">\(\lambda\)</span> standardna Lebesgueova mera na <span class="math notranslate nohighlight">\(\RR\)</span>. To mero lahko preko kanonične projekcije <span class="math notranslate nohighlight">\(\RR \to \RR/\ZZ\)</span> prenesemo na <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>, pri čemer definiramo mero na podmnožici <span class="math notranslate nohighlight">\(U \subseteq \RR/\ZZ\)</span> kot <span class="math notranslate nohighlight">\(\lambda(\pi^{-1}(U) \cap [0,1))\)</span>. Za pripadajočo podmnožico <span class="math notranslate nohighlight">\(U \subseteq S^1\)</span> potem definiramo njeno mero kot <span class="math notranslate nohighlight">\(\mu(U) = \lambda(\chi_1^{-1}(U))\)</span>. Ta mera je Haarova mera na <span class="math notranslate nohighlight">\(\U_1(\CC)\)</span> in igra ključno vlogo v klasični Fourierovi analizi, kot smo se spomnili zgoraj.</p>
+<p>Multiplikativna grupa <span class="math notranslate nohighlight">\(\U_1(\CC) = S^1\)</span> je izomorfna aditivni grupi <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span> preko preslikave <span class="math notranslate nohighlight">\(\chi_1 \colon \RR/\ZZ \to S^1\)</span>, <span class="math notranslate nohighlight">\(x \mapsto e^{2 \pi i x}\)</span>. Naj bo <span class="math notranslate nohighlight">\(\lambda\)</span> standardna Lebesgueova mera na <span class="math notranslate nohighlight">\(\RR\)</span>. To mero lahko preko kanonične projekcije <span class="math notranslate nohighlight">\(\RR \to \RR/\ZZ\)</span> prenesemo na <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>, pri čemer definiramo mero na podmnožici <span class="math notranslate nohighlight">\(U \subseteq \RR/\ZZ\)</span> kot <span class="math notranslate nohighlight">\(\lambda(\pi^{-1}(U) \cap [0,1))\)</span>. Za pripadajočo podmnožico <span class="math notranslate nohighlight">\(U \subseteq S^1\)</span> potem definiramo njeno mero kot <span class="math notranslate nohighlight">\(\mu(U) = \lambda(\chi_1^{-1}(U))\)</span>. Ta mera je Haarova mera na <span class="math notranslate nohighlight">\(\U_1(\CC)\)</span> in ima ključno vlogo v klasični Fourierovi analizi, kot smo se spomnili zgoraj.</p>
 </div>
 <div class="zgled">
 <p>Nekoliko bolj zapleten opis ima Haarova mera na grupi <span class="math notranslate nohighlight">\(\SU_2(\CC)\)</span>. Elementi te grupe so matrike oblike</p>
@@ -534,13 +524,13 @@ document.write(`
     \langle v, w \rangle_0 = \int_{G} \langle \rho(g) \cdot v, \rho(g) \cdot w \rangle d \mu (g).\]</div>
 <p>Ni težko preveriti, da je <span class="math notranslate nohighlight">\(\langle \cdot, \cdot \rangle_0\)</span> skalarni produkt na <span class="math notranslate nohighlight">\(V\)</span>, glede na katerega je <span class="math notranslate nohighlight">\(\rho\)</span> unitarna upodobitev.</p>
 </div>
-<p>Kot v primeru <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span> lahko vse upodobitve najdemo v ustreznem modelu regularne upodobitve. V splošnem opazujemo funkcije na kompaktni grupi <span class="math notranslate nohighlight">\(G\)</span>, pri čemer se omejimo na prostor kvadratno integrabilnih merljivih funkcij in še te opazujemo le do ekvivalence <em>skoraj povsod</em> natančno. Prostor ekvivalenčnih razredov takih funkcij je <span class="math notranslate nohighlight">\(L^2(G)\)</span>. Na tem prostoru deluje grupa <span class="math notranslate nohighlight">\(G\)</span> kot regularna upodobitev,</p>
+<p>Kot v primeru <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span> lahko vse upodobitve najdemo v ustreznem modelu regularne upodobitve. Opazujemo funkcije na kompaktni grupi <span class="math notranslate nohighlight">\(G\)</span>, pri čemer se omejimo na prostor kvadratno integrabilnih merljivih funkcij in še te opazujemo le do ekvivalence <em>skoraj povsod</em> natančno. Prostor ekvivalenčnih razredov takih funkcij je <span class="math notranslate nohighlight">\(L^2(G)\)</span>. Na tem prostoru deluje grupa <span class="math notranslate nohighlight">\(G\)</span> kot regularna upodobitev,</p>
 <div class="math notranslate nohighlight">
 \[\rho(g) \cdot f = x \mapsto f(x g).\]</div>
 <p>Ta prostor je seveda neskončno razsežen. Znameniti Peter-Weylov izrek razkrije dekompozicijo te upodobitve, ki je popolnoma analogna tisti iz sveta končnih grup.<label for='sidenote-role-6' class='margin-toggle'><span id="id6">
 <sup>6</sup></span>
 
-</label><input type='checkbox' id='sidenote-role-6' name='sidenote-role-6' class='margin-toggle'><span class="sidenote"><sup>6</sup>Za dokaz glej na primer zadnje poglavje zapiskov <a class="reference external" href="https://users.fmf.uni-lj.si/hladnik/3st/HA.pdf">(Hladnik 2006)</a>. Tam najdeš tudi ekspliciten opis nerazcepnih zveznih unitarnih upodobitev grupe <span class="math notranslate nohighlight">\(\SU_2(\CC)\)</span>. V naslednjem razdelku si bomo pogledali še en drug (bolj geometrijski) način, kako lahko pridemo do teh upodobitev.</span></p>
+</label><input type='checkbox' id='sidenote-role-6' name='sidenote-role-6' class='margin-toggle'><span class="sidenote"><sup>6</sup>Za dokaz glej na primer zadnje poglavje zapiskov <a class="reference external" href="https://users.fmf.uni-lj.si/hladnik/3st/HA.pdf">(Hladnik 2006)</a>. Tam najdeš tudi ekspliciten opis nerazcepnih zveznih unitarnih upodobitev grupe <span class="math notranslate nohighlight">\(\SU_2(\CC)\)</span>. V naslednjem razdelku si bomo ogledali še en drug (bolj geometrijski) način, kako lahko pridemo do teh upodobitev.</span></p>
 <div class="izrek">
 <p>Naj bo <span class="math notranslate nohighlight">\(G\)</span> kompaktna grupa s Haarovo mero <span class="math notranslate nohighlight">\(\mu\)</span>. Regularna upodobitev <span class="math notranslate nohighlight">\(G\)</span> na <span class="math notranslate nohighlight">\(L^2(G)\)</span> je izomorfna ortogonalni direktni vsoti Hilbertovih prostorov</p>
 <div class="math notranslate nohighlight">
@@ -555,13 +545,13 @@ document.write(`
 <p>V tem razdelku si bomo ogledali, kako lahko razumemo teorijo upodobitev linearnih topoloških grup, ki lokalno izgledajo kot <span class="math notranslate nohighlight">\(\RR^n\)</span> ali <span class="math notranslate nohighlight">\(\CC^n\)</span>. To so na primer grupe <span class="math notranslate nohighlight">\(\GL_n(\CC)\)</span>, <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span>, <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span>, <span class="math notranslate nohighlight">\(\SO_3(\RR)\)</span>, <span class="math notranslate nohighlight">\(\SU_2(\CC)\)</span>. Zadnji dve grupi sta sicer kompaktni, tako da ju lahko razumemo tudi z orodji zadnjega razdelka. Tu se bomo zato osredotočili na nekompaktne zglede.</p>
 <section id="sl-2-cc">
 <h3><span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span><a class="headerlink" href="#sl-2-cc" title="Link to this heading">#</a></h3>
-<p>Grupa <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> je zaprta podmnožica kompleksnega prostora <span class="math notranslate nohighlight">\(\CC^4\)</span>, dana z enačbo <span class="math notranslate nohighlight">\(ad - bc = 1\)</span>. Ker je odvod determinantne preslikave v vsaki točki neničeln, je <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> podmnogoterost kompleksne razsežnosti <span class="math notranslate nohighlight">\(3\)</span>. Pri opazovanju upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> bomo seveda upoštevali to strukturo, saj sicer dobimo <em>preveč</em> updobitev.<label for='sidenote-role-7' class='margin-toggle'><span id="id7">
+<p>Grupa <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> je zaprta podmnožica kompleksnega prostora <span class="math notranslate nohighlight">\(\CC^4\)</span>, dana z enačbo <span class="math notranslate nohighlight">\(ad - bc = 1\)</span>. Ker je odvod determinantne preslikave v vsaki točki neničeln, je <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> podmnogoterost kompleksne razsežnosti <span class="math notranslate nohighlight">\(3\)</span>. Pri opazovanju upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> bomo seveda upoštevali to strukturo, saj sicer dobimo <em>preveč</em> upodobitev.<label for='sidenote-role-7' class='margin-toggle'><span id="id7">
 <sup>7</sup></span>
 
-</label><input type='checkbox' id='sidenote-role-7' name='sidenote-role-7' class='margin-toggle'><span class="sidenote"><sup>7</sup>Podobno kot smo že videli v primeru upodobitev grupe <span class="math notranslate nohighlight">\(\RR\)</span>. Konkretno za vsak avtomorfizem polja <span class="math notranslate nohighlight">\(\CC\)</span> dobimo upodobitev <span class="math notranslate nohighlight">\(\SL_2(\CC) \to \SL_2(\CC)\)</span>, ki aplicira avtomorfizem po členih matrike. Polje <span class="math notranslate nohighlight">\(\CC\)</span> ima <em>mnogo</em> divjih avtomorfizmov.</span> Smiselno bo opazovati upodobitve, pri katerih so matrični koeficienti zvezne ali celo gladke funkcije matrike, ki deluje. Glede na to, da je <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> kompleksna mnogoterost, lahko opazujemo tudi kompleksno analitične upodobitve. Na grupo <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> lahko gledamo tudi kot na algebraično grupo,<label for='sidenote-role-8' class='margin-toggle'><span id="id8">
+</label><input type='checkbox' id='sidenote-role-7' name='sidenote-role-7' class='margin-toggle'><span class="sidenote"><sup>7</sup>Podobno, kot smo že videli v primeru upodobitev grupe <span class="math notranslate nohighlight">\(\RR\)</span>. Konkretno za vsak avtomorfizem polja <span class="math notranslate nohighlight">\(\CC\)</span> dobimo upodobitev <span class="math notranslate nohighlight">\(\SL_2(\CC) \to \SL_2(\CC)\)</span>, ki aplicira avtomorfizem po členih matrike. Polje <span class="math notranslate nohighlight">\(\CC\)</span> ima <em>mnogo</em> divjih avtomorfizmov.</span> Smiselno bo opazovati upodobitve, pri katerih so matrični koeficienti zvezne ali celo gladke funkcije matrike, ki deluje. Glede na to, da je <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> kompleksna mnogoterost, lahko opazujemo tudi kompleksno analitične upodobitve. Na grupo <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> lahko gledamo tudi kot na algebraično grupo,<label for='sidenote-role-8' class='margin-toggle'><span id="id8">
 <sup>8</sup></span>
 
-</label><input type='checkbox' id='sidenote-role-8' name='sidenote-role-8' class='margin-toggle'><span class="sidenote"><sup>8</sup><span class="definicija">Linearna algebraična grupa</span> je grupa, ki je hkrati množica skupnih ničel nekih polinomov v prostoru <span class="math notranslate nohighlight">\(\CC^n\)</span>.</span> zato ima smisel opazovati tudi le polinomske upodobitve. Kot bomo videli, so si nazadnje vse te različne oblike upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> med sabo zelo podobne.</p>
+</label><input type='checkbox' id='sidenote-role-8' name='sidenote-role-8' class='margin-toggle'><span class="sidenote"><sup>8</sup><span class="definicija">Linearna algebraična grupa</span> je grupa, ki je hkrati množica skupnih ničel nekih polinomov v prostoru <span class="math notranslate nohighlight">\(\CC^n\)</span>.</span> zato ima smisel opazovati tudi le polinomske upodobitve. Kot bomo videli, so si nazadnje vse te različne oblike upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> med seboj zelo podobne.</p>
 <section id="standardna-upodobitev-in-njene-potence">
 <h4>Standardna upodobitev in njene potence<a class="headerlink" href="#standardna-upodobitev-in-njene-potence" title="Link to this heading">#</a></h4>
 <p>Grupa <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> naravno deluje na vektorskem prostoru <span class="math notranslate nohighlight">\(\CC^2\)</span> z množenjem matrik z vektorji. Označimo bazna vektorja kot <span class="math notranslate nohighlight">\(X = e_1\)</span> in <span class="math notranslate nohighlight">\(Y = e_2\)</span>. Na ta način dobimo <span class="definicija">standardno upodobitev</span></p>
@@ -619,7 +609,7 @@ document.write(`
 <p>S pomočjo tega bomo dokazali, da je <span class="math notranslate nohighlight">\(\rho_k\)</span> nerazcepna upodobitev. Res, naj bo <span class="math notranslate nohighlight">\(0 \neq W \leq \CC[X,Y]_k\)</span> poljuben <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span>-invarianten podprostor. Ker je <span class="math notranslate nohighlight">\(\Res^{\SL_2(\CC)}_T(\rho_k)\)</span> polenostavna upodobitev, v kateri vsaka nerazcepna podupodobitev nastopa z večkratnostjo <span class="math notranslate nohighlight">\(1\)</span>, podprostor <span class="math notranslate nohighlight">\(W\)</span> nujno sestoji iz nekaterih od teh podupodobitev. Za neko množico <span class="math notranslate nohighlight">\(I \subseteq \{ 0,1,\dots,k\}\)</span> torej velja</p>
 <div class="math notranslate nohighlight">
 \[W = \bigoplus_{i \in I} \CC \cdot e_i.\]</div>
-<p>Upoštevajmo zdaj, da je <span class="math notranslate nohighlight">\(W\)</span> invarianten še glede na vse ostale elemente v <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span>. Velja</p>
+<p>Upoštevajmo zdaj, da je <span class="math notranslate nohighlight">\(W\)</span> invarianten še glede na vse druge elemente v <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span>. Velja</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\rho_k \begin{pmatrix}
         1 &amp; 1 \\ 0 &amp; 1
@@ -639,7 +629,7 @@ document.write(`
 <p>Princip za dokazovanje, da smo z upodobitvami <span class="math notranslate nohighlight">\(\rho_k\)</span> izčrpali vse dovolj lepe upodobitve grupe <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span>, temelji na <em>linearizaciji</em>. Vsako odvedljivo upodobitev <span class="math notranslate nohighlight">\(\rho \colon \SL_2(\CC) \to \GL_n(\CC)\)</span> lahko namreč obravnavamo kot preslikavo med mnogoterostmi, zato z njenim <span class="definicija">odvodom</span> dobimo inducirano linearno preslikavo</p>
 <div class="math notranslate nohighlight">
 \[\textstyle D_I \rho \colon T_I \SL_2(\CC) \to T_I \GL_n(\CC)\]</div>
-<p>med tangentnima prostoroma v identični matriki. Oglejmo si podrobneje, kako izgledata ta dva tangentna prostora in kaj točno je <span class="math notranslate nohighlight">\(D_I \rho\)</span>.<label for='sidenote-role-11' class='margin-toggle'><span id="id11">
+<p>med tangentnima prostoroma v identični matriki. Oglejmo si podrobneje, kako sta videti ta dva tangentna prostora in kaj točno je <span class="math notranslate nohighlight">\(D_I \rho\)</span>.<label for='sidenote-role-11' class='margin-toggle'><span id="id11">
 <sup>11</sup></span>
 
 </label><input type='checkbox' id='sidenote-role-11' name='sidenote-role-11' class='margin-toggle'><span class="sidenote"><sup>11</sup>Za splošnejšo obravnavo tangentnih prostorov in odvodov med mnogoterostmi glej zapiske <a class="reference external" href="https://users.fmf.uni-lj.si/forstneric/papers/AMbook.pdf">(Forstnerič 2023)</a>.</span></p>
@@ -650,10 +640,10 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\gamma \colon \RR \to {\textstyle \GL_n(\CC)}, \quad
     t \mapsto e^{tX} = \sum_{i = 0}^{\infty} t^i X^i / i!\]</div>
-<p>v grupi <span class="math notranslate nohighlight">\(\GL_n(\CC)\)</span>. Res, velja formula <span class="math notranslate nohighlight">\(\det(\gamma(t)) = \det e^{tX} = e^{\tr (tX)}\)</span>,<label for='sidenote-role-12' class='margin-toggle'><span id="id12">
+<p>v grupi <span class="math notranslate nohighlight">\(\GL_n(\CC)\)</span>. Res, velja enakost <span class="math notranslate nohighlight">\(\det(\gamma(t)) = \det e^{tX} = e^{\tr (tX)}\)</span>,<label for='sidenote-role-12' class='margin-toggle'><span id="id12">
 <sup>12</sup></span>
 
-</label><input type='checkbox' id='sidenote-role-12' name='sidenote-role-12' class='margin-toggle'><span class="sidenote"><sup>12</sup>Ta formula je jasna, če matriko <span class="math notranslate nohighlight">\(X\)</span> predstavimo v Jordanovi normalni obliki.</span> zato je <span class="math notranslate nohighlight">\(\gamma(t)\)</span> obrnljiva matrika. Tangentni vektor poti <span class="math notranslate nohighlight">\(\gamma\)</span> v točki <span class="math notranslate nohighlight">\(0\)</span> izračunamo kot</p>
+</label><input type='checkbox' id='sidenote-role-12' name='sidenote-role-12' class='margin-toggle'><span class="sidenote"><sup>12</sup>Ta enakost je jasna, če matriko <span class="math notranslate nohighlight">\(X\)</span> predstavimo v Jordanovi normalni obliki.</span> zato je <span class="math notranslate nohighlight">\(\gamma(t)\)</span> obrnljiva matrika. Tangentni vektor poti <span class="math notranslate nohighlight">\(\gamma\)</span> v točki <span class="math notranslate nohighlight">\(0\)</span> izračunamo kot</p>
 <div class="math notranslate nohighlight">
 \[D_0 \gamma 
     = \lim_{t \to 0} \frac{e^{tX} - I}{t}
@@ -727,7 +717,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[E_k \cdot e_i = (k-i) e_{i+1}, \quad
     F_k \cdot e_i = i e_{i-1}.\]</div>
-<p>Element <span class="math notranslate nohighlight">\(H_k\)</span> torej deluje diagonalno na <span class="math notranslate nohighlight">\(\CC[X,Y]_k\)</span>, pri čemer ima vektor <span class="math notranslate nohighlight">\(e_k = X^k\)</span> največjo lastno vrednost, in sicer <span class="math notranslate nohighlight">\(k\)</span>. Ta vektor je v jedru preslikave <span class="math notranslate nohighlight">\(E_k\)</span>, z zaporednimi uporabami preslikave <span class="math notranslate nohighlight">\(F_k\)</span> pa iz njega po vrsti dobimo vse ostale bazne vektorje <span class="math notranslate nohighlight">\(e_i\)</span> za <span class="math notranslate nohighlight">\(0 \leq i \leq k\)</span>.</p>
+<p>Element <span class="math notranslate nohighlight">\(H_k\)</span> torej deluje diagonalno na <span class="math notranslate nohighlight">\(\CC[X,Y]_k\)</span>, pri čemer ima vektor <span class="math notranslate nohighlight">\(e_k = X^k\)</span> največjo lastno vrednost, in sicer <span class="math notranslate nohighlight">\(k\)</span>. Ta vektor je v jedru preslikave <span class="math notranslate nohighlight">\(E_k\)</span>, z zaporednimi uporabami preslikave <span class="math notranslate nohighlight">\(F_k\)</span> pa iz njega po vrsti dobimo vse druge bazne vektorje <span class="math notranslate nohighlight">\(e_i\)</span> za <span class="math notranslate nohighlight">\(0 \leq i \leq k\)</span>.</p>
 </div>
 <figure>
 <img src="img/img_sl2irrep.png" />
@@ -742,7 +732,7 @@ document.write(`
 \[\textstyle \Ad \colon \GL_n(\CC) \to \End(\glfrak_n(\CC)), \quad
     A \mapsto \left( X \mapsto A X A^{-1} \right).\]</div>
 <p>To delovanje imamo tudi z grupo <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> in njenim tangentnim prostorom, saj za vsak <span class="math notranslate nohighlight">\(X \in \slfrak_2(\CC)\)</span> velja <span class="math notranslate nohighlight">\(\tr(AXA^{-1}) = \tr(X) = 0\)</span>.</p>
-<p>Ni se težko prepičati, da je za vsak <span class="math notranslate nohighlight">\(A \in \SL_2(\CC)\)</span> preslikava <span class="math notranslate nohighlight">\(D_I \rho\)</span> <em>spletična</em> glede na to delovanje. Za vsak <span class="math notranslate nohighlight">\(Y \in \slfrak_2(\CC)\)</span> velja namreč</p>
+<p>Ni se težko prepričati, da je za vsak <span class="math notranslate nohighlight">\(A \in \SL_2(\CC)\)</span> preslikava <span class="math notranslate nohighlight">\(D_I \rho\)</span> <em>spletična</em> glede na to delovanje. Za vsak <span class="math notranslate nohighlight">\(Y \in \slfrak_2(\CC)\)</span> velja namreč</p>
 <div class="math notranslate nohighlight">
 \[D_I \rho \cdot \Ad(A) \cdot Y
     = D_0 \left( \rho(e^{t A Y A^{-1}}) \right)
@@ -778,7 +768,7 @@ document.write(`
 <p>za vse tangentne vektorje <span class="math notranslate nohighlight">\(X,Y,Z\)</span>. Abstraktnim vektorskim prostorom s tako binarno operacijo pravimo <span class="definicija">Liejeve algebre</span>. Te algebre tvorijo kategorijo: morfizmi med dvema algebrama so preslikave, ki spoštujejo vso strukturo, in jim zato upravičeno pravimo <span class="definicija">Liejevi homomorfizmi</span>.<label for='sidenote-role-13' class='margin-toggle'><span id="id13">
 <sup>13</sup></span>
 
-</label><input type='checkbox' id='sidenote-role-13' name='sidenote-role-13' class='margin-toggle'><span class="sidenote"><sup>13</sup>Liejev homomorfizem je torej linearna preslikava <span class="math notranslate nohighlight">\(\phi \colon L_1 \to L_2\)</span>, za katero velja <span class="math notranslate nohighlight">\(\phi([x,y]) = [\phi(x), \phi(y)]\)</span> za vsaka <span class="math notranslate nohighlight">\(x,y \in L_1\)</span>.</span> Kadar Liejev homomorfizem slika iz dane Liejeve algebre <span class="math notranslate nohighlight">\(L\)</span> v <span class="math notranslate nohighlight">\(\glfrak_n(\CC)\)</span>, po analogiji z grupami rečemo, da imamo <span class="definicija">Liejevo upodobitev</span>. Te upodobitve lahko primerjamo med sabo s spletičnami in zato govorimo o izomorfnostnih razredih Liejevih upodobitev.<label for='sidenote-role-14' class='margin-toggle'><span id="id14">
+</label><input type='checkbox' id='sidenote-role-13' name='sidenote-role-13' class='margin-toggle'><span class="sidenote"><sup>13</sup>Liejev homomorfizem je torej linearna preslikava <span class="math notranslate nohighlight">\(\phi \colon L_1 \to L_2\)</span>, za katero velja <span class="math notranslate nohighlight">\(\phi([x,y]) = [\phi(x), \phi(y)]\)</span> za vsaka <span class="math notranslate nohighlight">\(x,y \in L_1\)</span>.</span> Kadar Liejev homomorfizem slika iz dane Liejeve algebre <span class="math notranslate nohighlight">\(L\)</span> v <span class="math notranslate nohighlight">\(\glfrak_n(\CC)\)</span>, po analogiji z grupami rečemo, da imamo <span class="definicija">Liejevo upodobitev</span>. Te upodobitve lahko primerjamo med seboj s spletičnami in zato govorimo o izomorfnostnih razredih Liejevih upodobitev.<label for='sidenote-role-14' class='margin-toggle'><span id="id14">
 <sup>14</sup></span>
 
 </label><input type='checkbox' id='sidenote-role-14' name='sidenote-role-14' class='margin-toggle'><span class="sidenote"><sup>14</sup><span class="definicija">Liejeva spletična</span> med Liejevima upodobitvama <span class="math notranslate nohighlight">\(\phi_1, \phi_2\)</span> Liejeve algebre <span class="math notranslate nohighlight">\(L\)</span> na prostoru <span class="math notranslate nohighlight">\(V\)</span> je linearna preslikava <span class="math notranslate nohighlight">\(\alpha \in \End(V)\)</span> z lastnostjo <span class="math notranslate nohighlight">\(\alpha(\phi_1(x) \cdot v) = \phi_2(x) \cdot \alpha(v)\)</span> za vsaka <span class="math notranslate nohighlight">\(x \in L\)</span>, <span class="math notranslate nohighlight">\(v \in V\)</span>. Kadar najdemo obrnljivo Liejevo spletično, sta upodobitvi <span class="definicija">izomorfni</span>.</span> Prav tako na smiseln način posplošimo pojem nerazcepne upodobitve.<label for='sidenote-role-15' class='margin-toggle'><span id="id15">
@@ -790,7 +780,7 @@ document.write(`
 <p>Liejeve upodobitve <span class="math notranslate nohighlight">\(D_I \rho_k\)</span> so nerazcepne. Argument za to je podoben tistemu iz grup, a je še lažji. Res, če je <span class="math notranslate nohighlight">\(W \leq \CC[X,Y]_k\)</span> netrivialen invarianten <span class="math notranslate nohighlight">\(\slfrak_2(\CC)\)</span>-podprostor, potem vsebuje vektor <span class="math notranslate nohighlight">\(0 \neq w = \sum_{i = 0}^k a_i e_i\)</span>. Naj bo <span class="math notranslate nohighlight">\(i_0\)</span> največji indeks, za katerega je <span class="math notranslate nohighlight">\(a_{i_0} \neq 0\)</span>. Potem je <span class="math notranslate nohighlight">\(F_k^{i_0} \cdot w = a_{i_0} i_0! e_0 \in W\)</span>. Torej je <span class="math notranslate nohighlight">\(e_0 \in W\)</span>. Po zaporednih uporabah <span class="math notranslate nohighlight">\(E_k\)</span> sklenemo <span class="math notranslate nohighlight">\(e_i \in W\)</span> za vsak <span class="math notranslate nohighlight">\(0 \leq i \leq k\)</span>. Torej je res <span class="math notranslate nohighlight">\(W = \CC[X,Y]_k\)</span>.</p>
 </div>
 <div class="trditev">
-<p>Vsaka nerazcepna Liejeva upodobitev Liejeve algebre <span class="math notranslate nohighlight">\(\slfrak_2(\CC)\)</span> je izomorfna <span class="math notranslate nohighlight">\(D_I \rho_k\)</span> za nek <span class="math notranslate nohighlight">\(k \geq 0\)</span>.</p>
+<p>Vsaka nerazcepna Liejeva upodobitev Liejeve algebre <span class="math notranslate nohighlight">\(\slfrak_2(\CC)\)</span> je izomorfna <span class="math notranslate nohighlight">\(D_I \rho_k\)</span> za neki <span class="math notranslate nohighlight">\(k \geq 0\)</span>.</p>
 </div>
 <div class="dokaz">
 <p>Naj bo <span class="math notranslate nohighlight">\(\phi \colon \slfrak_2(\CC) \to \glfrak_m(\CC) = \End(V)\)</span> nerazcepna Liejeva upodobitev, kjer je <span class="math notranslate nohighlight">\(V = \CC^m\)</span>. Naj bodo <span class="math notranslate nohighlight">\(E,H,F\)</span> slike <span class="math notranslate nohighlight">\(e,h,f\)</span> s preslikavo <span class="math notranslate nohighlight">\(\phi\)</span>.</p>
@@ -801,7 +791,7 @@ document.write(`
 <p>Izberimo lastno vrednost <span class="math notranslate nohighlight">\(\lambda\)</span> preslikave <span class="math notranslate nohighlight">\(H\)</span> z največjo možno realno komponento. Iz maksimalnosti <span class="math notranslate nohighlight">\(\lambda\)</span> sledi <span class="math notranslate nohighlight">\(Ev \in \Eigenspace_{\lambda + 2}(H) = 0\)</span>. Naj bo <span class="math notranslate nohighlight">\(v_i = F^i v\)</span> za <span class="math notranslate nohighlight">\(i \geq 0\)</span>.<label for='sidenote-role-16' class='margin-toggle'><span id="id16">
 <sup>16</sup></span>
 
-</label><input type='checkbox' id='sidenote-role-16' name='sidenote-role-16' class='margin-toggle'><span class="sidenote"><sup>16</sup>Vektor <span class="math notranslate nohighlight">\(v\)</span> torej <em>potisnemo navzdol</em> s <span class="math notranslate nohighlight">\(F\)</span>.</span> Velja <span class="math notranslate nohighlight">\(v_i \in \Eigenspace_{\lambda - 2i}(H)\)</span>. Za nek <span class="math notranslate nohighlight">\(n \geq 0\)</span> velja torej <span class="math notranslate nohighlight">\(v_n \neq 0\)</span> in <span class="math notranslate nohighlight">\(v_{n+1} = 0\)</span>. Vektorji <span class="math notranslate nohighlight">\(v_0, v_1, \dots, v_n\)</span> so v različnih lastnih podprostorih <span class="math notranslate nohighlight">\(H\)</span>, zato so linearno neodvisni. Naj bo <span class="math notranslate nohighlight">\(W \leq V\)</span> podprostor, ki ga generirajo.</p>
+</label><input type='checkbox' id='sidenote-role-16' name='sidenote-role-16' class='margin-toggle'><span class="sidenote"><sup>16</sup>Vektor <span class="math notranslate nohighlight">\(v\)</span> torej <em>potisnemo navzdol</em> s <span class="math notranslate nohighlight">\(F\)</span>.</span> Velja <span class="math notranslate nohighlight">\(v_i \in \Eigenspace_{\lambda - 2i}(H)\)</span>. Za neki <span class="math notranslate nohighlight">\(n \geq 0\)</span> velja torej <span class="math notranslate nohighlight">\(v_n \neq 0\)</span> in <span class="math notranslate nohighlight">\(v_{n+1} = 0\)</span>. Vektorji <span class="math notranslate nohighlight">\(v_0, v_1, \dots, v_n\)</span> so v različnih lastnih podprostorih <span class="math notranslate nohighlight">\(H\)</span>, zato so linearno neodvisni. Naj bo <span class="math notranslate nohighlight">\(W \leq V\)</span> podprostor, ki ga generirajo.</p>
 <p>Naj bo <span class="math notranslate nohighlight">\(w_i = E v_i\)</span> za <span class="math notranslate nohighlight">\(i \geq 0\)</span>.<label for='sidenote-role-17' class='margin-toggle'><span id="id17">
 <sup>17</sup></span>
 
@@ -843,7 +833,7 @@ document.write(`
 <div class="trditev">
 <p>Naj bo <span class="math notranslate nohighlight">\(\phi \colon \slfrak_2(\CC) \to \glfrak_n(\CC)\)</span> Liejeva upodobitev. Tedaj obstaja analitična upodobitev <span class="math notranslate nohighlight">\(\rho \colon \SL_2(\CC) \to \GL_n(\CC)\)</span>, za katero velja <span class="math notranslate nohighlight">\(D_I \rho = \phi\)</span>.</p>
 </div>
-<p>Dokaz te trditve sloni na uporabi eksponentne preslikave in njenega inverza <span class="math notranslate nohighlight">\(\log\)</span>. Naj bo <span class="math notranslate nohighlight">\(U \subseteq \SL_2(\CC)\)</span> dovolj majhna okolica <span class="math notranslate nohighlight">\(I\)</span>, da je na njej <span class="math notranslate nohighlight">\(\log\)</span> difeomorfizem v neko okolico enote <span class="math notranslate nohighlight">\(\slfrak_2(\CC)\)</span>. Po potrebi <span class="math notranslate nohighlight">\(U\)</span> še zmanjšamo, da je <span class="math notranslate nohighlight">\(U^{-1} = U\)</span> in da je <span class="math notranslate nohighlight">\(\log |_{U \cdot U}\)</span> še vedno difeomorfizem. Vsaki matriki <span class="math notranslate nohighlight">\(A \in U\)</span> lahko lahko priredimo <span class="math notranslate nohighlight">\(\log A\)</span>, ki jo s <span class="math notranslate nohighlight">\(\phi\)</span> preslikamo v <span class="math notranslate nohighlight">\(\glfrak_n(\CC)\)</span> in nazadnje dvignemo nazaj do grupe z eksponentno preslikavo. Na ta način dobimo gladko funkcijo</p>
+<p>Dokaz te trditve sloni na uporabi eksponentne preslikave in njenega inverza <span class="math notranslate nohighlight">\(\log\)</span>. Naj bo <span class="math notranslate nohighlight">\(U \subseteq \SL_2(\CC)\)</span> dovolj majhna okolica <span class="math notranslate nohighlight">\(I\)</span>, da je na njej <span class="math notranslate nohighlight">\(\log\)</span> difeomorfizem v neko okolico enote <span class="math notranslate nohighlight">\(\slfrak_2(\CC)\)</span>. Po potrebi <span class="math notranslate nohighlight">\(U\)</span> še zmanjšamo, da je <span class="math notranslate nohighlight">\(U^{-1} = U\)</span> in da je <span class="math notranslate nohighlight">\(\log |_{U \cdot U}\)</span> še vedno difeomorfizem. Vsaki matriki <span class="math notranslate nohighlight">\(A \in U\)</span> lahko priredimo <span class="math notranslate nohighlight">\(\log A\)</span>, ki jo s <span class="math notranslate nohighlight">\(\phi\)</span> preslikamo v <span class="math notranslate nohighlight">\(\glfrak_n(\CC)\)</span> in nazadnje dvignemo nazaj do grupe z eksponentno preslikavo. Na ta način dobimo gladko funkcijo</p>
 <div class="math notranslate nohighlight">
 \[\textstyle \rho \colon U \subseteq \SL_2(\CC) \to \GL_n(\CC), \quad
     A \mapsto e^{\phi(\log A)}.\]</div>
@@ -860,10 +850,10 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\rho(A) \rho(B) = e^{\phi(\log A)} e^{\phi(\log B)}, \quad
     \rho(AB) = e^{\phi(\log(AB))}.\]</div>
-<p>Če bi logaritem pretvoril produkt v vsoto in eksponentna funkcija vsoto v produkt, potem bi iz linearnosti <span class="math notranslate nohighlight">\(\phi\)</span> takoj sledilo, da sta oba izraza enaka. V splošnem žal matrični logaritem in eksponentna funkcija nimata te lastnosti. Za vsaka <span class="math notranslate nohighlight">\(X,Y \in \glfrak_n(\CC)\)</span> lahko <a class="reference external" href="https://www.math.ru.nl/~mueger/PDF/BCHD.pdf">z nekaj truda</a> z uporabo razvoja v Taylorjevo vrsto izračunamo vrednost</p>
+<p>Če bi logaritem pretvoril produkt v vsoto in eksponentna funkcija vsoto v produkt, potem bi iz linearnosti <span class="math notranslate nohighlight">\(\phi\)</span> takoj sledilo, da sta oba izraza enaka. Na splošno žal matrični logaritem in eksponentna funkcija nimata te lastnosti. Za vsaka <span class="math notranslate nohighlight">\(X,Y \in \glfrak_n(\CC)\)</span> lahko <a class="reference external" href="https://www.math.ru.nl/~mueger/PDF/BCHD.pdf">z nekaj truda</a> z uporabo razvoja v Taylorjevo vrsto izračunamo vrednost</p>
 <div class="math notranslate nohighlight">
 \[\log(e^X e^Y) = X + Y + \frac{1}{2} [X,Y] - \frac{1}{12}[[X,Y],X] + \frac{1}{12} [[X,Y], Y] + \cdots,\]</div>
-<p>ki ji pravimo <span class="definicija">Baker-Campbell-Hausdorffova formula</span>. Res torej v splošnem ne velja <span class="math notranslate nohighlight">\(\log(e^X e^Y) = X+Y\)</span>, tolažilna lastnost razvoja pa je, da so vsi členi izrazljivi z Liejevim produktom <span class="math notranslate nohighlight">\([\cdot,\cdot]\)</span> v <span class="math notranslate nohighlight">\(\glfrak_n(\CC)\)</span>. To pomeni, da za <span class="math notranslate nohighlight">\(A = e^X\)</span>, <span class="math notranslate nohighlight">\(B = e^Y\)</span> velja</p>
+<p>ki ji pravimo <span class="definicija">Baker-Campbell-Hausdorffova formula</span>. Res torej na splošno ne velja <span class="math notranslate nohighlight">\(\log(e^X e^Y) = X+Y\)</span>, tolažilna lastnost razvoja pa je, da so vsi členi izrazljivi z Liejevim produktom <span class="math notranslate nohighlight">\([\cdot,\cdot]\)</span> v <span class="math notranslate nohighlight">\(\glfrak_n(\CC)\)</span>. To pomeni, da za <span class="math notranslate nohighlight">\(A = e^X\)</span>, <span class="math notranslate nohighlight">\(B = e^Y\)</span> velja</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
     \phi(\log(AB)) 
@@ -880,7 +870,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\rho(A) = \prod_{i = m}^{1} \rho \left( \gamma(t_i) \gamma(t_{i-1})^{-1} \right).\]</div>
 <p>Seveda moramo preveriti, da je ta definicija neodvisna od izbire delilnih točk <span class="math notranslate nohighlight">\(t_0, t_1, \dots, t_m\)</span> in od izbire poti <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
-<p>Prepričajmo se najprej, da z isto potjo <span class="math notranslate nohighlight">\(\gamma\)</span> drugačna izbira delilnih točk privede do enakega rezultata, če je le zadoščeno pogoju <span class="math notranslate nohighlight">\(\gamma(t) \gamma(s)^{-1} \in U\)</span> za vsaka <span class="math notranslate nohighlight">\(t_i \leq s &lt; t \leq t_{i+1}\)</span>. V ta namen bo dovolj premisliti, da se definicija <span class="math notranslate nohighlight">\(\rho(A)\)</span> ne spremeni, če fineje izberemo delilne točke, se pravi če dodamo še nekaj dodatnih točk.<label for='sidenote-role-18' class='margin-toggle'><span id="id18">
+<p>Prepričajmo se najprej, da z isto potjo <span class="math notranslate nohighlight">\(\gamma\)</span> drugačna izbira delilnih točk privede do enakega rezultata, če je le zadoščeno pogoju <span class="math notranslate nohighlight">\(\gamma(t) \gamma(s)^{-1} \in U\)</span> za vsaka <span class="math notranslate nohighlight">\(t_i \leq s &lt; t \leq t_{i+1}\)</span>. V ta namen bo dovolj premisliti, da se definicija <span class="math notranslate nohighlight">\(\rho(A)\)</span> ne spremeni, če fineje izberemo delilne točke, se pravi, če dodamo še nekaj dodatnih točk.<label for='sidenote-role-18' class='margin-toggle'><span id="id18">
 <sup>18</sup></span>
 
 </label><input type='checkbox' id='sidenote-role-18' name='sidenote-role-18' class='margin-toggle'><span class="sidenote"><sup>18</sup>Za vsaki dve izbiri delilnih točk lahko namreč najdemo tretjo izbiro, ki je finejša od obeh. Ta sklep je podoben kot pri definiciji Riemannovega integrala.</span> Za to pa bo dovolj preveriti, da se definicija <span class="math notranslate nohighlight">\(\rho(A)\)</span> ne spremeni, če dodamo eno samo dodatno delilno točko, na primer med <span class="math notranslate nohighlight">\(t_i\)</span> in <span class="math notranslate nohighlight">\(t_{i-1}\)</span> vrinemo nek <span class="math notranslate nohighlight">\(s\)</span>. V tem primeru se v definiciji <span class="math notranslate nohighlight">\(\rho(A)\)</span> spremeni le faktor <span class="math notranslate nohighlight">\(\rho(\gamma(t_i) \gamma(t_{i-1})^{-1})\)</span>, in sicer ga zamenjamo s produktom</p>
@@ -916,7 +906,7 @@ document.write(`
 
 </label><input type='checkbox' id='sidenote-role-21' name='sidenote-role-21' class='margin-toggle'><span class="sidenote"><sup>21</sup>Za celovito obravnavo Liejevih grup se lahko obrneš na zapiske <a class="reference external" href="https://users.fmf.uni-lj.si/mrcun/preprints/lg.pdf">(Mrčun 2024)</a>.</span> Eksaktno korespondenco med upodobitvami Liejeve grupe in njene prirejene Liejeve algebre izgubimo, če grupa ni enostavno povezana.</p>
 <div class="zgled">
-<p>Spomnimo se grupe <span class="math notranslate nohighlight">\(\U_1(\CC) \cong \RR/\ZZ\)</span>. Njena Liejeva algebra je <span class="math notranslate nohighlight">\(\RR\)</span> s trivialnim Liejevim produktom in njene enorazsežne Liejeve upodobitve so linearne preslikave <span class="math notranslate nohighlight">\(\RR \to \CC\)</span>, torej so oblike <span class="math notranslate nohighlight">\(X \mapsto \zeta X\)</span> za nek <span class="math notranslate nohighlight">\(\zeta \in \CC\)</span>. To upodobitev integriramo do lokalnega homomorfizma <span class="math notranslate nohighlight">\(x \mapsto e^{\zeta x}\)</span>, ki ga obravnavamo na majhni okolici enote v <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>. Ta preslikava se v splošnem <em>ne</em> razširi do homomorfizma na celotni grupi <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>. Se pa razširi do homomorfizma na <em>univerzalnem krovu</em> grupe <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>, ki je ravno <span class="math notranslate nohighlight">\(\RR\)</span>.</p>
+<p>Spomnimo se grupe <span class="math notranslate nohighlight">\(\U_1(\CC) \cong \RR/\ZZ\)</span>. Njena Liejeva algebra je <span class="math notranslate nohighlight">\(\RR\)</span> s trivialnim Liejevim produktom in njene enorazsežne Liejeve upodobitve so linearne preslikave <span class="math notranslate nohighlight">\(\RR \to \CC\)</span>, torej so oblike <span class="math notranslate nohighlight">\(X \mapsto \zeta X\)</span> za neki <span class="math notranslate nohighlight">\(\zeta \in \CC\)</span>. To upodobitev integriramo do lokalnega homomorfizma <span class="math notranslate nohighlight">\(x \mapsto e^{\zeta x}\)</span>, ki ga obravnavamo na majhni okolici enote v <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>. Ta preslikava se na splošno <em>ne</em> razširi do homomorfizma na celotni grupi <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>. Se pa razširi do homomorfizma na <em>univerzalnem krovu</em> grupe <span class="math notranslate nohighlight">\(\RR/\ZZ\)</span>, ki je ravno <span class="math notranslate nohighlight">\(\RR\)</span>.</p>
 </div>
 <div class="zgled">
 <p>Opazujmo grupo <span class="math notranslate nohighlight">\(\SU_2(\CC)\)</span>. Videli smo že, da je ta grupa homeomorfna sferi <span class="math notranslate nohighlight">\(S^3\)</span>. Grupa <span class="math notranslate nohighlight">\(\SU_2(\CC)\)</span> je torej enostavno povezana realna Liejeva grupa. Podobno kot za grupo <span class="math notranslate nohighlight">\(\SL_2(\CC)\)</span> se lahko prepričamo, da je Liejeva algebra <span class="math notranslate nohighlight">\(\sufrak_2(\CC)\)</span> Liejeve grupe <span class="math notranslate nohighlight">\(\SU_2(\CC)\)</span> enaka</p>
@@ -991,8 +981,8 @@ document.write(`
     = (-cz + a)^{-k} \cdot f\left( \begin{pmatrix}
         a &amp; b \\ c &amp; d
     \end{pmatrix}^{-1} \cdot z \right).\end{split}\]</div>
-<p>Izkaže se, da je <span class="math notranslate nohighlight">\(\rho_k\)</span> nerazcepna unitarna upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span> na neskončno razsežnem Hilbertovem prostoru <span class="math notranslate nohighlight">\(D_k\)</span> in da so te upodobitve med sabo neizomorfne. Na ta način dobimo celo vrsto nerazcepnih unitarnih upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span>, ki jim pravimo <span class="definicija">upodobitve diskretne vrste</span>.</p>
-<p>Z opazovanjem drugih zanimivih podgrup v <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span> najdemo še kakšne druge unitarne upodobitve. Še posebej zanimiva je diskretna podgrupa <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>. Z njo dobimo kvocientno množico <span class="math notranslate nohighlight">\(Y = \SL_2(\ZZ) \backslash \SL_2(\RR)\)</span>. Na grupo <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span> lahko s pomočjo projekcije <span class="math notranslate nohighlight">\(\SL_2(\RR) \to \SL_2(\RR)/\SO_2(\RR) = \HH\)</span> prenesemo mero, ki jo nato potisnemo na <span class="math notranslate nohighlight">\(Y\)</span>, tako da lahko opazujemo prostor funkcij <span class="math notranslate nohighlight">\(L^2(Y)\)</span>, na katerem deluje grupa <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span>. V tem prostoru lahko najdemo mnogo nerazcepnih unitarnih podupodobitev. Še posebej zanimive so upodobitve, ki so konsturirane s pomočjo indukcije unitarnih upodobitev Borelove podgrupe zgornjetrikotnih matrik. Te imenujemo <span class="definicija">upodobitve glavne vrste</span> in jih lahko vidimo kot posplošitev upodobitev glavne vrste iz teorije upodobitev grupe <span class="math notranslate nohighlight">\(\GL_2(\FF_p)\)</span>.</p>
+<p>Izkaže se, da je <span class="math notranslate nohighlight">\(\rho_k\)</span> nerazcepna unitarna upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span> na neskončno razsežnem Hilbertovem prostoru <span class="math notranslate nohighlight">\(D_k\)</span> in da so te upodobitve med seboj neizomorfne. Na ta način dobimo celo vrsto nerazcepnih unitarnih upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span>, ki jim pravimo <span class="definicija">upodobitve diskretne vrste</span>.</p>
+<p>Z opazovanjem drugih zanimivih podgrup v <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span> najdemo še kakšne druge unitarne upodobitve. Še posebej zanimiva je diskretna podgrupa <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>. Z njo dobimo kvocientno množico <span class="math notranslate nohighlight">\(Y = \SL_2(\ZZ) \backslash \SL_2(\RR)\)</span>. Na grupo <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span> lahko s pomočjo projekcije <span class="math notranslate nohighlight">\(\SL_2(\RR) \to \SL_2(\RR)/\SO_2(\RR) = \HH\)</span> prenesemo mero, ki jo nato potisnemo na <span class="math notranslate nohighlight">\(Y\)</span>, tako da lahko opazujemo prostor funkcij <span class="math notranslate nohighlight">\(L^2(Y)\)</span>, na katerem deluje grupa <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span>. V tem prostoru lahko najdemo veliko nerazcepnih unitarnih podupodobitev. Še posebej zanimive so upodobitve, ki so konstruirane s pomočjo indukcije unitarnih upodobitev Borelove podgrupe zgornjetrikotnih matrik. Te imenujemo <span class="definicija">upodobitve glavne vrste</span> in jih lahko vidimo kot posplošitev upodobitev glavne vrste iz teorije upodobitev grupe <span class="math notranslate nohighlight">\(\GL_2(\FF_p)\)</span>.</p>
 <p>Poleg teh dveh družin upodobitev ima grupa <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span> še eno nekoliko bolj nenavadno družino unitarnih nerazcepnih upodobitev, ki jih dobimo z indukcijo določenih <em>neunitarnih</em> upodobitev Borelove podgrupe. Te upodobitve tvorijo družino <span class="definicija">upodobitev komplementarne vrste</span>.</p>
 <p>Izkaže se, da vse netrivialne nerazcepne unitarne upodobitve grupe <span class="math notranslate nohighlight">\(\SL_2(\RR)\)</span> lahko dobimo iz ene od opisanih družin upodobitev.</p>
 <p>Razumevanje neskončno razsežnih nerazcepnih unitarnih upodobitev poljubnih Liejevih grup je eden od pomembnih nedoseženih ciljev teorije upodobitev. Nekaj znanih rezultatov skupaj z vizijo o tem, kako naprej, je predstavljenih v zelo dostopnem članku <a class="reference external" href="https://math.mit.edu/~dav/articleHIST.pdf">(Vogan 2007)</a>.</p>
@@ -1086,7 +1076,7 @@ document.write(`
 <div class="domacanaloga">
 <p>Prepričaj se, da za <em>nobeno</em> število <span class="math notranslate nohighlight">\(N \geq 2\)</span> ne velja, da se homomorfizem <span class="math notranslate nohighlight">\(\alpha_9\)</span> faktorizira prek kongruenčnega homomorfizma <span class="math notranslate nohighlight">\(\pi_N\)</span>. Natančneje, ne obstaja homomorfizem <span class="math notranslate nohighlight">\(h \colon \SL_2(\ZZ/N\ZZ) \to A_9\)</span>, da bi veljalo <span class="math notranslate nohighlight">\(h \circ \pi_N = \alpha_9\)</span>. V pomoč ti bo Kitajski izrek o ostankih. Kvocient <span class="math notranslate nohighlight">\(A_9\)</span> grupe <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span> je v tem smislu <em>nekongruenčen</em>.</p>
 </div>
-<p>Grupa <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span> ima torej končne kvociente <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span> in <span class="math notranslate nohighlight">\(A_n\)</span>, ki tvorijo standardne predstavnike končnih enostavnih grup. Vsaka od teh končnih grup nam da svoje nerazcepne upodobitve, s čimer po restrikciji dobimo mnogo različnih nerazcepnih upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>. Teorija upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span> bo torej zajemala bolj ali manj vso kompleksnost teorije upodobitev končnih enostavnih grup. Težko si je predstavljati, kako vse te spraviti pod eno streho.</p>
+<p>Grupa <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span> ima torej končne kvociente <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span> in <span class="math notranslate nohighlight">\(A_n\)</span>, ki tvorijo standardne predstavnike končnih enostavnih grup. Vsaka od teh končnih grup nam da svoje nerazcepne upodobitve, s čimer po restrikciji dobimo veliko različnih nerazcepnih upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>. Teorija upodobitev grupe <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span> bo torej zajemala bolj ali manj vso kompleksnost teorije upodobitev končnih enostavnih grup. Težko si je predstavljati, kako vse te spraviti pod eno streho.</p>
 <p>Obravnave vseh upodobitev se lotimo sistematično po razsežnostih. Vsaka <span class="math notranslate nohighlight">\(n\)</span>-razsežna kompleksna upodobitev je določena z izbiro matrik <span class="math notranslate nohighlight">\(X,Y \in \GL_n(\CC)\)</span> z lastnostjo <span class="math notranslate nohighlight">\(X^2 = Y^3 = I\)</span>. Upodobitve nas zanimajo le do izomorfizma natančno, kar pomeni, da moramo za razumevanje izomorfnostnih razredov upodobitev razumeti kvocientno množico</p>
 <div class="math notranslate nohighlight">
 \[{\textstyle \Rep_n} = \frac{\{ (X, Y) \in \GL_n(\CC) \times \GL_n(\CC) \mid X^2 = Y^3 = I \}}
@@ -1154,7 +1144,7 @@ document.write(`
 <p>Oglejmo si še grupo <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span> kot zgled <em>aritmetične mreže višjega ranga</em>.</p>
 <section id="prezentacija">
 <h4>Prezentacija<a class="headerlink" href="#prezentacija" title="Link to this heading">#</a></h4>
-<p>Upodobitve <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span> bi lahko skušali razumeti na podoben način kot <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>. Standardna generatorska množica sestoji iz matrik oblike <span class="math notranslate nohighlight">\(T_{ij} = I + E_{ij}\)</span> za <span class="math notranslate nohighlight">\(1 \leq i, j \leq 3\)</span>, <span class="math notranslate nohighlight">\(i \neq j\)</span>, kjer je <span class="math notranslate nohighlight">\(E_{ij}\)</span> matrika z vnosom <span class="math notranslate nohighlight">\(1\)</span> na mestu <span class="math notranslate nohighlight">\((i,j)\)</span> in <span class="math notranslate nohighlight">\(0\)</span> sicer. Kot v prejšnjem razdelku pa se zadeve poenostavijo z nestandardno izbiro generatorjev</p>
+<p>Upodobitve <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span> bi lahko skušali razumeti na podoben način kot <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>. Standardna generatorska množica sestoji iz matrik oblike <span class="math notranslate nohighlight">\(T_{ij} = I + E_{ij}\)</span> za <span class="math notranslate nohighlight">\(1 \leq i, j \leq 3\)</span>, <span class="math notranslate nohighlight">\(i \neq j\)</span>, pri čemer je <span class="math notranslate nohighlight">\(E_{ij}\)</span> matrika z vnosom <span class="math notranslate nohighlight">\(1\)</span> na mestu <span class="math notranslate nohighlight">\((i,j)\)</span> in <span class="math notranslate nohighlight">\(0\)</span> sicer. Kot v prejšnjem razdelku pa se zadeve poenostavijo z nestandardno izbiro generatorjev</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}x =
     \begin{pmatrix}
@@ -1192,7 +1182,7 @@ document.write(`
 <sup>30</sup></span>
 
 </label><input type='checkbox' id='sidenote-role-30' name='sidenote-role-30' class='margin-toggle'><span class="sidenote"><sup>30</sup>Angleško <em>congruence subgroup property.</em></span></p>
-<p>Vsak končni kvocient <span class="math notranslate nohighlight">\(G\)</span> grupe <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span> ima svoje nerazcepne upodobitve, ki jih z restrikcijo potegnemo do nerazcepnih upodobitev grupe <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span>. Po lastnosti kongruenčnih podgrupe je tak <span class="math notranslate nohighlight">\(G\)</span> nujno kvocient <span class="math notranslate nohighlight">\(\SL_3(\ZZ/N\ZZ)\)</span> za nek <span class="math notranslate nohighlight">\(N\)</span>, zato bo dovolj opazovati nerazcepne upodobitve kongruenčnih kvocientov. Če je <span class="math notranslate nohighlight">\(N\)</span> praštevilo, te zelo dobro razumemo s tehnikami upodobitev končnih grup. V splošnem iz praštevilske faktorizacije <span class="math notranslate nohighlight">\(N = p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m}\)</span> z uporabo Kitajskega izreka o ostankih dobimo</p>
+<p>Vsak končni kvocient <span class="math notranslate nohighlight">\(G\)</span> grupe <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span> ima svoje nerazcepne upodobitve, ki jih z restrikcijo potegnemo do nerazcepnih upodobitev grupe <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span>. Po lastnosti kongruenčnih podgrupe je tak <span class="math notranslate nohighlight">\(G\)</span> nujno kvocient <span class="math notranslate nohighlight">\(\SL_3(\ZZ/N\ZZ)\)</span> za neki <span class="math notranslate nohighlight">\(N\)</span>, zato bo dovolj opazovati nerazcepne upodobitve kongruenčnih kvocientov. Če je <span class="math notranslate nohighlight">\(N\)</span> praštevilo, te zelo dobro razumemo s tehnikami upodobitev končnih grup. Na splošno iz praštevilske faktorizacije <span class="math notranslate nohighlight">\(N = p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m}\)</span> z uporabo Kitajskega izreka o ostankih dobimo</p>
 <div class="math notranslate nohighlight">
 \[\textstyle \SL_3(\ZZ/N\ZZ) \cong \SL_3(\ZZ/p_1^{k_1}\ZZ) \times \SL_3(\ZZ/p_2^{k_2}\ZZ) \times \cdots \times \SL_3(\ZZ/p_m^{k_m}\ZZ).\]</div>
 <p>Razumeti moramo torej upodobitve grup <span class="math notranslate nohighlight">\(\SL_3(\ZZ/p^k\ZZ)\)</span> za praštevilo <span class="math notranslate nohighlight">\(p\)</span> in vse potence <span class="math notranslate nohighlight">\(k \geq 1\)</span>.</p>
@@ -1262,7 +1252,7 @@ document.write(`
 </section>
 <section id="id33">
 <h4>Nerazcepne upodobitve<a class="headerlink" href="#id33" title="Link to this heading">#</a></h4>
-<p>Nerazcepne upodobitve grupe <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span> lahko konstruiramo s pomočjo nerazcepnih upodobitev grupe <span class="math notranslate nohighlight">\(\SL_3(\widehat{\ZZ})\)</span> ali pa kot restrikcijo nerazcepnih upodobitev običajne Liejeve grupe <span class="math notranslate nohighlight">\(\SL_3(\CC)\)</span>. Te upodobitve lahko tenzorsko množimo med sabo. Neverjetno je, da na ta način dobimo <em>vse</em> nerazcepne upodobitve grupe <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span>. Konceptualno lahko to pojasnimo z naslednjo lastnostjo <em>dviganja</em> upodobitev.</p>
+<p>Nerazcepne upodobitve grupe <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span> lahko konstruiramo s pomočjo nerazcepnih upodobitev grupe <span class="math notranslate nohighlight">\(\SL_3(\widehat{\ZZ})\)</span> ali pa kot restrikcijo nerazcepnih upodobitev običajne Liejeve grupe <span class="math notranslate nohighlight">\(\SL_3(\CC)\)</span>. Te upodobitve lahko tenzorsko množimo med seboj. Neverjetno je, da na ta način dobimo <em>vse</em> nerazcepne upodobitve grupe <span class="math notranslate nohighlight">\(\SL_3(\ZZ)\)</span>. Konceptualno lahko to pojasnimo z naslednjo lastnostjo <em>dviganja</em> upodobitev.</p>
 <div class="izrek">
 <p>Naj bo <span class="math notranslate nohighlight">\(\rho \colon \SL_3(\ZZ) \to \GL_n(\CC)\)</span> upodobitev. Tedaj obstaja upodobitev</p>
 <div class="math notranslate nohighlight">
@@ -1362,14 +1352,16 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Vsebina
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ozaljsane-upodobitve">Ozaljšane upodobitve</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zveznost">Zveznost</a></li>
@@ -1458,8 +1450,8 @@ Avtor Urban Jezernik
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

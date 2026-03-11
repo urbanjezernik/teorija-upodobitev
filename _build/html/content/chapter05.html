@@ -16,43 +16,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/quiz.css?v=ec93ceb6" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css?v=870912a7" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=a3a20203"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script src="../_static/translations.js?v=852ec8ec"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
@@ -73,6 +76,7 @@
     <link rel="prev" title="Razširjeni zgledi – končni" href="chapter04.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="sl"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -88,19 +92,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -108,7 +101,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -116,8 +108,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -133,7 +125,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -170,9 +163,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -255,7 +253,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Celozaslonski način"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -269,25 +267,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Išči" aria-label="Išči" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -367,7 +357,7 @@ document.write(`
 <h1>Uporabe<a class="headerlink" href="#uporabe" title="Link to this heading">#</a></h1>
 <p>Avstralski matematik Geordie Williamson je na svojem <a class="reference external" href="https://www.youtube.com/watch?v=-3q6C558yog">plenarnem predavanju</a> na Mednarodnem matematičnem kongresu leta 2018 opisal teorijo upodobitev na naslednji način.</p>
 <p><em>The idea is that groups in mathematics are everywhere, but groups are nonlinear objects and are rather complicated. We attempt to linearize in some way by taking, for example, actions on a space of functions. We understand what can happen in the linear world by representation theory. Then we hope to go back to our original problem.</em></p>
-<p>V tem poglavju si bomo pogledali nekaj konkretnih uporab teorije upodobitev, ki na prvi pogled nimajo nobene povezave z upodobitvami, nazadnje pa je za njihovo razumevanje ključna. Pričeli bomo z abelovimi grupami. V tem primeru uporabam teorije upodobitev ponavadi rečemo <span class="definicija">harmonična analiza</span>. To zgodbo bomo potem razširili še v nekomutativen svet.</p>
+<p>V tem poglavju si bomo pogledali nekaj konkretnih uporab teorije upodobitev, ki na prvi pogled nimajo nobene povezave z upodobitvami, nazadnje pa je za njihovo razumevanje ključna. Začeli bomo z abelovimi grupami. V tem primeru uporabam teorije upodobitev po navadi rečemo <span class="definicija">harmonična analiza</span>. To zgodbo bomo potem razširili še v nekomutativen svet.</p>
 <section id="aritmeticna-zaporedja">
 <h2>Aritmetična zaporedja<a class="headerlink" href="#aritmeticna-zaporedja" title="Link to this heading">#</a></h2>
 <section id="aritmeticna-zaporedja-v-gostih-mnozicah">
@@ -437,7 +427,7 @@ document.write(`
 <p>Število iskanih aritmetičnih zaporedij je zato enako</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{p} \sum_{j \in \FF_p} \widehat{1_A}(\chi_j)^2 \overline{\widehat{1_A}(\chi_j^2)}
-    = \frac{1}{p} \sum_{j \in \FF_p} \widehat{1_A}(\chi_j)^2 \widehat{1_A}(\chi_{-2j})\]</div>
+    = \frac{1}{p} \sum_{j \in \FF_p} \widehat{1_A}(\chi_j)^2 \widehat{1_A}(\chi_{-2j}).\]</div>
 </section>
 <section id="glavni-del-in-prispevki-netrivialnih-karakterjev">
 <h4>Glavni del in prispevki netrivialnih karakterjev<a class="headerlink" href="#glavni-del-in-prispevki-netrivialnih-karakterjev" title="Link to this heading">#</a></h4>
@@ -472,7 +462,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\PP_{x,y,z \in \FF_p}(x,y,z \in A \mid x+y=2z)
     \geq \delta^3 - \delta \cdot \frac{1}{p} \max_{j \in \FF_p^*} |\widehat{1_A}(\chi_j)|.\]</div>
-<p>Kadar je Fourierova transformacija <span class="math notranslate nohighlight">\(1_A\)</span> v vseh netrivialnih karakterjih strogo manjša od <span class="math notranslate nohighlight">\(p \delta^2\)</span>, je verjetnost na levi strani strogo pozitivna, zato res najdemo aritmetično zaporedje dolžine <span class="math notranslate nohighlight">\(3\)</span> v <span class="math notranslate nohighlight">\(A\)</span>. Ko pa ima po drugi strani <span class="math notranslate nohighlight">\(\widehat{1_A}\)</span> kakšen velik netrivialen Fourierov koeficient, se pravi ko za nek <span class="math notranslate nohighlight">\(j \in \FF_p^*\)</span> velja</p>
+<p>Kadar je Fourierova transformacija <span class="math notranslate nohighlight">\(1_A\)</span> v vseh netrivialnih karakterjih strogo manjša od <span class="math notranslate nohighlight">\(p \delta^2\)</span>, je verjetnost na levi strani strogo pozitivna, zato res najdemo aritmetično zaporedje dolžine <span class="math notranslate nohighlight">\(3\)</span> v <span class="math notranslate nohighlight">\(A\)</span>. Ko pa ima po drugi strani <span class="math notranslate nohighlight">\(\widehat{1_A}\)</span> kakšen velik netrivialen Fourierov koeficient, se pravi, ko za nek <span class="math notranslate nohighlight">\(j \in \FF_p^*\)</span> velja</p>
 <div class="math notranslate nohighlight">
 \[|\widehat{1_A}(\chi_j)| \geq p \delta^2,\]</div>
 <p>pa harmonična analiza odpove. V tem primeru moramo podrobneje raziskati pomen velikega Fourierovega koeficienta.</p>
@@ -496,7 +486,7 @@ document.write(`
 \[\left|\sum_{x \in \FF_p} f(x) \zeta^{-jx}\right| \leq
    \sum_{i = 1}^m \left| \sum_{x \in P_i} f(x) \zeta^{-jx} \right|
    = \sum_{i = 1}^m \left| \sum_{x \in P_i} f(x) \left( \zeta^{-jx_0} + (\zeta^{-jx} - \zeta^{-jx_0}) \right) \right|,\]</div>
-<p>kjer smo v vsakem <span class="math notranslate nohighlight">\(P_i\)</span> izbrali nek element <span class="math notranslate nohighlight">\(x_0\)</span>. Po trikotniški neenakosti in upoštevanju približne konstantnosti funkcije <span class="math notranslate nohighlight">\(x \mapsto \zeta^{-jx}\)</span> na <span class="math notranslate nohighlight">\(P_i\)</span> lahko zadnjo vsoto omejimo navzgor kot</p>
+<p>pri čemer smo v vsakem <span class="math notranslate nohighlight">\(P_i\)</span> izbrali nek element <span class="math notranslate nohighlight">\(x_0\)</span>. Po trikotniški neenakosti in upoštevanju približne konstantnosti funkcije <span class="math notranslate nohighlight">\(x \mapsto \zeta^{-jx}\)</span> na <span class="math notranslate nohighlight">\(P_i\)</span> lahko zadnjo vsoto omejimo navzgor kot</p>
 <div class="math notranslate nohighlight">
 \[\sum_{i = 1}^m \left| \sum_{x \in P_i} f(x) \right| + 
     \sum_{i = 1}^m \sum_{x \in P_i} | f(x) | c \delta^2
@@ -504,7 +494,7 @@ document.write(`
 <p>S tem nazadnje dobimo neenakost</p>
 <div class="math notranslate nohighlight">
 \[\sum_{i = 1}^m \left| \sum_{x \in P_i} f(x) \right| \geq (1-c) p \delta^2.\]</div>
-<p>Po konstrukciji je povprečje funkcije <span class="math notranslate nohighlight">\(f\)</span> po <span class="math notranslate nohighlight">\(\FF_p\)</span> enako <span class="math notranslate nohighlight">\(0\)</span>. Vsote po zaporedjih <span class="math notranslate nohighlight">\(P_i\)</span> se torej seštejejo v <span class="math notranslate nohighlight">\(0\)</span>, po absolutni vrednosti pa se seštejejo v vsaj <span class="math notranslate nohighlight">\((1-c) p \delta^2\)</span>. Torej obstaja nek <span class="math notranslate nohighlight">\(i\)</span>, za katerega velja</p>
+<p>Po konstrukciji je povprečje funkcije <span class="math notranslate nohighlight">\(f\)</span> po <span class="math notranslate nohighlight">\(\FF_p\)</span> enako <span class="math notranslate nohighlight">\(0\)</span>. Vsote po zaporedjih <span class="math notranslate nohighlight">\(P_i\)</span> se torej seštejejo v <span class="math notranslate nohighlight">\(0\)</span>, po absolutni vrednosti pa se seštejejo v vsaj <span class="math notranslate nohighlight">\((1-c) p \delta^2\)</span>. Torej obstaja neki <span class="math notranslate nohighlight">\(i\)</span>, za katerega velja</p>
 <div class="math notranslate nohighlight">
 \[\sum_{x \in P_i} f(x)
     +
@@ -536,11 +526,11 @@ document.write(`
 </section>
 <section id="onkraj-rothovega-izreka">
 <h3>Onkraj Rothovega izreka<a class="headerlink" href="#onkraj-rothovega-izreka" title="Link to this heading">#</a></h3>
-<p>Mnogo dela po Rothovem izreku je bilo posvečenega izboljšanju meje o gostoti, ki še zagotovi obstoj aritmetičnih zaporedij dolžine <span class="math notranslate nohighlight">\(3\)</span>. Večina izboljšav spodnje meje je s sabo prinesla nove ideje, uporabne tudi za reševanje kakšnih drugih problemov. Najsodobnejši rezultat v zvezi s tem je prebojen članek <a class="reference external" href="https://www.quantamagazine.org/landmark-math-proof-clears-hurdle-in-top-erdos-conjecture-20200803/">(Bloom-Sisask 2020)</a>, kjer avtorja dokažeta, da obstajata konstanti <span class="math notranslate nohighlight">\(C,c\)</span>, tako da ima vsaka množica <span class="math notranslate nohighlight">\(A \subseteq \{ 1, 2, \dots, n \}\)</span> gostote vsaj <span class="math notranslate nohighlight">\(C / (\log n)^{1 + c}\)</span> aritmetično zaporedje dolžine <span class="math notranslate nohighlight">\(3\)</span>. Ta meja se torej znebi dvojnega logaritma in uvede minimalen eksponent k logaritmu, zato je bistveno manjša restrikcija na gostoto.<label for='sidenote-role-4' class='margin-toggle'><span id="id4">
+<p>Veliko dela po Rothovem izreku je bilo posvečenega izboljšanju meje o gostoti, ki še zagotovi obstoj aritmetičnih zaporedij dolžine <span class="math notranslate nohighlight">\(3\)</span>. Večina izboljšav spodnje meje je s seboj prinesla nove ideje, uporabne tudi za reševanje kakšnih drugih problemov. Najsodobnejši rezultat v zvezi s tem je prebojen članek <a class="reference external" href="https://www.quantamagazine.org/landmark-math-proof-clears-hurdle-in-top-erdos-conjecture-20200803/">(Bloom-Sisask 2020)</a>, v katerem avtorja dokažeta, da obstajata konstanti <span class="math notranslate nohighlight">\(C,c\)</span>, tako da ima vsaka množica <span class="math notranslate nohighlight">\(A \subseteq \{ 1, 2, \dots, n \}\)</span> gostote vsaj <span class="math notranslate nohighlight">\(C / (\log n)^{1 + c}\)</span> aritmetično zaporedje dolžine <span class="math notranslate nohighlight">\(3\)</span>. Ta meja se torej znebi dvojnega logaritma in uvede minimalen eksponent k logaritmu, zato je bistveno manjša restrikcija na gostoto.<label for='sidenote-role-4' class='margin-toggle'><span id="id4">
 <sup>4</sup></span>
 
 </label><input type='checkbox' id='sidenote-role-4' name='sidenote-role-4' class='margin-toggle'><span class="sidenote"><sup>4</sup>Iskanje optimalnih restrikcij na gostoto je predstavljeno v <a class="reference external" href="https://repozitorij.uni-lj.si/IzpisGradiva.php?id=155586&amp;amp;lang=slv">(Bone 2024)</a>.</span></p>
-<p>Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiševa je število praštevil do <span class="math notranslate nohighlight">\(n\)</span> vsaj <span class="math notranslate nohighlight">\(C n / \log n\)</span>, zato imajo praštevila v <span class="math notranslate nohighlight">\(\{1,2,\dots,n\}\)</span> gostoto vsaj <span class="math notranslate nohighlight">\(C / \log n\)</span> in na njih lahko uporabimo posplošeni Rothov izrek. Ker lahko vselej tudi izpustimo prvih nekaj praštevil, torej sklepamo, da množica praštevil vsebuje neskončno mnogo aritmetičnih zaporedij dolžine <span class="math notranslate nohighlight">\(3\)</span>. Poudarimo konceptualno pomembno dejstvo, da smo ta rezultat izpeljali zgolj zaradi same gostote praštevil in ne zaradi kakršne koli druge njihove lastnosti. Nenazadnje je slogan izvirnega Rothovega izreka ta, da lahko najdemo v vsaki dovolj gosti množici strukturo.</p>
+<p>Ta rezultat lahko uporabimo, na primer, z množico praštevil. Po izreku Čebiševa je število praštevil do <span class="math notranslate nohighlight">\(n\)</span> vsaj <span class="math notranslate nohighlight">\(C n / \log n\)</span>, zato imajo praštevila v <span class="math notranslate nohighlight">\(\{1,2,\dots,n\}\)</span> gostoto vsaj <span class="math notranslate nohighlight">\(C / \log n\)</span> in na njih lahko uporabimo posplošeni Rothov izrek. Ker lahko vselej tudi izpustimo prvih nekaj praštevil, torej sklepamo, da množica praštevil vsebuje neskončno mnogo aritmetičnih zaporedij dolžine <span class="math notranslate nohighlight">\(3\)</span>. Poudarimo konceptualno pomembno dejstvo, da smo ta rezultat izpeljali zgolj zaradi same gostote praštevil in ne zaradi kakršne koli druge njihove lastnosti. Ne nazadnje je slogan izvirnega Rothovega izreka ta, da lahko najdemo v vsaki dovolj gosti množici strukturo.</p>
 <div class="odprtproblem">
 <p>Ali je mogoče z ustrezno posplošitvijo Rothovega izreka dokazati, da praštevila vsebujejo aritmetična zaporedja dolžine <span class="math notranslate nohighlight">\(k\)</span> za vsak <span class="math notranslate nohighlight">\(k \geq 3\)</span>? Obstoj takih zaporedij je sicer znan iz <a class="reference external" href="https://en.wikipedia.org/wiki/Green%E2%80%93Tao_theorem">(Green-Tao 2004)</a>, ki temelji na razširitvi Szemerédijevega izreka, a ne v smeri nižanja meje gostote, temveč v uporabi izreka na specifičnih redkih podmnožicah.</p>
 </div>
@@ -558,7 +548,7 @@ document.write(`
 <h2>Podmnožice brez produktov<a class="headerlink" href="#podmnozice-brez-produktov" title="Link to this heading">#</a></h2>
 <section id="antipodgrupe">
 <h3>Antipodgrupe<a class="headerlink" href="#antipodgrupe" title="Link to this heading">#</a></h3>
-<p>Naj bo <span class="math notranslate nohighlight">\(G\)</span> končna grupa in <span class="math notranslate nohighlight">\(A \subseteq G\)</span> njena podmnožica. Množica <span class="math notranslate nohighlight">\(A\)</span> je podgrupa, če in samo če je zaprta za množenje, se pravi <span class="math notranslate nohighlight">\(A \cdot A \subseteq A\)</span>. Skrajno diametralno tej strukturi se znajdemo, če predpostavimo, da produkt <em>nobenih</em> dveh elementov iz množice <span class="math notranslate nohighlight">\(A\)</span> ne pripada <span class="math notranslate nohighlight">\(A\)</span>, se pravi <span class="math notranslate nohighlight">\(A \cdot A \cap A = \emptyset\)</span>. Z drugimi besedami, enačba <span class="math notranslate nohighlight">\(xy = z\)</span> v množici <span class="math notranslate nohighlight">\(A\)</span> nima rešitev. V tem primeru rečemo, da je množica <span class="math notranslate nohighlight">\(A\)</span> <span class="definicija">brez produktov</span>. Če smo v teoriji grup malodane obsedeni s strukturiranimi množicami, nas mora vsaj malo tudi zanimati tudi druga skrajnost.</p>
+<p>Naj bo <span class="math notranslate nohighlight">\(G\)</span> končna grupa in <span class="math notranslate nohighlight">\(A \subseteq G\)</span> njena podmnožica. Množica <span class="math notranslate nohighlight">\(A\)</span> je podgrupa, če in samo če je zaprta za množenje, se pravi <span class="math notranslate nohighlight">\(A \cdot A \subseteq A\)</span>. Skrajno diametralno tej strukturi se znajdemo, če predpostavimo, da produkt <em>nobenih</em> dveh elementov iz množice <span class="math notranslate nohighlight">\(A\)</span> ne pripada <span class="math notranslate nohighlight">\(A\)</span>, se pravi <span class="math notranslate nohighlight">\(A \cdot A \cap A = \emptyset\)</span>. Z drugimi besedami, enačba <span class="math notranslate nohighlight">\(xy = z\)</span> v množici <span class="math notranslate nohighlight">\(A\)</span> nima rešitev. V tem primeru rečemo, da je množica <span class="math notranslate nohighlight">\(A\)</span> <span class="definicija">brez produktov</span>. Če smo v teoriji grup malodane obsedeni s strukturiranimi množicami, nas mora vsaj malo zanimati tudi druga skrajnost.</p>
 <p>Kadar množica <span class="math notranslate nohighlight">\(A\)</span> vsebuje kakšno podgrupo, seveda <em>ni</em> brez produktov, zato se morajo take množice čim bolj izogniti podgrupam. Osnovno vprašanje v zvezi z množicami brez produktov je, kako velike podmnožice brez produktov dana grupa vsebuje. Za začetek si oglejmo nekaj preprostih zgledov.</p>
 <div class="zgled">
 <ul>
@@ -575,17 +565,17 @@ document.write(`
 <li><p>Naj bo <span class="math notranslate nohighlight">\(G\)</span> končna grupa s podgrupo <span class="math notranslate nohighlight">\(H \leq G\)</span>. Naj bo <span class="math notranslate nohighlight">\(A = Hg\)</span> za nek <span class="math notranslate nohighlight">\(g \in G \backslash H\)</span>. Tedaj za <span class="math notranslate nohighlight">\(x = h_1 g\)</span> in <span class="math notranslate nohighlight">\(y = h_2 g\)</span> velja <span class="math notranslate nohighlight">\(Hxy = Hh_1 g h_2 g = H g h_2 g\)</span>. Pri tem velja <span class="math notranslate nohighlight">\(xy \in A\)</span>, če in samo če je <span class="math notranslate nohighlight">\(H g h_2 g = Hg\)</span>, kar se poenostavi do <span class="math notranslate nohighlight">\(g h_2 \in H\)</span>, se pravi <span class="math notranslate nohighlight">\(g \in H\)</span>, kar je sprto s predpostavko. Množica <span class="math notranslate nohighlight">\(A\)</span> je zato brez produktov. Njena gostota v <span class="math notranslate nohighlight">\(G\)</span> je <span class="math notranslate nohighlight">\(1/|G:H|\)</span>. Ta primer posploši zadnjega, kjer smo obravnavali <span class="math notranslate nohighlight">\(A_n \leq S_n\)</span>.</p></li>
 </ul>
 </div>
-<p>Mnogo težje je najti podmnožice brez produktov pozitivne gostote v alternirajoči grupi <span class="math notranslate nohighlight">\(A_n\)</span> (ko gre <span class="math notranslate nohighlight">\(n\)</span> proti neskončnosti) ali linearni grupi <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span> (ko gre <span class="math notranslate nohighlight">\(p\)</span> proti neskončnosti). Dokazali bomo, da to težavo lahko pojasnimo s teorijo upodobitev.</p>
+<p>Veliko težje je najti podmnožice brez produktov pozitivne gostote v alternirajoči grupi <span class="math notranslate nohighlight">\(A_n\)</span> (ko gre <span class="math notranslate nohighlight">\(n\)</span> proti neskončnosti) ali linearni grupi <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span> (ko gre <span class="math notranslate nohighlight">\(p\)</span> proti neskončnosti). Dokazali bomo, da to težavo lahko pojasnimo s teorijo upodobitev.</p>
 <div class="izrek">
 <p>Naj bo <span class="math notranslate nohighlight">\(G\)</span> končna grupa in naj bo <span class="math notranslate nohighlight">\(m\)</span> najmanjša stopnja netrivialne nerazcepne kompleksne upodobitve <span class="math notranslate nohighlight">\(G\)</span>. Tedaj je vsaka podmnožica brez produktov v <span class="math notranslate nohighlight">\(G\)</span> gostote kvečjemu <span class="math notranslate nohighlight">\(m^{-1/3}\)</span>.</p>
 </div>
 <div class="zgled">
 <ul>
-<span class="sidenote"><sup>6</sup>Za funkciji <span class="math notranslate nohighlight">\(f, g \colon \NN \to \RR\)</span> pišemo <span class="math notranslate nohighlight">\(f \ll g\)</span>, če obstaja konstanta <span class="math notranslate nohighlight">\(C\)</span>, da je <span class="math notranslate nohighlight">\(f(n) \leq C g(n)\)</span> za vse <span class="math notranslate nohighlight">\(n\)</span>. V primeru, ko za funkciji <span class="math notranslate nohighlight">\(f,g\)</span> velja hkrati <span class="math notranslate nohighlight">\(f \ll g\)</span> in <span class="math notranslate nohighlight">\(g \ll f\)</span>, pišemo <span class="math notranslate nohighlight">\(f = \Theta(g)\)</span>. Funkciji <span class="math notranslate nohighlight">\(f\)</span> in <span class="math notranslate nohighlight">\(g\)</span> sta torej asimptotsko do konstante natančno enaki.</span><li><p>Iz rezultatov o upodobitvah simetričnih grup (natančneje, formule o kljukah) sledi, do ima <span class="math notranslate nohighlight">\(S_n\)</span> dve nerazcepni upodobitvi stopnje <span class="math notranslate nohighlight">\(1\)</span> (to sta <span class="math notranslate nohighlight">\(\oneone\)</span> in <span class="math notranslate nohighlight">\(\sgn\)</span>) in dve nerazcepni upodobitvi stopnje <span class="math notranslate nohighlight">\(n-1\)</span> (to sta <span class="math notranslate nohighlight">\(\rho\)</span> in <span class="math notranslate nohighlight">\(\rho \otimes \sgn\)</span>), vse ostale nerazcepne upodobitve pa so višje stopnje (za <span class="math notranslate nohighlight">\(n \geq 7\)</span>). Velja torej <span class="math notranslate nohighlight">\(m = \Theta(n)\)</span>.<label for='sidenote-role-6' class='margin-toggle'><span id="id6">
+<span class="sidenote"><sup>6</sup>Za funkciji <span class="math notranslate nohighlight">\(f, g \colon \NN \to \RR\)</span> pišemo <span class="math notranslate nohighlight">\(f \ll g\)</span>, če obstaja konstanta <span class="math notranslate nohighlight">\(C\)</span>, da je <span class="math notranslate nohighlight">\(f(n) \leq C g(n)\)</span> za vse <span class="math notranslate nohighlight">\(n\)</span>. V primeru, ko za funkciji <span class="math notranslate nohighlight">\(f,g\)</span> velja hkrati <span class="math notranslate nohighlight">\(f \ll g\)</span> in <span class="math notranslate nohighlight">\(g \ll f\)</span>, pišemo <span class="math notranslate nohighlight">\(f = \Theta(g)\)</span>. Funkciji <span class="math notranslate nohighlight">\(f\)</span> in <span class="math notranslate nohighlight">\(g\)</span> sta torej asimptotsko do konstante natančno enaki.</span><li><p>Iz rezultatov o upodobitvah simetričnih grup (natančneje, formule o kljukah) sledi, do ima <span class="math notranslate nohighlight">\(S_n\)</span> dve nerazcepni upodobitvi stopnje <span class="math notranslate nohighlight">\(1\)</span> (to sta <span class="math notranslate nohighlight">\(\oneone\)</span> in <span class="math notranslate nohighlight">\(\sgn\)</span>) in dve nerazcepni upodobitvi stopnje <span class="math notranslate nohighlight">\(n-1\)</span> (to sta <span class="math notranslate nohighlight">\(\rho\)</span> in <span class="math notranslate nohighlight">\(\rho \otimes \sgn\)</span>), vse druge nerazcepne upodobitve pa so višje stopnje (za <span class="math notranslate nohighlight">\(n \geq 7\)</span>). Velja torej <span class="math notranslate nohighlight">\(m = \Theta(n)\)</span>.<label for='sidenote-role-6' class='margin-toggle'><span id="id6">
 <sup>6</sup></span>
 
 </label><input type='checkbox' id='sidenote-role-6' name='sidenote-role-6' class='margin-toggle'><span class="sidenote d-n"><sup>6</sup>Za funkciji <span class="math notranslate nohighlight">\(f, g \colon \NN \to \RR\)</span> pišemo <span class="math notranslate nohighlight">\(f \ll g\)</span>, če obstaja konstanta <span class="math notranslate nohighlight">\(C\)</span>, da je <span class="math notranslate nohighlight">\(f(n) \leq C g(n)\)</span> za vse <span class="math notranslate nohighlight">\(n\)</span>. V primeru, ko za funkciji <span class="math notranslate nohighlight">\(f,g\)</span> velja hkrati <span class="math notranslate nohighlight">\(f \ll g\)</span> in <span class="math notranslate nohighlight">\(g \ll f\)</span>, pišemo <span class="math notranslate nohighlight">\(f = \Theta(g)\)</span>. Funkciji <span class="math notranslate nohighlight">\(f\)</span> in <span class="math notranslate nohighlight">\(g\)</span> sta torej asimptotsko do konstante natančno enaki.</span> Po izreku v <span class="math notranslate nohighlight">\(A_n\)</span> zatorej <em>ni</em> podmnožic brez produktov pozitivne gostote, ko gre <span class="math notranslate nohighlight">\(n\)</span> čez vse meje. Še več, največja dovoljena gostota je velikostnega reda <span class="math notranslate nohighlight">\(m^{-1/3} = \Theta(n^{-1/3})\)</span>.</p></li>
-<li><p>Opazujmo grupo <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span>. Iz njene tabele karakterjev razberemo, da zanjo velja <span class="math notranslate nohighlight">\(m = (p-1)/2\)</span>. Po izreku tudi ta grupa nima podmnožic brez produktov pozitivne gostote, ko gre <span class="math notranslate nohighlight">\(p\)</span> čez vse meje. Še več, največja gostota, ki jo dopušča izrek, je velikostnega reda <span class="math notranslate nohighlight">\(m^{-1/3} = \Theta(p^{-1/3}) = \Theta(|\PSL_2(\FF_p)|^{-1/9})\)</span>, kar je celo mnogo manjše (relativno glede na velikost grupe) od zgornje meje, ki smo jo videli v primeru alternirajoče grupe.</p></li>
+<li><p>Opazujmo grupo <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span>. Iz njene tabele karakterjev razberemo, da zanjo velja <span class="math notranslate nohighlight">\(m = (p-1)/2\)</span>. Po izreku tudi ta grupa nima podmnožic brez produktov pozitivne gostote, ko gre <span class="math notranslate nohighlight">\(p\)</span> čez vse meje. Še več, največja gostota, ki jo dopušča izrek, je velikostnega reda <span class="math notranslate nohighlight">\(m^{-1/3} = \Theta(p^{-1/3}) = \Theta(|\PSL_2(\FF_p)|^{-1/9})\)</span>, kar je celo veliko manjše (relativno glede na velikost grupe) od zgornje meje, ki smo jo videli v primeru alternirajoče grupe.</p></li>
 </ul>
 </div>
 </section>
@@ -644,7 +634,7 @@ document.write(`
 <div class="dokaz">
 <p>Naj bo <span class="math notranslate nohighlight">\(g \in G\)</span> in naj bo <span class="math notranslate nohighlight">\(B = g A^{-1} \subseteq G\)</span>. Množici <span class="math notranslate nohighlight">\(A\)</span> in <span class="math notranslate nohighlight">\(B\)</span> sta obe enake gostote, recimo <span class="math notranslate nohighlight">\(\alpha\)</span>. Velja <span class="math notranslate nohighlight">\(\alpha^3 &gt; m^{-1}\)</span>, kar je enakovredno <span class="math notranslate nohighlight">\(m^{-1/2} \alpha^{3/2} &lt; \alpha^3\)</span>. Iz trditve od tod sledi <span class="math notranslate nohighlight">\(A \cdot A \cap B \neq \emptyset\)</span>, zato je <span class="math notranslate nohighlight">\(g \in A \cdot A \cdot A\)</span>. Ker je bil <span class="math notranslate nohighlight">\(g\)</span> poljuben, je <span class="math notranslate nohighlight">\(A \cdot A \cdot A = G\)</span>.</p>
 </div>
-<p>Ta lastnost velikih množic ima mnogo zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babaijeve domeneve o premerih končnih enostavnih grup prek teorije približnih podgrup in pri raziskovanju slučajnih sprehodov,<label for='sidenote-role-7' class='margin-toggle'><span id="id8">
+<p>Ta lastnost velikih množic ima veliko zelo relevantnih uporab v teoriji grup, na primer pri dokazovanju Babaijeve domneve o premerih končnih enostavnih grup prek teorije približnih podgrup in pri raziskovanju slučajnih sprehodov,<label for='sidenote-role-7' class='margin-toggle'><span id="id8">
 <sup>7</sup></span>
 
 </label><input type='checkbox' id='sidenote-role-7' name='sidenote-role-7' class='margin-toggle'><span class="sidenote"><sup>7</sup>Del tega si bomo ogledali nekoliko kasneje.</span> kot je razloženo v <a class="reference external" href="https://library.slmath.org/books/Book61/files/15breu.pdf">(Breuillard 2013)</a>.</p>
@@ -698,7 +688,7 @@ document.write(`
     y = (3 \ 9 \ 4 \ 10)(5 \ 7)(6 \ 8)(11 \ 12).\]</div>
 <p>Hitro izračunamo, da je <span class="math notranslate nohighlight">\(|K(G)| = 29\)</span>, torej <span class="math notranslate nohighlight">\(K(G)\)</span> vsekakor ni podgrupa <span class="math notranslate nohighlight">\(G\)</span>. Komutatorska podgrupa je le nekoliko večja, <span class="math notranslate nohighlight">\(|[G,G]| = 32\)</span>. Primer elementa v <span class="math notranslate nohighlight">\([G,G]\)</span>, ki ni hkrati v <span class="math notranslate nohighlight">\(K(G)\)</span>, je permutacija <span class="math notranslate nohighlight">\((5 \ 6)(7 \ 8)\)</span>.</p>
 </div>
-<p>V luči zgleda je teoriji grup vsekakor v interesu, da bi razumela, kdaj dan element <span class="math notranslate nohighlight">\(g \in G\)</span> pripada množici <span class="math notranslate nohighlight">\(K(G)\)</span>. Lahko smo celo bolj natančni in se vprašamo, na koliko načinov lahko <span class="math notranslate nohighlight">\(g\)</span> zapišemo kot komutator. V ta namen predpišimo funkcijo</p>
+<p>V luči zgleda je teoriji grup vsekakor v interesu, da bi razumela, kdaj dani element <span class="math notranslate nohighlight">\(g \in G\)</span> pripada množici <span class="math notranslate nohighlight">\(K(G)\)</span>. Lahko smo celo bolj natančni in se vprašamo, na koliko načinov lahko <span class="math notranslate nohighlight">\(g\)</span> zapišemo kot komutator. V ta namen predpišimo funkcijo</p>
 <div class="math notranslate nohighlight">
 \[N \colon G \to \NN_0, \quad
     g \mapsto |\{ (x,y) \in G \times G \mid g = [x,y] \}|.\]</div>
@@ -725,7 +715,7 @@ document.write(`
 </label><input type='checkbox' id='sidenote-role-11' name='sidenote-role-11' class='margin-toggle'><span class="sidenote"><sup>11</sup>Velja namreč zveza <span class="math notranslate nohighlight">\(b = y^{-1} a^{-1} y\)</span>.</span> Torej je <span class="math notranslate nohighlight">\(|\psi^{-1}(\conclass,a,b)| = |C_G(a)| = |G|/|\conclass|\)</span>. S tem lahko izrazimo</p>
 <div class="math notranslate nohighlight">
 \[N(g) = \sum_{\conclass} \frac{|G|}{|\conclass|} \cdot |\{ (a,b) \in G \times G \mid a \in \conclass^{-1}, \ b \in \conclass, \ a \cdot b = g \}|,\]</div>
-<p>kjer vsota teče po vseh konjugiranostnih razredih grupe <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p>pri čemer vsota teče po vseh konjugiranostnih razredih grupe <span class="math notranslate nohighlight">\(G\)</span>.</p>
 <p>Dobljeni zapis funkcije <span class="math notranslate nohighlight">\(N\)</span> je priročen, ker je izražen le s konjugiranostnimi razredi in je neodvisen od izbire njihovih konkretnih predstavnikov. S tem je primeren za gnetenje s Fourierovo transformacijo. Najprej opazimo, da lahko drugi faktor zadnje vsote zapišemo kot</p>
 <div class="math notranslate nohighlight">
 \[\sum_{a,b \in G, \ a \cdot b = g} 1_{\conclass^{-1}}(a) \cdot 1_{\conclass}(b) = \left( 1_{\conclass^{-1}} * 1_{\conclass} \right) (g),\]</div>
@@ -893,7 +883,7 @@ document.write(`
 <p>Ta močnejša domneva je še vedno nerazrešena, je pa v zadnjih letih bilo kar nekaj aktivnosti v zvezi z njeno asimptotsko veljavnostjo. Ti rezultati večinoma temeljijo na teoriji karakterjev na naslednji način. Element <span class="math notranslate nohighlight">\(g \in G\)</span> pripada <span class="math notranslate nohighlight">\(\conclass \cdot \conclass\)</span>, če in samo če velja <span class="math notranslate nohighlight">\((1_{\conclass} * 1_{\conclass})(g) \neq 0\)</span>, kar lahko s pomočjo Fourierove inverzije, kot smo videli v zadnji trditvi, zapišemo kot</p>
 <div class="math notranslate nohighlight">
 \[\sum_{\pi \in \Irr(G)} \frac{\overline{\chi_{\pi}(\conclass)}^2}{\chi_{\pi}(1)} \chi_{\pi}(g) \neq 0.\]</div>
-<p>S pomočjo poznavanja karakterjev končnih enostavnih grup je domneva znana za mnogo primerov, odprtih pa je še nekaj neskončnih družin matričnih grup nad majhnimi polji, kot je zelo prijazno razloženo v Larsenovem predavanju <a class="reference external" href="https://www.youtube.com/watch?v=OQFFYaCYzq4">tukaj</a>.</p>
+<p>S pomočjo poznavanja karakterjev končnih enostavnih grup je domneva znana za veliko primerov, odprtih pa je še nekaj neskončnih družin matričnih grup nad majhnimi polji, kot je zelo prijazno razloženo v Larsenovem predavanju <a class="reference external" href="https://www.youtube.com/watch?v=OQFFYaCYzq4">tukaj</a>.</p>
 </section>
 </section>
 <section id="slucajni-sprehodi">
@@ -910,7 +900,7 @@ document.write(`
     \end{cases}\end{split}\]</div>
 <p>Po <span class="math notranslate nohighlight">\(n\)</span> korakih tega postopka dobimo element <span class="math notranslate nohighlight">\(X_n \in G\)</span>, ki je seveda odvisen od izbire vmesnih elementov <span class="math notranslate nohighlight">\(s_i \in S\)</span> na vsakem koraku. Temu procesu pravimo <span class="definicija">slučajni sprehod</span> na grupi <span class="math notranslate nohighlight">\(G\)</span> z generirajočo množico <span class="math notranslate nohighlight">\(S\)</span>.</p>
 <div class="zgled">
-<p>Naj bo <span class="math notranslate nohighlight">\(G = S_n\)</span> in <span class="math notranslate nohighlight">\(S\)</span> množica transpozicij v <span class="math notranslate nohighlight">\(S_n\)</span>. Predstavljajmo si, da imamo pred sabo urejen kup kart. Enakomerno naključno izberemo dve različni karti v tem kupu, eno z levo roko in eno z desno, in ju zamenjamo. Ta postopek ponovimo <span class="math notranslate nohighlight">\(n\)</span>-krat. Menjava na vsakem koraku ustreza izbiri naključne transpozicije <span class="math notranslate nohighlight">\(\sigma \in S\)</span>, s katero pomnožimo trenutno permutacijo, ki opisuje stanje, v katerem je kup kart. Slučajni sprehod v tem primeru torej opisuje slučajno mešanje kupa kart.</p>
+<p>Naj bo <span class="math notranslate nohighlight">\(G = S_n\)</span> in <span class="math notranslate nohighlight">\(S\)</span> množica transpozicij v <span class="math notranslate nohighlight">\(S_n\)</span>. Predstavljajmo si, da imamo pred seboj urejen kup kart. Enakomerno naključno izberemo dve različni karti v tem kupu, eno z levo roko in eno z desno, in ju zamenjamo. Ta postopek ponovimo <span class="math notranslate nohighlight">\(n\)</span>-krat. Menjava na vsakem koraku ustreza izbiri naključne transpozicije <span class="math notranslate nohighlight">\(\sigma \in S\)</span>, s katero pomnožimo trenutno permutacijo, ki opisuje stanje, v katerem je kup kart. Slučajni sprehod v tem primeru torej opisuje slučajno mešanje kupa kart.</p>
 </div>
 <p>Nekoliko bolj abstraktno bi lahko na slučajni sprehod gledali kot na zaporedje slučajnih spremenljivk <span class="math notranslate nohighlight">\(X_1, X_2, \dots\)</span> z vrednostmi v <span class="math notranslate nohighlight">\(G\)</span>, ki pa niso porazdeljene neodvisno, temveč zanje velja <span class="definicija">lastnost Markova</span>, to je</p>
 <div class="math notranslate nohighlight">
@@ -925,7 +915,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mu_n \colon G \to \CC, \quad
     g \mapsto \PP(X_n = g),\]</div>
-<p>ki meri verjetnost, da smo v danem elementu. Ta funkcija torej ni nič drugega kot porazdelitvena funkcija slučajne spremenljivke <span class="math notranslate nohighlight">\(X_n\)</span>. Slučajni sprehod se prične v <span class="math notranslate nohighlight">\(1\)</span>, zato je <span class="math notranslate nohighlight">\(\mu_0 = 1_1\)</span>.</p>
+<p>ki meri verjetnost, da smo v danem elementu. Ta funkcija torej ni nič drugega kot porazdelitvena funkcija slučajne spremenljivke <span class="math notranslate nohighlight">\(X_n\)</span>. Slučajni sprehod se začne v <span class="math notranslate nohighlight">\(1\)</span>, zato je <span class="math notranslate nohighlight">\(\mu_0 = 1_1\)</span>.</p>
 <p>Vrednosti funkcije <span class="math notranslate nohighlight">\(\mu_n\)</span> lahko izračunamo induktivno na <span class="math notranslate nohighlight">\(n\)</span>, upoštevajoč lastnost Markova. Velja</p>
 <div class="math notranslate nohighlight">
 \[\mu_n(g) 
@@ -935,7 +925,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mu_n(g)
     = \frac{1}{|S|} \sum_{h \in g S^{-1}} \mu_{n-1}(h)
-    = \frac{1}{|S|} \sum_{x \in G} \mu_{n-1}(gx^{-1}) 1_{S}(x),\]</div>
+    = \frac{1}{|S|} \sum_{x \in G} \mu_{n-1}(gx^{-1}) 1_{S}(x).\]</div>
 <p>Zadnjo vsoto prepoznamo kot konvolucijo</p>
 <div class="math notranslate nohighlight">
 \[\left( \mu_{n-1} * \frac{1_{S}}{|S|} \right) (g),\]</div>
@@ -980,7 +970,7 @@ document.write(`
     \left\langle 1_1, 1 \right\rangle +
     \left\langle 1_1, \sgn \right\rangle \sgn +
     k,\]</div>
-<p>kjer je <span class="math notranslate nohighlight">\(k \in \ker M\)</span>. Velja torej</p>
+<p>pri čemer je <span class="math notranslate nohighlight">\(k \in \ker M\)</span>. Velja torej</p>
 <div class="math notranslate nohighlight">
 \[1_1 =
     \frac{1}{6} + \frac{1}{6} \sgn + k.\]</div>
@@ -1013,7 +1003,7 @@ document.write(`
 \[r_{\pi}(\conclass) = \frac{\overline{\chi_{\pi}(\conclass)}}{\chi_{\pi}(1)}\]</div>
 <p>za vsako nerazcepno kompleksno upodobitev <span class="math notranslate nohighlight">\(\pi \in \Irr(G)\)</span>, pri čemer je večkratnost vsake lastne vrednosti enaka <span class="math notranslate nohighlight">\(\chi_{\pi}(1)^2\)</span>.</p>
 </div>
-<p>Operator Markova <span class="math notranslate nohighlight">\(M\)</span> slučajnega sprehoda na <span class="math notranslate nohighlight">\(G\)</span> z generirajočo množico <span class="math notranslate nohighlight">\(\conclass\)</span>, kjer je <span class="math notranslate nohighlight">\(\conclass\)</span> konjugiranostni razred v <span class="math notranslate nohighlight">\(G\)</span>, deluje na vsaki od izotipičnih komponent regularne upodobitve kot skalarni večkratnik identitete z znamimi skalarji. Da lahko razumemo <span class="math notranslate nohighlight">\(\mu_n = M^n \cdot 1_1\)</span>, moramo najprej razviti funkcijo <span class="math notranslate nohighlight">\(1_1\)</span> po izotipičnih komponentah. To naredimo, kot smo že, s pomočjo Fourierovih transformacij nerazcepnih karakterjev. Projekcija <span class="math notranslate nohighlight">\(1_1\)</span> na <span class="math notranslate nohighlight">\(\pi\)</span>-izotipično komponento je enaka</p>
+<p>Operator Markova <span class="math notranslate nohighlight">\(M\)</span> slučajnega sprehoda na <span class="math notranslate nohighlight">\(G\)</span> z generirajočo množico <span class="math notranslate nohighlight">\(\conclass\)</span>, pri čemer je <span class="math notranslate nohighlight">\(\conclass\)</span> konjugiranostni razred v <span class="math notranslate nohighlight">\(G\)</span>, deluje na vsaki od izotipičnih komponent regularne upodobitve kot skalarni večkratnik identitete z znamimi skalarji. Da lahko razumemo <span class="math notranslate nohighlight">\(\mu_n = M^n \cdot 1_1\)</span>, moramo najprej razviti funkcijo <span class="math notranslate nohighlight">\(1_1\)</span> po izotipičnih komponentah. To naredimo, kot smo že, s pomočjo Fourierovih transformacij nerazcepnih karakterjev. Projekcija <span class="math notranslate nohighlight">\(1_1\)</span> na <span class="math notranslate nohighlight">\(\pi\)</span>-izotipično komponento je enaka</p>
 <div class="math notranslate nohighlight">
 \[v_{\pi} = \frac{\chi_{\pi}(1)}{|G|} \cdot \chi_{\pi},\]</div>
 <p>zato dobimo <span class="math notranslate nohighlight">\(1_1 = \sum_{\pi \in \Irr(G)} v_{\pi}\)</span>. Vektor <span class="math notranslate nohighlight">\(v_{\pi}\)</span> je lastni vektor za <span class="math notranslate nohighlight">\(M\)</span> z lastno vrednostjo <span class="math notranslate nohighlight">\(r_{\pi}(\conclass)\)</span>. V tej množici lastnih vektorjev lahko torej funkcijo <span class="math notranslate nohighlight">\(\mu_n\)</span> razvijemo kot</p>
@@ -1038,7 +1028,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mu_n - \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi}
     = \sum_{\pi \in \Irr(G) \backslash X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi}.\]</div>
-<p>Prispevki <span class="math notranslate nohighlight">\(r_{\pi}(\conclass)^n\)</span> za <span class="math notranslate nohighlight">\(\pi\)</span> izven <span class="math notranslate nohighlight">\(X_{\conclass}\)</span> konvergirajo k <span class="math notranslate nohighlight">\(0\)</span> za velike vrednosti <span class="math notranslate nohighlight">\(n\)</span> in zatorej dobimo</p>
+<p>Prispevki <span class="math notranslate nohighlight">\(r_{\pi}(\conclass)^n\)</span> za <span class="math notranslate nohighlight">\(\pi\)</span> zunaj <span class="math notranslate nohighlight">\(X_{\conclass}\)</span> konvergirajo k <span class="math notranslate nohighlight">\(0\)</span> za velike vrednosti <span class="math notranslate nohighlight">\(n\)</span> in zatorej dobimo</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty} \left( \mu_n - \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi} \right) = 0.\]</div>
 <p>Za konkretne grupe lahko s tabelo karakterjev ali upoštevanjem kakšnih dodatnih lastnosti eksplicitno izračunamo zadnjo vsoto in s tem določimo limitno porazdelitev <span class="math notranslate nohighlight">\(\mu_n\)</span>, če ta sploh obstaja.</p>
@@ -1051,10 +1041,10 @@ document.write(`
 </label><input type='checkbox' id='sidenote-role-14' name='sidenote-role-14' class='margin-toggle'><span class="sidenote"><sup>14</sup>Za primerjavo porazdelitev ne uporabljamo standardne norme <span class="math notranslate nohighlight">\(||f|| = \langle f, f \rangle^{1/2}\)</span>, ampak normo <span class="math notranslate nohighlight">\(||f||_1\)</span>. Razlog za to je naslednji. Opazujmo družino simetričnih grup <span class="math notranslate nohighlight">\(S_n\)</span>. Potem je <span class="math notranslate nohighlight">\(||U_{A_n} - U_{S_n}||^2 = 1/|S_n|\)</span>, kar konvergira k <span class="math notranslate nohighlight">\(0\)</span> za <span class="math notranslate nohighlight">\(n \to \infty\)</span>, čeprav sta porazdelitvi očitno različni. Norma <span class="math notranslate nohighlight">\(||\cdot||_1\)</span> nima te pomanjkljivosti; velja <span class="math notranslate nohighlight">\(||U_{A_n} - U_{S_n}||_1 = 1\)</span>.</span> Naj bo <span class="math notranslate nohighlight">\(0 &lt; \theta &lt; 1\)</span> konstanta. <span class="definicija">Čas mešanja</span><label for='sidenote-role-15' class='margin-toggle'><span id="id18">
 <sup>15</sup></span>
 
-</label><input type='checkbox' id='sidenote-role-15' name='sidenote-role-15' class='margin-toggle'><span class="sidenote"><sup>15</sup>Rečemo tudi, da se slučajni sprehod <span class="definicija">dobro premeša</span> po času <span class="math notranslate nohighlight">\(t_{mix}(\theta)\)</span>. Ta koncept je seveda odvisen od izbire konstante <span class="math notranslate nohighlight">\(\theta\)</span>, a ponavadi za <span class="math notranslate nohighlight">\(\theta\)</span> vzamemo kar neko majhno konstanto, na primer <span class="math notranslate nohighlight">\(\theta = 10^{-2}\)</span>.</span> <span class="math notranslate nohighlight">\(t_{mix}(\theta)\)</span> je najmanjše število <span class="math notranslate nohighlight">\(n\)</span>, pri katerem je</p>
+</label><input type='checkbox' id='sidenote-role-15' name='sidenote-role-15' class='margin-toggle'><span class="sidenote"><sup>15</sup>Rečemo tudi, da se slučajni sprehod <span class="definicija">dobro premeša</span> po času <span class="math notranslate nohighlight">\(t_{mix}(\theta)\)</span>. Ta koncept je seveda odvisen od izbire konstante <span class="math notranslate nohighlight">\(\theta\)</span>, a po navadi za <span class="math notranslate nohighlight">\(\theta\)</span> vzamemo kar neko majhno konstanto, na primer <span class="math notranslate nohighlight">\(\theta = 10^{-2}\)</span>.</span> <span class="math notranslate nohighlight">\(t_{mix}(\theta)\)</span> je najmanjše število <span class="math notranslate nohighlight">\(n\)</span>, pri katerem je</p>
 <div class="math notranslate nohighlight">
 \[|| \mu_n -  \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi} ||_1  \leq \theta.\]</div>
-<p>Čas mešanja in s tem hitrost konvergence k limitni porazdelitvi lahko kvantitativno nadziramo, če dobro poznamo vrednosti <span class="math notranslate nohighlight">\(r_{\pi}(\conclass)\)</span> za <span class="math notranslate nohighlight">\(\pi\)</span> izven <span class="math notranslate nohighlight">\(X_{\conclass}\)</span>, saj velja</p>
+<p>Čas mešanja in s tem hitrost konvergence k limitni porazdelitvi lahko kvantitativno nadziramo, če dobro poznamo vrednosti <span class="math notranslate nohighlight">\(r_{\pi}(\conclass)\)</span> za <span class="math notranslate nohighlight">\(\pi\)</span> zunaj <span class="math notranslate nohighlight">\(X_{\conclass}\)</span>, saj velja</p>
 <div class="math notranslate nohighlight">
 \[|| \mu_n -  \sum_{\pi \in X_{\conclass}} r_{\pi}(\conclass)^n \cdot v_{\pi} ||_1
     \leq
@@ -1162,7 +1152,7 @@ document.write(`
 </section>
 <section id="hitrost-konvergence">
 <h4>Hitrost konvergence<a class="headerlink" href="#hitrost-konvergence" title="Link to this heading">#</a></h4>
-<p>Pogovorimo se še o oceni napake pri aproksimaciji <span class="math notranslate nohighlight">\(\mu_n\)</span> s kandidatom za limitno porazdelitev. Za <span class="math notranslate nohighlight">\(\pi\)</span> izven <span class="math notranslate nohighlight">\(X_{\conclass}\)</span> ocenimo</p>
+<p>Pogovorimo se še o oceni napake pri aproksimaciji <span class="math notranslate nohighlight">\(\mu_n\)</span> s kandidatom za limitno porazdelitev. Za <span class="math notranslate nohighlight">\(\pi\)</span> zunaj <span class="math notranslate nohighlight">\(X_{\conclass}\)</span> ocenimo</p>
 <div class="math notranslate nohighlight">
 \[\max_{\pi \in \Irr(G_p) \backslash X_{\conclass}} |r_{\pi}(\conclass)| &lt; \frac{2}{p}, \quad
     \sum_{\pi \in \Irr(G_p) \backslash X_{\conclass}} \chi_{\pi}(1)
@@ -1180,7 +1170,7 @@ document.write(`
 \[\mu_{p-1} \approx U_{\SL_2(\FF_p)}.\]</div>
 <p>Če torej v <span class="math notranslate nohighlight">\(G_p\)</span> naključno zmnožimo <span class="math notranslate nohighlight">\(p-1\)</span> matrik v <span class="math notranslate nohighlight">\(\conclass\)</span> za dovolj velik <span class="math notranslate nohighlight">\(p\)</span>, dobimo (skoraj) naključno matriko v <span class="math notranslate nohighlight">\(\SL_2(\FF_p)\)</span>. Napaka sicer pade ekstremno hitro, a linearni karakterji obremenijo sprehod do te mere, da ne moremo izkoristiti majhne napake že po <span class="math notranslate nohighlight">\(3\)</span> korakih, niti ne po <span class="math notranslate nohighlight">\(\log |G_p| \sim \log p\)</span> korakih, temveč šele po <span class="math notranslate nohighlight">\(p-1 \sim |G_p|^{1/4}\)</span> korakih.</p>
 <div class="domacanaloga">
-<p>Obravnavaj slučajni sprehod v <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span> glede na nek konjugiranostni razred <span class="math notranslate nohighlight">\(\conclass\)</span>. V tem primeru bo <span class="math notranslate nohighlight">\(\lim_{n \to \infty} \mu_n\)</span> enakomerna porazdelitev na <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span>. S pomočjo tabele karakterjev oceni hitrost konvergence in pokaži, da dosežemo približno naključno matriko v <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span> mnogo hitreje kot po <span class="math notranslate nohighlight">\(p-1\)</span> korakih.</p>
+<p>Obravnavaj slučajni sprehod v <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span> glede na neki konjugiranostni razred <span class="math notranslate nohighlight">\(\conclass\)</span>. V tem primeru bo <span class="math notranslate nohighlight">\(\lim_{n \to \infty} \mu_n\)</span> enakomerna porazdelitev na <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span>. S pomočjo tabele karakterjev oceni hitrost konvergence in pokaži, da dosežemo približno naključno matriko v <span class="math notranslate nohighlight">\(\PSL_2(\FF_p)\)</span> veliko hitreje kot po <span class="math notranslate nohighlight">\(p-1\)</span> korakih.</p>
 </div>
 <div class="domacanaloga">
 <p>Obravnavaj slučajni sprehod v <span class="math notranslate nohighlight">\(S_n\)</span> glede na generirajočo množico <span class="math notranslate nohighlight">\(S\)</span>, ki sestoji iz transpozicij in enote <span class="math notranslate nohighlight">\(()\)</span>. To ni konjugiranostni razred, je pa unija dveh razredov. Premisli, kako lahko argumente posplošiš na to situacijo. Določi limitno porazdelitev. Ocena hitrosti konvergence bo zahtevala kar nekaj truda. Pomagaš si lahko z <a class="reference external" href="https://repozitorij.uni-lj.si/IzpisGradiva.php?id=139856&amp;amp;lang=eng">(Miščič 2022)</a>.</p>
@@ -1189,7 +1179,7 @@ document.write(`
 </section>
 <section id="konvergenca-v-druzinah">
 <h3>Konvergenca v družinah<a class="headerlink" href="#konvergenca-v-druzinah" title="Link to this heading">#</a></h3>
-<p>Za vsako konkretno nekomutativno končno enostavno grupo <span class="math notranslate nohighlight">\(G\)</span> jasno velja, da so vse lastne vrednosti operatorja <span class="math notranslate nohighlight">\(M\)</span> razen <span class="math notranslate nohighlight">\(1\)</span> po absolutni vrednosti kvečjemu <span class="math notranslate nohighlight">\(1-\epsilon\)</span> za nek <span class="math notranslate nohighlight">\(\epsilon = \epsilon(G) &gt; 0\)</span>. V tem primeru rečemo, da je grupa <span class="math notranslate nohighlight">\(G\)</span> <span class="definicija"><span class="math notranslate nohighlight">\(\epsilon\)</span>-ekspanzivna</span> glede na generirajočo množico <span class="math notranslate nohighlight">\(S\)</span>. Slučajni sprehod v taki grupi se dobro premeša po <span class="math notranslate nohighlight">\(O_{\epsilon}(\log |G|)\)</span> korakih. Težave nastopijo, ko skušamo ta argument uporabiti za celo družino grup, saj se lahko zgodi, da z večanjem parametra <span class="math notranslate nohighlight">\(n\)</span> vrednost ekspanzivnosti <span class="math notranslate nohighlight">\(\epsilon = \epsilon_n\)</span> nujno konvergira k <span class="math notranslate nohighlight">\(0\)</span>. Ta fenomen vidimo v primeru družine <span class="math notranslate nohighlight">\(A_n\)</span> in konjugiranostnega razreda <span class="math notranslate nohighlight">\(3\)</span>-ciklov.</p>
+<p>Za vsako konkretno nekomutativno končno enostavno grupo <span class="math notranslate nohighlight">\(G\)</span> jasno velja, da so vse lastne vrednosti operatorja <span class="math notranslate nohighlight">\(M\)</span>, razen <span class="math notranslate nohighlight">\(1\)</span>, po absolutni vrednosti kvečjemu <span class="math notranslate nohighlight">\(1-\epsilon\)</span> za nek <span class="math notranslate nohighlight">\(\epsilon = \epsilon(G) &gt; 0\)</span>. V tem primeru rečemo, da je grupa <span class="math notranslate nohighlight">\(G\)</span> <span class="definicija"><span class="math notranslate nohighlight">\(\epsilon\)</span>-ekspanzivna</span> glede na generirajočo množico <span class="math notranslate nohighlight">\(S\)</span>. Slučajni sprehod v taki grupi se dobro premeša po <span class="math notranslate nohighlight">\(O_{\epsilon}(\log |G|)\)</span> korakih. Težave nastopijo, ko skušamo ta argument uporabiti za celo družino grup, saj se lahko zgodi, da z večanjem parametra <span class="math notranslate nohighlight">\(n\)</span> vrednost ekspanzivnosti <span class="math notranslate nohighlight">\(\epsilon = \epsilon_n\)</span> nujno konvergira k <span class="math notranslate nohighlight">\(0\)</span>. Ta fenomen vidimo v primeru družine <span class="math notranslate nohighlight">\(A_n\)</span> in konjugiranostnega razreda <span class="math notranslate nohighlight">\(3\)</span>-ciklov.</p>
 <div class="domacanaloga">
 <p>Obravnavaj slučajni sprehod v <span class="math notranslate nohighlight">\(A_n\)</span> glede na konjugiranostni razred <span class="math notranslate nohighlight">\(3\)</span>-ciklov <span class="math notranslate nohighlight">\(\conclass\)</span>. Premisli, da je <span class="math notranslate nohighlight">\(\max_{\oneone \neq \pi \in \Irr(A_n)} |r_{\pi}(\conclass)| = 1 - 3/(n-1)\)</span> in s tem oceni hitrost konvergence.</p>
 </div>
@@ -1211,7 +1201,7 @@ document.write(`
 <p>Obstaja konstanta <span class="math notranslate nohighlight">\(C &gt; 0\)</span>, tako da je družina nekomutativnih končnih enostavnih grup ekspanzivna družina glede na generatorske množice velikosti kvečjemu <span class="math notranslate nohighlight">\(C\)</span>.</p>
 </div>
 <p>Izrek nam zagotavlja obstoj neke ne prevelike generirajoče množice v končnih enostavnih grupah, glede na katere se slučajni sprehodi enakomerno zelo hitro dobro premešajo. Še težje pa je povedati kaj bolj konkretnega o teh generirajočih množicah. Za primer <span class="math notranslate nohighlight">\(A_n\)</span> so te množice konstruirane v <a class="reference external" href="https://link.springer.com/article/10.1007/s00222-007-0065-y">(Kassabov 2007)</a> s pomočjo neke naključne metode. Dokaz omejitev absolutnih vrednosti lastnih vrednosti operatorja Markova sloni na teoriji upodobitev, a je precej bolj zahteven od tega, ki smo si ga ogledali mi, saj so te generatorske množice daleč od konjugiranostnih razredov. Pred nedavnim so se našle celo eksplicitne konstrukcije generirajočih množic <span class="math notranslate nohighlight">\(A_n\)</span>, glede na katere dobimo ekspanzivno družino <a class="reference external" href="https://arxiv.org/abs/2210.00730">(Caprace-Kassabov 2022)</a>. Tudi tukaj je ključna teorija upodobitev, a v igro vstopijo neskončne grupe avtomorfizmov polinomskih kolobarjev nad končnim poljem.</p>
-<p>Dokazi ekspanzivnosti za generatorske množice, ki niso konjugiranostni razredi, ponavadi potekajo na obraten način, kot bi pričakovali. Omejenost absolutnih vrednosti netrivialnih lastnih vrednosti operatorja Markova namreč lahko dokažemo, če premislimo, da se slučajni sprehodi enakomerno zelo hitro premešajo.<label for='sidenote-role-19' class='margin-toggle'><span id="id22">
+<p>Dokazi ekspanzivnosti za generatorske množice, ki niso konjugiranostni razredi, po navadi potekajo na obraten način, kot bi pričakovali. Omejenost absolutnih vrednosti netrivialnih lastnih vrednosti operatorja Markova namreč lahko dokažemo, če premislimo, da se slučajni sprehodi enakomerno zelo hitro premešajo.<label for='sidenote-role-19' class='margin-toggle'><span id="id22">
 <sup>19</sup></span>
 
 </label><input type='checkbox' id='sidenote-role-19' name='sidenote-role-19' class='margin-toggle'><span class="sidenote"><sup>19</sup>Ni težko premisliti, da sta ta dva koncepta ekvivalentna. Čas mešanja v vsaki članici družine <span class="math notranslate nohighlight">\(G_i\)</span> je <span class="math notranslate nohighlight">\(O(\log |G_i|)\)</span>, če in samo če je družina ekspanzivna.</span> Primer uporabe te tehnike par excellence je naslednji rezultat, ki med drugim presenetljivo sloni na Gowersovem rezultatu o zgornji meji gostote množic brez produktov.</p>
@@ -1299,14 +1289,16 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Vsebina
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aritmeticna-zaporedja">Aritmetična zaporedja</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aritmeticna-zaporedja-v-gostih-mnozicah">Aritmetična zaporedja v gostih množicah</a></li>
@@ -1388,8 +1380,8 @@ Avtor Urban Jezernik
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
