@@ -7,7 +7,7 @@
 ```{raw} html
   <strong>Urban Jezernik<br>
   Univerza v Ljubljani, Fakulteta za matematiko in fiziko</strong><br>
-  Zadnja posodobitev: 11. 03. 2026
+  Zadnja posodobitev: 12. 03. 2026
 
   <img src="_static/victoriano-izquierdo.jpg" class="naslovna-slika" alt="Naslovna slika">
 </div>

@@ -42,7 +42,7 @@
     ]
   },
   {
-    "question": "Grupa $SL_2(\\mathbf{C})$ ima neskončno mnogo končnorazsežnih gladkih nerazcepnih upodobitev.",
+    "question": "Grupa $\\mathrm{SL}_2(\\mathbf{C})$ ima neskončno mnogo končnorazsežnih gladkih nerazcepnih upodobitev.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "question": "Tangentni prostor grupe $SL_2(\\mathbf{C})$ sestoji natanko iz $2 \\times 2$ kompleksnih matrik s sledjo $0$.",
+    "question": "Tangentni prostor grupe $\\mathrm{SL}_2(\\mathbf{C})$ sestoji natanko iz $2 \\times 2$ kompleksnih matrik s sledjo $0$.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -98,7 +98,7 @@
     ]
   },
   {
-    "question": "Vsaka nerazcepna Liejeva upodobitev Liejeve algebre $\\mathfrak{sl}_2(\\mathbf{C})$ je odvod neke polinomske upodobitve grupe $SL_2(\\mathbf{C})$.",
+    "question": "Vsaka nerazcepna Liejeva upodobitev Liejeve algebre $\\mathfrak{sl}_2(\\mathbf{C})$ je odvod neke polinomske upodobitve grupe $\\mathrm{SL}_2(\\mathbf{C})$.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -140,7 +140,7 @@
     ]
   },
   {
-    "question": "Grupa $SL_2(\\mathbf{R})$ nima unitarnih upodobitev.",
+    "question": "Grupa $\\mathrm{SL}_2(\\mathbf{R})$ nima unitarnih upodobitev.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -154,7 +154,7 @@
     ]
   },
   {
-    "question": "Modularna grupa $PSL_2(\\mathbf{Z})$ je prosti produkt dveh svojih podgrup reda $2$ in $3$.",
+    "question": "Modularna grupa $\\mathrm{PSL}_2(\\mathbf{Z})$ je prosti produkt dveh svojih podgrup reda $2$ in $3$.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -168,7 +168,7 @@
     ]
   },
   {
-    "question": "Grupa $SL_2(\\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.",
+    "question": "Grupa $\\mathrm{SL}_2(\\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -182,7 +182,7 @@
     ]
   },
   {
-    "question": "Grupa $SL_3(\\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.",
+    "question": "Grupa $\\mathrm{SL}_3(\\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -196,7 +196,7 @@
     ]
   },
   {
-    "question": "Vsaka podgrupa končnega indeksa v $SL_2(\\mathbf{Z})$ vsebuje neko kongruenčno podgrupo.",
+    "question": "Vsaka podgrupa končnega indeksa v $\\mathrm{SL}_2(\\mathbf{Z})$ vsebuje neko kongruenčno podgrupo.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -224,7 +224,7 @@
     ]
   },
   {
-    "question": "Vsaka končnorazsežna upodobitev grupe $SL_3(\\mathbf{Z})$ se na neki podgrupi končnega indeksa ujema z zožitvijo polinomske upodobitve grupe $SL_3(\\mathbf{C})$.",
+    "question": "Vsaka končnorazsežna upodobitev grupe $\\mathrm{SL}_3(\\mathbf{Z})$ se na neki podgrupi končnega indeksa ujema z zožitvijo polinomske upodobitve grupe $\\mathrm{SL}_3(\\mathbf{C})$.",
     "type": "multiple_choice",
     "answers": [
       {

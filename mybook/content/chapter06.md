@@ -1243,7 +1243,7 @@ Vsaka zvezna upodobitev grupe $\mathbf{R}/\mathbf{Z}$ je unitarizabilna.
 <div class="quiz-item" data-correct="true">
 ```
 
-Grupa $SL_2(\mathbf{C})$ ima neskončno mnogo končnorazsežnih gladkih nerazcepnih upodobitev.
+Grupa $\mathrm{SL}_2(\mathbf{C})$ ima neskončno mnogo končnorazsežnih gladkih nerazcepnih upodobitev.
 
 ```{raw} html
 </div>
@@ -1253,7 +1253,7 @@ Grupa $SL_2(\mathbf{C})$ ima neskončno mnogo končnorazsežnih gladkih nerazcep
 <div class="quiz-item" data-correct="true">
 ```
 
-Tangentni prostor grupe $SL_2(\mathbf{C})$ sestoji natanko iz $2 \times 2$ kompleksnih matrik s sledjo $0$.
+Tangentni prostor grupe $\mathrm{SL}_2(\mathbf{C})$ sestoji natanko iz $2 \times 2$ kompleksnih matrik s sledjo $0$.
 
 ```{raw} html
 </div>
@@ -1283,7 +1283,7 @@ Tangentni prostor Liejeve grupe tvori Liejevo algebro glede na operaciji $+$ in 
 <div class="quiz-item" data-correct="true">
 ```
 
-Vsaka nerazcepna Liejeva upodobitev Liejeve algebre $\mathfrak{sl}_2(\mathbf{C})$ je odvod neke polinomske upodobitve grupe $SL_2(\mathbf{C})$.
+Vsaka nerazcepna Liejeva upodobitev Liejeve algebre $\mathfrak{sl}_2(\mathbf{C})$ je odvod neke polinomske upodobitve grupe $\mathrm{SL}_2(\mathbf{C})$.
 
 ```{raw} html
 </div>
@@ -1313,7 +1313,7 @@ Za matriki $X,Y \in \mathfrak{gl}_n(\mathbf{C})$ velja $\log(e^X e^Y) = X + Y$.
 <div class="quiz-item" data-correct="false">
 ```
 
-Grupa $SL_2(\mathbf{R})$ nima unitarnih upodobitev.
+Grupa $\mathrm{SL}_2(\mathbf{R})$ nima unitarnih upodobitev.
 
 ```{raw} html
 </div>
@@ -1323,7 +1323,7 @@ Grupa $SL_2(\mathbf{R})$ nima unitarnih upodobitev.
 <div class="quiz-item" data-correct="true">
 ```
 
-Modularna grupa $PSL_2(\mathbf{Z})$ je prosti produkt dveh svojih podgrup reda $2$ in $3$.
+Modularna grupa $\mathrm{PSL}_2(\mathbf{Z})$ je prosti produkt dveh svojih podgrup reda $2$ in $3$.
 
 ```{raw} html
 </div>
@@ -1333,7 +1333,7 @@ Modularna grupa $PSL_2(\mathbf{Z})$ je prosti produkt dveh svojih podgrup reda $
 <div class="quiz-item" data-correct="true">
 ```
 
-Grupa $SL_2(\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.
+Grupa $\mathrm{SL}_2(\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.
 
 ```{raw} html
 </div>
@@ -1343,7 +1343,7 @@ Grupa $SL_2(\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev 
 <div class="quiz-item" data-correct="false">
 ```
 
-Grupa $SL_3(\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.
+Grupa $\mathrm{SL}_3(\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev stopnje $17$.
 
 ```{raw} html
 </div>
@@ -1353,7 +1353,7 @@ Grupa $SL_3(\mathbf{Z})$ ima neštevno mnogo kompleksnih nerazcepnih upodobitev 
 <div class="quiz-item" data-correct="false">
 ```
 
-Vsaka podgrupa končnega indeksa v $SL_2(\mathbf{Z})$ vsebuje neko kongruenčno podgrupo.
+Vsaka podgrupa končnega indeksa v $\mathrm{SL}_2(\mathbf{Z})$ vsebuje neko kongruenčno podgrupo.
 
 ```{raw} html
 </div>
@@ -1373,7 +1373,7 @@ Kolobar $p$-adičnih števil je topološko homeomorfen zaprti krogli v $\mathbf{
 <div class="quiz-item" data-correct="true">
 ```
 
-Vsaka končnorazsežna upodobitev grupe $SL_3(\mathbf{Z})$ se na neki podgrupi končnega indeksa ujema z zožitvijo polinomske upodobitve grupe $SL_3(\mathbf{C})$.
+Vsaka končnorazsežna upodobitev grupe $\mathrm{SL}_3(\mathbf{Z})$ se na neki podgrupi končnega indeksa ujema z zožitvijo polinomske upodobitve grupe $\mathrm{SL}_3(\mathbf{C})$.
 
 ```{raw} html
 </div>

@@ -1024,7 +1024,7 @@ Vsaka nerazcepna upodobitev alternirajoče grupe $A_n$  je restrikcija nerazcepn
 <div class="quiz-item" data-correct="false">
 ```
 
-Podgrupa zgornjetrikotnih matrik v $G_p = GL_2(\mathbf{F}_p)$ se imenuje Boreliozna podgrupa.
+Podgrupa zgornjetrikotnih matrik v $G_p = \mathrm{GL}_2(\mathbf{F}_p)$ se imenuje Boreliozna podgrupa.
 
 ```{raw} html
 </div>
@@ -1044,7 +1044,7 @@ Grupa $G_p$ naravno deluje na projektivni premici nad končnim poljem.
 <div class="quiz-item" data-correct="true">
 ```
 
-Za $p > 3$ je grupa $PSL_2(\mathbf{F}_p)$ enostavna.
+Za $p > 3$ je grupa $\mathrm{PSL}_2(\mathbf{F}_p)$ enostavna.
 
 ```{raw} html
 </div>
@@ -1054,7 +1054,7 @@ Za $p > 3$ je grupa $PSL_2(\mathbf{F}_p)$ enostavna.
 <div class="quiz-item" data-correct="false">
 ```
 
-Razcepni in nerazcepni torus v $GL_2(\mathbf{F}_p)$ sta kot abelovi grupi izomorfna.
+Razcepni in nerazcepni torus v $\mathrm{GL}_2(\mathbf{F}_p)$ sta kot abelovi grupi izomorfna.
 
 ```{raw} html
 </div>
@@ -1064,7 +1064,7 @@ Razcepni in nerazcepni torus v $GL_2(\mathbf{F}_p)$ sta kot abelovi grupi izomor
 <div class="quiz-item" data-correct="true">
 ```
 
-Steinbergova upodobitev je nerazcepna upodobitev $GL_2(\mathbf{F}_p)$, ki je podupodobitev permutacijske upodobitve $GL_2(\mathbf{F}_p)$ na projektivni premici.
+Steinbergova upodobitev je nerazcepna upodobitev $\mathrm{GL}_2(\mathbf{F}_p)$, ki je podupodobitev permutacijske upodobitve $\mathrm{GL}_2(\mathbf{F}_p)$ na projektivni premici.
 
 ```{raw} html
 </div>
@@ -1074,7 +1074,7 @@ Steinbergova upodobitev je nerazcepna upodobitev $GL_2(\mathbf{F}_p)$, ki je pod
 <div class="quiz-item" data-correct="false">
 ```
 
-Nerazcepne upodobitve grupe $GL_2(\mathbf{F}_p)$, ki jih dobimo z indukcijo iz podgrupe zgornjetrikotnih matrik, se imenujejo upodobitve sekundarne vrste.
+Nerazcepne upodobitve grupe $\mathrm{GL}_2(\mathbf{F}_p)$, ki jih dobimo z indukcijo iz podgrupe zgornjetrikotnih matrik, se imenujejo upodobitve sekundarne vrste.
 
 ```{raw} html
 </div>

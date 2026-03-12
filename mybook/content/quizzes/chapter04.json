@@ -98,7 +98,7 @@
     ]
   },
   {
-    "question": "Podgrupa zgornjetrikotnih matrik v $G_p = GL_2(\\mathbf{F}_p)$ se imenuje Boreliozna podgrupa.",
+    "question": "Podgrupa zgornjetrikotnih matrik v $G_p = \\mathrm{GL}_2(\\mathbf{F}_p)$ se imenuje Boreliozna podgrupa.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "question": "Za $p > 3$ je grupa $PSL_2(\\mathbf{F}_p)$ enostavna.",
+    "question": "Za $p > 3$ je grupa $\\mathrm{PSL}_2(\\mathbf{F}_p)$ enostavna.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -140,7 +140,7 @@
     ]
   },
   {
-    "question": "Razcepni in nerazcepni torus v $GL_2(\\mathbf{F}_p)$ sta kot abelovi grupi izomorfna.",
+    "question": "Razcepni in nerazcepni torus v $\\mathrm{GL}_2(\\mathbf{F}_p)$ sta kot abelovi grupi izomorfna.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -154,7 +154,7 @@
     ]
   },
   {
-    "question": "Steinbergova upodobitev je nerazcepna upodobitev $GL_2(\\mathbf{F}_p)$, ki je podupodobitev permutacijske upodobitve $GL_2(\\mathbf{F}_p)$ na projektivni premici.",
+    "question": "Steinbergova upodobitev je nerazcepna upodobitev $\\mathrm{GL}_2(\\mathbf{F}_p)$, ki je podupodobitev permutacijske upodobitve $\\mathrm{GL}_2(\\mathbf{F}_p)$ na projektivni premici.",
     "type": "multiple_choice",
     "answers": [
       {
@@ -168,7 +168,7 @@
     ]
   },
   {
-    "question": "Nerazcepne upodobitve grupe $GL_2(\\mathbf{F}_p)$, ki jih dobimo z indukcijo iz podgrupe zgornjetrikotnih matrik, se imenujejo upodobitve sekundarne vrste.",
+    "question": "Nerazcepne upodobitve grupe $\\mathrm{GL}_2(\\mathbf{F}_p)$, ki jih dobimo z indukcijo iz podgrupe zgornjetrikotnih matrik, se imenujejo upodobitve sekundarne vrste.",
     "type": "multiple_choice",
     "answers": [
       {
